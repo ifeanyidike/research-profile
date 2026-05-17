@@ -48,11 +48,11 @@ Script chunked at sentence boundaries to provider byte limits, synthesized, and 
 **Stage 7 — Visual Generation**
 Three modes:
 
-- *Image+Effects* — generative image per scene (MiniMax FLUX 2 / Black Forest Labs FLUX 2) with Ken Burns zoom, 3D parallax, punch-in, motion blur, color grading, and particle compositing
-- *Video Clips* — autoregressive video generation per scene (MiniMax Hailuo S2V-01 / Kling AI), 6–10 seconds at 768P/1080P
-- *Hybrid* — cost-optimized mixture across scenes
+- _Image+Effects_ — generative image per scene (MiniMax FLUX 2 / Black Forest Labs FLUX 2) with Ken Burns zoom, 3D parallax, punch-in, motion blur, color grading, and particle compositing
+- _Video Clips_ — autoregressive video generation per scene (MiniMax Hailuo S2V-01 / Kling AI), 6–10 seconds at 768P/1080P
+- _Hybrid_ — cost-optimized mixture across scenes
 
-**Character consistency** enforced as a modeling constraint via three-tier anchoring: fal.ai LoRA fine-tuning, Astria.ai LoRA embeddings, or MiniMax subject\_reference. Canonical embeddings compared against generated output at inference; distributional drift triggers re-generation.
+**Character consistency** enforced as a modeling constraint via three-tier anchoring: fal.ai LoRA fine-tuning, Astria.ai LoRA embeddings, or MiniMax subject_reference. Canonical embeddings compared against generated output at inference; distributional drift triggers re-generation.
 
 **Stage 8 — Multimodal Assembly**
 Single FFmpeg pass: visual timeline assembled to match narration duration, voiceover mixed with mood-matched background music, loudness normalized to −14 LUFS, word-level captions aligned from TTS timing metadata, hardware-accelerated encoding via `h264_videotoolbox`.
@@ -73,7 +73,7 @@ Single FFmpeg pass: visual timeline assembled to match narration duration, voice
 - **Extended thinking** at niche analysis, narrative architecture, visual prompt construction, and title generation
 - **Multi-provider fallback chains** across every external service with content-filter-aware prompt rewriting
 - **Granular cost tracking** per project; typical full video under $1
-- >90% test coverage enforced via pytest across unit, integration, e2e, load, and performance suites
+- > 90% test coverage enforced via pytest across unit, integration, e2e, load, and performance suites
 - **WebSocket events** broadcast real-time pipeline state throughout execution
 
 ---

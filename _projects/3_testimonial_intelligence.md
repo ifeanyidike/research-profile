@@ -20,16 +20,19 @@ Marketing and sales teams collect large volumes of customer testimonial videos. 
 Built a multimodal AI pipeline spanning speech, language, and video:
 
 **Speech & Transcription Layer**
+
 - Implemented speech-to-text transcription pipeline using OpenAI Whisper with multi-speaker diarization
 - Speaker-attributed transcripts enable downstream analysis to track who said what and when
 
 **Language Understanding Layer**
+
 - Sentiment analysis over transcript segments to produce a temporal sentiment arc across the video
 - Topic modeling and key phrase extraction to identify the thematic structure of the testimonial
 - Named entity recognition to extract products, features, and outcomes mentioned
 
 **Video Composition Layer**
-- Designed the *dynamic transcript strategy algorithm*: given a target video length and composition goal (highlight reel, story arc, objection-handling clip), the algorithm selects segments by jointly optimizing over sentiment score, topic coverage, speaker diversity, and pacing
+
+- Designed the _dynamic transcript strategy algorithm_: given a target video length and composition goal (highlight reel, story arc, objection-handling clip), the algorithm selects segments by jointly optimizing over sentiment score, topic coverage, speaker diversity, and pacing
 - Automated generation of structured narrative scripts from selected segments
 - Video highlight extraction and assembly pipeline using FFmpeg
 

@@ -98,7 +98,6 @@ cv:
           - "Proprietary chat system (GetStream + WebSockets) serving ~100 communities"
           - "Embeddable video/voice/SSO widget for Thinkific and WordPress"
 
-
     Publications:
       - title: "Fast Prediction of Equivalent Model of Installed Patch Antenna Radiation Pattern"
         authors:

@@ -113,9 +113,7 @@
       "studyType": "MSc (In Progress)",
       "startDate": "2023",
       "endDate": "",
-      "courses": [
-        "Financial Data Science, ML for Finance, NLP for Finance, Alternative Data, Financial Econometrics"
-      ]
+      "courses": ["Financial Data Science, ML for Finance, NLP for Finance, Alternative Data, Financial Econometrics"]
     }
   ],
   "publications": [
@@ -151,7 +149,22 @@
   "skills": [
     {
       "name": "ML & AI Research",
-      "keywords": ["PyTorch", "TensorFlow / Keras", "HuggingFace Transformers", "LLM Fine-tuning", "RAG", "Voice AI (Pipecat)", "Speech Processing (Whisper)", "Vector Databases (Pinecone, Qdrant)", "scikit-learn", "LASSO / Feature Selection", "OpenAI API", "Claude API", "LLaMA", "Qwen"]
+      "keywords": [
+        "PyTorch",
+        "TensorFlow / Keras",
+        "HuggingFace Transformers",
+        "LLM Fine-tuning",
+        "RAG",
+        "Voice AI (Pipecat)",
+        "Speech Processing (Whisper)",
+        "Vector Databases (Pinecone, Qdrant)",
+        "scikit-learn",
+        "LASSO / Feature Selection",
+        "OpenAI API",
+        "Claude API",
+        "LLaMA",
+        "Qwen"
+      ]
     },
     {
       "name": "Programming",
@@ -159,7 +172,20 @@
     },
     {
       "name": "Systems & Deployment",
-      "keywords": ["WebSockets / Real-time systems", "gRPC", "FastAPI", "WebRTC", "Docker", "Kubernetes", "AWS", "Google Cloud Run", "Oracle OCI", "Fly.io", "Heroku", "RunPod"]
+      "keywords": [
+        "WebSockets / Real-time systems",
+        "gRPC",
+        "FastAPI",
+        "WebRTC",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "Google Cloud Run",
+        "Oracle OCI",
+        "Fly.io",
+        "Heroku",
+        "RunPod"
+      ]
     },
     {
       "name": "Applied Mathematics",
@@ -193,7 +219,15 @@
   "interests": [
     {
       "name": "Research Interests",
-      "keywords": ["Conversational AI", "Full-Duplex Voice Agents", "Speech-Language Models", "Turn-Taking", "Multi-Speaker Dialogue", "Multimodal AI", "RAG"]
+      "keywords": [
+        "Conversational AI",
+        "Full-Duplex Voice Agents",
+        "Speech-Language Models",
+        "Turn-Taking",
+        "Multi-Speaker Dialogue",
+        "Multimodal AI",
+        "RAG"
+      ]
     }
   ]
 }
