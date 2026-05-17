@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://ifeanyidike.com/sitemap.xml
