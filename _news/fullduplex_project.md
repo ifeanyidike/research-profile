@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started reproduction and extension of **Full-Duplex-Bench v1.5** (Lin et al., 2025) — evaluating turn-taking and multi-speaker dynamics in voice AI systems. See the <a href="/projects/5_fullduplex_reproduction/">project page</a> for details.
+Started reproduction and extension of <strong>Full-Duplex-Bench</strong> (Lin et al., 2025) — evaluating turn-taking and overlap handling in voice AI systems. See the <a href="/projects/5_fullduplex_reproduction/">project page</a> for details.

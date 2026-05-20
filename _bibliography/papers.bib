@@ -1,6 +1,21 @@
 ---
 ---
 
+@misc{dike2026fullduplex,
+  abbr        = {Preprint},
+  bibtex_show = {true},
+  title       = {Reproducing Full-Duplex-Bench: Evaluation of Gemini 3.1 Flash Live on Turn-Taking and an Analysis of ASR Backend Sensitivity},
+  author      = {Dike, Ifeanyi Desmond},
+  year        = {2026},
+  month       = {May},
+  publisher   = {Zenodo},
+  doi         = {10.5281/zenodo.20305268},
+  url         = {https://doi.org/10.5281/zenodo.20305268},
+  abstract    = {We reproduced the Full-Duplex-Bench v1.0 evaluation pipeline for Gemini 3.1 Flash Live Preview and conducted a systematic analysis of how ASR backend choice affects downstream turn-taking metrics. We find that TOR and response latency vary significantly across backends while JSD, backchannel frequency, and LLM-as-judge scores remain stable. Neither backend is universally closer to the paper's reported numbers: AssemblyAI matches better on pause handling TOR while MLX Whisper-v3 is closer on backchannel TOR, smooth turn-taking, and latency.},
+  selected    = {true},
+  code        = {https://github.com/ifeanyidike/full-duplex-bench-repro},
+}
+
 @inproceedings{monday2018fastprediction,
   abbr        = {IEEE IEMCON},
   bibtex_show = {true},

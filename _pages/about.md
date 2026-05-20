@@ -33,7 +33,7 @@ I'm an AI engineer and applied mathematician interested in **how machine learnin
 
 This interest is grounded in production experience. As founding AI engineer at [Datastrut AI](https://datastrut.ai), I've built voice AI agents and multi-speaker collaboration systems for the construction industry. At [Cenphi](https://cenphi.io), I built multimodal pipelines that jointly reason over speech, video, and language. These systems work, but they expose hard research gaps — particularly around evaluation methodology for interactive voice agents and robustness to domain-specific disfluency — that engineering alone cannot close.
 
-I'm currently reproducing and extending [Full-Duplex-Bench](https://github.com/DanielLin94144/Full-Duplex-Bench) (Lin et al., 2025), a benchmark for evaluating turn-taking and real-time responsiveness in full-duplex voice AI systems. This is my entry point into formal research output ahead of PhD applications.
+I recently published a preprint reproducing and extending [Full-Duplex-Bench](https://github.com/DanielLin94144/Full-Duplex-Bench) (Lin et al., 2025), a benchmark for evaluating turn-taking and real-time responsiveness in full-duplex voice AI systems. The paper includes a systematic analysis of ASR backend sensitivity on evaluation metrics — a reproducibility issue that has not been studied before in this benchmark. v1.5 extension (overlap handling) is in progress.
 
 I hold a **First Class Honours degree in Applied Mathematics** (GPA 4.63/5.0) from the Federal University of Technology Akure and co-authored four IEEE-indexed publications in 2018. I'm currently pursuing an MSc in Financial Engineering at WorldQuant University. I'm applying to ML PhD programs for **Fall 2027 enrollment**.
 
