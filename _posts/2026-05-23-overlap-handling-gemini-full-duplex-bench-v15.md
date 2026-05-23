@@ -3,7 +3,7 @@ layout: post
 title: "How Does Gemini Handle It When You Talk Over It?"
 date: 2026-05-23 00:00:00-0000
 description: I evaluated Gemini 3.1 Flash Live on four overlap scenarios from Full-Duplex-Bench v1.5 — user interruption, backchanneling, side conversation, and background speech — and found systematic prosodic adaptation after overlap events.
-tags: speech voice-ai evaluation full-duplex gemini
+tags: voice-ai evaluation
 categories: research
 related_posts: false
 related_publications: true

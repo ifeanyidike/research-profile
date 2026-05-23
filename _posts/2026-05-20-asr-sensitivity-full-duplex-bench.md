@@ -3,7 +3,7 @@ layout: post
 title: "Why Your Full-Duplex Benchmark Score Depends on Which Transcription Tool You Use"
 date: 2026-05-20 00:00:00-0000
 description: I reproduced Full-Duplex-Bench v1.0 for Gemini 3.1 Flash Live and found that a key evaluation metric varies by up to 62× just from switching the ASR backend — on the exact same audio.
-tags: speech voice-ai evaluation full-duplex
+tags: voice-ai evaluation
 categories: research
 related_posts: false
 related_publications: true
