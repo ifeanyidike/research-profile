@@ -2,12 +2,12 @@
 layout: page
 title: "Couette-Poiseuille Reactive Fluid Flow with Variable Thermophysical Properties"
 description: Applied mathematics research on modeling reactive fluid flow with variable viscosity and thermal conductivity using coupled nonlinear PDEs, perturbation methods, and finite difference numerics.
-importance: 4
+importance: 6
 category: Research
 related_publications: false
 ---
 
-**Institution:** Federal University of Technology Akure &nbsp;·&nbsp; **Year:** 2018 &nbsp;·&nbsp; **[View PDF](https://drive.google.com/drive/search?q=Couette-Poisseuille%20Reactive%20Fluid%20Flow%20with%20Variable%20Properties%20in%20The)**
+**Institution:** Federal University of Technology Akure &nbsp;·&nbsp; **Year:** 2018 &nbsp;·&nbsp; **[View PDF](https://drive.google.com/file/d/1HDzLk4WE9xv4sC5gxzviWx9snAWFaYSt/view?usp=sharing)**
 
 ---
 

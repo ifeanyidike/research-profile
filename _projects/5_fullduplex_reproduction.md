@@ -2,7 +2,7 @@
 layout: page
 title: Full-Duplex Conversational AI — Benchmark Reproduction & Extension
 description: Reproduction and extension of Full-Duplex-Bench (Lin et al., 2025), evaluating turn-taking and overlap handling in voice AI systems.
-importance: 5
+importance: 4
 category: Research
 related_publications: true
 ---
