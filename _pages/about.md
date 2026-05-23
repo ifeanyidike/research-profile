@@ -5,7 +5,7 @@ permalink: /
 subtitle: >
   Founding AI Engineer, <a href="https://datastrut.ai" target="_blank">Datastrut AI</a> &nbsp;·&nbsp;
   MSc Financial Engineering (in progress), <a href="https://wqu.edu" target="_blank">WorldQuant University</a> &nbsp;·&nbsp;
-  PhD Applicant · Fall 2027
+  PhD Applicant
 
 profile:
   align: right
@@ -35,6 +35,6 @@ This interest is grounded in production experience. As founding AI engineer at [
 
 I have published two preprints reproducing and extending [Full-Duplex-Bench](https://github.com/DanielLin94144/Full-Duplex-Bench) (Lin et al., 2025), a benchmark for evaluating full-duplex voice AI systems. The first paper ([v1.0, Zenodo](https://doi.org/10.5281/zenodo.20305268)) shows that Turn-Over Rate varies by up to 62× across ASR backends on identical audio — a reproducibility issue that has not been studied before in this benchmark. The second paper ([v1.5, Zenodo](https://doi.org/10.5281/zenodo.20354457)) evaluates overlap handling across four scenarios and finds that Gemini correctly yields to user interruptions 72% of the time and adapts prosodically after overlap events.
 
-I hold a **First Class Honours degree in Applied Mathematics** (GPA 4.63/5.0) from the Federal University of Technology Akure and co-authored four IEEE-indexed publications in 2018. I'm currently pursuing an MSc in Financial Engineering at WorldQuant University. I'm applying to ML PhD programs for **Fall 2027 enrollment**.
+I hold a **First Class Honours degree in Applied Mathematics** (GPA 4.63/5.0) from the Federal University of Technology Akure and co-authored four IEEE-indexed publications in 2018. I'm currently pursuing an MSc in Financial Engineering at WorldQuant University and actively seeking a PhD position in ML.
 
-I'm particularly interested in connecting with faculty working on speech-language models, full-duplex dialogue systems, multimodal AI, and related areas involving temporal structure in complex data. If that intersects your work and you are considering students for Fall 2027, feel free to reach out.
+I'm particularly interested in connecting with faculty working on speech-language models, full-duplex dialogue systems, multimodal AI, and related areas involving temporal structure in complex data. If that intersects your work and you are considering students, feel free to reach out.
