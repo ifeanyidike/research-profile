@@ -7,7 +7,7 @@ category: Research
 related_publications: true
 ---
 
-**Status:** 🔬 v1.0 Complete · v1.5 In Progress &nbsp;·&nbsp; **Type:** Paper Reproduction & Extension
+**Status:** ✅ Complete &nbsp;·&nbsp; **Type:** Paper Reproduction & Extension
 
 ---
 
@@ -33,11 +33,13 @@ We reproduced the Full-Duplex-Bench v1.0 evaluation pipeline for **Gemini 3.1 Fl
 
 ---
 
-### Part 2: v1.5 Overlap Handling Extension (In Progress)
+### Part 2: v1.5 Overlap Handling (Complete)
 
-v1.5 extends the benchmark with four simulated overlap scenarios: user interruption, listener backchannel, side conversation, and ambient speech. It introduces a richer metric suite including categorical dialogue behaviors, stop and response latency, and prosodic adaptation (pitch, WPM, intensity).
+v1.5 extends the benchmark with four simulated overlap scenarios: user interruption, listener backchannel, side conversation, and ambient speech, using a richer metric suite — categorical dialogue behaviors, prosodic adaptation (pitch, WPM, intensity), and stop/response latency.
 
-We are currently running inference and evaluation for Gemini 3.1 Flash Live Preview across all four v1.5 tasks.
+**Key findings:** Gemini correctly responds to user interruptions in 72% of cases and resumes after non-addressed overlap in 50–63% of cases. After overlap events, speaking rate and pitch increase while intensity drops — a statistically reliable pattern suggesting prosodic adaptation without dominance assertion.
+
+**Preprint:** [Zenodo 10.5281/zenodo.20354457](https://doi.org/10.5281/zenodo.20354457) &nbsp;·&nbsp; **Code:** [GitHub](https://github.com/ifeanyidike/full-duplex-bench-repro)
 
 ---
 

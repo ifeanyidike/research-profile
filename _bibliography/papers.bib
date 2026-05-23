@@ -1,6 +1,21 @@
 ---
 ---
 
+@misc{dike2026fullduplex_v15,
+  abbr        = {Preprint},
+  bibtex_show = {true},
+  title       = {Evaluating Overlap Handling in Gemini 3.1 Flash Live: A Reproduction of Full-Duplex-Bench v1.5},
+  author      = {Dike, Ifeanyi Desmond},
+  year        = {2026},
+  month       = {May},
+  publisher   = {Zenodo},
+  doi         = {10.5281/zenodo.20354457},
+  url         = {https://doi.org/10.5281/zenodo.20354457},
+  abstract    = {We reproduce the Full-Duplex-Bench v1.5 evaluation pipeline for Gemini 3.1 Flash Live Preview on Apple Silicon (M3 Max, no CUDA), covering four simulated overlap scenarios: background speech, talking to another person, user backchanneling, and user interruption. Gemini responds correctly to user interruption in 72\% of cases and resumes after background noise and side conversation in 50--63\% of cases. Pitch and speaking rate increase after overlap events while intensity drops, suggesting prosodic adaptation without dominance assertion. The v1.5 metric suite is more reproducible than v1.0 TOR-based metrics as it does not depend on ASR word boundary detection.},
+  selected    = {true},
+  code        = {https://github.com/ifeanyidike/full-duplex-bench-repro},
+}
+
 @misc{dike2026fullduplex,
   abbr        = {Preprint},
   bibtex_show = {true},
@@ -11,7 +26,7 @@
   publisher   = {Zenodo},
   doi         = {10.5281/zenodo.20305268},
   url         = {https://doi.org/10.5281/zenodo.20305268},
-  abstract    = {We reproduced the Full-Duplex-Bench v1.0 evaluation pipeline for Gemini 3.1 Flash Live Preview and conducted a systematic analysis of how ASR backend choice affects downstream turn-taking metrics. We find that TOR and response latency vary significantly across backends while JSD, backchannel frequency, and LLM-as-judge scores remain stable. Neither backend is universally closer to the paper's reported numbers: AssemblyAI matches better on pause handling TOR while MLX Whisper-v3 is closer on backchannel TOR, smooth turn-taking, and latency.},
+  abstract    = {We reproduced the Full-Duplex-Bench v1.0 evaluation pipeline for Gemini 3.1 Flash Live Preview and conducted a systematic analysis of how ASR backend choice affects downstream turn-taking metrics. TOR and response latency vary significantly across backends while JSD, backchannel frequency, and LLM-as-judge scores remain stable. Neither backend is universally closer to the paper's numbers: AssemblyAI matches better on pause handling TOR while MLX Whisper-v3 is closer on backchannel TOR, smooth turn-taking, and latency.},
   selected    = {true},
   code        = {https://github.com/ifeanyidike/full-duplex-bench-repro},
 }
