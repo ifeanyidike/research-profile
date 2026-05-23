@@ -7,13 +7,13 @@ first_name: Ifeanyi
 middle_name: Desmond
 last_name: Dike
 contact_note: >
-  The best way to reach me is by email. I'm currently based in Nigeria and open to PhD opportunities starting Fall 2027.
+  The best way to reach me is by email. I'm currently based in Nigeria and open to PhD opportunities.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  AI Engineer & Applied Mathematician. Founding AI Engineer at Datastrut AI. PhD Applicant in Conversational AI and Multimodal Systems, Fall 2027.
+  AI Engineer & Applied Mathematician. Founding AI Engineer at Datastrut AI. Researcher in Conversational AI and Multimodal Systems.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: conversational AI, full-duplex dialogue, voice agents, multimodal AI, speech-language models, temporal sequence modeling, financial mathematics, PhD applicant, machine learning, applied mathematics
+keywords: conversational AI, full-duplex dialogue, voice agents, multimodal AI, speech-language models, temporal sequence modeling, financial mathematics, machine learning, applied mathematics
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 

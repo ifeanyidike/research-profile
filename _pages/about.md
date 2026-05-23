@@ -5,7 +5,7 @@ permalink: /
 subtitle: >
   Founding AI Engineer, <a href="https://datastrut.ai" target="_blank">Datastrut AI</a> &nbsp;·&nbsp;
   MSc Financial Engineering (in progress), <a href="https://wqu.edu" target="_blank">WorldQuant University</a> &nbsp;·&nbsp;
-  PhD Applicant
+  Researcher
 
 profile:
   align: right
