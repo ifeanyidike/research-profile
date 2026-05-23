@@ -34,7 +34,7 @@ On **talking to another person** and **background speech**, Gemini resumed corre
 
 ## The prosodic finding
 
-The most interesting result was not about whether Gemini responded correctly, but about *how it spoke* after an overlap event.
+The most interesting result was not about whether Gemini responded correctly, but about _how it spoke_ after an overlap event.
 
 After any overlap — regardless of type — Gemini's speech changed in a consistent pattern:
 
