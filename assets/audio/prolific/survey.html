@@ -1,327 +1,397 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Audio Study</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Study</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f5f5f5;
-      color: #222;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
 
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 40px;
-      max-width: 640px;
-      width: 100%;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-    }
+      .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        max-width: 640px;
+        width: 100%;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+      }
 
-    h1 { font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; }
-    .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 32px; line-height: 1.5; }
+      h1 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .subtitle {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 32px;
+        line-height: 1.5;
+      }
 
-    .progress-bar {
-      background: #eee;
-      border-radius: 99px;
-      height: 6px;
-      margin-bottom: 28px;
-    }
-    .progress-fill {
-      background: #4a6cf7;
-      border-radius: 99px;
-      height: 6px;
-      transition: width 0.3s ease;
-    }
-    .progress-label {
-      font-size: 0.82rem;
-      color: #888;
-      margin-bottom: 8px;
-    }
+      .progress-bar {
+        background: #eee;
+        border-radius: 99px;
+        height: 6px;
+        margin-bottom: 28px;
+      }
+      .progress-fill {
+        background: #4a6cf7;
+        border-radius: 99px;
+        height: 6px;
+        transition: width 0.3s ease;
+      }
+      .progress-label {
+        font-size: 0.82rem;
+        color: #888;
+        margin-bottom: 8px;
+      }
 
-    .clip-box {
-      background: #f9f9f9;
-      border: 1px solid #e5e5e5;
-      border-radius: 10px;
-      padding: 24px;
-      margin-bottom: 24px;
-    }
+      .clip-box {
+        background: #f9f9f9;
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+        padding: 24px;
+        margin-bottom: 24px;
+      }
 
-    .clip-label {
-      font-size: 0.82rem;
-      color: #888;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+      .clip-label {
+        font-size: 0.82rem;
+        color: #888;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
 
-    audio {
-      width: 100%;
-      margin-bottom: 4px;
-    }
+      audio {
+        width: 100%;
+        margin-bottom: 4px;
+      }
 
-    .audio-note {
-      font-size: 0.8rem;
-      color: #aaa;
-    }
+      .audio-note {
+        font-size: 0.8rem;
+        color: #aaa;
+      }
 
-    .question {
-      font-size: 1.05rem;
-      font-weight: 500;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
+      .question {
+        font-size: 1.05rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
 
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
 
-    .option {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 18px;
-      border: 2px solid #e5e5e5;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: border-color 0.15s, background 0.15s;
-      font-size: 0.97rem;
-    }
+      .option {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 18px;
+        border: 2px solid #e5e5e5;
+        border-radius: 8px;
+        cursor: pointer;
+        transition:
+          border-color 0.15s,
+          background 0.15s;
+        font-size: 0.97rem;
+      }
 
-    .option:hover { border-color: #4a6cf7; background: #f0f3ff; }
-    .option.selected { border-color: #4a6cf7; background: #f0f3ff; }
+      .option:hover {
+        border-color: #4a6cf7;
+        background: #f0f3ff;
+      }
+      .option.selected {
+        border-color: #4a6cf7;
+        background: #f0f3ff;
+      }
 
-    .option input[type="radio"] {
-      accent-color: #4a6cf7;
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-    }
+      .option input[type="radio"] {
+        accent-color: #4a6cf7;
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
 
-    .btn {
-      background: #4a6cf7;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 14px 28px;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      width: 100%;
-      transition: background 0.15s;
-    }
-    .btn:hover { background: #3a5ce0; }
-    .btn:disabled { background: #bbb; cursor: not-allowed; }
+      .btn {
+        background: #4a6cf7;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 14px 28px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.15s;
+      }
+      .btn:hover {
+        background: #3a5ce0;
+      }
+      .btn:disabled {
+        background: #bbb;
+        cursor: not-allowed;
+      }
 
-    /* Intro screen */
-    #intro ul {
-      margin: 16px 0 24px 20px;
-      line-height: 2;
-      color: #444;
-      font-size: 0.95rem;
-    }
+      /* Intro screen */
+      #intro ul {
+        margin: 16px 0 24px 20px;
+        line-height: 2;
+        color: #444;
+        font-size: 0.95rem;
+      }
 
-    /* Done screen */
-    #done { text-align: center; }
-    #done h1 { font-size: 1.5rem; margin-bottom: 12px; }
-    #done p { color: #555; margin-bottom: 20px; line-height: 1.6; }
-    .code-box {
-      background: #f0f3ff;
-      border: 2px solid #4a6cf7;
-      border-radius: 8px;
-      padding: 18px;
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: #4a6cf7;
-      margin: 20px 0;
-    }
+      /* Done screen */
+      #done {
+        text-align: center;
+      }
+      #done h1 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+      }
+      #done p {
+        color: #555;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+      .code-box {
+        background: #f0f3ff;
+        border: 2px solid #4a6cf7;
+        border-radius: 8px;
+        padding: 18px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: #4a6cf7;
+        margin: 20px 0;
+      }
 
-    .hidden { display: none; }
-  </style>
-</head>
-<body>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Intro -->
+    <div class="card" id="intro">
+      <h1>Audio Listening Study</h1>
+      <p class="subtitle">
+        You will listen to short audio clips of an AI assistant having a conversation. Each clip is about 15 seconds long. After each one, answer a
+        single question about what you heard.
+      </p>
+      <ul>
+        <li>10 clips total — takes about 5 minutes</li>
+        <li>Please use headphones if possible</li>
+        <li>Listen to the full clip before answering</li>
+        <li>A brief pause does not necessarily mean the AI stopped — it may resume speaking. Judge based on the full clip.</li>
+        <li>If it is genuinely hard to tell, select "Not sure"</li>
+      </ul>
+      <button class="btn" onclick="startStudy()">Start</button>
+    </div>
 
-<!-- Intro -->
-<div class="card" id="intro">
-  <h1>Audio Listening Study</h1>
-  <p class="subtitle">
-    You will listen to short audio clips of an AI assistant having a conversation.
-    Each clip is about 15 seconds long. After each one, answer a single question
-    about what you heard.
-  </p>
-  <ul>
-    <li>10 clips total — takes about 5 minutes</li>
-    <li>Please use headphones if possible</li>
-    <li>Listen to the full clip before answering</li>
-    <li>A brief pause does not necessarily mean the AI stopped — it may resume speaking. Judge based on the full clip.</li>
-    <li>If it is genuinely hard to tell, select "Not sure"</li>
-  </ul>
-  <button class="btn" onclick="startStudy()">Start</button>
-</div>
+    <!-- Question screen -->
+    <div class="card hidden" id="question-screen">
+      <p class="progress-label" id="progress-label">Clip 1 of 10</p>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+      </div>
 
-<!-- Question screen -->
-<div class="card hidden" id="question-screen">
-  <p class="progress-label" id="progress-label">Clip 1 of 10</p>
-  <div class="progress-bar">
-    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
-  </div>
+      <div class="clip-box">
+        <div class="clip-label">Listen to this clip</div>
+        <audio id="audio-player" controls></audio>
+        <p class="audio-note">You may replay it as many times as you like.</p>
+      </div>
 
-  <div class="clip-box">
-    <div class="clip-label">Listen to this clip</div>
-    <audio id="audio-player" controls></audio>
-    <p class="audio-note">You may replay it as many times as you like.</p>
-  </div>
+      <p class="question">During this conversation, did the AI stop speaking when the user interrupted it?</p>
 
-  <p class="question">
-    During this conversation, did the AI stop speaking when the user interrupted it?
-  </p>
+      <div class="options" id="options">
+        <label class="option" id="opt-yes">
+          <input type="radio" name="answer" value="yes" onchange="selectOption(this)" />
+          Yes — the AI stopped speaking and let the user take over
+        </label>
+        <label class="option" id="opt-no">
+          <input type="radio" name="answer" value="no" onchange="selectOption(this)" />
+          No — the AI kept talking over the user's interruption
+        </label>
+        <label class="option" id="opt-unsure">
+          <input type="radio" name="answer" value="unsure" onchange="selectOption(this)" />
+          Not sure / hard to tell
+        </label>
+      </div>
 
-  <div class="options" id="options">
-    <label class="option" id="opt-yes">
-      <input type="radio" name="answer" value="yes" onchange="selectOption(this)" />
-      Yes — the AI stopped speaking and let the user take over
-    </label>
-    <label class="option" id="opt-no">
-      <input type="radio" name="answer" value="no" onchange="selectOption(this)" />
-      No — the AI kept talking over the user's interruption
-    </label>
-    <label class="option" id="opt-unsure">
-      <input type="radio" name="answer" value="unsure" onchange="selectOption(this)" />
-      Not sure / hard to tell
-    </label>
-  </div>
+      <button class="btn" id="next-btn" disabled onclick="nextClip()">Next</button>
+    </div>
 
-  <button class="btn" id="next-btn" disabled onclick="nextClip()">Next</button>
-</div>
+    <!-- Done screen -->
+    <div class="card hidden" id="done">
+      <h1>Thank you!</h1>
+      <p>You have completed the study. Please copy the completion code below and paste it into Prolific.</p>
+      <div class="code-box" id="completion-code">AUDIO2026</div>
+      <p style="font-size: 0.85rem; color: #aaa">Your responses have been recorded.</p>
+    </div>
 
-<!-- Done screen -->
-<div class="card hidden" id="done">
-  <h1>Thank you!</h1>
-  <p>You have completed the study. Please copy the completion code below and paste it into Prolific.</p>
-  <div class="code-box" id="completion-code">AUDIO2026</div>
-  <p style="font-size:0.85rem; color:#aaa;">Your responses have been recorded.</p>
-</div>
+    <script>
+      // All 50 clip filenames (m = Moshi, g = Gemini)
+      const ALL_CLIPS = [
+        "clip_m1",
+        "clip_m10",
+        "clip_m100",
+        "clip_m105",
+        "clip_m108",
+        "clip_g2",
+        "clip_g6",
+        "clip_g11",
+        "clip_g15",
+        "clip_g19",
+        "clip_g23",
+        "clip_g28",
+        "clip_g32",
+        "clip_g36",
+        "clip_g40",
+        "clip_g44",
+        "clip_g48",
+        "clip_g52",
+        "clip_g56",
+        "clip_g60",
+        "clip_g64",
+        "clip_g68",
+        "clip_g72",
+        "clip_g76",
+        "clip_g80",
+        "clip_g84",
+        "clip_g88",
+        "clip_g92",
+        "clip_g96",
+        "clip_g101",
+        "clip_g106",
+        "clip_g111",
+        "clip_g115",
+        "clip_g119",
+        "clip_g123",
+        "clip_g127",
+        "clip_g131",
+        "clip_g135",
+        "clip_g139",
+        "clip_g143",
+        "clip_g147",
+        "clip_g151",
+        "clip_g155",
+        "clip_g159",
+        "clip_g163",
+        "clip_g167",
+        "clip_g171",
+        "clip_g175",
+        "clip_g180",
+        "clip_g186",
+      ];
 
-<script>
-  // All 50 clip filenames (m = Moshi, g = Gemini)
-  const ALL_CLIPS = [
-    "clip_m1","clip_m10","clip_m100","clip_m105","clip_m108",
-    "clip_g2","clip_g6","clip_g11","clip_g15","clip_g19",
-    "clip_g23","clip_g28","clip_g32","clip_g36","clip_g40",
-    "clip_g44","clip_g48","clip_g52","clip_g56","clip_g60",
-    "clip_g64","clip_g68","clip_g72","clip_g76","clip_g80",
-    "clip_g84","clip_g88","clip_g92","clip_g96","clip_g101",
-    "clip_g106","clip_g111","clip_g115","clip_g119","clip_g123",
-    "clip_g127","clip_g131","clip_g135","clip_g139","clip_g143",
-    "clip_g147","clip_g151","clip_g155","clip_g159","clip_g163",
-    "clip_g167","clip_g171","clip_g175","clip_g180","clip_g186"
-  ];
+      const BASE_URL = "https://ifeanyidike.com/assets/audio/prolific/";
+      const CLIPS_PER_PARTICIPANT = 10;
 
-  const BASE_URL = "https://ifeanyidike.com/assets/audio/prolific/";
-  const CLIPS_PER_PARTICIPANT = 10;
+      let assignedClips = [];
+      let currentIndex = 0;
+      let responses = [];
+      let prolificPid = "";
 
-  let assignedClips = [];
-  let currentIndex = 0;
-  let responses = [];
-  let prolificPid = "";
+      function shuffle(arr) {
+        let a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
 
-  function shuffle(arr) {
-    let a = [...arr];
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-  }
+      function getUrlParam(name) {
+        return new URLSearchParams(window.location.search).get(name) || "";
+      }
 
-  function getUrlParam(name) {
-    return new URLSearchParams(window.location.search).get(name) || "";
-  }
+      function startStudy() {
+        prolificPid = getUrlParam("PROLIFIC_PID");
+        // Seed shuffle with PID so same participant always gets same clips
+        // Simple deterministic assignment: hash PID to offset
+        let offset = 0;
+        for (let c of prolificPid) offset += c.charCodeAt(0);
+        offset = offset % (ALL_CLIPS.length - CLIPS_PER_PARTICIPANT);
+        assignedClips = ALL_CLIPS.slice(offset, offset + CLIPS_PER_PARTICIPANT);
 
-  function startStudy() {
-    prolificPid = getUrlParam("PROLIFIC_PID");
-    // Seed shuffle with PID so same participant always gets same clips
-    // Simple deterministic assignment: hash PID to offset
-    let offset = 0;
-    for (let c of prolificPid) offset += c.charCodeAt(0);
-    offset = offset % (ALL_CLIPS.length - CLIPS_PER_PARTICIPANT);
-    assignedClips = ALL_CLIPS.slice(offset, offset + CLIPS_PER_PARTICIPANT);
+        document.getElementById("intro").classList.add("hidden");
+        document.getElementById("question-screen").classList.remove("hidden");
+        loadClip();
+      }
 
-    document.getElementById("intro").classList.add("hidden");
-    document.getElementById("question-screen").classList.remove("hidden");
-    loadClip();
-  }
+      function loadClip() {
+        const clipId = assignedClips[currentIndex];
+        const total = assignedClips.length;
 
-  function loadClip() {
-    const clipId = assignedClips[currentIndex];
-    const total = assignedClips.length;
+        document.getElementById("progress-label").textContent = `Clip ${currentIndex + 1} of ${total}`;
+        document.getElementById("progress-fill").style.width = `${(currentIndex / total) * 100}%`;
 
-    document.getElementById("progress-label").textContent =
-      `Clip ${currentIndex + 1} of ${total}`;
-    document.getElementById("progress-fill").style.width =
-      `${(currentIndex / total) * 100}%`;
+        const player = document.getElementById("audio-player");
+        player.src = `${BASE_URL}${clipId}.wav`;
+        player.load();
 
-    const player = document.getElementById("audio-player");
-    player.src = `${BASE_URL}${clipId}.wav`;
-    player.load();
+        // Reset options
+        document.querySelectorAll("input[name='answer']").forEach((r) => (r.checked = false));
+        document.querySelectorAll(".option").forEach((o) => o.classList.remove("selected"));
+        document.getElementById("next-btn").disabled = true;
+      }
 
-    // Reset options
-    document.querySelectorAll("input[name='answer']").forEach(r => r.checked = false);
-    document.querySelectorAll(".option").forEach(o => o.classList.remove("selected"));
-    document.getElementById("next-btn").disabled = true;
-  }
+      function selectOption(radio) {
+        document.querySelectorAll(".option").forEach((o) => o.classList.remove("selected"));
+        radio.closest(".option").classList.add("selected");
+        document.getElementById("next-btn").disabled = false;
+      }
 
-  function selectOption(radio) {
-    document.querySelectorAll(".option").forEach(o => o.classList.remove("selected"));
-    radio.closest(".option").classList.add("selected");
-    document.getElementById("next-btn").disabled = false;
-  }
+      function nextClip() {
+        const selected = document.querySelector("input[name='answer']:checked");
+        if (!selected) return;
 
-  function nextClip() {
-    const selected = document.querySelector("input[name='answer']:checked");
-    if (!selected) return;
+        responses.push({
+          clip_id: assignedClips[currentIndex],
+          answer: selected.value,
+          prolific_pid: prolificPid,
+          timestamp: new Date().toISOString(),
+        });
 
-    responses.push({
-      clip_id: assignedClips[currentIndex],
-      answer: selected.value,
-      prolific_pid: prolificPid,
-      timestamp: new Date().toISOString()
-    });
+        currentIndex++;
 
-    currentIndex++;
+        if (currentIndex >= assignedClips.length) {
+          submitAndFinish();
+        } else {
+          loadClip();
+        }
+      }
 
-    if (currentIndex >= assignedClips.length) {
-      submitAndFinish();
-    } else {
-      loadClip();
-    }
-  }
+      function submitAndFinish() {
+        // Log to console (replace with your backend/form endpoint if needed)
+        console.log("Study responses:", JSON.stringify(responses, null, 2));
 
-  function submitAndFinish() {
-    // Log to console (replace with your backend/form endpoint if needed)
-    console.log("Study responses:", JSON.stringify(responses, null, 2));
+        // Also encode in URL for easy manual collection
+        const encoded = btoa(JSON.stringify(responses));
+        console.log("Encoded:", encoded);
 
-    // Also encode in URL for easy manual collection
-    const encoded = btoa(JSON.stringify(responses));
-    console.log("Encoded:", encoded);
-
-    document.getElementById("question-screen").classList.add("hidden");
-    document.getElementById("done").classList.remove("hidden");
-  }
-</script>
-
-</body>
+        document.getElementById("question-screen").classList.add("hidden");
+        document.getElementById("done").classList.remove("hidden");
+      }
+    </script>
+  </body>
 </html>

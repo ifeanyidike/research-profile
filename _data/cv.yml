@@ -7,8 +7,8 @@ cv:
   image: ""
   summary: >
     AI engineer and applied mathematician. PhD applicant, Fall 2027.
-    Research focus: conversational AI and speech-language models — turn-taking, multi-speaker dynamics, and evaluation of full-duplex voice AI systems.
-    First Class Honours in Applied Mathematics (GPA 4.63/5.0), four IEEE publications, 8+ years building production AI systems.
+    Research focus: evaluation methodology for full-duplex spoken dialogue systems — proposing ATR (Acoustic Turn-over Rate) as a more stable, ASR-free alternative to TOR.
+    First Class Honours in Applied Mathematics (GPA 4.63/5.0), four IEEE publications, one paper under review, 8+ years building production AI systems.
 
   social_networks:
     - network: GitHub
@@ -99,6 +99,14 @@ cv:
           - "Embeddable video/voice/SSO widget for Thinkific and WordPress"
 
     Publications:
+      - title: "ATR: An Acoustic Turn-over Rate Metric for Evaluating Overlap Handling in Full-Duplex Spoken Dialogue Systems"
+        authors:
+          - Ifeanyi Dike
+          - Happy Nkanta Monday
+        publisher: "Under review (2026)"
+        releaseDate: 2026-05-01
+        url: https://github.com/ifeanyidike/atr-metric
+
       - title: "Fast Prediction of Equivalent Model of Installed Patch Antenna Radiation Pattern"
         authors:
           - Happy Monday
