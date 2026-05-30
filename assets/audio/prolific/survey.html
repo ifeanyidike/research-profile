@@ -216,10 +216,19 @@
 </div>
 
 <script>
-  // All 50 clip IDs
-  const ALL_CLIPS = [1,4,7,10,13,17,20,23,26,29,32,35,38,41,44,47,50,53,56,59,
-                     62,66,69,72,75,78,81,88,91,94,97,100,103,106,109,112,116,
-                     119,122,126,129,133,138,144,148,152,156,159,163,166];
+  // All 50 clip filenames (m = Moshi, g = Gemini)
+  const ALL_CLIPS = [
+    "clip_m1","clip_m10","clip_m100","clip_m105","clip_m108",
+    "clip_g2","clip_g6","clip_g11","clip_g15","clip_g19",
+    "clip_g23","clip_g28","clip_g32","clip_g36","clip_g40",
+    "clip_g44","clip_g48","clip_g52","clip_g56","clip_g60",
+    "clip_g64","clip_g68","clip_g72","clip_g76","clip_g80",
+    "clip_g84","clip_g88","clip_g92","clip_g96","clip_g101",
+    "clip_g106","clip_g111","clip_g115","clip_g119","clip_g123",
+    "clip_g127","clip_g131","clip_g135","clip_g139","clip_g143",
+    "clip_g147","clip_g151","clip_g155","clip_g159","clip_g163",
+    "clip_g167","clip_g171","clip_g175","clip_g180","clip_g186"
+  ];
 
   const BASE_URL = "https://ifeanyidike.com/assets/audio/prolific/";
   const CLIPS_PER_PARTICIPANT = 10;
@@ -266,7 +275,7 @@
       `${(currentIndex / total) * 100}%`;
 
     const player = document.getElementById("audio-player");
-    player.src = `${BASE_URL}clip_${clipId}.wav`;
+    player.src = `${BASE_URL}${clipId}.wav`;
     player.load();
 
     // Reset options
