@@ -102,10 +102,9 @@ cv:
       - title: "ATR: An Acoustic Turn-over Rate Metric for Evaluating Overlap Handling in Full-Duplex Spoken Dialogue Systems"
         authors:
           - Ifeanyi Dike
-          - Happy Nkanta Monday
         publisher: "Zenodo (2026)"
         releaseDate: 2026-06-01
-        url: https://doi.org/10.5281/zenodo.20540199
+        url: https://doi.org/10.5281/zenodo.20548903
 
       - title: "Fast Prediction of Equivalent Model of Installed Patch Antenna Radiation Pattern"
         authors:
