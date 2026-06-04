@@ -97,7 +97,7 @@ Net negative. Reverted.
 
 We tried requesting the one model that supports mid-conversation system messages through the platform. It silently downgraded to one that doesn't.
 
-The next question: why not switch to a different model provider entirely — one where the platform does pass system messages correctly? We could have. But by this point we'd already spent weeks debugging delivery issues we couldn't see, on a layer we didn't control. Switching providers would fix _this_ specific gating problem, but we'd still be trusting the platform to forward our messages correctly, still unable to verify what the model actually received, and still one silent platform change away from the same class of bug. We wanted to stop playing that game entirely.
+The next question: why not switch to a different model provider entirely — one where the platform does pass system messages correctly? We could have. But by this point we'd already spent weeks debugging delivery issues we couldn't see, on a layer we didn't control. Switching providers might fix _this_ specific gating problem, but we'd still be trusting the platform to forward our messages correctly, still unable to verify what the model actually received, and still one silent platform change away from the same class of bug. We wanted to stop playing that game entirely.
 
 ### 3e. The fix — become the LLM
 
