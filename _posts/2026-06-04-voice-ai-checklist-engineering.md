@@ -181,6 +181,8 @@ return StreamingResponse(generate(), media_type="text/event-stream")
 
 The platform's job is now reduced to handling audio and turn-taking. It doesn't touch the prompt, doesn't pick the model, doesn't forward our instructions. All of that is ours. The next question is baked into the system prompt of every call we make — it can't get dropped, can't get downgraded, can't get merged into the transcript.
 
+But unlike the rigid `say` command (3a), the model is still a model. It can acknowledge what the caller said, handle off-script input, and ask the directive naturally. If a caller mentions something unexpected — say, "we had a meeting" — the analyzer picks that up, and the next directive tells the model to explore it: what happened, who was there, what was discussed. Once the caller is done, the directive shifts back to the next open checklist item. The proxy controls _what_ the model should ask; the model controls _how_ it asks it. That's the balance the `say` command couldn't give us and the mid-conversation messages couldn't reliably deliver.
+
 #### Latency
 
 The proxy adds one network hop, but in practice the bottleneck is the model's time-to-first-token, not the proxy overhead. Prompt caching helps here — the base prompt (which doesn't change turn to turn) is cached, so the model only processes the short directive and the new user message. First-token latency dropped noticeably after we added caching.
