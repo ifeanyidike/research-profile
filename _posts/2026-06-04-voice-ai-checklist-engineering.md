@@ -108,9 +108,9 @@ Before:  platform ──► model provider                 (we hope our message 
 After:   platform ──► OUR proxy ──► model provider    (we build the prompt)
 ```
 
-The next question goes into the system prompt of the call we make — guaranteed present, highest priority, every turn, on whatever model we choose.
+#### What the platform sends us
 
-The request from the platform:
+Each turn, Vapi hits our endpoint with a standard chat-completions request:
 
 ```jsonc
 POST /chat/completions
@@ -126,14 +126,37 @@ POST /chat/completions
 }
 ```
 
-Our proxy:
+The `call.id` is our key into the per-call state store.
 
-1. Pulls the call id (key to that call's checklist state).
-2. Reads the current state and derives the next question.
-3. Injects it into the system prompt.
-4. Calls the model and streams the answer back as SSE.
+#### What the proxy does with it
 
-**Streaming matters** — voice platforms require Server-Sent Events in OpenAI's chunk format. A single JSON blob silently fails:
+The proxy sits between the platform and the actual model. On every request it:
+
+1. **Extracts the call id** and looks up the current checklist state from the shared store — which sections are done, which are open, what the next question should be.
+
+2. **Strips old directives** from the conversation history. The platform replays the entire message history each turn, which means our previously-injected directives come back in `messages`. We filter them out so they don't pile up and confuse the model. (This is where the `in` vs. `startswith` bug lived — more on that in 4a.)
+
+3. **Builds a two-block system prompt.** The first block is the base prompt — the assistant's personality, tone, and general behavior. The second block is the per-turn directive: the exact next question to ask, plus any context about what the caller just said. The base prompt is large and stable; the directive is small and changes every turn.
+
+```python
+system = [
+    {
+        "type": "text",
+        "text": base_prompt,
+        "cache_control": {"type": "ephemeral"},
+    },
+    {
+        "type": "text",
+        "text": f"[DIRECTIVE] Ask the caller: {next_question}",
+    },
+]
+```
+
+The directive goes last so it's the freshest, highest-priority instruction the model sees. The base prompt is cached across turns so we don't pay for it twice.
+
+4. **Calls the model directly** — not through the platform, not through any middleware. We pick the model, we set the temperature, we control the full request.
+
+5. **Streams the response back as SSE.** Voice platforms expect Server-Sent Events in OpenAI's chunk format. If you return a single JSON blob instead of a stream, it silently fails — the caller hears nothing.
 
 ```python
 def sse(obj):
@@ -152,7 +175,15 @@ def generate():
 return StreamingResponse(generate(), media_type="text/event-stream")
 ```
 
-This is the single decision that made everything work.
+#### Why this works where everything else didn't
+
+The platform's job is now reduced to handling audio and turn-taking. It doesn't touch the prompt, doesn't pick the model, doesn't forward our instructions. All of that is ours. The next question is baked into the system prompt of every call we make — it can't get dropped, can't get downgraded, can't get merged into the transcript.
+
+#### Latency
+
+The proxy adds one network hop, but in practice the bottleneck is the model's time-to-first-token, not the proxy overhead. Prompt caching helps here — the base prompt (which doesn't change turn to turn) is cached, so the model only processes the short directive and the new user message. First-token latency dropped noticeably after we added caching.
+
+We deployed the proxy on the same cloud region as the model provider. Round-trip from platform → proxy → model → platform is around 300–500 ms for the first token, which is within the range where callers don't notice a gap.
 
 ---
 
@@ -174,26 +205,9 @@ if text.lstrip().startswith(marker): drop(text)
 
 One-word fix. `in` → `startswith`.
 
-### 4b. `temperature = 0` and prompt caching
+### 4b. `temperature = 0`
 
-- **`temperature = 0`**: at the default temperature the model paraphrased the exact questions and the closing lines. Zero made it follow instructions literally.
-- **Prompt caching**: the base prompt is large and stable; the per-turn directive is small and changes every turn. Two blocks — base cached, directive appended last:
-
-```python
-system = [
-    {
-        "type": "text",
-        "text": base_prompt,
-        "cache_control": {"type": "ephemeral"},
-    },
-    {
-        "type": "text",
-        "text": per_turn_directive,
-    },
-]
-```
-
-Cut per-turn cost and time-to-first-token.
+At the default temperature the model paraphrased the exact questions and the closing lines. Setting `temperature = 0` made it follow instructions literally. Small change, big difference in reliability.
 
 ### 4c. One-question-at-a-time closing flow
 
