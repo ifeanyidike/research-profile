@@ -103,9 +103,9 @@ cv:
         authors:
           - Ifeanyi Dike
           - Happy Nkanta Monday
-        publisher: "Under review (2026)"
-        releaseDate: 2026-05-01
-        url: https://github.com/ifeanyidike/atr-metric
+        publisher: "Zenodo (2026)"
+        releaseDate: 2026-06-01
+        url: https://doi.org/10.5281/zenodo.20540199
 
       - title: "Fast Prediction of Equivalent Model of Installed Patch Antenna Radiation Pattern"
         authors:

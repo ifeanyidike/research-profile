@@ -1,14 +1,16 @@
 ---
 ---
 
-@unpublished{dike2026atr,
-  abbr        = {Under Review},
+@misc{dike2026atr,
+  abbr        = {Preprint},
   bibtex_show = {true},
   title       = {ATR: An Acoustic Turn-over Rate Metric for Evaluating Overlap Handling in Full-Duplex Spoken Dialogue Systems},
   author      = {Dike, Ifeanyi Desmond and Monday, Happy Nkanta},
   year        = {2026},
-  month       = {May},
-  note        = {Under review},
+  month       = {June},
+  publisher   = {Zenodo},
+  doi         = {10.5281/zenodo.20540199},
+  url         = {https://doi.org/10.5281/zenodo.20540199},
   abstract    = {Turn-over Rate (TOR), introduced in Full-Duplex-Bench, measures how often a full-duplex spoken dialogue model yields the speaking floor during overlapping speech. TOR is computed from ASR transcripts, and this dependency is important: two commonly-used ASR backends produce TOR estimates that diverge by up to 23.5 percentage points on the same audio, making cross-study comparisons unreliable. We propose the Acoustic Turn-over Rate (ATR), which replaces the ASR step with voice activity detection (VAD). Evaluated on Moshi across all four Full-Duplex-Bench v1.5 scenarios, three independent VAD backends agree within 7.6 percentage points on user interruption --- roughly three times more consistent than ASR-based TOR on the same audio. ATR requires no language model, runs locally, and is language-agnostic.},
   selected    = {true},
   code        = {https://github.com/ifeanyidike/atr-metric},
