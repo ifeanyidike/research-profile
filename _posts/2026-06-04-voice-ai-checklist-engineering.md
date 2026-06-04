@@ -20,7 +20,7 @@ related_posts: false
 - The agent kept **ignoring the "next question"** we fed it: re-asking answered questions, inventing its own, skipping others.
 - After a long detour through prompt-tuning and several delivery mechanisms, the real problem turned out to be **where the instruction was going**, not how it was phrased: the messages we used to steer the model were being **silently dropped by the platform/model combination**.
 - The breakthrough was to stop depending on the voice platform to forward our instruction and instead **insert our own server as the "LLM"** (a custom-LLM proxy). Now _we_ build the prompt and call the model directly — full control.
-- That unlocked a long tail of robustness work: a one-question-at-a-time closing flow, fixing double-asked questions (two distinct root causes), a transcript "debounce," prompt caching, `temperature=0`, and several rounds of adversarial self-review that caught bugs in my own earlier fixes.
+- That unlocked a long tail of robustness work: a one-question-at-a-time closing flow, fixing double-asked questions (two distinct root causes), a transcript "debounce," prompt caching, and `temperature=0`.
 
 **The meta-lesson:** _most of the work wasn't the feature — it was discovering the platform was misleading me about what the model actually received, then rebuilding enough determinism to trust it._
 
@@ -208,8 +208,6 @@ This cut both per-turn cost and time-to-first-token, which matters a lot for per
 
 The end-of-call wrap-up (offer a summary → ask for feedback → sign off) kept getting **consolidated** or skipped by the model. We replaced "tell the model the whole closing script" with a small **driver** that emits exactly one closing step per turn, reading position from the conversation. The model can't compress or skip steps it isn't shown.
 
-This piece turned out to be the trickiest, and went through several iterations (more below) — a strong signal it was **under-tested**, which we eventually fixed with comprehensive tests.
-
 ### 4d. Double-asked questions — two distinct root causes
 
 A question would sometimes be asked twice (caller answers "No," gets asked again, answers "No" again). It looked like one bug; it was two:
@@ -233,11 +231,7 @@ if this_utterance_ts < latest:
     # complete transcript. Bail fast.
 ```
 
-The key property that makes this safe: **the final transcript always has the maximum timestamp, so it can never skip itself** — no data loss. Superseded partials bail in ~1 ms (no model call), which _reduces_ contention and cost. (Footgun we hit: the shared store returned **bytes**, so a naive `float(value)` threw and silently disabled the whole guard. Decode before parsing.)
-
-### 4f. A read-only "self-heal" backstop
-
-As defense-in-depth, when the proxy is about to re-ask the _exact same_ question the caller just answered, it re-derives the "should be closed" update **on a local copy of the state** (never written back, so no race) and advances. Strictly scoped so it can only ever _recover_ from a dropped turn, never invent a wrong state transition.
+The key property that makes this safe: **the final transcript always has the maximum timestamp, so it can never skip itself** — no data loss. Superseded partials bail in ~1 ms (no model call), which _reduces_ contention and cost.
 
 ---
 
@@ -247,8 +241,6 @@ As defense-in-depth, when the proxy is about to re-ask the _exact same_ question
 - **Intermittent success is the most expensive failure mode.** A clean "never works" gets debugged fast. "Works sometimes" sends you chasing ghosts. Here, the apparent successes were the **base prompt and the model's training priors coinciding** with what we wanted — not our instruction landing.
 - **When you don't control the final prompt, take control of it.** Becoming the LLM endpoint removed an entire class of "did the platform forward it / which model did it actually run" problems.
 - **Prefer structural logic over keyword lists.** Several fixes started as a hardcoded word list and were rewritten as **positional/structural** rules (e.g., distinguishing "no incidents" — a denial of the section — from "no issues _with_ the incident" — which means an incident _did_ happen — by _where_ the topic word sits relative to the negation, not by a curated list of denial words). Word lists silently miss synonyms and rot.
-- **Adversarially review your own fixes.** Later review passes caught real bugs _in my own earlier fixes_ — a clever punctuation-based heuristic that broke two different ways, and an over-eager "recovery" that silently marked un-asked questions as answered. **Simple-and-correct beat clever** every time.
-- **Under-tested code announces itself by needing repeated fixes.** The closing flow got patched three times; the right response wasn't a fourth clever patch, it was finally writing comprehensive tests so no branch could silently regress.
 - **Mind the boring footguns.** Bytes vs. str from a cache, `in` vs. `startswith`, SSE vs. JSON, a lock TTL shorter than the work it guards — these cost more debugging time than any of the "interesting" problems.
 
 ---
@@ -291,16 +283,3 @@ Two independent platform→us channels: **(A)** the per-turn "decide what to say
 - **Vapi — Assistant control / "Say" message** (the rigid direct-speech approach we abandoned): [docs](https://docs.vapi.ai/calls/call-features#control-messages)
 - **OpenAI — Chat Completions streaming format** (the SSE chunk shape voice platforms expect): [docs](https://platform.openai.com/docs/api-reference/chat/create#chat-create-stream)
 - **Server-Sent Events (SSE)** (the transport): [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
-
----
-
-## 8. Glossary (for readers new to voice AI)
-
-- **STT / TTS** — speech-to-text / text-to-speech.
-- **Endpointing** — deciding when the caller has finished a turn.
-- **System prompt** — the standing instructions for the model (vs. the back-and-forth messages).
-- **Mid-conversation system message** — a system-role instruction inserted _into_ the running message history mid-call, as opposed to the single top-of-conversation system prompt.
-- **Custom LLM endpoint** — pointing the voice platform at your own server instead of a built-in model provider, so you assemble the prompt.
-- **SSE (Server-Sent Events)** — a streaming HTTP response format; here, OpenAI-style token chunks ending in `data: [DONE]`.
-- **Prompt caching** — reusing a stable prompt prefix across calls to cut cost and latency.
-- **Debounce** — collapsing rapid repeated events (here, partial vs. final transcripts) so only the last one does expensive work.
