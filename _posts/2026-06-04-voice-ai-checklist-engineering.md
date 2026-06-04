@@ -65,12 +65,9 @@ This is where the real story is.
 
 Vapi exposes a `say` control message — force the assistant to speak specific text. We tried it.
 
-It worked mechanically, but it was too rigid:
+It worked mechanically — the assistant said the words. But `say` bypasses the model entirely. It's just text-to-speech. There's no intelligence behind it: no acknowledging what the caller just said, no following up when they mention something unexpected, no recovering from a mis-hearing. Even the questions we generated on the backend had no flexibility — they were static strings, not model output. If the caller said something off-script, the assistant had nothing to work with.
 
-- No natural acknowledgement ("Got it.") before the question.
-- It bypassed the model entirely — no consolidation, no handling unexpected follow-ups, no graceful recovery from mis-hearings.
-
-A checklist read by a TTS puppet is not a conversation. Abandoned.
+A checklist read aloud by a TTS puppet is not a conversation. Abandoned.
 
 ### 3b. Mid-conversation system messages
 
@@ -181,7 +178,7 @@ return StreamingResponse(generate(), media_type="text/event-stream")
 
 The platform's job is now reduced to handling audio and turn-taking. It doesn't touch the prompt, doesn't pick the model, doesn't forward our instructions. All of that is ours. The next question is baked into the system prompt of every call we make — it can't get dropped, can't get downgraded, can't get merged into the transcript.
 
-But unlike the rigid `say` command (3a), the model is still a model. It can acknowledge what the caller said, handle off-script input, and ask the directive naturally. If a caller mentions something unexpected — say, "we had a meeting" — the analyzer picks that up, and the next directive tells the model to explore it: what happened, who was there, what was discussed. Once the caller is done, the directive shifts back to the next open checklist item. The proxy controls _what_ the model should ask; the model controls _how_ it asks it. That's the balance the `say` command couldn't give us and the mid-conversation messages couldn't reliably deliver.
+And the model is still a model. It can acknowledge what the caller said, handle off-script input, and ask the directive naturally. If a caller mentions something unexpected — say, "we had a meeting" — the analyzer picks that up, and the next directive tells the model to explore it: what happened, who was there, what was discussed. Once the caller is done, the directive shifts back to the next open checklist item. The proxy controls _what_ the model should ask; the model controls _how_ it asks it.
 
 #### Latency
 
