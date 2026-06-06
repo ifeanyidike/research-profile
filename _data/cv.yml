@@ -36,7 +36,7 @@ cv:
         url: https://wqu.edu
         area: Financial Engineering
         studyType: MSc (In Progress)
-        start_date: 2026
+        start_date: 2026-01
         end_date: present
         highlights:
           - "Coursework: Financial Data Science, Machine Learning for Finance, NLP for Finance, Alternative Data, Financial Econometrics"
@@ -116,7 +116,7 @@ cv:
           - Richard Nneji
         publisher: "2018 IEEE 9th Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON), pp. 286–291"
         releaseDate: 2018-11-01
-        url: https://ieeexplore.ieee.org
+        url: https://ieeexplore.ieee.org/document/8614869/
 
       - title: "An Improved e-Clearance Management System for Graduating Students in a University Environment"
         authors:
@@ -128,7 +128,7 @@ cv:
           - Ifeanyi Dike
         publisher: "2018 IEEE 9th Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON), pp. 74–80"
         releaseDate: 2018-11-01
-        url: https://ieeexplore.ieee.org
+        url: https://ieeexplore.ieee.org/document/8614875/
 
       - title: "Enhanced Attendance Management System: A Biometrics System of Identification Based on Fingerprint"
         authors:
@@ -140,7 +140,7 @@ cv:
           - Abel Ogungbile
         publisher: "2018 IEEE 9th Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON), pp. 500–505"
         releaseDate: 2018-11-01
-        url: https://ieeexplore.ieee.org
+        url: https://ieeexplore.ieee.org/document/8614776/
 
       - title: "Design of an Improved Cost Effective Electronic Locking System"
         authors:
@@ -152,7 +152,7 @@ cv:
           - Richard Nneji
         publisher: "2018 IEEE 9th Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON), pp. 493–499"
         releaseDate: 2018-11-01
-        url: https://ieeexplore.ieee.org
+        url: https://ieeexplore.ieee.org/document/8614749/
 
     Research Interests:
       - name: Primary
