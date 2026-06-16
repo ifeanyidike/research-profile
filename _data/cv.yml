@@ -1,12 +1,12 @@
 cv:
   name: Ifeanyi Desmond Dike
-  label: AI Engineer & PhD Applicant
+  label: AI Engineer & Researcher
   email: ifeanyi@ifeanyidike.com
   phone: "+2347045477101"
   location: Port Harcourt, Nigeria
   image: ""
   summary: >
-    AI engineer and applied mathematician. PhD applicant, Fall 2027.
+    AI engineer and applied mathematician.
     Research focus: evaluation methodology for full-duplex spoken dialogue systems — proposing ATR (Acoustic Turn-over Rate) as a more stable, ASR-free alternative to TOR.
     First Class Honours in Applied Mathematics (GPA 4.63/5.0), four IEEE publications, one paper under review, 8+ years building production AI systems.
 
