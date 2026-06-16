@@ -298,6 +298,52 @@ One import change. 152MB gone from a process that never needed it.
 
 ---
 
+## Bonus 2: DOCX template caching
+
+Another win came from report generation. We had an endpoint that generates DOCX reports using `python-docx` and `docxtpl`. Every request was re-parsing the template file from disk — a 56MB C-level XML parse through `lxml`, every single time.
+
+The obvious fix is to cache the parsed `Document` object and reuse it. But there's a gotcha that took a while to figure out.
+
+You can't just `deepcopy(DocxTemplate)`. It causes infinite recursion. The reason: `DocxTemplate.__getattr__` delegates attribute lookups to `self.docx`, and `deepcopy` triggers `__getattr__` during the copy process, which creates a loop.
+
+The workaround: cache the template, but when you need a fresh copy, `deepcopy` only the inner `tpl.docx` object and inject it into a new `DocxTemplate` shell:
+
+```python
+import copy
+from docxtpl import DocxTemplate
+
+# Cache the parsed template once at startup
+_cached_tpl = DocxTemplate("template.docx")
+
+def get_fresh_template():
+    tpl = DocxTemplate.__new__(DocxTemplate)
+    tpl.docx = copy.deepcopy(_cached_tpl.docx)
+    # Copy over other attributes docxtpl needs
+    tpl.jinja_env = _cached_tpl.jinja_env
+    tpl.crc_to_new_media = {}
+    tpl.crc_to_new_embedded = {}
+    tpl.pic_map = {}
+    return tpl
+```
+
+This skips the 56MB XML re-parse on every request and avoids the `deepcopy` recursion. The template is parsed once and reused.
+
+---
+
+## What we tried and rejected: jemalloc
+
+We also looked at [jemalloc](https://github.com/jemalloc/jemalloc) as a memory allocator replacement. It's commonly recommended for Python services to reduce heap fragmentation, and Heroku even has a buildpack for it.
+
+We didn't end up using it, and the reason is not obvious.
+
+jemalloc uses `MADV_FREE` instead of `MADV_DONTNEED` when releasing memory back to the OS. The difference: `MADV_DONTNEED` immediately unmaps the pages from your process's RSS. `MADV_FREE` just marks them as reusable — the kernel can reclaim them if it needs to, but until then they still count toward your RSS.
+
+On a normal server, this is fine. The memory _is_ available for reuse, and the OS reclaims it under pressure. But on Heroku, R14 errors are triggered by RSS. So jemalloc can actually make your Heroku metrics _worse_ even when real memory usage is lower. Your app uses less memory, but the OS reports more, and Heroku kills you for it.
+
+If you're on Heroku and considering jemalloc, check whether the RSS improvement is real or just hidden behind lazy page reclamation.
+
+---
+
 ## What I'd take away from this
 
 1. **memray is worth adding to any Python service that might have memory issues.** The signal-based attach means you can profile without restarting.
@@ -305,3 +351,5 @@ One import change. 152MB gone from a process that never needed it.
 3. **`uvicorn --workers N` uses spawn, not fork.** If you have heavy shared state (models, tokenizers, large caches), it multiplies your memory by N.
 4. **`gunicorn --preload` with uvicorn workers gives you Linux copy-on-write sharing.** This can save a lot of memory when most of what your workers load is read-only.
 5. **Audit your import chains.** A module-level side effect in a shared library can load things you never intended into processes that don't need them.
+6. **Cache expensive parses, but watch out for `deepcopy` traps.** Some objects don't survive `deepcopy` cleanly — you might need to copy only the inner data and rebuild the wrapper.
+7. **jemalloc on Heroku can backfire.** It reduces real memory usage but keeps RSS high because of `MADV_FREE` vs `MADV_DONTNEED`. Heroku cares about RSS.
