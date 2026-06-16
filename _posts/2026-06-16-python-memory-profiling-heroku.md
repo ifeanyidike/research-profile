@@ -184,7 +184,7 @@ The math: 3 workers × ~490MB = ~1.47GB, with zero sharing. The tokenizer alone:
 
 `os.fork()` works differently on Linux. When you fork, the child initially shares all of the parent's physical memory pages. The kernel uses copy-on-write — pages are only copied when either process writes to them. Read-only data (imported modules, loaded model weights, the tokenizer) is never copied. It stays shared across all workers.
 
-The first question you'd ask is: why not just lazy-load the tokenizer? We actually tried that earlier. The problem is that on Heroku, you're already close to the memory limit. When you lazy-load, the tokenizer gets loaded the first time a request actually needs it — and that 152MB spike happens mid-request. The worker is already holding memory for the request itself, and the sudden jump pushes it past the quota before the task even finishes. You get an R14 right when a user is waiting for a response. Loading at startup is predictable. Loading mid-request is a coin flip on whether you'll hit the limit.
+The first question you'd ask is: why not just lazy-load the tokenizer? We actually tried that earlier. Two problems. First, on Heroku you're already close to the memory limit. When the tokenizer loads mid-request, that 152MB spike happens while the worker is already holding memory for the request itself, and it pushes past the quota before the task finishes. Second, loading a 152MB tokenizer takes long enough to blow past Heroku's 30-second request timeout. The first request that triggers the load just dies. Loading at startup is predictable — you pay the cost once, before any user is waiting. Loading mid-request means the first unlucky user gets either an R14 or a timeout.
 
 ---
 
