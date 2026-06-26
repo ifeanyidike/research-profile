@@ -59,6 +59,20 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      line-height: 1.35;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--global-text-color-light);
+      margin-bottom: 0.4rem;
+      line-height: 1.5;
+    }
+
     .post-meta {
       color: var(--global-text-color-light);
       font-size: 0.8rem;
