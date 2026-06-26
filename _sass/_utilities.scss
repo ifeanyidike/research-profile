@@ -7,7 +7,9 @@
 // Code and syntax highlighting
 
 figure.highlight {
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
+  border-radius: 6px;
+  overflow: hidden;
 
   // Responsive code block container
   overflow-x: auto;
@@ -19,6 +21,7 @@ figure.highlight {
     word-wrap: normal;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin-bottom: 0;
   }
 }
 
@@ -26,7 +29,10 @@ pre {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
-  padding: 6px 12px;
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 
   // Responsive behavior for code blocks
   overflow-x: auto;
@@ -41,14 +47,16 @@ pre {
     margin-bottom: 0;
     padding: 0;
     white-space: inherit;
+    font-size: inherit;
   }
 }
 
 code {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 3px;
-  padding: 3px 3px;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.875em;
 
   // Inline code should wrap
   white-space: normal;
