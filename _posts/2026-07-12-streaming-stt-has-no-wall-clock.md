@@ -10,10 +10,10 @@ related_posts: false
 
 ## TL;DR
 
-- A caller ordered building materials over the phone. Our agent confirmed half the order. The middle of the sentence was gone from the transcript, replaced by a phonetically similar mis-decode, and no error was logged anywhere. The stack: Twilio Media Streams → Pipecat → Deepgram streaming STT (nova-3), hosted on Fly.io.
+- A caller ordered items over the phone. Our agent confirmed half the order. The middle of the sentence was gone from the transcript, replaced by a phonetically similar mis-decode, and no error was logged anywhere. The stack: Twilio Media Streams → Pipecat → Deepgram streaming STT (nova-3), hosted on Fly.io.
 - **Streaming STT engines measure pauses in audio, not in time.** If your pipeline stops sending frames, the model's clock stops with it. Speech that never gets a finalization is speech a finals-only pipeline silently throws away.
 - **The measurement that "confirmed" my first theory had no power to test it.** A number can be real and still be worthless as evidence.
-- **Twilio keeps sending frames during silence, but you won't find that in the docs.** You have to assemble the answer from blog asides and from the fact that the entire Twilio-plus-Deepgram ecosystem would fall over if it weren't true.
+- **Twilio keeps sending frames during silence, but the docs never say so.** The strongest evidence is indirect: if it weren't true, every Twilio-plus-Deepgram deployment on the internet would be dropping calls constantly.
 - **The same stalled stream corrupted our recording and our transcript differently.** Each artifact alone pointed to a wrong theory. Together they pinned the real layer.
 - The fix that matters isn't a fix at all: ~20 lines of gap logging that stay on in production, so the next stall names its own culprit.
 
@@ -21,7 +21,7 @@ related_posts: false
 
 ## One lost sentence
 
-A caller told our phone agent something like _"I need ten bundles of five-eighths studs, 20 gauge, ten footers."_ The agent confirmed back half the order. The saved transcript had a hole in the middle of the sentence, patched over with a phonetically similar mis-decode. Nothing crashed. Nothing logged an error. As far as the system was concerned, the call had gone fine.
+A caller told our phone agent something like _"give me six packs of the three-quarter clips, size 14, the long ones."_ The agent confirmed back half the order. The saved transcript had a hole in the middle of the sentence, patched over with a phonetically similar mis-decode. Nothing crashed. Nothing logged an error. As far as the system was concerned, the call had gone fine.
 
 I went through three plausible theories before the logs of the actual incident settled it. Each theory came with a number attached that seemed to support it, which is exactly what made this bug worth writing up. Almost everything I learned along the way contradicts something the docs imply, or fills in something they don't say at all.
 
