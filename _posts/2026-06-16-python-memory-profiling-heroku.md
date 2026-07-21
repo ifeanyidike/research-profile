@@ -2,7 +2,7 @@
 layout: post
 title: "Profiling Python Memory in Production on Heroku (and What We Found)"
 date: 2026-06-16 00:00:00-0000
-description: We profiled two FastAPI services hitting Heroku memory limits. memray showed a HuggingFace tokenizer loading 152MB per worker — three times over. The fix was switching from uvicorn's spawn to gunicorn's fork with --preload.
+description: We profiled two FastAPI services hitting Heroku memory limits. memray showed a HuggingFace tokenizer loading 152MB per worker, three times over. The fix was switching from uvicorn's spawn to gunicorn's fork with --preload.
 tags: python engineering infrastructure
 categories: engineering
 related_posts: false
@@ -11,10 +11,10 @@ related_posts: false
 ## TL;DR
 
 - Two FastAPI services kept hitting Heroku's memory quota (R14 errors) and restarting under load.
-- We profiled in production using [memray](https://github.com/bloomberg/memray) — hooked into live dynos using signal handlers, no restart needed.
+- We profiled in production using [memray](https://github.com/bloomberg/memray), hooked into live dynos using signal handlers, no restart needed.
 - The flamegraph showed a HuggingFace BLOOM tokenizer eating ~152MB _per worker process_, loaded three times because `uvicorn --workers 3` uses `spawn` (fresh interpreter per worker, no memory sharing).
 - Switching to `gunicorn --preload` with uvicorn workers gave us `fork`-based workers with Linux copy-on-write sharing. The tokenizer loaded once. Memory dropped over 70%.
-- A background worker that _never uses_ the tokenizer was also loading it — through an import chain. One import change saved another 152MB.
+- A background worker that _never uses_ the tokenizer was also loading it, through an import chain. One import change saved another 152MB.
 
 ---
 
@@ -30,7 +30,7 @@ Without a profile, you're guessing.
 
 A few Python memory profilers exist. `tracemalloc` is in the standard library and tracks allocations over time, but it only sees Python-level allocations. Anything happening inside a C extension or a Rust-backed library is invisible to it. `memory_profiler` gives you line-by-line results but requires decorating functions ahead of time and also misses native code.
 
-[memray](https://github.com/bloomberg/memray) is Bloomberg's open-source profiler. It tracks both Python and native (C/Rust) allocations, so you see the full call stack — numpy, PyTorch, HuggingFace internals, all of it. It gives you flamegraphs, timeline views, and live reports. And it can attach to a running process with a Unix signal, no restart needed.
+[memray](https://github.com/bloomberg/memray) is Bloomberg's open-source profiler. It tracks both Python and native (C/Rust) allocations, so you see the full call stack: numpy, PyTorch, HuggingFace internals, all of it. It gives you flamegraphs, timeline views, and live reports. And it can attach to a running process with a Unix signal, no restart needed.
 
 That last part is what made it viable for us.
 
@@ -74,7 +74,7 @@ heroku ps:exec --dyno=web.1 -- kill -USR1 $(pgrep -f gunicorn | head -1)
 heroku ps:exec --dyno=web.1 -- kill -USR2 $(pgrep -f gunicorn | head -1)
 ```
 
-`follow_fork=True` tells memray to track child processes created by `os.fork()`. This matters when you're running gunicorn — more on that below.
+`follow_fork=True` tells memray to track child processes created by `os.fork()`. This matters when you're running gunicorn; more on that below.
 
 One detail that bit us: avoid `--aggregate` mode. It buffers the entire profile in memory and only writes when the tracker exits. Under heavy traffic, this can use up memory on its own. The default streaming mode writes to disk continuously.
 
@@ -84,9 +84,9 @@ One detail that bit us: avoid `--aggregate` mode. It buffers the entire profile 
 
 This was harder than the profiling itself.
 
-Our memray output was around 92MB uncompressed. On a normal server you'd `scp` it. On Heroku there's no direct file access — everything goes through `heroku ps:exec`, which pipes through an SSH-over-HTTPS tunnel.
+Our memray output was around 92MB uncompressed. On a normal server you'd `scp` it. On Heroku there's no direct file access. Everything goes through `heroku ps:exec`, which pipes through an SSH-over-HTTPS tunnel.
 
-That tunnel has a buffer limit of roughly 1.2MB per session. We tried piping the full file and got what looked like a complete transfer — but the file was silently truncated and corrupted. We only found out when `memray flamegraph` failed to parse it.
+That tunnel has a buffer limit of roughly 1.2MB per session. We tried piping the full file and got what looked like a complete transfer, but the file was silently truncated and corrupted. We only found out when `memray flamegraph` failed to parse it.
 
 The fix: compress on the dyno first, then transfer in chunks using `dd` and `base64`, one piece at a time, with retries.
 
@@ -162,7 +162,7 @@ open profile.html
 
 ## What the flamegraph showed
 
-The result was clear. A HuggingFace BLOOM tokenizer (`bigscience/bloomz-560m`) was at the top of the allocation tree, eating ~152MB per worker. It was loading at module import time — not lazily on first use, but as a side effect of the module being imported.
+The result was clear. A HuggingFace BLOOM tokenizer (`bigscience/bloomz-560m`) was at the top of the allocation tree, eating ~152MB per worker. It was loading at module import time. Not lazily on first use, but as a side effect of the module being imported.
 
 That 152MB is roughly 96MB for the tokenizer object (the fast tokenizer backed by HuggingFace's Rust `tokenizers` library) and 55MB for the vocabulary JSON. All of this happens before the application handles a single request.
 
@@ -182,9 +182,9 @@ What most people don't realize is that uvicorn's `--workers` flag uses Python's 
 
 The math: 3 workers × ~490MB = ~1.47GB, with zero sharing. The tokenizer alone: 152MB × 3 = 456MB.
 
-`os.fork()` works differently on Linux. When you fork, the child initially shares all of the parent's physical memory pages. The kernel uses copy-on-write — pages are only copied when either process writes to them. Read-only data (imported modules, loaded model weights, the tokenizer) is never copied. It stays shared across all workers.
+`os.fork()` works differently on Linux. When you fork, the child initially shares all of the parent's physical memory pages. The kernel uses copy-on-write: pages are only copied when either process writes to them. Read-only data (imported modules, loaded model weights, the tokenizer) is never copied. It stays shared across all workers.
 
-The first question you'd ask is: why not just lazy-load the tokenizer? We actually tried that earlier. Two problems. First, on Heroku you're already close to the memory limit. When the tokenizer loads mid-request, that 152MB spike happens while the worker is already holding memory for the request itself, and it pushes past the quota before the task finishes. Second, loading a 152MB tokenizer takes long enough to blow past Heroku's 30-second request timeout. The first request that triggers the load just dies. Loading at startup is predictable — you pay the cost once, before any user is waiting. Loading mid-request means the first unlucky user gets either an R14 or a timeout.
+The first question you'd ask is: why not just lazy-load the tokenizer? We actually tried that earlier. Two problems. First, on Heroku you're already close to the memory limit. When the tokenizer loads mid-request, that 152MB spike happens while the worker is already holding memory for the request itself, and it pushes past the quota before the task finishes. Second, loading a 152MB tokenizer takes long enough to blow past Heroku's 30-second request timeout. The first request that triggers the load just dies. Loading at startup is predictable: you pay the cost once, before any user is waiting. Loading mid-request means the first unlucky user gets either an R14 or a timeout.
 
 ---
 
@@ -200,7 +200,7 @@ gunicorn main:app \
     -c gunicorn.conf.py
 ```
 
-`-k uvicorn.workers.UvicornWorker` gives us uvicorn's async request handling. `--preload` gives us fork-based workers with copy-on-write sharing. The tokenizer loads once in the master, and all three workers reference the same physical pages — 152MB total instead of 456MB.
+`-k uvicorn.workers.UvicornWorker` gives us uvicorn's async request handling. `--preload` gives us fork-based workers with copy-on-write sharing. The tokenizer loads once in the master, and all three workers reference the same physical pages: 152MB total instead of 456MB.
 
 We also added `--max-requests 1000 --max-requests-jitter 100` to recycle workers after 1000 requests (with some randomness to avoid a thundering herd of simultaneous restarts). This keeps memory from slowly creeping up in long-running workers.
 
@@ -251,7 +251,7 @@ A note on Sentry's `LoggingIntegration`: the default `level=None` silently turns
 
 ## Results
 
-Memory dropped over 70% after the switch. R14 errors stopped. The services run within quota under normal load, and adding more workers is way cheaper than before — you're only paying for memory that actually gets written during request handling, not the shared read-only stuff.
+Memory dropped over 70% after the switch. R14 errors stopped. The services run within quota under normal load, and adding more workers is way cheaper than before, since you're only paying for memory that actually gets written during request handling, not the shared read-only stuff.
 
 ---
 
@@ -259,7 +259,7 @@ Memory dropped over 70% after the switch. R14 errors stopped. The services run w
 
 If you try this locally on macOS with HuggingFace models, you'll likely get a `SIGSEGV` crash on worker fork.
 
-HuggingFace's fast tokenizers are backed by a Rust library (`tokenizers`) that uses Rayon for parallelism. Rayon spawns a thread pool when first used. When gunicorn forks after `--preload`, those Rayon threads exist in the parent but not the child. On macOS, `fork()` combined with active Rust thread pools produces undefined behavior — usually a segfault.
+HuggingFace's fast tokenizers are backed by a Rust library (`tokenizers`) that uses Rayon for parallelism. Rayon spawns a thread pool when first used. When gunicorn forks after `--preload`, those Rayon threads exist in the parent but not the child. On macOS, `fork()` combined with active Rust thread pools produces undefined behavior, usually a segfault.
 
 This is a known macOS limitation. macOS's `fork()` is stricter about thread state than Linux's. The same setup works fine on Linux (including Heroku).
 
@@ -269,7 +269,7 @@ For local development: test with Docker using a Linux base image. You can verify
 
 ## Bonus: watch your import chains
 
-After fixing the web workers, a background worker (we use RQ for async job processing) was still hitting R14 — sitting at ~517MB on a 512MB dyno.
+After fixing the web workers, a background worker (we use RQ for async job processing) was still hitting R14, sitting at ~517MB on a 512MB dyno.
 
 This worker never uses the tokenizer. It processes queued jobs that have nothing to do with the ML model.
 
@@ -302,7 +302,7 @@ One import change. 152MB gone from a process that never needed it.
 
 ## Bonus 2: DOCX template caching
 
-Another win came from report generation. We had an endpoint that generates DOCX reports using `python-docx` and `docxtpl`. Every request was re-parsing the template file from disk — a 56MB C-level XML parse through `lxml`, every single time.
+Another win came from report generation. We had an endpoint that generates DOCX reports using `python-docx` and `docxtpl`. Every request was re-parsing the template file from disk: a 56MB C-level XML parse through `lxml`, every single time.
 
 The obvious fix is to cache the parsed `Document` object and reuse it. But there's a gotcha that took a while to figure out.
 
@@ -338,7 +338,7 @@ We also looked at [jemalloc](https://github.com/jemalloc/jemalloc) as a memory a
 
 We didn't end up using it, and the reason is not obvious.
 
-jemalloc uses `MADV_FREE` instead of `MADV_DONTNEED` when releasing memory back to the OS. The difference: `MADV_DONTNEED` immediately unmaps the pages from your process's RSS. `MADV_FREE` just marks them as reusable — the kernel can reclaim them if it needs to, but until then they still count toward your RSS.
+jemalloc uses `MADV_FREE` instead of `MADV_DONTNEED` when releasing memory back to the OS. The difference: `MADV_DONTNEED` immediately unmaps the pages from your process's RSS. `MADV_FREE` just marks them as reusable. The kernel can reclaim them if it needs to, but until then they still count toward your RSS.
 
 On a normal server, this is fine. The memory _is_ available for reuse, and the OS reclaims it under pressure. But on Heroku, R14 errors are triggered by RSS. So jemalloc can actually make your Heroku metrics _worse_ even when real memory usage is lower. Your app uses less memory, but the OS reports more, and Heroku kills you for it.
 
@@ -353,5 +353,5 @@ If you're on Heroku and considering jemalloc, check whether the RSS improvement 
 3. **`uvicorn --workers N` uses spawn, not fork.** If you have heavy shared state (models, tokenizers, large caches), it multiplies your memory by N.
 4. **`gunicorn --preload` with uvicorn workers gives you Linux copy-on-write sharing.** This can save a lot of memory when most of what your workers load is read-only.
 5. **Audit your import chains.** A module-level side effect in a shared library can load things you never intended into processes that don't need them.
-6. **Cache expensive parses, but watch out for `deepcopy` traps.** Some objects don't survive `deepcopy` cleanly — you might need to copy only the inner data and rebuild the wrapper.
+6. **Cache expensive parses, but watch out for `deepcopy` traps.** Some objects don't survive `deepcopy` cleanly; you might need to copy only the inner data and rebuild the wrapper.
 7. **jemalloc on Heroku can backfire.** It reduces real memory usage but keeps RSS high because of `MADV_FREE` vs `MADV_DONTNEED`. Heroku cares about RSS.

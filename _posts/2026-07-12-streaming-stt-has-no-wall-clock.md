@@ -49,7 +49,7 @@ Three things follow from this that matter in production:
 
 ## Finding 2: The number that "confirmed" my theory measured nothing
 
-Early on I computed that only 31.3 seconds of audio had non-trivial energy across a 234.6-second call. I concluded the caller's mobile network was doing DTX — discontinuous transmission, where handsets genuinely stop transmitting during silence — and starving the STT of frames.
+Early on I computed that only 31.3 seconds of audio had non-trivial energy across a 234.6-second call. I concluded the caller's mobile network was doing DTX (discontinuous transmission, where handsets genuinely stop transmitting during silence) and starving the STT of frames.
 
 The number was real. The inference was wrong twice over.
 
@@ -65,31 +65,31 @@ The lesson I keep relearning: if a metric can't distinguish your hypothesis from
 
 Whether Media Streams keeps sending `media` messages while the caller is silent decides your whole error model. If silence means no frames, then gaps in the stream are normal and you should tolerate them. If silence arrives as frames of quiet audio, then a gap in the stream always means something is broken. These lead to opposite designs, and the docs don't say which world you're in.
 
-The answer — continuous ~20ms frames, 50 per second, with silence as quiet μ-law payloads — has to be assembled from scraps:
+The answer (continuous ~20ms frames, 50 per second, with silence as quiet μ-law payloads) has to be assembled from scraps:
 
 - A Twilio blog post mentions, in passing, that "partial transcripts can have empty text when audio data containing silence is sent."
 - The Voice SDK docs say muted calls send silent audio frames. Silence-as-frames is the platform's philosophy.
 - The best evidence is indirect: Deepgram's own Twilio integration pipes media straight through with no KeepAlives, and Deepgram closes any stream that goes 10 seconds without audio. If Twilio paused during silence, every Twilio-plus-Deepgram deployment on the internet would drop mid-call, constantly. They don't.
 
-Two adjacent facts from Twilio's Voice Insights docs deserve more attention than they get. Twilio does no packet-loss concealment or jitter buffering on its media edges — degradation coming in from a carrier is passed through to you. And comfort noise packets Twilio receives are not propagated internally. So a bad carrier leg _can_ surface as genuine holes in your media stream; Twilio won't paper over it. The one gift you get in return: every media message carries a stream-relative `timestamp` and a `chunk` sequence number. That turned out to be the forensic tool this whole investigation was missing.
+Two adjacent facts from Twilio's Voice Insights docs deserve more attention than they get. Twilio does no packet-loss concealment or jitter buffering on its media edges; degradation coming in from a carrier is passed through to you. And comfort noise packets Twilio receives are not propagated internally. So a bad carrier leg _can_ surface as genuine holes in your media stream; Twilio won't paper over it. The one gift you get in return: every media message carries a stream-relative `timestamp` and a `chunk` sequence number. That turned out to be the forensic tool this whole investigation was missing.
 
 ---
 
 ## Finding 4: One stalled stream, two different corruptions
 
-Fly.io keeps about 7 days of logs, fetchable by nanosecond timestamp (`GET /api/v1/apps/:app/logs?next_token=<ns>` — and depending on your token type, the header is `Authorization: FlyV1 <token>`, not `Bearer`). The failing call was four days old: inside the window. That flipped the investigation from "try to reproduce a rare bug" to "read the actual incident." Worth noting because we had made multiple instrumented test calls by then, and every single one came back pristine.
+Fly.io keeps about 7 days of logs, fetchable by nanosecond timestamp (`GET /api/v1/apps/:app/logs?next_token=<ns>`; depending on your token type, the header is `Authorization: FlyV1 <token>`, not `Bearer`). The failing call was four days old: inside the window. That flipped the investigation from "try to reproduce a rare bug" to "read the actual incident." Worth noting because we had made multiple instrumented test calls by then, and every single one came back pristine.
 
 The failure signature, pieced together from DEBUG logs:
 
 - **28.7 seconds of zero pipeline events.** No VAD transitions, no interim transcripts, spanning exactly the doomed sentence. HTTP health checks answered 200 the whole time. The event loop was alive; the inbound audio just wasn't reaching the processors.
-- **Then a burst.** VAD turn-start. The neural end-of-turn model returned COMPLETE only 1.3s later, because the flushed audio ended on a finished-sounding edge. Three `speech_final` results landed inside two seconds. The middle clause was gone, replaced by the mis-decode. And one trailing fragment surfaced 13 seconds later, which turned out to be the caller correcting the bot — a good reminder that log archaeology needs the recording open next to it.
+- **Then a burst.** VAD turn-start. The neural end-of-turn model returned COMPLETE only 1.3s later, because the flushed audio ended on a finished-sounding edge. Three `speech_final` results landed inside two seconds. The middle clause was gone, replaced by the mis-decode. And one trailing fragment surfaced 13 seconds later, which turned out to be the caller correcting the bot. A good reminder that log archaeology needs the recording open next to it.
 
 The recording cleared the model twice over:
 
-1. **The full sentence is in our own recording, clean.** Batch nova-3 — the same model as the live session — transcribes it perfectly, word timings and all. The audio was intact and the model was capable. The failure lives entirely in the timing of delivery into the streaming session.
+1. **The full sentence is in our own recording, clean.** Batch nova-3, the same model as the live session, transcribes it perfectly, word timings and all. The audio was intact and the model was capable. The failure lives entirely in the timing of delivery into the streaming session.
 2. **The recording is missing a different phrase, one the live STT heard fine.** The recorder aligns audio buffers to a wall clock; the STT consumes frames in the order they arrive. Fed the same stall-then-burst, each one coped differently and each corrupted a different span. Same frames in, two disjoint failure surfaces out. Either artifact on its own supports a wrong theory. Together they pin the layer.
 
-While ruling things out inside the framework, I audited the full inbound audio path and found exactly one code path that _deletes_ audio rather than delaying it: the Deepgram service silently drops every chunk while its connection is down mid-reconnect. The send is guarded by `if self._connection:` with no else and no buffer. Zero reconnect log lines in this call cleared it here, but it's a real word-eater with the same symptom fingerprint, worth knowing about if you run this stack. Everything else in the path — transport queues, inter-worker buses — is unbounded asyncio queues, which can delay audio but never lose it.
+While ruling things out inside the framework, I audited the full inbound audio path and found exactly one code path that _deletes_ audio rather than delaying it: the Deepgram service silently drops every chunk while its connection is down mid-reconnect. The send is guarded by `if self._connection:` with no else and no buffer. Zero reconnect log lines in this call cleared it here, but it's a real word-eater with the same symptom fingerprint, worth knowing about if you run this stack. Everything else in the path (transport queues, inter-worker buses) is unbounded asyncio queues, which can delay audio but never lose it.
 
 One more thing from the same audit, filed under "check your framework's defaults": the neural turn analyzer was active on calls that predate the PR that supposedly added it, because the library's default turn-stop strategy instantiates one whenever the app passes no strategies. "We haven't enabled X" is not the same as "X isn't running."
 
@@ -106,11 +106,11 @@ The resolution is about 20 lines, and it leans on Twilio's per-message clock:
 
 Every future stall then identifies itself in a single log line:
 
-| Signature                                       | Verdict                                                                            |
-| ----------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Twilio's timestamps jump across the gap         | Twilio never sent the audio — carrier or provider problem; escalate with call SIDs |
-| Timestamps contiguous, frames arrive in a lump  | Network-path delay — a TCP stall between provider and host                         |
-| Websocket arrivals on time, pipeline input late | In-process — event loop or queue stall, and the log names the stage                |
+| Signature                                       | Verdict                                                                           |
+| ----------------------------------------------- | --------------------------------------------------------------------------------- |
+| Twilio's timestamps jump across the gap         | Twilio never sent the audio: carrier or provider problem; escalate with call SIDs |
+| Timestamps contiguous, frames arrive in a lump  | Network-path delay: a TCP stall between provider and host                         |
+| Websocket arrivals on time, pipeline input late | In-process: event loop or queue stall, and the log names the stage                |
 
 The operational point matters more than the code: this ships to production and stays on. It's silent on healthy calls, so it costs nothing, and rare failures don't reproduce on demand. Our test calls proved that by refusing to fail. Real traffic does the reproducing. Your job is to have the evidence already being written down when it does.
 
