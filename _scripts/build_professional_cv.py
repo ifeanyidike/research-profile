@@ -15,22 +15,27 @@ from reportlab.pdfbase.ttfonts import TTFont
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "output/pdf/Ifeanyi_Desmond_Dike_Professional_CV.pdf"
-INK = colors.HexColor("#172B3A")
-MUTED = colors.HexColor("#52616B")
-BLUE = colors.HexColor("#185D7A")
-FONT_DIR = Path(reportlab.__file__).parent / "fonts"
-pdfmetrics.registerFont(TTFont("CV", str(FONT_DIR / "Vera.ttf")))
-pdfmetrics.registerFont(TTFont("CV-Bold", str(FONT_DIR / "VeraBd.ttf")))
+INK = colors.HexColor("#242C33")
+MUTED = colors.HexColor("#65717A")
+BLUE = colors.HexColor("#29485E")
+FONT_DIR = Path("/System/Library/Fonts/Supplemental")
+if (FONT_DIR / "Arial.ttf").exists():
+    regular_font, bold_font = FONT_DIR / "Arial.ttf", FONT_DIR / "Arial Bold.ttf"
+else:
+    FONT_DIR = Path(reportlab.__file__).parent / "fonts"
+    regular_font, bold_font = FONT_DIR / "Vera.ttf", FONT_DIR / "VeraBd.ttf"
+pdfmetrics.registerFont(TTFont("CV", str(regular_font)))
+pdfmetrics.registerFont(TTFont("CV-Bold", str(bold_font)))
 pdfmetrics.registerFontFamily("CV", normal="CV", bold="CV-Bold")
 STYLES = {
-    "name": ParagraphStyle("name", fontName="Helvetica-Bold", fontSize=22, leading=25, textColor=INK, spaceAfter=5),
-    "title": ParagraphStyle("title", fontName="Helvetica", fontSize=12, leading=16, textColor=BLUE, spaceAfter=6),
+    "name": ParagraphStyle("name", fontName="Helvetica-Bold", fontSize=26, leading=30, textColor=INK, spaceAfter=7),
+    "title": ParagraphStyle("title", fontName="Helvetica", fontSize=11.5, leading=16, textColor=BLUE, spaceAfter=8),
     "contact": ParagraphStyle("contact", fontName="Helvetica", fontSize=9, leading=13, textColor=MUTED),
-    "section": ParagraphStyle("section", fontName="Helvetica-Bold", fontSize=10, leading=13, textColor=BLUE, spaceBefore=12, spaceAfter=6, keepWithNext=True),
-    "job": ParagraphStyle("job", fontName="Helvetica-Bold", fontSize=10.5, leading=14, textColor=INK, spaceBefore=7, spaceAfter=2, keepWithNext=True),
+    "section": ParagraphStyle("section", fontName="Helvetica-Bold", fontSize=9, leading=12, textColor=BLUE, spaceBefore=13, spaceAfter=5, keepWithNext=True),
+    "job": ParagraphStyle("job", fontName="Helvetica-Bold", fontSize=11, leading=14, textColor=INK, spaceBefore=8, spaceAfter=3, keepWithNext=True),
     "meta": ParagraphStyle("meta", fontName="Helvetica", fontSize=9, leading=12, textColor=MUTED, spaceAfter=5, keepWithNext=True),
-    "body": ParagraphStyle("body", fontName="Helvetica", fontSize=10, leading=13.5, textColor=INK, spaceAfter=5, alignment=TA_LEFT),
-    "bullet": ParagraphStyle("bullet", fontName="Helvetica", fontSize=10, leading=13.5, textColor=INK, leftIndent=10, firstLineIndent=-10, spaceAfter=5),
+    "body": ParagraphStyle("body", fontName="Helvetica", fontSize=10.2, leading=14.3, textColor=INK, spaceAfter=6, alignment=TA_LEFT),
+    "bullet": ParagraphStyle("bullet", fontName="Helvetica", fontSize=10.2, leading=14.3, textColor=INK, leftIndent=10, firstLineIndent=-10, spaceAfter=5),
 }
 for style in STYLES.values():
     style.fontName = "CV-Bold" if style.fontName == "Helvetica-Bold" else "CV"
@@ -43,11 +48,11 @@ def link(url, label):
 def footer(canvas, doc):
     canvas.saveState()
     canvas.setStrokeColor(colors.HexColor("#D5DFE4"))
-    canvas.line(44, 35, A4[0] - 44, 35)
+    canvas.line(48, 35, A4[0] - 48, 35)
     canvas.setFont("CV", 8)
     canvas.setFillColor(MUTED)
-    canvas.drawString(44, 23, "Ifeanyi Desmond Dike | Professional CV")
-    canvas.drawRightString(A4[0] - 44, 23, str(doc.page))
+    canvas.drawString(48, 23, "Ifeanyi Desmond Dike")
+    canvas.drawRightString(A4[0] - 48, 23, f"{doc.page} / 2")
     canvas.restoreState()
 
 
@@ -56,15 +61,19 @@ def build():
 
     def p(text, style="body"):
         story.append(Paragraph(text, STYLES[style]))
+        if style == "section":
+            rule = HRFlowable(width="100%", thickness=0.4, color=colors.HexColor("#CBD3D9"), spaceAfter=6)
+            rule.keepWithNext = True
+            story.append(rule)
 
     def job(company, role, dates, location="Remote"):
-        p(f"{company} | {role}", "job")
-        p(f"{dates} | {location}", "meta")
+        p(company, "job")
+        p(f"{role} | {dates} | {location}", "meta")
 
     def bullet(text):
-        p(f"- {text}", "bullet")
+        p(f"&#8226; {text}", "bullet")
 
-    p("IFEANYI DESMOND DIKE", "name")
+    p("Ifeanyi Desmond Dike", "name")
     p("Senior Software Engineer | Voice AI &amp; Distributed Systems", "title")
     p("Port Harcourt, Nigeria | " + link("mailto:ifeanyi@ifeanyidike.com", "ifeanyi@ifeanyidike.com"), "contact")
     p(" | ".join([
@@ -72,11 +81,10 @@ def build():
         link("https://github.com/ifeanyidike", "github.com/ifeanyidike"),
         link("https://linkedin.com/in/ifeanyidesmonddike", "LinkedIn: ifeanyidesmonddike"),
     ]), "contact")
-    story.append(Spacer(1, 10))
-    story.append(HRFlowable(width="100%", thickness=1, color=BLUE))
+    story.append(Spacer(1, 3))
 
     p("PROFILE", "section")
-    p("Software engineer with <b>9+ years of experience</b> building backend services, real-time media and AI products. Owns voice infrastructure from telephony and streaming speech through LLM orchestration, deployment and evaluation. Recent work includes on-demand call capacity, distributed scheduling and multilingual voice agents. Strong Python, Go and TypeScript background, with production systems supporting up to 10,000 concurrent connections.")
+    p("Software engineer with <b>9+ years of experience</b> building backend services, real-time media and AI products. Owns voice infrastructure from telephony and streaming speech to deployment and evaluation. Recent work spans on-demand call capacity, distributed scheduling and multilingual agents. Strong Python, Go and TypeScript background; built production systems supporting up to 10,000 concurrent connections.")
 
     p("TECHNICAL SKILLS", "section")
     p("<b>Languages &amp; backend:</b> Python, asyncio, Go, TypeScript, FastAPI, gRPC, REST, PostgreSQL, Redis, MongoDB, RQ background workers.")
@@ -86,8 +94,7 @@ def build():
     p("PROFESSIONAL EXPERIENCE", "section")
     job("DataStrut AI", "Founding AI Engineer / Senior Software Engineer", "Aug 2025 - Present")
     bullet("Own the production voice platform across telephony, streaming speech, LLM orchestration and post-call processing; migrated managed voice infrastructure to a self-hosted Python/Pipecat stack.")
-    bullet("Scaled from fixed shared capacity to an on-demand Fly Machines pool with per-call isolation, atomic Redis reservations, capacity-aware routing and warm capacity reserved for inbound calls.")
-    bullet("Built safe machine drain, resume and release lifecycles that account for call setup and post-call work; fenced delayed callbacks to protect newer reservations.")
+    bullet("Scaled fixed shared capacity into an on-demand Fly Machines pool with per-call isolation, atomic Redis reservations and reserved inbound capacity. Added safe drain/resume lifecycles and fenced callbacks to protect active calls and newer reservations.")
     bullet("Separated outbound scheduling from report generation with dedicated RQ workers. Added asynchronous, idempotent call triggers and capacity-aware retries to avoid duplicate dials and queue contention.")
     bullet("Designed production-informed load tests and CPU, memory, Redis-connection and report-throughput models to identify bottlenecks and guide capacity planning.")
     bullet("Delivered English/Spanish voice workflows across speech recognition, synthesis, prompts, recovery messages and post-call reporting.")
@@ -136,8 +143,8 @@ def build():
     p("<b>B.Tech., Applied Mathematics, First Class</b> | Federal University of Technology, Akure | 2018<br/>GPA: 4.63/5.00. National university mathematics competition: Gold (2017), Bronze (2016).")
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    doc = SimpleDocTemplate(str(OUTPUT), pagesize=A4, rightMargin=44, leftMargin=44,
-                            topMargin=36, bottomMargin=46, title="Ifeanyi Desmond Dike - Professional CV",
+    doc = SimpleDocTemplate(str(OUTPUT), pagesize=A4, rightMargin=48, leftMargin=48,
+                            topMargin=39, bottomMargin=50, title="Ifeanyi Desmond Dike - Professional CV",
                             author="Ifeanyi Desmond Dike")
     doc.build(story, onFirstPage=footer, onLaterPages=footer)
     copyfile(OUTPUT, ROOT / "assets/pdf/ifeanyi_dike_professional_cv.pdf")
