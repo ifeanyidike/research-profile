@@ -96,13 +96,13 @@ def build():
     bullet("Own the production voice platform across telephony, streaming speech, LLM orchestration and post-call processing; migrated managed voice infrastructure to a self-hosted Python/Pipecat stack.")
     bullet("Scaled fixed shared capacity into an on-demand Fly Machines pool with per-call isolation, atomic Redis reservations and reserved inbound capacity. Added safe drain/resume lifecycles and fenced callbacks to protect active calls and newer reservations.")
     bullet("Separated outbound scheduling from report generation with dedicated RQ workers. Added asynchronous, idempotent call triggers and capacity-aware retries to avoid duplicate dials and queue contention.")
-    bullet("Designed production-informed load tests and CPU, memory, Redis-connection and report-throughput models to identify bottlenecks and guide capacity planning.")
-    bullet("Delivered English/Spanish voice workflows across speech recognition, synthesis, prompts, recovery messages and post-call reporting.")
+    bullet("Built capacity models and load tests spanning CPU, memory, Redis and report throughput. Validated event ingestion with <b>6,000 successful synthetic requests</b> across four load levels; identified Redis connections as the first call-routing constraint.")
+    bullet("Cut steady-state STT session usage by <b>about 67% (3 to 1 per call)</b> in three-agent workflows by tying sessions to agent activation. Delivered English/Spanish support across recognition, synthesis, prompts and reporting.")
     bullet("Built response-admission controls, echo-aware turn-taking and deterministic regression tests; added playback-aligned traces and recordings to distinguish generated speech from what callers heard.")
 
     job("Cenphi", "Co-Founder and Lead Developer", "Mar 2025 - Present")
     bullet("Built an asynchronous video-production pipeline with Python, FastAPI, Whisper, diarization, LLMs and FFmpeg; added job orchestration, provider fallback and live progress updates.")
-    bullet("Developed segment-based story composition and artifact tracking, reducing manual review by approximately 80%.")
+    bullet("Developed segment-based story composition and artifact tracking, reducing manual review by <b>approximately 80%</b>.")
 
     story.append(PageBreak())
     p("PROFESSIONAL EXPERIENCE - CONTINUED", "section")
@@ -111,13 +111,13 @@ def build():
     bullet("Built retrieval-augmented recommendations and automated voice-verification workflows, from service design through deployment.")
 
     job("Arbor Platform Inc.", "Senior Software Engineer", "Feb 2023 - Oct 2024")
-    bullet("Built Claude/OpenAI-powered video workflows that reduced production time by 60% and improved throughput by 80%.")
+    bullet("Built Claude/OpenAI-powered video workflows that reduced production time by <b>60%</b> and improved throughput by <b>80%</b>.")
     bullet("Delivered text-to-video, transcription, content-studio and asset-management features across React/TypeScript interfaces, backend APIs and cloud services.")
 
     job("Howdy Learning", "Senior Software Development Engineer", "May 2020 - Mar 2023")
-    bullet("Reduced WebSocket network traffic by more than 99% through real-time communication optimizations.")
-    bullet("Built live-video infrastructure supporting up to 10,000 concurrent connections and chat serving approximately 100 communities.")
-    bullet("Delivered embedded video, voice, chat and single sign-on integrations for more than 100 customers.")
+    bullet("Reduced WebSocket network traffic by <b>more than 99%</b> through real-time communication optimizations.")
+    bullet("Built live-video infrastructure supporting up to <b>10,000 concurrent connections</b> and chat serving approximately <b>100 communities</b>.")
+    bullet("Delivered embedded video, voice, chat and single sign-on integrations for <b>more than 100 customers</b>.")
 
     job("Bujuwa Nigeria Limited", "Software Developer", "Jul 2018 - Dec 2019", "Abuja, Nigeria")
     bullet("Delivered web and mobile assessment systems, covering requirements, application architecture and implementation.")
@@ -133,8 +133,8 @@ def build():
       + link("https://doi.org/10.5281/zenodo.20548903", "Research artifact") + ".")
     p("<b>Full-Duplex-Bench reproduction:</b> Investigated ASR sensitivity in voice-agent evaluation, finding up to 62x metric variation across ASR backends on the same audio. "
       + link("https://github.com/ifeanyidike/full-duplex-bench-repro", "Code and results") + ".")
-    p("<b>TubeForge:</b> Built an open-source video workflow backend with Python, FastAPI, SQLAlchemy, FFmpeg, WebSocket progress and provider fallback. "
-      + link("https://github.com/ifeanyidike/tubeforge", "Source code") + ".")
+    p("<b>Cenphi:</b> Co-founded an AI-assisted video platform that turns interviews and testimonials into stories through transcript-linked segment selection, speaker-aware analysis and automated video composition. "
+      + link("https://cenphi.io", "cenphi.io") + ".")
     p("<b>Technical writing:</b> Publish practical investigations of voice-agent concurrency, interrupted speech and turn-taking at "
       + link("https://ifeanyidike.com/blog/", "ifeanyidike.com/blog") + ".")
 

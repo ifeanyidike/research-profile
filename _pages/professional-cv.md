@@ -15,7 +15,8 @@ At DataStrut AI, I own voice infrastructure spanning telephony, streaming speech
 
 - Scaling call handling from fixed shared capacity to an on-demand machine pool, with per-call isolation and capacity reserved for inbound calls.
 - Separating outbound scheduling from report generation, with idempotent call triggers and capacity-aware retries.
-- Building load tests and resource models to identify bottlenecks and guide capacity planning.
+- Building capacity models and validating event ingestion with **6,000 successful synthetic requests** across four load levels.
+- Cutting steady-state speech-recognition session usage by **about 67%**, from three to one per call in three-agent workflows.
 - Delivering English/Spanish support across speech recognition, synthesis, prompts, and reporting.
 - Improving turn-taking, response coordination, and playback observability.
 
