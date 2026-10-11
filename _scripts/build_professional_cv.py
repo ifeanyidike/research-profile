@@ -107,36 +107,39 @@ def build():
     story.append(PageBreak())
     p("PROFESSIONAL EXPERIENCE - CONTINUED", "section")
     job("Fynance Hub", "Technical Lead", "Oct 2024 - Present", "Remote, part-time")
-    bullet("Lead backend architecture and delivery using Go, Python, gRPC, PostgreSQL and Redis for real-time financial services.")
-    bullet("Built retrieval-augmented recommendations and automated voice-verification workflows, from service design through deployment.")
+    bullet("Designed Go/Python microservices with gRPC, owning architecture through production delivery.")
+    bullet("Built PostgreSQL/Redis services for real-time data processing.")
+    bullet("Developed GPT-4 and RAG-based recommendations for broker lead management.")
+    bullet("Automated lead verification through outbound voice calls.")
 
     job("Arbor Platform Inc.", "Senior Software Engineer", "Feb 2023 - Oct 2024")
     bullet("Built Claude/OpenAI-powered video workflows that reduced production time by <b>60%</b> and improved throughput by <b>80%</b>.")
-    bullet("Delivered text-to-video, transcription, content-studio and asset-management features across React/TypeScript interfaces, backend APIs and cloud services.")
+    bullet("Delivered text-to-video and audio-transcription features for AI-assisted editing.")
+    bullet("Built a content studio and B-roll asset-management tools with one-click social distribution.")
+    bullet("Developed React/TypeScript interfaces and integrated backend APIs and cloud services.")
 
     job("Howdy Learning", "Senior Software Development Engineer", "May 2020 - Mar 2023")
     bullet("Reduced WebSocket network traffic by <b>more than 99%</b> through real-time communication optimizations.")
-    bullet("Built live-video infrastructure supporting up to <b>10,000 concurrent connections</b> and chat serving approximately <b>100 communities</b>.")
-    bullet("Delivered embedded video, voice, chat and single sign-on integrations for <b>more than 100 customers</b>.")
+    bullet("Built live-video infrastructure supporting up to <b>10,000 concurrent connections</b>.")
+    bullet("Developed a GetStream/WebSocket chat system serving approximately <b>100 communities</b>.")
+    bullet("Delivered embedded video, voice and SSO widgets for Thinkific and WordPress, with integrations used by <b>more than 100 customers</b>.")
 
     job("Bujuwa Nigeria Limited", "Software Developer", "Jul 2018 - Dec 2019", "Abuja, Nigeria")
-    bullet("Delivered web and mobile assessment systems, covering requirements, application architecture and implementation.")
+    bullet("Delivered web and mobile assessment systems, from requirements and architecture to implementation.")
 
     p("OPEN SOURCE &amp; SELECTED ENGINEERING WORK", "section")
-    p("<b>Pipecat:</b> Diagnosed and reported stale-generation failures in the Anthropic integration, with reproduction evidence in "
+    p("<b>Pipecat:</b> Reported Anthropic stale-generation failures with reproduction evidence in "
       + link("https://github.com/pipecat-ai/pipecat/issues/5035", "#5035") + " and "
       + link("https://github.com/pipecat-ai/pipecat/issues/5036", "#5036")
-      + "; maintainers resolved #5036 through upstream "
+      + "; #5036 was resolved upstream in "
       + link("https://github.com/pipecat-ai/pipecat/pull/5041", "PR #5041") + ".")
-    p("<b>Acoustic Turn-over Rate (ATR):</b> Developed an ASR-independent voice-agent evaluation metric. On controlled audio, ASR-based estimates diverged by up to 23.5 percentage points; three VAD backends agreed within 7.6 points. "
+    p("<b>Acoustic Turn-over Rate (ATR):</b> Built ASR-independent evaluation: three VAD backends agreed within 7.6 percentage points, versus up to 23.5 points of ASR disagreement on the same audio. "
       + link("https://github.com/ifeanyidike/atr-metric", "Code") + " | "
       + link("https://doi.org/10.5281/zenodo.20548903", "Research artifact") + ".")
-    p("<b>Full-Duplex-Bench reproduction:</b> Investigated ASR sensitivity in voice-agent evaluation, finding up to 62x metric variation across ASR backends on the same audio. "
+    p("<b>Full-Duplex-Bench:</b> Exposed up to 62x metric variation across ASR backends on identical audio. "
       + link("https://github.com/ifeanyidike/full-duplex-bench-repro", "Code and results") + ".")
-    p("<b>Cenphi:</b> Co-founded an AI-assisted video platform that turns interviews and testimonials into stories through transcript-linked segment selection, speaker-aware analysis and automated video composition. "
+    p("<b>Cenphi:</b> Co-founded an AI video platform for transcript-linked story composition, speaker-aware analysis and automated editing. "
       + link("https://cenphi.io", "cenphi.io") + ".")
-    p("<b>Technical writing:</b> Publish practical investigations of voice-agent concurrency, interrupted speech and turn-taking at "
-      + link("https://ifeanyidike.com/blog/", "ifeanyidike.com/blog") + ".")
 
     p("EDUCATION", "section")
     p("<b>M.Sc., Financial Engineering</b> | WorldQuant University | 2026 - Present (in progress)")
