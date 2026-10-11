@@ -110,7 +110,7 @@ def build():
     bullet("Built Fynance Hub's mortgage lead-generation product, which has generated <b>hundreds of leads for Canadian mortgage agents</b> and streamlined how they find and qualify prospects.")
     bullet("Developed GPT-4/RAG recommendations for broker leads and automated outbound voice verification.")
     bullet("Designed Go/Python microservices with gRPC, PostgreSQL and Redis for real-time data processing.")
-    bullet("<b>Separate project:</b> building a mobile dairy-operations platform for <b>MajorDairy AI (CAD 500K seed-funded)</b>, designed for on-farm recordkeeping across large Canadian farms.")
+    bullet("<b>Separate project:</b> building MajorDairy AI's app for large Canadian farms, currently in <b>Google Play testing</b>. The company has raised <b>CAD 500K in seed investment</b>.")
     bullet("Developing React Native/Expo and FastAPI/PostgreSQL workflows for breeding, pregnancy checks, calving and daily farm, technician and vet tasks.")
     bullet("Built a DairyComp 305 importer to bring legacy herd records into the mobile platform.")
 
