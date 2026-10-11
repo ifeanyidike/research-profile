@@ -107,10 +107,11 @@ def build():
     story.append(PageBreak())
     p("PROFESSIONAL EXPERIENCE - CONTINUED", "section")
     job("Fynance Hub", "Technical Lead", "Oct 2024 - Present", "Remote, part-time")
-    bullet("Designed Go/Python microservices with gRPC, owning architecture through production delivery.")
-    bullet("Built PostgreSQL/Redis services for real-time data processing.")
-    bullet("Developed GPT-4 and RAG-based recommendations for broker lead management.")
-    bullet("Automated lead verification through outbound voice calls.")
+    bullet("Building a mobile dairy-operations platform for <b>MajorDairy AI (CAD 500K seed-funded)</b>, designed for on-farm recordkeeping and coordination across large Canadian farms.")
+    bullet("Developing React Native/Expo and FastAPI/PostgreSQL workflows for breeding, pregnancy checks, calving and daily farm, technician and vet tasks.")
+    bullet("Built a DairyComp 305 importer to bring legacy herd records into the mobile platform.")
+    bullet("Designed Go/Python microservices with gRPC, PostgreSQL and Redis for real-time data processing.")
+    bullet("Developed GPT-4/RAG recommendations for broker leads and automated outbound voice verification.")
 
     job("Arbor Platform Inc.", "Senior Software Engineer", "Feb 2023 - Oct 2024")
     bullet("Built Claude/OpenAI-powered video workflows that reduced production time by <b>60%</b> and improved throughput by <b>80%</b>.")
@@ -128,17 +129,17 @@ def build():
     bullet("Delivered web and mobile assessment systems, from requirements and architecture to implementation.")
 
     p("OPEN SOURCE &amp; SELECTED ENGINEERING WORK", "section")
-    p("<b>Pipecat:</b> Reported Anthropic stale-generation failures with reproduction evidence in "
+    p("<b>Pipecat:</b> Reported two Anthropic integration bugs ("
       + link("https://github.com/pipecat-ai/pipecat/issues/5035", "#5035") + " and "
       + link("https://github.com/pipecat-ai/pipecat/issues/5036", "#5036")
-      + "; #5036 was resolved upstream in "
+      + "); #5036 was resolved in "
       + link("https://github.com/pipecat-ai/pipecat/pull/5041", "PR #5041") + ".")
-    p("<b>Acoustic Turn-over Rate (ATR):</b> Built ASR-independent evaluation: three VAD backends agreed within 7.6 percentage points, versus up to 23.5 points of ASR disagreement on the same audio. "
-      + link("https://github.com/ifeanyidike/atr-metric", "Code") + " | "
-      + link("https://doi.org/10.5281/zenodo.20548903", "Research artifact") + ".")
-    p("<b>Full-Duplex-Bench:</b> Exposed up to 62x metric variation across ASR backends on identical audio. "
-      + link("https://github.com/ifeanyidike/full-duplex-bench-repro", "Code and results") + ".")
-    p("<b>Cenphi:</b> Co-founded an AI video platform for transcript-linked story composition, speaker-aware analysis and automated editing. "
+    p("<b>Voice AI evaluation:</b> "
+      + link("https://github.com/ifeanyidike/atr-metric", "ATR")
+      + ": VAD backends agreed within 7.6 percentage points, versus up to 23.5 with ASR on the same audio. "
+      + link("https://github.com/ifeanyidike/full-duplex-bench-repro", "Full-Duplex-Bench reproduction")
+      + " exposed up to 62x metric variation across ASR backends.")
+    p("<b>Cenphi:</b> Co-founded an AI video platform for transcript-linked story composition. "
       + link("https://cenphi.io", "cenphi.io") + ".")
 
     p("EDUCATION", "section")
