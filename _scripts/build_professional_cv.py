@@ -31,11 +31,11 @@ STYLES = {
     "name": ParagraphStyle("name", fontName="Helvetica-Bold", fontSize=26, leading=30, textColor=INK, spaceAfter=7),
     "title": ParagraphStyle("title", fontName="Helvetica", fontSize=11.5, leading=16, textColor=BLUE, spaceAfter=8),
     "contact": ParagraphStyle("contact", fontName="Helvetica", fontSize=9, leading=13, textColor=MUTED),
-    "section": ParagraphStyle("section", fontName="Helvetica-Bold", fontSize=9, leading=12, textColor=BLUE, spaceBefore=13, spaceAfter=5, keepWithNext=True),
+    "section": ParagraphStyle("section", fontName="Helvetica-Bold", fontSize=9, leading=12, textColor=BLUE, spaceBefore=11, spaceAfter=5, keepWithNext=True),
     "job": ParagraphStyle("job", fontName="Helvetica-Bold", fontSize=11, leading=14, textColor=INK, spaceBefore=8, spaceAfter=3, keepWithNext=True),
     "meta": ParagraphStyle("meta", fontName="Helvetica", fontSize=9, leading=12, textColor=MUTED, spaceAfter=5, keepWithNext=True),
-    "body": ParagraphStyle("body", fontName="Helvetica", fontSize=10.2, leading=14.3, textColor=INK, spaceAfter=6, alignment=TA_LEFT),
-    "bullet": ParagraphStyle("bullet", fontName="Helvetica", fontSize=10.2, leading=14.3, textColor=INK, leftIndent=10, firstLineIndent=-10, spaceAfter=5),
+    "body": ParagraphStyle("body", fontName="Helvetica", fontSize=10.2, leading=14.3, textColor=INK, spaceAfter=5, alignment=TA_LEFT),
+    "bullet": ParagraphStyle("bullet", fontName="Helvetica", fontSize=10.2, leading=14.3, textColor=INK, leftIndent=10, firstLineIndent=-10, spaceAfter=4),
 }
 for style in STYLES.values():
     style.fontName = "CV-Bold" if style.fontName == "Helvetica-Bold" else "CV"
@@ -84,20 +84,27 @@ def build():
     story.append(Spacer(1, 3))
 
     p("PROFILE", "section")
-    p("Software engineer with <b>9+ years of experience</b> building backend services, real-time media and AI products. Owns voice infrastructure from telephony and streaming speech to deployment and evaluation. Recent work spans on-demand call capacity, distributed scheduling and multilingual agents. Strong Python, Go and TypeScript background; built production systems supporting up to 10,000 concurrent connections.")
+    p("Software engineer and applied AI researcher with <b>9+ years of experience</b> in backend services, real-time media and AI products. Builds production voice infrastructure and studies how to evaluate conversational systems. Author of <b>three voice-AI preprints</b> and co-author of <b>four IEEE conference papers</b>; built systems supporting up to 10,000 concurrent connections.")
 
-    p("TECHNICAL SKILLS", "section")
-    p("<b>Languages &amp; backend:</b> Python, asyncio, Go, TypeScript, FastAPI, gRPC, REST, PostgreSQL, Redis, MongoDB, RQ background workers.")
-    p("<b>Voice &amp; AI:</b> Pipecat, Twilio, WebSockets, WebRTC, streaming STT/TTS, VAD, turn-taking, LLM tool use, RAG, evaluation, PyTorch, Hugging Face.")
-    p("<b>Infrastructure:</b> Fly.io, Docker, Kubernetes, AWS, GCP, Azure, CI/CD, observability, distributed systems and multi-tenant services.")
+    p("RESEARCH &amp; PUBLICATIONS", "section")
+    p("<b>" + link("https://doi.org/10.5281/zenodo.20548903", "ATR: Acoustic Turn-over Rate")
+      + "</b> | Sole-author preprint, 2026<br/>Developed an ASR-independent metric and evaluation pipeline for overlap handling in full-duplex voice agents. Released "
+      + link("https://github.com/ifeanyidike/atr-metric", "code") + ".")
+    p("<b>Full-Duplex-Bench studies</b> | Two sole-author preprints, 2026<br/>Reproduced Gemini voice-agent evaluations on Apple Silicon: "
+      + link("https://doi.org/10.5281/zenodo.20305268", "ASR backend sensitivity")
+      + " and " + link("https://doi.org/10.5281/zenodo.20354457", "overlap handling and prosodic adaptation")
+      + ". Released the " + link("https://github.com/ifeanyidike/full-duplex-bench-repro", "evaluation pipeline") + ".")
+    p("<b>IEEE IEMCON 2018:</b> Co-authored four papers on antenna modeling, biometric attendance, electronic locking and university clearance systems. "
+      + link("https://ifeanyidike.com/publications/", "Publication list") + ".")
 
     p("PROFESSIONAL EXPERIENCE", "section")
     job("DataStrut AI", "Founding AI Engineer / Senior Software Engineer", "Aug 2025 - Present")
     bullet("Own the production voice platform across telephony, streaming speech, LLM orchestration and post-call processing; migrated managed voice infrastructure to a self-hosted Python/Pipecat stack.")
-    bullet("Scaled fixed shared capacity into an on-demand Fly Machines pool with per-call isolation, atomic Redis reservations and reserved inbound capacity. Added safe drain/resume lifecycles and fenced callbacks to protect active calls and newer reservations.")
+    bullet("Implemented call admission and an on-demand Fly Machines pool with atomic Redis reservations, reserved inbound capacity and safe drain/resume controls to protect active calls.")
+    bullet("Built role-aware, multi-caller reporting with PostgreSQL data-model changes to consolidate input from multiple callers into a shared report.")
     bullet("Separated outbound scheduling from report generation with dedicated RQ workers. Added asynchronous, idempotent call triggers and capacity-aware retries to avoid duplicate dials and queue contention.")
-    bullet("Built capacity models and load tests spanning CPU, memory, Redis and report throughput. Validated event ingestion with <b>6,000 successful synthetic requests</b> across four load levels; identified Redis connections as the first call-routing constraint.")
-    bullet("Cut steady-state STT session usage by <b>about 67% (3 to 1 per call)</b> in three-agent workflows by tying sessions to agent activation. Delivered English/Spanish support across recognition, synthesis, prompts and reporting.")
+    bullet("Load-tested event ingestion with <b>6,000 successful synthetic requests</b> across four load levels. Modeled CPU, memory and report capacity; identified Redis connections as the first call-routing constraint.")
+    bullet("Cut steady-state STT sessions by <b>about 67% (3 to 1 per call)</b> in three-agent workflows through activation-based lifecycles. Delivered English/Spanish recognition, synthesis, prompts and reporting.")
     bullet("Built response-admission controls, echo-aware turn-taking and deterministic regression tests; added playback-aligned traces and recordings to distinguish generated speech from what callers heard.")
 
     job("Cenphi", "Co-Founder and Lead Developer", "Mar 2025 - Present")
@@ -129,19 +136,15 @@ def build():
     job("Bujuwa Nigeria Limited", "Software Developer", "Jul 2018 - Dec 2019", "Abuja, Nigeria")
     bullet("Delivered web and mobile assessment systems, from requirements and architecture to implementation.")
 
-    p("OPEN SOURCE &amp; SELECTED ENGINEERING WORK", "section")
-    p("<b>Pipecat:</b> Reported two Anthropic integration bugs ("
+    p("TECHNICAL SKILLS &amp; OPEN SOURCE", "section")
+    p("<b>Backend:</b> Python, asyncio, Go, TypeScript, FastAPI, gRPC, PostgreSQL, Redis, MongoDB, RQ.")
+    p("<b>Voice &amp; AI:</b> Pipecat, Twilio, WebSockets, WebRTC, streaming STT/TTS, VAD, turn-taking, LLM tools, RAG, evaluation, PyTorch, Hugging Face.")
+    p("<b>Infrastructure:</b> Fly.io, Docker, Kubernetes, AWS, GCP, Azure, CI/CD, observability, distributed systems.")
+    p("<b>Pipecat:</b> Reported and documented an Anthropic integration bug ("
       + link("https://github.com/pipecat-ai/pipecat/issues/5035", "#5035") + " and "
       + link("https://github.com/pipecat-ai/pipecat/issues/5036", "#5036")
-      + "); #5036 was resolved in "
+      + "); linked to the maintainer-authored fix in "
       + link("https://github.com/pipecat-ai/pipecat/pull/5041", "PR #5041") + ".")
-    p("<b>Voice AI evaluation:</b> "
-      + link("https://github.com/ifeanyidike/atr-metric", "ATR")
-      + ": VAD backends agreed within 7.6 percentage points, versus up to 23.5 with ASR on the same audio. "
-      + link("https://github.com/ifeanyidike/full-duplex-bench-repro", "Full-Duplex-Bench reproduction")
-      + " exposed up to 62x metric variation across ASR backends.")
-    p("<b>Cenphi:</b> Co-founded an AI video platform for transcript-linked story composition. "
-      + link("https://cenphi.io", "cenphi.io") + ".")
 
     p("EDUCATION", "section")
     p("<b>M.Sc., Financial Engineering</b> | WorldQuant University | 2026 - Present (in progress)")
