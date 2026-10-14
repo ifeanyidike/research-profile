@@ -84,7 +84,7 @@ def build():
     story.append(Spacer(1, 3))
 
     p("PROFILE", "section")
-    p("Software engineer and applied AI researcher with <b>9+ years of experience</b> in backend services, real-time media and AI products. Builds production voice infrastructure and studies how to evaluate conversational systems. Author of <b>three voice-AI preprints</b> and co-author of <b>four IEEE conference papers</b>; built systems supporting up to 10,000 concurrent connections.")
+    p("Senior software engineer specializing in <b>voice AI and distributed backend systems</b>. Builds production call infrastructure and asynchronous processing pipelines with Python, Go and TypeScript. Experience includes telephony, streaming speech, LLM orchestration, capacity management and multi-caller reporting, alongside applied research into full-duplex voice-agent evaluation.")
 
     p("RESEARCH &amp; PUBLICATIONS", "section")
     p("<b>" + link("https://doi.org/10.5281/zenodo.20548903", "ATR: Acoustic Turn-over Rate")
