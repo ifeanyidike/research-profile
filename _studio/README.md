@@ -46,6 +46,17 @@ then sign in here with the same email. Alternatively export a backup there and
 import it here through More options. Importing replaces current workspace progress.
 Do not remove the old studio until the learner confirms their progress was moved.
 
+Lesson and practice pages show whether work is saved on this device, waiting to
+sync, or synced to the account. Worked-example steps, answers, unfinished code,
+and notes sync as you work; finishing a lesson is not required. The app also
+attempts a sync when the phone goes into the background. Offline changes remain
+in the account cache and retry on reconnection. Abruptly closing a browser before
+an upload finishes still requires reopening that browser to send pending edits.
+
+If an older open tab reports “the saved progress could not be read”, export its
+backup before refreshing, then import it after updating. That version could fail
+to persist a newly rendered draft; the unsaved draft may exist only in the tab.
+
 ## Publishing updates
 
 Edit the files in `algo-studio/` and commit them to `main`. The existing GitHub

@@ -1,4 +1,4 @@
-import { AccountSync } from "./account-sync.js";
+import { AccountSync } from "./account-sync.js?v=20261016-saving1";
 import { syncConfig } from "./sync-config.js";
 import { lessons, modules, route, courseStages, futureTracks } from "./curriculum.js";
 import { indentEdit, backspaceIndentEdit, newlineEdit } from "./editor.js";
@@ -52,10 +52,28 @@ try {
 function save() {
   try {
     if (!accountSync?.changed()) localStorage.setItem("algo-studio-v1", JSON.stringify(state));
+    storageAvailable = true;
   } catch {
     storageAvailable = false;
     toast("Storage is unavailable. Export your progress before leaving.");
   }
+  updateSaveStatus();
+}
+function updateSaveStatus() {
+  const panel = $("#progress-save-panel");
+  if (!panel) return;
+  const user = accountSync?.user;
+  const message = !storageAvailable
+    ? "Couldn’t save. Keep this tab open and export a backup."
+    : user
+      ? accountSync.message
+      : "Saved on this device only. Sign in to continue on another device.";
+  const status = $("#progress-save-status");
+  if (status.textContent !== message) status.textContent = message;
+  panel.classList.toggle("save-error", !storageAvailable || (!!user && /couldn’t finish|could not be saved/.test(accountSync.message)));
+  const button = $("#progress-save-account");
+  button.textContent = !storageAvailable ? "Export a backup" : user ? "Account & sync" : "Sign in to sync";
+  button.onclick = openWorkspace;
 }
 function activeDay() {
   const d = new Date().toLocaleDateString("en-CA");
@@ -916,6 +934,13 @@ function render() {
                         : home();
   if (route === "visual") updateVisual();
   if (route === "lab") updateLab();
+  if (["home", "lesson", "check", "practice"].includes(route || "home")) {
+    $("#main").insertAdjacentHTML(
+      "afterbegin",
+      '<div class="progress-save-panel" id="progress-save-panel"><p id="progress-save-status" role="status"></p><button class="text-button" id="progress-save-account"></button></div>'
+    );
+    updateSaveStatus();
+  }
   $("#sidebar").classList.remove("mobile-open");
   $("#menu-button").setAttribute("aria-expanded", "false");
   bindPage();
@@ -1408,6 +1433,7 @@ function updateAccountUI() {
   $("#guest-progress").hidden = !user || !accountSync.hasGuest();
   $("#account-button").textContent = user ? "Account & sync" : "Save across devices";
   $("#account-button").classList.toggle("connected", !!user);
+  updateSaveStatus();
 }
 
 function replaceWorkspace(next, accountChanged) {

@@ -30,9 +30,7 @@ export class AccountSync {
     this.interval = setInterval(() => this.sync(), 20000);
     window.addEventListener("online", () => this.sync());
     window.addEventListener("focus", () => this.sync());
-    document.addEventListener("visibilitychange", () => {
-      if (!document.hidden) this.sync();
-    });
+    document.addEventListener("visibilitychange", () => this.sync());
   }
   async switchUser(user) {
     if (this.initialized && this.user?.id === user?.id) return;
@@ -129,8 +127,10 @@ export class AccountSync {
       let merged = replica.state(this.getState());
       this.loaded = true;
       if (this.canApply()) {
-        if (JSON.stringify(merged) !== JSON.stringify(this.getState())) this.setState(merged, false);
+        // Rendering can create a starter draft. Keep that new draft observable
+        // as a local edit instead of accepting fields absent from the replica.
         replica.accept(merged);
+        if (JSON.stringify(merged) !== JSON.stringify(this.getState())) this.setState(merged, false);
       }
       if (this.dirty) {
         const document = copy(replica.document);
@@ -155,10 +155,17 @@ export class AccountSync {
     } catch (error) {
       if (current()) {
         this.dirty = true;
+        let kept = true;
         try {
           this.persist();
-        } catch {}
-        this.status(`Your work is kept on this device. Sync couldn’t finish: ${error.message || "Check your connection, then try again."}`);
+        } catch {
+          kept = false;
+        }
+        this.status(
+          kept
+            ? `Your work is kept on this device. Sync couldn’t finish: ${error.message || "Check your connection, then try again."}`
+            : "Progress could not be saved. Keep this tab open and export a backup before refreshing."
+        );
       }
     } finally {
       this.busy = false;

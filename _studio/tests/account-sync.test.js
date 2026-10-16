@@ -153,3 +153,94 @@ test("offline changes from two tabs survive a shared browser-cache write", async
   clearTimeout(one.a.timer);
   clearTimeout(two.a.timer);
 });
+
+test("render-created lesson drafts save and resume on another device", async () => {
+  const f = fixture();
+  const makeDevice = (storage) => {
+    let state = initialState();
+    const controller = f.make(storage);
+    // Opening a lesson creates its starter draft, just as lessonView does.
+    controller.getState = () => state;
+    controller.setState = (next) => {
+      state = next;
+      state.drafts[36] ??= { code: "def solve(items):\n    pass", notes: "", step: 0, hint: 0 };
+    };
+    return {
+      controller,
+      get state() {
+        return state;
+      },
+    };
+  };
+  const phone = makeDevice(f.storage);
+  await phone.controller.switchUser({ id: "alice" });
+  phone.state.drafts[36].walkIndex = 1;
+  assert.doesNotThrow(() => phone.controller.changed());
+  assert.equal(JSON.parse(f.storage.getItem("algo-studio-account:alice")).state.drafts[36].walkIndex, 1);
+  await phone.controller.sync();
+  clearTimeout(phone.controller.timer);
+  assert.equal(phone.controller.dirty, false);
+
+  const data = new Map();
+  const laptop = makeDevice({ getItem: (k) => data.get(k) || null, setItem: (k, v) => data.set(k, v) });
+  await laptop.controller.switchUser({ id: "alice" });
+  assert.equal(laptop.state.drafts[36].walkIndex, 1);
+  assert.equal(laptop.state.drafts[36].code, phone.state.drafts[36].code);
+  phone.state.drafts[36].step = 2;
+  phone.state.drafts[36].predict = 0;
+  phone.state.drafts[36].code = "def solve(items):\n    return items.copy()";
+  phone.state.drafts[36].notes = "An unfinished attempt";
+  phone.controller.changed();
+  await phone.controller.sync();
+  await laptop.controller.sync();
+  assert.equal(laptop.state.drafts[36].step, 2);
+  assert.equal(laptop.state.drafts[36].predict, 0);
+  assert.equal(laptop.state.drafts[36].notes, "An unfinished attempt");
+  assert.equal(laptop.state.drafts[36].code, phone.state.drafts[36].code);
+  assert.deepEqual(laptop.state.done, {});
+  clearTimeout(phone.controller.timer);
+});
+
+test("backgrounding a phone sends pending edits without waiting for the debounce", async (t) => {
+  const previousWindow = globalThis.window,
+    previousDocument = globalThis.document;
+  globalThis.window = new EventTarget();
+  globalThis.document = new EventTarget();
+  document.hidden = true;
+  const f = fixture(),
+    a = f.make();
+  a.client.auth.onAuthStateChange = () => {};
+  a.client.auth.getSession = async () => ({ data: { session: { user: { id: "alice" } } } });
+  t.after(() => {
+    clearTimeout(a.timer);
+    clearInterval(a.interval);
+    if (previousWindow === undefined) delete globalThis.window;
+    else globalThis.window = previousWindow;
+    if (previousDocument === undefined) delete globalThis.document;
+    else globalThis.document = previousDocument;
+  });
+  await a.start();
+  f.state.drafts[36] = { code: "unfinished code", step: 2, notes: "phone note" };
+  a.changed();
+  assert.equal(f.rows.size, 0);
+  document.dispatchEvent(new Event("visibilitychange"));
+  await new Promise((resolve) => setTimeout(resolve, 5));
+  assert.equal(f.rows.get("alice").get(a.device).records["drafts/36/code"].value, "unfinished code");
+  assert.equal(a.dirty, false);
+});
+
+test("a failed local write does not claim that the work was kept on the device", async () => {
+  const f = fixture(),
+    a = f.make();
+  await a.switchUser({ id: "alice" });
+  f.offline(true);
+  a.storage = {
+    getItem: () => null,
+    setItem: () => {
+      throw Error("quota exceeded");
+    },
+  };
+  await a.sync();
+  assert.match(a.message, /Keep this tab open and export a backup/);
+  assert.doesNotMatch(a.message, /work is kept/);
+});

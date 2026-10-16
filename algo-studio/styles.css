@@ -6611,6 +6611,32 @@ h3 {
   }
 }
 
+.progress-save-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f3f7f2;
+  font-size: 15px;
+}
+.progress-save-panel p {
+  flex: 1 1 240px;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.progress-save-panel button {
+  min-height: 44px;
+}
+.progress-save-panel.save-error {
+  background: #fff4e5;
+  border-color: #c99a51;
+}
+
 /* Account sync uses the same quiet workspace controls on phones and desktop. */
 .sync-indicator {
   border: 1px solid var(--line, #dce5df);
