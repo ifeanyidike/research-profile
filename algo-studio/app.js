@@ -3,7 +3,8 @@ import { createSystemDesign } from "./system-design-ui.js?v=20261016-system-ui1"
 import { systemLessons } from "./system-design-course.js?v=20261016-system-audit1";
 import { syncConfig } from "./sync-config.js?v=20261016-google1";
 import { lessons, modules, route, courseStages, futureTracks } from "./curriculum.js";
-import { indentEdit, backspaceIndentEdit, newlineEdit } from "./editor.js";
+import { indentEdit, toolbarIndentEdit, backspaceIndentEdit, newlineEdit } from "./editor.js?v=20261016-algorithms-ui1";
+import { canVisitLessonStep } from "./lesson-navigation.js?v=20261016-algorithms-ui1";
 import { highlightPython } from "./python-highlight.js";
 import { checkpoints, transferTasks } from "./practice-bank.js";
 import {
@@ -126,11 +127,17 @@ function continuationPanel(id) {
 function home() {
   const activity = nextActivity(state),
     next = lessons[activity.id],
-    count = route.filter((id) => lessonComplete(state, id)).length;
-  return `<div class="focused-home"><div class="sd-track-switch"><span aria-current="page">Algorithms</span><a href="#system">System design <span aria-hidden="true">↗</span></a></div>${pageIntro("ONE STEP AT A TIME", "Let’s make one idea clear.", "One useful step. Your place is saved as you go.")}<section class="next-lesson-card"><div class="next-lesson-meta"><span class="eyebrow green">${activity.kind === "review" ? "KEEP IT FRESH" : `STEP ${next.position} OF ${lessons.length}`}</span><span>At your pace · Python</span></div><h2>${activity.kind === "review" ? "Keep connecting the ideas." : next.title}</h2><p>${activity.kind === "review" ? "You have completed the lesson path. Return to practice, review, and projects to build further fluency." : next.simpleIdea}</p>${activityLink(activity, activity.kind === "review" ? "Open review" : count ? "Continue to next lesson" : "Start lesson")}<small>Finish a lesson, then open the next. Extra checkpoints are optional practice.</small></section><div class="quiet-progress"><span>${count} of ${lessons.length} lessons completed</span><a href="#path">See the course outline →</a></div>${due().length ? `<a class="subtle-link quiet-review" href="#review">${due().length} ideas are ready for a short review →</a>` : ""}</div>`;
+    count = route.filter((id) => lessonComplete(state, id)).length,
+    review = activity.kind === "review",
+    resume = !review && !!state.drafts[next.id],
+    stage = courseStages[next.module];
+  return `<div class="system-track algorithm-dashboard"><div class="sd-track-switch"><span aria-current="page">Algorithms</span><a href="#system">System design</a></div><header class="sd-dashboard-heading"><span class="eyebrow green">ALGORITHMS & DATA STRUCTURES · PYTHON</span><h1>Make the idea click. Then make it work.</h1><p>Follow a small example, write the Python, and understand how much work it takes.</p><div class="sd-course-meta"><span>${lessons.length} guided lessons</span><span>${courseStages.length} stages</span><span>Python in your browser</span></div></header>
+  <div class="sd-start-grid"><section class="sd-next-card" aria-labelledby="algorithm-next-title"><div class="sd-next-meta"><span>${review ? "GUIDED PATH COMPLETE" : `${resume ? "PICK UP WHERE YOU LEFT OFF" : "YOUR NEXT LESSON"} · ${String(next.position).padStart(2, "0")}`}</span><span>${review ? "Keep practising" : `Stage ${next.module + 1} of ${courseStages.length}`}</span></div><h2 id="algorithm-next-title">${review ? "Keep connecting the ideas." : esc(next.title)}</h2><p>${review ? "Return to review, mixed problems, and projects to keep building fluency." : esc(next.simpleIdea)}</p>${activityLink(activity, review ? "Open your reviews" : resume ? "Continue lesson" : "Start lesson")}<div class="sd-course-progress"><div><span>${count} of ${lessons.length} lessons complete</span><span>${Math.round((count / lessons.length) * 100)}%</span></div><progress max="${lessons.length}" value="${count}" aria-label="Completed algorithm lessons">${count} of ${lessons.length}</progress></div></section>
+  <section class="sd-method-card" aria-labelledby="algorithm-method-title"><span class="eyebrow green">LEARN BY DOING</span><h2 id="algorithm-method-title">See it. Try it. Understand it.</h2><ol><li><span>1</span><div><strong>Understand the idea</strong><small>Follow a small example, one step at a time.</small></div></li><li><span>2</span><div><strong>Predict what happens</strong><small>Check your thinking with a quick question.</small></div></li><li><span>3</span><div><strong>Write the Python</strong><small>Run tests and learn from the result.</small></div></li><li><span>4</span><div><strong>Understand the cost</strong><small>See what changes as the input grows.</small></div></li></ol></section></div>
+  <div class="sd-outline-heading"><div><span class="eyebrow green">YOUR LEARNING PATH</span><h2>${review ? "Keep the ideas fresh." : esc(stage[0])}</h2></div><a class="subtle-link" href="#path">Full course outline →</a></div><div class="algorithm-home-links"><a href="#path/${next.module}"><span class="algorithm-link-icon" aria-hidden="true">⌁</span><span><strong>Explore your path</strong><small>${review ? "Revisit any of the course stages." : esc(stage[1])}</small></span><span aria-hidden="true">→</span></a><a href="#tools"><span class="algorithm-link-icon" aria-hidden="true">⊞</span><span><strong>Practise and experiment</strong><small>More problems, visual examples, and efficiency tools.</small></span><span aria-hidden="true">→</span></a>${due().length ? `<a href="#review"><span class="algorithm-link-icon" aria-hidden="true">↻</span><span><strong>${due().length} ideas ready for review</strong><small>Try remembering before you reread.</small></span><span aria-hidden="true">→</span></a>` : ""}</div></div>`;
 }
 function toolsView() {
-  return `${pageIntro("WHEN YOU NEED A LITTLE EXTRA HELP", "Your learning tools.", "You can complete your lessons without choosing a tool. Use these when you have a specific question.")}<div class="tools-list">${[
+  return `${pageIntro("PRACTISE. EXPLORE. REMEMBER.", "Your learning tools.", "Choose a tool for what you want to understand or practise.")}<div class="tools-list">${[
     ["practice", "Practice an earlier lesson", "Use this when you want another attempt at something you have learned.", "Open practice"],
     ["visual", "Watch the steps happen", "Use this when you want to slow down an algorithm and see what changes.", "Open visual examples"],
     [
@@ -149,7 +156,7 @@ function toolsView() {
   ]
     .map(
       ([route, title, description, label]) =>
-        `<article class="learning-tool"><div><h2>${title}</h2><p>${description}</p></div><a class="button secondary" href="#${route}">${label} →</a></article>`
+        `<article class="learning-tool"><span class="tool-symbol" aria-hidden="true">${{ practice: "⌁", visual: "▷", lab: "↗", projects: "▦", review: "↻" }[route]}</span><div><h2>${title}</h2><p>${description}</p></div><a class="button secondary" href="#${route}">${label} →</a></article>`
     )
     .join("")}</div><div class="tools-method"><a class="subtle-link" href="#method">How the teaching works and where the ideas came from ↗</a></div>`;
 }
@@ -165,21 +172,24 @@ function skillLabel(id) {
         : "Build the foundation";
 }
 function pathView(open) {
-  const passed = route.filter((id) => lessonComplete(state, id)).length;
-  return `${pageIntro("YOUR GUIDED JOURNEY", "A path with a reason for every step.", `${lessons.length} lessons, ${Object.keys(checkpoints).length + Object.keys(transferTasks).length} additional problems, and a clear next activity.`)}<div class="path-summary"><span class="tag">FOUNDATIONS → APPLICATION</span><strong>${passed} lessons completed</strong><div class="progress-track"><i style="width:${(passed / lessons.length) * 100}%"></i></div><span>${Math.round((passed / lessons.length) * 100)}%</span></div><p class="path-explanation">Finish each lesson to open the next. Prerequisite lessons still come first. Extra checkpoints let you try a different problem whenever you want more practice. Your code, notes, and help-use labels are kept.</p><div class="curriculum">${courseStages
-    .map((m, i) => {
-      const ids = m[4],
+  const passed = route.filter((id) => lessonComplete(state, id)).length,
+    next = nextActivity(state);
+  return `${pageIntro("YOUR LEARNING PATH", "One foundation before the next.", `${lessons.length} guided lessons. Start where you left off and build one useful skill at a time.`)}<section class="algorithm-path-progress" aria-label="Course progress"><div><strong>${passed} of ${lessons.length} lessons complete</strong><span>${Math.round((passed / lessons.length) * 100)}%</span></div><progress max="${lessons.length}" value="${passed}" aria-label="Completed algorithm lessons">${passed} of ${lessons.length}</progress>${activityLink(next, next.kind === "review" ? "Open review" : "Go to my next lesson")}</section><p class="path-explanation">Finish a lesson to open the next. Extra checkpoints are optional practice. You can preview later topics and return to earlier lessons whenever you need.</p><div class="sd-stages curriculum">${courseStages
+    .map((stage, i) => {
+      const ids = stage[4],
         count = ids.filter((id) => lessonComplete(state, id)).length;
-      return `<details class="module" ${(open !== undefined ? Number(open) === i : nextLesson().module === i) ? "open" : ""}><summary><span class="module-number">${count === ids.length ? "✓" : String(i + 1).padStart(2, "0")}</span><div><span class="eyebrow">${m[2]}</span><h2>${m[0]}</h2><p>${m[1]}</p></div><span class="module-count">${count}/${ids.length} <span>⌄</span></span></summary><div class="module-lessons">${ids
+      return `<details class="sd-stage algorithm-stage" ${(open !== undefined ? Number(open) === i : nextLesson().module === i) ? "open" : ""}><summary><span class="sd-stage-number">${count === ids.length ? "✓" : String(i + 1).padStart(2, "0")}</span><span><strong>${esc(stage[0])}</strong><small>${esc(stage[1])}</small></span><span class="sd-stage-count">${count} / ${ids.length} complete</span></summary><ol>${ids
         .map((id) => {
-          const l = lessons[id];
-          return `<a href="#lesson/${id}" class="path-lesson"><span class="lesson-indicator ${lessonComplete(state, id) ? "complete" : unlocked(id) ? "ready" : ""}">${lessonComplete(state, id) ? "✓" : unlocked(id) ? "▷" : "·"}</span><div><strong>${l.title}</strong><small>${skillLabel(id)}</small></div><span>${lessonComplete(state, id) ? "Revisit" : unlocked(id) ? "Open →" : "Preview ↗"}</span></a>`;
+          const l = lessons[id],
+            done = lessonComplete(state, id),
+            available = unlocked(id);
+          return `<li><a href="#lesson/${id}" class="path-lesson" ${next.kind === "lesson" && next.id === id ? 'aria-current="step"' : ""}><span class="sd-lesson-status ${done ? "done" : ""}" aria-label="${done ? "Complete" : available ? "Ready" : "Preview"}">${done ? "✓" : String(l.position).padStart(2, "0")}</span><span><strong>${esc(l.title)}</strong><small>${esc(skillLabel(id))}</small></span><span class="sd-row-tag">${done ? "Revisit" : next.id === id ? "Up next →" : available ? "Open →" : "Preview"}</span></a></li>`;
         })
-        .join("")}</div></details>`;
+        .join("")}</ol></details>`;
     })
     .join(
       ""
-    )}</div><div class="callout"><strong>Beyond this course</strong><p>The core and selected extensions are available now. These deeper tracks are a roadmap for further study, not completed lessons:</p>${futureTracks.map(([h, p]) => `<details class="more-detail"><summary>${h}</summary><p>${p}</p></details>`).join("")}<a class="subtle-link" href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/" target="_blank" rel="noopener">Explore deeper algorithm study at MIT ↗</a></div>`;
+    )}</div><details class="more-detail algorithm-further"><summary>Where to go after this course</summary><p>These deeper tracks are suggestions for further study, rather than lessons included in this course.</p>${futureTracks.map(([h, p]) => `<details class="more-detail"><summary>${h}</summary><p>${p}</p></details>`).join("")}<a class="subtle-link" href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/" target="_blank" rel="noopener">Explore deeper algorithm study at MIT ↗</a></details>`;
 }
 function quizMarkup(q, key, value) {
   return `<h3>${q.prompt}</h3><div class="answers">${q.options.map((a, i) => `<button class="answer ${value === i ? (i === q.answer ? "correct" : "incorrect") : ""}" data-answer="${key}" data-index="${i}" ${key === "review" && value !== undefined ? "disabled" : ""}><span>${String.fromCharCode(65 + i)}</span>${esc(a)}${value === i ? `<b>${i === q.answer ? "✓" : "×"}</b>` : ""}</button>`).join("")}</div>${value !== undefined ? `<div class="feedback ${value === q.answer ? "success" : "retry"}" role="status"><strong>${value === q.answer ? "That’s the idea." : "A useful chance to rethink."}</strong><p>${value === q.answer ? q.why : `You chose “${esc(q.options[value])}”. ${q.why} Trace the example, then choose again.`}</p></div>` : ""}`;
@@ -189,6 +199,10 @@ function lessonWords(l) {
 }
 function costExplanation(l) {
   return `<section class="cost-explanation" aria-label="Work and memory explained"><div class="cost-box"><p>${esc(l.simpleCost)}</p></div>${l.costRows ? `<div class="table-scroll"><table class="cost-examples"><caption>Compare a few small examples</caption><thead><tr>${l.costRows.headers.map((h) => `<th scope="col">${esc(h)}</th>`).join("")}</tr></thead><tbody>${l.costRows.rows.map((row) => `<tr>${row.map((v) => `<td>${esc(v)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : ""}<h3>What does the code need to remember?</h3><p class="memory-explanation">${esc(l.costMemory)}</p><details class="more-detail notation-detail"><summary>The short mathematical label (optional)</summary><p>${esc(l.cost)}</p></details>${l.costExtra ? `<details class="more-detail"><summary>${esc(l.costExtra.title)}</summary>${l.costExtra.paragraphs.map((p) => `<p>${esc(p)}</p>`).join("")}</details>` : ""}</section>`;
+}
+function algorithmLessonRail(l) {
+  const stage = courseStages[l.module];
+  return `<aside class="sd-course-rail algorithm-rail" aria-label="Current stage"><span class="eyebrow green">STAGE ${l.module + 1} OF ${courseStages.length}</span><h2>${esc(stage[0])}</h2><nav aria-label="Lessons in this stage">${stage[4].map((id) => `<a href="#lesson/${id}" ${id === l.id ? 'aria-current="page"' : ""}><span class="sd-rail-number">${lessonComplete(state, id) ? "✓" : String(lessons[id].position).padStart(2, "0")}</span><span>${esc(lessons[id].title)}${id === l.id ? "<small>Current lesson</small>" : ""}</span></a>`).join("")}</nav><a class="subtle-link" href="#path/${l.module}">View this stage →</a></aside>`;
 }
 function lessonView(id) {
   const l = lessons[id];
@@ -202,13 +216,13 @@ function lessonView(id) {
   const step = d.step || 0,
     walk = Math.min(d.walkIndex || 0, l.walk.length - 1);
   const afterFinish = checkpointDestination(state, id);
-  const stepNames = ["Learn the idea", "Try one question", "Write Python", "Finish"];
-  return `<div class="lesson-heading"><a href="#home" class="subtle-link">← Back to learning</a><span class="muted">Step ${l.position} of ${lessons.length}</span></div><h1 class="lesson-title">${l.title}</h1>${state.done[id] ? continuationPanel(id) : ""}<ol class="step-tabs lesson-progress" aria-label="Lesson progress">${stepNames.map((name, i) => `<li class="${step === i ? "active" : i < step ? "past" : ""}" ${step === i ? 'aria-current="step"' : ""}><span>${i < step ? "✓" : i + 1}</span>${name}</li>`).join("")}</ol>
- ${step > 0 ? `<button class="text-button lesson-back" data-step="${step - 1}">← Previous step</button>` : ""}
- ${step === 0 ? `<article class="lesson-panel focused-lesson"><span class="eyebrow green">THE IDEA IN PLAIN WORDS</span><h2>${l.simpleIdea}</h2><p class="familiar-example">${l.idea}</p><section class="walkthrough" aria-label="Worked example"><div class="walkthrough-heading"><strong>Let’s try a small example.</strong><span>Step ${walk + 1} of ${l.walk.length}</span></div>${lessonDiagram(l, walk)}<p class="walkthrough-step" tabindex="-1" aria-live="polite">${esc(l.walk[walk])}</p><div class="walkthrough-actions">${walk > 0 ? `<button class="text-button" data-walk="${walk - 1}">← Previous example step</button>` : "<span></span>"}${walk < l.walk.length - 1 ? `<button class="button primary" data-walk="${walk + 1}">Show the next step →</button>` : '<span class="example-done">✓ Example complete</span>'}</div></section><details class="more-detail"><summary>What this builds on</summary><p>${l.requires.length ? l.requires.map((p) => `<a href="#lesson/${p}">${lessons[p].title}</a>`).join(" · ") : "Python functions, loops, and integer lists. Start with the example; use hints if you need a reminder."}</p></details><details class="more-detail"><summary>An everyday example</summary><p>${l.analogy}</p></details>${lessonWords(l)}<details class="more-detail"><summary>A mistake to watch for</summary><p>${l.trap}</p></details>${walk === l.walk.length - 1 ? '<div class="lesson-continue"><button class="button primary" data-step="1">Next: try one question →</button></div>' : ""}<a class="subtle-link placement-link" href="#check/${id}">Already know this? Try a different problem →</a></article>` : ""}
+  const stepNames = ["Understand", "Predict", "Code", "Reflect"];
+  return `<div class="lesson-heading"><a href="#home" class="subtle-link">← Back to learning</a><span class="muted">Step ${l.position} of ${lessons.length}</span></div><h1 class="lesson-title">${l.title}</h1><div class="algorithm-lesson-layout ${step === 2 ? "is-coding" : ""}"><div class="algorithm-lesson-main">${state.done[id] ? continuationPanel(id) : ""}<nav class="sd-steps algorithm-steps step-tabs" aria-label="Lesson steps">${stepNames.map((name, i) => `<button data-lesson-step="${i}" ${i === step ? 'aria-current="step"' : ""} ${canVisitLessonStep(l, d, i) ? "" : "disabled"}><span>${i + 1}</span>${name}</button>`).join("")}</nav>
+ ${step > 0 ? `<button class="text-button lesson-back" data-step="${step - 1}">← Back to ${stepNames[step - 1].toLowerCase()}</button>` : ""}
+ ${step === 0 ? `<article class="lesson-panel focused-lesson"><span class="eyebrow green">THE IDEA IN PLAIN WORDS</span><h2>${l.simpleIdea}</h2><p class="familiar-example">${l.idea}</p><section class="walkthrough" aria-label="Worked example"><div class="walkthrough-heading"><strong>Let’s try a small example.</strong><span>Step ${walk + 1} of ${l.walk.length}</span></div>${lessonDiagram(l, walk)}<p class="walkthrough-step" tabindex="-1" aria-live="polite">${esc(l.walk[walk])}</p><div class="walkthrough-actions">${walk > 0 ? `<button class="text-button" data-walk="${walk - 1}">← Previous example step</button>` : "<span></span>"}${walk < l.walk.length - 1 ? `<button class="button primary" data-walk="${walk + 1}">Show the next step →</button>` : '<button class="button primary" data-step="1">Try one question →</button>'}</div></section><details class="more-detail"><summary>What this builds on</summary><p>${l.requires.length ? l.requires.map((p) => `<a href="#lesson/${p}">${lessons[p].title}</a>`).join(" · ") : "Python functions, loops, and integer lists. Start with the example; use hints if you need a reminder."}</p></details><details class="more-detail"><summary>An everyday example</summary><p>${l.analogy}</p></details>${lessonWords(l)}<details class="more-detail"><summary>A mistake to watch for</summary><p>${l.trap}</p></details><a class="subtle-link placement-link" href="#check/${id}">Already know this? Try a different problem →</a></article>` : ""}
  ${step === 1 ? `<article class="lesson-panel focused-lesson"><span class="eyebrow green">ONE QUICK QUESTION</span><p class="step-guidance">Choose an answer. If you miss it, you can try again.</p>${quizMarkup(l.predict, "predict", d.predict)}<button class="button primary" data-step="2" ${d.predict !== l.predict.answer ? "disabled" : ""}>Next: write Python →</button></article>` : ""}
  ${step === 2 ? practicePanel(l, d) : ""}
- ${step === 3 ? `<article class="lesson-panel focused-lesson"><span class="eyebrow green">THE LAST STEP</span><h2>What changes when the input gets bigger?</h2>${costExplanation(l)}${quizMarkup(l.reflect, "reflect", d.reflect)}<details class="more-detail notes-details"><summary>Keep a note (optional)</summary><label class="notes-label" for="lesson-notes">Explain the idea in your own words</label><textarea id="lesson-notes" class="notes" placeholder="What helped this idea click for you?">${esc(d.notes || "")}</textarea></details>${d.passedCode !== d.code ? '<p class="checkpoint-needed">Your code needs a test run before you can finish.</p><button class="button secondary" data-step="2">Go back to the Python exercise →</button>' : ""}<button class="button primary" id="complete-lesson" ${d.predict !== l.predict.answer || d.reflect !== l.reflect.answer || d.passedCode !== d.code ? "disabled" : ""}>${afterFinish.kind === "review" ? "Finish & open review" : "Finish & open next lesson"} <span>→</span></button>${d.assisted ? '<p class="fine-print">You used the worked solution. This counts as guided practice. You can reset the editor and try it yourself later.</p>' : ""}<p class="fine-print">${afterFinish.kind === "lesson" ? `Up next: ${esc(lessons[afterFinish.id].title)}.` : "Next: review and more practice."} Extra checkpoints are optional.</p><button class="text-button" id="complete-with-checkpoint" ${d.predict !== l.predict.answer || d.reflect !== l.reflect.answer || d.passedCode !== d.code ? "disabled" : ""}>Finish & try an extra checkpoint instead →</button><div id="completion-message" role="status"></div></article>` : ""}`;
+ ${step === 3 ? `<article class="lesson-panel focused-lesson"><span class="eyebrow green">THE LAST STEP</span><h2>What changes when the input gets bigger?</h2>${costExplanation(l)}${quizMarkup(l.reflect, "reflect", d.reflect)}<details class="more-detail notes-details"><summary>Keep a note (optional)</summary><label class="notes-label" for="lesson-notes">Explain the idea in your own words</label><textarea id="lesson-notes" class="notes" placeholder="What helped this idea click for you?">${esc(d.notes || "")}</textarea></details>${d.passedCode !== d.code ? '<p class="checkpoint-needed">Your code needs a test run before you can finish.</p><button class="button secondary" data-step="2">Go back to the Python exercise →</button>' : ""}<button class="button primary" id="complete-lesson" ${d.predict !== l.predict.answer || d.reflect !== l.reflect.answer || d.passedCode !== d.code ? "disabled" : ""}>${afterFinish.kind === "review" ? "Finish & open review" : "Finish & open next lesson"} <span>→</span></button>${d.assisted ? '<p class="fine-print">You used the worked solution. This counts as guided practice. You can reset the editor and try it yourself later.</p>' : ""}<p class="fine-print">${afterFinish.kind === "lesson" ? `Up next: ${esc(lessons[afterFinish.id].title)}.` : "Next: review and more practice."} Extra checkpoints are optional.</p><button class="text-button" id="complete-with-checkpoint" ${d.predict !== l.predict.answer || d.reflect !== l.reflect.answer || d.passedCode !== d.code ? "disabled" : ""}>Finish & try an extra checkpoint instead →</button><div id="completion-message" role="status"></div></article>` : ""}</div>${step === 2 ? "" : algorithmLessonRail(l)}</div>`;
 }
 function practiceDraft(id, kind = "check") {
   const key = `${id}:${kind}`;
@@ -392,15 +406,15 @@ function challengeView(id, kind) {
       .join("")}</div>`;
   const context = activeExercise(),
     { exercise: l, d } = context;
-  return `<div class="lesson-heading"><a class="subtle-link" href="${kind === "transfer" ? "#practice/mixed" : `#lesson/${id}`}">← ${kind === "transfer" ? "Back to mixed practice" : "Back to the lesson"}</a><span class="muted">${kind === "recall" ? "Recall after a gap" : kind === "transfer" ? "Choose your approach" : "A different problem"}</span></div><h1 class="lesson-title">${l.title}</h1><p class="checkpoint-intro">${kind === "recall" ? "Try from memory before reopening an example. This repeats a familiar problem; mixed practice offers different situations." : kind === "transfer" ? "Choose an approach yourself. Explain what makes it a good fit." : `${state.done[id] && !ready(state, id) ? "Lesson complete. This is optional extra practice. " : ""}Try this variation from a fresh editor. Pass the tests, then use “Save & open next lesson” below the results. Notes are optional. Using help is recorded as supported practice.`}</p>${kind !== "transfer" && kind !== "recall" && lessonComplete(state, id) ? continuationPanel(id) : ""}${practicePanel(l, d, true)}`;
+  return `<div class="lesson-heading"><a class="subtle-link" href="${kind === "transfer" ? "#practice/mixed" : `#lesson/${id}`}">← ${kind === "transfer" ? "Back to mixed practice" : "Back to the lesson"}</a><span class="muted">${kind === "recall" ? "Recall after a gap" : kind === "transfer" ? "Choose your approach" : "A different problem"}</span></div><h1 class="lesson-title">${l.title}</h1><p class="checkpoint-intro">${kind === "recall" ? "Try from memory before reopening an example. This repeats a familiar problem; mixed practice offers different situations." : kind === "transfer" ? "Choose an approach yourself. Explain what makes it a good fit." : `${state.done[id] && !ready(state, id) ? "Lesson complete. This is optional extra practice. " : ""}Try this variation, run the tests, then save your attempt below the results. Notes are optional.`}</p>${practicePanel(l, d, true)}`;
 }
 function practicePanel(l, d, checkpoint = false) {
-  return `<div class="practice-layout"><section class="task-panel"><span class="eyebrow green">${checkpoint ? "PUT THE IDEA TO WORK" : "YOUR TURN"}</span><h2>${checkpoint ? "Solve one small problem." : "Write a small Python function."}</h2><p>${l.task}</p><div class="example-box"><span class="eyebrow">WHEN YOU CALL</span><code>solve(${l.tests[0].args.map(py).map(esc).join(", ")})</code><span class="eyebrow">IT SHOULD RETURN</span><code>${esc(py(l.tests[0].expected))}</code></div><details class="practice-help" ${(d.hint || 0) > 0 ? "open" : ""}><summary>Need a hint?</summary><div class="hint-block">${l.hints
+  return `<div class="practice-layout"><section class="task-panel"><span class="eyebrow green">${checkpoint ? "PUT THE IDEA TO WORK" : "YOUR TURN"}</span><h2 id="exercise-task-title" tabindex="-1">${checkpoint ? "Solve one small problem." : "Write a small Python function."}</h2><p>${l.task}</p><div class="example-box"><span class="eyebrow">WHEN YOU CALL</span><code>solve(${l.tests[0].args.map(py).map(esc).join(", ")})</code><span class="eyebrow">IT SHOULD RETURN</span><code>${esc(py(l.tests[0].expected))}</code></div><details class="practice-help" ${(d.hint || 0) > 0 ? "open" : ""}><summary>Need a hint?</summary><div class="hint-block">${l.hints
     .slice(0, d.hint || 0)
     .map((h, i) => `<p><b>${i + 1}.</b> ${h}</p>`)
     .join(
       ""
-    )}<button class="button secondary" id="hint-button" ${(d.hint || 0) >= l.hints.length ? "disabled" : ""}>${d.hint ? "Show another hint" : "Show a hint"}</button></div></details><button class="button secondary mobile-editor-jump" id="jump-to-editor">Write Python ↓</button>${solvedExamplePanel(l, d)}${checkpoint && d.exposed ? '<p class="fine-print">You previously opened help for this problem. An attempt without current hints is labelled a reattempt, not an unseen assessment.</p>' : ""}</section><section class="editor-panel" aria-label="Python editor"><div class="editor-toolbar"><span><span class="file-dot"></span> solution.py</span><div><span class="language-label">Python</span>${typeof d.previousCode === "string" ? '<button class="text-button" id="restore-code">Restore previous code</button>' : ""}<button class="text-button" id="reset-code">${checkpoint ? "Start a new attempt" : "Reset"}</button></div></div><div class="indent-toolbar" role="group" aria-label="Python indentation"><div><button type="button" id="indent-code" title="Indent selected lines (Tab)">→ Indent</button><button type="button" id="outdent-code" title="Outdent selected lines (Shift + Tab)">← Outdent</button></div><span>4 spaces per level</span></div><label class="sr-only" for="code-editor">Python solution code</label><div class="editor-body"><div class="line-numbers" id="line-numbers" aria-hidden="true">${d.code
+    )}<button class="button secondary" id="hint-button" ${(d.hint || 0) >= l.hints.length ? "disabled" : ""}>${d.hint ? "Show another hint" : "Show a hint"}</button></div></details><button class="button secondary mobile-editor-jump" id="jump-to-editor">Write Python ↓</button>${solvedExamplePanel(l, d)}${checkpoint && d.exposed ? '<p class="fine-print">You previously opened help for this problem. An attempt without current hints is labelled a reattempt, not an unseen assessment.</p>' : ""}</section><section class="editor-panel" aria-label="Python editor"><div class="editor-toolbar"><span><span class="file-dot"></span> solution.py</span><div><span class="language-label">Python</span><button class="text-button mobile-problem-jump" id="jump-to-problem">Problem ↑</button>${typeof d.previousCode === "string" ? '<button class="text-button" id="restore-code">Restore previous code</button>' : ""}<button class="text-button" id="reset-code">${checkpoint ? "Start a new attempt" : "Reset"}</button></div></div><div class="indent-toolbar" role="group" aria-label="Python indentation"><div><button type="button" id="indent-code" title="Indent current or selected lines">→ Indent</button><button type="button" id="outdent-code" title="Outdent current or selected lines">← Outdent</button></div><span>4 spaces per level</span></div><label class="sr-only" for="code-editor">Python solution code</label><div class="editor-body"><div class="line-numbers" id="line-numbers" aria-hidden="true">${d.code
     .split("\n")
     .map((_, i) => i + 1)
     .join(
@@ -856,6 +870,10 @@ function checkpointActionMarkup(context) {
 function updateCheckpointButton() {
   const c = activeExercise();
   if (c && $("#checkpoint-action")) $("#checkpoint-action").innerHTML = checkpointActionMarkup(c);
+  if (c?.kind === "lesson")
+    document.querySelectorAll("[data-lesson-step]").forEach((button) => {
+      button.disabled = !canVisitLessonStep(c.exercise, c.d, Number(button.dataset.lessonStep));
+    });
 }
 function saveCheckpointAndContinue() {
   const context = activeExercise();
@@ -887,17 +905,17 @@ function render() {
   const [route = "home", param, variant] = location.hash.slice(1).split("/");
   document.body.classList.toggle("system-design-route", route === "system");
   const names = {
-    home: "Learn",
+    home: "Algorithms",
     path: "Course outline",
-    lesson: "Learn",
-    check: "Practice checkpoint",
+    lesson: "Algorithms",
+    check: "Practice",
     tools: "Tools",
-    practice: "Practice studio",
-    visual: "Visual playground",
+    practice: "Practice",
+    visual: "Visual steps",
     lab: "Efficiency lab",
-    review: "Review queue",
+    review: "Review",
     projects: "Projects",
-    method: "How learning works",
+    method: "How it works",
     system: "System design",
   };
   $("#page-name").textContent = names[route] || "Learn";
@@ -916,7 +934,7 @@ function render() {
     else a.removeAttribute("aria-current");
   });
   if ($("#due-count")) $("#due-count").textContent = due().length;
-  $("#main").innerHTML =
+  const content =
     route === "system"
       ? systemUI.view(param, variant)
       : route === "tools"
@@ -940,12 +958,13 @@ function render() {
                         : route === "method"
                           ? methodView()
                           : home();
+  $("#main").innerHTML = route === "system" ? content : `<div class="algorithm-track" data-view="${esc(route)}">${content}</div>`;
   if (route === "visual") updateVisual();
   if (route === "lab") updateLab();
   if (["home", "lesson", "check", "practice", "system"].includes(route || "home")) {
     $("#main").insertAdjacentHTML(
       "afterbegin",
-      `<div class="progress-save-panel ${route === "system" ? "sd-save-status" : ""}" id="progress-save-panel"><p id="progress-save-status" role="status"></p><button class="text-button" id="progress-save-account"></button></div>`
+      `<div class="progress-save-panel sd-save-status" id="progress-save-panel"><p id="progress-save-status" role="status"></p><button class="text-button" id="progress-save-account"></button></div>`
     );
     updateSaveStatus();
   }
@@ -981,15 +1000,21 @@ function bindPage() {
         save();
         render();
         $(".walkthrough-step").focus({ preventScroll: true });
+        $(".walkthrough").scrollIntoView({ block: "start", behavior: "auto" });
       })
   );
-  document.querySelectorAll("[data-step]").forEach(
+  document.querySelectorAll("[data-step], [data-lesson-step]").forEach(
     (b) =>
       (b.onclick = () => {
-        draft(id).step = Number(b.dataset.step);
+        const step = Number(b.dataset.step ?? b.dataset.lessonStep);
+        if (!canVisitLessonStep(lessons[id], draft(id), step)) return;
+        draft(id).step = step;
         save();
         render();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        const target = $(".focused-lesson h2, .focused-lesson h3, .task-panel h2");
+        target?.setAttribute("tabindex", "-1");
+        target?.focus({ preventScroll: true });
+        $(".algorithm-steps")?.scrollIntoView({ block: "start", behavior: "auto" });
       })
   );
   document.querySelectorAll("[data-answer]").forEach(
@@ -1023,6 +1048,11 @@ function bindPage() {
     if ($("#jump-to-editor"))
       $("#jump-to-editor").onclick = () =>
         $(".editor-panel").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+    if ($("#jump-to-problem"))
+      $("#jump-to-problem").onclick = () => {
+        $("#exercise-task-title").focus({ preventScroll: true });
+        $(".task-panel").scrollIntoView({ block: "start", behavior: "auto" });
+      };
     e.oninput = () => {
       paintCode();
       d.code = e.value;
@@ -1063,7 +1093,7 @@ function bindPage() {
     ]) {
       const button = $(selector);
       button.onmousedown = (ev) => ev.preventDefault();
-      button.onclick = () => applyEdit(indentEdit(e.value, e.selectionStart, e.selectionEnd, outdent));
+      button.onclick = () => applyEdit(toolbarIndentEdit(e.value, e.selectionStart, e.selectionEnd, outdent));
     }
     e.onkeydown = (ev) => {
       if (ev.isComposing) return;

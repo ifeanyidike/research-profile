@@ -26,6 +26,12 @@ export function indentEdit(code, start, end, outdent = false) {
   return { from, to, text, start: moved(start), end: moved(end) };
 }
 
+export function toolbarIndentEdit(code, start, end, outdent = false) {
+  if (outdent || start !== end) return indentEdit(code, start, end, outdent);
+  const from = start === 0 ? 0 : code.lastIndexOf("\n", start - 1) + 1;
+  return { from, to: from, text: spaces, start: start + spaces.length, end: end + spaces.length };
+}
+
 export function backspaceIndentEdit(code, start, end) {
   if (start !== end) return null;
   const from = start === 0 ? 0 : code.lastIndexOf("\n", start - 1) + 1,

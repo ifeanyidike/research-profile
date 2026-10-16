@@ -8038,31 +8038,31 @@ h3 {
   background: #fff4e5;
 }
 @media (max-width: 720px) {
-  .system-design-route .breadcrumb {
+  .studio-app .breadcrumb {
     font-size: 0;
     gap: 0;
     flex: 1;
   }
-  .system-design-route .breadcrumb > span {
+  .studio-app .breadcrumb > span {
     display: none;
   }
-  .system-design-route .breadcrumb strong {
+  .studio-app .breadcrumb strong {
     font-size: 16px;
     max-width: none;
   }
-  .system-design-route .topbar-right {
+  .studio-app .topbar-right {
     gap: 0;
   }
-  .system-design-route #account-button {
+  .studio-app #account-button {
     max-width: 108px;
     font-size: 12px;
     line-height: 1.3;
     padding: 7px 10px;
   }
-  .system-design-route .topbar .icon-button {
+  .studio-app .topbar .icon-button {
     width: 36px;
   }
-  .system-design-route main {
+  .studio-app main {
     padding-top: 16px;
   }
   .progress-save-panel.sd-save-status {
@@ -8099,5 +8099,501 @@ h3 {
     font-size: 13px;
     padding: 10px;
     min-height: 44px;
+  }
+}
+
+/* Algorithms use the same reading surface and navigation as system design. */
+.algorithm-track {
+  max-width: 1080px;
+  margin-inline: auto;
+  min-width: 0;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.algorithm-track .page-intro h1 {
+  font-size: clamp(30px, 2.7vw, 39px);
+  line-height: 1.18;
+  letter-spacing: -1px;
+  max-width: 780px;
+}
+.algorithm-track .page-intro p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #526457;
+  max-width: 700px;
+}
+.algorithm-track .eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.4px;
+}
+.algorithm-track :is(.button, .text-button, .subtle-link) {
+  font-size: 15px;
+}
+.algorithm-track .button {
+  min-height: 46px;
+  padding: 10px 19px;
+  white-space: normal;
+  text-align: center;
+}
+.algorithm-track :is(button, a, summary, input, textarea, select):focus-visible {
+  outline: 3px solid #638546;
+  outline-offset: 4px;
+}
+.algorithm-track :is(p, h1, h2, h3, label) {
+  overflow-wrap: anywhere;
+}
+.algorithm-home-links {
+  display: grid;
+  gap: 12px;
+}
+.algorithm-home-links > a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 23px;
+  border: 1px solid #dce4d5;
+  border-radius: 16px;
+  background: white;
+}
+.algorithm-home-links > a:hover {
+  background: #f0f5e9;
+  border-color: #bfcfb2;
+}
+.algorithm-home-links > a > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+.algorithm-home-links strong,
+.algorithm-home-links small {
+  display: block;
+}
+.algorithm-home-links strong {
+  font-size: 18px;
+  font-weight: 600;
+}
+.algorithm-home-links small {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 3px;
+  color: #526457;
+}
+.algorithm-link-icon,
+.tool-symbol {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #edf3e5;
+  color: #446837;
+  font-size: 23px;
+  flex-shrink: 0;
+}
+.algorithm-path-progress {
+  padding: 24px;
+  border: 1px solid #dce4d5;
+  border-radius: 16px;
+  background: #fff;
+  margin: 24px 0 18px;
+}
+.algorithm-path-progress > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+  color: #526457;
+}
+.algorithm-path-progress strong {
+  font-weight: 600;
+  color: #26392f;
+}
+.algorithm-path-progress progress {
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  display: block;
+  margin: 12px 0 20px;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e7eede;
+  accent-color: #4e7852;
+}
+.algorithm-path-progress progress::-webkit-progress-bar {
+  background: #e7eede;
+}
+.algorithm-path-progress progress::-webkit-progress-value {
+  background: #4e7852;
+  border-radius: 10px;
+}
+.algorithm-path-progress progress::-moz-progress-bar {
+  background: #4e7852;
+}
+.algorithm-track .path-explanation {
+  max-width: 760px;
+  font-size: 16px;
+  color: #526457;
+  margin-bottom: 24px;
+  margin-inline: 0;
+}
+.algorithm-track .path-lesson {
+  border-bottom: 0;
+}
+.algorithm-further {
+  margin-top: 28px;
+  border-top: 1px solid #dce4d5;
+  padding-top: 18px;
+}
+.algorithm-track .lesson-heading,
+.algorithm-track .lesson-title {
+  max-width: none;
+}
+.algorithm-track .lesson-heading {
+  margin-bottom: 16px;
+}
+.algorithm-track .lesson-heading .muted {
+  font-size: 13px;
+}
+.algorithm-track .lesson-title {
+  font-size: clamp(29px, 3vw, 37px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin-bottom: 28px;
+}
+.algorithm-lesson-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 244px;
+  gap: 28px;
+  align-items: start;
+}
+.algorithm-lesson-main {
+  min-width: 0;
+}
+.algorithm-lesson-layout.is-coding {
+  grid-template-columns: minmax(0, 1fr);
+}
+.algorithm-rail nav {
+  max-height: calc(100svh - 280px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.algorithm-track .algorithm-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 0 18px;
+  padding: 0;
+  max-width: none;
+  background: white;
+  border-radius: 13px;
+  gap: 0;
+}
+.algorithm-track .algorithm-steps button {
+  border-radius: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  color: #526457;
+  padding: 13px 8px;
+}
+.algorithm-track .algorithm-steps button > span {
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  width: 22px;
+  height: 22px;
+}
+.algorithm-track .algorithm-steps button[aria-current] {
+  background: #e9f0e0;
+  color: #284d35;
+  font-weight: 600;
+}
+.algorithm-track .algorithm-steps button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.algorithm-track .lesson-back {
+  display: block;
+  margin: 0 0 16px;
+}
+.algorithm-track .focused-lesson {
+  padding: 32px;
+  max-width: none;
+  border-radius: 18px;
+  border-color: #dce4d5;
+}
+.algorithm-track .focused-lesson > h2 {
+  font-size: 26px;
+  line-height: 1.35;
+  margin: 10px 0 20px;
+}
+.algorithm-track .focused-lesson > .eyebrow {
+  margin-bottom: 0;
+}
+.algorithm-track .familiar-example {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #526457;
+}
+.algorithm-track .walkthrough {
+  padding: 23px;
+  border-radius: 13px;
+  background: #f4f7ee;
+}
+.algorithm-track .walkthrough-step {
+  font-size: 18px;
+}
+.algorithm-track .walkthrough-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.algorithm-track .walkthrough-actions > .text-button {
+  font-size: 14px;
+}
+.algorithm-track .more-detail {
+  font-size: 15px;
+}
+.algorithm-track .more-detail > p {
+  color: #526457;
+  line-height: 1.75;
+}
+.algorithm-track .cost-box {
+  border-radius: 12px;
+  background: #f4f7ee;
+}
+.algorithm-track :is(.focused-lesson h2, .focused-lesson h3, .task-panel h2):focus {
+  outline: none;
+}
+.algorithm-steps,
+.algorithm-track .walkthrough,
+.algorithm-track .task-panel,
+.algorithm-track .focused-lesson h2,
+.algorithm-track .focused-lesson h3 {
+  scroll-margin-top: 100px;
+}
+.algorithm-track .practice-layout {
+  max-width: none;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 24px;
+}
+.algorithm-track .task-panel {
+  padding: 26px;
+  border-radius: 16px;
+  border-color: #dce4d5;
+}
+.algorithm-track .task-panel h2 {
+  font-size: 24px;
+  line-height: 1.35;
+}
+.algorithm-track :is(.task-panel > p, .hint-block p, .solution-details p, .checkpoint-intro) {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #526457;
+}
+.algorithm-track .example-box code {
+  font-size: 14px;
+}
+.algorithm-track .editor-panel {
+  border-radius: 16px;
+  border-color: #dce4d5;
+}
+.algorithm-track .solved-code {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.algorithm-track :is(.editor-toolbar .text-button, .editor-help, .editor-actions > span) {
+  font-size: 13px;
+}
+.algorithm-track .editor-body {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.algorithm-track .line-numbers {
+  font-size: 13px;
+  line-height: calc(15px * 1.7);
+}
+.mobile-problem-jump {
+  display: none;
+}
+.algorithm-track .tools-list {
+  max-width: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.algorithm-track .learning-tool {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 27px;
+  border-radius: 16px;
+  border-color: #dce4d5;
+  gap: 18px;
+}
+.algorithm-track .learning-tool h2 {
+  font-size: 22px;
+  line-height: 1.35;
+}
+.algorithm-track .learning-tool p {
+  font-size: 16px;
+  color: #526457;
+  line-height: 1.7;
+}
+.algorithm-track .learning-tool .button {
+  margin-top: auto;
+}
+.algorithm-track .exercise-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.algorithm-track .exercise-card {
+  padding: 25px;
+  border-radius: 16px;
+  border-color: #dce4d5;
+}
+.algorithm-track .exercise-card h3 {
+  font-size: 21px;
+  line-height: 1.4;
+}
+.algorithm-track .exercise-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #526457;
+}
+.algorithm-track .exercise-card :is(.tag, .muted),
+.algorithm-track .exercise-card > div:first-child {
+  font-size: 12px;
+}
+.algorithm-track .exercise-card > div:first-child {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px 12px;
+}
+.algorithm-track .practice-filter {
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+.algorithm-track .practice-filter input {
+  max-width: 100%;
+  font-size: 16px;
+  min-height: 46px;
+}
+.algorithm-track :is(.review-row, .project-card, .growth-workspace, .visualizer, .lab-controls, .visual-controls) {
+  border-radius: 16px;
+  border-color: #dce4d5;
+}
+@media (max-width: 1100px) {
+  .algorithm-lesson-layout,
+  .algorithm-track .practice-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .algorithm-rail {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .algorithm-track .page-intro h1 {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+  .algorithm-track .page-intro p {
+    font-size: 16px;
+  }
+  .algorithm-home-links > a {
+    padding: 19px;
+    gap: 13px;
+  }
+  .algorithm-home-links strong {
+    font-size: 17px;
+  }
+  .algorithm-link-icon {
+    width: 36px;
+    height: 40px;
+    font-size: 21px;
+  }
+  .algorithm-path-progress {
+    padding: 20px;
+  }
+  .algorithm-path-progress .button {
+    width: 100%;
+  }
+  .algorithm-track .lesson-heading {
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .algorithm-track .lesson-title {
+    font-size: 29px;
+    letter-spacing: -0.6px;
+    margin-bottom: 22px;
+  }
+  .algorithm-track .algorithm-steps button {
+    flex-direction: column;
+    min-height: 66px;
+    font-size: 12px;
+    padding: 11px 3px;
+    gap: 5px;
+  }
+  .algorithm-track .focused-lesson,
+  .algorithm-track .task-panel {
+    padding: 23px 19px;
+    border-radius: 13px;
+  }
+  .algorithm-track .focused-lesson > h2 {
+    font-size: 23px;
+  }
+  .algorithm-track .walkthrough {
+    padding: 18px 14px;
+  }
+  .algorithm-track .walkthrough-step {
+    font-size: 17px;
+  }
+  .algorithm-track .walkthrough-actions > .button {
+    width: 100%;
+  }
+  .algorithm-track .walkthrough-actions > span:empty {
+    display: none;
+  }
+  .algorithm-track .lesson-continue .button {
+    width: 100%;
+  }
+  .algorithm-track .practice-layout {
+    gap: 18px;
+  }
+  .algorithm-track .editor-body {
+    font-size: 16px;
+    line-height: 1.65;
+    height: clamp(280px, 45svh, 430px);
+  }
+  .algorithm-track .line-numbers {
+    font-size: 13px;
+    line-height: calc(16px * 1.65);
+  }
+  .algorithm-track .editor-toolbar {
+    gap: 6px 12px;
+  }
+  .algorithm-track .editor-toolbar > div {
+    gap: 12px;
+  }
+  .algorithm-track .mobile-problem-jump {
+    display: inline-flex;
+  }
+  .algorithm-track .tools-list,
+  .algorithm-track .exercise-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .algorithm-track .learning-tool,
+  .algorithm-track .exercise-card {
+    padding: 23px 20px;
+  }
+  .algorithm-track .learning-tool .button {
+    width: 100%;
+  }
+  .algorithm-track .practice-filter {
+    display: block;
+  }
+  .algorithm-track .practice-filter label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .algorithm-track .practice-filter input {
+    width: 100%;
   }
 }

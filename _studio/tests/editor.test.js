@@ -1,7 +1,23 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { indentEdit, backspaceIndentEdit, newlineEdit } from "../../algo-studio/editor.js";
+import { indentEdit, toolbarIndentEdit, backspaceIndentEdit, newlineEdit } from "../../algo-studio/editor.js";
 const apply = (code, edit) => (edit ? code.slice(0, edit.from) + edit.text + code.slice(edit.to) : code);
+
+test("toolbar indentation moves the current line from any cursor position and round-trips with outdent", () => {
+  const code = "def solve():\n    return 1";
+  for (const caret of [13, 18, code.length]) {
+    const indent = toolbarIndentEdit(code, caret, caret);
+    const indented = apply(code, indent);
+    assert.equal(indented, "def solve():\n        return 1");
+    assert.equal(indent.start, caret + 4);
+    assert.equal(indent.start, indent.end);
+    const outdent = toolbarIndentEdit(indented, indent.start, indent.end, true);
+    assert.equal(apply(indented, outdent), code);
+    assert.equal(outdent.start, caret);
+  }
+  assert.equal(apply("", toolbarIndentEdit("", 0, 0)), "    ");
+  assert.equal(apply("a\nb", toolbarIndentEdit("a\nb", 0, 3)), "    a\n    b");
+});
 
 test("Tab advances to a four-space stop and selected lines indent together", () => {
   assert.equal(apply("  value", indentEdit("  value", 2, 2)), "    value");
