@@ -237,3 +237,17 @@ test("worked arithmetic checks average traffic, p95 tail behavior, and recovery 
   assert.ok(facts("regions").includes(`${4} minutes`));
   assert.ok(facts("regions").includes(`${20 - 4} minutes`));
 });
+
+test("example navigation has one forward action and ends at decision practice without changing progress", () => {
+  const state = initialState();
+  const ui = createSystemDesign({ getState: () => state, save: () => assert.fail("Rendering must not save"), render: () => {}, activeDay: () => {} });
+  for (let walkIndex = 0; walkIndex < 4; walkIndex++) {
+    state.systemDesign.requirements = { step: 1, walkIndex };
+    const before = JSON.stringify(state);
+    const html = ui.view("requirements");
+    assert.ok(!html.includes('class="sd-step-footer"'), "A second forward control would compete with the example");
+    assert.equal(html.includes('id="sd-walk-next"'), walkIndex < 3);
+    assert.equal(html.includes('<button class="button primary" data-sd-step="2">Try a decision →</button>'), walkIndex === 3);
+    assert.equal(JSON.stringify(state), before);
+  }
+});

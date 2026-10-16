@@ -13,7 +13,7 @@ import {
   queueModel,
 } from "./system-design-model.js?v=20261016-system-audit1";
 const esc = (value) => String(value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-const steps = ["Understand", "Walk through", "Try a decision", "Explain & finish"];
+const steps = ["Understand", "Example", "Decide", "Explain"];
 const number = (n) => (Number.isFinite(n) ? n.toLocaleString(undefined, { maximumFractionDigits: 2 }) : "not draining");
 const link = (id, text, style = "primary") => `<a class="button ${style}" href="#system/${id}">${esc(text)} <span aria-hidden="true">→</span></a>`;
 export function createSystemDesign({ getState, save, render, activeDay }) {
@@ -29,20 +29,21 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
       next = systemNext(state),
       count = systemLessons.filter((l) => state.systemDesign?.[l.id]?.completedAt).length;
     const reviews = systemLessons.filter((l) => state.systemDesign?.[l.id]?.completedAt && state.systemDesign[l.id].reviewDue <= Date.now());
-    return `<div class="system-track"><div class="sd-track-switch"><a href="#home">Algorithms</a><span aria-current="page">System design</span></div>
-      <section class="sd-hero"><div class="sd-hero-copy"><span class="eyebrow green">SYSTEM DESIGN · PRACTICAL ENGINEERING + INTERVIEWS</span><h1>Build the system.<br>Understand every choice.</h1><p>Start with one request. Learn what to add, why it helps, and what can go wrong.</p><div class="sd-hero-action">${next ? link(next.id, count ? "Continue your next lesson" : "Start with the first idea") : '<a class="button primary" href="#system/review">Keep the ideas fresh →</a>'}<span>${count} / ${systemLessons.length} lessons complete</span></div></div><div class="sd-hero-map" aria-label="A simple system: a person sends a request to an app, which stores a record"><span class="sd-map-node">You <small>make a request</small></span><span class="sd-map-line" aria-hidden="true">↓</span><span class="sd-map-node sd-map-app">Your app <small>does one useful job</small></span><span class="sd-map-line" aria-hidden="true">↓</span><span class="sd-map-node">Your data <small>remembers the result</small></span><span class="sd-map-caption">Every box needs a reason.</span></div></section>
-      ${next && count ? `<a class="sd-resume" href="#system/${next.id}"><span><small>UP NEXT · LESSON ${next.position}</small><strong>${esc(next.title)}</strong></span><span aria-hidden="true">→</span></a>` : ""}
-      <div class="sd-learning-note"><span>Read a little</span><b aria-hidden="true">→</b><span>Watch an example</span><b aria-hidden="true">→</b><span>Try it yourself</span><b aria-hidden="true">→</b><span>Explain your choice</span></div>
-      <div class="sd-outline-heading"><div><span class="eyebrow green">A PATH THAT BUILDS ON ITSELF</span><h2>One foundation before the next.</h2></div><a class="subtle-link" href="#system/review">${reviews.length ? `${reviews.length} reviews ready` : "Review & notebooks"} →</a></div>
+    const resume = next && !!state.systemDesign?.[next.id];
+    return `<div class="system-track sd-dashboard"><div class="sd-track-switch"><a href="#home">Algorithms</a><span aria-current="page">System design</span></div>
+      <header class="sd-dashboard-heading"><span class="eyebrow green">PRACTICAL ENGINEERING + INTERVIEWS</span><h1>System design, one clear step at a time.</h1><p>Learn how real systems work. Make a choice, see what happens, and explain why.</p><div class="sd-course-meta"><span>30 guided lessons</span><span>5 stages</span><span>6 design studios</span></div></header>
+      <div class="sd-start-grid"><section class="sd-next-card" aria-labelledby="sd-next-title"><div class="sd-next-meta"><span>${next ? `${resume ? "PICK UP WHERE YOU LEFT OFF" : "YOUR NEXT LESSON"} · ${String(next.position).padStart(2, "0")}` : "GUIDED PATH COMPLETE"}</span><span>${next ? `Stage ${next.stage + 1} of 5` : "30 of 30"}</span></div><h2 id="sd-next-title">${next ? esc(next.title) : "Keep putting the ideas to work."}</h2><p>${next ? esc(next.idea) : "Revisit your designs and practise explaining your choices."}</p>${next ? link(next.id, resume ? "Continue lesson" : "Start lesson") : '<a class="button primary" href="#system/review">Open your reviews →</a>'}<div class="sd-course-progress"><div><span>${count} of ${systemLessons.length} lessons complete</span><span>${Math.round((count / systemLessons.length) * 100)}%</span></div><progress max="30" value="${count}" aria-label="Completed system design lessons">${count} of 30</progress></div></section>
+      <section class="sd-method-card" aria-labelledby="sd-method-title"><span class="eyebrow green">LEARN BY DOING</span><h2 id="sd-method-title">A small loop. A clearer idea.</h2><ol><li><span>1</span><div><strong>Understand the idea</strong><small>A short, plain explanation.</small></div></li><li><span>2</span><div><strong>See it happen</strong><small>Follow a real example, step by step.</small></div></li><li><span>3</span><div><strong>Make a decision</strong><small>Try first. Get useful feedback.</small></div></li><li><span>4</span><div><strong>Explain your choice</strong><small>Build confidence in your own words.</small></div></li></ol></section></div>
+      <div class="sd-outline-heading"><div><span class="eyebrow green">YOUR LEARNING PATH</span><h2>From one request to a complete system.</h2></div><a class="subtle-link" href="#system/review">${reviews.length ? `${reviews.length} reviews ready` : "Review & notebooks"} →</a></div>
       <div class="sd-stages">${systemStages
         .map(
           (stage, i) =>
-            `<details class="sd-stage" ${next?.stage === i || (!next && i === 4) ? "open" : ""}><summary><span class="sd-stage-number">0${i + 1}</span><span><strong>${stage.title}</strong><small>${stage.summary}</small></span><span class="sd-stage-count">${systemLessons.filter((l) => l.stage === i && state.systemDesign?.[l.id]?.completedAt).length}/6</span></summary><ol>${systemLessons
+            `<details class="sd-stage" ${next?.stage === i || (!next && i === 4) ? "open" : ""}><summary><span class="sd-stage-number">0${i + 1}</span><span><strong>${stage.title}</strong><small>${stage.summary}</small></span><span class="sd-stage-count">${systemLessons.filter((l) => l.stage === i && state.systemDesign?.[l.id]?.completedAt).length} / 6 complete</span></summary><ol>${systemLessons
               .filter((l) => l.stage === i)
               .map((l) => {
                 const done = state.systemDesign?.[l.id]?.completedAt,
                   available = systemCanOpen(state, l.id);
-                return `<li><a href="#system/${l.id}" ${next?.id === l.id ? 'aria-current="step"' : ""}><span class="sd-lesson-status ${done ? "done" : ""}" aria-label="${done ? "Complete" : available ? "Ready" : "Preview; earlier lesson recommended"}">${done ? "✓" : String(l.position).padStart(2, "0")}</span><span><strong>${esc(l.title)}</strong><small>${esc(l.idea)}</small></span><span class="sd-row-tag">${done ? "Revisit" : available ? "Start →" : "Preview"}</span></a></li>`;
+                return `<li><a href="#system/${l.id}" ${next?.id === l.id ? 'aria-current="step"' : ""}><span class="sd-lesson-status ${done ? "done" : ""}" aria-label="${done ? "Complete" : available ? "Ready" : "Preview; earlier lesson recommended"}">${done ? "✓" : String(l.position).padStart(2, "0")}</span><span><strong>${esc(l.title)}</strong><small>${esc(l.idea)}</small></span><span class="sd-row-tag">${done ? "Revisit" : next?.id === l.id ? "Up next →" : available ? "Start →" : "Preview"}</span></a></li>`;
               })
               .join("")}</ol></details>`
         )
@@ -64,7 +65,7 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
   }
   function walk(l, d) {
     const f = l.frames[d.walkIndex];
-    return `<section class="sd-paper"><span class="eyebrow green">A WORKED EXAMPLE · STEP ${d.walkIndex + 1} OF ${l.frames.length}</span><h2>Follow what changes.</h2><p class="sd-scenario">${esc(l.scenario)}</p><details class="sd-example-sketch"><summary>See the parts in this example</summary>${diagram(l, f.focus)}</details><section class="sd-current-step" aria-labelledby="sd-frame-title"><span class="eyebrow green">DO THIS</span><h3 id="sd-frame-title" tabindex="-1">${esc(f.action)}</h3><dl class="sd-frame-facts" aria-label="What we know at this step">${f.facts.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl><div class="sd-frame-why"><strong>Why this step matters</strong><p>${esc(f.why)}</p></div></section><div class="sd-walk-controls"><button class="button secondary" id="sd-walk-back" ${d.walkIndex === 0 ? "disabled" : ""}>← Previous</button><span>${d.walkIndex + 1} / ${l.frames.length}</span><button class="button primary" id="sd-walk-next" ${d.walkIndex === l.frames.length - 1 ? "disabled" : ""}>Next step →</button></div><details class="sd-walk-history"><summary>Steps so far</summary><ol>${l.frames
+    return `<section class="sd-paper sd-example-paper"><span class="eyebrow green">A WORKED EXAMPLE</span><h2>Follow what changes.</h2><div class="sd-example-progress" aria-label="Example step ${d.walkIndex + 1} of ${l.frames.length}"><span>Step ${d.walkIndex + 1} of ${l.frames.length}</span><div aria-hidden="true">${l.frames.map((_, i) => `<span class="${i <= d.walkIndex ? "reached" : ""}"></span>`).join("")}</div></div><div class="sd-scenario"><strong>The situation</strong><p>${esc(l.scenario)}</p></div><details class="sd-example-sketch"><summary>See the parts in this example</summary>${diagram(l, f.focus)}</details><section class="sd-current-step" aria-labelledby="sd-frame-title"><span class="eyebrow green">WHAT HAPPENS NOW</span><h3 id="sd-frame-title" tabindex="-1">${esc(f.action)}</h3><dl class="sd-frame-facts" aria-label="What we know at this step">${f.facts.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl><div class="sd-frame-why"><strong>Why this step matters</strong><p>${esc(f.why)}</p></div></section><div class="sd-walk-controls"><button class="button secondary" id="sd-walk-back" ${d.walkIndex === 0 ? "disabled" : ""}>← Back a step</button>${d.walkIndex === l.frames.length - 1 ? '<button class="button primary" data-sd-step="2">Try a decision →</button>' : '<button class="button primary" id="sd-walk-next">Next example step →</button>'}</div><details class="sd-walk-history"><summary>Steps so far</summary><ol>${l.frames
       .slice(0, d.walkIndex + 1)
       .map((frame) => `<li>${esc(frame.action)}</li>`)
       .join("")}</ol></details></section>`;
@@ -148,6 +149,15 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
     if (!d.checks.every(Boolean)) return "Compare your explanation with all three self-review points.";
     return "Ready to record this practice and open the next lesson.";
   }
+  function lessonRail(l, state) {
+    return `<aside class="sd-course-rail" aria-label="Current stage"><span class="eyebrow green">STAGE ${l.stage + 1} OF 5</span><h2>${esc(systemStages[l.stage].title)}</h2><nav aria-label="Lessons in this stage">${systemLessons
+      .filter((item) => item.stage === l.stage)
+      .map(
+        (item) =>
+          `<a href="#system/${item.id}" ${item.id === l.id ? 'aria-current="page"' : ""}><span class="sd-rail-number">${state.systemDesign?.[item.id]?.completedAt ? "✓" : String(item.position).padStart(2, "0")}</span><span>${esc(item.title)}${item.id === l.id ? "<small>Current lesson</small>" : ""}</span></a>`
+      )
+      .join("")}</nav><a class="subtle-link" href="#system">View the full path →</a></aside>`;
+  }
   function lessonView(id, variant) {
     const state = getState(),
       l = systemLessonById[id];
@@ -168,9 +178,9 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
       else
         content = `<section class="sd-paper"><span class="eyebrow green">PUT THE IDEA TO WORK</span><h2>Make the reasoning yours.</h2><p>${esc(l.task)}</p>${notebook(l, d)}<label class="sd-writing-label" for="sd-plan">${l.stage === 4 ? "Summarize the choice you would defend in an interview." : "Write your approach and explain why it fits."}</label><textarea id="sd-plan" data-sd-field="plan" maxlength="20000" rows="7" placeholder="My approach is… It helps because… The trade-off is…">${esc(d.plan)}</textarea><details class="sd-reference" id="sd-solved"><summary>Compare with a clean solved example</summary>${solved(l)}<p>Other designs can be valid. Compare assumptions and guarantees, not just product names.</p></details><fieldset class="sd-self-review"><legend>Self-review your reasoning</legend>${l.rubric.map((point, i) => `<label><input type="checkbox" data-sd-rubric="${i}" ${d.checks[i] ? "checked" : ""}/><span>${esc(point)}</span></label>`).join("")}</fieldset><p class="sd-caption">These checks are your own assessment. No AI or keyword matcher grades your written design.</p><p id="sd-complete-hint" role="status">${completionHint(l, d, state)}</p><button class="button primary" id="sd-complete" ${systemCanComplete(state, id) ? "" : "disabled"}>Save lesson completion ✓</button></section>`;
     }
-    return `<div class="system-track sd-lesson"><a class="subtle-link" href="#system">← System design path</a><header class="sd-lesson-header"><span class="eyebrow green">${esc(systemStages[l.stage].title)} · LESSON ${l.position} OF ${systemLessons.length}</span><h1>${esc(l.title)}</h1><p>${esc(l.idea)}</p></header>${!systemCanOpen(state, id) ? `<div class="sd-preview"><strong>You’re previewing a later idea.</strong><p>For the guided path, complete ${esc(systemLessonById[systemMissingPrerequisites(state, id)[0]].title)} first.</p>${link(systemMissingPrerequisites(state, id)[0], "Open the needed foundation", "secondary")}</div>` : ""}
+    return `<div class="system-track sd-lesson"><a class="subtle-link" href="#system">← System design path</a><header class="sd-lesson-header"><span class="eyebrow green">LESSON ${l.position} OF ${systemLessons.length} · ${esc(systemStages[l.stage].title)}</span><h1>${esc(l.title)}</h1></header><div class="sd-lesson-layout"><div class="sd-lesson-main">${!systemCanOpen(state, id) ? `<div class="sd-preview"><strong>You’re previewing a later idea.</strong><p>For the guided path, complete ${esc(systemLessonById[systemMissingPrerequisites(state, id)[0]].title)} first.</p>${link(systemMissingPrerequisites(state, id)[0], "Open the needed foundation", "secondary")}</div>` : ""}
       ${!review ? `<nav class="sd-steps" aria-label="Lesson steps">${steps.map((title, i) => `<button data-sd-step="${i}" ${i === d.step ? 'aria-current="step"' : ""}><span>${i + 1}</span>${title}</button>`).join("")}</nav>` : ""}${content}
-      ${!review && d.step < 3 ? `<div class="sd-step-footer"><button class="button secondary" data-sd-step="${d.step - 1}" ${d.step === 0 ? "disabled" : ""}>← Previous</button><button class="button primary" data-sd-step="${d.step + 1}">${d.step === 0 ? "See a worked example" : d.step === 1 ? "Try a decision" : "Explain your approach"} →</button></div>` : ""}
+      ${!review && (d.step === 0 || d.step === 2) ? `<div class="sd-step-footer">${d.step === 2 ? '<button class="text-button" data-sd-step="1">← Back to example</button>' : "<span>Ready to see it in action?</span>"}<button class="button primary" data-sd-step="${d.step + 1}">${d.step === 0 ? "See a worked example" : "Explain your approach"} →</button></div>` : ""}
       ${d.completedAt && !review ? `<section class="sd-finished" aria-label="Next lesson"><span class="eyebrow green">LESSON SAVED · ${d.supported ? "PRACTISED WITH SUPPORT" : "PRACTICE RECORDED"}</span><h2>${next ? `Next: ${esc(next.title)}` : "You’ve completed the guided path."}</h2><p>Keep applying and reviewing these ideas. Completion records practice; real fluency comes from explaining choices in new situations.</p>${next ? link(next.id, "Open next lesson") : '<a class="button primary" href="#system/review">Open review & notebooks →</a>'}</section>` : ""}
       <details class="sd-notes"><summary>Personal notes · saved as you type</summary><label for="sd-notes">What do you want to remember or ask about?</label><textarea id="sd-notes" data-sd-field="notes" maxlength="20000" rows="4">${esc(d.notes)}</textarea></details><details class="sd-sources"><summary>References for this lesson</summary>${l.sources
         .map((key) => {
@@ -179,7 +189,7 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
         })
         .join(
           ""
-        )}</details><div class="sd-bottom-nav">${previous ? `<a href="#system/${previous.id}">← Previous lesson</a>` : '<a href="#system">Course outline</a>'}<a href="#system/review">Review & notebooks →</a></div></div>`;
+        )}</details><div class="sd-bottom-nav">${previous ? `<a href="#system/${previous.id}">← Previous lesson</a>` : '<a href="#system">Course outline</a>'}<a href="#system/review">Review & notebooks →</a></div></div>${lessonRail(l, state)}</div></div>`;
   }
   function reviewView() {
     const state = getState(),
@@ -208,9 +218,12 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
     );
     if (!l) return;
     $(".sd-paper h2")?.setAttribute("tabindex", "-1");
-    const refresh = () => {
+    const refresh = (selector = ".sd-paper h2", scroll = false, anchor = selector) => {
       render();
-      $(".sd-paper h2")?.focus?.({ preventScroll: true });
+      const target = $(selector);
+      target?.setAttribute("tabindex", "-1");
+      target?.focus({ preventScroll: true });
+      if (scroll) $(anchor)?.scrollIntoView({ block: "start", behavior: "auto" });
     };
     const fields = () => systemProgress(getState(), id);
     const updateCompletion = () => {
@@ -224,14 +237,14 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
       (b) =>
         (b.onclick = () => {
           update(id, { step: Number(b.dataset.sdStep) });
-          refresh();
+          refresh(".sd-paper h2", true, ".sd-steps");
         })
     );
     document.querySelectorAll("[data-sd-notebook]").forEach(
       (b) =>
         (b.onclick = () => {
           update(id, { notebookIndex: Number(b.dataset.sdNotebook) });
-          refresh();
+          refresh(".sd-notebook h3", true);
         })
     );
     document.querySelectorAll('[name="sd-answer"]').forEach(
@@ -265,8 +278,7 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
       if ($(selector))
         $(selector).onclick = () => {
           update(id, { walkIndex: Math.max(0, Math.min(l.walk.length - 1, fields().walkIndex + delta)) });
-          refresh();
-          $("#sd-frame-title")?.focus({ preventScroll: true });
+          refresh("#sd-frame-title", true, ".sd-current-step");
         };
     document.querySelectorAll("[data-sd-field]").forEach(
       (input) =>

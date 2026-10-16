@@ -1,5 +1,5 @@
 import { AccountSync } from "./account-sync.js?v=20261016-system-audit1";
-import { createSystemDesign } from "./system-design-ui.js?v=20261016-system-audit1";
+import { createSystemDesign } from "./system-design-ui.js?v=20261016-system-ui1";
 import { systemLessons } from "./system-design-course.js?v=20261016-system-audit1";
 import { syncConfig } from "./sync-config.js?v=20261016-google1";
 import { lessons, modules, route, courseStages, futureTracks } from "./curriculum.js";
@@ -885,6 +885,7 @@ function currentLesson() {
 function render() {
   stopPlay();
   const [route = "home", param, variant] = location.hash.slice(1).split("/");
+  document.body.classList.toggle("system-design-route", route === "system");
   const names = {
     home: "Learn",
     path: "Course outline",
@@ -944,7 +945,7 @@ function render() {
   if (["home", "lesson", "check", "practice", "system"].includes(route || "home")) {
     $("#main").insertAdjacentHTML(
       "afterbegin",
-      '<div class="progress-save-panel" id="progress-save-panel"><p id="progress-save-status" role="status"></p><button class="text-button" id="progress-save-account"></button></div>'
+      `<div class="progress-save-panel ${route === "system" ? "sd-save-status" : ""}" id="progress-save-panel"><p id="progress-save-status" role="status"></p><button class="text-button" id="progress-save-account"></button></div>`
     );
     updateSaveStatus();
   }
