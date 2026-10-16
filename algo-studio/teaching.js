@@ -65,6 +65,10 @@ export function lessonDiagram(l, step) {
   } else if (l.id === 50) {
     label = "Read a smaller capacity from the previous item row";
     content = '<div class="trace-chain"><span>skip → previous[5] = 3</span><span>take → 4 + previous[2] = 7</span><span>best = 7</span></div>';
+  } else if (l.id === 54) {
+    const buckets = [[], step === 0 ? [] : step === 1 ? [1] : [1, 4], step === 4 ? [2] : []];
+    label = "Bucket labels stay the same. Different numbers can share a bucket.";
+    content = `<div class="hash-buckets">${buckets.map((values, i) => `<div class="hash-bucket"><span>Bucket ${i}</span><strong>[${values.join(", ")}]</strong></div>`).join("")}</div>`;
   }
   if (!content) return "";
   return `<figure class="lesson-diagram"><figcaption>${label}</figcaption>${content}</figure>`;

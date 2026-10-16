@@ -8334,6 +8334,71 @@ h3 {
   line-height: 1.75;
   color: #526457;
 }
+.algorithm-track .lesson-explanation {
+  max-width: 68ch;
+  margin: 18px 0 26px;
+  color: #526457;
+  font-size: 17px;
+  line-height: 1.8;
+}
+.algorithm-track .lesson-explanation p {
+  margin: 0 0 16px;
+}
+.algorithm-track .lesson-explanation p:last-child {
+  margin-bottom: 0;
+}
+.algorithm-track .exercise-brief {
+  margin: 22px 0 12px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.algorithm-track .exercise-brief > div + div {
+  margin-top: 16px;
+}
+.algorithm-track .exercise-brief dt {
+  font-weight: 700;
+  color: #294c35;
+}
+.algorithm-track .exercise-brief dd {
+  margin: 4px 0 0;
+  color: #526457;
+  overflow-wrap: anywhere;
+}
+.algorithm-track .task-panel > .return-reminder {
+  font-size: 14px;
+}
+.algorithm-track .example-reason {
+  margin: 14px 0 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #526457;
+}
+.algorithm-track .example-reason strong {
+  display: block;
+  color: #294c35;
+}
+.hash-buckets {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.hash-bucket {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  padding: 16px 6px;
+  border: 1px solid #cbd8bf;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+}
+.hash-bucket > span {
+  font-size: 13px;
+}
+.hash-bucket > strong {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 16px;
+}
 .algorithm-track .walkthrough {
   padding: 23px;
   border-radius: 13px;

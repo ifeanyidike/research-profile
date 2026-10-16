@@ -1,4 +1,4 @@
-import { initialState, validBackup, upgradeState } from "./learning-state.js?v=20261016-system-audit1";
+import { initialState, validBackup, upgradeState } from "./learning-state.js?v=20261016-clarity1";
 import { systemLessonById } from "./system-design-course.js?v=20261016-system-audit1";
 const groups = ["done", "drafts", "reviews", "ready", "practice", "systemDesign"];
 const transient = new Set(["results", "passedCode"]);

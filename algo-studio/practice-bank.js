@@ -23,8 +23,8 @@ export const checkpoints = {
     "Do not stop after the first match."
   ),
   1: task(
-    "Repair the running product",
-    "Return the product of all integers without using math.prod. An empty list has product 1. The starter uses the wrong identity; repair it.",
+    "Build a running product",
+    "Return the product of all integers without using math.prod. An empty list has product 1. Choose a starting product that also handles an empty list.",
     "items",
     "def solve(items):\n    product = 1\n    for value in items:\n        product *= value\n    return product",
     [t([[2, -3, 4]], -24), t([[]], 1), t([[4, 0, 9]], 0), t([[-2, -2]], 4)],
@@ -1041,3 +1041,400 @@ export const transferTasks = {
 };
 
 for (const [id, problem] of Object.entries(transferTasks)) problem.requires = Number(id) === 17 ? [17, 8] : [Number(id)];
+
+// Plain instructions for these problems, independent of the main lesson exercise.
+const checkpointBriefs = {
+  0: {
+    input: "A list of readings called items, and a target reading.",
+    output: "The number of positions whose reading equals target. Return 0 if none match.",
+    example: "The reading 3 appears at positions 0 and 2 in [3, 1, 3]. Count both matches: 2.",
+  },
+  1: {
+    input: "A list of integers. It can contain negative numbers or zero.",
+    output: "Multiply all the integers and return the product. For an empty list, return 1. Do not use math.prod.",
+    example: "2 × -3 × 4 = -24. A negative number changes the sign of the product.",
+  },
+  2: {
+    input: "A list of integers, possibly empty.",
+    output: "A list [smallest, largest], or [] if the input is empty. Make one pass without sorting or calling min or max.",
+    example: "In [-4, 8, 2], the smallest value is -4 and the largest is 8. Return [-4, 8].",
+  },
+  3: {
+    input: "Two lists a and b, already sorted from smallest to largest.",
+    output: "A sorted list of values that appear in both inputs. Include each shared value only once. Move two indices forward; do not use sets.",
+    example: "Both lists contain 2 and 4. Repeated copies of 2 still produce just one 2: [2, 4].",
+  },
+  4: {
+    input: "A list of integers, a group length k, and a target total. Groups must use consecutive positions.",
+    output:
+      "The starting position of the first length-k group whose sum is at least target. Positions start at 0. Return -1 if no group qualifies or k is invalid.",
+    example: "The pairs are [1, 2], [2, 5], and [5, 1]. The first qualifying pair is [2, 5], starting at position 1.",
+  },
+  5: {
+    input: "A list of integers, queries [left, right], and a target total. Each query includes both endpoints; positions start at 0.",
+    output: "How many queried ranges have a sum at least target. Build the running totals once and reuse them.",
+    example: "The three range sums are 2, 4, and 6. Two of them are at least 4, so return 2.",
+  },
+  6: {
+    input: "A sorted list of integers and a target value. Repeated values are allowed.",
+    output: "True if target occurs anywhere, otherwise False. Use binary search rather than checking every position.",
+    example: "2 appears in [1, 2, 2, 5]. It does not matter which matching position you find: return True.",
+  },
+  7: {
+    input: "A list of integers, possibly empty.",
+    output: "The values sorted from largest to smallest, keeping repeated values. Use insertion sort.",
+    example: "Both 5s come first, followed by 2 and 1: [5, 5, 2, 1].",
+  },
+  8: {
+    input: "Two lists a and b, already sorted from smallest to largest.",
+    output: "One sorted list containing every distinct value from either input. Use two indices; do not use set or sorted.",
+    example: "The inputs together contain 1, 2, and 4. Extra copies are removed: [1, 2, 4].",
+  },
+  9: {
+    input: "Text containing only (, ), [, ], {, and }.",
+    output: "True if every closing bracket matches the most recent opening bracket and no openings are left. Otherwise False.",
+    example: "In {[()]}, the innermost parentheses close first, then the square brackets, then the braces. Return True.",
+  },
+  10: {
+    input: "A list of add/take operations and a maximum queue size called capacity.",
+    output: "The result of each take operation, in order. Take the oldest item, or return None for that take if empty. Ignore an add when full.",
+    example: "Capacity is 1. Add 1 succeeds, add 2 is ignored, and the two takes return 1 and None: [1, None].",
+  },
+  11: {
+    input: "The head of a linked list and an index k. Each node has value and next; counting starts at 0.",
+    output: "The value at position k, or None if that position does not exist. Follow next links rather than converting the chain to an array.",
+    example: "The chain is 4 → 7 → 9. Position 0 holds 4, so position 1 holds 7.",
+  },
+  12: {
+    input: "A list of words. Compare the words exactly as written.",
+    output: "The first word in input order that occurs exactly once. Return None if no word qualifies.",
+    example: "tea occurs twice. milk is the first word that occurs once, so return milk.",
+  },
+  13: {
+    input: "A list of integers and a target total.",
+    output: "True if two different positions add to target, otherwise False. Look up previously seen values during one pass.",
+    example: "The two 3s occupy different positions. They make 6 together, so return True.",
+  },
+  14: {
+    input: "A base number and a nonnegative integer exponent n.",
+    output: "base multiplied by itself n times. Use recursion, without ** or pow. For exponent 0, return 1, including when base is 0.",
+    example: "3 to the fourth power is 3 × 3 × 3 × 3 = 81.",
+  },
+  15: {
+    input: "The root of a binary tree, or None. Each node has value, left, and right.",
+    output: "A list of values in preorder: read the node, then its left branch, then its right branch. For an empty tree, return [].",
+    example: "Read root 2 first, then its left child 1, then its right child 3: [2, 1, 3].",
+  },
+  16: {
+    input: "A binary search tree and two bounds low and high. Smaller values are on the left and larger values on the right.",
+    output: "The sum of node values between low and high, including both bounds. Skip branches that cannot contain qualifying values.",
+    example: "The values are 2, 5, and 8. Between 3 and 8, only 5 and 8 qualify: 5 + 8 = 13.",
+  },
+  17: {
+    input: "A list of integers and a nonnegative count k.",
+    output:
+      "The k largest values, from largest to smallest. Keep duplicates; if k exceeds the list length, return all values. Use a heap holding at most k values.",
+    example: "The largest two values in [3, 8, 1, 8] are the two 8s. Return [8, 8].",
+  },
+  18: {
+    input: "A graph mapping each place to its allowed next places, plus a starting place.",
+    output:
+      "A dictionary mapping every reachable place to its shortest number of edges from start. Include start with distance 0; leave out unreachable places.",
+    example: "A is 0 edges away. B and C need 1 edge. D needs 2: {A: 0, B: 1, C: 1, D: 2}.",
+  },
+  19: {
+    input: "The number of nodes n and undirected edges [a, b]. Nodes are numbered 0 through n - 1.",
+    output: "How many separate connected groups exist. Include isolated nodes as groups of one. Use graph traversal.",
+    example: "Nodes 0, 1, and 2 form one group. Nodes 3 and 4 form another. Return 2.",
+  },
+  20: {
+    input: "Intervals [start, end]. Two intervals may touch at an endpoint without overlapping.",
+    output: "The fewest intervals to remove so those kept do not overlap. Use an earliest-finish choice.",
+    example: "Keep [1, 3] and [3, 5]. Remove [2, 4]. Only 1 removal is needed.",
+  },
+  21: {
+    input: "A stair height n from 0 to 25. Each move climbs 1, 2, or 3 steps.",
+    output: "The number of ordered move sequences reaching exactly n. Staying at height 0 counts as one empty sequence.",
+    example: "Height 4 has 7 sequences: 1111, 112, 121, 211, 22, 13, and 31.",
+  },
+  22: {
+    input: "Distinct positive coin values and a nonnegative amount. You may reuse a coin value.",
+    output:
+      "How many combinations make the amount. Changing coin order does not create a new combination. Amount 0 has one combination: choose no coins.",
+    example: "With coins 1 and 2, amount 4 has three combinations: four 1s; two 1s and one 2; or two 2s. Return 3.",
+  },
+  23: {
+    input: "A graph, a starting place, a goal, and a list of blocked places that must not be visited.",
+    output:
+      "A shortest route as a list of places, including start and goal. Follow the given neighbor order to break ties. Return [] if no route exists or an endpoint is blocked.",
+    example: "B is blocked, so A → B → D is unavailable. A → C → D is allowed. Return [A, C, D].",
+  },
+  24: {
+    input: "A list of integers. Count positions from 0.",
+    output: "The number of pairs of positions i before j where items[i] is greater than items[j]. Count while merging sorted halves.",
+    example: "In [3, 1, 2], 3 comes before the smaller 1 and the smaller 2. Those are the only two qualifying pairs.",
+  },
+  25: {
+    input: "A list of integers and a valid position k in its sorted order. Positions start at 0.",
+    output:
+      "The value that would appear at position k after sorting. Use quickselect with the middle value as pivot and three groups; do not fully sort.",
+    example: "The sorted order would be [1, 3, 3, 5]. Position 2 holds 3, so return 3.",
+  },
+  26: {
+    input: "A list of distinct integers and a chosen size k. The input has at most 10 items.",
+    output:
+      "All groups of exactly k items. Sort values inside each group and sort the outer list. Choosing the same items in another order is not a new group.",
+    example: "Choosing 2 from [3, 1, 2] gives [1, 2], [1, 3], and [2, 3]. Return those three groups in that order.",
+  },
+  27: {
+    input: "A list of lowercase words and a list of word queries. Empty words are allowed.",
+    output:
+      "One True/False result per query, telling whether the whole queried word was inserted. Use a trie; a matching beginning alone does not qualify.",
+    example: "car and cart were inserted. ca is only a beginning, and cat was not inserted. Return [False, True, True, False].",
+  },
+  28: {
+    input: "Nodes numbered 0 through n - 1, undirected connections, and queries asking about pairs of nodes.",
+    output: "One boolean per query: True if the pair belongs to the same connected group, otherwise False. Use union-find.",
+    example: "0 and 2 connect through 1. 0 and 3 are separate. 3 connects to itself. Return [True, False, True].",
+  },
+  29: {
+    input: "Undirected edges in arrival order, connecting nodes numbered 0 through n - 1.",
+    output:
+      "The position of the first edge that closes a loop, counting from 0. A self-edge or a repeated edge also counts. Return -1 if no edge closes a loop.",
+    example: "Edges 0–1 and 1–2 connect all three nodes. The next edge, 2–0, closes a loop. It is at position 2.",
+  },
+  30: {
+    input: "A directed graph whose entries give [neighbor, cost], plus a starting place. All costs are zero or positive.",
+    output:
+      "A dictionary of the cheapest total cost from start to every reachable place. Include start with cost 0; omit unreachable places. Use Dijkstra’s algorithm.",
+    example: "A → C costs 1. A → C → B costs 2, cheaper than going directly for 5. Return costs A: 0, B: 2, C: 1.",
+  },
+  31: {
+    input: "n jobs and dependencies [before, after]. Every job takes one round; any number of ready jobs can run together.",
+    output: "The fewest rounds to finish every job, or -1 if the dependencies contain a loop. With no jobs, return 0.",
+    example: "Jobs 0 and 1 run in round 1. Job 2 needs both finished, so it runs in round 2. Return 2.",
+  },
+  32: {
+    input: "n places and undirected edges [a, b, cost]. The network may have separate connected groups.",
+    output:
+      "The minimum total cost to connect each group internally, without requiring separate groups to connect to one another. Use Kruskal’s algorithm.",
+    example: "The available groups use edge 0–1 costing 3 and edge 2–3 costing 2. Total cost is 5.",
+  },
+  33: {
+    input: "Two strings called a and b.",
+    output: "The fewest single-character edits to turn a into b. Inserting, deleting, or replacing one character each costs 1.",
+    example: "Change the a in cat to u. That one replacement makes cut, so return 1.",
+  },
+  34: {
+    input: "A list of integers.",
+    output:
+      "The length of the longest strictly decreasing subsequence. You may skip positions, but cannot reorder them. Use a table comparing earlier positions; return 0 for an empty list.",
+    example: "From [5, 2, 4, 1], choose 5, 4, 1 or 5, 2, 1. Either has length 3.",
+  },
+  35: {
+    input: "Positive integer weights and a nonnegative target. Each input position may be chosen at most once.",
+    output: "True if some selection adds exactly to target, otherwise False. The empty selection makes 0. Use a one-dimensional table.",
+    example: "Choose 2 and 3 to make 5. The weight 7 is not needed. Return True.",
+  },
+  36: {
+    input: "A list of integers, possibly empty.",
+    output: "A separate list with every value doubled. Keep the original list unchanged.",
+    example: "2 becomes 4 and -1 becomes -2. Return [4, -2] while leaving the input [2, -1] unchanged.",
+  },
+  37: {
+    input: "Two lists of values.",
+    output: "How many different values appear in both lists. Repeated copies count only once.",
+    example: "Only 1 appears in both lists. Its repeated appearance in the first list does not increase the count. Return 1.",
+  },
+  38: {
+    input: "A nonnegative count n of items to append to a simulated growing array. Start empty with room for 1 item.",
+    output:
+      "The total number of existing items copied during resizing. When full, double the capacity before appending. Do not count the new append itself as a copy.",
+    example: "For 5 appends, resize at sizes 1, 2, and 4. Copy 1 + 2 + 4 = 7 existing items in total.",
+  },
+  39: {
+    input: "An integer or a nested list of integers and lists, nested at most 20 levels.",
+    output: "A flat list of all integers, read from left to right. Empty inner lists contribute nothing. Use recursion.",
+    example: "Read 2, then enter the inner list and read 3 and 4. Ignore its empty list. Return [2, 3, 4].",
+  },
+  40: {
+    input: "n nodes numbered 0 through n - 1, plus undirected edges [a, b] in arrival order.",
+    output:
+      "One neighbor list per node. Each edge adds b to a’s list and a to b’s list. Keep arrival order and repeated edges; a self-edge is added twice.",
+    example: "Edge 0–1 adds both directions. Edge 1–2 does too. Return [[1], [0, 2], [1]].",
+  },
+  41: {
+    input: "A list representing a possible min-heap. Children of position i are at 2*i + 1 and 2*i + 2, when present.",
+    output:
+      "True if every parent is no greater than either child, otherwise False. An empty list is valid. Do not require the whole list to be sorted.",
+    example: "In [1, 3, 2], parent 1 is no greater than children 3 and 2. Return True even though 3 comes before 2.",
+  },
+  42: {
+    input: "Nonnegative item costs and a nonnegative budget.",
+    output: "The greatest number of consecutive items whose total cost is at most budget. Return 0 if none fit.",
+    example: "In [2, 1, 3, 1] with budget 4, [2, 1], [1, 3], and [3, 1] each fit. No group of 3 fits, so return 2.",
+  },
+  43: {
+    input: "A string s and a limit k on different characters.",
+    output: "The length of the longest consecutive piece containing at most k different characters. Return 0 for empty text or k at most 0.",
+    example: "ece contains only e and c and has length 3. Extending it to eceb adds a third character, so the best length is 3.",
+  },
+  44: {
+    input: "The head of a linked list and a target value. Nodes have value and next.",
+    output: "The head of the chain after removing every node whose value equals target. You may change next links. Return None if no nodes remain.",
+    example: "Remove both nodes holding 2 from 2 → 1 → 2 → 3. The remaining chain is 1 → 3.",
+  },
+  45: {
+    input: "A sorted list of integers and a target.",
+    output: "How many times target occurs. Find its left and right boundaries with binary search; do not scan the list or call count.",
+    example: "2 fills positions 1, 2, and 3. The boundary after those positions is 4. The count is 4 - 1 = 3.",
+  },
+  46: {
+    input: "A binary tree whose node values are distinct. Nodes have value, left, and right.",
+    output: "True if every value follows the search-tree ordering rule for all its ancestors, otherwise False. An empty tree is valid.",
+    example: "Root 5 has 2 on its left and 8 on its right. Both values are on the correct side, so return True.",
+  },
+  47: {
+    input: "The root of a binary tree, or None.",
+    output: "A list with the sum of each level, starting at the root level. Use a queue. An empty tree returns [].",
+    example: "The root level contains 5. The next level contains 2 and 8, which add to 10. Return [5, 10].",
+  },
+  48: {
+    input: "A list of nonnegative stair costs. You may start at position 0 or 1, then climb 1 or 2 steps per move.",
+    output:
+      "The smallest cost to move beyond the last stair. Pay a stair’s cost when standing on it. An empty or one-stair list costs 0 because you may start beyond it. Use recursion with saved answers.",
+    example: "Start on stair 1 and pay 15. Jump two steps to leave the list. This costs less than paying 10 + 20, so return 15.",
+  },
+  49: {
+    input: "A rectangular grid: 0 is open and 1 is blocked. Start at its top-left cell and aim for its bottom-right cell.",
+    output: "How many routes use only right and down moves and never enter a blocked cell. Return 0 for an empty grid or blocked endpoint.",
+    example: "The lower-left cell is blocked. The only route goes right, then down. Return 1.",
+  },
+  50: {
+    input: "Positive item weights, matching nonnegative values, and a nonnegative carrying limit. Each item may be selected once.",
+    output:
+      "The selected item positions, in increasing order, for a highest-value selection that fits. Positions start at 0. When reconstructing a tie, skip the current highest-index item.",
+    example: "Items 0 and 1 weigh 2 + 3 = 5 and are worth 3 + 4 = 7. This beats item 2 alone, worth 5. Return [0, 1].",
+  },
+  51: {
+    input: "Daily prices in time order.",
+    output:
+      "One span per day: count today and the consecutive preceding days whose prices are at most today’s. Stop at the first higher price. Use a monotonic stack.",
+    example: "On the final day, 85 covers itself and the five preceding prices through 80, but stops at 100. Its span is 6.",
+  },
+  52: {
+    input: "Sorted, nonoverlapping intervals and one new interval [start, end].",
+    output: "The sorted intervals after insertion and merging. Intervals that touch at an endpoint must merge.",
+    example: "[2, 6] touches [1, 2] and overlaps [5, 7]. Together they cover [1, 7], so return [[1, 7]].",
+  },
+  53: {
+    input: "A nonnegative integer n.",
+    output: "How many digits are 1 in n’s binary form. Repeatedly clear the lowest 1 using n & (n - 1); do not use bin or bit_count.",
+    example: "13 is 1101 in binary. Three digits are 1, so return 3.",
+  },
+  54: {
+    input: "A positive bucket_count and put/get operations. Keys and stored values are integers. Put is [put, key, value]; get is [get, key].",
+    output:
+      "The results of get operations, in order. A missing key gives None. Put updates an existing key, or adds a new [key, value] pair. Use key % bucket_count and lists, without a Python dictionary.",
+    example: "Keys 1 and 4 share bucket 1 but keep different values. The gets read 5, then updated value 9 for key 1, then 8 for key 4: [5, 9, 8].",
+  },
+  55: {
+    input: "A list next_index, where each entry is the next position to visit or None, and a starting position.",
+    output:
+      "The position where a loop begins on the route from start, or None if that route ends. Positions start at 0. Use fast/slow pointers and constant extra memory.",
+    example: "Follow 0 → 1 → 2 → 1. The repeated section starts at position 1. Return 1, not the value of a node or a boolean.",
+  },
+  56: {
+    input: "n nodes, directed edges [from, to, cost], and a starting node.",
+    output: "True if a negative-total-cost loop can be reached from start, otherwise False. A disconnected negative loop does not count.",
+    example: "0 → 1 costs 1 and 1 → 0 costs -2. Their total is -1, and start 0 can reach this loop. Return True.",
+  },
+  57: {
+    input:
+      "Initial integers and add/range operations. Positions start at 0. An add changes one value by the supplied difference; a range includes both endpoints.",
+    output: "A list with the sum for each range operation, in order. Updates affect all later queries. Use a Fenwick tree.",
+    example: "First, positions 1 through 2 sum to 2 + 3 = 5. Add 4 at position 1, making [1, 6, 3]. The next range sums to 10. Return [5, 10].",
+  },
+  58: {
+    input: "A text string and a nonempty pattern string.",
+    output: "A list of every starting position where the whole pattern matches. Count from 0 and include overlapping matches. Use KMP.",
+    example: "aa begins at positions 0, 1, and 2 in aaaa. These matches overlap, and all count: [0, 1, 2].",
+  },
+  59: {
+    input: "Two nonnegative integers a and b.",
+    output:
+      "Their least common multiple: the smallest positive number divisible by both when both are positive. If either input is 0, return 0. Use Euclid, without math.gcd or math.lcm.",
+    example: "24 is the first positive multiple shared by 6 and 8. Return 24.",
+  },
+};
+const transferBriefs = {
+  0: {
+    input: "Readings in time order and a limit value.",
+    output: "The last position whose reading is strictly below the limit, counting from 0. Return -1 if none qualify.",
+    example: "Positions 1 and 3 contain readings below 3. The last is position 3, so return 3.",
+  },
+  12: {
+    input: "A list of strings, possibly empty.",
+    output: "The most frequent string. If several tie, return the alphabetically first. For an empty list, return None.",
+    example: "a and z each occur twice. a comes first alphabetically, so return a.",
+  },
+  13: {
+    input: "A list of integers and a target total.",
+    output:
+      "How many pairs of different positions add to target. Count each pair once, with the earlier position first. Equal values at different positions can form different pairs.",
+    example: "For [3, 3, 3], the qualifying position pairs are (0, 1), (0, 2), and (1, 2). Return 3.",
+  },
+  17: {
+    input: "Several lists, each already sorted from smallest to largest.",
+    output: "One sorted list containing all their values, including duplicates. Keep only the next available item from each feed in the heap.",
+    example: "Combining [1, 4], [2, 2], [], and [3] gives [1, 2, 2, 3, 4]. The empty feed adds nothing.",
+  },
+  18: {
+    input: "A grid with 0 for open cells and 1 for blocked cells. Start at the top-left and aim for the bottom-right.",
+    output:
+      "The fewest moves needed, moving up, down, left, or right. Each move costs 1. Return -1 for no route, an empty grid, or a blocked endpoint.",
+    example: "The lower-left cell is blocked. Go right, then down: 2 moves. Count moves, rather than the 3 cells visited.",
+  },
+  27: {
+    input: "Lowercase words and a prefix to complete.",
+    output: "The sorted distinct words starting with that prefix. Use a trie. An empty prefix matches every word.",
+    example: "car and cat start with ca; dog does not. Repeated car is returned only once: [car, cat].",
+  },
+  43: {
+    input: "Text s and a group length k.",
+    output:
+      "How many length-k consecutive pieces have no repeated character. Count starting positions separately. Return 0 when k is not positive or exceeds the text length.",
+    example: "The length-3 pieces of abac are aba and bac. Only bac has 3 different characters, so return 1.",
+  },
+  45: {
+    input: "Sorted readings and inclusive bands [low, high].",
+    output:
+      "One count per band, telling how many readings lie between its two bounds. Include repeated readings. Use binary-search boundaries for each band.",
+    example: "Band [2, 2] contains both 2s; [0, 4] contains 1 and both 2s; [8, 9] contains nothing. Return [2, 3, 0].",
+  },
+  47: {
+    input: "A binary tree, or None. Nodes have value, left, and right.",
+    output:
+      "True if, at every node, its left and right branch heights differ by at most 1. Otherwise False. An empty tree is balanced. Visit each node once.",
+    example: "Root 3 has leaf children 1 and 4. Their heights match, and both leaves are balanced. Return True.",
+  },
+  50: {
+    input: "Positive integer weights and a nonnegative target. Treat input positions as separate items, even when weights match.",
+    output:
+      "How many selections of positions add exactly to target. Each item can be used once, and changing selection order does not count again. The empty selection makes 0 once.",
+    example: "For weights [1, 1, 2], make 2 by selecting both 1s or by selecting the single 2. These are 2 selections.",
+  },
+  51: {
+    input: "Temperatures in day order.",
+    output: "One waiting time per day: how many days until a strictly warmer temperature. Return 0 for a day with no warmer day ahead.",
+    example: "For [70, 69, 72, 72, 75], the waits are [2, 1, 2, 1, 0]. Equal temperatures are not warmer.",
+  },
+  59: {
+    input: "At most 50 positive integers.",
+    output:
+      "How many pairs of positions have greatest common divisor 1. Count each pair once, with the earlier position first. Compute each divisor using Euclid.",
+    example: "2 and 3 share only factor 1, as do 3 and 4. But 2 and 4 share factor 2. Return 2.",
+  },
+};
+for (const [id, problem] of Object.entries(checkpoints)) problem.exerciseBrief = checkpointBriefs[id];
+for (const [id, problem] of Object.entries(transferTasks)) problem.exerciseBrief = transferBriefs[id];

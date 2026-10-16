@@ -1,5 +1,5 @@
 import { additions, stages, requirements, futureTracks } from "./course-extension.js";
-import { applyPlainLanguage } from "./lesson-language.js";
+import { applyPlainLanguage } from "./lesson-language.js?v=20261016-clarity1";
 export { futureTracks };
 export const modules = [
   ["Think like a problem solver", "Start with a plan. Make it correct. Understand its cost.", "Foundations", "◎"],

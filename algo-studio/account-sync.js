@@ -1,5 +1,5 @@
-import { initialState, validBackup, upgradeState } from "./learning-state.js?v=20261016-system-audit1";
-import { ProgressReplica, validDocument } from "./progress-sync.js?v=20261016-system-audit1";
+import { initialState, validBackup, upgradeState } from "./learning-state.js?v=20261016-clarity1";
+import { ProgressReplica, validDocument } from "./progress-sync.js?v=20261016-clarity1";
 const copy = (x) => JSON.parse(JSON.stringify(x));
 export class AccountSync {
   constructor({ client, storage, getState, setState, canApply, onStatus }) {

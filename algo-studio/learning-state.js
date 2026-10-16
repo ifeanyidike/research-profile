@@ -1,4 +1,4 @@
-import { lessons, route } from "./curriculum.js";
+import { lessons, route } from "./curriculum.js?v=20261016-clarity1";
 import { validSystemProgress } from "./system-design-model.js?v=20261016-system-audit1";
 export const initialState = () => ({ version: 1, done: {}, drafts: {}, reviews: {}, activity: [], ready: {}, practice: {}, systemDesign: {} });
 export function upgradeState(saved) {
