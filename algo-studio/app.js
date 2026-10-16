@@ -1,6 +1,6 @@
-import { AccountSync } from "./account-sync.js?v=20261016-system1";
-import { createSystemDesign } from "./system-design-ui.js?v=20261016-system1";
-import { systemLessons } from "./system-design-course.js?v=20261016-system1";
+import { AccountSync } from "./account-sync.js?v=20261016-system-audit1";
+import { createSystemDesign } from "./system-design-ui.js?v=20261016-system-audit1";
+import { systemLessons } from "./system-design-course.js?v=20261016-system-audit1";
 import { syncConfig } from "./sync-config.js?v=20261016-google1";
 import { lessons, modules, route, courseStages, futureTracks } from "./curriculum.js";
 import { indentEdit, backspaceIndentEdit, newlineEdit } from "./editor.js";
@@ -19,7 +19,7 @@ import {
   recordCheckpoint,
   validRun,
   validBackup,
-} from "./learning-state.js?v=20261016-system1";
+} from "./learning-state.js?v=20261016-system-audit1";
 import { lessonDiagram, growthCases, growthProfiles, projects } from "./teaching.js";
 import { searchTrace, insertionTrace, bfsTrace, measure, reviewDate } from "./algorithms.js";
 const $ = (s) => document.querySelector(s);

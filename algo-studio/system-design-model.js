@@ -1,4 +1,4 @@
-import { systemLessons, systemLessonById } from "./system-design-course.js?v=20261016-system1";
+import { systemLessons, systemLessonById } from "./system-design-course.js?v=20261016-system-audit1";
 export const systemDefaults = {
   step: 0,
   walkIndex: 0,
@@ -45,8 +45,9 @@ export const notebookPrompts = [
   ["tradeoff", "6. Defend a choice", "Compare one alternative. State what you gain, what it costs, and what evidence would change your mind."],
 ];
 export const systemProgress = (state, id) => ({ ...systemDefaults, checks: [...systemDefaults.checks], ...state.systemDesign?.[id] });
+export const systemMissingPrerequisites = (state, id) => systemLessonById[id]?.requires.filter((p) => !state.systemDesign?.[p]?.completedAt) || [];
 export const systemCanOpen = (state, id) =>
-  !!systemLessonById[id] && systemLessonById[id].requires.every((p) => !!state.systemDesign?.[p]?.completedAt);
+  !!systemLessonById[id] && (!!state.systemDesign?.[id]?.completedAt || systemMissingPrerequisites(state, id).length === 0);
 export const systemNext = (state) => systemLessons.find((l) => !state.systemDesign?.[l.id]?.completedAt && systemCanOpen(state, l.id));
 export function systemCanComplete(state, id) {
   const l = systemLessonById[id],

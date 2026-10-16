@@ -6,6 +6,7 @@ import {
   systemProgress,
   systemNext,
   systemCanOpen,
+  systemMissingPrerequisites,
   systemCanComplete,
   completeSystemLesson,
   completeSystemReview,
@@ -17,6 +18,7 @@ import {
 } from "../../algo-studio/system-design-model.js";
 import { initialState, validBackup, upgradeState } from "../../algo-studio/learning-state.js";
 import { ProgressReplica, validDocument } from "../../algo-studio/progress-sync.js";
+import { createSystemDesign } from "../../algo-studio/system-design-ui.js";
 const attempt = (l) => ({
   answer: l.check.answer,
   checked: true,
@@ -166,4 +168,72 @@ test("untrusted system lesson names cannot access inherited objects", () => {
   assert.equal(systemLessonById.constructor, undefined);
   assert.equal(validSystemProgress({ constructor: {} }), false);
   assert.equal(validDocument({ version: 1, records: { "systemDesign/constructor/notes": { at: 1, device: "x", value: "unsafe" } } }), false);
+});
+
+test("actual knowledge dependencies precede their use, including access checks before private data", () => {
+  for (const l of systemLessons) {
+    for (const id of l.concepts) assert.ok(systemLessonById[id].position < l.position, `${l.id} uses ${id} too early`);
+  }
+  assert.ok(systemLessonById.authorization.position < systemLessonById.data.position);
+  assert.ok(systemLessonById.retry.position < systemLessonById.queues.position);
+  assert.ok(systemLessonById.replication.position < systemLessonById.partitions.position);
+  assert.ok(systemLessonById.realtime.position < systemLessonById.chat.position);
+  assert.ok(systemLessonById.cache.position < systemLessonById["short-links"].position);
+  const state = initialState();
+  state.systemDesign.scale = { completedAt: 1 };
+  assert.ok(systemMissingPrerequisites(state, "cache").includes("authorization"));
+  assert.equal(systemCanOpen(state, "cache"), false);
+});
+
+test("reordering keeps earlier completion and unfinished notebooks without awarding new lessons", () => {
+  const saved = initialState();
+  for (const id of ["requirements", "request", "api", "data"]) saved.systemDesign[id] = { completedAt: 100 };
+  saved.systemDesign.uploads = { step: 1, walkIndex: 3, plan: "My unfinished private file service design.", notes: "Keep this original note." };
+  const restored = upgradeState(JSON.parse(JSON.stringify(saved)));
+  assert.ok(validBackup(restored));
+  assert.equal(systemNext(restored).id, "authorization");
+  assert.equal(systemCanOpen(restored, "data"), true);
+  assert.equal(restored.systemDesign.uploads.walkIndex, 3);
+  assert.equal(restored.systemDesign.uploads.notes, saved.systemDesign.uploads.notes);
+  assert.equal(restored.systemDesign.authorization, undefined);
+});
+
+test("every worked example renders one concrete state at a time and replay creates no completion", () => {
+  const state = initialState(),
+    ui = createSystemDesign({ getState: () => state, save: () => assert.fail("Rendering must not save"), render: () => {}, activeDay: () => {} });
+  const escape = (text) => text.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+  for (const l of systemLessons) {
+    assert.equal(l.frames.length, 4);
+    assert.equal(l.solutionSteps.length, 4);
+    assert.ok(l.terms.length >= 2);
+    for (let index = 0; index < l.frames.length; index++) {
+      state.systemDesign[l.id] = { step: 1, walkIndex: index };
+      const before = JSON.stringify(state),
+        frame = l.frames[index],
+        html = ui.view(l.id);
+      assert.equal(JSON.stringify(state), before);
+      assert.ok(html.includes(escape(frame.action)), `${l.id} step ${index}`);
+      assert.ok(html.includes("Why this step matters"));
+      for (const [label, value] of frame.facts) {
+        assert.ok(html.includes(escape(label)) && html.includes(escape(value)), `${l.id}: missing concrete facts`);
+      }
+      if (index < 3) assert.ok(!html.includes(escape(l.frames[index + 1].action)), `${l.id}: future action leaked`);
+      assert.ok(frame.focus >= 0 && frame.focus < l.diagram.length);
+    }
+    assert.equal(state.systemDesign[l.id].completedAt, undefined);
+    state.systemDesign[l.id].step = 3;
+    assert.ok(ui.view(l.id).includes("sd-solution-steps"));
+  }
+});
+
+test("worked arithmetic checks average traffic, p95 tail behavior, and recovery units independently", () => {
+  const facts = (id) => systemLessonById[id].frames.flatMap((f) => f.facts.map((pair) => pair[1])).join(" | ");
+  assert.ok(facts("estimates").includes(`${8640 * 10}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " requests/day"));
+  const timings = [...Array(19).fill(100), 2000].sort((a, b) => a - b);
+  assert.equal(timings[Math.ceil(0.95 * timings.length) - 1], 100);
+  assert.ok(facts("metrics").includes("100 ms"));
+  assert.equal(timings.at(-1), 2000);
+  assert.ok(facts("metrics").includes("2,000 ms"));
+  assert.ok(facts("regions").includes(`${4} minutes`));
+  assert.ok(facts("regions").includes(`${20 - 4} minutes`));
 });

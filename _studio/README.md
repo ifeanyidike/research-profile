@@ -50,6 +50,38 @@ These tests import static course data and pure models, and mock all account I/O.
 They cover prerequisite order, completion, review, legacy backups, validation,
 cross-device unfinished work, account import, and lab boundary calculations.
 
+### Content audit — 16 October 2026
+
+Reviewed all 30 lessons against the linked engineering references and public
+curricula. Access-control basics now precede private-data modeling. Explicit
+`concepts` dependencies accompany the sequential route, so changing the route
+cannot silently place a stated knowledge dependency after its use. Lesson IDs,
+answer indices, saved notes, and the four existing walkthrough positions remain
+stable. Previously recorded completion stays accessible after reordering; the
+recommended next activity picks up missing foundations.
+
+Each lesson now has short explanation paragraphs, a local vocabulary list, a
+concrete scenario, four authored `frames`, and four numbered `solutionSteps`.
+Frames show the action, named values, and why the step matters. Only the current
+state and previous actions are exposed; learners advance with Next/Previous.
+The optional role sketch is a conceptual aid, not an executable topology.
+
+The audit clarified PostgreSQL conditional-update behavior and transaction
+rollback, p95 and tail latency, durable retry-key scope and retention, outbox
+duplicate delivery, provider acceptance versus inbox arrival, and the gap
+between history replay and live chat updates. Uploads now validate and publish
+the same fixed snapshot, because reusable upload URLs can replace pending
+objects. Editable short links account for browser redirect caches as well as
+server caches. The search lesson’s unrelated CAP reference was replaced.
+
+Validation includes the offline sync/model/render tests, all 120 walkthrough
+states traversed through the local browser UI, and desktop/phone inspection.
+The source comparisons validate the teaching claims under their stated
+assumptions; the examples do not execute real PostgreSQL transactions, queues,
+object storage, or failure recovery. No live model-provider probes or automated
+language judges were used. Plain-language review is editorial work, not a claim
+that a learner comprehension study has been performed.
+
 ## Develop and verify
 
 From `_studio/`, run `npm run dev`, then open

@@ -1,7 +1,8 @@
-import { systemLessons, systemStages, systemLessonById, systemSources } from "./system-design-course.js?v=20261016-system1";
+import { systemLessons, systemStages, systemLessonById, systemSources } from "./system-design-course.js?v=20261016-system-audit1";
 import {
   systemProgress,
   systemCanOpen,
+  systemMissingPrerequisites,
   systemNext,
   systemCanComplete,
   completeSystemLesson,
@@ -10,7 +11,7 @@ import {
   capacityModel,
   cacheModel,
   queueModel,
-} from "./system-design-model.js?v=20261016-system1";
+} from "./system-design-model.js?v=20261016-system-audit1";
 const esc = (value) => String(value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const steps = ["Understand", "Walk through", "Try a decision", "Explain & finish"];
 const number = (n) => (Number.isFinite(n) ? n.toLocaleString(undefined, { maximumFractionDigits: 2 }) : "not draining");
@@ -52,8 +53,21 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
         .map(([title, url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${esc(title)} ↗</a>`)
         .join("")}</details></div>`;
   }
-  function diagram(l) {
-    return `<div class="sd-flow" aria-label="Example flow">${l.diagram.map((node, i) => `${i ? '<span class="sd-flow-arrow" aria-hidden="true">→</span>' : ""}<span class="sd-flow-node">${esc(node)}</span>`).join("")}</div><p class="sd-caption">Follow the labelled path. These boxes describe roles; they do not each need their own server.</p>`;
+  function diagram(l, focus) {
+    return `<div class="sd-flow" aria-label="Sketch of the roles in this example">${l.diagram.map((node, i) => `${i ? '<span class="sd-flow-arrow" aria-hidden="true">↔</span>' : ""}<span class="sd-flow-node ${focus === i ? "sd-flow-active" : ""}">${esc(node)}</span>`).join("")}</div><p class="sd-caption">A small sketch of the roles. Follow the example steps for the actual reads, writes, and decisions.</p>`;
+  }
+  function terms(l) {
+    return `<details class="sd-terms"><summary>New words, explained simply</summary><dl>${l.terms.map(([word, meaning]) => `<div><dt>${esc(word)}</dt><dd>${esc(meaning)}</dd></div>`).join("")}</dl></details>`;
+  }
+  function solved(l) {
+    return `<ol class="sd-solution-steps">${l.solutionSteps.map((text) => `<li>${esc(text)}</li>`).join("")}</ol>`;
+  }
+  function walk(l, d) {
+    const f = l.frames[d.walkIndex];
+    return `<section class="sd-paper"><span class="eyebrow green">A WORKED EXAMPLE · STEP ${d.walkIndex + 1} OF ${l.frames.length}</span><h2>Follow what changes.</h2><p class="sd-scenario">${esc(l.scenario)}</p><details class="sd-example-sketch"><summary>See the parts in this example</summary>${diagram(l, f.focus)}</details><section class="sd-current-step" aria-labelledby="sd-frame-title"><span class="eyebrow green">DO THIS</span><h3 id="sd-frame-title" tabindex="-1">${esc(f.action)}</h3><dl class="sd-frame-facts" aria-label="What we know at this step">${f.facts.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl><div class="sd-frame-why"><strong>Why this step matters</strong><p>${esc(f.why)}</p></div></section><div class="sd-walk-controls"><button class="button secondary" id="sd-walk-back" ${d.walkIndex === 0 ? "disabled" : ""}>← Previous</button><span>${d.walkIndex + 1} / ${l.frames.length}</span><button class="button primary" id="sd-walk-next" ${d.walkIndex === l.frames.length - 1 ? "disabled" : ""}>Next step →</button></div><details class="sd-walk-history"><summary>Steps so far</summary><ol>${l.frames
+      .slice(0, d.walkIndex + 1)
+      .map((frame) => `<li>${esc(frame.action)}</li>`)
+      .join("")}</ol></details></section>`;
   }
   function question(l, d, review = false) {
     const selected = review ? d.reviewAnswer : d.answer,
@@ -67,11 +81,14 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
     if (!l.lab) return "";
     let controls = "",
       title = "",
-      desc = "";
+      desc = [];
     if (l.lab === "capacity") {
       title = "How much work reaches the app?";
-      desc =
-        "Change one assumption and watch the estimate. This example assumes each app server can sustain 100 requests/second; that is a made-up measurement, not a hardware promise. Work is evenly split and the database is not limiting.";
+      desc = [
+        "Change one assumption and watch the estimate.",
+        "For this exercise, pretend each application server can handle 100 requests per second. This is an assumed number, not a promise about real hardware.",
+        "The model splits work evenly between servers and assumes the database has enough capacity.",
+      ];
       controls =
         range("labUsers", "Daily active users", d.labUsers, 100, 100000, 10) +
         range("labActions", "Requests per user per day", d.labActions, 1, 100) +
@@ -79,8 +96,11 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
         range("labServers", "App servers", d.labServers, 1, 10);
     } else if (l.lab === "cache") {
       title = "Watch the database misses";
-      desc =
-        "This steady-rate model assumes each cache miss causes one source read and each hit avoids it. It excludes writes, cache latency, evictions, and stampedes. ‘Cache unavailable’ sends all reads to the source.";
+      desc = [
+        "Assume each cache miss needs one database read. A hit avoids that read.",
+        "The model holds traffic steady. It leaves out write work, cache delays, and many readers missing the same key at once.",
+        "Choose ‘cache unavailable’ to send every read to the source.",
+      ];
       controls =
         range("labReads", "Reads each second", d.labReads, 100, 5000, 100) +
         range("labHit", "Cache hit rate", d.labHit, 0, 100, 1, "%") +
@@ -88,8 +108,11 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
         '<button class="button secondary" id="sd-cache-fail">Try cache unavailable</button>';
     } else {
       title = "Can the workers catch up?";
-      desc =
-        "A simple steady-rate model: identical jobs arrive continuously, workers never fail, and each has a fixed processing rate. Real queues have bursts, variable job times, retries, and limits.";
+      desc = [
+        "Jobs arrive at a steady pace. Each worker finishes a fixed number each second.",
+        "For this model, jobs take equal work and workers never fail.",
+        "Real queues also need plans for bursts, slow jobs, retries, and storage limits.",
+      ];
       controls =
         range("labArrival", "Jobs arriving / second", d.labArrival, 0, 50) +
         range("labWorkers", "Workers", d.labWorkers, 1, 10) +
@@ -97,7 +120,7 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
         range("labSeconds", "Seconds elapsed", d.labSeconds, 1, 120) +
         range("labBacklog", "Starting queued jobs", d.labBacklog, 0, 500, 10);
     }
-    return `<section class="sd-lab" aria-labelledby="sd-lab-title"><span class="eyebrow green">CHANGE IT. SEE WHAT HAPPENS.</span><h3 id="sd-lab-title">${title}</h3><p>${desc}</p><div class="sd-lab-grid"><div>${controls}</div><div class="sd-lab-results" id="sd-lab-results" aria-live="polite">${labResults(l, d)}</div></div></section>`;
+    return `<section class="sd-lab" aria-labelledby="sd-lab-title"><span class="eyebrow green">CHANGE IT. SEE WHAT HAPPENS.</span><h3 id="sd-lab-title">${title}</h3><div class="sd-lab-explain">${desc.map((text) => `<p>${esc(text)}</p>`).join("")}</div><div class="sd-lab-grid"><div>${controls}</div><div class="sd-lab-results" id="sd-lab-results" aria-live="polite">${labResults(l, d)}</div></div></section>`;
   }
   function labResults(l, d) {
     if (l.lab === "capacity") {
@@ -117,7 +140,7 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
     return `<section class="sd-notebook"><span class="eyebrow green">YOUR DESIGN NOTEBOOK · ${d.notebookIndex + 1} OF 6</span><h3>${title}</h3><label for="sd-notebook-input">${prompt}</label><textarea id="sd-notebook-input" data-sd-field="${field}" rows="7" maxlength="20000" placeholder="Use your own words. State assumptions rather than guessing silently.">${esc(d[field])}</textarea><div class="sd-walk-controls"><button class="button secondary" data-sd-notebook="${d.notebookIndex - 1}" ${d.notebookIndex === 0 ? "disabled" : ""}>Previous prompt</button><span id="sd-notebook-count">${notebookPrompts.filter(([f]) => d[f].trim().length >= 20).length}/6 drafted</span><button class="button secondary" data-sd-notebook="${d.notebookIndex + 1}" ${d.notebookIndex === 5 ? "disabled" : ""}>Next prompt →</button></div><p class="sd-caption">Each prompt needs a short draft before completion. Length only checks that you wrote something; it does not judge design quality.</p><details><summary>Read all six answers together</summary>${notebookPrompts.map(([f, t]) => `<h4>${t}</h4><p class="sd-user-text" data-sd-notebook-answer="${f}">${esc(d[f] || "Not drafted yet.")}</p>`).join("")}</details></section>`;
   }
   function completionHint(l, d, state) {
-    if (!systemCanOpen(state, l.id)) return "Complete the preceding lesson to record this lesson’s completion.";
+    if (!systemCanOpen(state, l.id)) return "Complete the missing foundation before recording this lesson’s completion.";
     if (!d.checked || d.answer !== l.check.answer) return "First, check a correct decision in step 3.";
     if (d.plan.trim().length < 30) return "Write a short explanation of your own (at least 30 characters).";
     if (l.stage === 4 && !notebookPrompts.every(([f]) => d[f].trim().length >= 20))
@@ -138,15 +161,14 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
       content = `<section class="sd-paper"><span class="eyebrow green">RECALL BEFORE REREADING</span><h2>Can you explain it again?</h2><p>Answer without opening the lesson. Then describe what would break in a different example.</p>${question(l, d, true)}<label class="sd-writing-label" for="sd-review-note">Give a fresh example and explain the trade-off.</label><textarea id="sd-review-note" data-sd-field="reviewNote" maxlength="20000" rows="5">${esc(d.reviewNote)}</textarea><button class="button primary" id="sd-review-complete" ${d.reviewChecked && d.reviewAnswer === l.check.answer && d.reviewNote.trim().length >= 20 ? "" : "disabled"}>Save this review</button><p class="sd-caption">The decision has a checked answer. Your written reasoning is self-reviewed.</p></section>`;
     } else {
       if (d.step === 0)
-        content = `<section class="sd-paper"><span class="eyebrow green">THE IDEA IN PLAIN WORDS</span><h2>${esc(l.idea)}</h2>${l.explain.map((p) => `<p>${esc(p)}</p>`).join("")}${diagram(l)}<aside class="sd-pitfall"><strong>Watch for this</strong><p>${esc(l.pitfall)}</p></aside></section>`;
-      else if (d.step === 1)
-        content = `<section class="sd-paper"><span class="eyebrow green">A WORKED EXAMPLE · ONE STEP AT A TIME</span><h2>Follow what changes.</h2>${diagram(l)}<ol class="sd-walk">${l.walk.map((text, i) => (i <= d.walkIndex ? `<li class="${i === d.walkIndex ? "current" : ""}"><span>${i + 1}</span><p>${esc(text)}</p></li>` : `<li class="sd-walk-pending"><span>${i + 1}</span><p>Next step</p></li>`)).join("")}</ol><div class="sd-walk-controls"><button class="button secondary" id="sd-walk-back" ${d.walkIndex === 0 ? "disabled" : ""}>← Previous</button><span>${d.walkIndex + 1} / ${l.walk.length}</span><button class="button primary" id="sd-walk-next" ${d.walkIndex === l.walk.length - 1 ? "disabled" : ""}>Next step →</button></div></section>`;
+        content = `<section class="sd-paper"><span class="eyebrow green">THE IDEA IN PLAIN WORDS</span><h2>${esc(l.idea)}</h2>${l.explain.map((p) => `<p>${esc(p)}</p>`).join("")}${terms(l)}${diagram(l)}<aside class="sd-pitfall"><strong>Watch for this</strong><p>${esc(l.pitfall)}</p></aside></section>`;
+      else if (d.step === 1) content = walk(l, d);
       else if (d.step === 2)
-        content = `<section class="sd-paper"><span class="eyebrow green">MAKE A SMALL DECISION</span><h2>Try before looking.</h2>${question(l, d)}${d.attempts ? `<button class="text-button" id="sd-show-reference">${d.revealed ? "Reference reasoning opened below" : "I need help · show reference reasoning"}</button>` : ""}${d.revealed ? `<div class="sd-reference"><strong>A reasoned answer</strong><p>${esc(l.check.options[l.check.answer])}</p><p>${esc(l.check.why[l.check.answer])}</p><p>${esc(l.solution)}</p></div>` : ""}${lab(l, d)}</section>`;
+        content = `<section class="sd-paper"><span class="eyebrow green">MAKE A SMALL DECISION</span><h2>Try before looking.</h2>${question(l, d)}${d.attempts ? `<button class="text-button" id="sd-show-reference">${d.revealed ? "Reference reasoning opened below" : "I need help · show reference reasoning"}</button>` : ""}${d.revealed ? `<div class="sd-reference"><strong>A reasoned answer</strong><p>${esc(l.check.options[l.check.answer])}</p><p>${esc(l.check.why[l.check.answer])}</p>${solved(l)}</div>` : ""}${lab(l, d)}</section>`;
       else
-        content = `<section class="sd-paper"><span class="eyebrow green">PUT THE IDEA TO WORK</span><h2>Make the reasoning yours.</h2><p>${esc(l.task)}</p>${notebook(l, d)}<label class="sd-writing-label" for="sd-plan">${l.stage === 4 ? "Summarize the choice you would defend in an interview." : "Write your approach and explain why it fits."}</label><textarea id="sd-plan" data-sd-field="plan" maxlength="20000" rows="7" placeholder="My approach is… It helps because… The trade-off is…">${esc(d.plan)}</textarea><details class="sd-reference" id="sd-solved"><summary>Compare with a clean solved example</summary><p>${esc(l.solution)}</p><p>Other designs can be valid. Compare assumptions and guarantees, not just product names.</p></details><fieldset class="sd-self-review"><legend>Self-review your reasoning</legend>${l.rubric.map((point, i) => `<label><input type="checkbox" data-sd-rubric="${i}" ${d.checks[i] ? "checked" : ""}/><span>${esc(point)}</span></label>`).join("")}</fieldset><p class="sd-caption">These checks are your own assessment. No AI or keyword matcher grades your written design.</p><p id="sd-complete-hint" role="status">${completionHint(l, d, state)}</p><button class="button primary" id="sd-complete" ${systemCanComplete(state, id) ? "" : "disabled"}>Save lesson completion ✓</button></section>`;
+        content = `<section class="sd-paper"><span class="eyebrow green">PUT THE IDEA TO WORK</span><h2>Make the reasoning yours.</h2><p>${esc(l.task)}</p>${notebook(l, d)}<label class="sd-writing-label" for="sd-plan">${l.stage === 4 ? "Summarize the choice you would defend in an interview." : "Write your approach and explain why it fits."}</label><textarea id="sd-plan" data-sd-field="plan" maxlength="20000" rows="7" placeholder="My approach is… It helps because… The trade-off is…">${esc(d.plan)}</textarea><details class="sd-reference" id="sd-solved"><summary>Compare with a clean solved example</summary>${solved(l)}<p>Other designs can be valid. Compare assumptions and guarantees, not just product names.</p></details><fieldset class="sd-self-review"><legend>Self-review your reasoning</legend>${l.rubric.map((point, i) => `<label><input type="checkbox" data-sd-rubric="${i}" ${d.checks[i] ? "checked" : ""}/><span>${esc(point)}</span></label>`).join("")}</fieldset><p class="sd-caption">These checks are your own assessment. No AI or keyword matcher grades your written design.</p><p id="sd-complete-hint" role="status">${completionHint(l, d, state)}</p><button class="button primary" id="sd-complete" ${systemCanComplete(state, id) ? "" : "disabled"}>Save lesson completion ✓</button></section>`;
     }
-    return `<div class="system-track sd-lesson"><a class="subtle-link" href="#system">← System design path</a><header class="sd-lesson-header"><span class="eyebrow green">${esc(systemStages[l.stage].title)} · LESSON ${l.position} OF ${systemLessons.length}</span><h1>${esc(l.title)}</h1><p>${esc(l.idea)}</p></header>${!systemCanOpen(state, id) ? `<div class="sd-preview"><strong>You’re previewing a later idea.</strong><p>For the guided path, complete ${esc(systemLessonById[l.requires[0]].title)} first.</p>${link(l.requires[0], "Open the preceding lesson", "secondary")}</div>` : ""}
+    return `<div class="system-track sd-lesson"><a class="subtle-link" href="#system">← System design path</a><header class="sd-lesson-header"><span class="eyebrow green">${esc(systemStages[l.stage].title)} · LESSON ${l.position} OF ${systemLessons.length}</span><h1>${esc(l.title)}</h1><p>${esc(l.idea)}</p></header>${!systemCanOpen(state, id) ? `<div class="sd-preview"><strong>You’re previewing a later idea.</strong><p>For the guided path, complete ${esc(systemLessonById[systemMissingPrerequisites(state, id)[0]].title)} first.</p>${link(systemMissingPrerequisites(state, id)[0], "Open the needed foundation", "secondary")}</div>` : ""}
       ${!review ? `<nav class="sd-steps" aria-label="Lesson steps">${steps.map((title, i) => `<button data-sd-step="${i}" ${i === d.step ? 'aria-current="step"' : ""}><span>${i + 1}</span>${title}</button>`).join("")}</nav>` : ""}${content}
       ${!review && d.step < 3 ? `<div class="sd-step-footer"><button class="button secondary" data-sd-step="${d.step - 1}" ${d.step === 0 ? "disabled" : ""}>← Previous</button><button class="button primary" data-sd-step="${d.step + 1}">${d.step === 0 ? "See a worked example" : d.step === 1 ? "Try a decision" : "Explain your approach"} →</button></div>` : ""}
       ${d.completedAt && !review ? `<section class="sd-finished" aria-label="Next lesson"><span class="eyebrow green">LESSON SAVED · ${d.supported ? "PRACTISED WITH SUPPORT" : "PRACTICE RECORDED"}</span><h2>${next ? `Next: ${esc(next.title)}` : "You’ve completed the guided path."}</h2><p>Keep applying and reviewing these ideas. Completion records practice; real fluency comes from explaining choices in new situations.</p>${next ? link(next.id, "Open next lesson") : '<a class="button primary" href="#system/review">Open review & notebooks →</a>'}</section>` : ""}
@@ -244,6 +266,7 @@ export function createSystemDesign({ getState, save, render, activeDay }) {
         $(selector).onclick = () => {
           update(id, { walkIndex: Math.max(0, Math.min(l.walk.length - 1, fields().walkIndex + delta)) });
           refresh();
+          $("#sd-frame-title")?.focus({ preventScroll: true });
         };
     document.querySelectorAll("[data-sd-field]").forEach(
       (input) =>
