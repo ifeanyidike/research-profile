@@ -1,4 +1,6 @@
-import { AccountSync } from "./account-sync.js?v=20261016-google1";
+import { AccountSync } from "./account-sync.js?v=20261016-system1";
+import { createSystemDesign } from "./system-design-ui.js?v=20261016-system1";
+import { systemLessons } from "./system-design-course.js?v=20261016-system1";
 import { syncConfig } from "./sync-config.js?v=20261016-google1";
 import { lessons, modules, route, courseStages, futureTracks } from "./curriculum.js";
 import { indentEdit, backspaceIndentEdit, newlineEdit } from "./editor.js";
@@ -17,7 +19,7 @@ import {
   recordCheckpoint,
   validRun,
   validBackup,
-} from "./learning-state.js";
+} from "./learning-state.js?v=20261016-system1";
 import { lessonDiagram, growthCases, growthProfiles, projects } from "./teaching.js";
 import { searchTrace, insertionTrace, bfsTrace, measure, reviewDate } from "./algorithms.js";
 const $ = (s) => document.querySelector(s);
@@ -125,7 +127,7 @@ function home() {
   const activity = nextActivity(state),
     next = lessons[activity.id],
     count = route.filter((id) => lessonComplete(state, id)).length;
-  return `<div class="focused-home">${pageIntro("ONE STEP AT A TIME", "Let’s make one idea clear.", "One useful step. Your place is saved as you go.")}<section class="next-lesson-card"><div class="next-lesson-meta"><span class="eyebrow green">${activity.kind === "review" ? "KEEP IT FRESH" : `STEP ${next.position} OF ${lessons.length}`}</span><span>At your pace · Python</span></div><h2>${activity.kind === "review" ? "Keep connecting the ideas." : next.title}</h2><p>${activity.kind === "review" ? "You have completed the lesson path. Return to practice, review, and projects to build further fluency." : next.simpleIdea}</p>${activityLink(activity, activity.kind === "review" ? "Open review" : count ? "Continue to next lesson" : "Start lesson")}<small>Finish a lesson, then open the next. Extra checkpoints are optional practice.</small></section><div class="quiet-progress"><span>${count} of ${lessons.length} lessons completed</span><a href="#path">See the course outline →</a></div>${due().length ? `<a class="subtle-link quiet-review" href="#review">${due().length} ideas are ready for a short review →</a>` : ""}</div>`;
+  return `<div class="focused-home"><div class="sd-track-switch"><span aria-current="page">Algorithms</span><a href="#system">System design <span aria-hidden="true">↗</span></a></div>${pageIntro("ONE STEP AT A TIME", "Let’s make one idea clear.", "One useful step. Your place is saved as you go.")}<section class="next-lesson-card"><div class="next-lesson-meta"><span class="eyebrow green">${activity.kind === "review" ? "KEEP IT FRESH" : `STEP ${next.position} OF ${lessons.length}`}</span><span>At your pace · Python</span></div><h2>${activity.kind === "review" ? "Keep connecting the ideas." : next.title}</h2><p>${activity.kind === "review" ? "You have completed the lesson path. Return to practice, review, and projects to build further fluency." : next.simpleIdea}</p>${activityLink(activity, activity.kind === "review" ? "Open review" : count ? "Continue to next lesson" : "Start lesson")}<small>Finish a lesson, then open the next. Extra checkpoints are optional practice.</small></section><div class="quiet-progress"><span>${count} of ${lessons.length} lessons completed</span><a href="#path">See the course outline →</a></div>${due().length ? `<a class="subtle-link quiet-review" href="#review">${due().length} ideas are ready for a short review →</a>` : ""}</div>`;
 }
 function toolsView() {
   return `${pageIntro("WHEN YOU NEED A LITTLE EXTRA HELP", "Your learning tools.", "You can complete your lessons without choosing a tool. Use these when you have a specific question.")}<div class="tools-list">${[
@@ -875,6 +877,7 @@ function saveCheckpointAndContinue() {
   location.hash = kind === "transfer" ? "#practice/mixed" : kind === "recall" ? "#review" : activityHref(lessonContinuation(state, id));
 }
 
+const systemUI = createSystemDesign({ getState: () => state, save, render, activeDay });
 function currentLesson() {
   const [route, id] = location.hash.slice(1).split("/");
   return ["lesson", "check"].includes(route) ? Number(id) : -1;
@@ -894,9 +897,11 @@ function render() {
     review: "Review queue",
     projects: "Projects",
     method: "How learning works",
+    system: "System design",
   };
   $("#page-name").textContent = names[route] || "Learn";
   document.title = `${names[route] || "Learn"} · Algo Studio`;
+  $(".python-pill").innerHTML = route === "system" ? "<span>●</span> Design by doing" : "<span>●</span> Python first";
   document.querySelectorAll("[data-nav]").forEach((a) => {
     const selected =
       a.dataset.nav ===
@@ -911,30 +916,32 @@ function render() {
   });
   if ($("#due-count")) $("#due-count").textContent = due().length;
   $("#main").innerHTML =
-    route === "tools"
-      ? toolsView()
-      : route === "path"
-        ? pathView(param)
-        : route === "lesson"
-          ? lessonView(Number(param))
-          : route === "check"
-            ? challengeView(Number(param), variant)
-            : route === "practice"
-              ? practiceView(param)
-              : route === "visual"
-                ? visualView()
-                : route === "lab"
-                  ? labView()
-                  : route === "review"
-                    ? reviewView()
-                    : route === "projects"
-                      ? projectsView()
-                      : route === "method"
-                        ? methodView()
-                        : home();
+    route === "system"
+      ? systemUI.view(param, variant)
+      : route === "tools"
+        ? toolsView()
+        : route === "path"
+          ? pathView(param)
+          : route === "lesson"
+            ? lessonView(Number(param))
+            : route === "check"
+              ? challengeView(Number(param), variant)
+              : route === "practice"
+                ? practiceView(param)
+                : route === "visual"
+                  ? visualView()
+                  : route === "lab"
+                    ? labView()
+                    : route === "review"
+                      ? reviewView()
+                      : route === "projects"
+                        ? projectsView()
+                        : route === "method"
+                          ? methodView()
+                          : home();
   if (route === "visual") updateVisual();
   if (route === "lab") updateLab();
-  if (["home", "lesson", "check", "practice"].includes(route || "home")) {
+  if (["home", "lesson", "check", "practice", "system"].includes(route || "home")) {
     $("#main").insertAdjacentHTML(
       "afterbegin",
       '<div class="progress-save-panel" id="progress-save-panel"><p id="progress-save-status" role="status"></p><button class="text-button" id="progress-save-account"></button></div>'
@@ -944,6 +951,7 @@ function render() {
   $("#sidebar").classList.remove("mobile-open");
   $("#menu-button").setAttribute("aria-expanded", "false");
   bindPage();
+  if (route === "system") systemUI.bind(param, variant);
 }
 function bindPage() {
   const id = currentLesson();
@@ -1342,7 +1350,15 @@ function searchLessons(term) {
     lessons
       .filter((l) => (l.title + " " + modules[l.module][2]).toLowerCase().includes(term.toLowerCase()))
       .map((l) => `<a href="#lesson/${l.id}"><span><strong>${l.title}</strong><small>${modules[l.module][2]}</small></span><span>↗</span></a>`)
-      .join("") || "<p>No lessons found. Try “search” or “trees”.</p>";
+      .join("") +
+    systemLessons
+      .filter((l) => ([l.id, l.title, l.idea, ...l.explain, ...l.sources].join(" ") + " system design").toLowerCase().includes(term.toLowerCase()))
+      .map(
+        (l) =>
+          `<a href="#system/${l.id}"><span><strong>${esc(l.title)}</strong><small>System design · Lesson ${l.position}</small></span><span>↗</span></a>`
+      )
+      .join("");
+  if (!$("#search-results").innerHTML) $("#search-results").innerHTML = "<p>No lessons found. Try “search”, “cache”, or “booking”.</p>";
   $("#search-results")
     .querySelectorAll("a")
     .forEach((a) => (a.onclick = () => $("#search-dialog").close()));

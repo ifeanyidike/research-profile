@@ -5,6 +5,51 @@ https://ifeanyidike.com/algo-studio/ using this repository’s existing Jekyll w
 There is no application server, paid hosting service, or ChatGPT hosting dependency.
 Python runs locally in the browser using the bundled runtime.
 
+## System design track
+
+Open `/algo-studio/#system`. The track has 24 foundation lessons followed by six
+design studios: short links, notifications, private uploads, group chat, activity
+feeds, and booking. Source Sans 3, the existing navigation shell, Google/email
+sign-in, and hosting are shared with the algorithm course. No new service,
+runtime dependency, paid API, or model-based grading is required.
+
+`system-design-course.js` holds original plain-language explanations, worked
+steps, scenario decisions with per-option feedback, reference reasoning, briefs,
+and links to consulted primary references and public curricula.
+`system-design-model.js` contains prerequisites, completion/review rules,
+validated progress fields, and deterministic capacity/cache/queue models.
+`system-design-ui.js` presents four lesson steps, responsive diagrams, labs,
+six-prompt case notebooks, personal notes, and review. Later lessons may be
+previewed, but the guided completion sequence requires preceding completion.
+
+Completion requires a checked scenario answer, a short written explanation, and
+explicit self-review. Case studies also require all six notebook drafts. Text
+length checks ensure a draft exists; they do not grade correctness. Opening a
+solved example or using multiple attempts records supported practice. Reviews
+ask for another decision and a fresh example, then schedule another review.
+Neither completion nor repeated questions establish independent mastery.
+
+The labs are deliberately simplified steady-rate models, with assumptions shown
+beside the controls. They do not benchmark real servers, simulate a distributed
+runtime, or prescribe actual infrastructure sizes or prices.
+
+The optional `systemDesign` progress map preserves legacy algorithm backups.
+Every edited field, unfinished notebook, lab setting, and lesson position uses
+the existing per-field account replica and private progress table. No database
+migration or access-policy change is needed. Backup export/import includes both
+tracks. Older still-open app versions cannot read the new replica paths; export
+any pending work and refresh those tabs before continuing across devices.
+
+Run the isolated offline checks from `_studio/`:
+
+```sh
+node --test tests/system-design.test.js tests/sync.test.js tests/account-sync.test.js
+```
+
+These tests import static course data and pure models, and mock all account I/O.
+They cover prerequisite order, completion, review, legacy backups, validation,
+cross-device unfinished work, account import, and lab boundary calculations.
+
 ## Develop and verify
 
 From `_studio/`, run `npm run dev`, then open

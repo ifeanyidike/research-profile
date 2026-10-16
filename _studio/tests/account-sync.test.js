@@ -50,6 +50,29 @@ function fixture() {
     },
   };
 }
+test("unfinished system design work is imported explicitly and loads on a second device alongside algorithm progress", async () => {
+  const f = fixture(),
+    guest = initialState();
+  guest.systemDesign.requirements = { step: 3, plan: "My unfinished design with an explicit correctness rule.", notes: "Check the last-seat case" };
+  f.storage.setItem("algo-studio-v1", JSON.stringify(guest));
+  const first = f.make();
+  await first.switchUser({ id: "existing-account" });
+  assert.equal(first.hasGuest(), true);
+  assert.deepEqual(f.state.systemDesign, {});
+  first.importGuest();
+  await new Promise((resolve) => setImmediate(resolve));
+  f.state.done[36] = { at: 1, assisted: false };
+  first.changed();
+  await first.sync();
+  clearTimeout(first.timer);
+  const secondStorage = new Map();
+  const second = f.make({ getItem: (key) => secondStorage.get(key) || null, setItem: (key, value) => secondStorage.set(key, value) });
+  await second.switchUser({ id: "existing-account" });
+  assert.equal(f.state.systemDesign.requirements.plan, guest.systemDesign.requirements.plan);
+  assert.equal(f.state.systemDesign.requirements.step, 3);
+  assert.ok(f.state.done[36]);
+  assert.equal(first.user.id, second.user.id);
+});
 test("account change isolates state and signout restores the guest workspace", async () => {
   const f = fixture();
   const guest = initialState();

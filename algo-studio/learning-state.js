@@ -1,9 +1,11 @@
 import { lessons, route } from "./curriculum.js";
-export const initialState = () => ({ version: 1, done: {}, drafts: {}, reviews: {}, activity: [], ready: {}, practice: {} });
+import { validSystemProgress } from "./system-design-model.js?v=20261016-system1";
+export const initialState = () => ({ version: 1, done: {}, drafts: {}, reviews: {}, activity: [], ready: {}, practice: {}, systemDesign: {} });
 export function upgradeState(saved) {
   const state = { ...initialState(), ...saved };
   state.ready ??= {};
   state.practice ??= {};
+  state.systemDesign ??= {};
   return state;
 }
 export const ready = (state, id) => !!state.ready?.[id];
@@ -59,6 +61,7 @@ export function validBackup(s) {
     record(s.done) &&
     record(s.drafts) &&
     record(s.reviews) &&
+    (s.systemDesign === undefined || validSystemProgress(s.systemDesign)) &&
     Array.isArray(s.activity) &&
     s.activity.every((x) => typeof x === "string" && /^\d{4}-\d{2}-\d{2}$/.test(x)) &&
     Object.entries(s.drafts).every(
