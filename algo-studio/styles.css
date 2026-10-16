@@ -6661,6 +6661,28 @@ h3 {
   display: grid;
   gap: 12px;
 }
+.account-panel .google-button {
+  width: 100%;
+  min-height: 48px;
+  background: white;
+  border: 1px solid #747775;
+  color: #1f1f1f;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+}
+.google-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex: 0 0 20px;
+}
+.email-signin {
+  margin: 20px 0;
+}
+.email-signin summary {
+  cursor: pointer;
+  padding: 8px 0;
+}
 .account-panel input {
   width: 100%;
   min-height: 46px;

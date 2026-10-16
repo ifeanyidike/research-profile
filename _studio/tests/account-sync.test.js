@@ -244,3 +244,83 @@ test("a failed local write does not claim that the work was kept on the device",
   assert.match(a.message, /Keep this tab open and export a backup/);
   assert.doesNotMatch(a.message, /work is kept/);
 });
+
+test("connecting Google links the existing account after uploading unfinished progress", async () => {
+  const f = fixture(),
+    a = f.make(),
+    calls = [];
+  await a.switchUser({ id: "existing-account", email: "learner@zoho.example" });
+  f.state.done[36] = { at: 1, assisted: false };
+  f.state.drafts[0] = { code: "unfinished", step: 2, notes: "My note", predict: 0 };
+  a.changed();
+  a.client.auth.getUser = async () => ({ data: { user: { id: "existing-account" } } });
+  a.client.auth.linkIdentity = async (input) => {
+    assert.equal(f.rows.get("existing-account").get(a.device).records["drafts/0/code"].value, "unfinished");
+    calls.push(input);
+    return {};
+  };
+  a.client.auth.signInWithOAuth = async () => {
+    throw Error("Must not switch accounts when linking");
+  };
+  await a.continueWithGoogle("https://example.com/algo-studio/");
+  assert.deepEqual(calls, [
+    { provider: "google", options: { redirectTo: "https://example.com/algo-studio/", queryParams: { prompt: "select_account" } } },
+  ]);
+  assert.equal(a.user.id, "existing-account");
+  assert.equal(f.state.drafts[0].notes, "My note");
+  assert.ok(f.state.done[36]);
+  clearTimeout(a.timer);
+});
+
+test("Google linking refuses unsynced progress and a changed identity", async () => {
+  const f = fixture(),
+    a = f.make();
+  await a.switchUser({ id: "alice" });
+  let called = false;
+  a.client.auth.linkIdentity = async () => {
+    called = true;
+    return {};
+  };
+  f.state.done[36] = { at: 1, assisted: false };
+  a.changed();
+  f.offline(true);
+  await assert.rejects(a.continueWithGoogle("https://example.com/"), /finish syncing/);
+  assert.equal(called, false);
+  f.offline(false);
+  a.client.auth.getUser = async () => ({ data: { user: { id: "bob" } } });
+  await assert.rejects(a.continueWithGoogle("https://example.com/"), /Sign in to your learning account/);
+  assert.equal(called, false);
+  assert.ok(f.state.done[36]);
+  clearTimeout(a.timer);
+});
+
+test("Google sign-in leaves browser-only progress intact and reports provider errors", async () => {
+  const f = fixture(),
+    a = f.make();
+  const guest = initialState();
+  guest.done[36] = { at: 1, assisted: false };
+  f.storage.setItem("algo-studio-v1", JSON.stringify(guest));
+  await a.switchUser(null);
+  a.client.auth.signInWithOAuth = async () => ({ error: Error("Provider unavailable") });
+  await assert.rejects(a.continueWithGoogle("https://example.com/"), /Provider unavailable/);
+  assert.deepEqual(JSON.parse(f.storage.getItem("algo-studio-v1")), guest);
+  let input;
+  a.client.auth.signInWithOAuth = async (options) => {
+    input = options;
+    return {};
+  };
+  await a.continueWithGoogle("https://example.com/algo-studio/");
+  assert.equal(input.provider, "google");
+  assert.equal(input.options.redirectTo, "https://example.com/algo-studio/");
+  assert.equal(a.user, null);
+});
+
+test("identity refresh keeps progress and updates connected sign-in methods", async () => {
+  const f = fixture(),
+    a = f.make();
+  await a.switchUser({ id: "alice", identities: [{ provider: "email" }] });
+  f.state.done[36] = { at: 1, assisted: false };
+  await a.switchUser({ id: "alice", identities: [{ provider: "email" }, { provider: "google" }] });
+  assert.ok(f.state.done[36]);
+  assert.ok(a.user.identities.some((i) => i.provider === "google"));
+});

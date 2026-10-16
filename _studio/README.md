@@ -39,6 +39,29 @@ only project team addresses, with two emails per hour. Free projects may pause
 after inactivity. Wider sign-up access needs a separate email provider or social
 login setup; do not disable email confirmation.
 
+Google sign-in uses the same Supabase project and progress table. Its OAuth client
+belongs to the dedicated Google project `algo-studio-511809`.
+It is configured only for basic Google identity (openid, email, profile), with
+`https://ifeanyidike.com` as the JavaScript origin and
+`https://jqgnmnvwjlpsdxckxkfx.supabase.co/auth/v1/callback` as the Google callback.
+The client secret belongs only in Supabase’s provider settings, never in this
+repository or the browser app. Set `googleEnabled` in `sync-config.js` only after
+the Google provider and manual identity linking are configured and tested.
+Google's basic-identity-only exception permits sign-in without adding test users
+or requesting sensitive-scope verification:
+https://developers.google.com/identity/protocols/oauth2/production-readiness/overview.
+
+For an existing learner whose Google email differs from the learning account,
+sign in to the original account by email first and choose **Connect Google to
+this account**. The app saves and syncs pending work, checks the current identity,
+then uses Supabase `linkIdentity`, retaining the same user ID and progress. Do not
+create a replacement learning account or move progress rows to a different user.
+After linking, **Continue with Google** opens that same account on other devices.
+For matching verified emails, Supabase automatically links the identities.
+The bundled Google icon is Google's supplied sign-in asset from
+https://developers.google.com/static/identity/images/g-logo.png; button guidance:
+https://developers.google.com/identity/branding-guidelines.
+
 Saved progress remains private to the signed-in user. Lessons and source code are
 public. Browser-local progress and login sessions do not automatically move between
 domains. On the previous studio, sign in and add browser progress to the account;

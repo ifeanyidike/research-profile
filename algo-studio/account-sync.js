@@ -33,7 +33,11 @@ export class AccountSync {
     document.addEventListener("visibilitychange", () => this.sync());
   }
   async switchUser(user) {
-    if (this.initialized && this.user?.id === user?.id) return;
+    if (this.initialized && this.user?.id === user?.id) {
+      this.user = user;
+      this.onStatus(this);
+      return;
+    }
     this.initialized = true;
     this.loaded = false;
     this.generation++;
@@ -170,6 +174,28 @@ export class AccountSync {
     } finally {
       this.busy = false;
       if (!current()) this.sync();
+    }
+  }
+  async continueWithGoogle(redirectTo) {
+    const userId = this.user?.id;
+    const options = { redirectTo, queryParams: { prompt: "select_account" } };
+    if (userId) {
+      if (this.busy) throw Error("Your progress is syncing. Try again in a moment.");
+      await this.sync();
+      if (this.user?.id !== userId) throw Error("Your account changed. Open Account & sync and try again.");
+      if (!this.loaded || this.dirty || this.busy)
+        throw Error("Your progress must finish syncing before connecting Google. Reconnect and try again, or export a backup.");
+      const { data, error } = await this.client.auth.getUser();
+      if (error) throw error;
+      if (data.user?.id !== userId || this.user?.id !== userId) throw Error("Sign in to your learning account again before connecting Google.");
+      if (this.dirty || this.busy) throw Error("Your latest change is still syncing. Try connecting Google again in a moment.");
+      // Link to the existing user ID, including when the Google email differs.
+      // Signing in with OAuth here would instead risk selecting another account.
+      const result = await this.client.auth.linkIdentity({ provider: "google", options });
+      if (result.error) throw result.error;
+    } else {
+      const { error } = await this.client.auth.signInWithOAuth({ provider: "google", options });
+      if (error) throw error;
     }
   }
   async signOut() {

@@ -11,9 +11,9 @@
     <title>Algo Studio — Make the complex click.</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preload" href="fonts/SourceSans3-Variable.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="styles.css?v=20261016-saving1" />
+    <link rel="stylesheet" href="styles.css?v=20261016-google1" />
     <script defer src="runtime/supabase-2.118.0.js"></script>
-    <script type="module" src="app.js?v=20261016-saving1"></script>
+    <script type="module" src="app.js?v=20261016-google1"></script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -67,16 +67,29 @@
         <h2 id="account-heading">Save your progress</h2>
         <p id="account-status" role="status">Sign in to continue on another device.</p>
         <p id="account-email" class="fine-print" hidden></p>
-        <form id="signin-form" hidden>
-          <label for="signin-email">Email</label
-          ><input id="signin-email" type="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="signin-hint" /><button
-            class="button primary"
-            type="submit"
-          >
-            Send sign-in link
-          </button>
-          <p id="signin-hint" class="fine-print">Use your Supabase account email.</p>
-        </form>
+        <button class="button google-button" id="google-signin" hidden>
+          <img src="google-g.png" alt="" width="20" height="20" />Continue with Google
+        </button>
+        <p id="google-account-note" class="fine-print" hidden>
+          Already have progress? Use the same email. If your Google email is different, sign in with email first, then choose Connect Google.
+        </p>
+        <button class="button secondary" id="connect-google" hidden>Connect Google to this account</button>
+        <p id="google-connected" class="fine-print" hidden>Google is connected. Your progress stays in this account.</p>
+        <details class="email-signin" id="email-signin">
+          <summary>Use an email link instead</summary>
+          <form id="signin-form" hidden>
+            <label for="signin-email">Email</label
+            ><input
+              id="signin-email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="you@example.com"
+              aria-describedby="signin-hint"
+            /><button class="button primary" type="submit">Send sign-in link</button>
+            <p id="signin-hint" class="fine-print">Use the email associated with your learning progress.</p>
+          </form>
+        </details>
         <div id="signin-sent" hidden><button class="text-button" id="change-signin-email">Use another email</button></div>
         <div id="guest-progress" hidden>
           <p>Bring your earlier progress into this account.</p>

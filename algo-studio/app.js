@@ -1,5 +1,5 @@
-import { AccountSync } from "./account-sync.js?v=20261016-saving1";
-import { syncConfig } from "./sync-config.js";
+import { AccountSync } from "./account-sync.js?v=20261016-google1";
+import { syncConfig } from "./sync-config.js?v=20261016-google1";
 import { lessons, modules, route, courseStages, futureTracks } from "./curriculum.js";
 import { indentEdit, backspaceIndentEdit, newlineEdit } from "./editor.js";
 import { highlightPython } from "./python-highlight.js";
@@ -1428,6 +1428,13 @@ function updateAccountUI() {
   $("#account-email").hidden = !user && !signInEmailSent;
   $("#account-email").textContent = user ? user.email : signInEmailSent;
   $("#signin-form").hidden = !!user || !accountSync || !!signInEmailSent;
+  $("#google-signin").hidden = !!user || !accountSync || !syncConfig.googleEnabled;
+  $("#google-account-note").hidden = !!user || !syncConfig.googleEnabled;
+  $("#email-signin").hidden = !!user || !!signInEmailSent;
+  $("#email-signin summary").textContent = syncConfig.googleEnabled ? "Use an email link instead" : "Sign in with email";
+  if (!syncConfig.googleEnabled) $("#email-signin").open = true;
+  $("#connect-google").hidden = !user || !syncConfig.googleEnabled || !!user.identities?.some((identity) => identity.provider === "google");
+  $("#google-connected").hidden = !user?.identities?.some((identity) => identity.provider === "google");
   $("#signin-sent").hidden = !!user || !signInEmailSent;
   $("#signedin-actions").hidden = !user;
   $("#guest-progress").hidden = !user || !accountSync.hasGuest();
@@ -1457,6 +1464,22 @@ async function setupAccount() {
       canApply: () => !runningJob && !["TEXTAREA", "INPUT"].includes(document.activeElement?.tagName),
       onStatus: updateAccountUI,
     });
+    for (const button of [$("#google-signin"), $("#connect-google")]) {
+      button.onclick = async () => {
+        button.disabled = true;
+        try {
+          if (runningJob) throw Error("Wait for the Python run to finish first.");
+          save();
+          if (!storageAvailable) throw Error("Export a backup before leaving this page. Your latest work could not be saved.");
+          $("#account-feedback").textContent = accountSync.user ? "Saving your progress before connecting Google…" : "Opening Google…";
+          await accountSync.continueWithGoogle(new URL("./", import.meta.url).href);
+        } catch (error) {
+          $("#account-feedback").textContent = error.message;
+        } finally {
+          button.disabled = false;
+        }
+      };
+    }
     $("#signin-form").onsubmit = async (event) => {
       event.preventDefault();
       const button = event.submitter;
@@ -1487,6 +1510,7 @@ async function setupAccount() {
       $("#signin-form button").disabled = false;
       $("#account-feedback").textContent = "";
       updateAccountUI();
+      $("#email-signin").open = true;
       $("#signin-email").focus();
     };
     $("#sync-now").onclick = () => accountSync.sync();
