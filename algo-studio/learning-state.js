@@ -1,4 +1,4 @@
-import { lessons, route } from "./curriculum.js?v=20261016-clarity1";
+import { lessons, route } from "./curriculum.js?v=20261019-tests1";
 import { validSystemProgress } from "./system-design-model.js?v=20261016-system-audit1";
 export const initialState = () => ({ version: 1, done: {}, drafts: {}, reviews: {}, activity: [], ready: {}, practice: {}, systemDesign: {} });
 export function upgradeState(saved) {
@@ -54,6 +54,7 @@ export function validBackup(s) {
     typeof d.code === "string" &&
     d.code.length < 100000 &&
     (d.openedEarly === undefined || typeof d.openedEarly === "boolean") &&
+    (d.testSuiteVersion === undefined || (typeof d.testSuiteVersion === "string" && d.testSuiteVersion.length < 80)) &&
     (d.notes === undefined || typeof d.notes === "string") &&
     (d.hint === undefined || (Number.isInteger(d.hint) && d.hint >= 0 && d.hint <= 2)) &&
     (d.assisted === undefined || typeof d.assisted === "boolean") &&

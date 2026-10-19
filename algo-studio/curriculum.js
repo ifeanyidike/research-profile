@@ -1,5 +1,6 @@
 import { additions, stages, requirements, futureTracks } from "./course-extension.js";
 import { applyPlainLanguage } from "./lesson-language.js?v=20261016-clarity1";
+import { extraTestCases } from "./extra-test-cases.js?v=20261019-tests1";
 export { futureTracks };
 export const modules = [
   ["Think like a problem solver", "Start with a plan. Make it correct. Understand its cost.", "Foundations", "◎"],
@@ -1249,6 +1250,7 @@ modules.splice(0, modules.length, ...stages.map((stage) => stage.slice(0, 4)));
 for (const [module, stage] of stages.entries())
   for (const id of stage[4]) {
     const item = lessons[id];
+    item.tests.push(...extraTestCases.lesson[id]);
     item.module = module;
     item.position = route.indexOf(id) + 1;
     item.requires = requirements[id];

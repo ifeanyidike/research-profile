@@ -1,6 +1,17 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { canVisitLessonStep } from "../../algo-studio/lesson-navigation.js";
+import { canVisitLessonStep, invalidateOldTestRun, testSuiteVersion } from "../../algo-studio/lesson-navigation.js";
+
+test("new test suites clear cached run credit while keeping code, notes, and learning position", () => {
+  const old = { code: "my solution", notes: "my notes", step: 3, hint: 1, passedCode: "my solution", results: [{ passed: true }] };
+  const updated = invalidateOldTestRun(old);
+  assert.equal(updated, old);
+  assert.deepEqual(updated, { code: "my solution", notes: "my notes", step: 3, hint: 1, passedCode: null, results: null });
+  const current = { code: "my solution", passedCode: "my solution", results: [{ passed: true }], testSuiteVersion };
+  const snapshot = structuredClone(current);
+  assert.deepEqual(invalidateOldTestRun(current), snapshot);
+  assert.deepEqual(invalidateOldTestRun({ code: "unfinished" }), { code: "unfinished" });
+});
 
 const lesson = { walk: ["first", "second", "last"], predict: { answer: 1 } };
 test("lesson navigation opens each part after its prerequisite and never changes the draft", () => {

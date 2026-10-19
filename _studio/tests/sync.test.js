@@ -60,14 +60,16 @@ test("replacement imports synchronize deletions and do not revive old entries", 
 test("test run results are never uploaded or credited from another device", () => {
   const a = new ProgressReplica("a"),
     s = initialState();
-  s.drafts[0] = { ...draft("answer"), passedCode: "answer", results: [{ passed: true }] };
+  s.drafts[0] = { ...draft("answer"), passedCode: "answer", results: [{ passed: true }], testSuiteVersion: "local-suite" };
   a.observe(s, 10);
   assert.equal(
-    Object.keys(a.document.records).some((k) => k.endsWith("/results") || k.endsWith("/passedCode")),
+    Object.keys(a.document.records).some((k) => k.endsWith("/results") || k.endsWith("/passedCode") || k.endsWith("/testSuiteVersion")),
     false
   );
   assert.equal(a.state().drafts[0].passedCode, null);
+  assert.equal(a.state().drafts[0].testSuiteVersion, undefined);
   assert.equal(a.state(s).drafts[0].passedCode, "answer");
+  assert.equal(a.state(s).drafts[0].testSuiteVersion, "local-suite");
 });
 test("bad cloud data and unsafe paths are rejected", () => {
   assert.equal(validDocument({ version: 1, records: { "drafts/0/__proto__": { at: 1, device: "a", value: {} } } }), false);

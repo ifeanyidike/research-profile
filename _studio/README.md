@@ -99,6 +99,30 @@ as static assets. The main site’s PurgeCSS configuration targets its own
 The `_studio/` development folder is excluded from publication by Jekyll’s
 underscore-directory convention. Never add frontmatter to the standalone app HTML.
 
+## Learner-facing test coverage — 19 October 2026
+
+All 132 algorithm exercises now include 12 additional deterministic cases each:
+2,064 supplied cases in total. Original teaching examples remain first. The
+extra cases cover varied small inputs plus authored boundaries such as singleton
+and full-length windows, last-position matches, duplicates, empty inputs,
+disconnected graphs, ancestor bounds, and tie rules where their contracts allow.
+
+`extra-test-cases.js` contains fixed input/answer data, generated offline by
+`tests/generate-extra-cases.py` using the independent specifications in
+`tests/oracles.py`. Expected answers are not obtained from the worked solutions.
+`tests/learner-cases.test.js` checks reproducibility and exercises the actual
+Python runner against constant answers for all 132 exercises and 15 plausible
+incorrect implementations. The pairs-only window implementation passes the
+original four cases and fails the expanded set, preserving the original bug as
+a regression check.
+
+These are formative output checks. They do not prove correctness for every
+input, enforce every algorithm restriction, or establish time/space complexity.
+Those still need code review and an explanation from the learner. Previously
+recorded completion remains; cached run results are cleared on a test-suite
+revision so learners must rerun their saved code against the new cases. Bump
+`testSuiteVersion` in `lesson-navigation.js` when changing the suite. No account or database changes are required.
+
 ## Sign-in and progress
 
 Supabase project: `jqgnmnvwjlpsdxckxkfx`. Only its publishable browser key appears

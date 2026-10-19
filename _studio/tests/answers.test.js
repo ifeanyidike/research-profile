@@ -16,7 +16,10 @@ test("Independent specifications verify every expected answer and 100 new inputs
   assert.equal(result.status, 0, result.stderr);
   const report = JSON.parse(result.stdout);
   assert.equal(report.tasks, 132);
-  assert.equal(report.supplied, 480);
+  assert.equal(
+    report.supplied,
+    tasks.reduce((n, t) => n + t.tests.length, 0)
+  );
   assert.equal(report.generated, 13200);
   assert.equal(new Set(report.covered).size, 132);
 });

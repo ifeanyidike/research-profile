@@ -1,4 +1,12 @@
 // Navigation never awards progress or bypasses the checks needed to finish.
+export const testSuiteVersion = "20261019-tests1";
+export function invalidateOldTestRun(draft) {
+  if ((draft.results || draft.passedCode) && draft.testSuiteVersion !== testSuiteVersion) {
+    draft.results = null;
+    draft.passedCode = null;
+  }
+  return draft;
+}
 export function canVisitLessonStep(lesson, draft, step) {
   if (!Number.isInteger(step) || step < 0 || step > 3) return false;
   if (step === 0) return true;

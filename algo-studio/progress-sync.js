@@ -1,7 +1,7 @@
-import { initialState, validBackup, upgradeState } from "./learning-state.js?v=20261016-clarity1";
+import { initialState, validBackup, upgradeState } from "./learning-state.js?v=20261019-tests1";
 import { systemLessonById } from "./system-design-course.js?v=20261016-system-audit1";
 const groups = ["done", "drafts", "reviews", "ready", "practice", "systemDesign"];
-const transient = new Set(["results", "passedCode"]);
+const transient = new Set(["results", "passedCode", "testSuiteVersion"]);
 const equal = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 const clone = (x) => JSON.parse(JSON.stringify(x));
 export function flattenProgress(state) {
@@ -19,7 +19,7 @@ export function flattenProgress(state) {
 }
 function validKey(key) {
   const [group, id, field, ...rest] = key.split("/");
-  if (rest.length || ["__proto__", "constructor", "prototype", "results", "passedCode"].includes(field)) return false;
+  if (rest.length || ["__proto__", "constructor", "prototype", "results", "passedCode", "testSuiteVersion"].includes(field)) return false;
   if (group === "activity") return !field && /^\d{4}-\d{2}-\d{2}$/.test(id);
   if (group === "systemDesign") return Object.hasOwn(systemLessonById, id) && !!field && /^[a-zA-Z][a-zA-Z0-9]*$/.test(field);
   if (!groups.includes(group) || !/^\d+(?::(?:check|recall|transfer))?$/.test(id)) return false;
@@ -91,6 +91,7 @@ export class ProgressReplica {
       for (const [id, d] of Object.entries(state[group])) {
         const previous = current[group]?.[id];
         d.passedCode = previous?.code === d.code ? previous.passedCode : null;
+        if (previous?.code === d.code) d.testSuiteVersion = previous.testSuiteVersion;
         if (previous?.code === d.code && previous.results) d.results = previous.results;
       }
     return upgradeState(state);

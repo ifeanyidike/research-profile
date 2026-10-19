@@ -1,12 +1,12 @@
-import { AccountSync } from "./account-sync.js?v=20261016-clarity1";
+import { AccountSync } from "./account-sync.js?v=20261019-tests1";
 import { createSystemDesign } from "./system-design-ui.js?v=20261016-system-ui1";
 import { systemLessons } from "./system-design-course.js?v=20261016-system-audit1";
 import { syncConfig } from "./sync-config.js?v=20261016-google1";
-import { lessons, modules, route, courseStages, futureTracks } from "./curriculum.js?v=20261016-clarity1";
+import { lessons, modules, route, courseStages, futureTracks } from "./curriculum.js?v=20261019-tests1";
 import { indentEdit, toolbarIndentEdit, backspaceIndentEdit, newlineEdit } from "./editor.js?v=20261016-algorithms-ui1";
-import { canVisitLessonStep } from "./lesson-navigation.js?v=20261016-algorithms-ui1";
+import { canVisitLessonStep, invalidateOldTestRun, testSuiteVersion } from "./lesson-navigation.js?v=20261019-tests1";
 import { highlightPython } from "./python-highlight.js";
-import { checkpoints, transferTasks } from "./practice-bank.js?v=20261016-clarity1";
+import { checkpoints, transferTasks } from "./practice-bank.js?v=20261019-tests1";
 import {
   initialState,
   upgradeState,
@@ -20,7 +20,7 @@ import {
   recordCheckpoint,
   validRun,
   validBackup,
-} from "./learning-state.js?v=20261019-early-access1";
+} from "./learning-state.js?v=20261019-tests1";
 import { lessonDiagram, growthCases, growthProfiles, projects } from "./teaching.js?v=20261016-clarity1";
 import { searchTrace, insertionTrace, bfsTrace, measure, reviewDate } from "./algorithms.js";
 const $ = (s) => document.querySelector(s);
@@ -93,7 +93,7 @@ function unlocked(id) {
   return canOpen(state, id);
 }
 function draft(id) {
-  return (state.drafts[id] ??= { code: lessons[id].starter, step: 0, hint: 0, notes: "" });
+  return invalidateOldTestRun((state.drafts[id] ??= { code: lessons[id].starter, step: 0, hint: 0, notes: "" }));
 }
 function due() {
   return completed().filter(
@@ -228,7 +228,9 @@ function lessonView(id) {
 }
 function practiceDraft(id, kind = "check") {
   const key = `${id}:${kind}`;
-  return (state.practice[key] ??= { code: (kind === "transfer" ? transferTasks[id] : checkpoints[id]).starter, hint: 0, notes: "", assisted: false });
+  return invalidateOldTestRun(
+    (state.practice[key] ??= { code: (kind === "transfer" ? transferTasks[id] : checkpoints[id]).starter, hint: 0, notes: "", assisted: false })
+  );
 }
 let worked = { token: null, caseIndex: 0, index: 0, result: null, loading: false, error: "" };
 function workedState() {
@@ -426,7 +428,7 @@ function practicePanel(l, d, checkpoint = false) {
 
 function resultsMarkup(l, results) {
   const pass = results.filter((r) => r.passed).length;
-  return `<div class="results-heading"><strong class="${pass === results.length ? "green" : ""}">${pass === results.length ? "✓ All tests passed" : `${pass}/${results.length} tests passed`}</strong></div>${results.map((r, i) => `<details class="test-result ${r.passed ? "passed" : "failed"}" ${!r.passed ? "open" : ""}><summary><span>${r.passed ? "✓" : "×"} Example ${i + 1}</span><small>${r.passed ? "Passed" : "Take a look"}</small></summary><div><code>solve(${l.tests[i].args.map(py).map(esc).join(", ")})</code><p>Expected: <code>${esc(py(l.tests[i].expected))}</code></p><p>${r.error ? "Error" : "Returned"}: <code>${esc(r.error || r.actual)}</code></p>${r.output ? `<pre>${esc(r.output)}</pre>` : ""}</div></details>`).join("")}<details class="more-detail efficiency-details"><summary>See efficiency details</summary><p>${results.reduce((n, r) => n + r.steps, 0)} Python line steps across these tests.</p><p>${results.map((r, i) => `Example ${i + 1}: ${r.steps} executed lines, ${r.ms.toFixed(2)} ms.`).join("<br>")}</p><p>These are executed source lines, not CPU operations. Library internals are excluded, and tracing affects the timings. Use them to explore your code; use the lesson’s reasoning to understand its growth.</p></details>`;
+  return `<div class="results-heading"><strong class="${pass === results.length ? "green" : ""}">${pass === results.length ? "✓ All tests passed" : `${pass}/${results.length} tests passed`}</strong></div><p class="fine-print">${results.length} case${results.length === 1 ? "" : "s"} checked. Passing these cases does not prove correctness for every input or verify the required algorithm.</p>${results.map((r, i) => `<details class="test-result ${r.passed ? "passed" : "failed"}" ${!r.passed ? "open" : ""}><summary><span>${r.passed ? "✓" : "×"} Example ${i + 1}</span><small>${r.passed ? "Passed" : "Take a look"}</small></summary><div><code>solve(${l.tests[i].args.map(py).map(esc).join(", ")})</code><p>Expected: <code>${esc(py(l.tests[i].expected))}</code></p><p>${r.error ? "Error" : "Returned"}: <code>${esc(r.error || r.actual)}</code></p>${r.output ? `<pre>${esc(r.output)}</pre>` : ""}</div></details>`).join("")}<details class="more-detail efficiency-details"><summary>See efficiency details</summary><p>${results.reduce((n, r) => n + r.steps, 0)} Python line steps across these tests.</p><p>${results.map((r, i) => `Example ${i + 1}: ${r.steps} executed lines, ${r.ms.toFixed(2)} ms.`).join("<br>")}</p><p>These are executed source lines, not CPU operations. Library internals are excluded, and tracing affects the timings. Use them to explore your code; use the lesson’s reasoning to understand its growth.</p></details>`;
 }
 
 let practiceMode = "topics";
@@ -821,6 +823,7 @@ async function runCode() {
     const results = await executePython(code, l.tests, pythonContract(l));
     if (d.code !== code || epoch !== accountEpoch) return;
     d.results = results;
+    d.testSuiteVersion = testSuiteVersion;
     d.passedCode = results.every((r) => r.passed) ? code : null;
     activeDay();
     save();

@@ -60,7 +60,8 @@ print(count)
     }
   );
   assert.equal(run.status, 0, run.stderr);
-  assert.equal(Number(run.stdout.trim()), 480);
+  const supplied = [...lessons, ...Object.values(checkpoints), ...Object.values(transferTasks)].reduce((n, t) => n + t.tests.length, 0);
+  assert.equal(Number(run.stdout.trim()), supplied);
 });
 
 test("Search traces terminate with correct answers, including empty and missing input", () => {
