@@ -20,7 +20,7 @@ import {
   recordCheckpoint,
   validRun,
   validBackup,
-} from "./learning-state.js?v=20261016-clarity1";
+} from "./learning-state.js?v=20261019-early-access1";
 import { lessonDiagram, growthCases, growthProfiles, projects } from "./teaching.js?v=20261016-clarity1";
 import { searchTrace, insertionTrace, bfsTrace, measure, reviewDate } from "./algorithms.js";
 const $ = (s) => document.querySelector(s);
@@ -167,14 +167,16 @@ function skillLabel(id) {
       : "Checkpoint passed"
     : state.done[id]
       ? "Lesson complete · extra practice available"
-      : unlocked(id)
-        ? "Ready to learn"
-        : "Build the foundation";
+      : state.drafts[id]?.openedEarly && missingPrerequisites(state, id).length
+        ? "Opened early · foundations unfinished"
+        : unlocked(id)
+          ? "Ready to learn"
+          : "Build the foundation";
 }
 function pathView(open) {
   const passed = route.filter((id) => lessonComplete(state, id)).length,
     next = nextActivity(state);
-  return `${pageIntro("YOUR LEARNING PATH", "One foundation before the next.", `${lessons.length} guided lessons. Start where you left off and build one useful skill at a time.`)}<section class="algorithm-path-progress" aria-label="Course progress"><div><strong>${passed} of ${lessons.length} lessons complete</strong><span>${Math.round((passed / lessons.length) * 100)}%</span></div><progress max="${lessons.length}" value="${passed}" aria-label="Completed algorithm lessons">${passed} of ${lessons.length}</progress>${activityLink(next, next.kind === "review" ? "Open review" : "Go to my next lesson")}</section><p class="path-explanation">Finish a lesson to open the next. Extra checkpoints are optional practice. You can preview later topics and return to earlier lessons whenever you need.</p><div class="sd-stages curriculum">${courseStages
+  return `${pageIntro("YOUR LEARNING PATH", "One foundation before the next.", `${lessons.length} guided lessons. Start where you left off and build one useful skill at a time.`)}<section class="algorithm-path-progress" aria-label="Course progress"><div><strong>${passed} of ${lessons.length} lessons complete</strong><span>${Math.round((passed / lessons.length) * 100)}%</span></div><progress max="${lessons.length}" value="${passed}" aria-label="Completed algorithm lessons">${passed} of ${lessons.length}</progress>${activityLink(next, next.kind === "review" ? "Open review" : "Go to my next lesson")}</section><p class="path-explanation">Finish a lesson to open the next. Extra checkpoints are optional practice. You can open a later lesson early from its preview, or return to earlier lessons whenever you need.</p><div class="sd-stages curriculum">${courseStages
     .map((stage, i) => {
       const ids = stage[4],
         count = ids.filter((id) => lessonComplete(state, id)).length;
@@ -209,7 +211,7 @@ function lessonView(id) {
   if (!l) return pageIntro("NOT FOUND", "This lesson is not on the path.", "Open the learning path to choose a lesson.");
   if (!unlocked(id)) {
     const missing = missingPrerequisites(state, id);
-    return `${pageIntro("A LOOK AHEAD", l.title, "This idea uses skills you will practice first.")}<article class="lesson-panel focused-lesson"><h2>${l.simpleIdea}</h2><p class="familiar-example">${l.analogy}</p><div class="readiness"><h3>First, check these foundations</h3>${missing.map((p) => `<a href="#lesson/${p}">${lessons[p].title} →</a>`).join("")}</div>${activityLink(nextActivity(state), "Go to my next activity")}</article>`;
+    return `${pageIntro("A LOOK AHEAD", l.title, "These earlier lessons are recommended before this one.")}<article class="lesson-panel focused-lesson"><h2>${l.simpleIdea}</h2><p class="familiar-example">${l.analogy}</p><div class="readiness"><h3>Recommended foundations</h3>${missing.map((p) => `<a href="#lesson/${p}">${lessons[p].title} →</a>`).join("")}</div>${activityLink(nextActivity(state), "Go to my next activity")}<div class="early-lesson-choice"><p>You can also open this lesson early. Earlier lessons will stay unfinished, and the recommended path will still be available.</p><button class="button secondary" id="open-lesson-early">Open this lesson anyway →</button></div></article>`;
   }
   const d = draft(id);
   if (d.step > 1 && d.predict !== l.predict.answer) d.step = 1;
@@ -975,6 +977,14 @@ function render() {
 }
 function bindPage() {
   const id = currentLesson();
+  if ($("#open-lesson-early"))
+    $("#open-lesson-early").onclick = () => {
+      draft(id).openedEarly = true;
+      save();
+      render();
+      $(".lesson-title")?.setAttribute("tabindex", "-1");
+      $(".lesson-title")?.focus({ preventScroll: true });
+    };
   bindGrowth();
   document.querySelectorAll("[data-code-review]").forEach(
     (b) =>

@@ -11,7 +11,8 @@ export function upgradeState(saved) {
 export const ready = (state, id) => !!state.ready?.[id];
 export const lessonComplete = (state, id) => !!state.done?.[id] || ready(state, id);
 export const missingPrerequisites = (state, id) => lessons[id].requires.filter((p) => !lessonComplete(state, p));
-export const canOpen = (state, id) => !!lessons[id] && (!!state.done[id] || missingPrerequisites(state, id).length === 0);
+export const canOpen = (state, id) =>
+  !!lessons[id] && (!!state.done[id] || state.drafts[id]?.openedEarly === true || missingPrerequisites(state, id).length === 0);
 export function nextActivity(state) {
   const id = route.find((id) => !lessonComplete(state, id) && canOpen(state, id));
   return id === undefined ? { id: route.at(-1), kind: "review" } : { id, kind: "lesson" };
@@ -52,6 +53,7 @@ export function validBackup(s) {
     record(d) &&
     typeof d.code === "string" &&
     d.code.length < 100000 &&
+    (d.openedEarly === undefined || typeof d.openedEarly === "boolean") &&
     (d.notes === undefined || typeof d.notes === "string") &&
     (d.hint === undefined || (Number.isInteger(d.hint) && d.hint >= 0 && d.hint <= 2)) &&
     (d.assisted === undefined || typeof d.assisted === "boolean") &&

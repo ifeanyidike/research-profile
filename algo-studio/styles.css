@@ -5483,10 +5483,20 @@ footer > a {
   color: #62795a;
   margin: 15px 0 6px;
 }
+.early-lesson-choice {
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+  margin-top: 24px;
+}
+.early-lesson-choice > p {
+  margin: 0;
+}
 .lesson-continue {
   margin-top: 24px;
 }
 .lesson-continue > .button,
+.early-lesson-choice > .button,
 .focused-lesson > .button {
   font-size: 13px;
   min-height: 44px;
@@ -6032,6 +6042,7 @@ h3 {
 }
 .walkthrough-actions > .button,
 .lesson-continue > .button,
+.early-lesson-choice > .button,
 .focused-lesson > .button {
   font-size: 15px;
 }
