@@ -1,0 +1,1202 @@
+[
+  {
+    "width": 320,
+    "route": "home",
+    "client": 305,
+    "heading": "A sharper wayto think.",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "path",
+    "client": 305,
+    "heading": "Your path to deeper understanding.",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "tools",
+    "client": 305,
+    "heading": "Your learning tools.",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "practice/mixed",
+    "client": 305,
+    "heading": "Choose the approach yourself.",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "reasoning",
+    "client": 305,
+    "heading": "Make the reasoning yours.",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "reasoning/19",
+    "client": 305,
+    "heading": "Know what your guarantees actually establish",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "projects",
+    "client": 305,
+    "heading": "Build something in stages.",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "lesson/87",
+    "client": 305,
+    "heading": "Maximum flow: improve a feasible routing",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "check/87",
+    "client": 305,
+    "heading": "Return the source side of a minimum cut",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "system",
+    "client": 305,
+    "heading": "System design, one clear step at a time.",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "system/requirements",
+    "client": 305,
+    "heading": "Start with the person, not the boxes",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "visual",
+    "client": 305,
+    "heading": "A playground for your intuition.",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "lab",
+    "client": 305,
+    "heading": "How does your algorithm grow?",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "review",
+    "client": 305,
+    "heading": "Bring a useful idea back.",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 320,
+    "route": "method",
+    "client": 305,
+    "heading": "Designed to make ideas click.",
+    "overflow": false,
+    "scroll": 305
+  },
+  {
+    "width": 390,
+    "route": "home",
+    "client": 375,
+    "heading": "A sharper wayto think.",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "path",
+    "client": 375,
+    "heading": "Your path to deeper understanding.",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "tools",
+    "client": 375,
+    "heading": "Your learning tools.",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "practice/mixed",
+    "client": 375,
+    "heading": "Choose the approach yourself.",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "reasoning",
+    "client": 375,
+    "heading": "Make the reasoning yours.",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "reasoning/19",
+    "client": 375,
+    "heading": "Know what your guarantees actually establish",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "projects",
+    "client": 375,
+    "heading": "Build something in stages.",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "lesson/87",
+    "client": 375,
+    "heading": "Maximum flow: improve a feasible routing",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "check/87",
+    "client": 375,
+    "heading": "Return the source side of a minimum cut",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "system",
+    "client": 375,
+    "heading": "System design, one clear step at a time.",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "system/requirements",
+    "client": 375,
+    "heading": "Start with the person, not the boxes",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "visual",
+    "client": 375,
+    "heading": "A playground for your intuition.",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "lab",
+    "client": 375,
+    "heading": "How does your algorithm grow?",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "review",
+    "client": 375,
+    "heading": "Bring a useful idea back.",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 390,
+    "route": "method",
+    "client": 375,
+    "heading": "Designed to make ideas click.",
+    "overflow": false,
+    "scroll": 375
+  },
+  {
+    "width": 720,
+    "route": "home",
+    "client": 705,
+    "heading": "A sharper wayto think.",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "path",
+    "client": 705,
+    "heading": "Your path to deeper understanding.",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "tools",
+    "client": 705,
+    "heading": "Your learning tools.",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "practice/mixed",
+    "client": 705,
+    "heading": "Choose the approach yourself.",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "reasoning",
+    "client": 705,
+    "heading": "Make the reasoning yours.",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "reasoning/19",
+    "client": 705,
+    "heading": "Know what your guarantees actually establish",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "projects",
+    "client": 705,
+    "heading": "Build something in stages.",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "lesson/87",
+    "client": 705,
+    "heading": "Maximum flow: improve a feasible routing",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "check/87",
+    "client": 705,
+    "heading": "Return the source side of a minimum cut",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "system",
+    "client": 705,
+    "heading": "System design, one clear step at a time.",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "system/requirements",
+    "client": 705,
+    "heading": "Start with the person, not the boxes",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "visual",
+    "client": 705,
+    "heading": "A playground for your intuition.",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "lab",
+    "client": 705,
+    "heading": "How does your algorithm grow?",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "review",
+    "client": 705,
+    "heading": "Bring a useful idea back.",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 720,
+    "route": "method",
+    "client": 705,
+    "heading": "Designed to make ideas click.",
+    "overflow": false,
+    "scroll": 705
+  },
+  {
+    "width": 721,
+    "route": "home",
+    "client": 706,
+    "heading": "A sharper wayto think.",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "path",
+    "client": 706,
+    "heading": "Your path to deeper understanding.",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "tools",
+    "client": 706,
+    "heading": "Your learning tools.",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "practice/mixed",
+    "client": 706,
+    "heading": "Choose the approach yourself.",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "reasoning",
+    "client": 706,
+    "heading": "Make the reasoning yours.",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "reasoning/19",
+    "client": 706,
+    "heading": "Know what your guarantees actually establish",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "projects",
+    "client": 706,
+    "heading": "Build something in stages.",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "lesson/87",
+    "client": 706,
+    "heading": "Maximum flow: improve a feasible routing",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "check/87",
+    "client": 706,
+    "heading": "Return the source side of a minimum cut",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "system",
+    "client": 706,
+    "heading": "System design, one clear step at a time.",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "system/requirements",
+    "client": 706,
+    "heading": "Start with the person, not the boxes",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "visual",
+    "client": 706,
+    "heading": "A playground for your intuition.",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "lab",
+    "client": 706,
+    "heading": "How does your algorithm grow?",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "review",
+    "client": 706,
+    "heading": "Bring a useful idea back.",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 721,
+    "route": "method",
+    "client": 706,
+    "heading": "Designed to make ideas click.",
+    "overflow": false,
+    "scroll": 706
+  },
+  {
+    "width": 768,
+    "route": "home",
+    "client": 753,
+    "heading": "A sharper wayto think.",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "path",
+    "client": 753,
+    "heading": "Your path to deeper understanding.",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "tools",
+    "client": 753,
+    "heading": "Your learning tools.",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "practice/mixed",
+    "client": 753,
+    "heading": "Choose the approach yourself.",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "reasoning",
+    "client": 753,
+    "heading": "Make the reasoning yours.",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "reasoning/19",
+    "client": 753,
+    "heading": "Know what your guarantees actually establish",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "projects",
+    "client": 753,
+    "heading": "Build something in stages.",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "lesson/87",
+    "client": 753,
+    "heading": "Maximum flow: improve a feasible routing",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "check/87",
+    "client": 753,
+    "heading": "Return the source side of a minimum cut",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "system",
+    "client": 753,
+    "heading": "System design, one clear step at a time.",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "system/requirements",
+    "client": 753,
+    "heading": "Start with the person, not the boxes",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "visual",
+    "client": 753,
+    "heading": "A playground for your intuition.",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "lab",
+    "client": 753,
+    "heading": "How does your algorithm grow?",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "review",
+    "client": 753,
+    "heading": "Bring a useful idea back.",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 768,
+    "route": "method",
+    "client": 753,
+    "heading": "Designed to make ideas click.",
+    "overflow": false,
+    "scroll": 753
+  },
+  {
+    "width": 1024,
+    "route": "home",
+    "client": 1009,
+    "heading": "A sharper wayto think.",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "path",
+    "client": 1009,
+    "heading": "Your path to deeper understanding.",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "tools",
+    "client": 1009,
+    "heading": "Your learning tools.",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "practice/mixed",
+    "client": 1009,
+    "heading": "Choose the approach yourself.",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "reasoning",
+    "client": 1009,
+    "heading": "Make the reasoning yours.",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "reasoning/19",
+    "client": 1009,
+    "heading": "Know what your guarantees actually establish",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "projects",
+    "client": 1009,
+    "heading": "Build something in stages.",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "lesson/87",
+    "client": 1009,
+    "heading": "Maximum flow: improve a feasible routing",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "check/87",
+    "client": 1009,
+    "heading": "Return the source side of a minimum cut",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "system",
+    "client": 1009,
+    "heading": "System design, one clear step at a time.",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "system/requirements",
+    "client": 1009,
+    "heading": "Start with the person, not the boxes",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "visual",
+    "client": 1009,
+    "heading": "A playground for your intuition.",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "lab",
+    "client": 1009,
+    "heading": "How does your algorithm grow?",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "review",
+    "client": 1009,
+    "heading": "Bring a useful idea back.",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1024,
+    "route": "method",
+    "client": 1009,
+    "heading": "Designed to make ideas click.",
+    "overflow": false,
+    "scroll": 1009
+  },
+  {
+    "width": 1100,
+    "route": "home",
+    "client": 1085,
+    "heading": "A sharper wayto think.",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "path",
+    "client": 1085,
+    "heading": "Your path to deeper understanding.",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "tools",
+    "client": 1085,
+    "heading": "Your learning tools.",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "practice/mixed",
+    "client": 1085,
+    "heading": "Choose the approach yourself.",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "reasoning",
+    "client": 1085,
+    "heading": "Make the reasoning yours.",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "reasoning/19",
+    "client": 1085,
+    "heading": "Know what your guarantees actually establish",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "projects",
+    "client": 1085,
+    "heading": "Build something in stages.",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "lesson/87",
+    "client": 1085,
+    "heading": "Maximum flow: improve a feasible routing",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "check/87",
+    "client": 1085,
+    "heading": "Return the source side of a minimum cut",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "system",
+    "client": 1085,
+    "heading": "System design, one clear step at a time.",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "system/requirements",
+    "client": 1085,
+    "heading": "Start with the person, not the boxes",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "visual",
+    "client": 1085,
+    "heading": "A playground for your intuition.",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "lab",
+    "client": 1085,
+    "heading": "How does your algorithm grow?",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "review",
+    "client": 1085,
+    "heading": "Bring a useful idea back.",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1100,
+    "route": "method",
+    "client": 1085,
+    "heading": "Designed to make ideas click.",
+    "overflow": false,
+    "scroll": 1085
+  },
+  {
+    "width": 1101,
+    "route": "home",
+    "client": 1086,
+    "heading": "A sharper wayto think.",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "path",
+    "client": 1086,
+    "heading": "Your path to deeper understanding.",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "tools",
+    "client": 1086,
+    "heading": "Your learning tools.",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "practice/mixed",
+    "client": 1086,
+    "heading": "Choose the approach yourself.",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "reasoning",
+    "client": 1086,
+    "heading": "Make the reasoning yours.",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "reasoning/19",
+    "client": 1086,
+    "heading": "Know what your guarantees actually establish",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "projects",
+    "client": 1086,
+    "heading": "Build something in stages.",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "lesson/87",
+    "client": 1086,
+    "heading": "Maximum flow: improve a feasible routing",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "check/87",
+    "client": 1086,
+    "heading": "Return the source side of a minimum cut",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "system",
+    "client": 1086,
+    "heading": "System design, one clear step at a time.",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "system/requirements",
+    "client": 1086,
+    "heading": "Start with the person, not the boxes",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "visual",
+    "client": 1086,
+    "heading": "A playground for your intuition.",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "lab",
+    "client": 1086,
+    "heading": "How does your algorithm grow?",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "review",
+    "client": 1086,
+    "heading": "Bring a useful idea back.",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1101,
+    "route": "method",
+    "client": 1086,
+    "heading": "Designed to make ideas click.",
+    "overflow": false,
+    "scroll": 1086
+  },
+  {
+    "width": 1280,
+    "route": "home",
+    "client": 1265,
+    "heading": "A sharper wayto think.",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "path",
+    "client": 1265,
+    "heading": "Your path to deeper understanding.",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "tools",
+    "client": 1265,
+    "heading": "Your learning tools.",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "practice/mixed",
+    "client": 1265,
+    "heading": "Choose the approach yourself.",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "reasoning",
+    "client": 1265,
+    "heading": "Make the reasoning yours.",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "reasoning/19",
+    "client": 1265,
+    "heading": "Know what your guarantees actually establish",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "projects",
+    "client": 1265,
+    "heading": "Build something in stages.",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "lesson/87",
+    "client": 1265,
+    "heading": "Maximum flow: improve a feasible routing",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "check/87",
+    "client": 1265,
+    "heading": "Return the source side of a minimum cut",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "system",
+    "client": 1265,
+    "heading": "System design, one clear step at a time.",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "system/requirements",
+    "client": 1265,
+    "heading": "Start with the person, not the boxes",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "visual",
+    "client": 1265,
+    "heading": "A playground for your intuition.",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "lab",
+    "client": 1265,
+    "heading": "How does your algorithm grow?",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "review",
+    "client": 1265,
+    "heading": "Bring a useful idea back.",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1280,
+    "route": "method",
+    "client": 1265,
+    "heading": "Designed to make ideas click.",
+    "overflow": false,
+    "scroll": 1265
+  },
+  {
+    "width": 1440,
+    "route": "home",
+    "client": 1425,
+    "heading": "A sharper wayto think.",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "path",
+    "client": 1425,
+    "heading": "Your path to deeper understanding.",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "tools",
+    "client": 1425,
+    "heading": "Your learning tools.",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "practice/mixed",
+    "client": 1425,
+    "heading": "Choose the approach yourself.",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "reasoning",
+    "client": 1425,
+    "heading": "Make the reasoning yours.",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "reasoning/19",
+    "client": 1425,
+    "heading": "Know what your guarantees actually establish",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "projects",
+    "client": 1425,
+    "heading": "Build something in stages.",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "lesson/87",
+    "client": 1425,
+    "heading": "Maximum flow: improve a feasible routing",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "check/87",
+    "client": 1425,
+    "heading": "Return the source side of a minimum cut",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "system",
+    "client": 1425,
+    "heading": "System design, one clear step at a time.",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "system/requirements",
+    "client": 1425,
+    "heading": "Start with the person, not the boxes",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "visual",
+    "client": 1425,
+    "heading": "A playground for your intuition.",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "lab",
+    "client": 1425,
+    "heading": "How does your algorithm grow?",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "review",
+    "client": 1425,
+    "heading": "Bring a useful idea back.",
+    "overflow": false,
+    "scroll": 1425
+  },
+  {
+    "width": 1440,
+    "route": "method",
+    "client": 1425,
+    "heading": "Designed to make ideas click.",
+    "overflow": false,
+    "scroll": 1425
+  }
+]

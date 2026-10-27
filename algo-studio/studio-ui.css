@@ -1,0 +1,2137 @@
+/* Studio presentation: the learning models and editor mechanics live in styles.css. */
+.studio-app {
+  --ink: #243d34;
+  --muted: #6b746b;
+  --green: #265542;
+  --green-dark: #173e30;
+  --sage: #e8ede1;
+  --cream: #f7f6f0;
+  --line: #dedfd5;
+  --radius: 12px;
+  --studio-sidebar: 232px;
+  --studio-serif: Georgia, "Times New Roman", serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.studio-icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+.studio-app :is(button, a, summary, input, textarea, select):focus-visible {
+  outline: 3px solid #ac693f;
+  outline-offset: 4px;
+}
+.studio-app :is(h1, h2, h3, h4, p, legend) {
+  text-wrap: pretty;
+}
+.studio-app h1 {
+  text-wrap: balance;
+}
+.studio-app .sidebar {
+  width: var(--studio-sidebar);
+  padding: 34px 18px 20px;
+  background: #183c32;
+  border: 0;
+  color: #edf0e5;
+  scrollbar-width: thin;
+}
+.studio-app .brand {
+  padding: 0 8px;
+  color: #faf9f0;
+  font-size: 25px;
+  gap: 10px;
+  letter-spacing: -1.1px;
+}
+.studio-app .brand-icon {
+  background: #dfebc3;
+  color: #183c32;
+  width: 34px;
+  height: 36px;
+  border-radius: 9px;
+  font-size: 34px;
+  line-height: 33px;
+}
+.studio-app .brand-icon span {
+  color: #a8bf81;
+  top: -8px;
+  right: -5px;
+}
+.studio-app .brand small {
+  color: #a4b5a9;
+  font-size: 7px;
+  letter-spacing: 1.45px;
+  margin-top: 7px;
+}
+.studio-app .nav-label {
+  margin: 44px 12px 13px;
+  color: #a6b9aa;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+}
+.studio-app .workbench-label {
+  margin-top: 34px;
+}
+.studio-app .sidebar nav {
+  gap: 5px;
+}
+.studio-app .sidebar nav a {
+  position: relative;
+  color: #b9cbbd;
+  min-height: 46px;
+  border-radius: 7px;
+  padding: 11px 12px;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+.studio-app .sidebar nav a > .nav-text {
+  width: auto;
+  font: inherit;
+  text-align: left;
+}
+.studio-app .sidebar nav .nav-icon {
+  width: 21px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.studio-app .sidebar nav a:hover {
+  color: #fffdf3;
+  background: #284b3d;
+}
+.studio-app .sidebar nav a.active {
+  color: #173c30;
+  background: #e6ebd9;
+  font-weight: 650;
+}
+.studio-app .sidebar nav a.active::before {
+  display: none;
+}
+.studio-app .sidebar .workbench-nav a {
+  font-size: 13px;
+  min-height: 43px;
+}
+.studio-app .sidebar .workbench-nav a.active {
+  background: #2c5140;
+  color: #e4edcd;
+}
+.studio-app .sidebar-bottom {
+  padding-top: 35px;
+}
+.studio-sidebar-note {
+  display: block;
+  padding: 20px 14px 22px;
+  margin-bottom: 20px;
+  border-top: 1px solid #496255;
+  border-bottom: 1px solid #496255;
+}
+.studio-sidebar-note > span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  color: #a4b6a5;
+  line-height: 1.5;
+}
+.studio-sidebar-note strong {
+  display: block;
+  font-family: var(--studio-serif);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 14px 0;
+  color: #e7eacb;
+}
+.studio-sidebar-note > span:last-child {
+  letter-spacing: 0;
+  font-size: 12px;
+  color: #becdb9;
+}
+.studio-app .profile {
+  padding: 0 4px;
+  border: 0;
+  gap: 10px;
+  color: #f4f5e9;
+  min-height: 44px;
+}
+.studio-app .profile .avatar {
+  width: 35px;
+  height: 35px;
+  background: #355746;
+  color: #dce8cf;
+  border: 1px solid #5b7561;
+  font-size: 13px;
+}
+.studio-app .profile strong {
+  color: #f0f2e4;
+  font-size: 12px;
+}
+.studio-app .profile small {
+  color: #acbda9;
+  font-size: 10px;
+}
+.studio-app .profile > span:last-child {
+  color: #b5c5b1;
+}
+.studio-app .main-shell {
+  margin-left: var(--studio-sidebar);
+}
+.studio-app .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 76px;
+  padding: 0 44px;
+  background: #f7f6f0f5;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.studio-app .breadcrumb {
+  color: #626e59;
+  font-size: 13px;
+  gap: 12px;
+}
+.studio-app .breadcrumb strong {
+  color: #2b493b;
+  font-weight: 600;
+}
+.studio-app .breadcrumb span {
+  color: #a6ac9e;
+}
+.studio-app .topbar-right {
+  gap: 18px;
+}
+.studio-app .python-pill {
+  display: none;
+}
+.studio-app #search-button {
+  width: auto;
+  height: 40px;
+  padding: 0 12px;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fbfaf5;
+  color: #64705f;
+  font-size: 13px;
+}
+.studio-app #search-button .studio-icon {
+  width: 16px;
+  height: 16px;
+}
+.studio-app kbd {
+  border: 1px solid #dbded1;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font: 10px var(--font);
+  color: #626e59;
+}
+.studio-app .sync-indicator {
+  padding: 7px 13px;
+  border-radius: 7px;
+  border-color: #ccd4c4;
+  min-height: 40px;
+  font-size: 12px;
+  color: #36583e;
+}
+.studio-app main {
+  max-width: 1500px;
+  padding: 32px 44px 64px;
+}
+.studio-app .algorithm-track,
+.studio-app .system-track {
+  max-width: 1160px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.studio-app .progress-save-panel.sd-save-status {
+  margin: 0 auto 24px;
+  max-width: 1160px;
+  padding: 0 0 13px;
+  min-height: 32px;
+  border: 0;
+  border-bottom: 1px dashed #d7dccf;
+  background: none;
+  border-radius: 0;
+  gap: 8px 16px;
+}
+.studio-app .sd-save-status p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #626e59;
+  flex: 1 1 180px;
+}
+.studio-app .sd-save-status button {
+  min-height: 32px;
+  font-size: 12px;
+}
+.studio-app .sd-save-status.save-error {
+  padding: 12px 16px;
+  border: 1px solid #b77f47;
+  border-radius: 8px;
+  background: #fff1dc;
+}
+.studio-app .page-intro {
+  margin: 20px 0 30px;
+  gap: 24px;
+}
+.studio-app .page-intro > div {
+  min-width: 0;
+}
+.studio-app .page-intro h1,
+.studio-app .sd-dashboard-heading h1 {
+  font: 400 clamp(36px, 3.4vw, 53px)/1.12 var(--studio-serif);
+  letter-spacing: -1.7px;
+  color: #263e30;
+  max-width: 800px;
+  margin: 13px 0 16px;
+}
+.studio-app .page-intro p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #687060;
+  max-width: 690px;
+  margin-top: 12px;
+}
+.studio-app .eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+.studio-app .green {
+  color: #53684b !important;
+}
+.studio-app .button {
+  border-radius: 7px;
+  min-height: 44px;
+  padding: 11px 19px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  box-shadow: none;
+  gap: 12px;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.studio-app .button.primary {
+  background: #24523d;
+  border-color: #24523d;
+  color: #fffdf5;
+  box-shadow: 0 2px 4px #183c3212;
+}
+.studio-app .button.primary:hover {
+  background: #143e2a;
+  border-color: #143e2a;
+  box-shadow: 0 4px 12px #173d2b20;
+}
+.studio-app .button.secondary {
+  background: #fffdf7;
+  border: 1px solid #d0d8c8;
+  color: #3c5a3d;
+}
+.studio-app .button.secondary:hover {
+  background: #edf0e3;
+  border-color: #aaba9b;
+}
+.studio-app .button:disabled {
+  opacity: 0.48;
+  box-shadow: none;
+}
+.studio-app .subtle-link,
+.studio-app .text-button {
+  color: #42633e;
+  font-size: 14px;
+}
+.studio-app .subtle-link .studio-icon {
+  width: 17px;
+  height: 17px;
+}
+.studio-app .fine-print,
+.studio-app .checkpoint-intro {
+  color: #66705f;
+}
+.studio-app .tag {
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  padding: 4px 7px;
+  background: #edf0e6;
+  color: #526747;
+}
+.studio-app footer {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 24px 44px;
+  border-top: 1px solid var(--line);
+  color: #626e59;
+  font-size: 12px;
+}
+.studio-app footer a {
+  font-size: 12px;
+  color: #4c6646;
+}
+
+/* Dashboard: editorial introduction, a single next action, then places to practise. */
+.studio-dashboard-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 2px 0 24px;
+}
+.studio-app .sd-track-switch {
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #e0e1d7;
+  border-radius: 7px;
+  background: #eceee3;
+}
+.studio-app .sd-track-switch > * {
+  padding: 6px 15px;
+  font-size: 12px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.studio-app .sd-track-switch > [aria-current] {
+  background: #fffdf7;
+  box-shadow: 0 1px 4px #253b2210;
+}
+.studio-edition {
+  font-size: 10px;
+  letter-spacing: 1.9px;
+  color: #626e59;
+}
+.studio-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 44px;
+  align-items: center;
+  padding: 22px 0 38px;
+}
+.studio-app .studio-hero h1 {
+  font: 400 clamp(48px, 4.7vw, 72px)/1.03 var(--studio-serif);
+  letter-spacing: -2.6px;
+  margin: 17px 0 21px;
+  color: #213e2c;
+}
+.studio-hero h1 em {
+  color: #626e59;
+  font-weight: 400;
+}
+.studio-hero-copy > p {
+  color: #6a7362;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 390px;
+  margin: 0 0 23px;
+}
+.studio-course-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  color: #68715f;
+  font-size: 12px;
+}
+.studio-course-facts > span + span {
+  padding-left: 20px;
+  border-left: 1px solid #d6dccc;
+}
+.studio-course-facts strong {
+  color: #2e4835;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+.studio-hero-art {
+  border: 1px solid #daddcf;
+  border-radius: 12px;
+  margin: 0;
+  padding: 20px 18px 14px;
+  background: #eeeee3;
+  box-shadow: 0 8px 30px #38482605;
+  position: relative;
+}
+.studio-hero-art::before {
+  content: "";
+  position: absolute;
+  inset: 6px -7px -7px 6px;
+  border: 1px solid #daddcf;
+  border-radius: 12px;
+  z-index: -1;
+}
+.hero-art-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #626e59;
+}
+.art-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7c8c60;
+}
+.studio-hero-art svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0 0;
+  overflow: visible;
+}
+.studio-hero-art figcaption {
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #626e59;
+  padding-top: 8px;
+}
+.art-code {
+  font:
+    17px "SFMono-Regular",
+    Consolas,
+    monospace;
+  fill: #324c33;
+}
+.art-value {
+  font: 19px var(--font);
+}
+.art-label {
+  font: 14px var(--font);
+  fill: #626e59;
+}
+.art-note {
+  font: 14px var(--font);
+  fill: #f3f4df;
+}
+.studio-app .studio-session {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+  padding: 28px 30px;
+  border-radius: 10px;
+  background: #204634;
+  color: #f7f7ec;
+  box-shadow: none;
+  margin-bottom: 44px;
+}
+.studio-session-icon {
+  width: 54px;
+  height: 62px;
+  border: 1px solid #667b53;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #cedab1;
+  background: #2d503b;
+  flex: 0 0 auto;
+}
+.studio-session-icon .studio-icon {
+  width: 27px;
+  height: 27px;
+}
+.studio-session-copy {
+  flex: 1;
+  min-width: 0;
+}
+.studio-app .studio-session .eyebrow {
+  color: #bbcea4;
+  font-size: 10px;
+}
+.studio-app .studio-session h2 {
+  font: 400 25px/1.25 var(--studio-serif);
+  letter-spacing: -0.3px;
+  margin: 8px 0 7px;
+  max-width: none;
+  color: #fffdef;
+}
+.studio-app .studio-session p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #c2d0b8;
+  max-width: 570px;
+}
+.studio-app .studio-session > .button {
+  flex: 0 0 auto;
+  background: #e3eacb;
+  border-color: #e3eacb;
+  color: #23432d;
+  font-size: 13px;
+  padding: 12px 18px;
+}
+.studio-app .studio-session > .button:hover {
+  background: #fafbe9;
+}
+.studio-session-progress {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 13px;
+  color: #b8c7a9;
+  font-size: 10px;
+}
+.studio-session-progress progress {
+  width: 100px;
+  height: 3px;
+  border: 0;
+  appearance: none;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #56734c;
+}
+.studio-session-progress progress::-webkit-progress-bar {
+  background: #56734c;
+}
+.studio-session-progress progress::-webkit-progress-value {
+  background: #d1dfa3;
+}
+.studio-session-progress progress::-moz-progress-bar {
+  background: #d1dfa3;
+}
+.studio-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 0 20px;
+}
+.studio-section-heading h2 {
+  font: 400 29px/1.2 var(--studio-serif);
+  letter-spacing: -0.65px;
+  margin: 9px 0 0;
+}
+.studio-section-heading > a {
+  flex: 0 0 auto;
+  font-size: 12px;
+}
+.studio-workspace-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 46px;
+}
+.studio-workspace-card {
+  display: flex;
+  flex-direction: column;
+  padding: 23px;
+  background: #fffef9;
+  border: 1px solid #dedfd3;
+  border-radius: 9px;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.studio-workspace-card:hover {
+  border-color: #a5b18f;
+  box-shadow: 0 6px 18px #273b2210;
+}
+.workspace-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.workspace-icon {
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 37px;
+  border: 1px solid #dce0d0;
+  border-radius: 8px;
+  color: #536c46;
+  background: #f0f2e7;
+}
+.workspace-card-index {
+  color: #626e59;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.studio-workspace-card h3 {
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.studio-workspace-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0 0 24px;
+  color: #626e59;
+}
+.workspace-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: #48613c;
+  margin-top: auto;
+  font-weight: 600;
+}
+.workspace-card-link .studio-icon {
+  width: 17px;
+  height: 17px;
+}
+.studio-current-stage {
+  margin-bottom: 36px;
+}
+.studio-stage-preview {
+  border-top: 1px solid #d9decf;
+}
+.studio-stage-preview > a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 17px 4px;
+  border-bottom: 1px solid #e0e3d7;
+  font-size: 14px;
+  color: #3a503b;
+}
+.studio-stage-preview > a:hover {
+  background: #eef0e5;
+}
+.studio-row-number {
+  width: 30px;
+  color: #626e59;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 auto;
+}
+.studio-stage-preview > a > span:nth-child(2) {
+  flex: 1;
+}
+.studio-stage-preview small {
+  font-size: 11px;
+  color: #626e59;
+}
+.studio-stage-preview .studio-icon {
+  width: 16px;
+  height: 16px;
+  color: #626e59;
+}
+.studio-method-strip {
+  border-top: 1px solid var(--line);
+  padding-top: 25px;
+}
+.studio-method-strip > .eyebrow {
+  color: #626e59;
+}
+.studio-method-strip > div {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 20px 0;
+}
+.studio-method-strip > div > div {
+  position: relative;
+  padding-left: 30px;
+}
+.studio-method-strip > div > div > span {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #626e59;
+  font-size: 10px;
+}
+.studio-method-strip strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+.studio-method-strip small {
+  display: block;
+  font-size: 12px;
+  color: #626e59;
+}
+.studio-method-strip > a {
+  font-size: 12px;
+}
+
+/* Course, tools, and saved work. */
+.studio-app .algorithm-path-progress {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 30px;
+  padding: 24px 26px;
+  border-radius: 9px;
+  border-color: #daddce;
+  background: #eff1e7;
+  margin: 24px 0 18px;
+}
+.studio-app .algorithm-path-progress > div {
+  grid-column: 1;
+  font-size: 13px;
+}
+.studio-app .algorithm-path-progress > div > span {
+  font-variant-numeric: tabular-nums;
+}
+.studio-app .algorithm-path-progress > progress {
+  grid-column: 1;
+  margin: 10px 0 0;
+  height: 4px;
+}
+.studio-app .algorithm-path-progress > .button {
+  grid-column: 2;
+  grid-row: 1/3;
+  align-self: center;
+}
+.studio-app .path-explanation {
+  font-size: 13px;
+  color: #626e59;
+  max-width: 840px;
+  margin-bottom: 30px;
+}
+.studio-app .curriculum {
+  gap: 10px;
+}
+.studio-course-phase {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin: 32px 0 12px;
+}
+.studio-course-phase:first-child {
+  margin-top: 5px;
+}
+.studio-course-phase > span {
+  font: italic 26px var(--studio-serif);
+  color: #626e59;
+  border-right: 1px solid #d4dbc8;
+  padding-right: 17px;
+}
+.studio-app .studio-course-phase h2 {
+  font: 400 27px/1.2 var(--studio-serif);
+  letter-spacing: -0.5px;
+  margin: 0 0 4px;
+}
+.studio-app .studio-course-phase p {
+  font-size: 12px;
+  color: #626e59;
+  margin: 0;
+}
+.studio-app .sd-stage {
+  border-color: #dedfd3;
+  border-radius: 9px;
+  box-shadow: none;
+}
+.studio-app .sd-stage > summary {
+  padding: 20px 23px;
+  gap: 18px;
+}
+.studio-app .sd-stage > summary strong {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.studio-app .sd-stage > summary small {
+  font-size: 13px;
+  color: #626e59;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.studio-app .sd-stage > summary::after {
+  font-size: 21px;
+  color: #626e59;
+}
+.studio-app .sd-stage[open] > summary {
+  background: #f5f6ed;
+  border-bottom: 1px solid #e3e6d9;
+}
+.studio-app .sd-stage-number {
+  font: 500 13px var(--font);
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #d7dfc8;
+  border-radius: 7px;
+  background: #eaf0de;
+  color: #587143;
+  flex: 0 0 auto;
+}
+.studio-app .sd-stage-count {
+  font-size: 11px;
+  color: #626e59;
+}
+.studio-app .sd-stage ol {
+  padding: 8px 24px 0;
+}
+.studio-app .sd-stage li a {
+  padding: 17px 6px;
+  gap: 16px;
+  border-radius: 5px;
+}
+.studio-app .sd-stage li a[aria-current] {
+  margin-inline: 0;
+  padding-inline: 10px;
+  background: #eef2e3;
+}
+.studio-app .path-lesson strong {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 550;
+}
+.studio-app .path-lesson small {
+  font-size: 11px;
+  color: #626e59;
+}
+.studio-app .sd-row-tag {
+  font-size: 11px;
+  color: #626e59;
+}
+.studio-app .sd-lesson-status {
+  width: 28px;
+  height: 28px;
+  font-size: 10px;
+  border: 1px solid #d6dccb;
+  color: #626e59;
+  background: #fafbf5;
+}
+.studio-app .stage-reasoning-link {
+  padding: 14px 5px 18px;
+  margin: 0 24px;
+  font-size: 12px;
+}
+.studio-app .exercise-grid,
+.studio-app .tools-list {
+  gap: 18px;
+}
+.studio-app .exercise-card,
+.studio-app .learning-tool {
+  border-radius: 10px;
+  border-color: #dcded1;
+  background: #fffef9;
+  padding: 27px;
+  box-shadow: none;
+}
+.studio-app .exercise-card:hover {
+  border-color: #aebc9d;
+}
+.studio-app .learning-tool {
+  position: relative;
+  gap: 18px;
+}
+.studio-app .learning-tool .tool-symbol {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #dbe1cd;
+  border-radius: 9px;
+  background: #eff2e5;
+  color: #5e784b;
+}
+.studio-app .learning-tool h2,
+.studio-app .exercise-card h2,
+.studio-app .exercise-card h3 {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  line-height: 1.35;
+  margin: 12px 0;
+}
+.studio-app .learning-tool p,
+.studio-app .exercise-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #626e59;
+}
+.studio-app .exercise-card .fine-print {
+  font-size: 12px;
+}
+.studio-app .exercise-card .subtle-link {
+  margin-top: 16px;
+  font-size: 13px;
+}
+.studio-app .practice-modes {
+  gap: 6px;
+  margin-bottom: 22px;
+}
+.studio-app .practice-modes .button {
+  min-height: 40px;
+  font-size: 13px;
+  padding: 9px 17px;
+}
+.studio-app .practice-filter {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+.studio-app .practice-filter input,
+.studio-app .notes,
+.studio-app input:not([type="checkbox"]):not([type="range"]):not([type="file"]),
+.studio-app select {
+  border: 1px solid #d5dccb;
+  border-radius: 7px;
+  background: #fffef9;
+  color: #304a31;
+}
+.studio-app .notes {
+  min-height: 130px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.studio-app .reasoning-question {
+  margin: 30px 0;
+}
+.studio-app .reasoning-question legend {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.studio-app .reasoning-scenario {
+  border-left-color: #a9b68c;
+  background: #f1f3e8;
+  padding: 20px;
+  font-size: 18px;
+}
+.studio-app .reasoning-review {
+  max-width: 850px;
+  margin-inline: auto;
+}
+.studio-app .reasoning-writing h2 {
+  font-family: var(--studio-serif);
+  font-weight: 400;
+  font-size: 28px;
+}
+.studio-app .reasoning-writing .notes-label {
+  margin-top: 24px;
+  font-size: 16px;
+}
+.studio-app .reasoning-writing .fine-print {
+  font-size: 13px;
+}
+.studio-app .project-contract {
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #e2e6d7;
+  border-radius: 8px;
+  background: #f7f8f0;
+}
+.studio-app .project-contract h3 {
+  font-size: 15px;
+}
+.studio-app .project-contract li {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #667759;
+}
+
+/* Lessons: a quiet reading surface and a distinct practice workspace. */
+.studio-app .lesson-heading {
+  margin: 7px 0 16px;
+}
+.studio-app .lesson-heading .subtle-link,
+.studio-app .lesson-heading .muted {
+  font-size: 12px;
+  color: #626e59;
+}
+.studio-app .lesson-title {
+  font: 400 clamp(34px, 3.1vw, 47px)/1.15 var(--studio-serif);
+  letter-spacing: -1.3px;
+  max-width: 900px;
+  margin: 0 0 30px;
+}
+.studio-app .algorithm-lesson-layout {
+  grid-template-columns: minmax(0, 1fr) 222px;
+  gap: 30px;
+}
+.studio-app .algorithm-lesson-layout.is-coding {
+  grid-template-columns: minmax(0, 1fr);
+}
+.studio-app .sd-steps {
+  border: 1px solid #dce2d0;
+  border-radius: 8px;
+  background: #f0f2e7;
+  padding: 4px;
+  gap: 4px;
+}
+.studio-app .algorithm-steps {
+  margin-bottom: 23px;
+  padding: 5px;
+  background: #edf0e5;
+  border: 1px solid #dce1d1;
+  border-radius: 9px;
+}
+.studio-app .algorithm-steps button,
+.studio-app .sd-steps button {
+  border-radius: 5px;
+  color: #626e59;
+  padding: 10px 7px;
+  font-size: 13px;
+  gap: 5px;
+}
+.studio-app .algorithm-steps button > span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #d2dcc3;
+  font-size: 10px;
+}
+.studio-app .algorithm-steps button[aria-current],
+.studio-app .sd-steps button[aria-current] {
+  background: #fffef9;
+  color: #315431;
+  box-shadow: 0 1px 4px #2944240d;
+}
+.studio-app .algorithm-steps button[aria-current] > span {
+  background: #365e3b;
+  color: #fffdf3;
+  border-color: #365e3b;
+}
+.studio-app .focused-lesson {
+  padding: clamp(24px, 3vw, 42px);
+  border-radius: 10px;
+  border-color: #dce0d1;
+  background: #fffef9;
+  box-shadow: 0 3px 12px #31432103;
+}
+.studio-app .focused-lesson > h2 {
+  font-size: 25px;
+  font-weight: 550;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  margin: 15px 0 25px;
+  color: #2e482d;
+}
+.studio-app .lesson-explanation {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #5d6a53;
+  margin: 24px 0;
+}
+.studio-app .lesson-explanation p {
+  margin-bottom: 20px;
+}
+.studio-app .lesson-discovery {
+  padding: 22px 25px;
+  border: 1px solid #e0e6d4;
+  border-left: 3px solid #9ead7a;
+  border-radius: 3px 9px 9px 3px;
+  background: #f4f6eb;
+  margin: 30px 0;
+}
+.studio-app .lesson-discovery h3 {
+  font: 400 25px/1.25 var(--studio-serif);
+  letter-spacing: -0.4px;
+  margin: 0 0 20px;
+}
+.studio-app .lesson-discovery h4 {
+  font-size: 15px;
+  font-weight: 650;
+  margin: 22px 0 6px;
+  color: #415c36;
+}
+.studio-app .lesson-discovery p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #637355;
+}
+.studio-app .walkthrough {
+  border: 1px solid #dbe1ca;
+  border-radius: 9px;
+  background: #eef2e2;
+  padding: 25px;
+  margin: 30px 0;
+}
+.studio-app .walkthrough-heading {
+  margin-bottom: 20px;
+  gap: 15px;
+}
+.studio-app .walkthrough-heading strong {
+  font-size: 14px;
+  font-weight: 650;
+  color: #425d32;
+}
+.studio-app .walkthrough-heading > span {
+  font-size: 11px;
+  color: #626e59;
+}
+.studio-app .lesson-diagram {
+  border-color: #dbe2cb;
+  border-radius: 7px;
+  background: #fffef9;
+  padding: 21px;
+}
+.studio-app .lesson-diagram figcaption {
+  font-size: 11px;
+  color: #626e59;
+  letter-spacing: 0.2px;
+}
+.studio-app .walkthrough-step {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #536b43;
+}
+.studio-app .reasoning-frame > div {
+  padding: 12px 0;
+  font-size: 14px;
+  border-color: #e3e8d8;
+}
+.studio-app .reasoning-frame dd {
+  font-variant-numeric: tabular-nums;
+}
+.studio-app .more-detail {
+  border-color: #e0e6d4;
+  margin-top: 17px;
+  font-size: 14px;
+}
+.studio-app .more-detail > summary {
+  color: #49653c;
+  padding-block: 9px;
+  min-height: 44px;
+}
+.studio-app .sd-course-rail {
+  position: sticky;
+  top: 100px;
+  background: transparent;
+  border: 0;
+  border-left: 1px solid #dbe2cd;
+  border-radius: 0;
+  padding: 10px 0 10px 23px;
+}
+.studio-app .sd-course-rail h2 {
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 550;
+  margin: 12px 0 22px;
+}
+.studio-app .sd-course-rail nav a {
+  padding: 12px 8px;
+  gap: 12px;
+  font-size: 12px;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+.studio-app .sd-course-rail nav a[aria-current] {
+  background: #ebefdf;
+  color: #476335;
+}
+.studio-app .sd-course-rail .eyebrow {
+  font-size: 10px;
+}
+.studio-app .sd-rail-number {
+  font-size: 10px;
+  color: #626e59;
+}
+.studio-app .sd-course-rail .subtle-link {
+  font-size: 12px;
+  margin-top: 22px;
+}
+.studio-app .practice-layout {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+}
+.studio-app .task-panel {
+  padding: 28px;
+  border: 1px solid #dbe1cd;
+  border-radius: 9px;
+  background: #fffef9;
+}
+.studio-app .task-panel h2 {
+  font-size: 24px;
+  font-weight: 550;
+  line-height: 1.4;
+}
+.studio-app .task-panel > p,
+.studio-app .exercise-brief {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #68775a;
+}
+.studio-app .example-box {
+  border: 1px solid #e1e6d5;
+  border-radius: 7px;
+  background: #f4f6eb;
+  padding: 20px;
+}
+.studio-app .exercise-brief dt {
+  color: #4c683c;
+  font-size: 13px;
+}
+.studio-app .example-reason {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #626e59;
+}
+.studio-app .answer {
+  border-radius: 7px;
+  border-color: #dce2d0;
+  padding: 15px 18px;
+  font-size: 16px;
+  background: #fffef8;
+  line-height: 1.5;
+  min-height: 52px;
+}
+.studio-app .answer > span {
+  border-radius: 5px;
+  border-color: #dce3cd;
+  background: #f1f5e7;
+  color: #626e59;
+}
+.studio-app .answer:hover {
+  border-color: #626e59;
+  background: #f6f8ee;
+}
+.studio-app .feedback {
+  border-radius: 7px;
+  padding: 18px;
+  font-size: 15px;
+}
+.studio-app .editor-panel {
+  border-radius: 9px;
+  border-color: #cdd7c2;
+  box-shadow: 0 5px 24px #263e2a08;
+}
+.studio-app .editor-toolbar {
+  background: #1a392c;
+  padding: 16px 20px;
+  font-size: 12px;
+}
+.studio-app .editor-body {
+  background: #142b22;
+  height: clamp(320px, 46svh, 530px);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.studio-app .line-numbers {
+  line-height: calc(15px * 1.8);
+  font-size: 12px;
+  color: #626e59;
+}
+.studio-app .editor-toolbar .text-button {
+  font-size: 12px;
+  color: #c0cfb4;
+}
+.studio-app .editor-actions {
+  border-color: #e1e8d7;
+  padding: 17px 20px;
+  background: #f5f7ed;
+}
+.studio-app .editor-actions > span {
+  font-size: 11px;
+}
+.studio-app .indent-toolbar {
+  border-color: #38513c;
+  background: #203b2b;
+  color: #bdceac;
+}
+.studio-app .indent-toolbar button {
+  color: #c5d6b4;
+}
+.studio-app .test-summary {
+  border-radius: 6px;
+}
+.studio-app .solution-content {
+  padding-top: 15px;
+}
+.studio-app .cost-box {
+  background: #f0f4e5;
+  border: 1px solid #dfe7cf;
+  border-radius: 7px;
+}
+.studio-app .visual-stage,
+.studio-app .growth-workspace,
+.studio-app .review-row {
+  border-radius: 9px;
+  border-color: #d9e1cb;
+}
+.studio-app dialog {
+  border: 1px solid #dbe2ce;
+  border-radius: 13px;
+  background: #fffef8;
+  padding: 30px;
+  box-shadow: 0 24px 100px #1732243b;
+  max-height: 85svh;
+}
+.studio-app dialog::backdrop {
+  background: #112d2566;
+  backdrop-filter: blur(5px);
+}
+.studio-app .dialog-heading {
+  font-size: 18px;
+}
+.studio-app #search-input {
+  font-size: 18px;
+  padding: 15px;
+}
+.studio-app #search-results a {
+  padding: 17px 12px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.studio-app #search-results small {
+  font-size: 12px;
+}
+.studio-app .account-panel h2 {
+  font-family: var(--studio-serif);
+  font-size: 34px;
+  font-weight: 400;
+}
+
+/* The side rail compacts on tablets; the phone gets a dedicated bottom navigation. */
+@media (min-width: 721px) and (max-width: 1100px) {
+  .studio-app {
+    --studio-sidebar: 78px;
+  }
+  .studio-app .sidebar {
+    padding: 28px 12px 20px;
+  }
+  .studio-app .brand {
+    padding: 0 8px;
+  }
+  .studio-app .brand > span:last-child,
+  .studio-app .sidebar .nav-text,
+  .studio-app .nav-label,
+  .studio-sidebar-note,
+  .studio-app .profile > span:not(:first-child) {
+    display: none;
+  }
+  .studio-app .sidebar nav {
+    margin-top: 36px;
+  }
+  .studio-app .sidebar .workbench-nav {
+    border-top: 1px solid #496255;
+    padding-top: 20px;
+    margin-top: 25px;
+  }
+  .studio-app .sidebar nav a {
+    justify-content: center;
+    padding: 12px;
+  }
+  .studio-app .profile {
+    justify-content: center;
+  }
+  .studio-app .topbar {
+    padding-inline: 30px;
+  }
+  .studio-app main {
+    padding-inline: 30px;
+  }
+  .studio-app .algorithm-lesson-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .studio-app .algorithm-rail {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .studio-app .practice-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .studio-app .studio-session {
+    gap: 18px;
+    padding: 24px;
+  }
+  .studio-session-icon {
+    display: none;
+  }
+  .studio-app .studio-session h2 {
+    font-size: 24px;
+  }
+  .studio-hero {
+    gap: 26px;
+  }
+  .studio-workspace-card {
+    padding: 20px;
+  }
+}
+@media (max-width: 850px) {
+  .studio-hero {
+    gap: 24px;
+    grid-template-columns: 1.05fr 1fr;
+  }
+  .studio-app .studio-hero h1 {
+    font-size: 49px;
+  }
+  .studio-hero-copy > p {
+    font-size: 15px;
+  }
+  .studio-course-facts {
+    gap: 8px 12px;
+  }
+  .studio-course-facts > span + span {
+    padding-left: 12px;
+  }
+  .studio-workspace-grid {
+    gap: 12px;
+  }
+  .studio-workspace-card {
+    padding: 18px;
+  }
+  .studio-workspace-card h3 {
+    font-size: 16px;
+  }
+  .workspace-card-link {
+    font-size: 11px;
+  }
+}
+@media (max-width: 720px) {
+  .studio-app {
+    --studio-sidebar: 0px;
+    padding-bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+  .studio-app .sidebar {
+    display: none;
+  }
+  .studio-app .main-shell {
+    margin-left: 0;
+  }
+  .studio-app .topbar {
+    height: 64px;
+    padding: 0 20px;
+    gap: 10px;
+  }
+  .studio-app .menu-button {
+    display: none;
+  }
+  .studio-app .breadcrumb {
+    font-size: 13px;
+    gap: 8px;
+  }
+  .studio-app .breadcrumb > span,
+  .studio-app .breadcrumb {
+    color: #626e59;
+  }
+  .studio-app .topbar-right {
+    gap: 9px;
+  }
+  .studio-app #search-button {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    border: 0;
+    background: none;
+  }
+  .studio-app #search-button .studio-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .studio-app .search-label,
+  .studio-app #search-button kbd {
+    display: none;
+  }
+  .studio-app .sync-indicator {
+    min-height: 36px;
+    font-size: 11px;
+    padding: 5px 9px;
+    border-radius: 6px;
+  }
+  .studio-app .mobile-settings {
+    display: none;
+  }
+  .studio-app main {
+    padding: 20px 20px 40px;
+  }
+  .studio-app .progress-save-panel.sd-save-status {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    gap: 5px 12px;
+  }
+  .studio-app .sd-save-status p {
+    font-size: 11px;
+    flex-basis: 170px;
+  }
+  .studio-app .sd-save-status button {
+    font-size: 11px;
+  }
+  .studio-app .page-intro {
+    margin: 10px 0 25px;
+    display: block;
+  }
+  .studio-app .page-intro h1,
+  .studio-app .sd-dashboard-heading h1 {
+    font-size: 37px;
+    line-height: 1.12;
+    letter-spacing: -1.2px;
+    margin: 13px 0 15px;
+  }
+  .studio-app .page-intro p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .studio-app .page-intro > .subtle-link {
+    display: inline-flex;
+    margin-top: 15px;
+    white-space: normal;
+  }
+  .studio-app .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+  }
+  .studio-dashboard-top {
+    margin-bottom: 20px;
+  }
+  .studio-edition {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+  }
+  .studio-app .sd-track-switch > * {
+    font-size: 11px;
+    padding: 6px 11px;
+  }
+  .studio-hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 12px 0 28px;
+    gap: 25px;
+  }
+  .studio-app .studio-hero h1 {
+    font-size: clamp(48px, 10vw, 66px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    margin: 15px 0 18px;
+  }
+  .studio-hero-copy > p {
+    font-size: 16px;
+    max-width: 400px;
+    margin-bottom: 18px;
+  }
+  .studio-course-facts {
+    gap: 10px 18px;
+    font-size: 12px;
+  }
+  .studio-course-facts > span + span {
+    padding-left: 18px;
+  }
+  .studio-hero-art {
+    max-width: 440px;
+    width: 100%;
+    padding: 16px 15px 12px;
+  }
+  .studio-hero-art svg {
+    max-height: 195px;
+    margin-top: 5px;
+  }
+  .studio-hero-art figcaption {
+    font-size: 11px;
+    padding-top: 2px;
+  }
+  .studio-app .studio-session {
+    display: block;
+    padding: 25px;
+    margin-bottom: 36px;
+  }
+  .studio-app .studio-session h2 {
+    font-size: 25px;
+    margin: 12px 0;
+  }
+  .studio-app .studio-session p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .studio-session-progress {
+    margin: 17px 0 21px;
+  }
+  .studio-app .studio-session > .button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .studio-section-heading {
+    gap: 15px;
+    align-items: start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .studio-section-heading h2 {
+    font-size: 28px;
+  }
+  .studio-section-heading > a {
+    font-size: 12px;
+    min-height: 32px;
+  }
+  .studio-workspace-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  .studio-workspace-card {
+    padding: 23px;
+  }
+  .workspace-card-top {
+    margin-bottom: 18px;
+  }
+  .studio-workspace-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .studio-workspace-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .workspace-card-link {
+    font-size: 13px;
+  }
+  .studio-stage-preview > a {
+    gap: 12px;
+    padding-block: 18px;
+    font-size: 14px;
+  }
+  .studio-stage-preview small {
+    font-size: 10px;
+    flex: 0 0 auto;
+  }
+  .studio-stage-preview .studio-icon {
+    display: none;
+  }
+  .studio-row-number {
+    width: 23px;
+  }
+  .studio-method-strip > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 14px;
+  }
+  .studio-method-strip small {
+    font-size: 11px;
+  }
+  .studio-app .algorithm-path-progress {
+    padding: 21px;
+    display: block;
+  }
+  .studio-app .algorithm-path-progress > .button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .studio-app .algorithm-path-progress > div {
+    font-size: 12px;
+  }
+  .studio-app .path-explanation {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .studio-course-phase {
+    gap: 14px;
+    margin-top: 26px;
+  }
+  .studio-app .studio-course-phase h2 {
+    font-size: 25px;
+  }
+  .studio-app .studio-course-phase p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .studio-app .sd-stage > summary {
+    gap: 11px;
+    padding: 17px 15px;
+    align-items: start;
+  }
+  .studio-app .sd-stage > summary strong {
+    font-size: 16px;
+  }
+  .studio-app .sd-stage > summary small {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .studio-app .sd-stage-number {
+    width: 30px;
+    height: 34px;
+    font-size: 12px;
+  }
+  .studio-app .sd-stage-count {
+    display: none;
+  }
+  .studio-app .sd-stage ol {
+    padding: 5px 15px 0;
+  }
+  .studio-app .sd-stage li a {
+    gap: 11px;
+    padding: 16px 0;
+  }
+  .studio-app .path-lesson strong {
+    font-size: 14px;
+  }
+  .studio-app .path-lesson small {
+    font-size: 11px;
+  }
+  .studio-app .sd-row-tag {
+    display: none;
+  }
+  .studio-app .stage-reasoning-link {
+    margin: 0 15px;
+    padding: 17px 0;
+    font-size: 12px;
+  }
+  .studio-app .algorithm-lesson-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .studio-app .algorithm-rail {
+    display: none;
+  }
+  .studio-app .lesson-title {
+    font-size: 34px;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  .studio-app .lesson-heading .subtle-link,
+  .studio-app .lesson-heading .muted {
+    font-size: 11px;
+  }
+  .studio-app .algorithm-steps {
+    position: sticky;
+    top: 64px;
+    z-index: 20;
+    margin: 0 -1px 19px;
+    padding: 4px;
+    gap: 2px;
+  }
+  .studio-app .algorithm-steps button {
+    font-size: 11px;
+    padding: 11px 3px;
+    gap: 4px;
+    min-height: 44px;
+  }
+  .studio-app .algorithm-steps button > span {
+    width: 17px;
+    height: 17px;
+    font-size: 10px;
+  }
+  .studio-app .focused-lesson {
+    padding: 25px 21px;
+  }
+  .studio-app .focused-lesson > h2 {
+    font-size: 23px;
+  }
+  .studio-app .lesson-explanation {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .studio-app .lesson-discovery {
+    margin: 26px 0;
+    padding: 20px 17px;
+  }
+  .studio-app .lesson-discovery h3 {
+    font-size: 25px;
+  }
+  .studio-app .lesson-discovery p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .studio-app .walkthrough {
+    padding: 19px 14px;
+    margin: 25px -5px;
+  }
+  .studio-app .walkthrough-heading {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .studio-app .walkthrough-heading strong {
+    font-size: 13px;
+  }
+  .studio-app .lesson-diagram {
+    padding: 15px;
+  }
+  .studio-app .walkthrough-step {
+    font-size: 17px;
+  }
+  .studio-app .reasoning-frame > div {
+    font-size: 14px;
+  }
+  .studio-app .walkthrough-actions {
+    flex-wrap: wrap;
+  }
+  .studio-app .walkthrough-actions > .button {
+    width: 100%;
+  }
+  .studio-app .exercise-grid,
+  .studio-app .tools-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .studio-app .learning-tool,
+  .studio-app .exercise-card {
+    padding: 24px;
+  }
+  .studio-app .learning-tool > .button {
+    width: 100%;
+  }
+  .studio-app .learning-tool p,
+  .studio-app .exercise-card p {
+    font-size: 15px;
+  }
+  .studio-app .practice-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 21px;
+  }
+  .studio-app .task-panel {
+    padding: 24px 21px;
+  }
+  .studio-app .editor-toolbar {
+    padding: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .studio-app .editor-body {
+    font-size: 16px;
+    line-height: 1.75;
+    height: clamp(290px, 45svh, 460px);
+  }
+  .studio-app .line-numbers {
+    font-size: 12px;
+    line-height: calc(16px * 1.75);
+  }
+  .studio-app .editor-actions {
+    padding: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .studio-app .reasoning-question legend {
+    font-size: 17px;
+  }
+  .studio-app .reasoning-scenario {
+    padding: 17px;
+    font-size: 17px;
+  }
+  .studio-app .project-contract {
+    padding: 17px;
+  }
+  .studio-app dialog {
+    width: calc(100% - 28px);
+    padding: 25px 21px;
+    max-height: 88svh;
+  }
+  .studio-app .mobile-nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    height: auto;
+    min-height: 70px;
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    border-top: 1px solid #d8dfcc;
+    background: #fffdf6f7;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 -4px 22px #2d45210a;
+  }
+  .studio-app .mobile-nav a {
+    min-height: 51px;
+    padding: 6px 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 7px;
+    font-size: 10px;
+    color: #626e59;
+  }
+  .studio-app .mobile-nav a > span {
+    height: 22px;
+    display: block;
+    font-size: inherit;
+  }
+  .studio-app .mobile-nav .studio-icon {
+    width: 21px;
+    height: 21px;
+  }
+  .studio-app .mobile-nav a.active {
+    background: #edf1e2;
+    color: #31592e;
+    font-weight: 650;
+  }
+  .studio-app .mobile-nav a.active::before {
+    display: none;
+  }
+  .studio-app footer {
+    padding: 23px 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 11px;
+  }
+}
+@media (max-width: 370px) {
+  .studio-app main {
+    padding-inline: 15px;
+  }
+  .studio-app .topbar {
+    padding-inline: 15px;
+  }
+  .studio-edition {
+    display: none;
+  }
+  .studio-app .studio-hero h1 {
+    font-size: 48px;
+  }
+  .studio-app .focused-lesson {
+    padding-inline: 17px;
+  }
+  .studio-app .algorithm-steps button {
+    font-size: 10px;
+    gap: 3px;
+  }
+  .studio-app .algorithm-steps button > span {
+    display: none;
+  }
+  .studio-app .reasoning-frame > div {
+    display: block;
+  }
+  .studio-app .reasoning-frame dd {
+    margin-top: 5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio-app *,
+  .studio-app *::before,
+  .studio-app *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media (forced-colors: active) {
+  .studio-app .button,
+  .studio-app .answer,
+  .studio-app .mobile-nav,
+  .studio-app .sidebar {
+    border: 1px solid CanvasText;
+  }
+  .studio-app .studio-icon {
+    stroke: ButtonText;
+  }
+}
+/* Put the next learning action ahead of the dashboard illustration on phones. */
+@media (max-width: 720px) {
+  .studio-dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+  .studio-dashboard-top {
+    order: 0;
+  }
+  .studio-hero {
+    display: contents;
+  }
+  .studio-hero-copy {
+    order: 1;
+    padding-top: 12px;
+  }
+  .studio-app .studio-dashboard > .studio-session {
+    order: 2;
+    margin: 25px 0 28px;
+  }
+  .studio-hero-art {
+    order: 3;
+    margin-bottom: 35px;
+  }
+  .studio-dashboard > .studio-section-heading {
+    order: 4;
+  }
+  .studio-workspace-grid {
+    order: 5;
+  }
+  .studio-current-stage {
+    order: 6;
+  }
+  .studio-method-strip {
+    order: 7;
+  }
+}
+
+.studio-app .example-box .eyebrow,
+.studio-app .solution-input .eyebrow {
+  color: #626e59;
+  font-size: 11px;
+}
+.studio-app .example-box code,
+.studio-app .practice-help > summary {
+  color: #4e643f;
+}
+.studio-app .editor-actions > span {
+  color: #626e59;
+}
+.studio-app .language-label {
+  color: #b7c8aa;
+  font-size: 11px;
+}
+.studio-app .code-surface,
+.studio-app #code-editor {
+  scrollbar-width: thin;
+  scrollbar-color: #64795a #142b22;
+}
+.studio-app .sd-next-card:not(.studio-session) {
+  background: #204634;
+  border-radius: 10px;
+}
+.studio-app .sd-next-card:not(.studio-session) h2 {
+  font-family: var(--studio-serif);
+  font-weight: 400;
+}
+.studio-app .sd-method-card {
+  border-color: #dcded1;
+  border-radius: 10px;
+  background: #fffef9;
+}
+@media (max-width: 720px) {
+  .studio-app .studio-session p {
+    display: none;
+  }
+}
+
+.studio-app .breadcrumb .breadcrumb-brand {
+  color: #626e59;
+}
+.studio-app .line-numbers {
+  color: #91aa85;
+}
+.studio-app .algorithm-steps button:disabled {
+  opacity: 0.65;
+}
+@media (max-width: 720px) {
+  .studio-app .breadcrumb .breadcrumb-brand {
+    display: none;
+  }
+  .studio-app .breadcrumb > span {
+    display: none;
+  }
+  .studio-app .breadcrumb strong {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 720px) {
+  .studio-app #search-button {
+    width: 44px;
+    height: 44px;
+  }
+  .studio-app .sync-indicator {
+    min-height: 44px;
+  }
+}
+/* Native form controls stay readable and avoid automatic phone zoom. */
+.studio-app input:not([type="checkbox"]):not([type="range"]):not([type="file"]),
+.studio-app select {
+  font-size: 16px;
+  min-height: 44px;
+}
+.studio-app input[type="range"] {
+  min-height: 32px;
+}
+.studio-app .visual-controls,
+.studio-app .lab-controls {
+  border-radius: 9px;
+  border-color: #d9e1cb;
+  background: #fffef9;
+}
+@media (min-width: 721px) and (max-width: 850px) {
+  .studio-workspace-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .studio-workspace-card:last-child {
+    grid-column: 1/-1;
+  }
+}

@@ -12,6 +12,12 @@ from oracles import generated, oracle
 
 
 def curated(group, i):
+    if i == 68 and group != 'transfer': return [[1 << bit] for bit in range(11)]
+    if i == 70 and group == 'lesson': return [[n] for n in range(13)]
+    if i == 95 and group != 'transfer': return [[n] for n in range(9)]
+    if i == 107 and group in ('lesson', 'check'): return [['b+aa', 'aa'], ['Æa', 'a']]
+    if i == 87 and group != 'transfer': return [[6, [[0,1,1],[0,2,1],[1,3,1],[1,4,1],[2,3,1],[3,5,1],[4,5,1]], 0, 5]]
+    if i == 83: return [[4, [[0,1],[1,2],[2,3],[3,1]]]]
     if i == 4 and group in ('lesson', 'check'):
         windows = [
             ([5], 1, 5), ([1, 2, 3], 3, 6), ([0, 0, 1, 2], 3, 3),
@@ -109,6 +115,8 @@ def build(tasks):
         rng = random.Random(f'20261019:{group}:{i}')
         seen = {json.dumps(t['args'], sort_keys=True) for t in task['tests']}
         cases = []
+        finite = {('lesson', 68): 11, ('check', 68): 11, ('lesson', 70): 13, ('lesson', 95): 9, ('check', 95): 9}
+        required = min(12, finite.get((group, i), len(seen) + 12) - len(seen))
 
         def add(args):
             key = json.dumps(args, sort_keys=True)
@@ -120,10 +128,10 @@ def build(tasks):
         for args in curated(group, i):
             add(args)
         for _ in range(2000):
-            if len(cases) >= 12:
+            if len(cases) >= required:
                 break
             add(generated(group, i, rng))
-        assert len(cases) >= 12, ('Insufficient varied inputs', group, i, len(cases))
+        assert len(cases) >= required, ('Insufficient varied inputs', group, i, len(cases))
         out[group][str(i)] = cases
     return out
 

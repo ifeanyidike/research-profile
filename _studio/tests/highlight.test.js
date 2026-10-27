@@ -8,7 +8,7 @@ const text = (html) =>
     .replace(/<\/?span[^>]*>/g, "")
     .replace(/&(amp|lt|gt|quot|#39);/g, (_, entity) => ({ amp: "&", lt: "<", gt: ">", quot: '"', "#39": "'" })[entity]);
 
-test("Highlighting preserves every source character in all 132 reference solutions", () => {
+test("Highlighting preserves every source character in all 282 reference solutions", () => {
   for (const problem of [...lessons, ...Object.values(checkpoints), ...Object.values(transferTasks)])
     assert.equal(text(highlightPython(problem.solution)), problem.solution);
 });

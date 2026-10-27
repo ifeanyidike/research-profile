@@ -7,7 +7,7 @@ import { initialState, upgradeState, validBackup } from "../../algo-studio/learn
 
 test("every exercise has its own input, returned result, and explanation of its example", () => {
   const exercises = [...lessons, ...Object.values(checkpoints), ...Object.values(transferTasks)];
-  assert.equal(exercises.length, 132);
+  assert.equal(exercises.length, 282);
   for (const exercise of exercises) {
     for (const field of ["input", "output", "example"]) {
       assert.equal(typeof exercise.exerciseBrief[field], "string", `${exercise.title}: ${field}`);
@@ -23,8 +23,8 @@ test("every exercise has its own input, returned result, and explanation of its 
 });
 
 test("all lessons have separate explanation paragraphs and complete three-choice questions", () => {
-  assert.equal(lessons.length, 60);
-  assert.equal(new Set(route).size, 60);
+  assert.equal(lessons.length, 108);
+  assert.equal(new Set(route).size, 108);
   for (const lesson of lessons) {
     assert.ok(lesson.explanation.length >= 3, lesson.title);
     assert.equal(lesson.explanation.join("\n\n"), lesson.idea);

@@ -1,4 +1,6 @@
-import { extraTestCases } from "./extra-test-cases.js?v=20261019-tests1";
+import { advancedCheckpoints, advancedTransfers } from "./advanced-course.js?v=20261027-course2";
+import { newCheckpoints, newTransfers } from "./course-expansion.js?v=20261027-course2";
+import { extraTestCases } from "./extra-test-cases.js?v=20261027-course2";
 const t = (args, expected) => ({ args, expected });
 const n = (value, left = null, right = null) => ({ value, left, right });
 const link = (...values) => values.reduceRight((next, value) => ({ value, next }), null);
@@ -1437,11 +1439,15 @@ const transferBriefs = {
     example: "2 and 3 share only factor 1, as do 3 and 4. But 2 and 4 share factor 2. Return 2.",
   },
 };
+Object.assign(checkpoints, structuredClone(newCheckpoints), structuredClone(advancedCheckpoints));
+// This existing variation introduces a new state rather than merely changing LCS inputs.
+checkpoints[33].readingLesson = 65;
+Object.assign(transferTasks, structuredClone(newTransfers), structuredClone(advancedTransfers));
 for (const [id, problem] of Object.entries(checkpoints)) {
   problem.tests.push(...extraTestCases.check[id]);
-  problem.exerciseBrief = checkpointBriefs[id];
+  problem.exerciseBrief = checkpointBriefs[id] || problem.exerciseBrief;
 }
 for (const [id, problem] of Object.entries(transferTasks)) {
   problem.tests.push(...extraTestCases.transfer[id]);
-  problem.exerciseBrief = transferBriefs[id];
+  problem.exerciseBrief = transferBriefs[id] || problem.exerciseBrief;
 }

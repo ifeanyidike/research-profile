@@ -1,0 +1,422 @@
+[
+  {
+    "id": 66,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nRead\n[]\nBelow / rest\n[] / []\n\nBefore reading, the rule holds for an empty prefix.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nRead\n[3]\nBelow / rest\n[] / [3]\n\nRead 3: it is not strictly below the pivot.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nRead\n[3,1,3]\nBelow / rest\n[1] / [3,3]\n\nRead 1, then 3: classify each once.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nBelow / rest\n[1,2] / [3,3]\nUnread count\n0\n\nRead 2: the invariant now covers the whole input.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 67,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nLoop total\n0\nFormula\n0×1/2 = 0\n\nBase case n=0.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nKnown total\n1+2+3 = 6\nFormula\n3×4/2 = 6\n\nAssume the rule at k=3.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nNew total\n6+4 = 10\nAlgebra\n3×4/2 + 4 = 4×5/2\n\nAdd k+1=4.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nObligations\nbase + arbitrary step + domain\nNo finite tests\ncan replace the arbitrary step\n\nThe arbitrary step extends the rule to every nonnegative integer.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 68,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nRoot combine cost\n4\nChildren\ntwo size-2 calls\n\nFor n=4, write the recurrence.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nLevel 1 total\n2+2 = 4\n\nEach size-2 call adds 2 units.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nLeaf total\n4\n\nFour leaves each cost 1.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nTotal\n4+4+4 = 12\nFormula\n4 log₂4 + 4 = 12\n\nAdd levels, rather than multiplying one path by n again.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 69,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nSize / capacity\n0 / 1\nCost\n0\n\nStart empty at capacity 1.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nSize / capacity\n2 / 2\nWrites + copies\n2 + 1 = 3\n\nFirst append fits; second grows.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nCopied sizes so far\n1, 2, 4\nSize / capacity\n5 / 8\n\nFifth append triggers growth from 4 to 8.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nWrites\n5\nCopies\n7\nTotal\n12 < 3×5\n\nTotal costs at size 5.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 70,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nPossibilities\n3! = 6\n\nThree distinct keys can arrive in six orders.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nDepth 2 leaves\n2² = 4 < 6\n\nTwo binary comparisons allow at most four answer paths.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nDepth 3 leaves\n2³ = 8 ≥ 6\n\nThree comparisons allow up to eight leaves.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nNecessary depth\n3\nNot promised\nattainability for every n\n\nThe information lower bound is three comparisons.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 71,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nInput\n[3,1,3,0]\nCounters\nall zero\n\nRead the score list.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nNonzero counters\n0:1, 1:1, 3:2\n\nCount each arrival.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nEmitted so far\n[0,1]\n\nVisit keys in increasing order.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nReturned values\n[0,1,3,3]\nDuplicates\npreserved\n\nEmit both copies of 3.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 72,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nInput\n[21,3,12,1]\n\nBegin with the unsorted values.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nBuckets 1 / 2 / 3\n[21,1] / [12] / [3]\nResult\n[21,1,12,3]\n\nStable ones pass.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nBuckets 0 / 1 / 2\n[1,3] / [12] / [21]\n\nStable tens pass.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nOutput\n[1,3,12,21]\n\nTwo digits now establish complete order.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 73,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nZero-based rank\n2\nPivot\n3\n\nFind rank 2 in [4,1,3,3].\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nSmaller\n[1]\nEqual\n[3,3]\nLarger\n[4]\n\nPartition around 3.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nPivot ranks\n1 through 2\nWanted\n2\n\nLocate the rank among group sizes.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nAnswer\n3\nNo need to sort\neither other group\n\nThe wanted rank is in the equal group.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 74,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nInput\n[(2,a),(1,x),(2,b)]\n\nThe records have identity as well as a key.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nResult\n[(1,x),(2,a),(2,b)]\n\nInsert the key-1 record.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nTie order\na before b\n\nInsert b without passing equal key 2.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nOutput\n[(1,x),(2,a),(2,b)]\n\nThe sorted output preserves key and arrival promises.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 75,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nRoot\n5\nLeft / right\n2 / 8 (left child 6)\n\nDelete 5 from this BST.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nSuccessor\n6\n\nBoth children exist, so inspect the right-subtree minimum.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nNew root\n6\nRight child\n8 with empty left\n\nReplace 5 by 6 and remove the old 6 link.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nInorder\n[2,6,8]\n\nEvery retained key occurs once in sorted inorder.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 76,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nShape\n3 → left 2\nHeights\n2 and 1\n\nInsert 3 then 2.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nShape\n3 → left 2 → left 1\nRoot balance\n2: too left-heavy\n\nInsert 1 below 2.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nNew local root\n2\nChildren\n1 and 3\n\nRotate right around 3; move 2 up.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nChild heights\n1 and 1\nRoot height\n2\n\nRecompute heights from lower nodes upward.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 77,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nRoot\n4\nLeft keys\n[1,2,3]\nLeft size\n3\n\nCompute child summaries before their parent.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nComparison\n2 < 3 → left\n\nRequest ascending rank 2.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nLocal rank\n2 > 1 → right rank 0\n\nAt key 2, its left size is 1.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nLocal rank\n0\nAnswer\n3\n\nThe right child is key 3 with empty left subtree.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 78,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nTree\n4 → left 2 → children 1,3\n\nFind ancestors of values 1 and 3.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nPath to 1\n[4,2,1]\nPath to 3\n[4,2,3]\n\nRead the two root paths.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nShared\n4, then 2\nDivergence\n1 versus 3\n\nCompare the shared beginning.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nAnswer\n2\n\nReturn the last common value.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 79,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nLeaves\n2,1,3,4\nPair sums\n3 and 7\nRoot sum\n10\n\nBuild summaries for [2,1,3,4].\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nDisjoint pieces\n[1,1] and [2,3]\nSum\n1+7 = 8\n\nQuery positions 1 through 3.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nChanged leaf\n3 → 8\nRepaired right pair / root\n12 / 15\n\nAssign position 2 to 8.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nSum\n1+12 = 13\n\nRepeat the same range query.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 80,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nActive\n[0,1,2]\nFinished\n[]\n\nEnter path 0→1→2.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nDestination state\nactive\nCycle\n1→2→1\n\nInspect edge 2→1.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nEdges\n0→1, 0→2, 1→2\n\nCompare a different acyclic graph.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nMeaning\nshared destination, not a back edge\n\nA later edge to finished node 2 is harmless.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 81,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nEdges\n0↔1, 1→2, 2↔3\n\nTwo-way pairs have internal return routes.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nOne possible order\n3,2,1,0\n\nForward DFS records finishing order.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nCollected group\n[0,1]\n\nReverse edges and start with last finished 0.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nComponents\n[[0,1],[2,3]]\nCondensation\nfirst group → second group\n\nThe next remaining traversal collects the other pair.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 82,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nEdges by ID\n0:0–1, 1:1–2, 2:2–0, 3:2–3\n\nA triangle has one tail road.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nentry[0]\n0\nlow[2]\n0\n\nBack edge 2–0 lowers the triangle subtree summary.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nentry[2]\n2\nlow[3]\n3 > 2\n\nThe tail at 3 has no back route.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nReturned IDs\n[3]\n\nOnly the tail road is a bridge.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 83,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nEdges\n0–1, 1–2, 1–3\n\nA star uses town 1 as its hub.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nRemaining\n{1,2,3}\n\nRemoving leaf 0 leaves one connected group.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nRemaining groups\n{0}, {2}, {3}\n\nRemoving hub 1 removes every incident road.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nAnswer\n[1]\n\nThe original count was one, so only 1 is a bottleneck.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 84,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nEdges\n0→1:2, 0→2:1, 1→2:3\nInitial\n[0,None,None,None]\n\nFrom 0, compare a direct and an indirect route.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nKnown scores\n[0,2,1,None]\n\nProcess 0 before its successors.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nCandidate\n2+3 = 5\nScores\n[0,2,5,None]\n\nProcess 1 and improve 2.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nAnswer\n[0,2,5,None]\n\nNode 3 stays unreachable.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 85,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\n0→1 / 1→2 / 0→2\n4 / -1 / 9\nDiagonal\n0\n\nInitialize direct costs.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nCandidate 0→1→2\n4 + (-1) = 3\n\nAllow node 1 as an intermediate.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nUpdated 0→2\n3\n\nKeep the better 0→2 route.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nRow 0\n[0,4,3]\nRow 2\n[None,None,0]\n\nUnreachable reverse routes stay unreachable.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 86,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nSelected\n{0}\nCrossing costs\n0–1:1, 0–2:8\n\nBegin at node 0.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nSelected\n{0,1}\nTotal\n1\n\nChoose the lightest crossing edge.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nCheapest remaining crossing\n1–2:2\n\nNew edge 1–2 costs 2.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nTree cost\n3\nUnused edge\n0–2:8\n\nAll nodes are connected with two edges.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 87,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nSource outgoing\n0→1:3, 0→2:2\nSink incoming\n1→3:2, 2→3:3\nCross edge\n1→2:1\n\nInspect the network capacities.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nSent flow\n2\nReverse permissions\n1→0 and 3→1 each gain 2\n\nSend two units along 0→1→3.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nTotal flow\n5\n\nSend two along 0→2→3 and one along 0→1→2→3.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nUpper bound\n5\nAchieved\n5 → optimal\n\nThe source cut has capacity 3+2.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 88,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nPairs\n0→0\nUnmatched left\n1\n\nInitial choice uses the first available pair.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nCurrent owner\nleft 0\n\nLeft 1 wants occupied right 0.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nRerouted pair\n0→1\n\nMove that owner to its alternative right 1.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nFinal pairs\n0→1, 1→0\nSize\n2\n\nRight 0 is now available for left 1.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 89,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nDimension list\n[10,30,5,60]\n\nThree matrices have dimensions 10×30, 30×5, and 5×60.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nFirst cost\n10×30×5 = 1500\nFinal cost\n10×5×60 = 3000\n\nGroup the first two matrices first.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nAlternative total\n30×5×60 + 10×30×60 = 27000\n\nCompare grouping the final two first.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nOptimal total\n4500\nGrouping\n((A0*A1)*A2)\n\nChoose the smaller complete cost.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 90,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nTree\n5 with children 4,4\n\nA parent has weight 5 and two children have weight 4.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nLeaf skip / take\n0 / 4\n\nEach leaf returns its two states.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nParent take\n5+0+0 = 5\nParent skip\n4+4 = 8\n\nTaking the parent forces both children to skip.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nBest\n8: select both children\n\nThe root may use either state.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 91,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nMask\n001\nState\nlast 0, cost 0\n\nA three-city tour starts at 0.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nMask\n011\nState\nlast 1, cost 2\n\nVisit city 1.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nMask\n111\nState\nlast 2, cost 5\n\nThen visit city 2.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nReturn cost\n4\nTour total\n9\n\nClose the route to 0.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 92,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nLengths\n[1,1,1]\nPredecessors\n[-1,-1,-1]\n\nStart with [3,1,2].\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nlength[2]\n2\nprevious[2]\n1\n\nAt index 2, value 1 can precede value 2.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nBackward indices\n2 → 1\n\nFollow the best endpoint backward.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nReturned indices\n[1,2]\nValues\n[1,2]\n\nReverse the path for input order.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 93,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nCandidate indices\n[1,2]\nCandidate values\n[3,-1]\nFirst maximum\n3\n\nRead the first three values of [1,3,-1,-3,5], k=3.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nDeque values\n[3,-1,-3]\nSecond maximum\n3\n\nRead -3; keep older larger candidates.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nDeque\nindex 4, value 5\n\nRead 5; expire old index 1 and dominate smaller values.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nOutput\n[3,3,5]\n\nThe third group maximum is 5.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 94,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nEvents\n1:+1, 2:+1, 4:-1, 6:-1, 8:+1, 9:-1\n\nSweep ranges [1,4), [2,6), [8,9).\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nGap lengths\n1 + 2 + 2 = 5\n\nCoverage is positive from 1 through 6.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nAdded length\n0\n\nThe gap from 6 to 8 has no active range.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nUnion length\n6\n\nRange [8,9) contributes one more.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 95,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nn\n4\nInitial occupied sets\nempty\n\nPlace queens one row at a time.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nColumns by row\n[1,3]\nNo conflict\nin columns or diagonals\n\nOne solution begins with column 1, then column 3.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nCompleted placement\n[1,3,0,2]\n\nContinue with columns 0 and 2.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nOther placement\n[2,0,3,1]\nTotal count\n2\n\nExplore other restored branches.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 96,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nExponent bits\n101₂ = 4+1\nResult\n1\n\nCompute 3⁵ modulo 7.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nResult\n3\nSquare base\n9 mod 7 = 2\nRemaining exponent\n2\n\nThe low bit is 1, so include 3.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nBase\n4\nRemaining exponent\n1\n\nSkip the next zero bit and square again.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nResult\n3×4 mod 7 = 5\n\nInclude 4 and finish.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 97,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nExcluded\n0 and 1\nCandidates\n2 through 10\n\nInitialize candidates up to 10.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nFirst marked multiple\n2² = 4\n\nAt p=2, mark 4,6,8,10.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nFirst marked multiple\n3² = 9\n\nAt p=3, mark 9.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nPrimes\n[2,3,5,7]\n\nNo factor beyond sqrt(10) is needed.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 98,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nQuestion\nC(5,2)\n\nCount 2-element subsets of 5 positions.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nExclude it\nC(4,2) = 6\nInclude it\nC(4,1) = 4\n\nSplit by whether the final position is included.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nTotal\n6+4 = 10\n\nThe cases cannot overlap.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nExample mod 7\n10 mod 7 = 3\n\nThe same recurrence works under any positive modulus.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 99,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nInput\n[8,1,4,4]\nRank\n2\n\nThe requested rank is fixed before choosing a pivot.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nIf pivot is 4\n[1] / [4,4] / [8]\n\nAny chosen pivot produces exhaustive groups.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nIf pivot is 8\nkeep [1,4,4] for rank 2\n\nA different pivot may need another round.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nAnswer\n4\nRandom quantity\nwork, not the answer\n\nEvery terminating pivot path gives the same answer.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 100,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nSelected\n{1}\nEdges covered\n0–1 and 1–2\n\nFor path 0–1–2, inspect a certificate.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nUncovered edge\n0–1\n\nThe empty certificate fails.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nIndependent set\n{0,2}\nNo internal edge\nbetween 0 and 2\n\nTake the complement of {1}.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nCover size\n1\nIndependent size\n2\nSum\n3 vertices\n\nRelate the optimal sizes.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 101,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nInitially selected\n{}\n\nScan path edges 0–1, then 1–2.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nSelected\n{0,1}\nTriggering matching size\n1\n\nThe first uncovered edge triggers both endpoints.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nReturned cover\n[0,1]\n\nThe second edge is already covered by 1.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nOptimum at least\n1\nReturned size\n2 ≤ 2×optimum\n\nCompare certificate lower and achieved upper bounds.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 102,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nShort rewards\n[1,3]:4 and [3,5]:4\nLong reward\n[1,5]:10\n\nTwo short jobs compete with one long job.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nCompatible empty prefix\n0\nBest\n4\n\nThe first short job establishes reward 4.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nCombined reward\n8\n\nThe second short job can combine with the first.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nBest reward\n10\nMaximum job count\nis a different objective\n\nThe long job beats that pair.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 103,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nInitial previous row\n[0,0,0]\n\nCompare abc with ac; columns use the shorter string.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nCurrent row\n[0,1,1]\n\nRead a.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nCurrent row\n[0,1,1]\n\nRead b; no new matching character extends the score.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nFinal row\n[0,1,2]\nLength\n2\n\nRead c and retain the completed row.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 104,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nDistances\n[0,∞,∞]\n\nInitialize the source only.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nPaid 0→1\ndistance 1, back\nFree 0→2\ndistance 0, front\n\nExplore from 0.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nFree 2→1\nimprove 1 to 0\n\nProcess free node 2 first.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nAnswer\n[0,0,0]\n\nAll three nodes have cost zero.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 105,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nDesired\n3x ≡ 1 mod 7\n\nFind an inverse of 3 modulo 7.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nRearrange\n1 = 7 - 2×3\n\nEuclid gives 7=2×3+1.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nNormalize\n-2 mod 7 = 5\n\nThe coefficient of 3 is -2.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nProduct\n3×5 = 15\nRemainder\n1\n\nCheck the witness.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 106,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nPoints\n(0,0),(0,1),(1,0),(1,1)\n\nSort and deduplicate square corners.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nLower\n(0,0) → (1,0) → (1,1)\n\nBuild the lower chain.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nUpper\n(1,1) → (0,1) → (0,0)\n\nBuild the upper chain in reverse.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nHull CCW\n[(0,0),(1,0),(1,1),(0,1)]\n\nJoin without repeated endpoints.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  },
+  {
+    "id": 107,
+    "frames": [
+      "Let’s try a small example.\nStep 1 of 4\nState at this step\nWindow length\n3\nInitial window\naaa\n\nSearch aab inside aaab.\n\nShow the next step →",
+      "Let’s try a small example.\nStep 2 of 4\nState at this step\nRequired pattern\naab\nActual window\naaa\n\nA fingerprint mismatch can reject a candidate.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 3 of 4\nState at this step\nRemove high-place a\nthen multiply and add b\nNew window\naab\n\nRoll one position right.\n\n← Previous example step\nShow the next step →",
+      "Let’s try a small example.\nStep 4 of 4\nState at this step\nConfirmed start\n1\nWithout verification\ncollisions could produce false matches\n\nA matching fingerprint still needs exact verification.\n\n← Previous example step\nTry one question →"
+    ],
+    "overflow": false
+  }
+]

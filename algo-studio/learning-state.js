@@ -1,11 +1,23 @@
-import { lessons, route } from "./curriculum.js?v=20261019-tests1";
+import { validReasoningProgress } from "./reasoning-model.js?v=20261027-course2";
+import { lessons, route } from "./curriculum.js?v=20261027-course2";
 import { validSystemProgress } from "./system-design-model.js?v=20261016-system-audit1";
-export const initialState = () => ({ version: 1, done: {}, drafts: {}, reviews: {}, activity: [], ready: {}, practice: {}, systemDesign: {} });
+export const initialState = () => ({
+  version: 1,
+  done: {},
+  drafts: {},
+  reviews: {},
+  activity: [],
+  ready: {},
+  practice: {},
+  systemDesign: {},
+  reasoning: {},
+});
 export function upgradeState(saved) {
   const state = { ...initialState(), ...saved };
   state.ready ??= {};
   state.practice ??= {};
   state.systemDesign ??= {};
+  state.reasoning ??= {};
   return state;
 }
 export const ready = (state, id) => !!state.ready?.[id];
@@ -65,6 +77,7 @@ export function validBackup(s) {
     record(s.drafts) &&
     record(s.reviews) &&
     (s.systemDesign === undefined || validSystemProgress(s.systemDesign)) &&
+    (s.reasoning === undefined || validReasoningProgress(s.reasoning)) &&
     Array.isArray(s.activity) &&
     s.activity.every((x) => typeof x === "string" && /^\d{4}-\d{2}-\d{2}$/.test(x)) &&
     Object.entries(s.drafts).every(

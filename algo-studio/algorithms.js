@@ -49,7 +49,13 @@ export function insertionTrace(values) {
   const a = [...values];
   let checks = 0;
   const frames = [
-    { values: [...a], active: [], sorted: [0], text: "The first value is a sorted group of one. Insert each next value into that group.", checks },
+    {
+      values: [...a],
+      active: [],
+      sorted: a.length ? [0] : [],
+      text: a.length ? "The first value is a sorted group of one. Insert each next value into that group." : "The empty list is already sorted.",
+      checks,
+    },
   ];
   for (let i = 1; i < a.length; i++) {
     const key = a[i];

@@ -1,5 +1,5 @@
-import { initialState, validBackup, upgradeState } from "./learning-state.js?v=20261019-tests1";
-import { ProgressReplica, validDocument } from "./progress-sync.js?v=20261019-tests1";
+import { initialState, validBackup, upgradeState } from "./learning-state.js?v=20261027-course2";
+import { ProgressReplica, validDocument } from "./progress-sync.js?v=20261027-course2";
 const copy = (x) => JSON.parse(JSON.stringify(x));
 export class AccountSync {
   constructor({ client, storage, getState, setState, canApply, onStatus }) {
@@ -79,7 +79,8 @@ export class AccountSync {
       (Object.keys(s.done).length > 0 ||
         Object.keys(s.drafts).length > 0 ||
         Object.keys(s.practice).length > 0 ||
-        Object.keys(s.systemDesign).length > 0)
+        Object.keys(s.systemDesign).length > 0 ||
+        Object.keys(s.reasoning).length > 0)
     );
   }
   persist() {

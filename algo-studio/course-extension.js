@@ -873,14 +873,17 @@ export const requirements = {
   58: [3, 38],
 };
 export const futureTracks = [
-  ["Balanced and augmented trees", "BST operations → rotations → AVL/red-black trees → order statistics and segment trees."],
-  ["Deeper graph algorithms", "DFS and shortest paths → strongly connected components, bridges, Prim, Floyd–Warshall, flow, and matching."],
+  ["Storage and scale", "B-trees, external-memory analysis, cache-aware layouts, persistent data structures, and parallel algorithms."],
   [
-    "Reasoning and limits",
-    "Correctness and growth → formal induction, recurrence proofs, randomization, lower bounds, reductions, P/NP, and approximation.",
+    "Further graph and tree methods",
+    "Blossom matching, min-cost flow, heavy-light decomposition, Euler-tour range methods, and dynamic graph algorithms.",
   ],
   [
-    "Mathematical and specialist algorithms",
-    "GCD and bits → modular arithmetic, prime sieves, combinatorics, geometry, and external-memory or parallel algorithms.",
+    "Specialist string and numeric methods",
+    "Suffix arrays and automata, FFT, polynomial algorithms, segmented sieves, and probabilistic streaming sketches.",
+  ],
+  [
+    "Deeper theory",
+    "Probabilistic proofs, concentration bounds, advanced reductions, approximation hardness, and complexity classes beyond the introductory P/NP discussion.",
   ],
 ];

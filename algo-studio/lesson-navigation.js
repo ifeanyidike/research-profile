@@ -1,5 +1,5 @@
 // Navigation never awards progress or bypasses the checks needed to finish.
-export const testSuiteVersion = "20261019-tests1";
+export const testSuiteVersion = "20261027-course2";
 export function invalidateOldTestRun(draft) {
   if ((draft.results || draft.passedCode) && draft.testSuiteVersion !== testSuiteVersion) {
     draft.results = null;

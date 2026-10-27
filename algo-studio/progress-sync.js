@@ -1,6 +1,8 @@
-import { initialState, validBackup, upgradeState } from "./learning-state.js?v=20261019-tests1";
+import { reasoningDefaults } from "./reasoning-model.js?v=20261027-course2";
+import { reasoningSets } from "./reasoning-course.js?v=20261027-course2";
+import { initialState, validBackup, upgradeState } from "./learning-state.js?v=20261027-course2";
 import { systemLessonById } from "./system-design-course.js?v=20261016-system-audit1";
-const groups = ["done", "drafts", "reviews", "ready", "practice", "systemDesign"];
+const groups = ["done", "drafts", "reviews", "ready", "practice", "systemDesign", "reasoning"];
 const transient = new Set(["results", "passedCode", "testSuiteVersion"]);
 const equal = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 const clone = (x) => JSON.parse(JSON.stringify(x));
@@ -8,7 +10,7 @@ export function flattenProgress(state) {
   const out = {};
   for (const group of groups)
     for (const [id, value] of Object.entries(state[group] || {})) {
-      if (["drafts", "practice", "systemDesign"].includes(group))
+      if (["drafts", "practice", "systemDesign", "reasoning"].includes(group))
         for (const [field, v] of Object.entries(value)) {
           if (!transient.has(field) && v !== undefined) out[`${group}/${id}/${field}`] = v;
         }
@@ -21,6 +23,7 @@ function validKey(key) {
   const [group, id, field, ...rest] = key.split("/");
   if (rest.length || ["__proto__", "constructor", "prototype", "results", "passedCode", "testSuiteVersion"].includes(field)) return false;
   if (group === "activity") return !field && /^\d{4}-\d{2}-\d{2}$/.test(id);
+  if (group === "reasoning") return /^\d+$/.test(id) && Object.hasOwn(reasoningSets, id) && Object.hasOwn(reasoningDefaults, field);
   if (group === "systemDesign") return Object.hasOwn(systemLessonById, id) && !!field && /^[a-zA-Z][a-zA-Z0-9]*$/.test(field);
   if (!groups.includes(group) || !/^\d+(?::(?:check|recall|transfer))?$/.test(id)) return false;
   return group === "drafts" || group === "practice" ? !!field && /^[a-zA-Z][a-zA-Z0-9]*$/.test(field) : !field;

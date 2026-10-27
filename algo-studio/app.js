@@ -1,12 +1,16 @@
-import { AccountSync } from "./account-sync.js?v=20261019-tests1";
+import { studioIcon, studioHeroArt, coursePhases } from "./studio-ui.js?v=20261027-ui3";
+import { createReasoning } from "./reasoning-ui.js?v=20261027-course2";
+import { discovery } from "./discovery.js?v=20261027-course2";
+import { captureDisclosures, restoreDisclosures } from "./disclosures.js?v=20261027-course2";
+import { AccountSync } from "./account-sync.js?v=20261027-course2";
 import { createSystemDesign } from "./system-design-ui.js?v=20261016-system-ui1";
 import { systemLessons } from "./system-design-course.js?v=20261016-system-audit1";
 import { syncConfig } from "./sync-config.js?v=20261016-google1";
-import { lessons, modules, route, courseStages, futureTracks } from "./curriculum.js?v=20261019-tests1";
+import { lessons, modules, route, courseStages, futureTracks } from "./curriculum.js?v=20261027-course2";
 import { indentEdit, toolbarIndentEdit, backspaceIndentEdit, newlineEdit } from "./editor.js?v=20261016-algorithms-ui1";
-import { canVisitLessonStep, invalidateOldTestRun, testSuiteVersion } from "./lesson-navigation.js?v=20261019-tests1";
+import { canVisitLessonStep, invalidateOldTestRun, testSuiteVersion } from "./lesson-navigation.js?v=20261027-course2";
 import { highlightPython } from "./python-highlight.js";
-import { checkpoints, transferTasks } from "./practice-bank.js?v=20261019-tests1";
+import { checkpoints, transferTasks } from "./practice-bank.js?v=20261027-course2";
 import {
   initialState,
   upgradeState,
@@ -20,9 +24,9 @@ import {
   recordCheckpoint,
   validRun,
   validBackup,
-} from "./learning-state.js?v=20261019-tests1";
-import { lessonDiagram, growthCases, growthProfiles, projects } from "./teaching.js?v=20261016-clarity1";
-import { searchTrace, insertionTrace, bfsTrace, measure, reviewDate } from "./algorithms.js";
+} from "./learning-state.js?v=20261027-course2";
+import { lessonDiagram, growthCases, growthProfiles, projects } from "./teaching.js?v=20261027-course2";
+import { searchTrace, insertionTrace, bfsTrace, measure, reviewDate } from "./algorithms.js?v=20261027-course2";
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const py = (v) =>
@@ -131,13 +135,58 @@ function home() {
     review = activity.kind === "review",
     resume = !review && !!state.drafts[next.id],
     stage = courseStages[next.module];
-  return `<div class="system-track algorithm-dashboard"><div class="sd-track-switch"><span aria-current="page">Algorithms</span><a href="#system">System design</a></div><header class="sd-dashboard-heading"><span class="eyebrow green">ALGORITHMS & DATA STRUCTURES · PYTHON</span><h1>Make the idea click. Then make it work.</h1><p>Follow a small example, write the Python, and understand how much work it takes.</p><div class="sd-course-meta"><span>${lessons.length} guided lessons</span><span>${courseStages.length} stages</span><span>Python in your browser</span></div></header>
-  <div class="sd-start-grid"><section class="sd-next-card" aria-labelledby="algorithm-next-title"><div class="sd-next-meta"><span>${review ? "GUIDED PATH COMPLETE" : `${resume ? "PICK UP WHERE YOU LEFT OFF" : "YOUR NEXT LESSON"} · ${String(next.position).padStart(2, "0")}`}</span><span>${review ? "Keep practising" : `Stage ${next.module + 1} of ${courseStages.length}`}</span></div><h2 id="algorithm-next-title">${review ? "Keep connecting the ideas." : esc(next.title)}</h2><p>${review ? "Return to review, mixed problems, and projects to keep building fluency." : esc(next.simpleIdea)}</p>${activityLink(activity, review ? "Open your reviews" : resume ? "Continue lesson" : "Start lesson")}<div class="sd-course-progress"><div><span>${count} of ${lessons.length} lessons complete</span><span>${Math.round((count / lessons.length) * 100)}%</span></div><progress max="${lessons.length}" value="${count}" aria-label="Completed algorithm lessons">${count} of ${lessons.length}</progress></div></section>
-  <section class="sd-method-card" aria-labelledby="algorithm-method-title"><span class="eyebrow green">LEARN BY DOING</span><h2 id="algorithm-method-title">See it. Try it. Understand it.</h2><ol><li><span>1</span><div><strong>Understand the idea</strong><small>Follow a small example, one step at a time.</small></div></li><li><span>2</span><div><strong>Predict what happens</strong><small>Check your thinking with a quick question.</small></div></li><li><span>3</span><div><strong>Write the Python</strong><small>Run tests and learn from the result.</small></div></li><li><span>4</span><div><strong>Understand the cost</strong><small>See what changes as the input grows.</small></div></li></ol></section></div>
-  <div class="sd-outline-heading"><div><span class="eyebrow green">YOUR LEARNING PATH</span><h2>${review ? "Keep the ideas fresh." : esc(stage[0])}</h2></div><a class="subtle-link" href="#path">Full course outline →</a></div><div class="algorithm-home-links"><a href="#path/${next.module}"><span class="algorithm-link-icon" aria-hidden="true">⌁</span><span><strong>Explore your path</strong><small>${review ? "Revisit any of the course stages." : esc(stage[1])}</small></span><span aria-hidden="true">→</span></a><a href="#tools"><span class="algorithm-link-icon" aria-hidden="true">⊞</span><span><strong>Practise and experiment</strong><small>More problems, visual examples, and efficiency tools.</small></span><span aria-hidden="true">→</span></a>${due().length ? `<a href="#review"><span class="algorithm-link-icon" aria-hidden="true">↻</span><span><strong>${due().length} ideas ready for review</strong><small>Try remembering before you reread.</small></span><span aria-hidden="true">→</span></a>` : ""}</div></div>`;
+  return `<div class="studio-dashboard algorithm-dashboard">
+    <div class="studio-dashboard-top"><div class="sd-track-switch"><span aria-current="page">Algorithms</span><a href="#system">System design</a></div><span class="studio-edition">THE LEARNING STUDIO</span></div>
+    <header class="studio-hero"><div class="studio-hero-copy"><span class="eyebrow green">ALGORITHMS & DATA STRUCTURES</span><h1>A sharper way<br>to <em>think.</em></h1><p>Build your intuition, write the Python, and understand why it works. One small example at a time.</p><div class="studio-course-facts"><span><strong>${lessons.length}</strong> lessons</span><span><strong>${courseStages.length}</strong> stages</span><span><strong>${lessons.length + Object.keys(checkpoints).length + Object.keys(transferTasks).length}</strong> exercises</span></div></div>${studioHeroArt()}</header>
+    <section class="studio-session sd-next-card" aria-labelledby="algorithm-next-title"><div class="studio-session-icon">${studioIcon("book")}</div><div class="studio-session-copy"><span class="eyebrow">${review ? "GUIDED PATH COMPLETE" : `${resume ? "PICK UP WHERE YOU LEFT OFF" : count ? "UP NEXT" : "YOUR FIRST STEP"} · LESSON ${String(next.position).padStart(2, "0")}`}</span><h2 id="algorithm-next-title">${review ? "Keep the ideas fresh." : esc(next.title)}</h2><p>${review ? "Revisit an idea, challenge your reasoning, or try a new problem." : esc(next.simpleIdea)}</p><div class="studio-session-progress"><progress max="${lessons.length}" value="${count}" aria-label="Completed algorithm lessons"></progress><span>${count} of ${lessons.length} complete</span></div></div>${activityLink(activity, review ? "Open reviews" : resume ? "Continue lesson" : "Start learning")}</section>
+    <div class="studio-section-heading"><div><span class="eyebrow green">A LITTLE PRACTICE, EVERY DAY</span><h2>Make the ideas yours.</h2></div><a class="subtle-link" href="#tools">All learning tools ${studioIcon("arrow")}</a></div>
+    <div class="studio-workspace-grid">${[
+      [
+        "path",
+        "path",
+        "Follow the path",
+        `${courseStages.length} stages. One connected journey through algorithms and data structures.`,
+        "Explore the course",
+      ],
+      [
+        "practice",
+        "practice/mixed",
+        "Find your own approach",
+        "Varied problems that ask you to choose a strategy and adapt what you know.",
+        "Try mixed practice",
+      ],
+      [
+        "reasoning",
+        "reasoning",
+        "Defend your thinking",
+        "Explain why your plan works. Challenge it with a counterexample.",
+        "Open reasoning reviews",
+      ],
+    ]
+      .map(
+        ([icon, url, title, desc, label], i) =>
+          `<a class="studio-workspace-card" href="#${url}"><div class="workspace-card-top"><span class="workspace-icon">${studioIcon(icon)}</span><span class="workspace-card-index">0${i + 1}</span></div><h3>${title}</h3><p>${desc}</p><span class="workspace-card-link">${label}${studioIcon("arrow")}</span></a>`
+      )
+      .join("")}</div>
+    <section class="studio-current-stage"><div class="studio-section-heading"><div><span class="eyebrow green">${review ? "RETURN TO A FOUNDATION" : `YOUR CURRENT STAGE · ${String(next.module + 1).padStart(2, "0")}`}</span><h2>${esc(stage[0])}</h2></div><a class="subtle-link" href="#path/${next.module}">View stage ${studioIcon("arrow")}</a></div><div class="studio-stage-preview">${stage[4].map((id) => `<a href="#lesson/${id}"><span class="studio-row-number">${lessonComplete(state, id) ? "✓" : String(lessons[id].position).padStart(2, "0")}</span><span>${esc(lessons[id].title)}</span><small>${lessonComplete(state, id) ? "Complete" : id === next.id ? "Up next" : "Explore"}</small>${studioIcon("arrow")}</a>`).join("")}</div></section>
+    <section class="studio-method-strip" aria-label="How a lesson works"><span class="eyebrow">THE METHOD</span><div>${[
+      ["Understand", "Follow a small example."],
+      ["Predict", "Test your intuition."],
+      ["Code", "Make the idea work."],
+      ["Reflect", "Explain the why."],
+    ]
+      .map(([title, desc], i) => `<div><span>0${i + 1}</span><strong>${title}</strong><small>${desc}</small></div>`)
+      .join("")}</div><a href="#method" class="subtle-link">How learning works ${studioIcon("arrow")}</a></section>
+  </div>`;
 }
 function toolsView() {
   return `${pageIntro("PRACTISE. EXPLORE. REMEMBER.", "Your learning tools.", "Choose a tool for what you want to understand or practise.")}<div class="tools-list">${[
+    [
+      "reasoning",
+      "Defend your approach",
+      "Choose a method, justify correctness, challenge it with a fresh case, and account for its cost.",
+      "Open reasoning reviews",
+    ],
     ["practice", "Practice an earlier lesson", "Use this when you want another attempt at something you have learned.", "Open practice"],
     ["visual", "Watch the steps happen", "Use this when you want to slow down an algorithm and see what changes.", "Open visual examples"],
     [
@@ -146,7 +195,12 @@ function toolsView() {
       "Run your own saved solution across controlled input sizes, or compare reference algorithms.",
       "Open efficiency comparison",
     ],
-    ["projects", "Build something in stages", "Connect several skills in a route planner or packing planner.", "Open projects"],
+    [
+      "projects",
+      "Build something in stages",
+      "Connect skills in six projects with working interfaces, acceptance criteria, and changed requirements.",
+      "Open projects",
+    ],
     [
       "review",
       "Remember an earlier idea",
@@ -156,7 +210,7 @@ function toolsView() {
   ]
     .map(
       ([route, title, description, label]) =>
-        `<article class="learning-tool"><span class="tool-symbol" aria-hidden="true">${{ practice: "⌁", visual: "▷", lab: "↗", projects: "▦", review: "↻" }[route]}</span><div><h2>${title}</h2><p>${description}</p></div><a class="button secondary" href="#${route}">${label} →</a></article>`
+        `<article class="learning-tool"><span class="tool-symbol" aria-hidden="true">${studioIcon({ visual: "path", lab: "practice", review: "reasoning" }[route] || route)}</span><div><h2>${title}</h2><p>${description}</p></div><a class="button secondary" href="#${route}">${label} →</a></article>`
     )
     .join("")}</div><div class="tools-method"><a class="subtle-link" href="#method">How the teaching works and where the ideas came from ↗</a></div>`;
 }
@@ -176,25 +230,30 @@ function skillLabel(id) {
 function pathView(open) {
   const passed = route.filter((id) => lessonComplete(state, id)).length,
     next = nextActivity(state);
-  return `${pageIntro("YOUR LEARNING PATH", "One foundation before the next.", `${lessons.length} guided lessons. Start where you left off and build one useful skill at a time.`)}<section class="algorithm-path-progress" aria-label="Course progress"><div><strong>${passed} of ${lessons.length} lessons complete</strong><span>${Math.round((passed / lessons.length) * 100)}%</span></div><progress max="${lessons.length}" value="${passed}" aria-label="Completed algorithm lessons">${passed} of ${lessons.length}</progress>${activityLink(next, next.kind === "review" ? "Open review" : "Go to my next lesson")}</section><p class="path-explanation">Finish a lesson to open the next. Extra checkpoints are optional practice. You can open a later lesson early from its preview, or return to earlier lessons whenever you need.</p><div class="sd-stages curriculum">${courseStages
+  return `${pageIntro("YOUR LEARNING PATH", "Your path to deeper understanding.", `${lessons.length} guided lessons. Start where you left off and build one useful skill at a time.`)}<section class="algorithm-path-progress" aria-label="Course progress"><div><strong>${passed} of ${lessons.length} lessons complete</strong><span>${Math.round((passed / lessons.length) * 100)}%</span></div><progress max="${lessons.length}" value="${passed}" aria-label="Completed algorithm lessons">${passed} of ${lessons.length}</progress>${activityLink(next, next.kind === "review" ? "Open review" : "Go to my next lesson")}</section><p class="path-explanation">Finish a lesson to open the next. Extra checkpoints are optional practice. You can open a later lesson early from its preview, or return to earlier lessons whenever you need.</p><div class="sd-stages curriculum">${courseStages
     .map((stage, i) => {
       const ids = stage[4],
         count = ids.filter((id) => lessonComplete(state, id)).length;
-      return `<details class="sd-stage algorithm-stage" ${(open !== undefined ? Number(open) === i : nextLesson().module === i) ? "open" : ""}><summary><span class="sd-stage-number">${count === ids.length ? "✓" : String(i + 1).padStart(2, "0")}</span><span><strong>${esc(stage[0])}</strong><small>${esc(stage[1])}</small></span><span class="sd-stage-count">${count} / ${ids.length} complete</span></summary><ol>${ids
+      return `${coursePhases[i] ? `<div class="studio-course-phase"><span>${coursePhases[i][0]}</span><div><h2>${coursePhases[i][1]}</h2><p>${coursePhases[i][2]}</p></div></div>` : ""}<details class="sd-stage algorithm-stage" ${(open !== undefined ? Number(open) === i : nextLesson().module === i) ? "open" : ""}><summary><span class="sd-stage-number">${count === ids.length ? "✓" : String(i + 1).padStart(2, "0")}</span><span><strong>${esc(stage[0])}</strong><small>${esc(stage[1])}</small></span><span class="sd-stage-count">${count} / ${ids.length} complete</span></summary><ol>${ids
         .map((id) => {
           const l = lessons[id],
             done = lessonComplete(state, id),
             available = unlocked(id);
           return `<li><a href="#lesson/${id}" class="path-lesson" ${next.kind === "lesson" && next.id === id ? 'aria-current="step"' : ""}><span class="sd-lesson-status ${done ? "done" : ""}" aria-label="${done ? "Complete" : available ? "Ready" : "Preview"}">${done ? "✓" : String(l.position).padStart(2, "0")}</span><span><strong>${esc(l.title)}</strong><small>${esc(skillLabel(id))}</small></span><span class="sd-row-tag">${done ? "Revisit" : next.id === id ? "Up next →" : available ? "Open →" : "Preview"}</span></a></li>`;
         })
-        .join("")}</ol></details>`;
+        .join("")}</ol><a class="subtle-link stage-reasoning-link" href="#reasoning/${i}">Defend the ideas in this stage →</a></details>`;
     })
     .join(
       ""
-    )}</div><details class="more-detail algorithm-further"><summary>Where to go after this course</summary><p>These deeper tracks are suggestions for further study, rather than lessons included in this course.</p>${futureTracks.map(([h, p]) => `<details class="more-detail"><summary>${h}</summary><p>${p}</p></details>`).join("")}<a class="subtle-link" href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/" target="_blank" rel="noopener">Explore deeper algorithm study at MIT ↗</a></details>`;
+    )}</div><details class="more-detail algorithm-further"><summary>Where to go after this course</summary><p>This course builds foundations. Expertise also needs deeper study, correctness arguments, and varied problems you have not seen before. The tracks below are remaining study, not included lessons.</p>${futureTracks.map(([h, p]) => `<details class="more-detail"><summary>${h}</summary><p>${p}</p></details>`).join("")}<a class="subtle-link" href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/" target="_blank" rel="noopener">Explore deeper algorithm study at MIT ↗</a></details>`;
 }
 function quizMarkup(q, key, value) {
   return `<h3>${q.prompt}</h3><div class="answers">${q.options.map((a, i) => `<button class="answer ${value === i ? (i === q.answer ? "correct" : "incorrect") : ""}" data-answer="${key}" data-index="${i}" ${key === "review" && value !== undefined ? "disabled" : ""}><span>${String.fromCharCode(65 + i)}</span>${esc(a)}${value === i ? `<b>${i === q.answer ? "✓" : "×"}</b>` : ""}</button>`).join("")}</div>${value !== undefined ? `<div class="feedback ${value === q.answer ? "success" : "retry"}" role="status"><strong>${value === q.answer ? "That’s the idea." : "A useful chance to rethink."}</strong><p>${value === q.answer ? q.why : `You chose “${esc(q.options[value])}”. ${q.why} Trace the example, then choose again.`}</p></div>` : ""}`;
+}
+function discoveryMarkup(l) {
+  const reasoning = l.discovery || discovery[l.id];
+  const headings = ["Start with a straightforward plan", "What can we reuse or rule out?", "Why the plan is safe"];
+  return `<section class="lesson-discovery" aria-label="How to work out the approach"><h3>How would we work this out?</h3>${reasoning.map((paragraph, i) => `<h4>${headings[i]}</h4><p>${esc(paragraph)}</p>`).join("")}</section>`;
 }
 function lessonWords(l) {
   return `<details class="more-detail lesson-words"><summary>Words in this lesson, explained</summary><dl>${l.words.map(([term, meaning]) => `<div><dt>${esc(term)}</dt><dd>${esc(meaning)}</dd></div>`).join("")}</dl></details>`;
@@ -221,10 +280,10 @@ function lessonView(id) {
   const stepNames = ["Understand", "Predict", "Code", "Reflect"];
   return `<div class="lesson-heading"><a href="#home" class="subtle-link">← Back to learning</a><span class="muted">Step ${l.position} of ${lessons.length}</span></div><h1 class="lesson-title">${l.title}</h1><div class="algorithm-lesson-layout ${step === 2 ? "is-coding" : ""}"><div class="algorithm-lesson-main">${state.done[id] ? continuationPanel(id) : ""}<nav class="sd-steps algorithm-steps step-tabs" aria-label="Lesson steps">${stepNames.map((name, i) => `<button data-lesson-step="${i}" ${i === step ? 'aria-current="step"' : ""} ${canVisitLessonStep(l, d, i) ? "" : "disabled"}><span>${i + 1}</span>${name}</button>`).join("")}</nav>
  ${step > 0 ? `<button class="text-button lesson-back" data-step="${step - 1}">← Back to ${stepNames[step - 1].toLowerCase()}</button>` : ""}
- ${step === 0 ? `<article class="lesson-panel focused-lesson"><span class="eyebrow green">THE IDEA IN PLAIN WORDS</span><h2>${l.simpleIdea}</h2><div class="lesson-explanation">${l.explanation.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("")}</div><section class="walkthrough" aria-label="Worked example"><div class="walkthrough-heading"><strong>Let’s try a small example.</strong><span>Step ${walk + 1} of ${l.walk.length}</span></div>${lessonDiagram(l, walk)}<p class="walkthrough-step" tabindex="-1" aria-live="polite">${esc(l.walk[walk])}</p><div class="walkthrough-actions">${walk > 0 ? `<button class="text-button" data-walk="${walk - 1}">← Previous example step</button>` : "<span></span>"}${walk < l.walk.length - 1 ? `<button class="button primary" data-walk="${walk + 1}">Show the next step →</button>` : '<button class="button primary" data-step="1">Try one question →</button>'}</div></section><details class="more-detail"><summary>What this builds on</summary><p>${l.requires.length ? l.requires.map((p) => `<a href="#lesson/${p}">${lessons[p].title}</a>`).join(" · ") : "Python functions, loops, and integer lists. Start with the example; use hints if you need a reminder."}</p></details><details class="more-detail"><summary>An everyday example</summary><p>${l.analogy}</p></details>${lessonWords(l)}<details class="more-detail"><summary>A mistake to watch for</summary><p>${l.trap}</p></details><a class="subtle-link placement-link" href="#check/${id}">Already know this? Try a different problem →</a></article>` : ""}
+ ${step === 0 ? `<article class="lesson-panel focused-lesson"><span class="eyebrow green">THE IDEA IN PLAIN WORDS</span><h2>${l.simpleIdea}</h2><div class="lesson-explanation">${(l.discovery && l.discovery.join("\n") === l.explanation.slice(1).join("\n") ? l.explanation.slice(0, 1) : l.explanation).map((paragraph) => `<p>${esc(paragraph)}</p>`).join("")}</div>${discoveryMarkup(l)}<section class="walkthrough" aria-label="Worked example"><div class="walkthrough-heading"><strong>Let’s try a small example.</strong><span>Step ${walk + 1} of ${l.walk.length}</span></div>${lessonDiagram(l, walk)}<p class="walkthrough-step" tabindex="-1" aria-live="polite">${esc(l.walk[walk])}</p><div class="walkthrough-actions">${walk > 0 ? `<button class="text-button" data-walk="${walk - 1}">← Previous example step</button>` : "<span></span>"}${walk < l.walk.length - 1 ? `<button class="button primary" data-walk="${walk + 1}">Show the next step →</button>` : '<button class="button primary" data-step="1">Try one question →</button>'}</div></section><details class="more-detail"><summary>What this builds on</summary><p>${l.requires.length ? l.requires.map((p) => `<a href="#lesson/${p}">${lessons[p].title}</a>`).join(" · ") : "Python functions, loops, and integer lists. Start with the example; use hints if you need a reminder."}</p></details><details class="more-detail"><summary>An everyday example</summary><p>${l.analogy}</p></details>${lessonWords(l)}<details class="more-detail"><summary>A mistake to watch for</summary><p>${l.trap}</p></details><a class="subtle-link placement-link" href="#check/${id}">Already know this? Try a different problem →</a></article>` : ""}
  ${step === 1 ? `<article class="lesson-panel focused-lesson"><span class="eyebrow green">ONE QUICK QUESTION</span><p class="step-guidance">Choose an answer. If you miss it, you can try again.</p>${quizMarkup(l.predict, "predict", d.predict)}<button class="button primary" data-step="2" ${d.predict !== l.predict.answer ? "disabled" : ""}>Next: write Python →</button></article>` : ""}
  ${step === 2 ? practicePanel(l, d) : ""}
- ${step === 3 ? `<article class="lesson-panel focused-lesson"><span class="eyebrow green">THE LAST STEP</span><h2>What changes when the input gets bigger?</h2>${costExplanation(l)}${quizMarkup(l.reflect, "reflect", d.reflect)}<details class="more-detail notes-details"><summary>Keep a note (optional)</summary><label class="notes-label" for="lesson-notes">Explain the idea in your own words</label><textarea id="lesson-notes" class="notes" placeholder="What helped this idea click for you?">${esc(d.notes || "")}</textarea></details>${d.passedCode !== d.code ? '<p class="checkpoint-needed">Your code needs a test run before you can finish.</p><button class="button secondary" data-step="2">Go back to the Python exercise →</button>' : ""}<button class="button primary" id="complete-lesson" ${d.predict !== l.predict.answer || d.reflect !== l.reflect.answer || d.passedCode !== d.code ? "disabled" : ""}>${afterFinish.kind === "review" ? "Finish & open review" : "Finish & open next lesson"} <span>→</span></button>${d.assisted ? '<p class="fine-print">You used the worked solution. This counts as guided practice. You can reset the editor and try it yourself later.</p>' : ""}<p class="fine-print">${afterFinish.kind === "lesson" ? `Up next: ${esc(lessons[afterFinish.id].title)}.` : "Next: review and more practice."} Extra checkpoints are optional.</p><button class="text-button" id="complete-with-checkpoint" ${d.predict !== l.predict.answer || d.reflect !== l.reflect.answer || d.passedCode !== d.code ? "disabled" : ""}>Finish & try an extra checkpoint instead →</button><div id="completion-message" role="status"></div></article>` : ""}</div>${step === 2 ? "" : algorithmLessonRail(l)}</div>`;
+ ${step === 3 ? `<article class="lesson-panel focused-lesson"><span class="eyebrow green">THE LAST STEP</span><h2>What changes when the input gets bigger?</h2>${costExplanation(l)}<p><a class="subtle-link" href="#reasoning/${l.module}">Practise choosing and defending the ideas in this stage →</a></p>${quizMarkup(l.reflect, "reflect", d.reflect)}<details class="more-detail notes-details"><summary>Keep a note (optional)</summary><label class="notes-label" for="lesson-notes">Explain the idea in your own words</label><textarea id="lesson-notes" class="notes" placeholder="What helped this idea click for you?">${esc(d.notes || "")}</textarea></details>${d.passedCode !== d.code ? '<p class="checkpoint-needed">Your code needs a test run before you can finish.</p><button class="button secondary" data-step="2">Go back to the Python exercise →</button>' : ""}<button class="button primary" id="complete-lesson" ${d.predict !== l.predict.answer || d.reflect !== l.reflect.answer || d.passedCode !== d.code ? "disabled" : ""}>${afterFinish.kind === "review" ? "Finish & open review" : "Finish & open next lesson"} <span>→</span></button>${d.assisted ? '<p class="fine-print">You used the worked solution. This counts as guided practice. You can reset the editor and try it yourself later.</p>' : ""}<p class="fine-print">${afterFinish.kind === "lesson" ? `Up next: ${esc(lessons[afterFinish.id].title)}.` : "Next: review and more practice."} Extra checkpoints are optional.</p><button class="text-button" id="complete-with-checkpoint" ${d.predict !== l.predict.answer || d.reflect !== l.reflect.answer || d.passedCode !== d.code ? "disabled" : ""}>Finish & try an extra checkpoint instead →</button><div id="completion-message" role="status"></div></article>` : ""}</div>${step === 2 ? "" : algorithmLessonRail(l)}</div>`;
 }
 function practiceDraft(id, kind = "check") {
   const key = `${id}:${kind}`;
@@ -406,14 +465,14 @@ function challengeView(id, kind) {
       id
     ].requires
       .filter((p) => !ready(state, p))
-      .map((p) => `<p><a class="subtle-link" href="#lesson/${p}">${esc(lessons[p].title)} →</a></p>`)
+      .map((p) => `<p><a class="subtle-link" href="#check/${p}">${esc(checkpoints[p].title)} →</a></p>`)
       .join("")}</div>`;
   const context = activeExercise(),
     { exercise: l, d } = context;
   return `<div class="lesson-heading"><a class="subtle-link" href="${kind === "transfer" ? "#practice/mixed" : `#lesson/${id}`}">← ${kind === "transfer" ? "Back to mixed practice" : "Back to the lesson"}</a><span class="muted">${kind === "recall" ? "Recall after a gap" : kind === "transfer" ? "Choose your approach" : "A different problem"}</span></div><h1 class="lesson-title">${l.title}</h1><p class="checkpoint-intro">${kind === "recall" ? "Try from memory before reopening an example. This repeats a familiar problem; mixed practice offers different situations." : kind === "transfer" ? "Choose an approach yourself. Explain what makes it a good fit." : `${state.done[id] && !ready(state, id) ? "Lesson complete. This is optional extra practice. " : ""}Try this variation, run the tests, then save your attempt below the results. Notes are optional.`}</p>${practicePanel(l, d, true)}`;
 }
 function practicePanel(l, d, checkpoint = false) {
-  return `<div class="practice-layout"><section class="task-panel"><span class="eyebrow green">${checkpoint ? "PUT THE IDEA TO WORK" : "YOUR TURN"}</span><h2 id="exercise-task-title" tabindex="-1">${checkpoint ? "Solve one small problem." : "Write a small Python function."}</h2><p>${l.task}</p><dl class="exercise-brief"><div><dt>What you’re given</dt><dd>${esc(l.exerciseBrief.input)}</dd></div><div><dt>What to return</dt><dd>${esc(l.exerciseBrief.output)}</dd></div></dl><p class="return-reminder">Use <code>return</code> to send the answer back from <code>solve</code>. Printing it is not enough.</p><div class="example-box"><span class="eyebrow">WHEN YOU CALL</span><code>solve(${l.tests[0].args.map(py).map(esc).join(", ")})</code><span class="eyebrow">IT SHOULD RETURN</span><code>${esc(py(l.tests[0].expected))}</code><p class="example-reason"><strong>Why this answer?</strong> ${esc(l.exerciseBrief.example)}</p></div><details class="practice-help" ${(d.hint || 0) > 0 ? "open" : ""}><summary>Need a hint?</summary><div class="hint-block">${l.hints
+  return `<div class="practice-layout"><section class="task-panel"><span class="eyebrow green">${checkpoint ? "PUT THE IDEA TO WORK" : "YOUR TURN"}</span><h2 id="exercise-task-title" tabindex="-1">${checkpoint ? "Solve one small problem." : "Write a small Python function."}</h2><p>${l.task}</p>${l.readingLesson !== undefined ? `<p class="checkpoint-intro">This variation introduces another idea. <a href="#lesson/${l.readingLesson}">Read ${esc(lessons[l.readingLesson].title)} before trying it →</a></p>` : ""}<dl class="exercise-brief"><div><dt>What you’re given</dt><dd>${esc(l.exerciseBrief.input)}</dd></div><div><dt>What to return</dt><dd>${esc(l.exerciseBrief.output)}</dd></div></dl><p class="return-reminder">Use <code>return</code> to send the answer back from <code>solve</code>. Printing it is not enough.</p><div class="example-box"><span class="eyebrow">WHEN YOU CALL</span><code>solve(${l.tests[0].args.map(py).map(esc).join(", ")})</code><span class="eyebrow">IT SHOULD RETURN</span><code>${esc(py(l.tests[0].expected))}</code><p class="example-reason"><strong>Why this answer?</strong> ${esc(l.exerciseBrief.example)}</p></div><details class="practice-help" ${(d.hint || 0) > 0 ? "open" : ""}><summary>Need a hint?</summary><div class="hint-block">${l.hints
     .slice(0, d.hint || 0)
     .map((h, i) => `<p><b>${i + 1}.</b> ${h}</p>`)
     .join(
@@ -434,16 +493,16 @@ function resultsMarkup(l, results) {
 let practiceMode = "topics";
 function practiceView(mode) {
   practiceMode = mode === "mixed" ? "mixed" : "topics";
-  return `${pageIntro("TURN IDEAS INTO SKILLS", practiceMode === "mixed" ? "Choose the approach yourself." : "Practice one useful skill.", "Supported work, fresh attempts, and delayed recall have different jobs.")}<div class="practice-modes"><a class="button ${practiceMode === "topics" ? "primary" : "secondary"}" href="#practice">By topic</a><a class="button ${practiceMode === "mixed" ? "primary" : "secondary"}" href="#practice/mixed">Mixed problems</a></div>${practiceMode === "topics" ? '<div class="practice-filter"><label for="practice-search">Find an exercise</label><input id="practice-search" type="search" placeholder="Search by topic or lesson…"></div>' : '<p class="checkpoint-intro">These are additional problems. Pattern labels are hidden. Problems appear once their foundation checkpoint is ready, and can be revisited.</p>'}<div class="exercise-grid" id="exercise-grid">${exerciseCards("")}</div>`;
+  return `${pageIntro("TURN IDEAS INTO SKILLS", practiceMode === "mixed" ? "Choose the approach yourself." : "Practice one useful skill.", `Choose from ${Object.keys(checkpoints).length} topic checkpoints and ${Object.keys(transferTasks).length} mixed problems. Your guided lesson exercises are separate.`)}<div class="practice-modes"><a class="button ${practiceMode === "topics" ? "primary" : "secondary"}" href="#practice">By topic</a><a class="button ${practiceMode === "mixed" ? "primary" : "secondary"}" href="#practice/mixed">Mixed problems</a></div>${practiceMode === "topics" ? '<div class="practice-filter"><label for="practice-search">Find an exercise</label><input id="practice-search" type="search" placeholder="Search by topic or lesson…"></div>' : '<p class="checkpoint-intro">These are additional problems. Pattern labels are hidden. The full bank is shown here; each problem links to any foundation checkpoints you still need.</p>'}<div class="exercise-grid" id="exercise-grid">${exerciseCards("")}</div>`;
 }
 function exerciseCards(term) {
   if (practiceMode === "mixed") {
-    const tasks = Object.entries(transferTasks).filter(([, problem]) => problem.requires.every((id) => ready(state, id)));
+    const tasks = Object.entries(transferTasks);
     return tasks.length
       ? tasks
           .map(
             ([id, l], i) =>
-              `<article class="exercise-card"><span class="tag">MIXED PRACTICE ${i + 1}</span><h3>${l.title}</h3><p>${l.task}</p><a class="subtle-link" href="#check/${id}/transfer">${state.practice[`${id}:transfer`]?.completedAt ? "Try again" : "Choose an approach"} →</a></article>`
+              `<article class="exercise-card"><span class="tag">MIXED PRACTICE ${i + 1}</span><p class="fine-print">${l.requires.every((id) => ready(state, id)) ? "Ready to try" : "Foundation checkpoints available"}</p><h3>${l.title}</h3><p>${l.task}</p><a class="subtle-link" href="#check/${id}/transfer">${state.practice[`${id}:transfer`]?.completedAt ? "Try again" : l.requires.every((id) => ready(state, id)) ? "Choose an approach" : "See foundations"} →</a></article>`
           )
           .join("")
       : '<p class="empty-text">Pass some foundation checkpoints first. Mixed problems will appear here as you build those skills.</p>';
@@ -586,7 +645,7 @@ function projectsView() {
       const mission = project.missions.find(([id, , , kind]) =>
         kind === "lesson" ? !state.done[id] : kind === "transfer" ? !state.practice[`${id}:transfer`]?.completedAt : !ready(state, id)
       );
-      return `<article class="learning-tool project-card"><div><h2>${project.title}</h2><p>${project.description}</p><ol class="project-missions">${project.missions
+      return `<article class="learning-tool project-card"><div><h2>${project.title}</h2><p>${project.description}</p>${project.contract ? `<div class="project-contract"><h3>The finished interface</h3><p>${esc(project.contract)}</p><h3>Acceptance checks you should defend</h3><ul>${project.acceptance.map((item) => `<li>${esc(item)}</li>`).join("")}</ul><p class="fine-print">The final coding mission checks this interface. Your proof, cost explanation, and independent extension require your own review.</p></div>` : ""}<ol class="project-missions">${project.missions
         .map(([id, h, p, kind]) => {
           const done =
             kind === "lesson" ? !!state.done[id] : kind === "transfer" ? !!state.practice[`${id}:transfer`]?.completedAt : ready(state, id);
@@ -594,7 +653,7 @@ function projectsView() {
         })
         .join(
           ""
-        )}</ol></div>${mission ? `<a class="button primary" href="#${mission[3] === "lesson" ? "lesson" : "check"}/${mission[0]}${mission[3] === "transfer" ? "/transfer" : ""}">Continue this project →</a>` : '<span class="tag">All missions attempted · test your own changes next</span>'}</article>`;
+        )}</ol>${project.extension ? `<details class="more-detail"><summary>Take it further with a changed requirement</summary><p>${esc(project.extension)}</p></details>` : ""}</div>${mission ? `<a class="button primary" href="#${mission[3] === "lesson" ? "lesson" : "check"}/${mission[0]}${mission[3] === "transfer" ? "/transfer" : ""}">Continue this project →</a>` : '<span class="tag">All missions attempted · test your own changes next</span>'}</article>`;
     })
     .join("")}</div>`;
 }
@@ -905,7 +964,11 @@ function currentLesson() {
   const [route, id] = location.hash.slice(1).split("/");
   return ["lesson", "check"].includes(route) ? Number(id) : -1;
 }
+const reasoningUI = createReasoning({ getState: () => state, save, render, stages: courseStages });
+const disclosureViews = new Map();
+let renderedView = null;
 function render() {
+  if (renderedView !== null) disclosureViews.set(renderedView, captureDisclosures($("#main")));
   stopPlay();
   const [route = "home", param, variant] = location.hash.slice(1).split("/");
   document.body.classList.toggle("system-design-route", route === "system");
@@ -920,6 +983,7 @@ function render() {
     lab: "Efficiency lab",
     review: "Review",
     projects: "Projects",
+    reasoning: "Reasoning review",
     method: "How it works",
     system: "System design",
   };
@@ -929,7 +993,7 @@ function render() {
   document.querySelectorAll("[data-nav]").forEach((a) => {
     const selected =
       a.dataset.nav ===
-      (["practice", "visual", "lab", "review", "projects", "method"].includes(route)
+      (["practice", "visual", "lab", "review", "projects", "method", "reasoning"].includes(route)
         ? "tools"
         : ["lesson", "check"].includes(route)
           ? "home"
@@ -938,35 +1002,51 @@ function render() {
     if (selected) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");
   });
+  document.querySelectorAll("[data-workbench]").forEach((a) => {
+    const selected = a.dataset.workbench === route;
+    a.classList.toggle("active", selected);
+    if (selected) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
   if ($("#due-count")) $("#due-count").textContent = due().length;
   const content =
-    route === "system"
-      ? systemUI.view(param, variant)
-      : route === "tools"
-        ? toolsView()
-        : route === "path"
-          ? pathView(param)
-          : route === "lesson"
-            ? lessonView(Number(param))
-            : route === "check"
-              ? challengeView(Number(param), variant)
-              : route === "practice"
-                ? practiceView(param)
-                : route === "visual"
-                  ? visualView()
-                  : route === "lab"
-                    ? labView()
-                    : route === "review"
-                      ? reviewView()
-                      : route === "projects"
-                        ? projectsView()
-                        : route === "method"
-                          ? methodView()
-                          : home();
+    route === "reasoning"
+      ? reasoningUI.view(param)
+      : route === "system"
+        ? systemUI.view(param, variant)
+        : route === "tools"
+          ? toolsView()
+          : route === "path"
+            ? pathView(param)
+            : route === "lesson"
+              ? lessonView(Number(param))
+              : route === "check"
+                ? challengeView(Number(param), variant)
+                : route === "practice"
+                  ? practiceView(param)
+                  : route === "visual"
+                    ? visualView()
+                    : route === "lab"
+                      ? labView()
+                      : route === "review"
+                        ? reviewView()
+                        : route === "projects"
+                          ? projectsView()
+                          : route === "method"
+                            ? methodView()
+                            : home();
   $("#main").innerHTML = route === "system" ? content : `<div class="algorithm-track" data-view="${esc(route)}">${content}</div>`;
+  renderedView =
+    (location.hash || "#home") +
+    (route === "lesson" && lessons[Number(param)]
+      ? `:step/${draft(Number(param)).step || 0}`
+      : route === "system"
+        ? `:step/${state.systemDesign[param]?.step || 0}`
+        : "");
+  restoreDisclosures($("#main"), disclosureViews.get(renderedView));
   if (route === "visual") updateVisual();
   if (route === "lab") updateLab();
-  if (["home", "lesson", "check", "practice", "system"].includes(route || "home")) {
+  if (["home", "lesson", "check", "practice", "system", "reasoning"].includes(route || "home")) {
     $("#main").insertAdjacentHTML(
       "afterbegin",
       `<div class="progress-save-panel sd-save-status" id="progress-save-panel"><p id="progress-save-status" role="status"></p><button class="text-button" id="progress-save-account"></button></div>`
@@ -977,6 +1057,7 @@ function render() {
   $("#menu-button").setAttribute("aria-expanded", "false");
   bindPage();
   if (route === "system") systemUI.bind(param, variant);
+  if (route === "reasoning") reasoningUI.bind(param);
 }
 function bindPage() {
   const id = currentLesson();
@@ -1465,6 +1546,9 @@ document.addEventListener("keydown", (e) => {
     $("#menu-button").setAttribute("aria-expanded", "false");
   }
 });
+document.querySelectorAll("[data-studio-icon]").forEach((element) => {
+  element.innerHTML = studioIcon(element.dataset.studioIcon);
+});
 render();
 if (!storageAvailable) toast("Browser storage is unavailable. Export progress to keep your work.");
 
@@ -1504,7 +1588,11 @@ function updateAccountUI() {
 }
 
 function replaceWorkspace(next, accountChanged) {
-  if (accountChanged) accountEpoch++;
+  if (accountChanged) {
+    accountEpoch++;
+    disclosureViews.clear();
+    renderedView = null;
+  }
   state = next;
   reviewSession = null;
   render();

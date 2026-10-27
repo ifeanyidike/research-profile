@@ -1,11 +1,17 @@
-import { searchTrace, insertionTrace } from "./algorithms.js";
+import { advancedDiagram } from "./advanced-diagrams.js?v=20261027-course2";
+import { additionalFrames } from "./walkthrough-frames.js?v=20261027-course2";
+import { searchTrace, insertionTrace } from "./algorithms.js?v=20261027-course2";
 const esc = (x) => String(x).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const strip = (values, active = []) =>
   `<div class="trace-cells">${values.map((v, i) => `<span class="trace-cell ${active.includes(i) ? "current" : ""}"><b>${esc(v)}</b><small>${i}</small></span>`).join("")}</div>`;
 export function lessonDiagram(l, step) {
   let content = "",
     label = "";
-  if (l.id === 0) {
+  const authored = l.diagramFrames || walkthroughFrames[l.id];
+  if (authored) {
+    label = "State at this step";
+    content = `${advancedDiagram(l.id, step)}<dl class="reasoning-frame">${authored[step].map(([name, value]) => `<div><dt>${esc(name)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>`;
+  } else if (l.id === 0) {
     label = "Checking the shopping list";
     content = strip(["bread", "milk", "eggs"], step === 0 ? [] : [step - 1]);
   } else if (l.id === 38) {
@@ -17,7 +23,7 @@ export function lessonDiagram(l, step) {
     content = strip([..."level"], step === 0 ? [0, 4] : step === 1 ? [1, 3] : [2]);
   } else if (l.id === 4) {
     label = "The active three-day window";
-    content = strip([2, 1, 5, 1, 3], step === 0 ? [0, 1, 2] : step === 1 ? [2, 3, 4] : [2, 3, 4]);
+    content = strip([2, 1, 5, 1, 3], step === 0 ? [0, 1, 2] : step === 1 ? [1, 2, 3] : [2, 3, 4]);
   } else if (l.id === 5) {
     label = "Prefix totals include a leading zero";
     content = strip([0, 3, 5, 12], step === 0 ? [] : step === 1 ? [1, 3] : [1, 3]);
@@ -52,7 +58,7 @@ export function lessonDiagram(l, step) {
     label = "Outgoing neighbors match the directed edges";
     content = '<div class="trace-chain"><span>0 → 1</span><span>0 → 2</span><span>[[1,2], [], []]</span></div>';
   } else if ([18, 19, 23].includes(l.id)) {
-    label = "Directions describe which moves are allowed";
+    label = "Connection map: these allowed moves stay unchanged during the example";
     content = `<div class="trace-chain"><span>A → B → D</span><span>${l.id === 23 ? "A → C" : l.id === 19 ? "A → C → A" : "A → C → D"}</span></div>`;
   } else if (l.id === 48) {
     label = "Two calls need the same smaller answer";
@@ -148,3 +154,277 @@ export const projects = [
     ],
   },
 ];
+
+const walkthroughFrames = {
+  ...additionalFrames,
+  14: [
+    [
+      ["Waiting call", "solve(3) = 3 × solve(2)"],
+      ["Next call", "solve(2)"],
+    ],
+    [
+      ["Waiting calls", "solve(3), solve(2), solve(1)"],
+      ["Base answer", "solve(0) = 1"],
+    ],
+    [
+      ["Return to solve(1)", "1 × 1 = 1"],
+      ["Return to solve(2)", "2 × 1 = 2"],
+      ["Return to solve(3)", "3 × 2 = 6"],
+    ],
+  ],
+  15: [
+    [
+      ["Root", "2"],
+      ["Left / right child", "1 / 3"],
+      ["Output", "[]"],
+    ],
+    [
+      ["Visit left, then root", "1, then 2"],
+      ["Output", "[1, 2]"],
+    ],
+    [
+      ["Visit right", "3"],
+      ["Output", "[1, 2, 3]"],
+    ],
+  ],
+  16: [
+    [
+      ["Target / current", "7 / 5"],
+      ["Choice", "7 > 5 → right child 8"],
+    ],
+    [
+      ["Target / current", "7 / 8"],
+      ["Choice", "7 < 8 → left child 7"],
+    ],
+    [
+      ["Target / current", "7 / 7"],
+      ["Answer", "True"],
+    ],
+  ],
+  36: [
+    [
+      ["items", "→ list A [2, 4]"],
+      ["alias", "→ the same list A"],
+    ],
+    [
+      ["items and alias", "→ list A [2, 4]"],
+      ["copy", "→ a separate list B [2, 4]"],
+    ],
+    [
+      ["items and alias", "→ list A [2, 4]"],
+      ["copy after append", "→ list B [2, 4, 6]"],
+    ],
+  ],
+  39: [
+    [
+      ["Outer input", "[2, [3, 4]]"],
+      ["Outer total so far", "2"],
+      ["Still to handle", "[3, 4]"],
+    ],
+    [
+      ["Inner input", "[3, 4]"],
+      ["Inner returned total", "7"],
+      ["Outer total still waiting", "2"],
+    ],
+    [
+      ["Outer combination", "2 + 7"],
+      ["Returned answer", "9"],
+    ],
+  ],
+  47: [
+    [
+      ["Empty child heights", "0 and 0"],
+      ["Leaf height", "1 + max(0, 0) = 1"],
+    ],
+    [
+      ["Root with one leaf", "root → leaf"],
+      ["Root height", "1 + max(1, 0) = 2"],
+    ],
+    [
+      ["One-sided path", "root → child → leaf"],
+      ["Path height", "3 nodes"],
+    ],
+  ],
+  48: [
+    [
+      ["Question", "ways(4)"],
+      ["Smaller questions", "ways(3) + ways(2)"],
+    ],
+    [
+      ["Repeated question", "ways(2)"],
+      ["Saved answer", "cache[2] = 2"],
+    ],
+    [
+      ["Reuse", "ways(2) = 2 from cache"],
+      ["Combination", "ways(4) = 3 + 2 = 5"],
+    ],
+  ],
+  49: [
+    [
+      ["Top row", "1  1  1"],
+      ["Bottom row", "1  ?  ?"],
+    ],
+    [
+      ["Top row", "1  1  1"],
+      ["Bottom row", "1  2  ?"],
+      ["Current calculation", "1 above + 1 left = 2"],
+    ],
+    [
+      ["Top row", "1  1  1"],
+      ["Bottom row", "1  2  3"],
+      ["Current calculation", "1 above + 2 left = 3"],
+    ],
+  ],
+  50: [
+    [
+      ["Capacity", "5"],
+      ["A: weight / value", "2 / 3"],
+      ["B: weight / value", "3 / 4"],
+    ],
+    [
+      ["Only A allowed", "capacity 2 → value 3"],
+      ["Only A allowed", "capacity 5 → value 3"],
+    ],
+    [
+      ["Skip B", "previous[5] = 3"],
+      ["Take B", "4 + previous[2] = 7"],
+      ["Best", "7"],
+    ],
+  ],
+  57: [
+    [
+      ["Input", "[2, 1, 3, 4]"],
+      ["Block 1: input position 0", "2"],
+      ["Block 2: input positions 0–1", "3"],
+    ],
+    [
+      ["Block 1 / 2 / 3 / 4", "2 / 3 / 3 / 10"],
+      ["Block 3 covers", "input position 2"],
+      ["Block 4 covers", "input positions 0–3"],
+    ],
+    [
+      ["First 3 items", "block 3 + block 2"],
+      ["Sum", "3 + 3 = 6"],
+    ],
+    [
+      ["Helper jumps", "3 → 2 → 0"],
+      ["Jump sizes", "1, then 2"],
+    ],
+    [
+      ["Add 5 at input position 0", "update helper positions 1, 2, 4"],
+      ["New block values", "7 / 8 / 3 / 15"],
+    ],
+  ],
+  58: [
+    [
+      ["Pattern", "aab"],
+      ["Pattern prefix lengths", "[0, 1, 0]"],
+      ["Text", "aaab"],
+    ],
+    [
+      ["Matched text positions", "0, 1: aa"],
+      ["Next expected pattern letter", "b"],
+    ],
+    [
+      ["Text position 2", "a ≠ expected b"],
+      ["Retained matched ending", "a"],
+      ["Matched length after fallback", "1"],
+    ],
+    [
+      ["Text position 2", "a matches pattern position 1"],
+      ["Text position 3", "b matches pattern position 2"],
+    ],
+    [
+      ["Matched text positions", "1–3: aab"],
+      ["Returned start position", "1"],
+    ],
+  ],
+};
+
+projects.push(
+  {
+    key: "reliability",
+    title: "A road-failure planning service",
+    description: "Combine connectivity and bridge analysis to answer independent road-failure queries.",
+    contract:
+      "Implement solve(n, edges, failures). Return the number of connected components after each listed edge fails individually. Each query starts from the original undirected multigraph.",
+    acceptance: [
+      "Parallel roads must protect one another from being classified as bridges.",
+      "Start from the original component count, including isolated places.",
+      "Repeated failure queries are independent; they must not accumulate deletions.",
+      "Compare small examples with a fresh connectivity search after each removal, then explain the faster preprocessing bound.",
+    ],
+    extension:
+      "Independent extension: support cumulative failures and later repairs. Explain why the single-bridge lookup no longer suffices; do not reuse its guarantee unchanged.",
+    missions: [
+      [28, "Establish the baseline groups", "Count components and retain isolated sites.", "lesson"],
+      [82, "Find structurally fragile roads", "Use edge IDs so parallel links remain distinct.", "lesson"],
+      [82, "Analyze stable regions", "Remove all bridges and inspect the remaining components.", "check"],
+      [82, "Answer independent failures", "Combine the original count with bridge membership.", "transfer"],
+    ],
+  },
+  {
+    key: "capacity",
+    title: "A changing capacity register",
+    description: "Maintain nonnegative capacities and locate the first prefix meeting a request after assignments.",
+    contract:
+      "Implement solve(items, operations) for set/index/value changes and first/positive-target requests. Return the first prefix boundary index, or -1 if the total is insufficient.",
+    acceptance: [
+      "Zero capacities must not invent an earlier qualifying boundary.",
+      "An assignment replaces its old value rather than adding another copy.",
+      "An exact total match must qualify; an over-total request must return -1.",
+      "Justify both the segment summary and the left/right descent decision, then test against a direct scan.",
+    ],
+    extension:
+      "Independent extension: allow negative capacities. Construct a counterexample to sum-only descent and design the stronger summary that would be needed.",
+    missions: [
+      [5, "Understand static prefix boundaries", "Specify inclusive positions and the leading empty total.", "lesson"],
+      [77, "Use a subtree summary for rank", "Account for positions discarded by a rightward move.", "lesson"],
+      [79, "Maintain changing range summaries", "Repair only the ancestors of a replaced leaf.", "lesson"],
+      [79, "Answer the actual capacity requests", "Descend to a first qualifying boundary without repeated full scans.", "transfer"],
+    ],
+  },
+  {
+    key: "quotas",
+    title: "A quota-aware assignment planner",
+    description: "Model eligibility and worker capacity, then certify the best achievable assignment count.",
+    contract:
+      "Implement solve(quotas, job_count, allowed). Workers may take up to their quota; every unit job has at most one owner. Return the largest feasible assignment count.",
+    acceptance: [
+      "Zero-quota workers and jobs with no eligible worker must be handled.",
+      "Duplicate eligibility rows do not create extra jobs or extra meaning.",
+      "An earlier assignment must be reroutable when that enables a larger feasible total.",
+      "Produce a small manual flow and a matching cut-capacity certificate, and explain which constraints each network edge encodes.",
+    ],
+    extension:
+      "Independent extension: add assignment costs. A maximum count alone does not minimize cost; specify the new objective and why ordinary max-flow output is insufficient.",
+    missions: [
+      [63, "Check the two-sided model", "Separate worker and job roles rather than merging their IDs.", "lesson"],
+      [87, "Understand residual routing", "Trace a cancellation and a reroute.", "lesson"],
+      [87, "Find a cut certificate", "Check the achieved value against a bottleneck cut.", "check"],
+      [88, "Inspect the unit-quota special case", "Compare matching with the general capacity model.", "lesson"],
+      [87, "Build the quota service", "Translate quotas and eligibility into a flow network.", "transfer"],
+    ],
+  },
+  {
+    key: "records",
+    title: "An exact repeated-record detector",
+    description: "Use fingerprints as a filter while preserving exact string identity and overlapping occurrences.",
+    contract:
+      "Implement solve(text, k). Return sorted distinct length-k strings occurring at least twice, counting overlapping starting positions. Invalid k returns an empty list.",
+    acceptance: [
+      "aaaa with k=2 returns one distinct string aa, though it has three starting positions.",
+      "Different strings sharing a fingerprint must remain separate records.",
+      "A zero or overlong k must follow the explicit empty-output rule.",
+      "Account for substring copies, exact verification, dictionary storage, and final sorting rather than claiming unconditional linear work.",
+    ],
+    extension:
+      "Independent extension: process a stream split into chunks. Retain the final k-1 characters across boundaries and explain how repeated-record storage can grow.",
+    missions: [
+      [43, "Define continuous text groups", "Distinguish substrings from subsequences.", "lesson"],
+      [107, "Derive the rolling update", "Remove, shift, and add without confusing a fingerprint with identity.", "lesson"],
+      [107, "Verify all overlapping matches", "Continue after a match without skipping candidate starts.", "check"],
+      [107, "Build the exact repetition report", "Separate occurrence count from distinct output strings.", "transfer"],
+    ],
+  }
+);

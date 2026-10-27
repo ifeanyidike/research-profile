@@ -1,0 +1,286 @@
+{
+  "originalLessons": [
+    {
+      "id": 0,
+      "frames": 3
+    },
+    {
+      "id": 1,
+      "frames": 3
+    },
+    {
+      "id": 2,
+      "frames": 3
+    },
+    {
+      "id": 3,
+      "frames": 3
+    },
+    {
+      "id": 4,
+      "frames": 4
+    },
+    {
+      "id": 5,
+      "frames": 3
+    },
+    {
+      "id": 6,
+      "frames": 3
+    },
+    {
+      "id": 7,
+      "frames": 3
+    },
+    {
+      "id": 8,
+      "frames": 3
+    },
+    {
+      "id": 9,
+      "frames": 3
+    },
+    {
+      "id": 10,
+      "frames": 3
+    },
+    {
+      "id": 11,
+      "frames": 3
+    },
+    {
+      "id": 12,
+      "frames": 3
+    },
+    {
+      "id": 13,
+      "frames": 3
+    },
+    {
+      "id": 14,
+      "frames": 3
+    },
+    {
+      "id": 15,
+      "frames": 3
+    },
+    {
+      "id": 16,
+      "frames": 3
+    },
+    {
+      "id": 17,
+      "frames": 3
+    },
+    {
+      "id": 18,
+      "frames": 3
+    },
+    {
+      "id": 19,
+      "frames": 3
+    },
+    {
+      "id": 20,
+      "frames": 3
+    },
+    {
+      "id": 21,
+      "frames": 3
+    },
+    {
+      "id": 22,
+      "frames": 3
+    },
+    {
+      "id": 23,
+      "frames": 3
+    },
+    {
+      "id": 24,
+      "frames": 3
+    },
+    {
+      "id": 25,
+      "frames": 3
+    },
+    {
+      "id": 26,
+      "frames": 3
+    },
+    {
+      "id": 27,
+      "frames": 3
+    },
+    {
+      "id": 28,
+      "frames": 3
+    },
+    {
+      "id": 29,
+      "frames": 3
+    },
+    {
+      "id": 30,
+      "frames": 3
+    },
+    {
+      "id": 31,
+      "frames": 3
+    },
+    {
+      "id": 32,
+      "frames": 3
+    },
+    {
+      "id": 33,
+      "frames": 3
+    },
+    {
+      "id": 34,
+      "frames": 3
+    },
+    {
+      "id": 35,
+      "frames": 3
+    },
+    {
+      "id": 36,
+      "frames": 3
+    },
+    {
+      "id": 37,
+      "frames": 3
+    },
+    {
+      "id": 38,
+      "frames": 3
+    },
+    {
+      "id": 39,
+      "frames": 3
+    },
+    {
+      "id": 40,
+      "frames": 3
+    },
+    {
+      "id": 41,
+      "frames": 3
+    },
+    {
+      "id": 42,
+      "frames": 3
+    },
+    {
+      "id": 43,
+      "frames": 3
+    },
+    {
+      "id": 44,
+      "frames": 3
+    },
+    {
+      "id": 45,
+      "frames": 3
+    },
+    {
+      "id": 46,
+      "frames": 3
+    },
+    {
+      "id": 47,
+      "frames": 3
+    },
+    {
+      "id": 48,
+      "frames": 3
+    },
+    {
+      "id": 49,
+      "frames": 3
+    },
+    {
+      "id": 50,
+      "frames": 3
+    },
+    {
+      "id": 51,
+      "frames": 3
+    },
+    {
+      "id": 52,
+      "frames": 3
+    },
+    {
+      "id": 53,
+      "frames": 3
+    },
+    {
+      "id": 54,
+      "frames": 5
+    },
+    {
+      "id": 55,
+      "frames": 3
+    },
+    {
+      "id": 56,
+      "frames": 3
+    },
+    {
+      "id": 57,
+      "frames": 5
+    },
+    {
+      "id": 58,
+      "frames": 5
+    },
+    {
+      "id": 59,
+      "frames": 3
+    }
+  ],
+  "newLessons": [
+    {
+      "id": 60,
+      "frames": 4
+    },
+    {
+      "id": 61,
+      "frames": 4,
+      "reasoning": true
+    },
+    {
+      "id": 62,
+      "frames": 4,
+      "reasoning": true
+    },
+    {
+      "id": 63,
+      "frames": 4,
+      "reasoning": true
+    },
+    {
+      "id": 64,
+      "frames": 4,
+      "reasoning": true
+    },
+    {
+      "id": 65,
+      "frames": 4,
+      "reasoning": true
+    }
+  ],
+  "totalIllustrationStates": 211,
+  "accordionDuringWalk": true,
+  "accordionAcrossParts": true,
+  "mixedProblemsVisible": 24,
+  "browserPython": {
+    "lesson": 60,
+    "passedCases": 16
+  },
+  "mixedFoundationLink": "Opened #check/33 from #check/33/transfer",
+  "editDistanceIntroduction": "Checkpoint 33 links to guided lesson 65",
+  "consoleErrors": []
+}

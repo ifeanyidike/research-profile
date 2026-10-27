@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-27",
+  "status": "local preview, not deployed",
+  "syntaxCheck": "passed",
+  "offlineTests": {
+    "passed": 90,
+    "failed": 0,
+    "externalAccountIO": "mocked",
+    "liveModelCalls": 0
+  },
+  "responsive": {
+    "screens": 15,
+    "widths": [320, 390, 720, 721, 768, 1024, 1100, 1101, 1280, 1440],
+    "checks": 150,
+    "documentOverflow": 0
+  },
+  "interactionChecks": [
+    "Control/Command K opens search; segment finds the segment-tree lesson",
+    "Search dialog closes through its accessible button",
+    "Vocabulary accordion remains open after an example-step change",
+    "Minimum-cut checkpoint passes 15 cases in the bundled browser Python runtime",
+    "Account dialog opens and closes at phone width"
+  ],
+  "consoleErrors": [],
+  "limits": [
+    "Static-server preview verified; full Jekyll build not verified because Docker is unavailable",
+    "Responsive checks are DOM layout checks plus selected visual inspections, not a complete accessibility audit",
+    "No new progress completion was awarded during UI verification"
+  ]
+}

@@ -8673,3 +8673,128 @@ h3 {
     width: 100%;
   }
 }
+
+.lesson-discovery {
+  margin: 1.8rem 0;
+  padding: 1.2rem 1.4rem;
+  border-left: 3px solid #769674;
+  background: #f2f5ed;
+  border-radius: 0 12px 12px 0;
+}
+.lesson-discovery h3 {
+  margin-top: 0;
+}
+.lesson-discovery h4 {
+  margin: 1.2rem 0 0.35rem;
+  font-size: 1rem;
+}
+.lesson-discovery p {
+  margin: 0;
+}
+.reasoning-frame {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+}
+.reasoning-frame > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  justify-content: space-between;
+  padding: 0.6rem;
+  border-bottom: 1px solid #dce5d7;
+}
+.reasoning-frame dt {
+  font-weight: 600;
+}
+.reasoning-frame dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.stage-reasoning-link {
+  display: inline-block;
+  margin: 1rem 1.5rem;
+}
+.reasoning-scenario {
+  padding: 1rem;
+  border-left: 3px solid #769674;
+  background: #f2f5ed;
+}
+.reasoning-question {
+  border: 0;
+  padding: 0;
+  margin: 2rem 0;
+  min-width: 0;
+}
+.reasoning-question legend {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.reasoning-question .answer.selected {
+  border-color: #276348;
+  background: #edf4e7;
+}
+.reasoning-writing {
+  margin-top: 2.5rem;
+}
+.reasoning-self-review {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+}
+.reasoning-self-review input {
+  margin-top: 0.3rem;
+  flex: 0 0 auto;
+}
+.reasoning-previous {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+}
+
+.advanced-picture {
+  max-width: 32rem;
+  margin: 0 auto 1rem;
+}
+.advanced-picture svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.advanced-picture line {
+  stroke: #9aaa96;
+  stroke-width: 2;
+}
+.advanced-picture .diagram-selected {
+  stroke: #36754b;
+  stroke-width: 4;
+}
+.advanced-picture .diagram-eligible {
+  stroke: #b8c3b3;
+  stroke-dasharray: 5 5;
+}
+.advanced-picture circle {
+  fill: #edf3e5;
+  stroke: #598259;
+  stroke-width: 2;
+}
+.advanced-picture text {
+  fill: #294c35;
+  font:
+    14px "Source Sans 3",
+    sans-serif;
+  stroke: none;
+}
+.advanced-picture .diagram-edge-label {
+  paint-order: stroke;
+  stroke: #f7f9f2;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+.advanced-picture marker path {
+  fill: #598259;
+}

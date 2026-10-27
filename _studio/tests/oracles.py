@@ -1,3 +1,5 @@
+import advanced_oracles as _advanced
+import expansion_oracles as _expansion
 """Independent small-input specifications, not copies of the worked algorithms."""
 import bisect
 import collections
@@ -205,6 +207,8 @@ def cycle_entry(links, start):
 
 
 def oracle(group, i, args):
+    if i >= 66: return _advanced.oracle(group, i, args)
+    if _expansion.handles(group, i): return _expansion.oracle(group, i, args)
     a = args[0]
     if group == 'lesson':
         if i == 0: return a.index(args[1]) if args[1] in a else -1
@@ -421,6 +425,8 @@ def fenwick_direct(items, operations):
 
 
 def generated(group, i, rng):
+    if i >= 66: return _advanced.generated(group, i, rng)
+    if _expansion.handles(group, i): return _expansion.generated(group, i, rng)
     a = [rng.randrange(-3, 4) for _ in range(rng.randrange(7))]
     value = rng.randrange(-4, 5)
     text = ''.join(rng.choices('abA', k=rng.randrange(7)))

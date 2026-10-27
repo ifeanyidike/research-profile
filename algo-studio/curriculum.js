@@ -1,6 +1,8 @@
-import { additions, stages, requirements, futureTracks } from "./course-extension.js";
-import { applyPlainLanguage } from "./lesson-language.js?v=20261016-clarity1";
-import { extraTestCases } from "./extra-test-cases.js?v=20261019-tests1";
+import { advancedLessons, advancedStages } from "./advanced-course.js?v=20261027-course2";
+import { newLessons, expansionStage } from "./course-expansion.js?v=20261027-course2";
+import { additions, stages, requirements, futureTracks } from "./course-extension.js?v=20261027-course2";
+import { applyPlainLanguage } from "./lesson-language.js?v=20261027-course2";
+import { extraTestCases } from "./extra-test-cases.js?v=20261027-course2";
 export { futureTracks };
 export const modules = [
   ["Think like a problem solver", "Start with a plan. Make it correct. Understand its cost.", "Foundations", "◎"],
@@ -1237,23 +1239,35 @@ lessons.push(
 );
 
 // IDs remain stable for saved work; the teaching route is a separate ordered list.
-lessons.push(...additions);
+lessons.push(...structuredClone(additions));
 applyPlainLanguage(lessons);
+lessons.push(...structuredClone(newLessons), ...structuredClone(advancedLessons));
+lessons[4].walk = [
+  "For [2, 1, 5, 1, 3] and k = 3, the first sum is 8.",
+  "Slide once: remove 2 and add the next 1. The window is [1, 5, 1] and the sum is 8 - 2 + 1 = 7.",
+  "Slide again: remove the old 1 and add 3. The window is [5, 1, 3] and the sum is 7 - 1 + 3 = 9.",
+  "We checked sums 8, 7, and 9. The largest window sum is 9.",
+];
+lessons[6].walk = [
+  "Find 17 in [2, 5, 8, 11, 14, 17, 20]. The middle is 11 at index 3.",
+  "17 is larger than 11. Rule out indices 0 through 3; only indices 4 through 6 remain.",
+  "The remaining middle is 17 at index 5. Return 5.",
+];
 lessons[36].unchangedArgs = [0];
 lessons[36].freshResultArg = 0;
 lessons[41].unchangedArgs = [0];
 lessons[41].freshResultArg = 0;
 lessons[44].reverseLinkedArg = 0;
-export const courseStages = stages;
-export const route = stages.flatMap((stage) => stage[4]);
-modules.splice(0, modules.length, ...stages.map((stage) => stage.slice(0, 4)));
-for (const [module, stage] of stages.entries())
+export const courseStages = [...stages, expansionStage, ...advancedStages];
+export const route = courseStages.flatMap((stage) => stage[4]);
+modules.splice(0, modules.length, ...courseStages.map((stage) => stage.slice(0, 4)));
+for (const [module, stage] of courseStages.entries())
   for (const id of stage[4]) {
     const item = lessons[id];
     item.tests.push(...extraTestCases.lesson[id]);
     item.module = module;
     item.position = route.indexOf(id) + 1;
-    item.requires = requirements[id];
+    item.requires = requirements[id] || item.requires;
     item.minutes = null;
     item.objective = item.task.replace(/^Write solve\([^)]*\) (to |for )?/, "");
     item.useWhen = item.id < 36 ? item.simpleIdea : item.idea;

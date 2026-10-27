@@ -6,7 +6,7 @@ import { lessons } from "../../algo-studio/curriculum.js";
 import { checkpoints, transferTasks } from "../../algo-studio/practice-bank.js";
 import { lessonDiagram } from "../../algo-studio/teaching.js";
 
-test("Independent specifications verify every expected answer and 100 new inputs for each of 132 worked solutions", () => {
+test("Independent specifications verify every expected answer and 100 new inputs for each of 282 worked solutions", () => {
   const tasks = [
     ...lessons.map((t) => ({ ...t, group: "lesson" })),
     ...Object.entries(checkpoints).map(([id, t]) => ({ ...t, id: Number(id), group: "check" })),
@@ -15,13 +15,13 @@ test("Independent specifications verify every expected answer and 100 new inputs
   const result = spawnSync("python3", ["tests/oracles.py"], { input: JSON.stringify(tasks), encoding: "utf8", timeout: 20000 });
   assert.equal(result.status, 0, result.stderr);
   const report = JSON.parse(result.stdout);
-  assert.equal(report.tasks, 132);
+  assert.equal(report.tasks, 282);
   assert.equal(
     report.supplied,
     tasks.reduce((n, t) => n + t.tests.length, 0)
   );
-  assert.equal(report.generated, 13200);
-  assert.equal(new Set(report.covered).size, 132);
+  assert.equal(report.generated, 28200);
+  assert.equal(new Set(report.covered).size, 282);
 });
 
 test("Graph lesson diagrams contain only edges present in their actual worked examples", () => {
@@ -91,7 +91,7 @@ print(json.dumps({'tasks':len(data['tasks']),'negativeCases':len(data['cases']),
   );
   assert.equal(result.status, 0, result.stderr);
   const report = JSON.parse(result.stdout);
-  assert.equal(report.tasks, 132);
+  assert.equal(report.tasks, 282);
   assert.equal(report.negativeCases, 8);
   assert.ok(report.frames > 1000);
 });

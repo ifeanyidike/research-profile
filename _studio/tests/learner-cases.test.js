@@ -13,13 +13,15 @@ const tasks = [
 ];
 const baseTasks = tasks.map((t) => ({ ...t, tests: t.tests.slice(0, -extraTestCases[t.group][t.id].length) }));
 
-test("all 132 learner exercises receive varied additional cases without changing their teaching examples", () => {
-  assert.equal(tasks.length, 132);
+test("all 282 learner exercises receive varied additional cases without changing their teaching examples", () => {
+  assert.equal(tasks.length, 282);
   for (const task of tasks) {
     const extra = extraTestCases[task.group][task.id];
-    assert.ok(extra.length >= 12, `${task.group}:${task.id}`);
+    const finite = { "lesson:68": 11, "check:68": 11, "lesson:70": 13, "lesson:95": 9, "check:95": 9 };
+    const domain = finite[`${task.group}:${task.id}`];
+    assert.ok(domain ? task.tests.length === domain : extra.length >= 12, `${task.group}:${task.id}`);
     assert.equal(new Set(task.tests.map((t) => JSON.stringify(t.args))).size, task.tests.length, `${task.group}:${task.id}`);
-    assert.ok(task.tests.length >= 15);
+    assert.ok(domain ? task.tests.length === domain : task.tests.length >= 15);
   }
   assert.deepEqual(checkpoints[4].tests[0], { args: [[1, 2, 5, 1], 2, 6], expected: 1 });
   const windows = checkpoints[4].tests;
@@ -167,5 +169,5 @@ print(json.dumps({'constantsRejected': len(data['tasks']), 'mutantsRejected': le
     { input: JSON.stringify({ source, tasks, mutants }), encoding: "utf8", timeout: 20000 }
   );
   assert.equal(result.status, 0, result.stderr);
-  assert.deepEqual(JSON.parse(result.stdout), { constantsRejected: 132, mutantsRejected: mutants.length });
+  assert.deepEqual(JSON.parse(result.stdout), { constantsRejected: 282, mutantsRejected: mutants.length });
 });

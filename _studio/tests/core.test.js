@@ -6,8 +6,8 @@ import { checkpoints, transferTasks } from "../../algo-studio/practice-bank.js";
 import { searchTrace, insertionTrace, bfsTrace, measure, reviewDate } from "../../algo-studio/algorithms.js";
 
 test("All lessons have stable IDs, complete content, and a prerequisite-safe route", () => {
-  assert.equal(lessons.length, 60);
-  assert.equal(modules.length, 10);
+  assert.equal(lessons.length, 108);
+  assert.equal(modules.length, 20);
   assert.equal(route.length, lessons.length);
   assert.equal(new Set(route).size, lessons.length);
   const positions = new Map(route.map((id, i) => [id, i]));
@@ -27,7 +27,7 @@ test("All lessons have stable IDs, complete content, and a prerequisite-safe rou
   }
 });
 
-test("All 132 lesson, checkpoint, and transfer solutions satisfy every provided case", () => {
+test("All 282 lesson, checkpoint, and transfer solutions satisfy every provided case", () => {
   const run = spawnSync(
     "python3",
     [

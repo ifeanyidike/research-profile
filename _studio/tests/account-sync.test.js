@@ -347,3 +347,29 @@ test("identity refresh keeps progress and updates connected sign-in methods", as
   assert.ok(f.state.done[36]);
   assert.ok(a.user.identities.some((i) => i.provider === "google"));
 });
+
+test("reasoning-only guest work imports and synchronizes to another device", async () => {
+  const f = fixture(),
+    guest = initialState();
+  guest.reasoning[19] = {
+    approach: "Compare the real substrings after a hash match.",
+    proof: "A matching fingerprint alone does not prove equality.",
+    answer0: 1,
+  };
+  f.storage.setItem("algo-studio-v1", JSON.stringify(guest));
+  const first = f.make();
+  await first.switchUser({ id: "reasoning-account" });
+  assert.equal(first.hasGuest(), true);
+  assert.deepEqual(f.state.reasoning, {});
+  first.importGuest();
+  await new Promise((resolve) => setImmediate(resolve));
+  await first.sync();
+  clearTimeout(first.timer);
+  const secondData = new Map();
+  const second = f.make({ getItem: (key) => secondData.get(key) || null, setItem: (key, value) => secondData.set(key, value) });
+  await second.switchUser({ id: "reasoning-account" });
+  assert.equal(f.state.reasoning[19].approach, guest.reasoning[19].approach);
+  assert.equal(f.state.reasoning[19].proof, guest.reasoning[19].proof);
+  assert.equal(f.state.reasoning[19].answer0, 1);
+  assert.deepEqual(f.state.done, {});
+});
