@@ -9,8 +9,8 @@ const memory = () => {
   const m = new Map();
   return { getItem: (k) => m.get(k) ?? null, setItem: (k, v) => m.set(k, v) };
 };
-test("85 lessons have full teaching, valid source URLs and a topological prerequisite map", () => {
-  assert.equal(ids.size, 85);
+test("93 lessons have full teaching, valid source URLs and a topological prerequisite map", () => {
+  assert.equal(ids.size, 93);
   const seen = new Set();
   for (const m of modules) {
     assert.ok(
@@ -20,6 +20,13 @@ test("85 lessons have full teaching, valid source URLs and a topological prerequ
     seen.add(m.id);
     const l = lessons[m.id];
     for (const f of ["concept", "mechanism", "example", "pitfall"]) assert.ok(l[f].length > (f === "pitfall" ? 50 : 80), `${m.id} ${f}`);
+    for (const field of ["bridge", "teaching", "example", "explanation", "exercise", "solution", "challenge", "challenge_solution"]) {
+      assert.equal(typeof l.guide[field], "string", `${m.id} ${field}`);
+      assert.ok(l.guide[field].trim().length > 40, `${m.id} ${field} needs authored content`);
+      assert.ok(!l.guide[field].includes("\u0000"), `${m.id} literal contains a null byte`);
+    }
+    assert.equal(m.practice, l.guide.exercise);
+    assert.equal(m.assessment, l.guide.challenge);
     assert.ok(l.check.choices[l.check.answer]);
     assert.equal(new Set(l.check.choices).size, 3);
     for (const r of [...m.videos, ...m.readings, ...m.practice_links]) assert.equal(new URL(r.url).protocol, "https:");

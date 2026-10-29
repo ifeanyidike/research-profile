@@ -1,5 +1,5 @@
 // Account records live in a dedicated table; Algo Studio's documents are untouched.
-import { parseBackup, mergeRecords } from "./model.js";
+import { parseBackup, mergeRecords, sameRecord, sameLessons } from "./model.js?v=20261029-2";
 export class Account {
   constructor({ client, ids, switchUser, store, status, changed }) {
     Object.assign(this, { client, ids, switchUser, store, status, changed });
@@ -20,6 +20,7 @@ export class Account {
     this.initialized = true;
     this.user = user;
     this.generation++;
+    this.pending = false;
     this.switchUser(user);
     if (user) await this.sync();
     else this.status("Guest workspace · sign in to sync across devices.");
@@ -37,6 +38,7 @@ export class Account {
       generation = this.generation,
       store = this.store();
     const current = () => this.generation === generation;
+    const before = store.exportBackup("ifeanyi", "Account").lessons;
     this.busy = true;
     this.status("Syncing your learning workspace…");
     try {
@@ -49,7 +51,7 @@ export class Account {
       store.importBackup("ifeanyi", remote);
       const snapshot = store.exportBackup("ifeanyi", "Account");
       const rows = Object.entries(snapshot.lessons)
-        .filter(([id, r]) => JSON.stringify(r) !== JSON.stringify(remote.lessons[id]))
+        .filter(([id, r]) => !sameRecord(r, remote.lessons[id]))
         .map(([id, record]) => ({ user_id: user.id, lesson_id: id, record }));
       this.pending = false;
       if (rows.length) {
@@ -62,11 +64,12 @@ export class Account {
         store.importBackup("ifeanyi", merged);
       }
       if (!current()) return;
-      this.changed();
+      this.syncError = false;
+      if (!sameLessons(before, store.exportBackup("ifeanyi", "Account").lessons)) this.changed();
       this.status(this.pending ? "Your latest change will sync shortly." : "Progress synced · your workspace is ready on other devices.");
     } catch (error) {
       if (current()) {
-        this.pending = true;
+        this.syncError = true;
         this.status(
           `Sync paused · ${error.message || "Check your connection and try again."} Your work remains in this workspace; export a backup if needed.`
         );
@@ -76,10 +79,12 @@ export class Account {
       if (!current()) this.sync();
     }
   }
-  async signOut() {
-    if (this.busy) throw Error("Wait for syncing to finish, then sign out.");
-    await this.sync();
-    if (this.pending) throw Error("Sync has not finished. Reconnect and retry, or export a backup before leaving.");
+  async signOut({ force = false } = {}) {
+    if (this.busy && !force) throw Error("Wait for syncing to finish, then sign out.");
+    if (!force) await this.sync();
+    if (!force && this.syncError && (this.pending || Object.keys(this.store().exportBackup("ifeanyi", "Account").lessons).length))
+      throw Error("Progress could not sync. Export a backup, then choose Sign out on this device to leave while keeping cached work.");
+    clearTimeout(this.timer);
     const { error } = await this.client.auth.signOut({ scope: "local" });
     if (error) throw error;
     await this.select(null);

@@ -60,6 +60,28 @@ export function mergeRecords(current, incoming) {
   return out;
 }
 
+// Compare record meaning, independent of PostgreSQL JSONB object-key order.
+export function sameRecord(a, b) {
+  if (!a || !b) return a === b;
+  const fields = Object.keys(a.values);
+  return (
+    fields.length === Object.keys(b.values).length &&
+    fields.every((f) => own(b.values, f) && a.values[f] === b.values[f] && a.changed[f] === b.changed[f])
+  );
+}
+export function sameLessons(a, b) {
+  const ids = Object.keys(a);
+  return ids.length === Object.keys(b).length && ids.every((id) => sameRecord(a[id], b[id]));
+}
+// Keep memory-only recovery buffers alive across authentication changes.
+export function workspaceStores(storage, ids, clock = Date.now, onStatus = () => {}) {
+  const stores = new Map();
+  return (scope) => {
+    if (!stores.has(scope)) stores.set(scope, createStore(storage, ids, clock, onStatus, scope));
+    return stores.get(scope);
+  };
+}
+
 export function parseBackup(input, ids) {
   if (typeof input !== "string" || input.length > 32000000) throw new Error("Choose a Cyber Studio JSON backup smaller than 32 MB.");
   const data = JSON.parse(input);
@@ -148,8 +170,11 @@ export function createStore(storage, ids, clock = Date.now, onStatus = () => {},
   function importBackup(profile, data) {
     // Validate the entire file before writing any record, including programmatic callers.
     const checked = parseBackup(JSON.stringify(data), ids);
-    for (const [id, incoming] of Object.entries(checked.lessons))
-      write(key(profile, id), JSON.stringify(mergeRecords(record(profile, id), incoming)));
+    for (const [id, incoming] of Object.entries(checked.lessons)) {
+      const current = record(profile, id),
+        merged = mergeRecords(current, incoming);
+      if (!sameRecord(current, merged)) write(key(profile, id), JSON.stringify(merged));
+    }
     return !failed && dirty.size === 0;
   }
   function review(profile, id) {
