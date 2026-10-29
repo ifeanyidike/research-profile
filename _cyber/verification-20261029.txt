@@ -1,0 +1,81 @@
+Cyber Studio expansion and review fixes — 29 October 2026
+========================================================
+Scope: F01–F11 from the read-only review, plus the user's certification
+pathways and AI-security course additions.
+
+Implemented
+-----------
+F01: semantic no-op sync detection; lesson DOM preserved on remote changes;
+     an explicit remote-update notice explains when to reopen the section.
+F02: workspace-scoped stores retain memory-only recovery buffers across
+     guest/account switches for the tab lifetime; no implicit guest upload.
+F03/F04: 93 authored guides (85 expanded topics plus 8 new AI topics), each
+     with a prerequisite bridge, teaching, complete example, explanation,
+     supplied exercise, solution, independent task and expected reasoning.
+     The native workshops replace ambiguous task briefs. Provider labs remain
+     additional practice. Answers are revealable and passes remain self-assessed.
+F05: all eight exact MITRE videos, ordered; Windows token/telemetry/tool bridge;
+     explicit optional Windows emulation and source entry assumptions.
+F06: embedded start times and playlists preserved.
+F07: progress comparisons ignore JSONB object key order; unchanged imports
+     avoid redundant local writes.
+F08: import is a real keyboard-operable button.
+F09: read outage does not block empty-account sign-out; explicit device
+     sign-out preserves cached work when normal sync cannot complete.
+F10/F11: account theme restored; neutral backup download filenames.
+
+Certifications: independent CC, eJPT, GSEC and CISSP routes, official sources,
+eligibility, booking/award/maintenance steps, budget considerations and study
+bridges. No hub-issued accredited certificate, issuer endorsement or exam credit.
+
+AI track: system/ML bridge, prompt injection, retrieval/tenant isolation,
+agent executor authorisation, model/data supply chain, privacy, assurance and
+incident capstone. Required work uses synthetic data/static decisions. It does
+not run a model, send messages or perform live evaluations.
+
+Executed checks
+---------------
+19 offline Node tests passed. Entrypoints/imports are local and account I/O is
+mocked. An isolated copy restoring JSON-string comparison failed the intended
+JSONB regression assertion, rather than setup/import, as expected.
+
+Production Jekyll Docker build succeeded. Full repository Prettier completed;
+only intended Cyber Studio files changed. Asset versions advanced to avoid
+loading incompatible cached module exports.
+
+Built-site browser checks used the actual rendered application and real
+Account/model implementation with mocked auth/progress I/O:
+- 465 topic/section routes: expected titles, worked examples, solution controls
+  and input fields present; no failures or observed console errors.
+- Correct quiz selection/feedback and exact iframe node survived real sync
+  callbacks with new remote records.
+- D03 start=1629, D06 playlist preserved; account theme survived reload.
+- Enter activated the import button; backup filename was neutral.
+- Quota-failed guest note survived signed-in/out identity events.
+- Simulated progress failure allowed explicit device sign-out; cached account
+  note reappeared on the next fixture sign-in.
+- Sample 375px lesson had no horizontal document overflow.
+- Certification view displayed four routes; AI guide rendered in the same UI.
+
+Selected native Python examples ran in temporary directories: P01/P02/P03,
+P04 with its supplied CSV, P05/P06, B02, W02/W07/W09. C01/C02/C04 compiled with
+warnings enabled and ran successfully. S02/S03 ran against the actual pinned
+cryptography 50.0.2 and argon2-cffi 25.1.0 libraries in a temporary environment;
+round-trip/assertions and wrong-password/ciphertext rejection behaved as stated.
+
+Deployment storage
+------------------
+20261029-ai-lessons.sql installed through the existing signed-in Algo Studio
+Supabase project. Returned pg_constraint definition includes all original85
+and I01–I08 IDs. No rows, permissions, RLS policies or Algo progress were changed.
+
+Review limits
+-------------
+Fresh real OAuth/email delivery/cross-device sessions and hosted RLS role tests
+were not executed in this pass; auth I/O was mocked in browser regressions.
+No external course was completed end-to-end, every video watched, or every
+platform/provider lab run. Access, fees, captions and platform compatibility
+remain provider-controlled. Named DeepLearning.AI videos may require account
+access; they are assigned by exact lesson name on the provider course page.
+The degree/research route needs further specialty depth and expert assessment.
+No replay, evaluation harness, prompt comparison or model-provider probe ran.

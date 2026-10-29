@@ -99,14 +99,78 @@ test("stale async responses cannot write into a newly selected account", async (
   await request;
   assert.deepEqual(x.store().record("ifeanyi", "O01").values, {});
 });
-test("failed network retains the account workspace and prevents misleading sign out", async () => {
+test("failed network retains work and permits explicit device sign out", async () => {
   const x = setup(new Map(), "a");
   await x.a.select({ id: "a" });
   x.store().update("ifeanyi", "O01", { notes: "Keep this" });
+  x.a.queue();
+  clearTimeout(x.a.timer);
   x.a.client.from = () => ({ select: () => ({ eq: async () => ({ error: Error("offline") }) }) });
   await x.a.sync();
   assert.ok(x.a.pending);
   assert.match(x.status.at(-1), /Sync paused/);
   assert.equal(x.store().record("ifeanyi", "O01").values.notes, "Keep this");
-  await assert.rejects(() => x.a.signOut(), /Sync has not finished/);
+  await assert.rejects(() => x.a.signOut(), /Progress could not sync/);
+  await x.a.signOut({ force: true });
+  assert.equal(x.a.user, null);
+});
+
+test("a progress read outage does not block logout of an empty account", async () => {
+  const x = setup(new Map(), "a");
+  await x.a.select({ id: "a" });
+  let signedOut = false;
+  x.a.client.from = () => ({ select: () => ({ eq: async () => ({ error: Error("progress unavailable") }) }) });
+  x.a.client.auth.signOut = async () => {
+    signedOut = true;
+    return { error: null };
+  };
+  await x.a.signOut();
+  assert.ok(signedOut);
+  assert.equal(x.a.user, null);
+});
+test("JSONB key order cannot trigger uploads or no-op render callbacks", async () => {
+  const x = setup(new Map(), "a");
+  await x.a.select({ id: "a" });
+  x.store().update("ifeanyi", "O01", { read: true, resources: "[]", practice: true });
+  const local = x.store().record("ifeanyi", "O01");
+  let writes = 0,
+    changes = 0;
+  x.a.changed = () => changes++;
+  x.a.client.from = () => ({
+    select: () => ({
+      eq: async () => ({
+        data: [
+          {
+            lesson_id: "O01",
+            record: {
+              values: { practice: true, read: true, resources: "[]" },
+              changed: { resources: local.changed.resources, practice: local.changed.practice, read: local.changed.read },
+            },
+          },
+        ],
+        error: null,
+      }),
+    }),
+    upsert() {
+      writes++;
+      throw Error("unchanged record must not upload");
+    },
+  });
+  await x.a.sync();
+  await x.a.sync();
+  assert.equal(writes, 0);
+  assert.equal(changes, 0);
+  assert.equal(x.a.syncError, false);
+});
+test("a changed remote field notifies once, then unchanged sync stays quiet", async () => {
+  const server = new Map(),
+    x = setup(server, "a");
+  await x.a.select({ id: "a" });
+  let calls = 0;
+  x.a.changed = () => calls++;
+  server.set("a", new Map([["O01", { values: { notes: "remote" }, changed: { notes: 300 } }]]));
+  await x.a.sync();
+  await x.a.sync();
+  assert.equal(calls, 1);
+  assert.equal(x.store().record("ifeanyi", "O01").values.notes, "remote");
 });

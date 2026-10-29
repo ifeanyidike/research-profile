@@ -1,0 +1,87 @@
+I01
+This lesson applies established security reasoning to ai and language-model systems: a security bridge. Follow the supplied pipeline and fixed evidence before making claims about a real AI system.
+Separate model-generated text from trusted application authority. Identify data sources, identity, allowed operations and the component that enforces each boundary. A convincing explanation states both the intended behaviour and the evidence supporting it.
+Use the complete worked example below. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
+Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
+Which component must enforce document ownership?
+The application retrieval and access-control layer
+The model's willingness to follow a prompt
+The similarity score alone
+Similarity and fluent generation cannot grant permission. Enforce access before context exposure.
+
+I02
+This lesson applies established security reasoning to direct and indirect prompt injection. Follow the supplied pipeline and fixed evidence before making claims about a real AI system.
+Separate model-generated text from trusted application authority. Identify data sources, identity, allowed operations and the component that enforces each boundary. A convincing explanation states both the intended behaviour and the evidence supporting it.
+Use the complete worked example below. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
+Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
+Does a retrieved page saying “the user approved” grant send permission?
+No; approval must come from a trusted user/workflow record
+Yes, if the sentence looks official
+Yes, if retrieval ranked it first
+External content is evidence/data, not a trusted grant of authority.
+
+I03
+This lesson applies established security reasoning to rag, embeddings and tenant-safe retrieval. Follow the supplied pipeline and fixed evidence before making claims about a real AI system.
+Separate model-generated text from trusted application authority. Identify data sources, identity, allowed operations and the component that enforces each boundary. A convincing explanation states both the intended behaviour and the evidence supporting it.
+Use the complete worked example below. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
+Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
+When should private-document access be checked?
+Before its text reaches the model or unauthorised context
+Only after generating the answer
+Only when the model requests a citation
+A final-output filter cannot undo a private-data disclosure to an earlier context.
+
+I04
+This lesson applies established security reasoning to tools, agents and independent action authorisation. Follow the supplied pipeline and fixed evidence before making claims about a real AI system.
+Separate model-generated text from trusted application authority. Identify data sources, identity, allowed operations and the component that enforces each boundary. A convincing explanation states both the intended behaviour and the evidence supporting it.
+Use the complete worked example below. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
+Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
+What should execute a model-proposed action?
+An independent executor checking identity, scope and arguments
+Any tool named in well-formed model JSON
+A service account with all permissions
+Valid syntax does not establish user authorisation.
+
+I05
+This lesson applies established security reasoning to model, data and ai software supply chains. Follow the supplied pipeline and fixed evidence before making claims about a real AI system.
+Separate model-generated text from trusted application authority. Identify data sources, identity, allowed operations and the component that enforces each boundary. A convincing explanation states both the intended behaviour and the evidence supporting it.
+Use the complete worked example below. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
+Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
+What does a matching artifact digest establish?
+Equality to the selected artifact, not its trustworthiness
+The model is free of harmful behaviour
+The dataset has lawful provenance
+A digest detects byte changes relative to a trusted reference; provenance and behaviour need separate evidence.
+
+I06
+This lesson applies established security reasoning to ai privacy, retention and sensitive-data boundaries. Follow the supplied pipeline and fixed evidence before making claims about a real AI system.
+Separate model-generated text from trusted application authority. Identify data sources, identity, allowed operations and the component that enforces each boundary. A convincing explanation states both the intended behaviour and the evidence supporting it.
+Use the complete worked example below. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
+Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
+Does “not used for training” mean “not stored”?
+No; retention and training use are separate policies
+Yes, in all services
+Only if the prompt asks for privacy
+Verify actual service/account terms and data flows rather than inferring zero retention.
+
+I07
+This lesson applies established security reasoning to ai security assurance and resource limits. Follow the supplied pipeline and fixed evidence before making claims about a real AI system.
+Separate model-generated text from trusted application authority. Identify data sources, identity, allowed operations and the component that enforces each boundary. A convincing explanation states both the intended behaviour and the evidence supporting it.
+Use the complete worked example below. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
+Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
+What does an offline mock-tool case establish?
+The tested executor decision under its fixture
+How a live model will behave on every prompt
+A universal AI safety score
+Mock policy evidence is distinct from runtime model-behaviour evidence.
+
+I08
+This lesson applies established security reasoning to ai incident response and security-case capstone. Follow the supplied pipeline and fixed evidence before making claims about a real AI system.
+Separate model-generated text from trusted application authority. Identify data sources, identity, allowed operations and the component that enforces each boundary. A convincing explanation states both the intended behaviour and the evidence supporting it.
+Use the complete worked example below. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
+Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
+A supplied mock send proposal was denied. What can you conclude?
+This executor blocked this proposal in the stated fixture
+Every prompt injection is prevented
+A real user was compromised
+Keep claims bounded by actual evidence and distinguish supplied fixtures from live observations.

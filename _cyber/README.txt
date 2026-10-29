@@ -2,7 +2,7 @@ Cyber Studio
 ============
 Public workspace: /cyber-studio/
 
-The public curriculum contains 85 prerequisite-linked topics in 12 stages.
+The public curriculum contains 93 prerequisite-linked topics in 13 stages (including an eight-topic AI-security track).
 Each topic has an authored explanation, worked example, pitfall, retrieval
 question, exact videos/readings, practical task, independent assessment and
 pass criteria. The original source inventory was researched on 29 Oct 2026.
@@ -14,6 +14,12 @@ exercise briefs and assessment criteria. Keep URLs on their original providers.
 _cyber/content/*.txt: authored teaching. Each blank-line-separated block has ten
 lines: ID, concept, mechanism, worked example, pitfall, question, correct answer,
 two distractors, feedback. Avoid blank lines inside a block.
+_cyber/guides/ID.json: authored prerequisite bridge, step-by-step teaching,
+complete worked example, explanation, exercise, worked solution, independent
+challenge and expected reasoning. Keep the example string's literal backslashes
+intact when editing runnable code. All 93 guides are required by the packager.
+cyber-studio/credentials.json: dated external certification routes, requirements,
+official links and suggested study bridges. Hub progress is never exam credit.
 
 After editing teaching, run python3 _cyber/build-lessons.py and format
 cyber-studio/lessons.json with the repository's Prettier. This packaging script
@@ -53,6 +59,8 @@ _cyber/supabase/verify.sql runs transactional, rolled-back access and merge
 checks using two synthetic identities. Review it before using on a hosted
 project. local-bootstrap.sql is ONLY for a disposable PostgreSQL instance,
 where it emulates the auth.uid interface; never run it on Supabase.
+For an existing installation apply 20261029-ai-lessons.sql before deploying the
+AI track. It adds eight allowed lesson IDs without changing rows or RLS grants.
 
 Progress semantics
 ------------------
@@ -67,8 +75,10 @@ skew can affect ordering. Export a backup before editing on several devices.
 The browser caches account progress for offline continuation. Sync occurs after
 edits, on focus/online, and every 30 seconds. Stale account responses are ignored.
 A failed sync retains work and displays an explicit paused status. Failed local
-storage keeps edits in memory and advises export before refresh. Signing out is
-blocked while work cannot be synced; backups remain available.
+storage keeps edits in memory and advises export before refresh. If progress cannot sync, an empty workspace can still sign out. With cached
+work, the UI asks the learner to export and offers explicit device sign-out;
+cached/memory work remains scoped to its account for the tab lifetime.
+Unchanged syncs do not redraw learning activities or upload equal JSONB records.
 
 Notes/evidence have a 20,000-character per-field limit. JSON backups are limited
 to 32 MB, validated in full before import, and merge into the active workspace
@@ -81,6 +91,6 @@ practice confirmation, prerequisite passes, reviewed criteria and at least 40
 characters of assessment evidence. It schedules recall at 2 days, then 7 days
 after the first review, then 30 days after the second. The third ends the cycle.
 
-Videos use click-to-load youtube-nocookie embeds where an exact YouTube ID is
-available, and always retain a link to the provider. Embedded players may be
+Videos use click-to-load youtube-nocookie embeds where an supported YouTube source is
+available, preserving chapter start and playlist parameters, and always retain a link to the provider. Embedded players may be
 unavailable; content, captions, accounts and pricing remain provider-controlled.

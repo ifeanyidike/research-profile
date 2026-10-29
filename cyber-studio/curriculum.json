@@ -20,9 +20,9 @@
           "url": "https://cs50.harvard.edu/x/notes/0/"
         }
       ],
-      "practice": "Create folders for notes, code and evidence. Save a plain text file, rename it, find it again, download a course handout and distinguish a URL from a local path. In Scratch, build a small branching programme from the lecture.",
-      "assessment": "Without a walkthrough, recreate the folder structure, save and reopen a text file, locate a downloaded handout, and explain source code versus a running programme.",
-      "pass_criteria": "Complete all file operations independently and show the working Scratch programme.",
+      "practice": "Create the shown folder tree. Add a fourth line to the original: Next: learn account safety. Keep the backup unchanged. Record the full location shown by your file manager, the extension and the difference between the two files. No terminal is required.",
+      "assessment": "Without the walkthrough, create a separate practice2 folder with an original note and a recovery copy. Close every editor, find both files and demonstrate which is the newer copy. Explain the scheme, host and path of https://example.org/course/start.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "A computer, browser, internet connection and ability to read the teaching language are the entry requirements. Use the lecture to introduce unfamiliar computing terms; later modules revisit binary and programming in detail.",
       "practice_links": []
     },
@@ -48,9 +48,9 @@
           "url": "https://pwn.college/welcome/welcome/"
         }
       ],
-      "practice": "Write a one-page scope for a fictional family document-sharing service: assets, permitted test environment, excluded real accounts, stop conditions and how evidence is recorded. Read the pwn.college environment instructions; the first command-line practical occurs in L01 after shell instruction.",
-      "assessment": "Classify ten self-written scenarios by confidentiality, integrity or availability and identify which activities fall outside the written scope.",
-      "pass_criteria": "Correctly classify at least eight scenarios and identify every action outside scope. Explain why permission for one system does not cover another.",
+      "practice": "For this exact scope, classify five actions: read training/readme.txt; edit training/answer.txt; open ../payroll.csv; scan example.org; stop after finding a real phone number. For each give permitted, prohibited or stop, plus one sentence tying the decision to scope.",
+      "assessment": "Write a scope for an invented local note-taking app. Include six boundaries and a stop condition. Explain which security goal is harmed by (a) revealing a private note, (b) changing its owner, (c) making notes unavailable.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Practical security work in this map is confined to designated training environments or systems you own and explicitly choose for practice. Do not use personal or employer secrets as lab data.",
       "practice_links": []
     },
@@ -88,9 +88,9 @@
           "url": "https://cs50.harvard.edu/cybersecurity/notes/4/"
         }
       ],
-      "practice": "Use a test account to document strong authentication and a recovery procedure. Create a harmless document, back it up, delete the working copy and restore it. Review update and screen-lock settings without changing organisational policy.",
-      "assessment": "Produce an account-recovery and lost-device checklist, restore a second file independently, and explain the difference between phishing resistance, encryption and backup.",
-      "pass_criteria": "Successful restoration with matching content; no secrets in the evidence; explain three distinct failure scenarios and suitable controls.",
+      "practice": "Using invented services, make three inventory rows. Copy a harmless note to a separate recovery location, remove only a disposable working copy, then restore it. Record original contents, restored contents and what failure your copy would not survive.",
+      "assessment": "A fictional laptop and its disk are lost. Email recovery codes existed only on that laptop; a cloud folder synchronised deletions. Identify two independent recovery weaknesses and propose a test for each.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -124,9 +124,9 @@
           "url": "https://www.khanacademy.org/intro-to-logarithms"
         }
       ],
-      "practice": "Work through OpenStax sections 1.1–1.10 and 2.1–2.4 as needed; do five exercises per unfamiliar section. On paper convert 13 and 255 to binary, 255 to hex, and explain bits versus bytes. Calculate 20 percent of 250, solve 3x+2=17, and evaluate powers and base-two logarithms.",
-      "assessment": "Independently solve equivalent problems with 19, 127, 15 percent of 360, 5x−4=26, 2^10, log2(64), and a bytes-to-bits conversion; explain why a text character can use more than one byte.",
-      "pass_criteria": "All representation and unit-conversion answers correct; at least 80 percent of algebra exercises correct. Repeat the relevant OpenStax section before proceeding if not.",
+      "practice": "Convert 13 and 31 to eight-bit binary and two-digit hex. Solve 3×x=21. Calculate log2(32). Explain whether converting a message to hex protects confidentiality.",
+      "assessment": "Convert binary 11110000 to decimal and hex. A field allows at most four UTF-8 bytes: do the strings AAAA and ééé fit? Explain every step without relying on a calculator result alone.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "This is an explicit school-mathematics bridge. It can take several weeks when arithmetic or algebra is unfamiliar; no calculus is assumed.",
       "practice_links": []
     },
@@ -148,9 +148,9 @@
           "url": "https://cs50.harvard.edu/python/notes/0/"
         }
       ],
-      "practice": "Complete CS50P Problem Set 0, selecting Indoor Voice, Playback Speed and Making Faces from the linked assignment. Then write a function that converts a supplied number of bytes to bits and returns the result.",
-      "assessment": "Write a fresh command-line unit converter without copying an example and explain parameter, argument, return value and printed output.",
-      "pass_criteria": "Correct results for zero, positive and fractional inputs allowed by your specification; explain every line.",
+      "practice": "Create lesson.py exactly as shown and run it. Add calls for (50,0.1), (80,0) and (0,0.2). Predict all outputs on paper first. Then explain what happens if you write print(add_tax) instead of print(add_tax(50,0.1)).",
+      "assessment": "Without copying the function body, write apply_discount(price, fraction) that returns price minus price×fraction. Test (200,0.25), (75,0), (40,1). Explain one input restriction a real application should enforce.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The lecture page links Problem Set 0 and setup guidance. A hosted coding account may be required for official grading; local practice remains possible.",
       "practice_links": [
         {
@@ -185,9 +185,9 @@
           "url": "https://cs50.harvard.edu/python/notes/2/"
         }
       ],
-      "practice": "Complete CS50P Deep Thought and Coke Machine from Problem Sets 1 and 2. Trace a loop by hand and write a bounded retry loop that stops after three invalid inputs.",
-      "assessment": "Create a small menu-driven programme with validation, cancellation and a retry limit; predict its output for six supplied input sequences.",
-      "pass_criteria": "All six traces match execution; cancellation terminates; invalid input never causes an infinite loop.",
+      "practice": "Trace positive_total for these six supplied sequences: []; [0]; [2,-1,3]; [-2,-3]; [4,4]; [1,-1,1]. Record one row per iteration and the final output. Run the program only after all six predictions.",
+      "assessment": "Write nonnegative_count(items), counting values >=0. Trace it for []; [-1,0,2]; [0,0]; [-3]; [5,-5,5]; [1,2,3]. Then change >= to > and identify which tests distinguish the versions.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -226,9 +226,9 @@
           "url": "https://cs50.harvard.edu/python/notes/3/"
         }
       ],
-      "practice": "Complete CS50P Grocery List and Fuel Gauge. Build a dictionary counting fictional login outcomes; deliberately include empty and malformed records.",
-      "assessment": "Count successes and failures per user from a new in-memory dataset and explain the treatment of malformed entries.",
-      "pass_criteria": "Exact counts on a hand-checked dataset; malformed entries are reported rather than silently discarded or crashing the programme.",
+      "practice": "Use the exact three records above. Add {\"name\":\"d\",\"count\":\"0\"} and {\"name\":\"e\",\"count\":\"-1\"}. Change validation to reject negative counts with a recorded reason. Report accepted sum and rejected indices.",
+      "assessment": "For records [{\"count\":\"3\"},{\"count\":\"3\"},{\"count\":\"x\"}], return both the total and a frequency dictionary of accepted counts. Explain why repeated keys in a dictionary cannot represent two independent records by themselves.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -271,9 +271,9 @@
           "url": "https://docs.python.org/3/library/datetime.html"
         }
       ],
-      "practice": "Complete CS50P Lines of Code and Pizza Py. Write a programme that reads a synthetic CSV with user, timestamp and outcome columns, validates rows, and writes JSON. Read the datetime sections on aware timestamps and ISO formats.",
-      "assessment": "Convert a new CSV containing missing fields and timestamps with two explicit UTC offsets into normalised UTC JSON.",
-      "pass_criteria": "Preserve valid records and field meanings, account for every rejected row, and correctly order events across the offsets.",
+      "practice": "Create the supplied CSV and run the conversion. Add a third row 2026-01-01T08:45:00+00:00,4. Sort parsed events by UTC time, write events.json with UTF-8 and reload it. Report ordered counts and total.",
+      "assessment": "Process two supplied timestamps: 2026-02-01T12:00:00+02:00 and 2026-02-01T09:30:00+00:00. Which comes first? Explain how you would handle a third value 2026-02-01T10:00:00 with no timezone.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "JSON is a data format, not executable code. The exercises use synthetic records created by the learner.",
       "practice_links": [
         {
@@ -308,9 +308,9 @@
           "url": "https://cs50.harvard.edu/python/notes/7/"
         }
       ],
-      "practice": "Complete CS50P Testing my twttr and NUMB3RS. Add tests for valid, malformed, empty and boundary inputs in the CSV programme. Record one defect, its cause and a regression test.",
-      "assessment": "Given a deliberately flawed validation function you write on a separate day, identify the error with a failing test and fix it without weakening the test.",
-      "pass_criteria": "Show a meaningful test failing before the fix and passing afterward; cover at least six distinct edge cases; explain regex limitations.",
+      "practice": "Run the supplied tests. Temporarily replace fullmatch with search in your disposable file and record the failing case. Restore the implementation and add cases for uppercase input, a space and an empty string.",
+      "assessment": "Define valid_port(text) accepting only decimal text whose numeric value is 1 through 65535, with no spaces or sign. Supply tests for \"0\",\"1\",\"65535\",\"65536\",\"-1\",\" 80\" and \"x\".",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -345,9 +345,9 @@
           "url": "https://pwn.college/linux-luminarium/"
         }
       ],
-      "practice": "In the pwn.college browser workspace complete Hello Hackers, Pondering Paths, Comprehending Commands and Digesting Documentation. Recreate the O01 folder exercise using shell commands.",
-      "assessment": "Navigate a fresh directory tree, locate a named file, inspect its type and contents, and explain an absolute path, a relative path and the current directory.",
-      "pass_criteria": "Complete the navigation without a copied command sequence; justify each command and recover from one incorrect path.",
+      "practice": "Run the commands inside a fresh learning directory. Enter copies, print pwd, display ../\"first note.txt\", then return to its parent with cd .. (two dots). Explain what the parent component means and how the working directory changes.",
+      "assessment": "Without the example, create a folder named second lab containing a text file and a copies subfolder. Copy the file, access it using a relative path from copies, and explain which command changes future relative-path resolution.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -381,9 +381,9 @@
           "url": "https://pwn.college/linux-luminarium/"
         }
       ],
-      "practice": "Complete the named Linux Luminarium modules. Write a shell pipeline that counts outcomes in a synthetic log, demonstrate redirection, and inspect your own processes and environment. Use only your lab account for permission changes.",
-      "assessment": "Independently create an owner-only directory and readable report, safely handle a filename containing spaces, and stop only the background process you launched.",
-      "pass_criteria": "Correct permissions and counts; no unintended process terminated; explain quoting, PATH and why a pipe passes output to input.",
+      "practice": "Run the script with the exact three event lines. Add a line okay and confirm ^ok$ does not count it. Explain the difference between NAME=value and export NAME=value, then inspect a harmless exported variable in a child shell.",
+      "assessment": "A practice directory has mode 700 and a contained file mode 644. Explain whether an unrelated unprivileged user can reach the file through that directory. Propose an owner-only mode for a new private file and describe a verification step.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -417,9 +417,9 @@
           "url": "https://docs.python.org/3/tutorial/venv.html"
         }
       ],
-      "practice": "Model validated log records using a class. Create a virtual environment, install only a needed package from its documented source if one is required, record versions, and rebuild the environment. Use JSON for untrusted data rather than pickle.",
-      "assessment": "Recreate the programme in a clean environment from written instructions and reject malformed records at the class boundary.",
-      "pass_criteria": "A second person or a clean environment reproduces the result; installation and input assumptions are written down; class validation has tests.",
+      "practice": "Create a venv, record python --version and run the shown program. Add a second entry to b and prove a stays unchanged. Record your activation and run commands. Do not commit the .venv directory.",
+      "assessment": "Write a Counter class with increment() and value starting at zero. Create two counters, increment one twice and the other once. Explain a test that would detect accidental shared state.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The MIT lesson page contains its embedded lecture. Build tools mentioned only as examples do not need to be installed.",
       "practice_links": []
     },
@@ -441,9 +441,9 @@
           "url": "https://missing.csail.mit.edu/2020/version-control/"
         }
       ],
-      "practice": "Create a local repository for harmless practice code. Make two commits, a feature branch and a merge; inspect differences. Add a README with environment, input and reproduction instructions. Keep credentials and personal data out of Git.",
-      "assessment": "Recreate a past programme version, explain its diff, and reproduce the P04 output from a fresh checkout.",
-      "pass_criteria": "Correct history and output; a reader can follow the README; all dependencies are recorded.",
+      "practice": "Perform the shown local history. Stage the second version, inspect the staged diff and commit it. Use git log --oneline and git show to find the two versions. Record each commit's purpose in a separate nonsecret lab log.",
+      "assessment": "In the disposable repo, create two branches from the same commit and make different edits to the same line. Merge them, resolve the conflict to a deliberate final sentence and record both parent commits. Explain how you verified the final content.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -481,9 +481,9 @@
           "url": "https://learntla.com/"
         }
       ],
-      "practice": "Write truth tables for AND, OR and implication; model user-to-role membership as sets; draw a login state machine; prove a simple loop invariant by induction. Work the corresponding examples in the assigned chapters.",
-      "assessment": "Distinguish a claim from its converse, give a counterexample to an invalid implication, and prove that a bounded retry counter never exceeds its limit.",
-      "pass_criteria": "Correct truth tables and counterexample; a proof with base case and inductive step; a state diagram with explicit transitions.",
+      "practice": "Build the truth table for NOT(P AND Q) and compare it with (NOT P) OR (NOT Q). Then add a maintenance transition to the door that requires admin=true. State a corrected authorisation invariant covering both routes.",
+      "assessment": "An account starts balance=0. Deposit adds a nonnegative integer; withdraw subtracts an integer only when 0<=amount<=balance. Prove balance>=0 is invariant, then identify a guard removal that invalidates the proof.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The 2010 MIT notes omit their state-machine chapter. Learn TLA supplies that bridge; do not assign the missing chapter.",
       "practice_links": []
     },
@@ -521,9 +521,9 @@
           "url": "https://toc.cryptobook.us/"
         }
       ],
-      "practice": "Compute gcd(35,64), the inverse of 3 modulo 11, and small modular powers. Count fixed-length strings over specified alphabets and compare linear, polynomial and exponential growth.",
-      "assessment": "Solve equivalent unseen modular-inverse and counting problems and explain when an inverse does not exist.",
-      "pass_criteria": "All modular calculations verified by substitution; counting assumptions explicit; distinguish combinations from ordered sequences.",
+      "practice": "Calculate (8+11) mod 7 and (8*11) mod 7. Find the inverse of 2 mod 5 by enumeration. List all unordered pairs from {A,B,C,D} without repetition.",
+      "assessment": "Does 4 have an inverse mod 9? Show a check. Count length-three binary strings and unordered two-element subsets of a three-element set. Explain the difference in assumptions.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -565,9 +565,9 @@
           "url": "https://textbook.cs161.org/crypto/prng.html"
         }
       ],
-      "practice": "Calculate the posterior probability of a real incident when prevalence is 1 percent, sensitivity 90 percent and false-positive rate 5 percent. Simulate fair dice using Python random and compare averages to expectation. Estimate guessing work for uniformly selected strings.",
-      "assessment": "Recalculate with different prevalence and error rates; explain why high sensitivity alone does not make most alerts true and why human password choice is not uniform.",
-      "pass_criteria": "Correct conditional probability with denominators shown; distinguish independence from mutual exclusion; separate a simulation result from a proof.",
+      "practice": "Use a second population: 1,000 events, 20 incidents, 15 detected incidents and 35 false alerts. Fill all four matrix cells, calculate precision and recall, and state the number of missed incidents.",
+      "assessment": "A detector is applied to 100 events, including 10 incidents. It catches 8 incidents and alerts on 18 benign events. Calculate precision, recall and total alerts. Explain why independent trials would be an unsafe assumption for repeated events from one device.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -610,17 +610,21 @@
       ],
       "readings": [
         {
-          "label": "OpenStax Introductory Statistics 2e — sections 1.1 through 1.4 2.5 2.7 8.1 and 9.1 through 9.4",
+          "label": "OpenStax Statistics 2e — 1.1–1.4, 2.5, 2.7; bridge 6.1–6.2 and 7.1 before 8.1 and 9.1–9.4",
           "url": "https://openstax.org/books/introductory-statistics-2e/pages/index"
+        },
+        {
+          "label": "OpenStax chapter 7 — sampling means and central limit theorem bridge",
+          "url": "https://openstax.org/books/introductory-statistics-2e/pages/7-introduction"
         },
         {
           "label": "Python statistics standard library",
           "url": "https://docs.python.org/3/library/statistics.html"
         }
       ],
-      "practice": "Compute mean and sample variance for harmless synthetic response times. Build a hand-checked confusion matrix, calculate precision and recall, then compare two simple offline rule variants on a fixed synthetic dataset. Explain sampling assumptions.",
-      "assessment": "Write a preregistered comparison specifying the question, dataset split, metric, repetitions and uncertainty before examining results; critique one misleading p-value claim.",
-      "pass_criteria": "Correct calculations, no test-data tuning, clear unit of analysis and justified uncertainty. Identify at least two confounders.",
+      "practice": "Calculate mean and sample variance for [1,3,5]. For TP=12,FP=3,FN=8,TN=77 calculate precision and recall. Write two reasons events collected repeatedly from one host might violate independent representative sampling.",
+      "assessment": "Before comparing two synthetic rules, write a protocol: use the fixed matrix results A=(TP=18,FP=12,FN=2,TN=68), B=(TP=16,FP=4,FN=4,TN=76). Choose whether precision or recall matters more, calculate both and defend a choice. Critique “p=0.03 means the hypothesis is 97% likely true.”",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "This is calculus-free preparation for evaluating security claims.",
       "practice_links": []
     },
@@ -642,9 +646,9 @@
           "url": "https://cs50.harvard.edu/x/notes/1/"
         }
       ],
-      "practice": "Compile the lecture hello-world example and a byte-conversion programme. Inspect compiler warnings, return codes, integer limits and an explicitly checked input range.",
-      "assessment": "Write and compile a fresh C conversion function that rejects out-of-range input and explain the source-to-executable steps.",
-      "pass_criteria": "Correct boundary behaviour, no ignored relevant warnings, and an accurate explanation of compile time versus run time.",
+      "practice": "Compile the supplied program and record compiler version, command, warnings and output. Draw how the number 0x0102 would occupy two bytes under little-endian and big-endian conventions. Do not claim sizeof(int) is universal.",
+      "assessment": "Explain each stage from source to execution. In an explicitly eight-bit unsigned model calculate 250+10; then explain why that result cannot automatically be asserted for signed char in a real C program.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -671,9 +675,9 @@
           "url": "https://cs50.harvard.edu/x/notes/2/"
         }
       ],
-      "practice": "Complete CS50x Readability or a comparable text counter from the assignment. Write a bounded string-copy routine for learning, testing empty, exact-fit and too-long input. Distinguish byte length from character count.",
-      "assessment": "Explain the memory occupied by a small string and implement a validator with explicit buffer capacity.",
-      "pass_criteria": "All boundary cases handled, a terminator accounted for, and no claim that byte count always equals character count.",
+      "practice": "Run with src=\"cat\", then src=\"cats\", then src=\"\". Predict output and exit status before each run. Draw all occupied indices for each accepted input.",
+      "assessment": "A destination has capacity 6 bytes. Decide whether ASCII inputs \"hello\", \"planet\" and \"\" fit as terminated strings. Explain why a five-character Unicode string may still fail this byte-capacity check.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -708,9 +712,9 @@
           "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/pages/readings/"
         }
       ],
-      "practice": "Implement a simple lookup using a list and then a dictionary or hash table. Trace binary search and recursion; measure operation counts rather than drawing conclusions from one timing measurement.",
-      "assessment": "Choose structures for a user lookup and an ordered event stream, justify the choice and state worst-case versus expected behaviour.",
-      "pass_criteria": "Correct implementation and termination; defensible complexity statements; explain the cost of a hash collision without assuming all operations are constant time.",
+      "practice": "Trace the exact function for targets 0,5,6,9 and input [1,3,5,7], plus an empty list. Record every interval and final insertion index.",
+      "assessment": "Implement recursive sum_list(items,index=0) with an empty-suffix base case. Trace [2,4,6], count additions and explain time and call-stack growth. State an input size limitation of recursion in Python.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -753,9 +757,9 @@
           "url": "https://cs50.harvard.edu/x/notes/5/"
         }
       ],
-      "practice": "Draw stack and heap layouts for two small C functions. Allocate and release a buffer, then use a debugger to inspect addresses and a compiler memory-safety diagnostic on deliberately incorrect lab code. After pointer practice, watch the data-structures lecture and implement a two-node linked list with explicit allocation and cleanup.",
-      "assessment": "Fix an out-of-bounds access and a lifetime error in your own benign programme, retaining tests that expose each defect. Explain the pointer links and cleanup of the list.",
-      "pass_criteria": "Explain ownership and lifetime, show the original failing evidence and corrected behaviour, and release all owned allocations.",
+      "practice": "Compile and run the safe example. Draw the pointer/object diagram after allocation, after q=p and after free. Without executing invalid access, explain what would be wrong with printing *q after free or freeing q as well.",
+      "assessment": "Draw two linked nodes holding 10 and20, with first.next pointing to second and second.next null. Describe an order for freeing both without reading an already-freed node.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -781,9 +785,9 @@
           "url": "https://pwn.college/computing-101/"
         }
       ],
-      "practice": "Complete the named Computing 101 modules in order, using their embedded explanations. Compile a small benign C programme, disassemble it, break at a function and relate registers and stack values to source variables.",
-      "assessment": "Explain a new short disassembly, locate a parameter and return value, and identify where a function returns.",
-      "pass_criteria": "Correct register and stack explanation; distinguish executable file layout from live process memory.",
+      "practice": "Compile the function to assembly and annotate where its two inputs and result appear for your platform. Change + to - and compare the resulting arithmetic operation. Keep both source and assembly files.",
+      "assessment": "Explain the difference among an instruction-set register, a source variable, a return address and a return value. Predict add(8,-2) and state why compiler optimisation may change the instruction listing without changing that defined result.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Use the Linux x86 training environment supplied by pwn.college when your own machine has a different CPU. Hardware emulation and installation are not assumed.",
       "practice_links": []
     },
@@ -825,9 +829,9 @@
           "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf"
         }
       ],
-      "practice": "In a lab, inspect a process and its open files. Trace one benign file operation at the system-call boundary. Draw virtual-to-physical address translation conceptually and inspect file permissions, timestamps and directory entries.",
-      "assessment": "Explain why two processes may use the same virtual address without sharing data, and distinguish a filename, directory entry, file contents and process handle.",
-      "pass_criteria": "Correct privilege boundary and address-space explanations; correctly identify which metadata an ordinary file copy may change.",
+      "practice": "Create a harmless private file inside a practice directory. Record its owner and mode, the directory mode, and the process identity used to read it. Draw the request path through the kernel and state which observations are evidence versus assumptions.",
+      "assessment": "Two processes each print an identical virtual pointer value. Is that sufficient to prove shared memory? Explain what mapping evidence would be required. Separately explain why a library call and a system call are different concepts.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -873,9 +877,9 @@
           "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c19/c19s3/"
         }
       ],
-      "practice": "Work the MIT worksheet before opening answers. Model a two-worker counter as explicit read-modify-write steps and enumerate an interleaving that loses an update. Add a lock and analyse a two-lock deadlock.",
-      "assessment": "Prove or refute an atomicity claim for a fresh transfer scenario and propose a locking order.",
-      "pass_criteria": "A concrete failing interleaving, a valid fix and a deadlock argument. A run that happens to succeed is insufficient evidence of thread safety.",
+      "practice": "Draw an interleaving that correctly ends at 2 without a lock and the failing schedule above. Then draw both possible serial lock-protected orders. Explain why seeing2 in a test does not establish race freedom.",
+      "assessment": "A task acquires lock X then Y; another acquires Y then X. Show a deadlock schedule and repair the acquisition policy. State which invariant the policy protects and one limitation of holding locks across slow I/O.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -930,9 +934,9 @@
           "url": "https://www-net.cs.umass.edu/wireshark-labs/Wireshark_Intro_v9.0.pdf"
         }
       ],
-      "practice": "Complete the Wireshark introductory lab using supplied traces where capture permissions or hardware are unavailable. Draw encapsulation and compute transmission time for a stated byte count and link rate.",
-      "assessment": "Identify the network layers and endpoints in a fresh capture and distinguish throughput, bandwidth and latency.",
-      "pass_criteria": "Correct layer mapping and units; explain what packet capture can and cannot observe.",
+      "practice": "For response times 40,60,50 ms compute mean RTT. If 2,000 bytes arrive in0.5 seconds, calculate bytes/s and bits/s. Draw which header belongs to link, IP, transport and application in a hypothetical request.",
+      "assessment": "A capture sees three packets of a five-packet transfer. Explain two reasons other than network loss that packets might be absent, and distinguish packet count from complete application messages.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The first PDF on the Wireshark page is its introductory v9 lab. Use only your own traffic or supplied educational traces.",
       "practice_links": []
     },
@@ -974,9 +978,9 @@
           "url": "https://gaia.cs.umass.edu/kurose_ross/wireshark.php"
         }
       ],
-      "practice": "Work the IP and NAT labs using supplied traces. Calculate network membership for /24 and /26 examples, draw a three-subnet network and explain its routing choices.",
-      "assessment": "Assign non-overlapping subnets to three fictional departments and trace a packet through NAT and a default route.",
-      "pass_criteria": "Correct subnet ranges and routes; explain why address translation alone does not establish an access-control policy.",
+      "practice": "For 198.51.100.0/26, calculate total addresses and its numeric range. Given routes 198.51.100.0/24->A, 198.51.100.64/26->B, default->D, choose routes for .70, .10 and 203.0.113.5.",
+      "assessment": "Explain why NAT does not prove a service is authorised, then compare address length for IPv4 and IPv6. For two routes /24 and /28 matching a destination, state which is selected under longest-prefix routing.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1018,9 +1022,9 @@
           "url": "https://gaia.cs.umass.edu/kurose_ross/wireshark.php"
         }
       ],
-      "practice": "Inspect the ARP and DHCP educational traces and identify request, response and assigned configuration. Use the supplied wireless trace for association analysis rather than requiring a monitor-mode wireless adapter.",
-      "assessment": "Explain a fresh host-joins-LAN sequence and identify what changes when a destination is on another subnet.",
-      "pass_criteria": "Correctly distinguish MAC from IP addresses, ARP from DNS, and wireless encryption from end-to-end application encryption.",
+      "practice": "For the host above, compare destinations192.0.2.20 and203.0.113.8. State whose link address is needed for each under the simple directly-connected/default-route model. Label the four DHCP messages and the configuration they aim to supply.",
+      "assessment": "A cafe advertises an SSID matching your home network name. Explain why the name alone establishes no trust, and distinguish wireless link encryption, DNS resolution and HTTPS authentication.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1082,9 +1086,9 @@
           "url": "https://gaia.cs.umass.edu/kurose_ross/wireshark.php"
         }
       ],
-      "practice": "Complete the TCP and UDP trace labs. Write a Python loopback echo client and server with a bounded message length and timeout; observe a closed port and an incomplete message.",
-      "assessment": "Explain a TCP handshake, retransmission and connection close from a new trace; distinguish a byte stream from application message framing.",
-      "pass_criteria": "Working bounded echo programme; correct packet interpretation; no assumption that one recv call returns an entire application message.",
+      "practice": "Run the supplied local pair. Restart the server and send b\"bye\\n\" to observe rejection. On paper, split hello\\n into he and llo\\n and trace data after each read. Do not bind the server to an external interface.",
+      "assessment": "Design a length-prefixed teaching protocol with a maximum 16-byte payload. State what happens for announced lengths 0,5,17 and a five-byte payload delivered in two reads. Compare with a UDP datagram of length 5.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1126,9 +1130,9 @@
           "url": "https://gaia.cs.umass.edu/kurose_ross/wireshark.php"
         }
       ],
-      "practice": "Complete the DNS trace lab and follow a fictional email path. Compare authoritative answers, cached answers and mail-exchange records. Read the conceptual DNSSEC section without implementing a resolver.",
-      "assessment": "Diagnose whether a fictional outage is caused by name resolution, transport or application behaviour and explain the evidence.",
-      "pass_criteria": "Accurately interpret A AAAA MX and CNAME records; distinguish DNS authenticity from traffic confidentiality.",
+      "practice": "Using the records above, trace lookup of www.example through its alias to an IPv4 address. Calculate remaining TTL at t=250. Explain why successful lookup does not establish that an email claiming to be from support is legitimate.",
+      "assessment": "Classify the purpose of AAAA, MX and CNAME. A message passes domain authentication but asks you to reveal a password. Explain what the authentication result does and does not establish, without sending or opening any message attachment.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1174,9 +1178,9 @@
           "url": "https://gaia.cs.umass.edu/kurose_ross/wireshark.php"
         }
       ],
-      "practice": "Complete the HTTP trace lab. Use browser developer tools on a harmless page to identify method, path, status, headers, body and cookies. Draw a client, reverse proxy, cache and origin server.",
-      "assessment": "Explain a fresh request-response transcript and predict whether two requests should share a cache entry.",
-      "pass_criteria": "Correct transcript parsing and cache assumptions; distinguish transport connection state from an application login session.",
+      "practice": "Annotate method, path, host, request credential, status, representation type and storage policy in the transcript. Explain what changes when the cookie is absent and why the answer depends on application policy rather than HTTP alone.",
+      "assessment": "A response contains private user notes and Cache-Control: public,max-age=600. Explain the risk in a shared cache, propose a safer policy and give one verification case involving two invented users.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1202,9 +1206,9 @@
           "url": "https://textbook.cs161.org/web/sop.html"
         }
       ],
-      "practice": "Create a local static form with a small JavaScript event handler. Use developer tools to inspect DOM nodes and requests. Compare origins for URLs differing in scheme, hostname and port.",
-      "assessment": "Build a new form from a written specification, explain which code executes in the browser, and correctly classify ten same-origin pairs.",
-      "pass_criteria": "Working form and handler; all origin comparisons correct; understand that client-side checks can be changed by the client.",
+      "practice": "Save greet.html and run it. Enter Fav and then the literal text <b>Fav</b>. Record the output and inspect the result node in browser developer tools. Compare origins https://a.example/x, https://a.example/y and https://b.example/x.",
+      "assessment": "Add a Reset button that clears both input and output. Explain why a required input attribute cannot replace a server-side rule that a user may edit only their own record.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1226,9 +1230,9 @@
           "url": "https://cs50.harvard.edu/x/notes/7/"
         }
       ],
-      "practice": "Create a local SQLite database for users and notes. Write joins and updates, add an ownership relationship, and demonstrate rollback of a failed transfer. Follow the course examples for parameter binding.",
-      "assessment": "Answer five new queries and implement an all-or-nothing update with negative tests for missing and duplicate data.",
-      "pass_criteria": "Correct rows and constraints; rollback preserves the invariant; data values are passed separately from SQL syntax.",
+      "practice": "Run the in-memory fixture. Query owner b and owner missing. Add a third row owned by a and predict the result set. Explain the roles of a primary key and the ownership predicate.",
+      "assessment": "A stock row begins quantity1. Two transactions both read1 and each subtract1. Draw the unsafe schedule and propose a conditional atomic update that prevents negative stock.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1258,9 +1262,9 @@
           "url": "https://developer.mozilla.org/en-US/docs/Web/XML/Guides/XML_introduction"
         }
       ],
-      "practice": "Build a local Flask notes app using SQLite, two fictional users, a session cookie and a small JSON endpoint. Add explicit ownership checks and server-side validation. Read a small XML example and identify its document type and entity declarations conceptually.",
-      "assessment": "Implement a second endpoint from a specification; explain every trust boundary and test that one user cannot read another user’s note.",
-      "pass_criteria": "Positive and negative authorisation tests pass; HTTP requests and JSON are traceable to server code; no real credentials used.",
+      "practice": "Write a decision table for every supplied request. Add valid creation {\"body\":\"hi\"} under A and an oversized body over your chosen100-character practice limit. State stored owner and expected response category.",
+      "assessment": "Design DELETE /api/notes/{id} for the same invented records. Include unauthenticated, owner, non-owner and nonexistent-object cases. Explain whether repeating a successful deletion should change another object.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "This original practice app becomes the defensive assessment target later. It is kept local until deliberately deployed under a separate decision.",
       "practice_links": []
     },
@@ -1290,9 +1294,9 @@
           "url": "https://seedsecuritylabs.org/Labs_20.04/"
         }
       ],
-      "practice": "Choose a documented lab environment suited to the host architecture. Run only a benign container first; map its process, ports and storage. Create and restore a snapshot or rebuild from the recorded image. Document how the vulnerable app is restricted to the lab.",
-      "assessment": "Rebuild the environment independently, demonstrate the expected reachable ports and show that resetting removes a harmless change.",
-      "pass_criteria": "Reproducible reset, documented architecture and image versions, and no unintended exposure of the vulnerable app.",
+      "practice": "Produce the full lab plan above for your selected platform. If a supported VM is available, perform the harmless marker restore. Otherwise complete the paper plan and explicitly label the runtime restore check unperformed; do not mark it as verified.",
+      "assessment": "Compare two proposed labs: A mounts your entire home directory writable into a container; B uses a clean VM with no shared folders and invented data. Explain the extra exposure in A and propose a minimal change.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Browser-hosted labs remain an alternative for exercises that support them. Windows and x86 specialist labs may need a separate compatible VM; later modules state that requirement explicitly.",
       "practice_links": []
     },
@@ -1330,9 +1334,9 @@
           "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/resources/mit6_858f14_lec1/"
         }
       ],
-      "practice": "Threat-model the notes app: assets, actors, data flows, trust boundaries, attacker capabilities, security goals and out-of-scope assumptions. Propose controls tied to each threat.",
-      "assessment": "Review a changed design that adds file sharing and revise the threat model without simply adding more controls.",
-      "pass_criteria": "Every control addresses an explicit threat; identify at least one residual risk and one usability or operational tradeoff.",
+      "practice": "For a fictional backup download endpoint, identify asset, caller, data flow, trust boundary, one confidentiality threat, a server-side control and two verification cases. Use accounts A/B and backups A1/B1.",
+      "assessment": "Extend the model with integrity and availability threats. Rank them using a stated impact/likelihood rubric and identify one control that would reduce consequences without preventing the initiating event.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1340,7 +1344,7 @@
       "id": "S02",
       "title": "Symmetric encryption randomness and authenticated encryption",
       "stage": "Security foundations",
-      "prerequisites": ["M04", "S01", "P05"],
+      "prerequisites": ["M04", "S01", "P05", "P06"],
       "skills": ["encryption confidentiality", "secure randomness nonces", "authenticated encryption integrity"],
       "videos": [
         {
@@ -1368,11 +1372,15 @@
         {
           "label": "Boneh Shoup version 0.6 — chapters 2 through 5",
           "url": "https://toc.cryptobook.us/"
+        },
+        {
+          "label": "cryptography stable — AESGCM authenticated-encryption API and nonce requirements",
+          "url": "https://cryptography.io/en/stable/hazmat/primitives/aead/"
         }
       ],
-      "practice": "Use a maintained cryptographic library in the lab to encrypt and decrypt a harmless message with an authenticated-encryption API. Change the ciphertext and verify rejection. Compare cryptographic randomness with seeded simulation randomness.",
-      "assessment": "Design a message format with a nonce and tag, reject a modified message and explain nonce uniqueness requirements for the selected construction.",
-      "pass_criteria": "Correct round trip and tamper rejection; no custom cipher; clear key and nonce handling.",
+      "practice": "Run this exact harmless example in the venv. Add negative decryption tests using aad=b\"notes-format-v2\" and a fresh wrong key. Record round-trip success and each rejection without writing the key or ciphertext into public notes.",
+      "assessment": "Design a practice message envelope containing format version, nonce and ciphertext-with-tag. Explain which fields must be authenticated, what remains secret and how a receiver handles malformed or modified input. State a nonce strategy limitation.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Follow the selected library’s current documentation for its API. Toy cryptography in the readings is for reasoning rather than deployment. Authenticated encryption is first used through its library API; S03 supplies MAC definitions and the construction-level explanation.",
       "practice_links": []
     },
@@ -1418,11 +1426,15 @@
         {
           "label": "Boneh Shoup version 0.6 — chapters 6 through 9",
           "url": "https://toc.cryptobook.us/"
+        },
+        {
+          "label": "argon2-cffi — PasswordHasher use, verification and rehash policy",
+          "url": "https://argon2-cffi.readthedocs.io/en/stable/howto.html"
         }
       ],
-      "practice": "Hash two harmless files, authenticate a message using a library MAC, and store two identical test passwords using a recommended password-hashing API with distinct salts. Verify negative cases.",
-      "assessment": "Choose encryption, hashing, MAC or password hashing for five new scenarios and justify each choice.",
-      "pass_criteria": "All five choices defensible; modified MAC rejected; explain why a fast unsalted hash is unsuitable for password storage.",
+      "practice": "Run the password example. Using the invented bytes key=b\"practice-key-only\" and message=b\"note:1\", compute a MAC, alter the message to b\"note:2\" and verify rejection with compare_digest. Hash b\"a\" and b\"b\" with hashlib.sha256 and explain what a differing digest establishes.",
+      "assessment": "Choose a primitive for five scenarios: hide a stored document; authenticate a message to another shared-key service; store login passwords; identify a downloaded file against a trusted digest; derive a key from a human password. Explain salts and cost for the last two password-related choices.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1464,9 +1476,9 @@
           "url": "https://textbook.cs161.org/crypto/certificates.html"
         }
       ],
-      "practice": "Work a small-number Diffie–Hellman example by hand, then use a standard library to sign and verify a harmless document. Inspect an ordinary site certificate and identify issuer, subject, validity and name constraints.",
-      "assessment": "Explain an active interception of unauthenticated key exchange and propose a certificate or pre-established trust solution.",
-      "pass_criteria": "Correct small-number exchange and signature rejection for changed data; explain the trust anchor and the difference between a signature and encryption.",
+      "practice": "Create a table with confidentiality, authenticity, shared-secret establishment and name binding. Assign encryption, signatures, key agreement and certificates to their primary role, and state one limitation for each.",
+      "assessment": "A client receives a correctly signed, unexpired certificate for files.example while requesting notes.example. Explain the decision. Then explain why a public key copied from an unauthenticated chat message does not establish its owner.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1500,9 +1512,9 @@
           "url": "https://www.rfc-editor.org/rfc/rfc8446"
         }
       ],
-      "practice": "Complete the TLS trace lab and annotate which parts remain visible on the network. Use the local app or a controlled example to show that hostname verification rejects the wrong peer.",
-      "assessment": "Explain a fresh HTTPS flow and list attacks that remain possible despite transport encryption.",
-      "pass_criteria": "Correct handshake and trust explanation; do not disable certificate validation as a fix.",
+      "practice": "Classify these fictional outcomes: correct name/trusted chain/current validity; wrong name with trusted issuer; correct name with expired validity; valid TLS but user A requests B's private note. State which layer must reject each failure.",
+      "assessment": "Explain what remains exposed or unprotected when using HTTPS: destination IP, some traffic patterns, endpoint compromise, and an application ownership bug. Identify one thing TLS does protect in transit.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "MIT Lecture 14 uses historical SSL and TLS examples. The Berkeley reading and RFC 8446 supply current TLS 1.3 context.",
       "practice_links": []
     },
@@ -1544,9 +1556,9 @@
           "url": "https://textbook.cs161.org/web/cookies.html"
         }
       ],
-      "practice": "Write a role-and-object access matrix for the notes app. Implement session expiry and owner checks using framework facilities. Enumerate account-recovery and administrator paths as part of the threat model.",
-      "assessment": "Test every allow and deny cell of a fresh access matrix, including logged-out users and changed object identifiers.",
-      "pass_criteria": "No unauthorised path succeeds; session and recovery assumptions explicit; distinguish identity proof from permission to act.",
+      "practice": "Evaluate A update1, A update2, B read2, B read1, C disableB, C read2 and an unauthenticated read1. Give the subject/action/object rule behind every answer.",
+      "assessment": "Add a suspended=true condition that blocks ordinary reads/updates but still allows admins to disable accounts. Evaluate suspended A read1 and C disableA. Explain where the suspension check belongs and how you would test session revocation.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1572,9 +1584,9 @@
           "url": "https://wstg.owasp.org/stable/"
         }
       ],
-      "practice": "Follow the Burp getting-started tutorial with its supplied browser and demonstration target. Intercept, inspect and repeat one harmless request; compare request and response headers. Keep a separate lab browser profile.",
-      "assessment": "Inspect an unfamiliar request from the local notes app and identify cookies, method, body encoding and response status without changing production traffic.",
-      "pass_criteria": "Correct transcript and repeatable capture procedure; explain why trusting a lab proxy certificate changes the lab browser trust boundary.",
+      "practice": "Use browser developer tools on your local B01 page or a designated provider lab. Record one harmless request without secrets. Annotate its method, host, path and response type. On paper, apply the supplied one-variable ownership change.",
+      "assessment": "Write a minimal evidence template for an authorised request test, including scope, baseline, one change, expected decision, actual decision and redaction. Explain why a redirect to an out-of-scope host is a stop-and-review event.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -1600,9 +1612,9 @@
           "url": "https://portswigger.net/web-security/sql-injection"
         }
       ],
-      "practice": "Complete the guided lab SQL injection vulnerability in WHERE clause allowing retrieval of hidden data, then replace a deliberately concatenated query in a local toy endpoint with bound parameters.",
-      "assessment": "Complete the different lab SQL injection vulnerability allowing login bypass without its solution, then write positive and negative tests for a corrected local query.",
-      "pass_criteria": "Solve the fresh lab, explain the query change, and demonstrate that the fix rejects injection while preserving legitimate apostrophes and ordinary input.",
+      "practice": "Run this exact fixture. Test A/1, A/2, B/2, B/99 and an id value of the harmless literal text 1 OR 1=1. Record returned rows and explain the separation between syntax safety and ownership.",
+      "assessment": "Design safe filtering by owner plus a user-selected sort key chosen from id or body. State how unsupported sort keys are handled and why a placeholder is not a general SQL identifier mechanism.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The guided video is a community demonstration embedded by PortSwigger. Independent lab: https://portswigger.net/web-security/sql-injection/lab-login-bypass",
       "practice_links": [
         {
@@ -1641,9 +1653,9 @@
           "url": "https://portswigger.net/web-security/cross-site-scripting"
         }
       ],
-      "practice": "Complete Reflected XSS into HTML context with nothing encoded and Stored XSS into HTML context with nothing encoded. Fix the corresponding local template or DOM sink using context-appropriate escaping or text-only APIs.",
-      "assessment": "Review three fresh sinks: HTML text, an attribute and a DOM assignment. Identify which inputs reach executable contexts and write tests for the safe alternatives.",
-      "pass_criteria": "All three contexts explained; executable input becomes inert without breaking ordinary text; distinguish CSP mitigation from removing an unsafe sink.",
+      "practice": "Use your local greeting page. Display the exact marker with textContent, inspect the node and record its child-element count. Repeat after saving/restoring the string as local practice data. Explain reflected versus stored handling.",
+      "assessment": "An app safely renders a note in its main view but builds an inline script from the same note in an export preview. Explain why the first repair does not prove the preview safe and propose a design avoiding the script context.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1678,9 +1690,9 @@
           "url": "https://portswigger.net/web-security/csrf"
         }
       ],
-      "practice": "Complete CSRF vulnerability with no defenses in its training environment. Add framework-supported CSRF protection to a state-changing local endpoint and test missing and incorrect tokens.",
-      "assessment": "Design and test protection for a different state-changing endpoint, including a legitimate submission and a cross-origin request.",
-      "pass_criteria": "Negative requests fail and legitimate requests succeed; explain why changing a request to POST alone does not prevent CSRF.",
+      "practice": "Evaluate the three cases, then add an unauthenticated request carrying token-A and an authenticated GET attempting the same change. State expected server decisions without making network requests.",
+      "assessment": "A developer says “our CORS policy prevents other sites reading responses, therefore our cookie-authenticated POST needs no CSRF protection.” Explain the missing distinction and propose two complementary checks.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1711,9 +1723,9 @@
           "url": "https://portswigger.net/web-security/cors"
         }
       ],
-      "practice": "Complete CORS vulnerability with basic origin reflection. Build an explicit local origin allowlist and inspect a preflight request with the lab browser.",
-      "assessment": "Predict which of six origin-and-credentials combinations a proposed policy permits, then verify them against the local configuration.",
-      "pass_criteria": "All six predictions correct; reject untrusted origins; distinguish a browser read restriction from server-side authorisation.",
+      "practice": "Fill allow/deny for all six supplied rows. Then change the response to ACAO=* and remove ACAC. Re-evaluate all six rows and explain why the include rows differ.",
+      "assessment": "Propose a policy allowing only https://app.example with credentials. Explain why reflecting any Origin while always enabling credentials violates that intent, and state what a server must still check for private records.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1740,9 +1752,9 @@
           "url": "https://portswigger.net/web-security/file-path-traversal"
         }
       ],
-      "practice": "Complete File path traversal simple case. In a harmless local file viewer, replace user-supplied paths with an allowlisted identifier-to-file mapping; test normal and traversal-like inputs.",
-      "assessment": "Evaluate a different download design with nested paths and symlinks and explain its containment assumptions.",
-      "pass_criteria": "No escape from the intended directory in tested cases; legitimate files remain accessible; document symlink and platform assumptions.",
+      "practice": "Evaluate requests by A for n1,n2,n3 and ../outside.txt using the supplied mapping. Explain why a raw startswith(\"/lab/notes\") test would incorrectly accept /lab/notes-old/private.txt.",
+      "assessment": "Design a download endpoint for two fictional users with opaque IDs. Give one allowed case, one foreign-owner case, one unknown ID and one deleted file. Explain how you keep error handling from falling back to an arbitrary caller path.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1769,9 +1781,9 @@
           "url": "https://portswigger.net/web-security/os-command-injection"
         }
       ],
-      "practice": "Complete OS command injection simple case. Refactor a local utility wrapper to pass a fixed executable and explicit argument list without shell interpolation. Use only harmless commands and test data.",
-      "assessment": "Explain the handling of spaces, quotes and leading option characters in a new wrapper design; add regression tests.",
-      "pass_criteria": "Correct argument boundaries and option handling; no shell-string concatenation; explain why a blacklist of metacharacters is incomplete.",
+      "practice": "Run the example with greeting and an unknown key. On paper compare subprocess.run([\"fixed-tool\", user_value], shell=False) with constructing one shell command string. Identify a remaining argument/option risk in the first design.",
+      "assessment": "An API accepts a requested image conversion mode. Define a two-value allowlist and fixed argument mapping rather than accepting raw flags. Include ordinary, unsupported and option-shaped test values.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1798,9 +1810,9 @@
           "url": "https://portswigger.net/web-security/file-upload"
         }
       ],
-      "practice": "Complete Remote code execution via web shell upload only in the supplied lab. Build a local harmless text-upload endpoint using generated storage names, a size limit, an allowlist and storage outside executable content paths.",
-      "assessment": "Test double extensions, mismatched content types, oversized input, duplicate names and unauthorised retrieval against your local endpoint.",
-      "pass_criteria": "Every negative case is rejected or safely stored as inert data; legitimate uploads work; explain server-side execution and download access controls.",
+      "practice": "Build a decision table for the five supplied cases. Add an empty file case and state whether your policy permits it. Explain how you would return text containing <b>demo</b> without converting it into HTML.",
+      "assessment": "Extend the design with a background processor that can fail. Define pending, accepted and rejected states and give one access-control check in each. Explain why processing failure must not accidentally publish the raw object.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1827,9 +1839,9 @@
           "url": "https://portswigger.net/web-security/xxe"
         }
       ],
-      "practice": "Complete Exploiting XXE using external entities to retrieve files. Parse harmless XML locally using a maintained parser configured according to its current security guidance; reject external resource resolution.",
-      "assessment": "Compare a parser that permits external entities with the corrected configuration using a harmless local marker file and a blocked network reference.",
-      "pass_criteria": "Legitimate XML still parses; external access is blocked; document whether DTDs, entity expansion and network access are disabled.",
+      "practice": "Test the supplied function with {\"body\":\"demo\"}, {\"body\":7}, {\"body\":\"x\",\"url\":\"https://example.org\"}, [] and malformed text. Record which validation stage rejects each case.",
+      "assessment": "Write a parser selection checklist for accepting XML from an untrusted training source. Include external entities, external DTDs, network/file access, size/depth limits and schema validation. State why a code review must inspect the selected parser's actual settings.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1856,9 +1868,9 @@
           "url": "https://portswigger.net/web-security/ssrf"
         }
       ],
-      "practice": "Complete Basic SSRF against the local server. Threat-model a local URL-preview feature and replace arbitrary URLs with an explicit service allowlist and bounded responses.",
-      "assessment": "Evaluate redirect, loopback, private-address and changed-DNS cases on paper or against an entirely local fixture.",
-      "pass_criteria": "Explain each trust-boundary violation and enforce an explicit destination policy; do not treat a single string prefix check as a complete defence.",
+      "practice": "Classify all five supplied cases and add https://other.example/docs.example as a sixth. Explain which component of each URL determines the allowlist comparison.",
+      "assessment": "Design a link-preview service supporting only two fixed documentation hosts. State redirect, timeout, size, credential and egress policies. Give a negative case for each boundary without making network requests.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1885,9 +1897,9 @@
           "url": "https://portswigger.net/web-security/api-testing"
         }
       ],
-      "practice": "Complete Exploiting an API endpoint using documentation. For the notes API, list methods, inputs, outputs and authorisation requirements and test a second user’s object identifier.",
-      "assessment": "Implement a new object endpoint from an access matrix and test unknown fields, unsupported methods and cross-user identifiers.",
-      "pass_criteria": "All allow and deny cases match the matrix; documentation and implementation agree; client-supplied ownership is never trusted.",
+      "practice": "Build the five-case test matrix above and add B reading n2, B reading n1 and A updating a101-character body. Identify whether each failure is authentication, object access or schema validation.",
+      "assessment": "Add an internal audit_only field that ordinary users cannot read. Define response fields and update fields separately, then describe how you would test that a normal GET does not expose audit_only.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1914,9 +1926,9 @@
           "url": "https://portswigger.net/web-security/authentication"
         }
       ],
-      "practice": "Complete Username enumeration via different responses using only the training lab’s supplied data. Review your local login and recovery responses for information leakage and state changes.",
-      "assessment": "Design a bounded test plan for a new recovery flow and compare its visible responses for valid and invalid fictional accounts.",
-      "pass_criteria": "Explain response, timing and recovery-token risks; provide tests for expiration and one-time use without performing account guessing against real services.",
+      "practice": "Trace the four supplied cases. Add a token for account B submitted to reset A, and a request with no token. State what must be checked and what a generic public response should avoid disclosing.",
+      "assessment": "Draw reset-request, issued, consumed and expired states. Give one concurrent-use test and one verification that a reset token cannot be used as an ordinary session credential.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1947,9 +1959,9 @@
           "url": "https://www.cl.cam.ac.uk/archive/rja14/Papers/SEv3-ch06.pdf"
         }
       ],
-      "practice": "Complete Unprotected admin functionality. In the local app, require explicit admin permission for one administrative route and enforce ownership on every note route.",
-      "assessment": "Create and execute an access matrix covering anonymous users, two ordinary users and an administrator, including direct URL requests.",
-      "pass_criteria": "Every denied action remains denied when UI controls are bypassed; a documented business invariant is enforced on the server.",
+      "practice": "Evaluate the five supplied cases and add an unauthenticated edit, an owner edit after concurrent approval and a bulk-edit endpoint containing I1/I2. State an explicit partial-versus-atomic bulk policy.",
+      "assessment": "Propose server checks and transaction boundaries for approve-and-lock. Give a test where two requests race, and explain why checking only the initial page-load state is insufficient.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -1980,9 +1992,9 @@
           "url": "https://www.rfc-editor.org/rfc/rfc7519"
         }
       ],
-      "practice": "Complete JWT authentication bypass via unverified signature. Decode a harmless token and distinguish readable claims from trusted claims. Use a maintained library with explicitly allowed validation parameters in a local example.",
-      "assessment": "Test a changed claim, wrong audience, wrong issuer, expired token and unexpected algorithm against the corrected validator.",
-      "pass_criteria": "All five invalid cases rejected; valid token accepted; explain why decoding or base64 transformation is not signature verification.",
+      "practice": "Evaluate all five cases and add a correct signature with the wrong issuer and a token requesting an unsupported algorithm. State which policy check rejects each.",
+      "assessment": "A token for user A is valid for notes-api and unexpired. A requests B's note. Explain both token validation and the separate object decision, including a test that distinguishes them.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -2013,9 +2025,9 @@
           "url": "https://www.rfc-editor.org/rfc/rfc9700"
         }
       ],
-      "practice": "Complete Authentication bypass via OAuth implicit flow. Draw a modern authorization-code flow with PKCE and mark where redirect matching, state and token validation apply.",
-      "assessment": "Review a fresh flow diagram with three intentionally misplaced trust assumptions and propose corrections.",
-      "pass_criteria": "Correct roles and trust boundaries; distinguish OAuth from OpenID Connect; explain why the vulnerable implicit-flow lab is not a recommended new implementation.",
+      "practice": "Draw the five steps and label browser versus client/server exchanges. Evaluate wrong state, wrong PKCE verifier and unregistered redirect scenarios. State where each should fail.",
+      "assessment": "Explain why an OAuth access token is not automatically an identity assertion for your application. Define one test for wrong audience and one for a callback replay or code reuse.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -2046,9 +2058,9 @@
           "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf"
         }
       ],
-      "practice": "Complete Limit overrun race conditions. In a local coupon or balance model, write the invariant, demonstrate a failing schedule and enforce it atomically with suitable database mechanisms.",
-      "assessment": "Assess a new duplicate-payment scenario and specify transaction, uniqueness and idempotency tests.",
-      "pass_criteria": "Invariant preserved across the stated schedules and retry cases; explanation addresses both concurrency and repeated requests.",
+      "practice": "Trace the supplied schedule and a serial order. Define the invariant and expected number of successful redemptions. Add a failure between claim and credit and state whether rollback or durable recovery is required.",
+      "assessment": "Design request retries with keys K1 and K2 under user A. State what a repeated K1 returns, what happens when K1 is reused with a different amount and why user B cannot retrieve A's cached outcome.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -2079,9 +2091,9 @@
           "url": "https://www.rfc-editor.org/rfc/rfc9112"
         }
       ],
-      "practice": "Complete HTTP request smuggling basic CL.TE vulnerability only in its designated lab. Annotate the request boundaries as interpreted by each endpoint.",
-      "assessment": "Given two fresh parser interpretations, identify the disagreement and propose a deployment-level remedy and a regression test.",
-      "pass_criteria": "Correct message boundaries and connection assumptions; avoid suggesting substring filtering as a complete repair.",
+      "practice": "Draw both boundary views for the supplied20-byte fixture. Then use matching end positions9/9 and explain the difference. State two requirements for a defensive proxy/backend configuration review.",
+      "assessment": "Write a provider-lab evidence plan identifying scope, front/back protocol assumptions, baseline, one controlled variation, expected boundary effect and a safe stop condition. Explain why success against one parser version does not prove all deployments share the fault.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
         {
@@ -2116,9 +2128,9 @@
           "url": "https://owasp.org/www-project-application-security-verification-standard/"
         }
       ],
-      "practice": "Review the local notes app against an explicit test scope, select relevant verification requirements, and produce findings with evidence, impact, remediation and retest results. Include cache behaviour and safe JSON handling in the design review.",
-      "assessment": "Have the other learner change one endpoint and one access rule without explaining the change. Independently identify the resulting security implications and propose tests.",
-      "pass_criteria": "No unresolved unauthorised data access; each claimed defect has reproducible evidence and a retest; coverage and limitations are explicit.",
+      "practice": "Write three findings from the packet. Each needs problem, exact evidence, plausible impact, root cause, minimal repair and positive/negative verification cases. Include a scope and untested-behaviour section.",
+      "assessment": "Independently review a changed packet: ownership checks are fixed, but the export preview still uses innerHTML and bulk PATCH still accepts owner. State which original findings remain, identify the alternate paths and propose a regression matrix.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "This is an original assessment brief. It is not a claim that the external course provides an automatic grader or an unseen exam.",
       "practice_links": []
     },
@@ -2156,9 +2168,9 @@
           "url": "https://seedsecuritylabs.org/Labs_20.04/Software/Buffer_Overflow_Setuid/"
         }
       ],
-      "practice": "Follow the SEED handout in its documented isolated x86 environment, beginning with stack inspection and root-cause analysis. If that environment is unavailable, use pwn.college Program Security modules covering the same basics.",
-      "assessment": "Explain a different benign out-of-bounds bug from disassembly and patch its cause rather than only suppressing a symptom.",
-      "pass_criteria": "Correct memory layout, failing boundary input and regression test; no work outside the training environment.",
+      "practice": "For capacity 8, calculate required bytes for ASCII strings of lengths 0,7,8 and12 with a terminator. Classify accepted/rejected inputs under a no-truncation policy. State a separate lifetime defect not captured by this capacity check.",
+      "assessment": "Write a root-cause report for a hypothetical copy of 10 bytes into an8-byte object. Separate proven bounds failure, possible consequences and evidence still needed before claiming exploitability.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Historical exploits depend on architecture and protections. A video or handout being reachable does not establish local lab compatibility.",
       "practice_links": []
     },
@@ -2188,9 +2200,9 @@
           "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/resources/mit6_858f14_lec3/"
         }
       ],
-      "practice": "Compare build and runtime protections for the harmless programme from C04, record the compiler settings, and test the actual bug fix with a memory diagnostic enabled.",
-      "assessment": "For three new vulnerability descriptions, explain which mitigations help, which assumptions they need and which root causes remain.",
-      "pass_criteria": "No assertion that one mitigation removes all memory bugs; correct distinction between prevention detection and exploitation difficulty.",
+      "practice": "Create a table for the four controls above: prevention/detection/hardening role, assumption and one remaining risk. Add a verification step that checks actual build/runtime behaviour for a selected mitigation without attempting an exploit.",
+      "assessment": "A reviewer says “ASLR is enabled, so the overflow is fixed.” Write a precise response and propose both a source repair and a boundary regression test.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -2232,9 +2244,9 @@
           "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/pages/readings/"
         }
       ],
-      "practice": "Split a local document processor into a low-privilege parser and a narrow privileged service. Document the allowed messages and demonstrate that malformed requests cannot cause unrestricted file access.",
-      "assessment": "Analyse a fresh confused-deputy scenario and redesign its authority flow.",
-      "pass_criteria": "Minimal explicit authority; complete boundary diagram; tests cover malformed messages and excess privilege.",
+      "practice": "For the renderer fixture, list assets, allowed operations and five denied operations. Define one positive test and three harmless negative tests you would perform in the supported lab. Label paper expectations separately from observed results.",
+      "assessment": "A helper runs with broad file access and exposes copy(source,destination) to an untrusted renderer. Explain how this undermines separation and redesign the interface around explicit object authority.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The historical systems are case studies. Use current operating-system documentation for any actual sandbox mechanism.",
       "practice_links": []
     },
@@ -2276,9 +2288,9 @@
           "url": "https://www.cl.cam.ac.uk/archive/rja14/Papers/SEv3-ch21.pdf"
         }
       ],
-      "practice": "Inventory services in the lab, remove an unnecessary service or restrict its reachability, and create a documented allowlist. Compare a simple signature with a behavioural rule on synthetic traffic or logs.",
-      "assessment": "Given an unfamiliar three-tier service diagram, design network and host controls and test legitimate versus forbidden connections in a local fixture.",
-      "pass_criteria": "Required paths work, forbidden paths fail, controls are observable, and availability and false-positive tradeoffs are explained.",
+      "practice": "Create a baseline for a fictional training laptop. For each item give desired state, observation method, owner and rollback/recovery step. Analyse a synthetic alert: process demo-server listening on0.0.0.0:8765 after a local-only exercise.",
+      "assessment": "A firewall change blocks updates and remote recovery. Explain the availability impact and write a safer rollout plan with baseline capture, one scoped change, positive/negative checks and rollback criteria.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -2308,9 +2320,9 @@
           "url": "https://www.cybok.org/knowledgebase1_2/"
         }
       ],
-      "practice": "Review the notes app dependencies, configuration and release process. Record dependency versions, move any fictional secret to a documented configuration boundary, and add a security review and rollback step.",
-      "assessment": "Threat-model a changed dependency or build script and propose a verifiable release checklist with concrete evidence.",
-      "pass_criteria": "Explain what code runs during build and installation; reproducible release inputs; secrets excluded from source and logs; rollback exercised with harmless changes.",
+      "practice": "Create an inventory and triage note for the supplied graph. Add a fictional leaked read/write deployment token in an old commit. State immediate containment and longer-term history/build-log actions without using a real token.",
+      "assessment": "A build uses a lockfile but downloads a tool from an unpinned script URL. Explain the uncovered dependency and propose a verifiable release record covering source, tool version, inputs and output artifact.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -2344,9 +2356,9 @@
           "url": "https://learn.microsoft.com/en-us/windows-server/"
         }
       ],
-      "practice": "Use a compatible Windows lab VM or separate lab machine. Inspect local users, groups, a service, a file ACL, Event Viewer and a registry hive. Use read-only PowerShell queries and export a harmless result to CSV. Follow the selected Windows Server installation guide before any AD deployment.",
-      "assessment": "Recreate a small inventory and permissions report independently and distinguish an account, a process token, a service and an event record.",
-      "pass_criteria": "Correct object-based filtering and access explanation; evidence contains timestamps and provenance; no changes to a managed work device.",
+      "practice": "Run or hand-trace the supplied objects. Filter failed events for user A only, then count failures by user. Record input records and expected output separately from any optional host observations.",
+      "assessment": "Explain what additional metadata a real event record needs for an investigation: provider/source, time/offset, host, collection provenance and field schema. Give one reason a missing event might not prove the activity never occurred.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The 2017 forensics video introduces artefacts; validate commands and artefact applicability against current Windows documentation. A Windows environment is an explicit equipment requirement for Windows practicals.",
       "practice_links": []
     },
@@ -2380,9 +2392,9 @@
           "url": "https://www.cl.cam.ac.uk/archive/rja14/Papers/SEv3-ch06.pdf"
         }
       ],
-      "practice": "First complete Introduction to AD DS and draw domain, DNS, organisational-unit and group relationships. In a separately resettable Windows Server lab, follow the official deployment instructions to create a small test domain and one restricted user; alternatively complete a documented topology-and-policy design until compatible hardware is available.",
-      "assessment": "Explain a fresh Kerberos sign-in, distinguish a ticket from a password, and review a group-policy and privilege assignment for excessive access.",
-      "pass_criteria": "Correct identity flow and least-privilege matrix. Hands-on completion additionally requires demonstrating a permitted and a denied resource access in the test domain.",
+      "practice": "Draw the exchange and evaluate A read/write and B read/write for the stated folder. Add a resource not covered by the folder policy and explain why membership alone is insufficient to infer access there.",
+      "assessment": "Compare a Kerberos service ticket, an NTLM challenge-response exchange and a Windows process access token at the level of purpose and observation source. State one assumption you would verify before interpreting a log as successful service access.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The Microsoft video is from 2013 and MIT protocol discussion from 2014. Use them for concepts and current Microsoft instructions for deployment. A design-only exercise does not count as demonstrated AD administration.",
       "practice_links": []
     },
@@ -2416,9 +2428,9 @@
           "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/security-and-compliance.html"
         }
       ],
-      "practice": "Create an offline architecture with a web workload, object storage, a database and workload identity. Write a responsibility matrix and a sample least-privilege policy from the official examples. Explain storage exposure, secret rotation, audit logs and network boundaries.",
-      "assessment": "Review an unfamiliar cloud architecture with a public bucket, excessive workload privilege and an unlogged administrator action; justify fixes and verification steps.",
-      "pass_criteria": "Correct responsibility allocation and policy reasoning across all three defects. A cloud design passes the concepts gate; deployment proficiency requires an explicitly chosen account and a separately completed practical.",
+      "practice": "Evaluate the three supplied requests and W deleting public/intro.txt. Create a responsibility table for customer data access, host patching and backups under an explicitly selected managed-service model. Label provider-dependent duties.",
+      "assessment": "Design a least-privilege identity for a read-only report worker. State allowed resources/actions, credential lifetime, revocation/recovery and a negative permission test. Explain how you would verify the deployed binding.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The author retired the original SC900 cram; this map uses its linked v2 replacement. Required work here is offline and does not require opening a paid cloud account.",
       "practice_links": []
     },
@@ -2452,9 +2464,9 @@
           "url": "https://www.cl.cam.ac.uk/archive/rja14/Papers/SEv3-ch27.pdf"
         }
       ],
-      "practice": "Review the benign local container from B04. Remove unnecessary privilege, restrict writable storage and reachable ports, record its image provenance, and demonstrate where a test secret is supplied and where it must not appear.",
-      "assessment": "Evaluate a changed container configuration with a sensitive host mount, unnecessary privilege and an embedded secret, then retest the corrected configuration.",
-      "pass_criteria": "Correctly identify all three authority leaks; demonstrate required function after hardening and document remaining kernel and daemon trust.",
+      "practice": "Compare the fixture with a second configuration: root user, writable host home mount, broad cloud key and no resource limits. Identify four distinct consequences and propose a scoped repair for each.",
+      "assessment": "Write an inspect-before-run checklist with one legitimate-function test and three denied-operation expectations. Explain why a green image vulnerability scan does not prove runtime configuration is safe.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "This module establishes container-security foundations. It does not silently assume Kubernetes experience or claim Kubernetes operational mastery.",
       "practice_links": []
     },
@@ -2488,9 +2500,9 @@
           "url": "https://learn.microsoft.com/en-us/kusto/query/tutorials/learn-common-operators"
         }
       ],
-      "practice": "Generate synthetic login and file-access events with explicit UTC times and IDs. Query them with Python or SQLite, then translate the filters and aggregates into KQL using the official tutorial. If Windows logs are available, search only your lab export with Chainsaw.",
-      "assessment": "Reconstruct a fresh ten-event timeline spanning two offsets and explain what a missing log source prevents you from concluding.",
-      "pass_criteria": "Correct event ordering, counts and provenance; separate observed events from inferred intent; no assertion that absent logs prove absence of activity.",
+      "practice": "Save the supplied CSV without its explanatory suffix. Convert to UTC with Python, select all A failures and count failures per user. Write the equivalent KQL concept: where result==\"Fail\", then summarise count() by user. Record missing telemetry assumptions.",
+      "assessment": "Reconstruct the complete ten-event UTC timeline without the walkthrough. Remove the user field from event 9 and explain which per-user claim becomes uncertain and how total failure count changes.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -2524,9 +2536,9 @@
           "url": "https://attack.mitre.org/resources/learn-more-about-attack/training/cti/"
         }
       ],
-      "practice": "Watch Fundamentals first. Complete the guided Cobalt Kitty narrative exercise and raw-data exercise using the linked handouts, recording evidence for each mapping.",
-      "assessment": "Complete the separately linked unguided APT39 exercise before opening its answers, then defend two mappings and one uncertain case.",
-      "pass_criteria": "Mappings cite specific behaviour; differentiate observation from interpretation and avoid mapping a tool name directly to every technique it can perform.",
+      "practice": "Create three columns: observed, inferred and unknown for the supplied note. Then complete the provider's guided narrative exercise from its linked handout before looking at answers. Record the version used and cite the exact supporting sentences.",
+      "assessment": "For a fresh fictional report “X ran on host H; a log confirms an outbound connection, but no content capture exists,” state what is observed and what would be needed to assert data exfiltration. Propose a cautious mapping workflow.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "MITRE states that these exercises use ATTACK v8. Use its linked v8 snapshot to compare answers, then explicitly review differences against the current ATTACK version.",
       "practice_links": []
     },
@@ -2534,12 +2546,40 @@
       "id": "D07",
       "title": "Detection engineering hunting and coverage",
       "stage": "Defensive operations",
-      "prerequisites": ["D06", "D02", "M05"],
+      "prerequisites": ["D06", "D02", "D01", "D05", "M05"],
       "skills": ["hypothesis telemetry detection logic", "precision recall coverage", "Windows access token behaviour"],
       "videos": [
         {
-          "label": "MITRE ATTACK Detection Engineering T1134.001 Token Impersonation and Theft",
-          "url": "https://www.youtube.com/watch?v=pZ3hzeBi-Ek"
+          "label": "MITRE Lesson 1 | Introduction",
+          "url": "https://www.youtube.com/watch?v=pZ3hzeBi-Ek&list=PLLGRmm150VfDoylWB03PuVWf-bxj2hMSY"
+        },
+        {
+          "label": "MITRE Lesson 2 | Researching Token Impersonation and Theft",
+          "url": "https://www.youtube.com/watch?v=dcVSr598TrY&list=PLLGRmm150VfDoylWB03PuVWf-bxj2hMSY"
+        },
+        {
+          "label": "MITRE Lesson 3 | Testing and Emulation",
+          "url": "https://www.youtube.com/watch?v=Z77TpfqDWHs&list=PLLGRmm150VfDoylWB03PuVWf-bxj2hMSY"
+        },
+        {
+          "label": "MITRE Lesson 4 | Analyzing Testing Results: ImpersonateLoggedOnUser",
+          "url": "https://www.youtube.com/watch?v=_OGmeVP0azU&list=PLLGRmm150VfDoylWB03PuVWf-bxj2hMSY"
+        },
+        {
+          "label": "MITRE Lesson 5 | Analyzing Testing Results: SetThreadToken",
+          "url": "https://www.youtube.com/watch?v=qyS4eS3_ByE&list=PLLGRmm150VfDoylWB03PuVWf-bxj2hMSY"
+        },
+        {
+          "label": "MITRE Lesson 6 | Building Analytics",
+          "url": "https://www.youtube.com/watch?v=g1h3hOEMdQk&list=PLLGRmm150VfDoylWB03PuVWf-bxj2hMSY"
+        },
+        {
+          "label": "MITRE Lesson 7 | Sharing Results",
+          "url": "https://www.youtube.com/watch?v=Q0buPVyGh_o&list=PLLGRmm150VfDoylWB03PuVWf-bxj2hMSY"
+        },
+        {
+          "label": "MITRE Lesson 8 | Conclusion",
+          "url": "https://www.youtube.com/watch?v=OiWJ6VLJRz8&list=PLLGRmm150VfDoylWB03PuVWf-bxj2hMSY"
         }
       ],
       "readings": [
@@ -2554,12 +2594,20 @@
         {
           "label": "Chainsaw rule and hunting documentation",
           "url": "https://github.com/WithSecureOpenSource/chainsaw"
+        },
+        {
+          "label": "Microsoft access tokens — process and thread security context",
+          "url": "https://learn.microsoft.com/en-us/windows/win32/secauthz/access-tokens"
+        },
+        {
+          "label": "Microsoft Process Explorer — process, owner, handles and supported platforms",
+          "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer"
         }
       ],
-      "practice": "Translate the lecture into a telemetry requirement, hypothesis and detection rule. Test a benign synthetic set of positive and negative event records and calculate precision and recall. No token-theft tool needs to be executed.",
-      "assessment": "The other learner changes benign activity and removes one telemetry field. Explain which detections remain valid and revise the rule with a versioned test set.",
-      "pass_criteria": "Correct metric calculation, explicit data requirements and coverage limits; improved results cannot come from deleting difficult negative cases.",
-      "note": "",
+      "practice": "Evaluate the supplied six rows. Write hypothesis, telemetry contract, rule, metrics and a benign explanation for row 3. Then remove signal from row 2 and define how unknown data is handled without relabelling it benign.",
+      "assessment": "A second rule adds row 4 to alerts but also alerts row 5. Calculate its precision/recall on the same six rows. State which rule is better under a declared false-positive/miss cost and produce a versioned analytic note with telemetry limits.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
+      "note": "First complete the native Windows-token/telemetry bridge and synthetic detection workshop. Then watch all eight MITRE lessons in order. The source is advanced and assumes previous hunting/detection and Windows tool familiarity; the bridge introduces those concepts for observation. Reproducing the Windows emulation demonstrations is optional and requires a separate supported, isolated lab. No token-theft tool is required.",
       "practice_links": []
     },
     {
@@ -2584,9 +2632,9 @@
           "url": "https://www.cl.cam.ac.uk/archive/rja14/Papers/SEv3-ch21.pdf"
         }
       ],
-      "practice": "Run a tabletop incident involving a fictional stolen account and exposed file. Write a timeline, severity rationale, containment choices, evidence-preservation steps, recovery plan and user-facing communication draft.",
-      "assessment": "Respond to a changed scenario in which the first containment choice would destroy useful evidence or interrupt a critical service.",
-      "pass_criteria": "Defensible tradeoffs, named decision points, preserved evidence and an explicit recovery-verification step; distinguish containment from eradication.",
+      "practice": "Write an initial response plan with facts, hypotheses, evidence preservation, owner, containment choice and recovery criteria. Draft a four-sentence stakeholder update using only supplied facts.",
+      "assessment": "At09:20 a second account shows the same pattern. Revise scope and priorities, then explain what evidence would justify broader containment and how to avoid destroying the only useful logs.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The MIT lecture is an institutional case study. NIST Revision 3 supplies the current risk-management framing. Do not send the exercise communication to real recipients.",
       "practice_links": []
     },
@@ -2620,9 +2668,9 @@
           "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/file-journaling.pdf"
         }
       ],
-      "practice": "Build a harmless evidence set: a copy of a test directory, a lab event-log export and a supplied educational packet trace. Hash the originals, analyse copies, record tools and time assumptions, and correlate at least three events.",
-      "assessment": "Produce a short forensic report answering who or what is supported by the evidence, when events happened, what remains uncertain and whether timestamps could mislead.",
-      "pass_criteria": "Original hashes preserved, reproducible method, clear chain of custody and at least one independently corroborated event. Do not equate a single artefact with proof of malicious intent.",
+      "practice": "Create all three files, hash originals using Python hashlib or your documented system tool, copy them to an analysis folder and verify hashes match. Build a UTC timeline and write one supported claim, one inference and two unknowns.",
+      "assessment": "In an analysis copy only, change N1 to 09:01UTC and recompute its hash. Explain the integrity result and whether F1/E1 establish that note contents were exported over the network.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -2652,9 +2700,9 @@
           "url": "https://textbook.cs161.org/network/malware.html"
         }
       ],
-      "practice": "Analyse the practice memory image linked by DFIRScience, or a clean memory acquisition of your own compatible Windows lab VM. Record image identity and framework version; list processes, parent relationships and relevant command lines. Inspect a benign executable statically without running unknown samples.",
-      "assessment": "Correlate two memory observations with the D09 timeline, distinguish an anomalous process from proven malware and state what would require further evidence.",
-      "pass_criteria": "Reproducible findings with process IDs and image provenance; explain symbol compatibility and confidence; no untrusted binary is executed.",
+      "practice": "Build a triage table for all three PIDs with observed facts, alternative explanations and next evidence requested. State preservation requirements and why process names alone are weak identifiers.",
+      "assessment": "An analysis tool reports no PID12 on an image from an unsupported OS build. Explain the limitation and propose a validation step before claiming the process never existed.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The 2022 tutorial demonstrates an older Volatility 3 interface. Use current framework documentation for plugin names. If no compatible memory image is available, this hands-on gate remains incomplete.",
       "practice_links": [
         {
@@ -2697,9 +2745,9 @@
           "url": "https://www.cybok.org/knowledgebase1_2/"
         }
       ],
-      "practice": "Create a risk register for the notes service with assumptions, evidence, impact, likely failure paths and owner decisions. Compare two controls under a fixed fictional budget and discuss incentives.",
-      "assessment": "Defend a prioritisation when the most severe theoretical vulnerability differs from the most plausible operational loss.",
-      "pass_criteria": "Explicit assumptions and uncertainty; no invented probability precision; each recommended control has an owner and a verification method.",
+      "practice": "Recalculate if the loss is 30,000 instead of 10,000. Compare A/B and identify two assumptions needing evidence. Add owner, review date and residual-risk statement to a one-row register.",
+      "assessment": "Write a decision memo comparing the two loss scenarios. Explain how a mandatory recovery-time requirement could override the cheaper option and state a measurable verification of the chosen control.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -2737,9 +2785,9 @@
           "url": "https://www.cybok.org/knowledgebase1_2/"
         }
       ],
-      "practice": "Review the app’s collection, retention, sharing and recovery flows. Minimise fictional data and rewrite one confusing security prompt. Use a clearly stated fictional jurisdiction for a policy exercise.",
-      "assessment": "Explain the privacy effects of a new analytics feature and compare two interface designs for consent or recovery.",
-      "pass_criteria": "Clear data-flow and retention reasoning; identify uncertainty requiring jurisdiction-specific expertise; avoid treating a general lecture as current legal advice.",
+      "practice": "Create a data inventory with purpose, access, retention and deletion/export considerations for the three needed fields. Redesign a warning so it states one clear action. Identify an applicable regulator for a hypothetical jurisdiction using an official source before making a legal claim.",
+      "assessment": "An app proposes mandatory passport upload solely to issue a self-study badge. Critique necessity and risk, propose a less intrusive design and distinguish an internal completion badge from an independently verified certification.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": []
     },
@@ -2781,9 +2829,9 @@
           "url": "https://lamport.azurewebsites.net/video/videos.html"
         }
       ],
-      "practice": "Draw a two-party transfer protocol with timeouts, duplicate delivery and a crashed participant. Simulate the message schedule with Python data structures or paper cards and test the no-double-transfer invariant.",
-      "assessment": "Explain an unfamiliar failure schedule and distinguish authentication, replay resistance, consistency and availability. State an achievable guarantee rather than promising exactly-once network delivery.",
-      "pass_criteria": "Correct failure traces and invariant; explicit assumptions about persistence and retries; distinguish safety from eventual progress.",
+      "practice": "Draw failures before commit, after commit/before response and after response. For each state the expected result of retrying K1. Define an invariant and the atomic storage requirement.",
+      "assessment": "Design expiry for stored operation keys. Explain what happens if a very late retry arrives after deletion and why key retention must match the supported retry horizon.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Read the distributed-systems introduction before the commit videos. The TLA notation is introduced by videos 1 and 2; use state diagrams here and implement formal checks in A05.",
       "practice_links": []
     },
@@ -2813,9 +2861,9 @@
           "url": "https://qandrew.github.io/blog/6.875/"
         }
       ],
-      "practice": "Write the perfect-secrecy definition, prove the one-time pad result under a uniform one-use key, and construct a counterexample when a pad is reused. Work introductory security-game exercises from chapters 2 and 3.",
-      "assessment": "Define the adversary and its advantage for a fresh construction. Given a one-way function f, prove that appending a fixed zero bit to f(x) preserves one-wayness by describing the reduction.",
-      "pass_criteria": "Correct quantifiers, distributions, runtime and success-probability argument; separate a reduction proof from empirical testing.",
+      "practice": "Recreate the four rows and compute P(c=0|b=0), P(c=0|b=1) and best guessing probability. Then reuse k for two messages and derive c1 XOR c2 in terms of m1,m2.",
+      "assessment": "Explain a reduction template: a construction attacker has advantage epsilon, and a simulator with indistinguishable view turns its output into an underlying-game win with the same advantage. List what must be proved about simulation, resources and success, then give one way an extra oracle could break the argument.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "These are classroom recordings published by the person who filmed the lectures, rather than an MIT OCW release. This module prepares for deeper cryptography; lattice cryptography and post-quantum proofs require an additional linear-algebra track.",
       "practice_links": []
     },
@@ -2845,9 +2893,9 @@
           "url": "https://www.cl.cam.ac.uk/archive/rja14/Papers/SEv3-ch27.pdf"
         }
       ],
-      "practice": "Build a small offline fuzzer for your own harmless parser with bounded inputs and deterministic seeds. Record crashes, minimise one input and add a regression test. Before the symbolic-execution lecture, work a branch by hand as a set of logical path constraints.",
-      "assessment": "Compare a fresh parser under hand-written tests and bounded fuzzing using a fixed input budget; report coverage assumptions and one example of a missed property.",
-      "pass_criteria": "Reproducible seeds and minimal failing case; honest interpretation of coverage; no claim that a run proves absence of vulnerabilities.",
+      "practice": "Without external tools, trace all seven supplied inputs and classify accepted, expected ValueError or unexpected exception. Write a guarded repair and assert the intended outcomes. Do not launch any evaluation or model inference as part of this exercise.",
+      "assessment": "Compare two finite input sets: A=[\"1:a\",\"2:ab\"], B=the seven supplied cases. State the extra defects B reveals and a property neither set proves. Write path constraints for the successful n=2 branch.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Installing or executing the historical KLEE artifact is optional. The required exercise uses only your own local parser and no external model calls.",
       "practice_links": []
     },
@@ -2897,9 +2945,9 @@
           "url": "https://www.cybok.org/knowledgebase1_2/"
         }
       ],
-      "practice": "Use an artificial local comparison function to demonstrate input-dependent work by counting operations before attempting timing. Compare it with a standard constant-time comparison API and explain the measurement assumptions.",
-      "assessment": "Critique a new timing claim for confounding, sample selection, attacker access and statistical uncertainty; propose a control experiment.",
-      "pass_criteria": "Correct leakage model and justified measurement limits; no conclusion based on a single timing; distinguish architectural understanding from chip-design expertise.",
+      "practice": "Calculate the two means and identify the outcome, potential secret dependency and three confounders for a hypothetical timing study. Propose a measurement protocol on paper without probing a live secret-handling service.",
+      "assessment": "Explain why replacing a secret-dependent early-return comparison with a maintained constant-time comparison API is preferable to padding with a guessed sleep. State which broader risks remain.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Do not infer absence of leakage from equal observed timings. Required work uses harmless local strings and does not recover any real credential. First complete the MIT caches and memory-hierarchy topic videos and annotated slides; cache behaviour is introduced here before the side-channel lecture.",
       "practice_links": []
     },
@@ -2929,9 +2977,9 @@
           "url": "https://learntla.com/"
         }
       ],
-      "practice": "Complete the tutorial example, install the documented TLA tools, and model a small two-user access-control or balance-transfer system. Deliberately violate an invariant, inspect the counterexample and correct the model.",
-      "assessment": "Specify a fresh resource-sharing rule, show a counterexample to the first design and explain what the finite checked model leaves out.",
-      "pass_criteria": "An explicit invariant, reproducible checking configuration and correctly interpreted counterexample; no claim that finite checking proves every production behaviour.",
+      "practice": "Enumerate all reachable states manually. Remove balance>0 on paper and give a shortest invariant-violating trace. If using the linked TLA+ tooling, put model and configuration in separate files as documented and record exact version/result.",
+      "assessment": "Extend initial balance to 2 and conservation total 2. Enumerate safe states and explain the extra specification needed to claim that every requested item is eventually processed.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "A01 already introduces videos 1 and 2. This module adds specification and tool use.",
       "practice_links": []
     },
@@ -2969,9 +3017,9 @@
           "url": "https://support.apple.com/guide/security/welcome/web"
         }
       ],
-      "practice": "Review a documented mobile app design using a permission matrix, data-flow diagram and update path. Identify where credentials, logs and cached data live. Use a fictional manifest rather than requiring Android or iOS programming.",
-      "assessment": "Review a changed design that adds background location or third-party code and propose tests and minimisation controls.",
-      "pass_criteria": "Accurate permission and lifecycle reasoning with platform-specific assumptions; distinguish historical examples from current platform behaviour.",
+      "practice": "Create a capability/purpose table for the app. Add a photo-attachment feature and define when access is requested, what data is retained and what happens after denial. Use the current official platform guide before claiming exact prompt behaviour.",
+      "assessment": "An exported deep link accepts note_id and account_id from another app. Explain the trust boundary and design checks preventing access to another user's note.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "This is an advanced architecture survey. Implementing native app mitigations requires a separate Kotlin or Swift programming bridge before claiming native mobile-security practice.",
       "practice_links": []
     },
@@ -3018,9 +3066,9 @@
           "url": "https://www.cybok.org/knowledgebase1_2/"
         }
       ],
-      "practice": "Choose a fictional connected medical monitor or building controller. Define physical consequences, safe failure modes, remote management and recovery, then analyse a dependency failure and an unauthorised command.",
-      "assessment": "Defend an architecture that maintains a specified safe state during loss of network access, an update failure and an identity-service outage.",
-      "pass_criteria": "Explicit safety assumptions, physical consequences, recovery and assurance evidence; no claim of engineering competence in control theory, RF design or safety certification.",
+      "practice": "Draw the control loop and identify stale input, unauthorised command and loss-of-network scenarios. For each state a possible hazard, observation and proposed safe response with an explicit assumption.",
+      "assessment": "Compare a proposed automatic shutdown with a bounded degraded mode for the stale-sensor case. Explain what domain evidence and approval are needed before implementing either on real equipment.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "This is a breadth and threat-modelling module. Specialist control-system or radio engineering requires domain mathematics and laboratory preparation beyond this common path.",
       "practice_links": []
     },
@@ -3050,9 +3098,9 @@
           "url": "https://www.usenix.org/conference/usenixsecurity26/call-for-papers"
         }
       ],
-      "practice": "Annotate the KLEE paper by research question, assumptions, contribution, baselines, dataset, evaluation metric and limitations. Trace one headline claim back to the table or experiment supporting it.",
-      "assessment": "Write a two-page review separating what the paper establishes from what it leaves open; propose a feasible follow-up question with a falsifiable claim.",
-      "pass_criteria": "Accurate claim-to-evidence mapping; at least two substantive limitations; a testable follow-up question with no fabricated results.",
+      "practice": "Write a structured review of the fictional abstract with claim, supported result, two limitations, missing artifacts and a proposed independent validation. Calculate precision/recall.",
+      "assessment": "Select one open paper from an assigned advanced reading. Produce a one-page claim/evidence table with section references and three prerequisite concepts. Distinguish a paper limitation from an error you have actually demonstrated.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The paper is a stable worked example for research methods. Its historical results are not current performance guarantees.",
       "practice_links": []
     },
@@ -3090,9 +3138,9 @@
           "url": "https://openstax.org/books/introductory-statistics-2e/pages/index"
         }
       ],
-      "practice": "Reproduce one small claim using your own local parser, a fixed synthetic dataset and versioned code. Record the question, environment, expected outcome, controls, repetitions and stopping rule before running the experiment.",
-      "assessment": "Provide an artifact another learner can reproduce and a short report distinguishing exact reproduction, approximate agreement and failure to reproduce.",
-      "pass_criteria": "Independent reproduction from the written instructions; all claims tied to saved results; report negative outcomes and uncertainty.",
+      "practice": "Create a script computing the supplied sum/mean and a manifest. Exchange only these harmless artifacts with the other learner, or use a fresh local environment. Record observed values and any setup mismatch.",
+      "assessment": "Write a bounded research plan for comparing two local parsers using the seven A03 cases. Specify outputs, budget, inputs and limitations before any execution. Explain why this does not authorise a live provider benchmark or scoring matrix.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The required reproduction uses a local parser and synthetic data.",
       "practice_links": []
     },
@@ -3130,11 +3178,207 @@
           "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
         }
       ],
-      "practice": "Extend the local notes service with one genuinely needed feature. Deliver a threat model, architecture, least-privilege design, test matrix, reproducible environment, monitoring plan, backup restore evidence and incident tabletop. Add one substantial specialisation project in application security, systems, defence or cryptographic reasoning.",
-      "assessment": "Have the other learner review the project and introduce an undisclosed harmless fault within scope. Diagnose it, explain the root cause, implement a correction and defend the evidence and limitations orally.",
-      "pass_criteria": "No unresolved cross-user access; all selected requirements have evidence; successful restore; reproducible investigation; clear defence of residual risks and a substantial specialisation result.",
+      "practice": "Complete the supplied project. Use a rubric with five areas scored0/1/2: correctness, reproducibility, threat/telemetry assumptions, fair comparison and communication. Require at least1 in each area; have the other learner identify one weakness before revision.",
+      "assessment": "Defend the project without the walkthrough. Add a missing signal field to row 2, explain uncertainty, compare both rules under an explicit cost preference and propose a genuinely new question that would require additional data. Separate self-study completion, external certification and research degree routes.",
+      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Completion demonstrates the capabilities evidenced by the work. A PhD-level research contribution additionally requires original results and expert assessment; finishing these resources alone does not establish that.",
       "practice_links": []
+    },
+    {
+      "id": "I01",
+      "title": "AI and language-model systems: a security bridge",
+      "stage": "AI security engineering",
+      "prerequisites": ["P05", "M04", "B03", "S01"],
+      "skills": ["training and inference", "tokens embeddings retrieval", "model versus application authority"],
+      "videos": [
+        {
+          "label": "Google Cloud Tech — Introduction to large language models (conceptual overview; older product names)",
+          "url": "https://www.youtube.com/watch?v=zizonToFXDs"
+        }
+      ],
+      "readings": [
+        {
+          "label": "Google ML Crash Course — introduction to machine learning",
+          "url": "https://developers.google.com/machine-learning/intro-to-ml"
+        },
+        {
+          "label": "OWASP LLM risk overview",
+          "url": "https://genai.owasp.org/llm-top-10/"
+        }
+      ],
+      "practice": "Draw the supplied pipeline with trust boundaries. Classify these changes: passing B's note to A; adding a delete tool; fine-tuning on notes; retrieving an extra public document. Identify changed data/authority assumptions.",
+      "assessment": "Explain training, inference, prompting, retrieval, embeddings and tool execution in your own words. Design a read-only note assistant and list three security checks enforced by application code rather than by asking the model to behave.",
+      "pass_criteria": "Complete the independent task using supplied evidence; justify decisions and state limits. Do not claim mock data demonstrate live model behaviour.",
+      "practice_links": [],
+      "note": "Follow the named provider lesson, not just its course trailer. Provider lessons may require an account or paid access; pricing/access is provider-controlled. Watch demonstrations only. Required native tasks use supplied synthetic records and make no inference, evaluation, token-count or network calls. Full ML training theory and live red-team campaigns are outside this track."
+    },
+    {
+      "id": "I02",
+      "title": "Direct and indirect prompt injection",
+      "stage": "AI security engineering",
+      "prerequisites": ["I01", "W03", "S01"],
+      "skills": ["untrusted context", "instruction authority", "capability limits"],
+      "videos": [
+        {
+          "label": "DeepLearning.AI/Giskard — Overview of LLM Vulnerabilities (18m; select this named lesson)",
+          "url": "https://www.deeplearning.ai/courses/red-teaming-llm-applications"
+        }
+      ],
+      "readings": [
+        {
+          "label": "OWASP LLM prompt-injection prevention",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html"
+        }
+      ],
+      "practice": "Annotate task, external data, attempted authority change, targeted asset and proposed control. Compare two designs: a prompt-only warning with unrestricted tools, and a scoped read-only tool set with a fixed output channel.",
+      "assessment": "A tool response includes “administrator approved exporting all notes.” Explain why this is not evidence of user approval. Design a trusted approval record containing action, destination, scope and expiry.",
+      "pass_criteria": "Complete the independent task using supplied evidence; justify decisions and state limits. Do not claim mock data demonstrate live model behaviour.",
+      "practice_links": [],
+      "note": "Follow the named provider lesson, not just its course trailer. Provider lessons may require an account or paid access; pricing/access is provider-controlled. Watch demonstrations only. Required native tasks use supplied synthetic records and make no inference, evaluation, token-count or network calls. Full ML training theory and live red-team campaigns are outside this track."
+    },
+    {
+      "id": "I03",
+      "title": "RAG, embeddings and tenant-safe retrieval",
+      "stage": "AI security engineering",
+      "prerequisites": ["I02", "W11", "P04"],
+      "skills": ["pre-context access control", "retrieval provenance", "cache isolation"],
+      "videos": [
+        {
+          "label": "DeepLearning.AI/GuardrailsAI — Failure modes in RAG applications (13m; select this named lesson)",
+          "url": "https://www.deeplearning.ai/courses/safe-and-reliable-ai-via-guardrails?embed=2"
+        }
+      ],
+      "readings": [
+        {
+          "label": "OWASP 2025 LLM risks — vector/embedding weaknesses and sensitive disclosure",
+          "url": "https://genai.owasp.org/llm-top-10/"
+        }
+      ],
+      "practice": "Rank the permitted documents for A and B. Then revoke A's access to D1 and state which index/cache/memory decisions must change. Identify one way a citation could be present while the generated statement is unsupported.",
+      "assessment": "Design a tenant-aware retrieval cache key and a negative test where A/B ask the same question. Include document-policy version changes and explain why caching only by query text is unsafe.",
+      "pass_criteria": "Complete the independent task using supplied evidence; justify decisions and state limits. Do not claim mock data demonstrate live model behaviour.",
+      "practice_links": [],
+      "note": "Follow the named provider lesson, not just its course trailer. Provider lessons may require an account or paid access; pricing/access is provider-controlled. Watch demonstrations only. Required native tasks use supplied synthetic records and make no inference, evaluation, token-count or network calls. Full ML training theory and live red-team campaigns are outside this track."
+    },
+    {
+      "id": "I04",
+      "title": "Tools, agents and independent action authorisation",
+      "stage": "AI security engineering",
+      "prerequisites": ["I02", "S06", "W16", "A01"],
+      "skills": ["guarded executor", "approval binding", "least privilege and retries"],
+      "videos": [
+        {
+          "label": "DeepLearning.AI/AGI Inc — Intro to Web Agents (11m; architecture context, not a security guarantee)",
+          "url": "https://www.deeplearning.ai/courses/building-ai-browser-agents"
+        }
+      ],
+      "readings": [
+        {
+          "label": "OWASP AI Agent Security Cheat Sheet",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html"
+        }
+      ],
+      "practice": "Evaluate all four proposals. Extend the fixture with trusted approval to send exactly text T1 to R before time 1000. Evaluate time 999/T1, time 1001/T1 and time 999/T2. Do not send anything.",
+      "assessment": "Design a guarded executor contract for a read-only document assistant. Include principal binding, tool/argument allowlists, object access, budget, approval where needed and audit outcomes. Explain a confused-deputy failure if the executor uses its broad service credential without user checks.",
+      "pass_criteria": "Complete the independent task using supplied evidence; justify decisions and state limits. Do not claim mock data demonstrate live model behaviour.",
+      "practice_links": [],
+      "note": "Follow the named provider lesson, not just its course trailer. Provider lessons may require an account or paid access; pricing/access is provider-controlled. Watch demonstrations only. Required native tasks use supplied synthetic records and make no inference, evaluation, token-count or network calls. Full ML training theory and live red-team campaigns are outside this track."
+    },
+    {
+      "id": "I05",
+      "title": "Model, data and AI software supply chains",
+      "stage": "AI security engineering",
+      "prerequisites": ["I01", "F05", "G02"],
+      "skills": ["artifact provenance", "model loading risks", "poisoning and rollback"],
+      "videos": [
+        {
+          "label": "Cisco — Can you trust your AI Agents? Securing the AI Software Supply Chain (12:34)",
+          "url": "https://video.cisco.com/detail/videos/latest-videos/video/6406856863112"
+        }
+      ],
+      "readings": [
+        {
+          "label": "OWASP 2025 supply-chain and data/model-poisoning entries",
+          "url": "https://genai.owasp.org/llm-top-10/"
+        }
+      ],
+      "practice": "Review a changed release: same model name but no revision/digest, new adapter from an unknown publisher and a loader asking to execute remote code. Identify distinct risks and decide what evidence is required before an isolated authorised review.",
+      "assessment": "Write an AI bill-of-materials record for a fictional RAG assistant and a rollback plan after suspected corpus poisoning. Explain how rollback differs for corpus, model and application-code changes.",
+      "pass_criteria": "Complete the independent task using supplied evidence; justify decisions and state limits. Do not claim mock data demonstrate live model behaviour.",
+      "practice_links": [],
+      "note": "Follow the named provider lesson, not just its course trailer. Provider lessons may require an account or paid access; pricing/access is provider-controlled. Watch demonstrations only. Required native tasks use supplied synthetic records and make no inference, evaluation, token-count or network calls. Full ML training theory and live red-team campaigns are outside this track."
+    },
+    {
+      "id": "I06",
+      "title": "AI privacy, retention and sensitive-data boundaries",
+      "stage": "AI security engineering",
+      "prerequisites": ["I03", "G02", "S03"],
+      "skills": ["data minimisation", "provider retention", "derived data and redaction"],
+      "videos": [
+        {
+          "label": "DeepLearning.AI/GuardrailsAI — Ensuring no personal identifiable information (PII) is leaked (13m)",
+          "url": "https://www.deeplearning.ai/courses/safe-and-reliable-ai-via-guardrails?embed=2"
+        }
+      ],
+      "readings": [
+        {
+          "label": "OWASP 2025 sensitive-information disclosure entry",
+          "url": "https://genai.owasp.org/llm-top-10/"
+        }
+      ],
+      "practice": "Create a source-to-destination inventory for the supplied task. Include application storage, model provider, logs and user display. Decide permitted fields and retention purpose for each. Identify two derived artifacts needing the same privacy review.",
+      "assessment": "A provider setting excludes prompts from training but retains operational logs temporarily. Explain why “not trained on” and “not stored” are different claims, and propose what documentation a deployment owner must verify.",
+      "pass_criteria": "Complete the independent task using supplied evidence; justify decisions and state limits. Do not claim mock data demonstrate live model behaviour.",
+      "practice_links": [],
+      "note": "Follow the named provider lesson, not just its course trailer. Provider lessons may require an account or paid access; pricing/access is provider-controlled. Watch demonstrations only. Required native tasks use supplied synthetic records and make no inference, evaluation, token-count or network calls. Full ML training theory and live red-team campaigns are outside this track."
+    },
+    {
+      "id": "I07",
+      "title": "AI security assurance and resource limits",
+      "stage": "AI security engineering",
+      "prerequisites": ["I02", "I04", "M05"],
+      "skills": ["static policy cases", "coverage limits", "budgets and no live probes"],
+      "videos": [
+        {
+          "label": "DeepLearning.AI/GuardrailsAI — What are guardrails (6m; validation concepts only)",
+          "url": "https://www.deeplearning.ai/courses/safe-and-reliable-ai-via-guardrails?embed=2"
+        }
+      ],
+      "readings": [
+        {
+          "label": "OWASP 2025 improper output handling and unbounded consumption",
+          "url": "https://genai.owasp.org/llm-top-10/"
+        }
+      ],
+      "practice": "Hand-check all six cases and write a verification plan identifying the assertion owner, inputs and expected observable result. Define max input bytes, tool count, duration and retry count for a fictional task, without executing a run.",
+      "assessment": "Critique “the agent passed100 safety prompts, therefore it is secure.” State missing threat-model/coverage information and design a bounded offline policy check that adds useful evidence without any live evaluation.",
+      "pass_criteria": "Complete the independent task using supplied evidence; justify decisions and state limits. Do not claim mock data demonstrate live model behaviour.",
+      "practice_links": [],
+      "note": "Follow the named provider lesson, not just its course trailer. Provider lessons may require an account or paid access; pricing/access is provider-controlled. Watch demonstrations only. Required native tasks use supplied synthetic records and make no inference, evaluation, token-count or network calls. Full ML training theory and live red-team campaigns are outside this track."
+    },
+    {
+      "id": "I08",
+      "title": "AI incident response and security-case capstone",
+      "stage": "AI security engineering",
+      "prerequisites": ["I01", "I02", "I03", "I04", "I05", "I06", "I07", "D08", "R02"],
+      "skills": ["AI incident provenance", "containment and memory", "bounded security claims"],
+      "videos": [
+        {
+          "label": "DeepLearning.AI/Giskard — A Full Red Teaming Assessment (15m; observe methodology only)",
+          "url": "https://www.deeplearning.ai/courses/red-teaming-llm-applications"
+        }
+      ],
+      "readings": [
+        {
+          "label": "OWASP AI Agent Security — audit, memory and controls",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html"
+        }
+      ],
+      "practice": "Write a threat model and incident memo using the packet. Include authorised task, untrusted source, attempted effect, actual enforcement result, preserved metadata, containment options and three untested questions. Add an owner-scoped retrieval/agent design.",
+      "assessment": "Change the packet: send was enabled under a broad service credential and no user approval was checked. Explain the possible failure, immediate containment and exact regression cases needed. Do not send a test message or launch a model run.",
+      "pass_criteria": "Complete the independent task using supplied evidence; justify decisions and state limits. Do not claim mock data demonstrate live model behaviour.",
+      "practice_links": [],
+      "note": "Follow the named provider lesson, not just its course trailer. Provider lessons may require an account or paid access; pricing/access is provider-controlled. Watch demonstrations only. Required native tasks use supplied synthetic records and make no inference, evaluation, token-count or network calls. Full ML training theory and live red-team campaigns are outside this track."
     }
   ]
 }

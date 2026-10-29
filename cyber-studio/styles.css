@@ -1762,3 +1762,40 @@ input[type="radio"] {
     grid-row: auto;
   }
 }
+
+/* Long explanations and code remain readable on narrow screens and keyboards. */
+.lesson-code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+.solution {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.solution summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.solution[open] summary {
+  margin-bottom: 1rem;
+}
+
+.credential-card {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.credential-topics {
+  line-height: 2;
+  overflow-wrap: anywhere;
+}

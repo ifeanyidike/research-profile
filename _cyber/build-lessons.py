@@ -12,7 +12,8 @@ for path in sorted((root / '_cyber/content').glob('*.txt')):
         choices = [correct, wrong1, wrong2]
         answer = sum(map(ord, id)) % 3
         choices.insert(answer, choices.pop(0))
-        lessons[id] = dict(concept=concept, mechanism=mechanism, example=example, pitfall=pitfall, check=dict(question=question, choices=choices, answer=answer, explanation=feedback))
+        guide = json.loads((root / '_cyber/guides' / f'{id}.json').read_text())
+        lessons[id] = dict(guide=guide, concept=concept, mechanism=mechanism, example=example, pitfall=pitfall, check=dict(question=question, choices=choices, answer=answer, explanation=feedback))
 modules = json.loads((root / 'cyber-studio/curriculum.json').read_text())['modules']
 assert set(lessons) == {m['id'] for m in modules}
 (root / 'cyber-studio/lessons.json').write_text(json.dumps(lessons, ensure_ascii=False, indent=2) + '\n')

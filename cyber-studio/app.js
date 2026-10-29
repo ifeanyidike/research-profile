@@ -1,5 +1,6 @@
-import { createStore, learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX } from "./model.js";
-import { Account } from "./account.js";
+import { videoEmbed } from "./video.js?v=20261029-2";
+import { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } from "./model.js?v=20261029-2";
+import { Account } from "./account.js?v=20261029-2";
 const { createClient } = window.supabase;
 import { syncConfig } from "../algo-studio/sync-config.js";
 const $ = (s) => document.querySelector(s);
@@ -20,13 +21,15 @@ try {
     },
   };
 }
-let store,
+let getWorkspace,
+  store,
   account,
   user = null,
   active = "ifeanyi",
   names = { ...DEFAULT_NAMES },
   modules = [],
   lessons = {},
+  credentials,
   ids,
   stages = [],
   byId = {},
@@ -65,7 +68,8 @@ function state() {
 }
 function selectUser(next) {
   user = next;
-  store = createStore(storage, ids, Date.now, saveStatus, user ? `account:${user.id}` : "guest");
+  store = getWorkspace(user ? `account:${user.id}` : "guest");
+  document.documentElement.dataset.theme = store.setting("theme", window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   names = store.setting("names", DEFAULT_NAMES);
   if (!names || PROFILES.some((p) => typeof names[p] !== "string")) names = { ...DEFAULT_NAMES };
   active = user ? "ifeanyi" : store.setting("active", "ifeanyi");
@@ -94,6 +98,7 @@ const stageDescriptions = [
   "Make defensible decisions about risk, usability, and privacy.",
   "Study distributed systems, proofs, analysis, hardware, and formal methods.",
   "Critique research, reproduce results, and defend a substantial project.",
+  "Secure AI data, retrieval, tools and agents with explicit trust boundaries and evidence.",
 ];
 function status(m, s = state(), r = records()) {
   return r[m.id]?.passedAt
@@ -124,7 +129,7 @@ function home() {
     next = s.next;
   return `<section class="hero"><div><span class="eyebrow">YOUR CYBERSECURITY LEARNING SPACE</span><h1>Understand the system.<br /><em>Learn to secure it.</em></h1><p class="hero-copy">A clear path from your first line of code to security engineering and research. Learn the ideas, follow the evidence, and put each lesson into practice.</p><div class="button-row"><a class="button" href="#lesson/${next?.id || "R03"}/learn">${s.passed ? "Continue learning" : "Start your first lesson"} <span aria-hidden="true">↗</span></a><a class="button secondary" href="#path">Explore the curriculum</a></div></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-core">c<span>↗</span></div><span class="art-label label-one">UNDERSTAND</span><span class="art-label label-two">BUILD</span><span class="art-label label-three">DEFEND</span><span class="art-dot dot-one"></span><span class="art-dot dot-two"></span></div></section>
  <div class="welcome-line"><h2>Make yourself at home, ${esc(currentName())}.</h2><span>${user ? "Your own learning account" : "Try the lessons as a guest, or sign in to keep your own workspace."}</span></div>
- <div class="stat-row"><div><strong>${s.passed}<span> / 85</span></strong><span>Topics self-assessed</span></div><div><strong>${s.practised}</strong><span>Topics practised</span></div><a href="#review"><strong>${s.due.length}</strong><span>Reviews ready for you ↗</span></a><div><strong>12</strong><span>Connected learning stages</span></div></div>
+ <div class="stat-row"><div><strong>${s.passed}<span> / ${modules.length}</span></strong><span>Topics self-assessed</span></div><div><strong>${s.practised}</strong><span>Topics practised</span></div><a href="#review"><strong>${s.due.length}</strong><span>Reviews ready for you ↗</span></a><div><strong>${stages.length}</strong><span>Connected learning stages</span></div></div>
  ${next ? `<section class="continue-card"><div><span class="eyebrow">YOUR NEXT STEP · ${esc(next.id)}</span><h3>${esc(next.title)}</h3><p>${esc(next.skills.join(" · "))}</p></div><a class="button" href="#lesson/${next.id}/learn">Open lesson ↗</a></section>` : `<section class="continue-card"><div><h3>Your broad foundation is complete.</h3><p>Return to review, defend your capstone, and choose a specialisation for deeper study.</p></div><a class="button" href="#review">Review learning ↗</a></section>`}
  <div class="section-heading"><div><span class="eyebrow">THE PATH AHEAD</span><h2>Build understanding, layer by layer.</h2></div><a href="#method">How this works ↗</a></div><div class="stage-grid">${stageCards()}</div><p class="fine-print">Readiness follows the source map's prerequisites. You can explore any topic; assess its prerequisites before claiming competence. This is an independent learning curriculum, not an accredited degree.</p>`;
 }
@@ -138,7 +143,7 @@ function path() {
       (!pathState ||
         (pathState === "passed" ? r[m.id]?.passedAt : pathState === "ready" ? !r[m.id]?.passedAt && s.ready(m) : !r[m.id]?.passedAt && !s.ready(m)))
   );
-  return `<div class="page-heading"><span class="eyebrow">85 TOPICS · ONE CONNECTED PATH</span><h1>Your curriculum</h1><p>Start at the beginning or revisit a foundation. Each topic connects explanations, exact source material, practice, and evidence of understanding.</p></div><div class="filters"><label><span class="sr-only">Search curriculum</span><input id="path-search" type="search" placeholder="Search topics or skills…" value="${esc(pathQuery)}" /></label><label><span class="sr-only">Learning stage</span><select id="path-stage"><option value="">All stages</option>${stages.map((st) => `<option ${st === pathStage ? "selected" : ""}>${esc(st)}</option>`).join("")}</select></label><label><span class="sr-only">Learning status</span><select id="path-state"><option value="">Every topic</option><option value="ready" ${pathState === "ready" ? "selected" : ""}>Ready to start</option><option value="passed" ${pathState === "passed" ? "selected" : ""}>Self-assessed</option><option value="prerequisites" ${pathState === "prerequisites" ? "selected" : ""}>Prerequisites to review</option></select></label></div><p class="fine-print" role="status">${filtered.length} topics shown</p><div id="path-list">${
+  return `<div class="page-heading"><span class="eyebrow">${modules.length} TOPICS · ONE CONNECTED PATH</span><h1>Your curriculum</h1><p>Start at the beginning or revisit a foundation. Each topic connects explanations, exact source material, practice, and evidence of understanding.</p></div><div class="filters"><label><span class="sr-only">Search curriculum</span><input id="path-search" type="search" placeholder="Search topics or skills…" value="${esc(pathQuery)}" /></label><label><span class="sr-only">Learning stage</span><select id="path-stage"><option value="">All stages</option>${stages.map((st) => `<option ${st === pathStage ? "selected" : ""}>${esc(st)}</option>`).join("")}</select></label><label><span class="sr-only">Learning status</span><select id="path-state"><option value="">Every topic</option><option value="ready" ${pathState === "ready" ? "selected" : ""}>Ready to start</option><option value="passed" ${pathState === "passed" ? "selected" : ""}>Self-assessed</option><option value="prerequisites" ${pathState === "prerequisites" ? "selected" : ""}>Prerequisites to review</option></select></label></div><p class="fine-print" role="status">${filtered.length} topics shown</p><div id="path-list">${
     stages
       .map((stage, i) => {
         const items = filtered.filter((m) => m.stage === stage);
@@ -152,14 +157,6 @@ function path() {
 function quiz(check) {
   return `<form id="quiz" class="quiz"><fieldset><legend>${esc(check.question)}</legend>${check.choices.map((c, i) => `<label><input type="radio" name="answer" value="${i}" required /> ${esc(c)}</label>`).join("")}</fieldset><button class="button secondary" type="submit">Check my reasoning</button><p id="quiz-feedback" class="feedback" role="status"></p></form>`;
 }
-function videoId(url) {
-  try {
-    const u = new URL(url);
-    if (["video.cs50.io", "youtu.be"].includes(u.hostname)) return u.pathname.split("/").filter(Boolean)[0];
-    if (["www.youtube.com", "youtube.com"].includes(u.hostname)) return u.searchParams.get("v") || u.pathname.split("/")[2];
-  } catch {}
-  return null;
-}
 function resources(m) {
   const r = store.record(active, m.id).values;
   let checked = [];
@@ -170,11 +167,24 @@ function resources(m) {
     items
       .map((item, i) => {
         const key = `${type}:${i}`,
-          id = type === "video" ? videoId(item.url) : null;
-        return `<article class="resource">${id && /^[\w-]{11}$/.test(id) ? `<button class="video-load" data-video="${id}" data-title="${esc(item.label)}"><span class="play-icon" aria-hidden="true">▶</span><strong>${esc(item.label)}</strong><small>Load video · connects to YouTube</small></button>` : ""}<div class="resource-info"><span class="eyebrow">${type === "video" ? "WATCH" : "READ"} ${i + 1}</span><h3>${link(item)}</h3><label class="resource-check"><input type="checkbox" data-resource="${key}" ${checked.includes(key) ? "checked" : ""} /> ${type === "video" ? "I watched and took notes" : "I read and took notes"}</label></div></article>`;
+          id = type === "video" ? videoEmbed(item.url) : null;
+        return `<article class="resource">${id ? `<button class="video-load" data-video="${esc(id)}" data-title="${esc(item.label)}"><span class="play-icon" aria-hidden="true">▶</span><strong>${esc(item.label)}</strong><small>Load video · connects to YouTube</small></button>` : ""}<div class="resource-info"><span class="eyebrow">${type === "video" ? "WATCH" : "READ"} ${i + 1}</span><h3>${link(item)}</h3><label class="resource-check"><input type="checkbox" data-resource="${key}" ${checked.includes(key) ? "checked" : ""} /> ${type === "video" ? "I watched and took notes" : "I read and took notes"}</label></div></article>`;
       })
       .join("");
   return `<h2>Go deeper with the sources</h2><p>Follow these in the listed order. Pause to predict the next step, reproduce examples, and record questions. Completion checks are your own records, not verification of viewing.</p><h3>Videos</h3>${cards(m.videos, "video")}<h3>Readings</h3>${cards(m.readings, "reading")}<div class="callout"><strong>Source and setup notes</strong><p>${esc(m.note)}</p><p>Links were researched for the source map on 29 October 2026. Providers control availability, sign-in, fees, captions, and embedding. If a video cannot play here, open its original source.</p></div>`;
+}
+function paragraphs(text) {
+  return text
+    .split("\n\n")
+    .map((p) => `<p>${esc(p)}</p>`)
+    .join("");
+}
+function workshop(l) {
+  const g = l.guide;
+  return `<div class="callout"><strong>Before this lesson</strong>${paragraphs(g.bridge)}</div><h2>Step by step</h2>${paragraphs(g.teaching)}<div class="worked-example"><span class="eyebrow">FOLLOW THE WHOLE EXAMPLE</span><h3>Worked example and supplied data</h3><pre class="lesson-code" tabindex="0" aria-label="Worked example"><code>${esc(g.example)}</code></pre>${paragraphs(g.explanation)}</div>`;
+}
+function practiceWorkshop(l) {
+  return `<h3>Your complete workshop</h3>${paragraphs(l.guide.exercise)}<details class="solution"><summary>Reveal the worked solution after your attempt</summary>${paragraphs(l.guide.solution)}</details>`;
 }
 function lesson(id, tab) {
   const m = byId[id],
@@ -187,16 +197,16 @@ function lesson(id, tab) {
   const index = modules.indexOf(m);
   let body = "";
   if (tab === "learn")
-    body = `<span class="eyebrow">A GUIDED EXPLANATION</span><h2>The idea, in plain language</h2><p>${esc(l.concept)}</p><h2>How it works</h2><p>${esc(l.mechanism)}</p><div class="worked-example"><span class="eyebrow">WORK IT THROUGH</span><h3>A concrete example</h3><p>${esc(l.example)}</p><div class="example-result">Before moving on: explain the example aloud, then change one assumption and predict what happens.</div></div><div class="misconception"><strong>Keep this distinction clear</strong><p>${esc(l.pitfall)}</p></div><h2>Check your understanding</h2><p>Answer from memory before checking the explanation. This question is a starting check; the independent task in Assess tests the topic more fully.</p>${quiz(l.check)}<div class="lesson-bottom"><label><input type="checkbox" id="mark-read" ${r.read ? "checked" : ""} /> I can explain this introduction in my own words</label><a class="button" href="#lesson/${id}/resources">Watch & read ↗</a></div>`;
+    body = `<span class="eyebrow">A GUIDED EXPLANATION</span><h2>The idea, in plain language</h2><p>${esc(l.concept)}</p><h2>How it works</h2><p>${esc(l.mechanism)}</p>${workshop(l)}<div class="misconception"><strong>Keep this distinction clear</strong><p>${esc(l.pitfall)}</p></div><h2>Check your understanding</h2><p>Answer from memory before checking the explanation. This question is a starting check; the independent task in Assess tests the topic more fully.</p>${quiz(l.check)}<div class="lesson-bottom"><label><input type="checkbox" id="mark-read" ${r.read ? "checked" : ""} /> I can explain this introduction in my own words</label><a class="button" href="#lesson/${id}/resources">Watch & read ↗</a></div>`;
   if (tab === "resources")
     body = resources(m) + `<div class="lesson-bottom"><a class="button" href="#lesson/${id}/practice">Put it into practice ↗</a></div>`;
   if (tab === "practice")
-    body = `<span class="eyebrow">MOVE FROM RECOGNITION TO SKILL</span><h2>Your practical exercise</h2><p>${esc(m.practice)}</p>${m.practice_links.length ? `<h3>Open the exercise material</h3><ol>${m.practice_links.map((r) => `<li>${link(r)}</li>`).join("")}</ol>` : ""}<div class="callout"><strong>Before you begin</strong><p>Use the linked training environment or your own isolated lab and synthetic data. Record setup, expected behaviour, what actually happened, and the explanation. A command or result you cannot explain is a prompt to revisit the lesson.</p></div><label class="evidence"><strong>Your practice evidence</strong><span>Describe your method and results. Include local filenames, permitted evidence links, test cases, or a short code excerpt. Do not save passwords or private third-party data.</span><textarea data-field="evidence" maxlength="20000" placeholder="Setup → prediction → observation → explanation…">${esc(r.evidence || "")}</textarea></label><p class="save-hint" role="status"></p><label><input type="checkbox" id="mark-practice" ${r.practice ? "checked" : ""}/> I completed the exercise and can explain the result</label><div class="lesson-bottom"><a class="button" href="#lesson/${id}/assess">Try the independent assessment ↗</a></div>`;
+    body = `<span class="eyebrow">MOVE FROM RECOGNITION TO SKILL</span><h2>Your practical exercise</h2><p>Work through the supplied example in Learn, then use the complete workshop below. Linked provider labs offer additional practice.</p>${practiceWorkshop(l)}${m.practice_links.length ? `<h3>Open the exercise material</h3><ol>${m.practice_links.map((r) => `<li>${link(r)}</li>`).join("")}</ol>` : ""}<div class="callout"><strong>Before you begin</strong><p>Use the linked training environment or your own isolated lab and synthetic data. Record setup, expected behaviour, what actually happened, and the explanation. A command or result you cannot explain is a prompt to revisit the lesson.</p></div><label class="evidence"><strong>Your practice evidence</strong><span>Describe your method and results. Include local filenames, permitted evidence links, test cases, or a short code excerpt. Do not save passwords or private third-party data.</span><textarea data-field="evidence" maxlength="20000" placeholder="Setup → prediction → observation → explanation…">${esc(r.evidence || "")}</textarea></label><p class="save-hint" role="status"></p><label><input type="checkbox" id="mark-practice" ${r.practice ? "checked" : ""}/> I completed the exercise and can explain the result</label><div class="lesson-bottom"><a class="button" href="#lesson/${id}/assess">Try the independent assessment ↗</a></div>`;
   if (tab === "assess")
-    body = `<span class="eyebrow">SHOW WHAT YOU CAN DO WITHOUT A WALKTHROUGH</span><h2>Independent assessment</h2><p>${esc(m.assessment)}</p>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}<div class="callout"><strong>Pass criteria</strong><p>${esc(m.pass_criteria)}</p></div><h3>A quick retrieval check</h3>${quiz(l.check)}<label class="evidence"><strong>Your assessment evidence and explanation</strong><span>Record the independent result, how you checked it, and what remains uncertain. Aim for evidence another learner could review.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you build, solve, or demonstrate independently? How did you verify it?">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I reviewed every pass criterion and can defend my evidence</label><p class="fine-print">To record a pass: complete practice, assess the prerequisites, answer the retrieval check correctly in this session, review the criteria, and add at least 40 characters of assessment evidence. The hub records your judgement; it does not execute or grade external labs.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
+    body = `<span class="eyebrow">SHOW WHAT YOU CAN DO WITHOUT A WALKTHROUGH</span><h2>Independent assessment</h2><div class="callout"><strong>Independent task</strong>${paragraphs(l.guide.challenge)}</div><details class="solution"><summary>Review the expected reasoning after your attempt</summary>${paragraphs(l.guide.challenge_solution)}</details>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}<div class="callout"><strong>Pass criteria</strong><p>Complete the independent task, justify each decision or calculation, preserve valid behaviour, and identify assumptions and remaining limits. Compare your evidence with the expected reasoning after attempting it.</p></div><h3>A quick retrieval check</h3>${quiz(l.check)}<label class="evidence"><strong>Your assessment evidence and explanation</strong><span>Record the independent result, how you checked it, and what remains uncertain. Aim for evidence another learner could review.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you build, solve, or demonstrate independently? How did you verify it?">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I reviewed every pass criterion and can defend my evidence</label><p class="fine-print">To record a pass: complete practice, assess the prerequisites, answer the retrieval check correctly in this session, review the criteria, and add at least 40 characters of assessment evidence. The hub records your judgement; it does not execute or grade external labs.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
   if (tab === "notes")
     body = `<h2>Make the lesson yours</h2><p>Explain the concept as if teaching another learner. Keep questions, diagrams in words, connections to earlier topics, and mistakes you corrected.</p><label class="evidence"><strong>Your lesson notebook</strong><textarea data-field="notes" maxlength="20000" placeholder="In my own words…\nA question I still have…\nA connection to another topic…">${esc(r.notes || "")}</textarea></label><p class="save-hint" role="status"></p>`;
-  return `<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">Topic ${index + 1} of 85 · ${id}</span></div><div class="page-heading"><h1>${esc(m.title)}</h1><div class="lesson-meta">${m.skills.map((s) => `<span>${esc(s)}</span>`).join("")}</div></div><div class="prerequisites"><strong>Builds on</strong> ${m.prerequisites.length ? m.prerequisites.map((p) => lessonLink(p, `${p} · ${byId[p].title}`)).join(' <span aria-hidden="true">/</span> ') : "No earlier topic required."}${missing.length ? `<p>Review first: ${missing.map((p) => lessonLink(p)).join(", ")}. Exploration is open; assess these before recording this topic as passed.</p>` : ""}</div><nav class="tabs" aria-label="Lesson sections">${Object.entries(
+  return `<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">Topic ${index + 1} of ${modules.length} · ${id}</span></div><div class="page-heading"><h1>${esc(m.title)}</h1><div class="lesson-meta">${m.skills.map((s) => `<span>${esc(s)}</span>`).join("")}</div></div><div class="prerequisites"><strong>Builds on</strong> ${m.prerequisites.length ? m.prerequisites.map((p) => lessonLink(p, `${p} · ${byId[p].title}`)).join(' <span aria-hidden="true">/</span> ') : "No earlier topic required."}${missing.length ? `<p>Review first: ${missing.map((p) => lessonLink(p)).join(", ")}. Exploration is open; assess these before recording this topic as passed.</p>` : ""}</div><nav class="tabs" aria-label="Lesson sections">${Object.entries(
     tabs
   )
     .map(
@@ -205,7 +215,7 @@ function lesson(id, tab) {
     )
     .join(
       ""
-    )}</nav><div class="lesson-layout"><article class="lesson-body">${body}</article><aside class="lesson-aside"><span class="eyebrow">YOUR PROGRESS</span><h3>Understand. Apply. Explain.</h3><ul><li>${r.read ? "✓" : "○"} Introduction understood</li><li>${r.practice ? "✓" : "○"} Practice completed</li><li>${r.passedAt ? "✓" : "○"} Self-assessed pass</li></ul><p>${r.reviewAt ? `Next review: ${date(r.reviewAt)}` : r.passedAt ? "Review sequence complete. Revisit whenever useful." : "A pass schedules recall reviews after 2, then 7, then 30 days."}</p><a href="#lesson/${id}/notes">Open your notes ↗</a><hr/><p><strong>Learning loop</strong><br/>Read → watch → practise → explain → assess → revisit.</p></aside></div><div class="lesson-pagination">${index ? lessonLink(modules[index - 1].id, "← Previous topic") : ""}${index < modules.length - 1 ? lessonLink(modules[index + 1].id, "Next topic →") : ""}</div>`;
+    )}</nav><p id="remote-progress-note" class="fine-print" role="status" hidden></p><div class="lesson-layout"><article class="lesson-body">${body}</article><aside class="lesson-aside"><span class="eyebrow">YOUR PROGRESS</span><h3>Understand. Apply. Explain.</h3><ul><li>${r.read ? "✓" : "○"} Introduction understood</li><li>${r.practice ? "✓" : "○"} Practice completed</li><li>${r.passedAt ? "✓" : "○"} Self-assessed pass</li></ul><p>${r.reviewAt ? `Next review: ${date(r.reviewAt)}` : r.passedAt ? "Review sequence complete. Revisit whenever useful." : "A pass schedules recall reviews after 2, then 7, then 30 days."}</p><a href="#lesson/${id}/notes">Open your notes ↗</a><hr/><p><strong>Learning loop</strong><br/>Read → watch → practise → explain → assess → revisit.</p></aside></div><div class="lesson-pagination">${index ? lessonLink(modules[index - 1].id, "← Previous topic") : ""}${index < modules.length - 1 ? lessonLink(modules[index + 1].id, "Next topic →") : ""}</div>`;
 }
 function review() {
   const s = state(),
@@ -239,7 +249,18 @@ function notebook() {
   }`;
 }
 function method() {
-  return `<article class="method"><span class="eyebrow">DEPTH COMES FROM DOING</span><h1>A guide to learning well</h1><p class="lead">This hub connects 85 topics across 12 stages, from everyday computing to advanced security engineering and research preparation.</p><h2>One topic, six steps</h2><ol><li><strong>Learn:</strong> read the plain-language explanation and work through its example. Predict outcomes before looking.</li><li><strong>Watch & read:</strong> follow the exact videos and readings in order. Take notes in your own words.</li><li><strong>Practise:</strong> complete the scoped exercise and collect reproducible evidence.</li><li><strong>Assess:</strong> attempt the independent task without a walkthrough, meet all pass criteria, and explain your choices.</li><li><strong>Teach:</strong> ask your partner to challenge one assumption. Each person should do the practical work independently.</li><li><strong>Review:</strong> retrieve the idea after a delay, check it, and apply it to a changed example.</li></ol><h2>Prerequisites are part of the path</h2><p>The topic order follows explicit prerequisite links. A readiness label reflects your recorded passes, rather than inferred skill. You may explore any lesson, but recording a pass requires the earlier topics. If an example feels mysterious, follow its Builds on links and repair the specific gap.</p><h2>From breadth to depth</h2><p>The advanced stage introduces graduate-level ideas, including security definitions, symbolic execution, side channels, and formal models. Mobile and cyber-physical topics are surveys. Research-level competence requires deeper specialist study, suitable supervision where needed, and original work that survives critical review. This curriculum awards no accredited qualification.</p><h2>Sources and attribution</h2><p>The source map brings together university courses and primary technical material, including Harvard CS50, MIT OpenCourseWare, Stanford, Berkeley, CMU, PortSwigger Web Security Academy, SEED Labs, and official platform documentation where selected for each topic. Each lesson links its own exact sources; the hub's explanations, retrieval questions, exercises, and pass criteria are study guidance, not an endorsement by those institutions.</p><p>Older lectures remain useful for concepts; read the source notes before applying version-specific instructions. External providers control availability, pricing, accounts, transcripts, captions, and embedding. The source inventory was researched on 29 October 2026. Report broken or changed links through the site's repository.</p><h2>Your workspace and privacy</h2><p>Sign in to keep your progress under your own account and sync it across devices. Cyber Studio uses separate progress records from Algo Studio. Guest profiles stay on this browser. Account records are cached here for offline work; sign out and use your own browser profile on shared computers. Never put credentials, confidential incident data, or third-party personal records in your notes.</p><p>Videos load from YouTube only when you press Load video. Source links open their providers. Export backups for an additional copy; clearing browser data removes unsynced work.</p><h2>Practise inside the exercise boundary</h2><p>Use provided training targets, synthetic evidence, and your own isolated systems. The hub supplies instructions and records your self-assessment; it does not run commands, test external systems, verify lab completion, or grade the capstone automatically.</p></article>`;
+  return `<article class="method"><span class="eyebrow">DEPTH COMES FROM DOING</span><h1>A guide to learning well</h1><p class="lead">This hub connects ${modules.length} topics across ${stages.length} stages, from everyday computing to advanced security engineering and research preparation.</p><h2>One topic, six steps</h2><ol><li><strong>Learn:</strong> read the plain-language explanation and work through its example. Predict outcomes before looking.</li><li><strong>Watch & read:</strong> follow the exact videos and readings in order. Take notes in your own words.</li><li><strong>Practise:</strong> complete the scoped exercise and collect reproducible evidence.</li><li><strong>Assess:</strong> attempt the independent task without a walkthrough, meet all pass criteria, and explain your choices.</li><li><strong>Teach:</strong> ask your partner to challenge one assumption. Each person should do the practical work independently.</li><li><strong>Review:</strong> retrieve the idea after a delay, check it, and apply it to a changed example.</li></ol><h2>Prerequisites are part of the path</h2><p>The topic order follows explicit prerequisite links. A readiness label reflects your recorded passes, rather than inferred skill. You may explore any lesson, but recording a pass requires the earlier topics. If an example feels mysterious, follow its Builds on links and repair the specific gap.</p><h2>From breadth to depth</h2><p>The advanced stage introduces graduate-level ideas, including security definitions, symbolic execution, side channels, and formal models. Mobile and cyber-physical topics are surveys. Research-level competence requires deeper specialist study, suitable supervision where needed, and original work that survives critical review. This curriculum awards no accredited qualification.</p><h2>Sources and attribution</h2><p>The source map brings together university courses and primary technical material, including Harvard CS50, MIT OpenCourseWare, Stanford, Berkeley, CMU, PortSwigger Web Security Academy, SEED Labs, and official platform documentation where selected for each topic. Each lesson links its own exact sources; the hub's explanations, retrieval questions, exercises, and pass criteria are study guidance, not an endorsement by those institutions.</p><p>Older lectures remain useful for concepts; read the source notes before applying version-specific instructions. External providers control availability, pricing, accounts, transcripts, captions, and embedding. The source inventory was researched on 29 October 2026. Report broken or changed links through the site's repository.</p><h2>Your workspace and privacy</h2><p>Sign in to keep your progress under your own account and sync it across devices. Cyber Studio uses separate progress records from Algo Studio. Guest profiles stay on this browser. Account records are cached here for offline work; sign out and use your own browser profile on shared computers. Never put credentials, confidential incident data, or third-party personal records in your notes.</p><p>Videos load from YouTube only when you press Load video. Source links open their providers. Export backups for an additional copy; clearing browser data removes unsynced work.</p><h2>Practise inside the exercise boundary</h2><p>Use provided training targets, synthetic evidence, and your own isolated systems. The hub supplies instructions and records your self-assessment; it does not run commands, test external systems, verify lab completion, or grade the capstone automatically.</p></article>`;
+}
+function certifications() {
+  const r = records();
+  return `<article class="method"><span class="eyebrow">INDEPENDENT EXAMS · REAL REQUIREMENTS</span><h1>Plan your certification</h1><p class="lead">You can self-study and apply to an external certification body. Choose one credential for your current goal, close its specific gaps, and take its own exam.</p><div class="callout"><strong>What this hub records</strong><p>Your progress and exported backups are self-study records. They are not an accredited qualification or an ISC2, INE or GIAC certification. Those bodies assess and award their own credentials. We have no endorsement or automatic exam-credit arrangement with them.</p></div><h2>From learning to an external credential</h2><ol><li>Choose your goal: broad foundations, practical testing, operations or a later senior role.</li><li>Read the provider's current objectives, eligibility, identity rules and exam-delivery requirements.</li><li>Map every objective to evidence of skill. Complete missing provider-specific labs and legitimate practice questions; avoid exam dumps.</li><li>Check the full regional cost, voucher expiry, retake conditions, available test locations or remote-proctor requirements, and renewal costs before paying.</li><li>Create your own account on the official provider site, book and take its exam under its rules. This hub does not register or pay for you.</li><li>Finish any application/experience/ethics steps, then maintain the awarded credential.</li></ol><p>For a newcomer, compare CC first. Choose eJPT if you want a practical testing route after sufficient labs. Consider GSEC with a deliberate budget and practitioner foundation. CISSP is a later experience-based goal. These are different routes; you do not need to buy them all.</p><p class="fine-print">Provider details checked ${esc(credentials.reviewed)}. Pricing, availability and rules can change; confirm them with the issuer before purchase. Learning percentages below describe only this hub's suggested topics, not exam readiness.</p>${credentials.routes
+    .map((c) => {
+      const done = c.modules.filter((id) => r[id]?.passedAt).length;
+      return `<section class="credential-card"><h2>${esc(c.name)}</h2><p>${esc(c.fit)}</p><h3>Eligibility</h3><p>${esc(c.eligibility)}</p><h3>Exam route</h3><p>${esc(c.exam)}</p><h3>After passing and renewal</h3><p>${esc(c.after)}</p><h3>What to budget</h3><p>${esc(c.cost)}</p><h3>Your study bridge</h3><p>${done} / ${c.modules.length} suggested hub topics self-assessed. ${esc(c.gap)}</p><div class="credential-topics">${c.modules.map((id) => lessonLink(id)).join(" · ")}</div><h3>Official requirements and registration</h3><ul>${c.links.map((x) => `<li>${link(x)}</li>`).join("")}</ul></section>`;
+    })
+    .join(
+      ""
+    )}<h2>AI security as a specialisation</h2><p>Use the ${lessonLink("I01", "eight-topic AI security track")} to build an evidence-backed project around retrieval, agents, privacy and incident response. An AI course accomplishment and an independent professional certification are different awards. Check an issuer's current scope and requirements before buying an AI-labelled exam.</p></article>`;
 }
 function render(focus = false) {
   if (!store || !modules.length) return;
@@ -253,6 +274,7 @@ function render(focus = false) {
     review: "Recall & review",
     notebook: "My notebook",
     method: "How to learn",
+    certifications: "Certifications",
     lesson: byId[route[1]]?.id || "Lesson",
   };
   $("#page-name").textContent = titles[view] || "My learning";
@@ -268,7 +290,9 @@ function render(focus = false) {
             ? notebook()
             : view === "method"
               ? method()
-              : home();
+              : view === "certifications"
+                ? certifications()
+                : home();
   document.querySelectorAll("[data-nav]").forEach((a) => {
     a.classList.toggle("active", a.dataset.nav === view);
     if (a.dataset.nav === view) a.setAttribute("aria-current", "page");
@@ -356,7 +380,7 @@ function bindView(route) {
     el.addEventListener("click", () => {
       const iframe = document.createElement("iframe");
       iframe.className = "video-frame";
-      iframe.src = `https://www.youtube-nocookie.com/embed/${el.dataset.video}`;
+      iframe.src = el.dataset.video;
       iframe.title = el.dataset.title;
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
       iframe.allowFullscreen = true;
@@ -375,7 +399,7 @@ function bindView(route) {
 function settingsContent() {
   $("#settings-heading").textContent = "Account & backups";
   $("#account-area").innerHTML = user
-    ? `<p>Signed in as <strong>${esc(user.email || "your account")}</strong>. Your notes and progress belong to this account.</p><div class="button-row"><button class="button secondary" id="sync-now">Sync now</button><button class="text-button" id="sign-out">Sign out</button></div>`
+    ? `<p>Signed in as <strong>${esc(user.email || "your account")}</strong>. Your notes and progress belong to this account.</p><div class="button-row"><button class="button secondary" id="sync-now">Sync now</button><button class="text-button" id="sign-out">Sign out</button><button class="text-button" id="force-sign-out" hidden>Sign out on this device</button></div>`
     : `<p>Sign in to your own workspace. Each account keeps separate progress and notes, available across devices. You can use your existing Algo Studio account.</p><button class="button secondary" id="google">Continue with Google</button><details class="email-signin"><summary>Use email instead</summary><form id="auth-form"><label>Email<input id="auth-email" type="email" autocomplete="email" required /></label><label>Password<input id="auth-password" type="password" autocomplete="current-password" minlength="6" required /></label><div class="button-row"><button class="button" type="submit">Sign in</button><button class="button secondary" type="submit" name="signup" value="yes">Create account</button></div></form><button class="text-button" id="reset-password">Email a password reset link</button></details><p class="fine-print">Guest work stays separate when you sign in. To bring it into your account, export the guest backup first, then import it while signed in.</p>`;
   $("#name-fields").innerHTML = user
     ? `<label>Display name<input name="display" maxlength="60" value="${esc(currentName())}" required /></label>`
@@ -431,23 +455,46 @@ function settingsContent() {
       $("#settings-status").textContent = "Signed out. The guest workspace is open.";
     } catch (e) {
       $("#settings-status").textContent = e.message;
+      $("#force-sign-out").hidden = false;
+    }
+  });
+  $("#force-sign-out")?.addEventListener("click", async () => {
+    try {
+      await account.signOut({ force: true });
+      $("#settings-status").textContent =
+        "Signed out on this device. Cached progress is kept for your next sign-in; keep an exported backup before clearing browser data.";
+    } catch (e) {
+      $("#settings-status").textContent = e.message;
     }
   });
   $("#sync-now")?.addEventListener("click", () => account.sync());
 }
 function refreshIfIdle() {
+  syncSidebar();
+  // Keep media nodes, retrieval answers and draft evidence intact during sync.
+  if (location.hash.startsWith("#lesson/")) {
+    const hint = $("#remote-progress-note");
+    if (hint) {
+      hint.hidden = false;
+      hint.textContent =
+        "Remote progress updated. Reopen this section when ready to view the merged progress and notes; your current activity is kept intact.";
+    }
+    return;
+  }
   if (!["TEXTAREA", "INPUT", "SELECT"].includes(document.activeElement?.tagName) && !$("dialog[open]")) render();
 }
 async function init() {
   try {
-    const responses = await Promise.all([fetch("curriculum.json"), fetch("lessons.json")]);
+    const responses = await Promise.all([fetch("curriculum.json"), fetch("lessons.json"), fetch("credentials.json")]);
     if (responses.some((r) => !r.ok)) throw Error("The curriculum files could not be loaded.");
-    const [curriculum, content] = await Promise.all(responses.map((r) => r.json()));
+    const [curriculum, content, certificateData] = await Promise.all(responses.map((r) => r.json()));
     modules = curriculum.modules;
     lessons = content;
+    credentials = certificateData;
     ids = new Set(modules.map((m) => m.id));
     byId = Object.fromEntries(modules.map((m) => [m.id, m]));
     stages = [...new Set(modules.map((m) => m.stage))];
+    getWorkspace = workspaceStores(storage, ids, Date.now, saveStatus);
     selectUser(null);
     const theme = store.setting("theme", window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     document.documentElement.dataset.theme = theme;
@@ -538,11 +585,12 @@ $("#export").addEventListener("click", () => {
     url = URL.createObjectURL(blob),
     a = document.createElement("a");
   a.href = url;
-  a.download = `cyber-studio-${active}-${new Date().toISOString().slice(0, 10)}.json`;
+  a.download = `cyber-studio-progress-${new Date().toISOString().slice(0, 10)}.json`;
   a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
   $("#settings-status").textContent = "Backup exported for this workspace. Keep it somewhere you can recover.";
 });
+$("#import-open")?.addEventListener("click", () => $("#import-file").click());
 $("#import-file").addEventListener("change", async (e) => {
   const file = e.target.files[0];
   e.target.value = "";
