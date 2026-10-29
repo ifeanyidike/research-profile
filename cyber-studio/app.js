@@ -55,7 +55,9 @@ function patch(id, values) {
   account?.queue();
 }
 function currentName() {
-  const name = user ? user.user_metadata?.full_name || user.email?.split("@")[0] || "Learner" : names[active];
+  const name = user
+    ? user.user_metadata?.cyber_display_name || user.user_metadata?.full_name || user.email?.split("@")[0] || "Learner"
+    : names[active];
   return typeof name === "string" ? name.slice(0, 60) : "Learner";
 }
 function state() {
@@ -513,7 +515,7 @@ $("#names-form").addEventListener("submit", async (e) => {
   if (user) {
     const name = String(data.get("display")).trim();
     if (!name) return;
-    const { data: result, error } = await account.client.auth.updateUser({ data: { full_name: name } });
+    const { data: result, error } = await account.client.auth.updateUser({ data: { cyber_display_name: name } });
     if (error) {
       $("#settings-status").textContent = error.message;
       return;
