@@ -1,0 +1,186 @@
+F01
+Memory corruption breaks the program's intended relationship between bytes, objects, and control flow. An out-of-bounds write may overwrite neighbouring data; use-after-free may let code access storage whose lifetime has ended. The resulting behaviour depends on layout, allocator decisions, compilation, and the surrounding program, not simply on the source line's appearance.
+Reason from a minimal failing case. Identify the allocation, capacity, lifetime, write or read, and violated condition. Distinguish a crash from demonstrated control of data or execution. Use only the course's isolated binaries and benign inputs. The learning goal is to explain the defect and repair its cause, with evidence connecting input to invalid memory access.
+Take a deliberately unsafe local buffer exercise and draw its valid range. Use a diagnostic build to identify the first invalid access. Reduce the input until the smallest reproducer remains. Replace the unsafe length assumption with an explicit capacity check, then verify both the reproducer and ordinary boundary cases.
+A crash is evidence of a failure, not automatically proof of a particular exploit capability or severity.
+What is the strongest first step after observing a memory-related crash?
+Find and minimise the input that causes the first invalid access
+Assume arbitrary code execution has been demonstrated
+Disable every diagnostic to improve speed
+A minimal reproducer and diagnostic evidence support a causal explanation and a targeted repair.
+
+F02
+Memory-safety mitigations change exploit conditions. Stack canaries detect some stack corruption, non-executable pages restrict where code runs, address randomisation makes locations less predictable, and control-flow protections constrain some transfers. Each mitigation has a scope and assumptions. None should be described as making unsafe memory operations correct.
+Memory-safe language features can prevent broad defect classes when used within their guarantees, but unsafe interfaces and foreign-function boundaries still need care. Apply mitigations as layers while fixing the original lifetime or bounds defect. Compare diagnostic builds with production hardening, since a sanitiser's purpose and operational costs differ from a deployment mitigation's.
+For a provided local program, identify which hardening features are enabled using the course tooling. Draw one bug's path and annotate which layer might interrupt it and which conditions bypass that layer's scope. Repair the bug and retain the mitigation. Explain the difference between preventing an invalid write and detecting one of its consequences.
+A mitigation stopping one demonstration does not prove the underlying program is memory-safe.
+What does a stack canary primarily do?
+Detect certain stack overwrites before a protected return
+Prevent all heap lifetime errors
+Validate every application permission
+A canary checks a particular integrity marker. It does not provide comprehensive bounds, lifetime, or authorisation safety.
+
+F03
+Privilege separation divides a system into components with different authority. A sandbox constrains a component's permitted actions. A capability combines access to a resource with authority to perform specified operations. The goal is to make compromise of one part insufficient to exercise every privilege in the system.
+A confused deputy is a privileged component tricked into misusing its authority for a caller. Prevent it by tying authority to the intended request and resource, avoiding ambient privileges where practical, and checking caller context. Every interface between components needs validation; moving code into a second process without narrowing its authority changes structure more than security.
+Design a document-conversion service with an untrusted parser and a separate storage component. Grant the parser access only to its input and output, not the whole archive or network. Draw the message interface and state which component authorises the requested file. Consider what an attacker could still do after taking control of the parser.
+A sandbox with an unrestricted host filesystem mount can inherit the very authority it was meant to remove.
+What makes privilege separation useful after one component is compromised?
+The compromised component has less authority than the whole service
+Every component runs as the same administrator
+The process names are different
+Separating authority limits consequences. Process separation without permission separation may provide little containment.
+
+F04
+Hardening reduces unnecessary exposed behaviour and strengthens required behaviour. Inventory services, identities, configuration, update paths, and recovery requirements before disabling things. A firewall applies traffic policy at its position in the network path. An intrusion detector observes selected signals and alerts on patterns; it does not automatically prevent every malicious action.
+Use explicit rules, least privilege, configuration baselines, and tested rollback procedures. Default-deny policies need documented allowances for legitimate traffic. Logs and monitoring should show whether controls work, while testing should verify both permitted and prohibited paths. Consider IPv6, host-local communication, and alternate interfaces instead of assuming one rule covers every route.
+For a disposable server, list listening services and define the minimum connections needed. Apply a narrow lab firewall policy, confirm the intended client still works, and verify an unwanted connection fails. Record the configuration before and after, the test source, and a recovery method in case management access is blocked.
+A detector's silence is not proof that no incident occurred. It may lack the necessary visibility or rule.
+What should accompany a new deny rule?
+Tests of both the intended blocked path and required allowed paths
+Only a screenshot of the rule's name
+Removal of every recovery mechanism
+A useful control must block the threat while preserving required operation and recoverability.
+
+F05
+Secure development makes security part of design, implementation, review, release, and maintenance. A dependency is code you trust indirectly; its version, origin, build process, and update channel matter. A secret is authority-bearing material such as a credential, not an ordinary configuration value to embed in public source or browser code.
+Track dependencies and provenance, review sensitive changes, use least-privileged automation, and protect release credentials. A lockfile improves repeatability but does not prove its selected package is safe. An SBOM inventories components but does not itself remediate vulnerabilities. Plan secret rotation and incident response before exposure, and separate build-time authority from runtime authority.
+Review a tiny sample project. Identify direct and transitive dependencies, the release entry point, and where credentials would enter. Replace a synthetic hardcoded credential with a documented secret-injection mechanism and a harmless example configuration. Add a checklist covering dependency updates, code review, release verification, and credential rotation.
+Removing a leaked secret from the latest file does not invalidate copies in history, logs, or caches.
+What is the required response to an actually exposed live credential?
+Revoke or rotate it through the issuing system and investigate its use
+Only rename the variable
+Only delete the newest source-code line
+The authority must be invalidated. Editing one copy does not erase already exposed copies or prevent their use.
+
+D01
+Windows security analysis begins with normal administration. Accounts and groups identify principals; access-control lists grant or deny operations on objects. Services run background workloads under configured identities. The registry stores structured configuration, while event logs record selected system and application activities. PowerShell exposes objects and properties, not only lines of text.
+Understand the host's baseline before interpreting an event. Record the machine, account, event source, event identifier, time convention, and collection method. Elevation changes authority and should be explicit. PowerShell scripts should use narrow targets and inspect objects before mutation, particularly on a shared or important machine.
+In a disposable Windows lab, enumerate a harmless directory's ACL and inspect a known service's configured account. Generate a benign test event using the course exercise and locate it in the relevant log. Export the event with context, then explain what it directly shows and what it cannot prove about the actor's intent.
+An event identifier has meaning within its provider and context. A number alone is insufficient evidence.
+What is distinctive about a normal PowerShell pipeline?
+It can pass structured objects with properties
+It can pass only raw pixels
+It automatically grants administrator access
+PowerShell commonly passes objects. This supports property-based inspection but does not remove permission requirements.
+
+D02
+Active Directory centralises identities and policy in a Windows domain. Domain controllers perform critical directory and authentication functions. Kerberos uses tickets and trusted key relationships to authenticate access to services. NTLM is a different authentication family with different properties and risks; do not treat the two as interchangeable labels.
+Map identity flows before studying abuse cases. Identify user, workstation, domain controller, service, service principal name, and relevant keys or tickets. Group Policy distributes configuration under domain rules. Privileged groups, service accounts, delegation, and credential exposure can expand an incident's reach, so administrative boundaries and recovery paths matter.
+Using a contained course environment or saved traces, draw a user obtaining a service ticket and accessing a domain service. Mark where long-term secrets and tickets are used. Inventory a synthetic administrative role and identify which systems it can control. Compare the intended access with the actual group and delegation configuration.
+A domain-joined machine is not automatically trusted for every action, and a valid ticket does not replace the service's authorisation checks.
+What is the role of a Kerberos service ticket?
+Support authentication to a particular service under the protocol's trust relationships
+Encrypt every file on the workstation automatically
+Replace all object-level permissions
+A ticket supports authentication for a service. The service must still enforce what the authenticated actor may do.
+
+D03
+Cloud services move some operational responsibilities to a provider while leaving others with the customer. The division depends on whether you use infrastructure, a managed platform, or a managed application. Identity and access management connects principals to allowed actions on resources, often with conditions. Read policy evaluation rules rather than assuming an allow statement is the whole decision.
+Prefer short-lived workload credentials and narrow roles over distributing long-lived keys. Consider organisation policies, public exposure, encryption-key authority, logging, backups, and billing boundaries. This module's default exercise is an offline design: creating paid resources or changing a real account needs a separately planned deployment with current provider documentation.
+Design a hypothetical object store for private reports. Define reader, uploader, and administrator roles, and specify which identity may decrypt the contents. Draw provider-managed versus customer-managed responsibilities. Evaluate sample requests manually, including another account and an anonymous caller, without provisioning any cloud resources.
+A provider securing its infrastructure does not automatically correct a customer's overly broad policy or public data exposure.
+Who is responsible for a customer-configured overly permissive storage access policy?
+The customer must manage its policy within the service's responsibility model
+No one, because the data is in the cloud
+Only the physical datacentre guard
+Shared responsibility changes by service, but customer-controlled identity and access configuration remains a central customer obligation.
+
+D04
+A container image packages filesystem content and metadata for a workload. The running container also depends on its host, runtime, orchestration configuration, network, mounts, and identity. Image scanning covers only part of this system. A secure image can still be deployed with dangerous privileges or an exposed secret.
+Run with the minimum capabilities and permissions needed, avoid privileged host access, restrict writable paths and egress where appropriate, and use workload identities with limited scope. Pin and track images according to the deployment's update strategy. Protect the build pipeline and registry as well as the runtime, since attackers may alter what gets deployed.
+Review a synthetic deployment manifest offline. Identify the image reference, user identity, mounted volumes, exposed ports, and secret sources. Remove an unnecessary host mount and narrow the workload's API permissions. Explain how each change reduces the consequences of application compromise, then verify the intended file and network requirements remain possible.
+A container image digest identifies content; it does not establish that the content or deployment policy is trustworthy.
+Why is mounting the host's container-management socket especially sensitive?
+It may give the workload powerful control over the host's container environment
+It only changes the container's font settings
+It guarantees an independent kernel
+Management interfaces can cross isolation boundaries and grant authority far beyond the workload's intended task.
+
+D05
+Logs are selected records produced by software under configuration and resource constraints. They are observations, not a complete recording of reality. A SIEM collects and queries such events. Good analysis requires a schema, reliable field interpretation, known collection gaps, and a time model that supports ordering events across systems.
+Normalise timestamps while preserving originals and source timezone information. Distinguish event time from ingestion time. Deduplicate carefully, since similar events can be legitimate repeats. In a query language such as KQL, filter, project, aggregate, and join according to the question, and inspect a few raw records before trusting a summary.
+Use a synthetic dataset with two hosts and different timestamp offsets. Convert times to a shared reference, retain source values, and construct a login timeline. Count failures per account and inspect one account's raw records. Add a delayed-ingestion event and explain why sorting by ingestion time would misrepresent the sequence.
+Missing logs may mean no collection, retention expiry, a parsing failure, or tampering; they do not uniquely prove any one explanation.
+Why distinguish event time from ingestion time?
+Collection delays can make arrival order differ from the underlying event sequence
+They are always identical by definition
+Ingestion time proves the user's local clock was correct
+A pipeline can receive an old event late. Both timestamps have meaning, but they answer different questions.
+
+D06
+Threat intelligence adds context to observations: actor behaviours, infrastructure, techniques, and confidence. MITRE ATT&CK organises observed adversary techniques into a common vocabulary. Mapping an event to a technique can help explain coverage, but the label does not prove attribution or establish that every instance of the behaviour is malicious.
+Separate raw evidence, analytic interpretation, and confidence. An indicator such as a domain can expire or be shared with benign activity. A behavioural pattern may generalise better but still needs context. Record the source, date, scope, and alternatives for each claim, and distinguish directly observed actions from inferred intent.
+Take a synthetic incident containing a script launch, a new scheduled task, and an outbound connection. Map only the supported behaviours to ATT&CK entries using their definitions. For each mapping, cite the specific evidence and a benign alternative. State which additional observation would help distinguish the explanations.
+An ATT&CK technique label is neither an attribution verdict nor proof that a detection covers every implementation of that technique.
+What should accompany an ATT&CK mapping?
+Specific supporting evidence and stated uncertainty
+A guaranteed attacker nationality
+A claim of complete detection coverage
+The framework helps describe behaviour. Evidence and uncertainty establish the limits of the mapping.
+
+D07
+Detection engineering turns a threat hypothesis into an observable rule and an operating process. Start with the behaviour, necessary telemetry, expected benign lookalikes, and analyst response. A rule that cannot observe its required fields has no useful coverage, however convincing its query text appears.
+Test with labelled synthetic or authorised samples and report true positives, false positives, and known misses. Tune with a baseline representative of the target environment, avoiding overfitting to one demonstration. Version the query, data assumptions, validation cases, and response instructions together. Revisit the rule when logging schemas or attacker behaviour change.
+Write a hypothesis about repeated failed logins followed by success on one synthetic account. Define a time window and threshold, then test ordinary typos, a benign batch job, and the intended suspicious sequence. Inspect false alerts and document why the rule is a useful signal rather than proof of compromise.
+A rule matching its own handcrafted example says little about false-positive rates in a real population.
+What is required before claiming a detection can observe a behaviour?
+The needed telemetry is collected with usable fields and coverage
+The query contains a threat actor's name
+The dashboard uses a red colour
+Visibility is a prerequisite. A query cannot detect events absent from its data sources.
+
+D08
+Incident response coordinates preparation, investigation, containment, eradication, recovery, and learning. The order may overlap as evidence changes. Start with the observed facts, affected assets, possible impact, and decision authority. Preserve evidence relevant to the response while balancing the need to stop ongoing harm.
+Containment limits damage; eradication removes the cause; recovery restores trusted operation. Restarting a machine may restore availability while destroying useful volatile evidence or leaving stolen credentials valid. Record decisions, times, owners, and uncertainty. Communication should distinguish confirmed facts from hypotheses and give recipients the actions they need.
+Run a tabletop for a synthetic compromised test account. Decide when to revoke sessions, rotate relevant credentials, preserve logs, notify the owner, and restore normal access. Explain the tradeoff of each action. Define a recovery check and one follow-up change that addresses the original failure rather than merely closing the alert.
+Returning a service to a working state does not establish that the intrusion path or persistence has been removed.
+Which action directly addresses stolen session authority?
+Revoke the affected sessions under the application's response process
+Only change the website's colour theme
+Only archive the incident chat
+Stolen sessions can remain usable independently of cosmetic changes or documentation. Their authority needs explicit invalidation.
+
+D09
+Forensics reconstructs events from artifacts while preserving the distinction between evidence and inference. Disk images, filesystem metadata, browser records, endpoint logs, and packet captures provide different views. Acquisition method can change what is captured, so record source, timing, tools, settings, and limitations.
+Hashing supports later integrity comparisons of acquired artifacts but does not establish that the original source was truthful or complete. Preserve originals and work from copies where the exercise supports it. A timeline should cite each artifact and explain clock assumptions. Chain-of-custody documentation records handling; actual legal requirements depend on the jurisdiction and case context.
+Use the supplied training image, calculate its digest, and preserve a working copy. Extract three related artifacts and build a timeline with references back to source locations. Note one missing artifact and at least two explanations for its absence. Verify that another learner can reproduce your extraction from the same image and instructions.
+A file's timestamp alone is not definitive proof that a particular person performed an action at that time.
+What does matching an artifact's recorded cryptographic digest support?
+That the checked bytes match the previously hashed bytes, under the hash's assumptions
+That every statement inside the artifact is true
+That no evidence was missing before acquisition
+A digest supports integrity comparison. It does not prove completeness, provenance, or truth of the content by itself.
+
+D10
+A memory image captures selected volatile system state, potentially including processes, mappings, handles, and network structures. Volatility interprets that data using operating-system-specific knowledge. Results depend on image quality, platform support, symbols, and the selected analysis method. A missing result can reflect a tool limitation rather than absence of the activity.
+Malware triage begins with safe static examination and known training artifacts. Unknown code can have destructive or spreading behaviour, so do not execute it on your personal computer or an ordinary shared-network container. Reverse engineering asks how code behaves through strings, imports, control flow, and carefully scoped analysis; suspicious appearance alone does not prove intent.
+Use a provider-supplied memory image and documented tool version. List processes, inspect one unusual relationship, and corroborate it with another artifact. For the reverse-engineering portion, inspect a harmless compiled sample whose source is available, then compare your inferred behaviour with the source. Record uncertainty instead of inventing missing evidence.
+An unfamiliar process name or a single scanner label is a lead, not a complete malware verdict.
+Why corroborate a suspicious memory finding with another artifact?
+To test alternative explanations and reduce dependence on one tool interpretation
+Because two screenshots automatically establish attribution
+Because corroboration removes all uncertainty
+Independent observations can strengthen or challenge a hypothesis while preserving the limits of each evidence source.
+
+G01
+Risk connects an unwanted outcome to its likelihood, impact, and uncertainty. Security decisions also involve cost, usability, dependencies, and opportunity. A qualitative matrix can structure discussion, but its categories are judgments, not measurements automatically comparable across organisations. Define the asset, scenario, time horizon, and decision before assigning labels.
+Governance establishes who owns decisions, policies, exceptions, and review. Controls should have an owner and evidence of operation. Compliance can impose useful requirements, but meeting a checklist does not prove every important threat is controlled. Prioritise changes by supported risk reduction and operational feasibility rather than the number of findings alone.
+Compare two proposals for a small service: stronger account recovery and a rarely needed perimeter feature. State the incidents each might prevent, affected assets, implementation cost, and uncertainty. Recommend an order with an explicit rationale. Define how you would know the chosen control continues working after deployment.
+Multiplying ordinal labels such as low=1 and high=3 does not magically create a precise monetary risk estimate.
+What makes a risk recommendation reviewable?
+An explicit scenario, assumptions, expected benefit, cost, and uncertainty
+A severity label without an explanation
+A promise that all residual risk disappears
+Decision-makers need the reasoning and limits behind a priority, not only a numerical or coloured label.
+
+G02
+Human factors examines how real people interact with systems under constraints. Confusing recovery flows, excessive warnings, and impossible policies can create predictable workarounds. A useful control supports the user's task while resisting the relevant abuse. Evaluate behaviour through observable tasks rather than blaming users for not following an unusable design.
+Privacy considers purpose, data minimisation, access, retention, and the effects of collection or inference. Security protects information under a threat model; privacy also asks whether collecting or using it is appropriate. Rights and regulatory obligations vary by place and context, so this lesson teaches analysis and source reading rather than offering a universal legal checklist.
+Review a hypothetical learning hub's data flow. List what progress data is needed, what can stay on the device, and what account syncing would collect. Draft a plain-language explanation of storage, deletion, and backup. Ask another learner to find their progress and explain who can access it, recording points of confusion.
+A long consent notice does not by itself create understandable choices or justify collecting unnecessary data.
+Which design follows data minimisation?
+Collect only the information needed for a defined purpose and limit retention
+Collect everything because storage is inexpensive
+Keep personal records forever in case they become useful
+Minimisation connects collection and retention to an explicit need, reducing unnecessary exposure and secondary use.

@@ -1,0 +1,109 @@
+A01
+Distributed systems coordinate components that can fail independently. A timeout means the caller does not know whether the remote operation completed; it does not necessarily mean nothing happened. Networks can delay, duplicate, reorder, or lose messages, and a process can stop between performing an action and reporting its result.
+Retries therefore need explicit semantics. Idempotency associates repeated attempts with one intended logical operation, usually through scoped identifiers and durable state. State machines, ownership, and invariants help distinguish safe repetition from double effects. Consistency guarantees describe what observations are allowed, not a general promise that the system is always correct or secure.
+Model a payment-like transfer using only synthetic balances. The server commits the debit, but the response is lost. The client retries. Show how a naive implementation debits twice. Add a scoped idempotency key and stored result, then consider a crash before and after each write. State which updates must share an atomic boundary.
+A timeout is uncertainty, not proof of failure. Treating it as a clean rollback can create duplicate actions.
+After a request times out, what can the client safely conclude about server completion?
+It is uncertain without additional protocol evidence
+The operation definitely never ran
+The operation definitely ran exactly once
+The response may have been lost after completion, or the operation may not have completed. The protocol must resolve the uncertainty.
+
+A02
+A cryptographic security definition specifies a game: what the adversary sees, what it may request, what winning means, and which resources are bounded. A claim such as 'secure encryption' is incomplete without those details. Indistinguishability captures whether an adversary can tell selected encrypted messages apart beyond the permitted advantage.
+A reduction relates breaking one construction to solving another assumed-hard problem. Read its quantifiers and losses: which adversary becomes which solver, with what probability and resource cost? A proof can be mathematically valid while its assumptions fail in an implementation through poor randomness, side channels, wrong parameters, or protocol misuse.
+For a course encryption game, write challenger and adversary steps in plain language. Identify the hidden bit, allowed queries, winning condition, and baseline guessing probability. Change one assumption, such as allowing a forbidden decryption query, and explain why the definition would collapse or need revision. Keep toy arithmetic separate from production implementation.
+A proof for a primitive under one attack model does not automatically prove an entire deployed system secure.
+What must a meaningful cryptographic security claim specify?
+The adversary model, winning condition, assumptions, and resource bounds
+Only the ciphertext's apparent randomness
+Only the key's filename
+Security is defined relative to a game and assumptions. Appearance and naming do not establish the claim.
+
+A03
+Fuzzing generates or mutates inputs to discover failures. Coverage-guided fuzzing uses execution feedback to explore code paths. Static analysis reasons about code without running each concrete input. Symbolic execution represents inputs symbolically and explores constraints along paths. These techniques trade precision, scale, and assumptions differently.
+A finding needs triage: minimise the case, identify the violated property, determine reachability, and repair the cause. A tool's failure to find a bug is not proof of absence. Path explosion, environment models, uninstrumented code, and imperfect specifications can limit analysis. Track tool version, build flags, corpus, time budget, and the metric used to compare runs.
+Use a tiny local parser with a known boundary defect. Run the course's non-model fuzzing exercise in the isolated lab, minimise a failing input, and add a regression test. Compare the discovered path with a static warning or symbolic condition. Explain which program behaviours each method did not examine.
+High code coverage is an exploration metric, not proof that all important states or semantic properties were checked.
+Why minimise a fuzzing failure?
+To isolate a small reproducible input that clarifies the defect
+To guarantee the defect affects every production system
+To avoid understanding the parser's requirements
+A smaller reproducer helps establish causality, repair the bug, and maintain a focused regression test.
+
+A04
+Hardware provides the mechanisms on which software isolation depends: privilege levels, memory protection, caches, timers, and device interfaces. A cache stores recently used data or instructions to reduce access latency. Cache hits and misses have different timings, so shared microarchitectural state can reveal information even when direct reads are forbidden.
+A side channel infers secrets from effects such as timing, power, or resource contention. A fault attack changes computation and studies the resulting behaviour. The attacker model must state proximity, shared resources, measurements, and control. Constant-time programming addresses selected timing dependencies, but system noise, compiler transformations, and other channels require careful analysis.
+Use a harmless simulation of a two-level memory hierarchy. Record the differing costs of a hit and a miss, then show how a secret-dependent array choice can influence observed time. Explain what a real experiment would need to control and why the toy result alone does not demonstrate an attack on actual hardware.
+The absence of a direct memory read does not rule out information leakage through observable side effects.
+Why can secret-dependent memory access leak information?
+It may change shared cache state and observable timing
+Caches always publish plaintext keys in log files
+Virtual memory guarantees identical execution time
+A secret can influence an observable resource pattern without being directly readable by the observer.
+
+A05
+Formal specification makes system behaviour explicit using states, transitions, and properties. An invariant is a safety claim about reachable states; a liveness property concerns eventual progress under stated conditions. A model checker explores a defined model to find counterexamples or establish properties within its supported scope.
+TLA+ describes behaviours mathematically, while a tool such as TLC checks finite instances under configured bounds and assumptions. The model must represent the failure and concurrency conditions relevant to the claim. A correct model is not automatically a correct implementation: explain the mapping from real code to modeled states and which details were abstracted away.
+Specify a two-client single-use token model. Include read, consume, and retry transitions, then ask the checker whether consumption can occur twice. Inspect the counterexample trace from the naive model. Repair the transition to preserve the invariant and rerun the bounded model. Record constants and assumptions so another learner can reproduce the result.
+A successful bounded check establishes a result for the checked model and configuration, not all possible deployed environments.
+What is the most useful result of an invariant counterexample?
+A trace of modeled transitions that reaches a violating state
+A guarantee that the programming language is unusable
+A proof that every implementation has the same defect
+The trace explains how the modeled behaviour breaks the property and guides revision of the model or design.
+
+A06
+Mobile security spans hardware-backed trust, operating-system isolation, app permissions, interprocess communication, update distribution, and backend services. A permission grants a particular capability under platform rules, not blanket trust in an app. Sensitive data can also escape through logs, backups, notifications, screenshots, or an overly broad backend response.
+Map the platform's actual storage and trust mechanisms using current official guidance. Protect tokens, validate server-side authorisation, minimise collected data, and consider lost devices and account recovery. This is an architectural survey: implementing secure Android or iOS applications additionally requires platform programming, lifecycle, build, and release skills beyond this core path.
+Threat-model a hypothetical mobile notes app. Draw local storage, OS key storage, authentication provider, API, backups, and update channel. Explain what remains protected if the phone is locked, if the user unlocks it for an attacker, or if the account is compromised. Avoid claiming one storage API solves all three scenarios.
+Obfuscation may raise reverse-engineering effort but does not make a secret embedded in a distributed app reliably private.
+Where should a mobile API enforce object ownership?
+On the backend, independent of the app's interface
+Only in the app's hidden buttons
+Only in the app-store description
+Clients can be modified or replaced. Server-side permissions must protect the data regardless of the client.
+
+A07
+Cyber-physical systems connect computation to physical processes. A control action can affect equipment, people, or the environment, so availability, timing, integrity, and safe failure behaviour matter together. Telecom networks add shared infrastructure and protocol dependencies. A familiar IT containment action may have different consequences when an essential physical process depends on it.
+Begin with system purpose, operational constraints, hazard analysis, and responsible operators. Segmentation, monitored access, tested recovery, and fail-safe design must fit the process. This module is a survey rather than training in industrial control engineering, radio-frequency analysis, or safety certification; those specialisations need their own mathematics, equipment, and supervision.
+Model a simulated water-level controller with sensor, controller, actuator, and operator. Define a safe range and describe the effect of stale measurements, delayed commands, and lost connectivity. Propose a monitoring and recovery plan in the simulation. Explain why scanning or rebooting real operational equipment without an agreed procedure is outside the exercise.
+Protecting confidentiality alone may leave severe physical safety and service-continuity risks unaddressed.
+Why can ordinary IT incident actions require extra care in operational technology?
+They may disrupt physical processes with timing and safety constraints
+Operational equipment never uses networks
+Physical systems have no integrity requirements
+Containment and recovery must account for the process's hazards and operational requirements.
+
+R01
+A research paper makes a bounded claim supported by an argument, method, or experiment. Read first for the problem, contribution, threat model, assumptions, and comparison baseline. Then inspect the mechanism and evidence. Distinguish the authors' results from your interpretation and from later claims that the paper did not test.
+Critique constructively: ask whether the metric measures the stated goal, whether the baseline is fair, whether datasets represent the intended population, and whether limitations change applicability. Reconstruct one result before summarising the whole paper. The linked KLEE paper provides a concrete case connecting symbolic execution, test generation, and experimental evidence.
+Create a one-page claim-evidence table for the assigned paper. For each major claim, identify the supporting figure, theorem, or experiment and one limitation. Trace one reported result back to its setup and denominator. Explain the method to your partner without reading the abstract aloud, then answer their strongest counterexample.
+Peer review and a respected venue do not eliminate the need to examine assumptions, measurements, and reproducibility.
+Which question best tests a paper's empirical claim?
+Does the reported experiment and metric actually support the stated conclusion?
+Does the title contain a fashionable term?
+Can the abstract be repeated from memory?
+A research critique connects a precise claim to the method and evidence that justify it, including limitations.
+
+R02
+Reproducible research records enough detail to repeat an analysis under stated conditions. An artifact includes code, data or acquisition instructions, dependencies, configuration, and commands. Repetition on the same setup and independent replication are related but different forms of evidence. Neither guarantees that the original research question was meaningful.
+Predefine the hypothesis, baseline, metrics, sample selection, and analysis plan. Preserve raw outputs and report unsuccessful cases rather than selecting only favourable results. Document randomness and uncertainty, and consider privacy, permissions, disclosure, and harm before collecting data. New public-system testing or paid computation requires an explicit scoped research plan beyond this lesson.
+Using only an offline synthetic dataset, package a small detector comparison. Give your partner a fresh setup procedure and ask them to reproduce the table from raw data. Record every undocumented step they needed. Revise the artifact, explain differences between runs, and state what the synthetic population cannot establish about production performance.
+Reproducible numbers can still answer the wrong question or reflect a biased dataset. Method and relevance need separate scrutiny.
+What should another learner receive to reproduce an analysis?
+Raw or lawfully accessible data, code, environment details, configuration, and exact steps
+Only the final chart
+Only a statement that the experiment worked
+The artifact must expose the path from inputs to results, including the environment and assumptions.
+
+R03
+The capstone integrates design, implementation, assessment, defence, and explanation. Select a narrow system you can actually understand, such as a private notes service in an isolated lab. Define assets, actors, trust boundaries, invariants, and success criteria before building. Use synthetic identities and data and keep all testing within the agreed scope.
+Produce evidence across the lifecycle: reproducible setup, secure defaults, positive and negative tests, a scoped assessment, useful logs, a detection hypothesis, and a recovery exercise. Separate demonstrated results from untested claims. Specialisation adds depth through advanced coursework, paper reading, and a research question; this broad curriculum alone is not a degree or proof of universal mastery.
+Ask your partner to act as an independent reviewer. They should set up the project from your instructions, attempt the documented assessment, explain one trust boundary, and challenge one design assumption. Respond with evidence or an explicit limitation. Finish with a defended report and a next-study plan naming the prerequisites for your chosen specialisation.
+A completed checklist is not the same as an independently defensible system. The explanation and reproducible evidence are part of the work.
+What is the strongest capstone outcome?
+A scoped system and report another learner can reproduce, test, and critically challenge
+A screenshot showing every video marked watched
+A claim of expertise across all cybersecurity fields
+Independent reproduction and defence test understanding, implementation, and the limits of the conclusions.

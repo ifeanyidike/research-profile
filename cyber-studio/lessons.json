@@ -1,0 +1,1262 @@
+{
+  "O01": {
+    "concept": "A computer stores information in files, groups files in folders, and runs programs that interpret those files. A plain-text editor saves the characters you type; a word processor also saves formatting. A filename extension is a convention that helps software choose an interpreter. Renaming notes.txt to notes.py does not turn a paragraph into a working Python program.",
+    "mechanism": "A local path describes a location on a filesystem. A URL identifies a resource using a scheme such as https, a host, and a path. Downloading a resource creates a local copy; editing that copy normally does not change the remote resource. Keep your learning work in one folder so that experiments and evidence can be found again.",
+    "example": "Create cyber-learning with notes, code, and evidence subfolders. Save a sentence as notes/first-lesson.txt. Close the editor, find the file using your file manager, and reopen it. Download a course handout into evidence. Record its original URL beside the local filename. You now have both the artifact and its provenance.",
+    "pitfall": "An icon or filename alone does not establish what a file contains. Check the full name and open unfamiliar files with an appropriate viewer.",
+    "check": {
+      "question": "Which action changes the remote course handout?",
+      "choices": [
+        "Renaming your downloaded copy",
+        "Moving your downloaded copy into another folder",
+        "Editing it through a service where you have permission to update the original"
+      ],
+      "answer": 2,
+      "explanation": "A download is a separate copy. Local file operations do not modify the server's original."
+    }
+  },
+  "O02": {
+    "concept": "Security means preserving properties that matter to someone. Confidentiality limits disclosure, integrity limits unauthorised change, and availability keeps a service usable when needed. These goals can conflict: disconnecting a server may reduce disclosure while preventing legitimate access. Begin with the asset, its owner, and the unwanted outcome rather than a favourite security tool.",
+    "mechanism": "Permission defines where practical testing belongs. A training lab grants a limited scope; a public website being reachable does not grant permission to test it. Write down the systems, activities, accounts, and time window allowed by your own lab or an explicit authorisation. Stop when the exercise crosses that boundary. Use synthetic data, not real credentials or personal records.",
+    "example": "Model a family photo archive. Confidentiality means only selected people can view photos. Integrity means files cannot be silently replaced. Availability means a failed laptop does not destroy the only copy. Create a table with one failure and one control for each property, then identify which failures remain possible.",
+    "pitfall": "A discovered weakness does not expand your permission. Keep evidence minimal and follow the lab or owner's reporting process.",
+    "check": {
+      "question": "A lab permits testing one provided virtual machine. What is in scope?",
+      "choices": [
+        "That virtual machine under the lab's stated rules",
+        "Other machines on the same network",
+        "The provider's production login service"
+      ],
+      "answer": 0,
+      "explanation": "Scope attaches to the explicitly authorised systems and activities, not to everything technically reachable."
+    }
+  },
+  "O03": {
+    "concept": "An account links a person or service to permissions. A password is one way to prove control of that account; a second factor adds a different proof. A password manager helps create and store distinct passwords, reducing the damage when one service leaks a credential. Recovery methods also grant access and deserve the same attention as the normal login.",
+    "mechanism": "Updates reduce exposure to known defects. Device locking reduces casual access. Backups recover information after loss, but only if the copies survive the same failure and can be restored. Synchronisation alone can replicate an accidental deletion. Privacy starts by asking what information is collected, who can access it, and how long it is retained.",
+    "example": "Choose a harmless document. Back it up to a separate location, modify the working copy, and restore the earlier version into a new folder. Compare contents. Next draw the recovery path for a test account: what happens if the primary device is lost? Store recovery codes securely rather than in a public notebook.",
+    "pitfall": "A backup job reporting success is not proof of recovery. A restore test supplies stronger evidence.",
+    "check": {
+      "question": "Which observation best supports a backup's usefulness?",
+      "choices": [
+        "The backup application displayed a green icon",
+        "A separate copy was restored and its contents checked",
+        "A synchronisation folder exists on the same disk"
+      ],
+      "answer": 1,
+      "explanation": "A verified restore tests the recovery outcome; a status icon tests only part of the process."
+    }
+  },
+  "M01": {
+    "concept": "Binary and hexadecimal are ways to write numbers, not encryption. In decimal, 507 means 5×100 + 0×10 + 7. Binary uses powers of two, so 1011 means 8 + 2 + 1 = 11. Hexadecimal uses sixteen symbols, 0–9 and A–F; one hex digit represents four bits. A byte has eight bits and can represent 256 distinct patterns.",
+    "mechanism": "The same bits can represent an integer, text, an instruction, or a colour depending on the interpretation. An encoding defines that interpretation. Units matter too: bits and bytes differ by a factor of eight. Logarithms reverse exponentiation; log2(8)=3 tells us that three binary choices select among eight outcomes. Algebra lets us rearrange performance and risk equations without guessing.",
+    "example": "Convert decimal 13 to binary 1101 and hex D. Write a byte as 00001101 and observe that its value is unchanged by leading zeros. Then compare 10 megabits per second with 10 megabytes per second using the stated decimal units. Explain every conversion, including units, in your notebook.",
+    "pitfall": "Hexadecimal-looking text is not evidence that information is protected. Encoding is reversible without a secret.",
+    "check": {
+      "question": "How many distinct patterns fit in four bits?",
+      "choices": ["16", "4", "8"],
+      "answer": 0,
+      "explanation": "Each independent bit doubles the possibilities: 2×2×2×2 = 16."
+    }
+  },
+  "P01": {
+    "concept": "A variable gives a name to a value. A function groups instructions behind a name, accepts inputs called parameters, and may return a result. Calling a function executes its body; defining one does not. Python values have types, so the string '12' and the integer 12 behave differently even when they print similarly.",
+    "mechanism": "Follow data through a program in small steps. Input enters as text, conversion produces a number, a calculation produces another value, and output displays it. Keep calculation separate from interaction so the calculation can be tested with several inputs. A return value belongs to the caller; printing sends text to an output stream and is not a substitute for returning data.",
+    "example": "Define add_tax(price, rate) to return price * (1 + rate). Call it with 100 and 0.05 and record the returned 105. Then call it with 0 and with a second rate. Write down the value and type of every argument. Decide explicitly how invalid input will be handled instead of letting accidental conversions define the behaviour.",
+    "pitfall": "A variable name does not enforce a type or a unit. Use meaningful names and validate values at boundaries.",
+    "check": {
+      "question": "A function prints 5 but has no return statement. What does its caller receive in Python?",
+      "choices": ["None", "The integer 5", "The string '5'"],
+      "answer": 0,
+      "explanation": "Printing and returning are different actions. A Python function without an explicit return value returns None."
+    }
+  },
+  "P02": {
+    "concept": "A condition chooses a branch; a loop repeats a block. An if/elif/else chain selects the first true branch. A for loop visits items in an iterable. A while loop continues while its condition remains true, so its body must make progress toward an exit when termination is intended. Indentation determines which instructions belong together.",
+    "mechanism": "Trace a program using a table with one row per iteration. Record the current input, variable values, condition result, and output. This makes off-by-one errors visible. In Python, range(3) produces 0, 1, 2: the upper bound is excluded. An algorithm is the sequence of steps; code is one expression of those steps in a particular language.",
+    "example": "Start total at zero and loop over [2, 4, 6], adding each item. Your trace should show totals 2, 6, and 12. Next count values greater than 3, keeping the count separate from the sum. Test an empty list and a list containing only 3 to make the boundary rule explicit.",
+    "pitfall": "A loop that works on one example may still fail on empty input or at a boundary. Trace those cases deliberately.",
+    "check": {
+      "question": "How many times does a Python for loop over range(3) execute its body?",
+      "choices": ["Two", "Three", "Four"],
+      "answer": 1,
+      "explanation": "The values are 0, 1, and 2. Excluding 3 does not exclude 0."
+    }
+  },
+  "P03": {
+    "concept": "Choose a collection according to the question it must answer. A list preserves a sequence; a dictionary maps keys to values; a set represents distinct members. Modifying a collection can affect every reference to that same object. Copying a variable name does not necessarily copy the underlying data.",
+    "mechanism": "Data modelling means deciding what a record means before processing it. A login event might have an account, timestamp, and outcome. Missing fields and invalid values are different problems from an empty event list. Exceptions signal exceptional failures; catch the specific failures you can handle, and preserve useful context rather than silently treating every error as success.",
+    "example": "Represent three synthetic login events as dictionaries in a list. Count failures per account with another dictionary, and collect distinct accounts in a set. Add a malformed record. Decide whether to reject it or report it separately. Check that your answer does not change merely because the events arrive in a different order.",
+    "pitfall": "A broad exception handler that returns an empty result can hide corruption and make failed analysis look like a clean system.",
+    "check": {
+      "question": "You need one count per account name. Which collection directly models this?",
+      "choices": ["A string containing all account names", "A single Boolean", "A dictionary mapping account names to counts"],
+      "answer": 2,
+      "explanation": "The account name is a key and the count is its associated value. This is a dictionary's natural relationship."
+    }
+  },
+  "P04": {
+    "concept": "A module packages related Python definitions for reuse. Files persist data after the program exits. CSV represents rows and columns; JSON represents nested values such as objects, arrays, strings, and numbers. A parser turns encoded text into program values. Parsing successfully does not establish that the resulting values are valid for your application.",
+    "mechanism": "Separate reading, validation, analysis, and writing. Use a context manager to close files reliably, specify the text encoding, and handle malformed data explicitly. Timestamps need a timezone or an unambiguous convention. A local clock reading such as 01:30 can be ambiguous during a clock change; an offset-aware timestamp is safer for joining evidence from different systems.",
+    "example": "Read a small JSON array of synthetic events. Require account, outcome, and an offset-aware time. Reject an event missing its outcome and report the count of rejected records. Write a CSV summary of valid events. Reopen your output to confirm headers, row counts, and non-ASCII account names survived the round trip.",
+    "pitfall": "A valid JSON document can still contain impossible values, unexpected types, or missing required fields.",
+    "check": {
+      "question": "What should follow successful JSON parsing at an application boundary?",
+      "choices": ["Validation of the expected structure and value constraints", "Immediate trust in every value", "Removal of all error handling"],
+      "answer": 0,
+      "explanation": "A parser verifies the format's grammar. Application validation checks whether the data makes sense for its intended use."
+    }
+  },
+  "P05": {
+    "concept": "A test states an expected behaviour and checks it repeatedly. Start with ordinary inputs, then boundaries, invalid values, and previously failing cases. A useful assertion would fail if an important behaviour broke. Debugging asks why observed behaviour differs from expected behaviour; reduce the case, inspect values, and test one hypothesis at a time.",
+    "mechanism": "Regular expressions match patterns in text. Anchoring, character classes, repetition, and escaping control what matches. A pattern search is not equivalent to validating an entire field. Complicated patterns can also behave poorly on hostile input, so prefer simple bounded formats or dedicated parsers when the data has an established grammar.",
+    "example": "Write a function that accepts only a synthetic account label of 3–12 lowercase ASCII letters. Test a valid label, two letters, thirteen letters, digits, and a trailing newline. Use full-string matching. Deliberately remove the length limit and confirm that a test fails; this checks that the tests actually protect the requirement.",
+    "pitfall": "Passing tests establish behaviour only for the cases and properties tested. They are evidence, not a universal proof.",
+    "check": {
+      "question": "A validator must check the entire input. Which approach fits?",
+      "choices": [
+        "A search for any matching substring",
+        "A full-string match against the allowed format",
+        "Accepting any input that contains one letter"
+      ],
+      "answer": 1,
+      "explanation": "A substring match can ignore unwanted prefixes or suffixes. Full-string matching checks the whole field."
+    }
+  },
+  "L01": {
+    "concept": "The shell reads a command line and starts programs. The working directory is the location from which relative paths are interpreted. An absolute path begins at the filesystem root; a relative path begins at the current directory. The shell and the file manager operate on the same files, even though their interfaces differ.",
+    "mechanism": "Learn pwd, ls, cd, mkdir, cp, mv, and the relevant help pages before combining destructive operations. Spaces and special characters have shell meanings, so quote paths that must remain a single argument. A command's output and exit status answer different questions: output carries data, while a conventional zero exit status indicates success.",
+    "example": "In a disposable practice folder, create a directory named case notes. Enter it using a quoted path. Save a text file, copy it, and compare the two copies. Use pwd before each operation and explain how the same relative filename would resolve from a different working directory. Keep removal exercises inside this disposable folder.",
+    "pitfall": "A command copied from a tutorial may assume a different working directory. Confirm the target before changing files.",
+    "check": {
+      "question": "From /tmp/lab, where does the relative path notes/a.txt resolve?",
+      "choices": ["/notes/a.txt", "/tmp/notes/a.txt", "/tmp/lab/notes/a.txt"],
+      "answer": 2,
+      "explanation": "A relative path is interpreted from the current working directory, here /tmp/lab."
+    }
+  },
+  "L02": {
+    "concept": "A process is a running program with an identity, environment, and open resources. Unix permissions describe access for an owner, group, and others. Directory execute permission means traversal, rather than running the directory. Permission checks depend on identities and path components, not just the final file's mode.",
+    "mechanism": "Pipes connect one program's standard output to another's standard input. Standard error remains a separate stream unless redirected. Environment variables pass configuration to child processes and can influence program behaviour. A shell script turns a sequence into a repeatable procedure; quote variable expansions, check failures, and avoid interpreting untrusted data as shell syntax.",
+    "example": "Create a harmless text file with owner-only permissions and inspect its mode. Build a pipeline that selects synthetic failed-login lines and counts them. Send an intentional error to a separate file and compare it with standard output. Write a script accepting one quoted filename; verify it works when the path contains spaces.",
+    "pitfall": "Changing a file to executable does not grant the permissions needed to read its inputs or traverse its parent directories.",
+    "check": {
+      "question": "What does a pipe normally connect?",
+      "choices": [
+        "One process's standard output to another's standard input",
+        "Every file on disk to the next process",
+        "Only the first process's standard error"
+      ],
+      "answer": 0,
+      "explanation": "The ordinary pipe operator transfers standard output. Standard error needs a separate redirection if it should join that stream."
+    }
+  },
+  "P06": {
+    "concept": "An object combines state with operations on that state. A class defines a pattern for constructing such objects. Use this when several values and behaviours belong together, rather than wrapping every function in a class. Understand the difference between independent instances and shared state before using classes to model security events.",
+    "mechanism": "A virtual environment separates a Python project's installed packages from other projects. It does not isolate the operating system like a virtual machine. Record the Python version, dependency constraints, setup instructions, and a minimal test. Reproducibility requires more than installing whatever versions happen to be newest today.",
+    "example": "Create an EventCounter class whose instances each maintain their own count. Instantiate two counters, update one, and assert that the other stays at zero. Run the test inside a fresh virtual environment. Document installation and execution so another learner can repeat the result without borrowing your existing environment.",
+    "pitfall": "A virtual environment is dependency isolation, not a safe boundary for executing malicious programs.",
+    "check": {
+      "question": "Two independent counters unexpectedly share a mutable list. What should you inspect first?",
+      "choices": ["The monitor's refresh rate", "Whether the source file has comments", "Whether the list was defined as shared class state"],
+      "answer": 2,
+      "explanation": "A mutable class attribute can be shared across instances. Per-instance state should be initialised for each object."
+    }
+  },
+  "L03": {
+    "concept": "Git records snapshots of tracked files in commits. The working tree contains current files; the staging area selects what the next commit will contain. A commit message explains the change, while the diff shows the exact content. Version history supports investigation because you can compare states and identify when behaviour changed.",
+    "mechanism": "A repository should help another person reproduce your work. Include setup instructions, dependency information, test commands, and evidence references. Ignore generated caches and local secrets before adding files. Deleting a secret in a later commit does not erase earlier copies from history; credentials that have been exposed need replacement through the issuing system.",
+    "example": "Create a repository for a tiny parser. Commit the working version, change one validation rule, and inspect the diff before staging that file. Make a second commit with a clear explanation. Use git log and git show to recover the reasoning and content of the first version without guessing from today's files.",
+    "pitfall": "A repository backup and a progress backup solve different problems. Your browser notebook is not automatically committed with your code.",
+    "check": {
+      "question": "What determines which current changes enter the next Git commit?",
+      "choices": ["All files currently open in the editor", "The staging area", "The names in the last commit message"],
+      "answer": 1,
+      "explanation": "Git commits the staged snapshot. Unstaged working-tree edits remain outside that commit."
+    }
+  },
+  "M02": {
+    "concept": "Logic gives precise meaning to claims. A proposition is true or false; a conjunction requires both parts, while an implication says that whenever its premise holds, its conclusion must hold. Sets collect elements, functions map inputs to outputs, and graphs represent relationships using vertices and edges. These tools make security policies less ambiguous.",
+    "mechanism": "A state machine describes possible states and the transitions between them. An invariant is a property that must hold in every reachable state. To prove one by induction, show it holds initially and that each permitted transition preserves it. Testing several states can find a counterexample but does not replace reasoning over all permitted transitions.",
+    "example": "Model a document as private or shared, with read and share operations. Define the invariant: only an owner may change sharing. List every transition and the required actor. Find a transition that would violate the invariant if its permission check were omitted. Express the corrected rule as a condition over the actor and document owner.",
+    "pitfall": "An implication does not assert its premise. 'If administrator, then may edit' does not mean everyone who may edit is an administrator.",
+    "check": {
+      "question": "What makes a property an invariant of a state machine?",
+      "choices": [
+        "It held during one successful demo",
+        "It holds initially and is preserved by every permitted transition",
+        "Its name contains the word secure"
+      ],
+      "answer": 1,
+      "explanation": "Initial truth plus preservation establishes the property across all reachable states covered by the model."
+    }
+  },
+  "M03": {
+    "concept": "Modular arithmetic wraps integers around a fixed modulus. On a twelve-hour clock, 10 + 5 is congruent to 3 modulo 12. A prime has exactly two positive divisors. Integers a and n are coprime when their greatest common divisor is 1. This relationship determines when a has a multiplicative inverse modulo n.",
+    "mechanism": "Counting describes how many possibilities exist before assigning probabilities. Independent choices multiply: four positions with ten choices each give 10,000 strings when repetition is allowed. Cryptographic arithmetic uses very large spaces, but a large number alone is not a security proof. The algorithm, assumptions, and adversary's abilities also matter.",
+    "example": "Compute 5×3 mod 7 = 1, so 3 is an inverse of 5 modulo 7. Compare this with 2 modulo 6: multiplying 2 by any integer cannot produce a remainder of 1. List the possible remainders to see why. Then count four-digit strings with and without repeated digits, explaining why the formulas differ.",
+    "pitfall": "Ordinary division cannot simply be copied into modular arithmetic. An inverse may not exist.",
+    "check": {
+      "question": "Does 2 have a multiplicative inverse modulo 6?",
+      "choices": [
+        "Yes, every nonzero number has one for every modulus",
+        "Yes, its inverse is the decimal number 0.5",
+        "No, because 2 and 6 are not coprime"
+      ],
+      "answer": 2,
+      "explanation": "An inverse must be an integer residue whose product is 1 modulo 6. None exists because gcd(2,6)=2."
+    }
+  },
+  "M04": {
+    "concept": "Probability describes uncertainty under stated assumptions. Conditional probability asks about an event after learning another event occurred. Independence means learning one event does not change the probability of the other; it cannot be assumed just because two events have different names. Entropy measures uncertainty in a distribution, not the visual complexity of a string.",
+    "mechanism": "Security alerts must be interpreted alongside the base rate of actual incidents. A highly accurate detector can still produce mostly false alerts when malicious events are rare. Build a count table rather than relying on phrases such as '99% accurate'. Separate the true-positive rate from the probability that a positive result is malicious.",
+    "example": "Among 10,000 events, suppose 10 are malicious. A detector catches 9 and falsely flags 1% of 9,990 benign events, about 100. Only about 9 of 109 alerts are true positives. Check each denominator and explain how the answer changes if the population contains many more malicious events.",
+    "pitfall": "A detector's sensitivity is not its precision. Both depend on which population and threshold are being measured.",
+    "check": {
+      "question": "In the worked example, approximately what fraction of alerts are true positives?",
+      "choices": ["8 percent", "90 percent", "99 percent"],
+      "answer": 0,
+      "explanation": "There are about 9 true alerts and 100 false alerts. Precision is 9/(9+100), about 8%."
+    }
+  },
+  "M05": {
+    "concept": "A sample is the data observed; a population is what you want to understand. Sampling bias arises when the selection process systematically excludes relevant cases. An average hides variation, so report distributions or suitable summaries alongside it. A confidence interval quantifies uncertainty under assumptions about how the data were produced; it does not repair biased measurement.",
+    "mechanism": "Experiments compare a treatment with a baseline while controlling alternative explanations. Decide the hypothesis, metrics, datasets, and stopping rule before looking for a favourable result. In detection work, precision asks how many alerts are correct; recall asks how many malicious events were found. A change can improve one while worsening the other.",
+    "example": "For a labelled set with 20 malicious events, a detector finds 15 and produces 5 false alerts. Compute recall as 15/20 and precision as 15/20. Now add 15 false alerts without changing the true positives: recall stays fixed while precision drops. Document the dataset's source and why its event mix may differ from production.",
+    "pitfall": "More decimal places do not mean greater certainty. Measurement quality and sample design determine what a result supports.",
+    "check": {
+      "question": "A detector finds the same malicious events but doubles its false alerts. What happens?",
+      "choices": ["Recall increases and precision stays the same", "Recall stays the same and precision decreases", "Both necessarily increase"],
+      "answer": 1,
+      "explanation": "Recall depends on true positives and missed malicious events. Extra false positives reduce precision without changing recall."
+    }
+  },
+  "C01": {
+    "concept": "C makes the relationship between source code and machine execution more visible. A compiler translates source into object code, and a linker combines objects and libraries into an executable. Types determine how values are represented and which operations are meaningful. A declaration is a promise to the compiler, not automatic validation of external input.",
+    "mechanism": "Integer widths and signedness matter. Unsigned arithmetic wraps modulo a power of two; signed overflow in C is undefined behaviour. Undefined behaviour means the language does not promise a particular result, so an observed wraparound cannot be relied upon. Enable compiler warnings and understand each warning before treating a successful build as correct execution.",
+    "example": "Compile a program that prints sizeof values for selected integer types and reports the limits from the standard headers. Compare a safe boundary calculation with an intentionally avoided overflowing expression. Record compiler version and flags. Explain which observations come from this platform and which properties come from the language specification.",
+    "pitfall": "A program compiling without errors does not prove memory safety or correct arithmetic.",
+    "check": {
+      "question": "May portable C code rely on signed integer overflow wrapping around?",
+      "choices": [
+        "Yes; all C integers wrap identically",
+        "Yes; a successful compilation guarantees it",
+        "No; signed overflow has undefined behaviour"
+      ],
+      "answer": 2,
+      "explanation": "Unsigned wrapping is defined, but signed overflow is undefined. Optimisations may assume it never happens."
+    }
+  },
+  "C02": {
+    "concept": "An array stores a fixed sequence of elements. A C string convention uses a zero byte to mark its end; the terminator occupies space too. An array of four bytes can hold three single-byte characters plus a terminator. Text encodings complicate length: a character perceived by a reader need not occupy one byte.",
+    "mechanism": "A buffer's capacity, the number of bytes currently used, and the length of decoded text are different quantities. Check bounds before writing and account for terminators and encoding expansion. A function receiving a pointer cannot usually infer the original array's capacity, so pass sizes explicitly and document whether a size includes the terminator.",
+    "example": "Draw a four-cell buffer containing c, a, t, and zero. Attempting to append another character requires a fifth cell for a new terminator. Rewrite the operation to check required capacity before modifying anything. Repeat with a non-ASCII UTF-8 word and count bytes separately from displayed characters.",
+    "pitfall": "A null terminator is a byte value, not the same concept as a null pointer. Confusing the two leads to incorrect boundary reasoning.",
+    "check": {
+      "question": "How much capacity does the C string \"cat\" require with its terminator?",
+      "choices": ["At least four bytes", "Exactly three bytes", "One pointer-sized cell regardless of contents"],
+      "answer": 0,
+      "explanation": "Three character bytes plus the terminating zero byte require four bytes."
+    }
+  },
+  "C03": {
+    "concept": "An algorithm's cost describes how its work grows as input grows. Linear search may inspect every item, while binary search repeatedly halves an ordered search space. Big-O notation describes an asymptotic bound; it does not promise an exact runtime or account for every constant factor. State the operation being counted and assumptions about the input.",
+    "mechanism": "Stacks remove the most recently added item; queues remove the earliest. Trees encode hierarchical relationships. Learn these abstract behaviours before implementing pointer-based structures. Recursion solves a problem through smaller instances and needs a base case plus progress toward it. Each recursive call also consumes execution resources.",
+    "example": "Search a sorted list of sixteen values by repeatedly selecting a midpoint and discarding the impossible half. Write the remaining interval after each comparison. Then trace recursive factorial for 3 down to its base case and back up. Explain why the binary search needs sorted input, while the factorial recursion needs a decreasing nonnegative argument.",
+    "pitfall": "A theoretically faster algorithm may be slower on tiny inputs. Measure relevant workloads after establishing correctness.",
+    "check": {
+      "question": "Which prerequisite makes ordinary binary search correct?",
+      "choices": [
+        "The list contains an even number of items",
+        "The search interval is ordered according to the comparison rule",
+        "Every value is stored as text"
+      ],
+      "answer": 1,
+      "explanation": "The decision to discard half the interval depends on its ordering. Without that property, the target could be discarded."
+    }
+  },
+  "C04": {
+    "concept": "A pointer stores an address. Dereferencing accesses the object at that address, provided the object exists and access is valid. Stack allocation commonly follows function-call lifetimes; dynamically allocated heap objects live until released. A pointer may still hold an address after an object's lifetime ends, creating a dangling pointer.",
+    "mechanism": "Ownership answers who must release an allocation and when other code may use it. Linked structures connect separately allocated nodes through pointers, so freeing a node requires preserving the next link before the node becomes invalid. A memory leak loses access to allocated memory; use-after-free accesses memory after release. These are different defects.",
+    "example": "Draw two linked nodes with addresses, values, and next pointers. Walk from the head, saving next before freeing the current node. After the walk, set the head to null. Use a debugger or memory diagnostic on a small local implementation and compare its report with your ownership diagram rather than guessing from a crash alone.",
+    "pitfall": "Setting one pointer to null does not invalidate other aliases that still point to the released object.",
+    "check": {
+      "question": "Why is dereferencing an old alias unsafe after its allocation is freed?",
+      "choices": [
+        "Free automatically updates every alias to null",
+        "Heap addresses are always immediately erased",
+        "The object's lifetime has ended even if the address value remains"
+      ],
+      "answer": 2,
+      "explanation": "The pointer value can outlive the object. Access through it is invalid regardless of whether bytes still appear unchanged."
+    }
+  },
+  "C05": {
+    "concept": "Machine instructions operate on registers, memory, and control flow. Assembly is a readable notation for those instructions. A calling convention specifies how arguments, return values, and preserved registers cross function boundaries. An executable format such as ELF describes code, data, and metadata used by the operating system's loader.",
+    "mechanism": "A debugger connects source-level intentions with machine state. Breakpoints pause execution; stepping advances it; register and memory views expose values. Optimised builds may rearrange or remove source operations, so use a simple debug build first and then compare optimisation effects. An address seen in one run is not necessarily stable in another.",
+    "example": "Compile a tiny function that adds two integers with debug information. Break at its entry, inspect the argument locations for your platform's calling convention, step through the addition, and inspect the return value. Disassemble the function and map each relevant instruction to the source operation. Record architecture and compiler flags with the evidence.",
+    "pitfall": "Assembly syntax and calling conventions vary by architecture and platform. Do not apply an x86-64 register rule to every system.",
+    "check": {
+      "question": "What does a calling convention define?",
+      "choices": [
+        "How functions exchange arguments, results, and register responsibilities",
+        "Which password a debugger requires",
+        "The trustworthiness of an executable's author"
+      ],
+      "answer": 0,
+      "explanation": "A calling convention is an interface agreement for machine-level function calls, not an authenticity check."
+    }
+  },
+  "C06": {
+    "concept": "The operating system manages processes, memory, devices, and files. User mode restricts what an ordinary process can do directly; system calls request controlled kernel operations. Virtual memory gives each process an address-space view that maps to physical memory and other backing storage. An address is meaningful in its process and mapping context.",
+    "mechanism": "A filesystem maps names to stored objects and metadata. An open file descriptor refers to an opened resource, which may outlive a filename change. Access checks, process identities, and kernel enforcement work together. Isolation reduces interference, but privileged components and shared resources remain important parts of the trust boundary.",
+    "example": "Run a harmless program that opens a file, reads bytes, and closes it. Observe its system calls using the supplied course tooling. Draw the path from application request to kernel check to returned data. Compare two processes' address maps and explain why equal-looking virtual addresses need not refer to the same physical bytes.",
+    "pitfall": "User-space checks cannot replace a required kernel or server-side enforcement boundary. A caller may bypass the intended interface.",
+    "check": {
+      "question": "Why can two processes use the same virtual address without sharing that memory?",
+      "choices": [
+        "Virtual addresses are globally unique across all processes",
+        "Their address spaces can map it to different physical pages",
+        "Equal addresses always prove a shared secret"
+      ],
+      "answer": 1,
+      "explanation": "Virtual memory mappings are process-specific. The same numeric address may identify unrelated physical pages."
+    }
+  },
+  "C07": {
+    "concept": "Concurrency means tasks can make progress during overlapping periods. A race occurs when correctness depends on an uncontrolled ordering of accesses. A critical section groups operations that must not interleave in a harmful way. A lock can enforce mutual exclusion when every relevant participant follows the same locking protocol.",
+    "mechanism": "Locks do not automatically preserve a larger invariant. A check followed by a later update can still race if the lock covers only one part. Deadlock occurs when tasks wait on one another and none can progress. Consistent lock ordering is one way to prevent circular waiting; smaller shared state and clearer ownership often simplify the problem.",
+    "example": "Two threads each read balance=10, subtract 7, and write 3. Both report success even though only one withdrawal should have been permitted. Draw that interleaving. Then protect the check and update together, so the second operation sees balance=3 and fails. Explain the invariant: accepted withdrawals must not make the balance negative.",
+    "pitfall": "A sleep changes timing but does not establish synchronisation. A race disappearing during debugging may still exist.",
+    "check": {
+      "question": "Which region must be atomic for a guarded withdrawal?",
+      "choices": ["Only printing the receipt", "Only reading the account's display name", "Checking the balance and committing the debit together"],
+      "answer": 2,
+      "explanation": "The decision and its state update must share one protected operation. Separating them leaves an interleaving window."
+    }
+  },
+  "N01": {
+    "concept": "A network carries messages between systems. Layers separate responsibilities: an application message can travel inside a transport segment, an IP packet, and a link-layer frame. Encapsulation adds headers used by each layer. The receiving system interprets and removes those wrappers in reverse order. A packet capture reveals observations at a particular point, not every event everywhere.",
+    "mechanism": "Latency measures delay; bandwidth measures a transfer rate. Throughput is the rate actually achieved under protocol and workload constraints. Packet loss, queueing, and repeated round trips can matter as much as link speed. Capture only your authorised lab traffic and identify the interface, time range, and capture filters in your notes.",
+    "example": "Fetch a page from your own local test server while capturing its traffic. Identify the link, network, transport, and application information visible in the capture. Compare a tiny request with a larger response. Estimate transfer time from size and rate, then identify the additional delays that the estimate omitted.",
+    "pitfall": "An encrypted payload can still reveal metadata such as endpoint addresses, timing, and sizes.",
+    "check": {
+      "question": "What does bandwidth measure?",
+      "choices": ["The delay of one packet by definition", "A potential data-transfer rate", "Whether a connection is authenticated"],
+      "answer": 1,
+      "explanation": "Bandwidth concerns rate. Latency concerns delay, and neither alone establishes security."
+    }
+  },
+  "N02": {
+    "concept": "IP addresses identify interfaces for packet delivery. A prefix specifies which leading bits define a network. Routing selects a next hop using destination prefixes; the most specific matching route normally wins. A subnet calculation is therefore a bit-boundary problem, not a guess based on how similar two dotted-decimal addresses look.",
+    "mechanism": "NAT translates addresses and often ports between address realms. It changes reachability and state tracking but is not a complete security policy. IPv6 has a larger address space and different conventions; do not transfer every IPv4 assumption to it. Routing between administrative networks also involves control-plane trust, including the routes exchanged through BGP.",
+    "example": "For 192.0.2.0/24, mark the first 24 bits as the network prefix. Divide it into two /25 prefixes and identify which half contains 192.0.2.130. Draw the route from a private lab host through a NAT gateway to a service, recording the source address seen on each side.",
+    "pitfall": "An address being private does not prove the host or traffic is trustworthy. Policy still needs explicit enforcement.",
+    "check": {
+      "question": "Which route normally wins when /16 and /24 entries both match a destination?",
+      "choices": [
+        "The /16, because it covers more addresses",
+        "Whichever was mentioned first in a tutorial",
+        "The /24, because it has the longer matching prefix"
+      ],
+      "answer": 2,
+      "explanation": "Longest-prefix matching selects the more specific route, subject to the routing system's applicable rules."
+    }
+  },
+  "N03": {
+    "concept": "Ethernet frames deliver data on a local link using link-layer addresses. ARP resolves an IPv4 neighbour's address to a link-layer address. DHCP supplies configuration such as an address, gateway, and DNS server. These protocols solve different problems even when they appear together during a machine's network startup.",
+    "mechanism": "Local-link proximity is a trust concern. Traditional ARP does not authenticate every claimed mapping, so a neighbour's assertion is not equivalent to verified identity. Wireless access adds association, radio exposure, and link-security configuration. Protected Wi-Fi encrypts the link under its protocol and configuration; it does not replace end-to-end application security.",
+    "example": "Inside an isolated lab, record the interface address, assigned IP prefix, default route, and DNS configuration. Draw how a host learns a destination neighbour's link address versus how it learns a remote route. Use a saved capture to distinguish a DHCP configuration exchange from an ARP request without generating traffic on someone else's network.",
+    "pitfall": "A MAC address is not a durable proof of a person's or device's identity. It can be changed or represented by software.",
+    "check": {
+      "question": "Which protocol resolves an IPv4 neighbour to a link-layer address?",
+      "choices": ["ARP", "HTTP", "TLS"],
+      "answer": 0,
+      "explanation": "ARP handles this local-link mapping. HTTP is an application protocol and TLS protects a transport channel."
+    }
+  },
+  "N04": {
+    "concept": "TCP provides an ordered byte stream with retransmission and congestion control. It does not preserve application message boundaries. UDP sends datagrams without TCP's delivery and ordering guarantees. An application chooses a protocol according to the behaviour it needs and implements any additional reliability, framing, or security itself.",
+    "mechanism": "A socket is an operating-system interface for network communication. TCP applications must define framing: a length, delimiter, or established message grammar tells the receiver when a message is complete. A single send call need not correspond to a single receive call. Timeouts and partial reads are ordinary conditions to handle, not impossible edge cases.",
+    "example": "Build a loopback-only client and server that exchange length-prefixed harmless messages. Deliberately split a message across writes and combine two messages in another write. The receiver should reconstruct both correctly. Compare this with a UDP example and document what happens when a datagram is absent rather than assuming arrival.",
+    "pitfall": "TCP reliability does not authenticate the peer or encrypt the stream. Those are separate properties.",
+    "check": {
+      "question": "A TCP receive call returns half your message. What should a correct framed protocol do?",
+      "choices": [
+        "Assume the remaining bytes cannot exist",
+        "Keep reading until the defined message length is available or an error occurs",
+        "Treat every receive result as one complete message"
+      ],
+      "answer": 1,
+      "explanation": "TCP exposes a byte stream. The application's framing rule determines message completeness."
+    }
+  },
+  "N05": {
+    "concept": "DNS maps names to records, such as address records used to locate a service. Resolvers may cache answers according to their time-to-live. Email delivery uses DNS records to locate mail servers and additional mechanisms to express sender-domain policies. A familiar-looking name is not the same thing as verified control of a service.",
+    "mechanism": "Separate the question 'Which address was returned?' from 'Why should I trust this answer or peer?' DNSSEC can authenticate signed DNS data through a chain of trust, but it does not encrypt ordinary DNS queries or make the destination application trustworthy. Email authentication mechanisms also have specific scopes; no single record guarantees that a message is harmless.",
+    "example": "Trace a domain lookup using the course's examples and mark stub resolver, recursive resolver, authoritative server, and cache. Inspect a saved DNS response and identify the record type and TTL. Then draw mail delivery from sender to recipient, marking where name resolution and sender-policy checks occur.",
+    "pitfall": "A correct DNS answer can point to a compromised server. Name-resolution integrity and application security are separate checks.",
+    "check": {
+      "question": "What property does DNSSEC primarily add to signed DNS data?",
+      "choices": [
+        "Encryption of all DNS query contents",
+        "A guarantee that the website has no vulnerabilities",
+        "Origin authentication and integrity through a validation chain"
+      ],
+      "answer": 2,
+      "explanation": "DNSSEC validates signed DNS data. It neither encrypts ordinary DNS traffic nor audits the destination service."
+    }
+  },
+  "N06": {
+    "concept": "HTTP describes requests and responses. A request has a method, target, headers, and sometimes a body; a response has a status, headers, and possibly a body. HTTP is stateless in its basic request-response model. Cookies and server-side sessions let applications associate requests with continuing state.",
+    "mechanism": "Proxies forward messages and caches reuse responses according to rules. This creates several possible interpretations of a request, so understand the path before analysing behaviour. Cookie attributes influence when browsers send cookies and which scripts can access them. HTTPS protects the channel, but the application must still validate input and authorise actions.",
+    "example": "Use a local test application to record a GET and a form POST. Mark each method, path, status, content type, and cookie. Repeat after signing out and observe which state changes. Add a diagram showing browser, proxy if present, and server, so a later security finding can identify where a decision was made.",
+    "pitfall": "A successful status code means the server reported success for that request; it does not prove the action was authorised correctly.",
+    "check": {
+      "question": "Why do many applications use a session cookie?",
+      "choices": [
+        "To associate separate HTTP requests with server-recognised state",
+        "Because TCP requires passwords in every packet",
+        "To make browser-side input validation sufficient"
+      ],
+      "answer": 0,
+      "explanation": "A session identifier links otherwise separate requests to application state. Its protection and authorisation checks remain essential."
+    }
+  },
+  "B01": {
+    "concept": "HTML defines document structure, CSS controls presentation, and JavaScript can change behaviour. The DOM is the browser's object representation of a document. Browser scripts can read or modify permitted parts of that representation, respond to events, and make network requests. Treat user-supplied text as data rather than executable markup.",
+    "mechanism": "An origin consists of scheme, host, and port. Browser security rules use this boundary when deciding which scripts may access which resources. A site, an origin, and a full URL are different concepts. Form validation in the browser improves usability, but a client can send a request without running that validation, so the server must enforce its own requirements.",
+    "example": "Create a local page with a form and a text-only preview. Use textContent to show the submitted value. Enter text that resembles an HTML tag and confirm it remains visible text. Compare two local URLs with different ports and explain why they have different origins even though their hostnames match.",
+    "pitfall": "Hiding a button or disabling a field in JavaScript does not prevent a user from constructing the corresponding request.",
+    "check": {
+      "question": "Which components define a web origin?",
+      "choices": ["Only the page's visible title", "Scheme, host, and port", "The path and query string alone"],
+      "answer": 1,
+      "explanation": "The origin tuple excludes the path and query. Different ports or schemes can create different origins on the same host."
+    }
+  },
+  "B02": {
+    "concept": "A relational database stores rows in tables with declared columns and constraints. A primary key identifies a row; a foreign key relates it to another table. SQL expresses queries and updates. A join combines related rows according to an explicit relationship, so a mistaken join can multiply results or reveal unrelated records.",
+    "mechanism": "A transaction groups operations into one logical unit. Atomicity means they commit together or not at all. Isolation controls what concurrent transactions may observe; different isolation levels provide different guarantees. Constraints such as unique keys and valid relationships can protect invariants closer to the data rather than relying on every caller to remember a rule.",
+    "example": "Create synthetic users and notes tables. Give each note an owner_id referencing a user. Join notes with owners and verify the row count. In a transaction, transfer a fixed quantity between two rows; introduce a failure between the updates and check rollback. Write down which invariant the transaction protects.",
+    "pitfall": "An application checking uniqueness before insertion can still race. A database uniqueness constraint enforces the rule at the storage boundary.",
+    "check": {
+      "question": "What does transaction atomicity promise?",
+      "choices": [
+        "Every query runs instantly",
+        "Any logged-in user can read every row",
+        "All operations in the transaction commit together or none do"
+      ],
+      "answer": 2,
+      "explanation": "Atomicity concerns the all-or-nothing unit of change. It does not by itself establish performance or authorisation."
+    }
+  },
+  "B03": {
+    "concept": "A web server receives HTTP requests, routes them to application code, and returns responses. An API is a defined interface to application operations. JSON and XML are data formats, not permission systems. A session identifies continuing state, while object ownership determines whether a particular actor may perform a particular action.",
+    "mechanism": "Draw the full boundary: request bytes, parsed values, validated input, authenticated actor, authorised operation, database change, response. Each step answers a different question. Keep server secrets out of browser code. Return controlled errors rather than exposing stack traces or internal credentials. Use a development server only under the scope and deployment guidance of the exercise.",
+    "example": "Build a small local notes API with synthetic users. On each read or update, obtain the current actor from trusted session state and check the note's owner on the server. Reject an invalid note identifier cleanly. Test the same request as the owner and as another test user, and compare results.",
+    "pitfall": "A valid session does not grant access to every object's data. Authentication and object-level authorisation are separate steps.",
+    "check": {
+      "question": "Where must ownership be checked when updating a note?",
+      "choices": ["On the server handling the operation", "Only in the browser's menu rendering", "Only in the API's prose documentation"],
+      "answer": 0,
+      "explanation": "A caller can bypass the interface. The server must enforce the relationship between actor, object, and requested action."
+    }
+  },
+  "B04": {
+    "concept": "A virtual machine runs a guest operating system on virtual hardware. A container isolates a process environment while sharing the host kernel. A snapshot records a recoverable state under the platform's rules; it is not a substitute for a separate backup or for safe network configuration. These mechanisms provide different boundaries and failure modes.",
+    "mechanism": "Build labs deliberately: use synthetic data, host-only or isolated networks when required, explicit port exposure, and a known reset procedure. Sharing a host folder or mounting a privileged socket can cross the boundary you intended to create. Record the image version and configuration so that results can be reproduced rather than depending on an undocumented machine state.",
+    "example": "Create a harmless local lab, record its network mode, and verify which ports are reachable from the host. Save a known-good snapshot or reproducible container configuration. Change a test file and restore the baseline. Confirm what was restored and whether shared host files remained outside the snapshot's scope.",
+    "pitfall": "A container is not an independent kernel. Do not treat an ordinary container as sufficient isolation for unknown malware.",
+    "check": {
+      "question": "Which resource do ordinary containers typically share with their host?",
+      "choices": ["A completely independent physical CPU", "The operating-system kernel", "A separate guest kernel by definition"],
+      "answer": 1,
+      "explanation": "Containers usually share the host kernel, while virtual machines ordinarily run their own guest kernel."
+    }
+  },
+  "S01": {
+    "concept": "Threat modelling starts with what the system does and what must remain true. Identify assets, actors, entry points, data flows, and trust boundaries. A threat is a possible unwanted event; a vulnerability is a weakness that can enable it; a control changes the likelihood or impact. State assumptions so another person can challenge them.",
+    "mechanism": "Secure design principles help turn a diagram into decisions. Least privilege limits granted authority. Complete mediation checks each relevant access. Fail-safe defaults deny access unless allowed. Defence in depth uses controls with different failure modes. Every control has costs and limits, so connect it to an actual threat rather than collecting controls without a reason.",
+    "example": "Draw a private notes service with browser, server, database, and backup store. Mark where identity is established and where note ownership is checked. Consider a stolen session and an accidental public backup. Add one preventive and one recovery control for each, and explain the residual risk after those controls fail or succeed.",
+    "pitfall": "A threat model is a revisable argument, not a guarantee. Update it when data flows, dependencies, or assumptions change.",
+    "check": {
+      "question": "Which is the strongest starting point for a threat model?",
+      "choices": [
+        "The system's assets, behaviour, actors, and trust boundaries",
+        "A list of fashionable security tools",
+        "A promise that the framework is secure by default"
+      ],
+      "answer": 0,
+      "explanation": "Controls make sense in relation to what the system must protect and where untrusted influence enters."
+    }
+  },
+  "S02": {
+    "concept": "Encryption hides plaintext under a key. Symmetric encryption uses shared secret key material for encryption and decryption. Confidentiality alone does not guarantee that a message is authentic or unchanged. Authenticated encryption with associated data, or AEAD, combines confidentiality and integrity while allowing selected metadata to be authenticated without being encrypted.",
+    "mechanism": "A nonce is a value supplied to an encryption operation whose uniqueness requirements depend on the algorithm. Reusing a nonce with the same key can be catastrophic for common AEAD schemes. Keys need a cryptographically secure random source, appropriate storage, and an established library API. Learn the construction's rules; do not invent your own mode or use predictable random generators for secrets.",
+    "example": "With the course's supported cryptography library, encrypt a harmless message and authenticate a record identifier as associated data. Decrypt successfully, then alter the ciphertext or identifier and confirm authentication fails. Record the nonce-generation rule and key lifetime. Treat any authentication failure as failure, not as permission to display partially decrypted content.",
+    "pitfall": "Encryption is not a substitute for key management. An exposed key can erase the intended protection.",
+    "check": {
+      "question": "What should happen when AEAD authentication fails?",
+      "choices": [
+        "Return the plaintext with a warning and continue",
+        "Reject the message without using unauthenticated plaintext",
+        "Ignore the failure if the ciphertext looks readable"
+      ],
+      "answer": 1,
+      "explanation": "AEAD's authenticity guarantee depends on rejecting failed verification before relying on the data."
+    }
+  },
+  "S03": {
+    "concept": "A cryptographic hash maps arbitrary-length input to a fixed-length digest without a secret key. Collision resistance concerns finding two inputs with the same digest; preimage resistance concerns recovering an input from a target digest. A MAC uses a secret key to authenticate a message. These tools answer different questions from encryption.",
+    "mechanism": "Password storage must resist guessing after a database leak. A unique salt prevents identical passwords from sharing one precomputed result; an appropriate password-hashing function adds configurable computational or memory cost. A salt is not a secret key. Use a maintained password-hashing API and its verification operation rather than designing a fast custom hash loop.",
+    "example": "Hash two different harmless messages and compare digests. Then authenticate a message using a standard MAC API and verify that a changed message fails. Finally use the course's password-storage API to store and verify a synthetic password twice with different salts. Explain why unequal stored values can still verify the same password.",
+    "pitfall": "A plain hash does not prove who created a message. Anyone able to change the message may also recompute its unkeyed digest.",
+    "check": {
+      "question": "Why use a unique salt for password hashing?",
+      "choices": [
+        "To make a weak password impossible to guess",
+        "To encrypt the password so it can always be recovered",
+        "To prevent reuse of one precomputed guess result across many stored passwords"
+      ],
+      "answer": 2,
+      "explanation": "Salts separate stored computations. They do not add password entropy or turn hashing into reversible encryption."
+    }
+  },
+  "S04": {
+    "concept": "Public-key systems separate public information from private secret material. A signature lets a private-key holder sign data so others can verify it with a public key. Key exchange establishes shared key material. These are distinct operations; a signature does not normally conceal the message, and encryption alone does not identify its author.",
+    "mechanism": "The hard question is often binding a public key to the intended identity. Certificates express such bindings under an issuer's signature and validation rules. A chain is useful only when the verifier trusts an appropriate root and checks relevant names, validity, constraints, and usage. Possessing any mathematically valid key is not enough to impersonate a named service.",
+    "example": "Generate a lab signing key with an established library. Sign a short statement and verify it. Change one byte and observe failure. Then compare the successful mathematical verification with a separate identity question: why should a recipient believe this public key belongs to you? Document the trusted channel used to share the fingerprint.",
+    "pitfall": "A signature establishes a relationship to a key under assumptions. Its human identity meaning depends on trustworthy key distribution.",
+    "check": {
+      "question": "What does successful signature verification directly establish?",
+      "choices": [
+        "The message matches a signature produced with the corresponding private key, under the scheme's assumptions",
+        "The message is confidential",
+        "The signer is necessarily a trustworthy person"
+      ],
+      "answer": 0,
+      "explanation": "Verification binds data to a key. Confidentiality and the real-world identity or trustworthiness of the signer require separate reasoning."
+    }
+  },
+  "S05": {
+    "concept": "TLS protects a channel between endpoints through negotiated cryptographic mechanisms. In a typical authenticated HTTPS connection, certificate validation helps the client authenticate the server, a handshake establishes traffic keys, and authenticated encryption protects records. Learn the modern protocol through current documentation while using older lectures for concepts whose historical context is stated.",
+    "mechanism": "Check both the cryptography and its use. A correctly encrypted connection to the wrong host is still wrong. Certificate name checks, trust roots, and validation failures matter. TLS termination at a proxy means the proxy sees plaintext; another segment may need separate protection. Channel security does not prevent an authorised endpoint from mishandling received information.",
+    "example": "Draw browser, TLS-terminating proxy, and application server. Mark which segments are encrypted and where plaintext exists. Inspect a legitimate site's certificate using browser tools and identify the subject names, issuer, and validity period. Explain why bypassing a certificate warning removes an important part of the intended authentication argument.",
+    "pitfall": "HTTPS does not establish that an application's business logic, dependencies, or content are safe.",
+    "check": {
+      "question": "A proxy terminates TLS and forwards plain HTTP internally. Where is the original TLS protection boundary?",
+      "choices": [
+        "Automatically through every downstream service and database",
+        "Between the client and that proxy",
+        "Only around the visible HTML, excluding requests"
+      ],
+      "answer": 1,
+      "explanation": "TLS protects its actual connection endpoints. A downstream connection is a separate channel with separate guarantees."
+    }
+  },
+  "S06": {
+    "concept": "Authentication asks who or what is presenting a credential. Authorisation asks whether that actor may perform an action on a resource. A session carries the application's continuing recognition of an authenticated actor. Least privilege grants only the authority required for a task, for only as long as needed.",
+    "mechanism": "Design access checks around actor, action, resource, and context. Deny by default, enforce checks on the server, and consider session expiry and revocation. Multifactor authentication improves the login boundary under its threat model but does not repair a missing ownership check. Service accounts also need identities, limited permissions, and lifecycle management.",
+    "example": "Define read, edit, and delete permissions for owners, invited readers, and administrators in a notes service. Turn the matrix into positive and negative tests. Include a signed-in user requesting another user's note and an expired session requesting an owned note. Explain which failure is authentication-related and which is authorisation-related.",
+    "pitfall": "Being signed in is not a universal access permission. A valid identity must still be evaluated against each protected operation.",
+    "check": {
+      "question": "A signed-in learner can edit another learner's private notes. Which control is missing?",
+      "choices": ["Text formatting", "A larger password field", "Object-level authorisation"],
+      "answer": 2,
+      "explanation": "The identity may be valid, but the requested action on that particular object lacks permission."
+    }
+  },
+  "W01": {
+    "concept": "Developer tools reveal the browser's requests, responses, storage, and script execution. An intercepting proxy lets you inspect and modify authorised lab HTTP traffic. These views answer different questions: a browser may transform a request before sending it, while a proxy sees traffic at its position in the connection path.",
+    "mechanism": "Begin with a baseline request that succeeds normally. Record the actor, target, method, headers, body, response, and visible state change. Change one variable at a time so that you can attribute the result. A local proxy's trusted certificate affects your browser's trust decisions; use a dedicated lab profile and follow the provider's installation and removal guidance.",
+    "example": "In a provided training lab, capture a harmless form submission. Repeat it unchanged, then alter one non-sensitive input and compare the response and server-side result. Label each request so the original remains available. Explain which observations are direct evidence and which explanations are hypotheses requiring another check.",
+    "pitfall": "An unusual response is not automatically a vulnerability. Establish the violated security property and reproduce it within scope.",
+    "check": {
+      "question": "Why preserve an unmodified baseline request?",
+      "choices": [
+        "It guarantees every later response is exploitable",
+        "It provides a comparison for attributing the effects of later changes",
+        "It removes the need to identify the active account"
+      ],
+      "answer": 1,
+      "explanation": "A baseline helps separate normal behaviour from effects caused by a controlled change."
+    }
+  },
+  "W02": {
+    "concept": "SQL injection occurs when untrusted input changes the structure of a database query. The core boundary is code versus data. Concatenating input into SQL can let a value become syntax. Parameterised queries send the query structure and bound values separately so the database treats the values as data.",
+    "mechanism": "Validation and least-privileged database accounts are useful additional controls, but they do not replace correct query construction. Parameters normally bind values, not arbitrary identifiers such as table names. When an identifier must vary, choose it from a fixed application-controlled mapping. Protect every query path, including background jobs and less-used administrative features.",
+    "example": "Use the linked deliberately vulnerable lab, then repair a local query by replacing string concatenation with the database driver's binding API. Test a normal name, a quote-containing name, and the lab's authorised failure case. The corrected version should preserve legitimate punctuation while preventing input from altering query structure.",
+    "pitfall": "Deleting quote characters is not a general SQL injection defence and may damage valid data.",
+    "check": {
+      "question": "What is the primary purpose of SQL value parameters?",
+      "choices": [
+        "Encrypt the database connection automatically",
+        "Grant every query administrator permissions",
+        "Keep input values separate from query syntax"
+      ],
+      "answer": 2,
+      "explanation": "Binding preserves the code-data boundary. Connection encryption and account permissions are separate controls."
+    }
+  },
+  "W03": {
+    "concept": "Cross-site scripting, or XSS, lets attacker-controlled content execute as script in another user's browser context. Reflected XSS returns input in a response; stored XSS persists it for later viewers; DOM-based XSS involves unsafe browser-side data flows. The important path is from an untrusted source to a code-interpreting sink.",
+    "mechanism": "Use safe text APIs when displaying text. Where markup is required, use a maintained sanitiser under an explicit policy. Output encoding must match its context: HTML text, an attribute, JavaScript, and a URL have different rules. Content Security Policy can reduce some consequences, but it does not justify leaving unsafe insertion paths in place.",
+    "example": "In a local preview component, compare assigning a harmless tag-like string through textContent with inserting it as HTML. Draw the source-to-sink path without using real users or public targets. Replace the unsafe sink, then test ordinary text, angle brackets, quotes, and non-ASCII input to ensure the repair preserves intended content.",
+    "pitfall": "One generic escaping function is not appropriate for every output context.",
+    "check": {
+      "question": "A comment is meant to display plain text. Which browser API best preserves that intention?",
+      "choices": ["textContent", "An unrestricted innerHTML assignment", "Executing the comment with eval"],
+      "answer": 0,
+      "explanation": "textContent creates text rather than asking the browser to interpret the value as markup or code."
+    }
+  },
+  "W04": {
+    "concept": "Cross-site request forgery, or CSRF, abuses credentials that a browser automatically attaches to a request. Another site may cause the victim's browser to send a state-changing request even when it cannot read the response. The server must distinguish an intended authorised action from a request merely carrying an ambient session cookie.",
+    "mechanism": "Use the framework's CSRF protection, appropriate cookie settings, and suitable origin checks according to the application architecture. State-changing actions should not be implemented as safe navigation GETs. A valid anti-CSRF token must be checked by the server and bound according to the framework's design. XSS can undermine many browser-side CSRF defences, so these topics remain connected.",
+    "example": "For the provided lab, list the credentials sent automatically, the action changed, and the missing intent check. In a local repair, enable the framework's CSRF middleware and test a legitimate form, a missing token, and an incorrect token. Confirm the failed requests do not change server state.",
+    "pitfall": "Same-origin restrictions on reading responses do not necessarily stop a browser from sending cross-origin requests.",
+    "check": {
+      "question": "Why can CSRF work even when the attacker cannot read the response?",
+      "choices": [
+        "Every request requires the attacker to see the response first",
+        "The harmful effect may occur when the authenticated request is processed",
+        "The same-origin policy blocks all cross-origin form submissions"
+      ],
+      "answer": 1,
+      "explanation": "The attacker may need only the side effect. Read restrictions and request-sending rules are different."
+    }
+  },
+  "W05": {
+    "concept": "The same-origin policy limits browser script access across origins. CORS is a server-declared mechanism that allows selected cross-origin reads. A preflight may ask permission before certain requests. These browser behaviours are not an authentication system and do not stop non-browser clients from sending requests directly.",
+    "mechanism": "A CORS policy should reflect the actual trusted origins and credential requirements. Automatically reflecting any Origin header while permitting credentials can expose authenticated data in unsafe configurations. Separately consider whether a request can be sent, whether cookies are attached, whether a preflight is required, and whether script can read the response. Those are related but distinct decisions.",
+    "example": "Draw a frontend on one origin and an API on another. Define exactly which origin needs readable responses. Test the allowed origin and a disallowed origin using the course lab. Record network activity separately from script-visible results so that a blocked read is not mistaken for proof that no request reached the server.",
+    "pitfall": "CORS does not replace API access checks and is not enforced by arbitrary server-side HTTP clients.",
+    "check": {
+      "question": "Who primarily enforces CORS restrictions on response access?",
+      "choices": ["Every command-line HTTP client by universal rule", "The database engine", "The browser"],
+      "answer": 2,
+      "explanation": "CORS is a browser security mechanism. The server still needs authentication and authorisation for direct callers."
+    }
+  },
+  "W06": {
+    "concept": "Path traversal occurs when an input-controlled path escapes an intended directory or resource boundary. Path syntax can include parent components, absolute forms, alternate encodings, or platform-specific separators. A string that looks like a child path before normalisation may resolve elsewhere. A filename is therefore a security-sensitive input, not merely a display label.",
+    "mechanism": "Prefer mapping an application-controlled identifier to a stored object rather than accepting arbitrary filesystem paths. If paths are necessary, resolve them according to the platform and enforce containment carefully, including symbolic-link and race considerations. Apply least privilege to the process so that an input-validation defect has a smaller reach.",
+    "example": "Inside the provided lab, identify the intended base directory and the point where input becomes a filesystem lookup. For a local repair, replace user-supplied paths with opaque IDs mapped to known files. Test a legitimate ID, an unknown ID, and boundary cases. Verify both the response and which file was actually accessed.",
+    "pitfall": "Removing one occurrence of '../' is not a reliable containment strategy. Normalisation and alternate representations can defeat ad hoc filtering.",
+    "check": {
+      "question": "Which design most directly reduces arbitrary path interpretation?",
+      "choices": [
+        "Mapping an opaque identifier to an application-controlled stored object",
+        "Appending input to a base path without checking",
+        "Removing only the first parent-directory component"
+      ],
+      "answer": 0,
+      "explanation": "An identifier mapping narrows the operation to known resources instead of treating caller input as path syntax."
+    }
+  },
+  "W07": {
+    "concept": "Command injection occurs when input becomes syntax for an operating-system command interpreter. A shell interprets separators, expansions, quoting, and redirection. Constructing a command string mixes application intent with this grammar. The boundary is different from simply passing data to a program's argument list.",
+    "mechanism": "Prefer a library API that performs the operation directly. When starting a process is necessary, use an argument-vector API without a shell and a fixed executable. This removes shell parsing but does not remove every risk: the program may interpret an argument beginning with a dash as an option, and filenames or expressions may have their own syntax. Validate according to the invoked program's contract.",
+    "example": "Replace a local shell-based file-counting operation with a language library call. Compare handling of spaces and punctuation in harmless filenames. If the lab requires a process, pass explicit arguments and inspect the tool's end-of-options rules. Explain which interpreter was removed and which input semantics still remain.",
+    "pitfall": "Avoiding a shell is a strong improvement, not proof that all possible argument injection has disappeared.",
+    "check": {
+      "question": "What is the best first alternative to constructing a shell command for a file operation?",
+      "choices": ["Add more string concatenation", "Use a language library API for the operation", "Run the command with greater privileges"],
+      "answer": 1,
+      "explanation": "A direct API avoids an unnecessary command language boundary and usually makes validation clearer."
+    }
+  },
+  "W08": {
+    "concept": "A file upload crosses several boundaries: incoming bytes, metadata, storage location, later processing, and eventual download or execution. A browser-supplied filename or content type is untrusted. A permitted extension alone cannot establish the actual format or safety of the file, and even a well-formed file may exploit a vulnerable parser.",
+    "mechanism": "Use an explicit allowlist of required formats, size limits, controlled storage names, appropriate content verification, and safe handling paths. Store uploads where they cannot become executable application code. Serve downloads with suitable headers and authorise access to the stored object. Consider scanning and isolated processing as additional controls with known limits.",
+    "example": "Design an avatar upload pipeline using synthetic images. Rename files server-side, cap size, decode and validate the intended image format with a maintained library, and keep storage outside executable routes. Test a misleading extension, excessive size, and another user's image URL. Each test should target a separate boundary.",
+    "pitfall": "A successful malware scan is not a universal proof that uploaded content is safe to parse, execute, or display.",
+    "check": {
+      "question": "Why store uploaded content outside executable application paths?",
+      "choices": [
+        "So all files become confidential without access checks",
+        "So file-size limits are unnecessary",
+        "So accepted bytes cannot automatically become server-executed code"
+      ],
+      "answer": 2,
+      "explanation": "Storage and execution must remain separate. Access control, validation, and resource limits are still needed."
+    }
+  },
+  "W09": {
+    "concept": "XML represents structured data using elements and attributes. Some parser configurations support document type declarations and external entities, which can refer to resources outside the input document. XXE arises when untrusted XML gains unintended access through these features. Other parser features can consume excessive resources even without disclosing a file.",
+    "mechanism": "Use the platform's documented safe parser configuration for untrusted XML. Disable unnecessary external resolution and document-type features, apply resource limits, and validate the application structure. A format being well-formed says nothing about whether its parser should access files or networks. JSON may simplify some interfaces, but changing formats does not eliminate ordinary validation needs.",
+    "example": "For a harmless local parser exercise, accept a fixed small record structure. Test a normal record, unexpected fields, oversized nesting, and a document containing a declaration that your safe configuration should reject. Confirm the parser makes no unexpected resource access using the provider's controlled lab, rather than relying only on the displayed error.",
+    "pitfall": "XML schema validation and external-entity configuration solve different problems. Do not assume enabling one disables the other.",
+    "check": {
+      "question": "Which capability should an untrusted XML parser usually avoid unless explicitly required?",
+      "choices": [
+        "Resolving external entities through filesystem or network access",
+        "Reading ordinary permitted element text",
+        "Reporting malformed syntax"
+      ],
+      "answer": 0,
+      "explanation": "External resolution introduces additional resource and trust boundaries beyond the submitted document."
+    }
+  },
+  "W10": {
+    "concept": "Server-side request forgery, or SSRF, turns a server's ability to fetch resources into an attacker-controlled request path. The server may reach destinations the original caller cannot. A URL therefore carries more than text: it selects a scheme, destination, port, and sometimes credentials or redirect behaviour under a particular parser.",
+    "mechanism": "Prefer fetching from fixed known services or mapping IDs to approved resources. Where arbitrary destinations are required, validate supported schemes and destinations, account for name resolution and redirects, and enforce network-level egress restrictions. Revalidate each relevant hop. Cloud metadata and internal services need their own protections; a URL filter should not be the only boundary.",
+    "example": "Design a local thumbnail service that accepts IDs for a fixed image catalogue instead of free-form URLs. For the linked lab, record the server's network position and which boundary the unintended request crosses. Compare initial destination validation with redirect handling and explain why checking only the visible input string is incomplete.",
+    "pitfall": "An apparently public hostname can resolve differently over time. Destination policy must consider the address actually used and subsequent hops.",
+    "check": {
+      "question": "Why is SSRF dangerous even when the response is not returned to the caller?",
+      "choices": [
+        "A hidden response guarantees no effect occurred",
+        "The server may still perform an unintended action or reach a protected service",
+        "Only browser-origin rules determine server-side access"
+      ],
+      "answer": 1,
+      "explanation": "The request itself may have side effects or cross a network trust boundary, regardless of response visibility."
+    }
+  },
+  "W11": {
+    "concept": "An API exposes operations and data structures through documented interfaces. Object-level access control determines whether the current actor may use the object named by an ID. Guess-resistant identifiers can reduce enumeration but do not replace permission checks. An opaque ID can still be leaked, copied, or supplied by a different legitimate account.",
+    "mechanism": "Validate type, range, allowed fields, relationships, and requested operation. Avoid mass assignment, where arbitrary supplied fields automatically become object attributes. Separate response schemas from internal storage schemas so sensitive fields are not returned accidentally. Test the same operation with multiple controlled identities and object ownership combinations.",
+    "example": "Create two synthetic accounts and one private note per account. Build a test matrix for read, update, and delete using each identity and each note ID. Add an unexpected owner_id field to a local update request and ensure the server does not silently reassign ownership. Record the expected result for every row before running the tests.",
+    "pitfall": "API documentation describes intended behaviour; it does not enforce it. The implementation must reject forbidden combinations.",
+    "check": {
+      "question": "What should happen when a valid user supplies another user's private object ID?",
+      "choices": [
+        "The ID's existence automatically grants access",
+        "The browser decides whether the database should return it",
+        "The server applies object-level permission checks and denies unauthorised access"
+      ],
+      "answer": 2,
+      "explanation": "The server must evaluate the actor-object-action relationship on every relevant operation."
+    }
+  },
+  "W12": {
+    "concept": "Authentication is a lifecycle, including registration, login, session creation, recovery, factor changes, and account closure. A strong login can be undermined by a weak recovery path. Account enumeration exposes whether an identity exists through responses, timing, or side effects, which can support later abuse depending on the threat model.",
+    "mechanism": "Use established framework mechanisms for credential handling, secure session rotation, recovery tokens, and appropriate rate limits. Recovery tokens need sufficient unpredictability, a limited lifetime, and carefully enforced single use. Protect factor changes as sensitive actions. Error messages should avoid unnecessary disclosure while remaining usable for legitimate users.",
+    "example": "Draw a test account's normal login and lost-password paths. For a local recovery flow, test an expired token, a reused token, and a token presented for the wrong account. Confirm that a successful reset changes the intended credential and follows the application's session-revocation policy. Use only synthetic accounts in the training environment.",
+    "pitfall": "A recovery message can be generic while other observable differences still reveal account existence. Examine the complete behaviour.",
+    "check": {
+      "question": "Which path deserves the same security attention as normal login?",
+      "choices": ["Password and multifactor recovery", "Only the public colour-theme switch", "Only the site's logo download"],
+      "answer": 0,
+      "explanation": "Recovery can confer account access, so its authority and abuse resistance are part of authentication security."
+    }
+  },
+  "W13": {
+    "concept": "Access control applies business rules to actions, not just URLs. Horizontal escalation crosses between peers' resources; vertical escalation gains a more privileged role. A business-logic flaw can violate a rule even when each individual request is syntactically valid and the user is authenticated.",
+    "mechanism": "Write invariants in plain language before testing. For example, an invitation can grant only the permissions the inviter is allowed to delegate, and a refund cannot exceed the amount paid. Enforce checks in the operation that changes state. Do not trust role names, prices, ownership fields, or workflow state supplied by the client.",
+    "example": "Model an invitation flow with owner, editor, and viewer roles. Define who may invite whom and which roles may be granted. Test each permitted and forbidden transition with controlled accounts. Include a viewer directly calling the invitation endpoint, rather than assuming a hidden button prevents that action.",
+    "pitfall": "Checking permissions only on page rendering leaves direct API requests unprotected.",
+    "check": {
+      "question": "Where should the rule 'a viewer cannot grant editor access' be enforced?",
+      "choices": [
+        "Only by hiding the editor option in HTML",
+        "In the server operation that creates or changes the invitation",
+        "Only in a welcome email"
+      ],
+      "answer": 1,
+      "explanation": "The state-changing operation must enforce the rule regardless of how the request was constructed."
+    }
+  },
+  "W14": {
+    "concept": "A JSON Web Token is a structured format that can carry claims. A typical signed compact token contains encoded header, payload, and signature components. Encoding makes the claims readable; it does not encrypt them. A signature can protect integrity only when the verifier uses the intended algorithm, trusted key, and appropriate claim validation.",
+    "mechanism": "Validate the token's issuer, audience, time constraints, algorithm policy, and purpose according to the protocol. Key selection must not become an arbitrary caller-controlled file or network lookup. A correctly signed token for a different service should not automatically work here. Consider revocation, rotation, and how long a stolen bearer token remains usable.",
+    "example": "Decode a synthetic course token without treating decoding as verification. List which claims are visible. Then use the provider's supported verification library to test valid, expired, wrong-audience, and altered tokens. Document the trusted key source separately from any untrusted key identifier in the token header.",
+    "pitfall": "A library returning decoded JSON may not have verified authenticity. Read the API contract carefully.",
+    "check": {
+      "question": "Does base64url-decoding a JWT establish its authenticity?",
+      "choices": [
+        "Yes; readable JSON is proof of a valid signature",
+        "Yes; a token with three parts cannot be altered",
+        "No; signature and claim validation are separate required checks"
+      ],
+      "answer": 2,
+      "explanation": "Decoding only interprets the representation. Verification establishes integrity under a trusted key and validation policy."
+    }
+  },
+  "W15": {
+    "concept": "OAuth delegates limited access to a resource; it is not by itself a complete login identity protocol. OpenID Connect adds an identity layer with its own tokens and validation rules. Distinguish the resource owner, client, authorisation server, and resource server, and identify which party receives each code or token.",
+    "mechanism": "An authorisation-code flow uses carefully registered redirect URIs and transaction binding. PKCE binds code redemption to the client instance holding a verifier, helping resist code interception. State and applicable protocol-specific checks bind a response to the initiating interaction. Use maintained libraries and current provider guidance instead of inventing a flow from isolated redirect examples.",
+    "example": "Draw a modern authorisation-code flow with PKCE using a synthetic account in the course lab. Label the authorisation code, verifier, access token, and any ID token. Explain why an access token for one API is not automatically a valid login assertion for a different client. Test the lab's mismatched redirect or transaction case within scope.",
+    "pitfall": "Access tokens and ID tokens have different audiences and purposes. Similar-looking token formats do not make them interchangeable.",
+    "check": {
+      "question": "What does PKCE help bind?",
+      "choices": [
+        "Authorisation-code redemption to possession of the initiating client's verifier",
+        "All API permissions to the user's display name",
+        "A password to every unrelated website"
+      ],
+      "answer": 0,
+      "explanation": "The code challenge and verifier connect code redemption to the initiating client instance under the flow's assumptions."
+    }
+  },
+  "W16": {
+    "concept": "A web race condition occurs when overlapping requests violate an invariant. A limit such as 'redeem this coupon once' describes a state transition, not merely an input format. Two requests can both pass a check before either records the change. The bug lives in the interleaving of otherwise plausible operations.",
+    "mechanism": "Use atomic database operations, transactions with appropriate isolation, uniqueness constraints, or carefully designed locking to preserve the relevant invariant. Idempotency makes repeated equivalent requests have one intended effect, but requires a trustworthy key scope and stored result. Merely slowing requests down or adding a client-side button lock does not establish correctness.",
+    "example": "Model one-use redemption as unused → used. Draw two requests both observing unused, then both granting credit. Repair the local model with an atomic conditional update or an appropriate unique constraint and transaction. Test overlapping requests in the authorised lab and verify the final ledger, not just the number of successful HTTP responses.",
+    "pitfall": "A transaction boundary alone does not imply the isolation level needed for every invariant. State the guarantee you rely on.",
+    "check": {
+      "question": "What must a single-use redemption protect?",
+      "choices": [
+        "Only the visual button's disabled state",
+        "The eligibility check and state change as one invariant-preserving operation",
+        "Only the time between two browser clicks"
+      ],
+      "answer": 1,
+      "explanation": "The server must prevent competing operations from both consuming the same entitlement."
+    }
+  },
+  "W17": {
+    "concept": "Request smuggling exploits disagreement between HTTP-processing components about where a request ends and the next begins. A frontend proxy and backend may interpret framing differently. The result can be a message boundary shift that affects another request. Understanding the complete proxy chain is essential before drawing conclusions from an isolated response.",
+    "mechanism": "Use current maintained servers and consistent protocol handling, reject ambiguous framing, and follow the deployment platform's guidance. Connection reuse and protocol translation can change exposure. This is an advanced topic because HTTP semantics, transport streams, intermediary behaviour, and isolation all interact. Keep experiments inside provider-supplied labs where no unrelated users share the connection path.",
+    "example": "Draw a frontend-to-backend byte stream containing two harmless requests. Mark the boundary each component expects under the lab's controlled disagreement. Explain how the two interpretations diverge without testing public infrastructure. For the remediation exercise, state which component rejects ambiguity and verify the normal request path still functions.",
+    "pitfall": "A timeout alone is not proof of request smuggling. It may reflect many unrelated parser or network behaviours.",
+    "check": {
+      "question": "What is the central failure behind request smuggling?",
+      "choices": ["The browser uses a long password", "A database table lacks an index", "Intermediaries disagree about request framing boundaries"],
+      "answer": 2,
+      "explanation": "Different framing interpretations let bytes acquire unintended meaning across shared connections."
+    }
+  },
+  "W18": {
+    "concept": "An integrated assessment connects individual weaknesses to the application's security model. Begin with scope, assets, roles, data flows, and intended business rules. Build an inventory of operations and trust boundaries before selecting tests. A useful result explains the violated property, necessary conditions, reproducible evidence, and practical effect.",
+    "mechanism": "Separate discovery from reporting. Keep baseline requests, controlled account identities, timestamps, and minimal evidence. Confirm findings independently and avoid counting several symptoms of one root cause as unrelated successes. A repair is incomplete until it preserves legitimate behaviour and rejects the original unauthorised operation and meaningful variants.",
+    "example": "Assess the supplied application using an owner, a second user, and a logged-out session. Cover input handling, ownership, authentication lifecycle, cross-origin behaviour, file boundaries, and concurrent state changes. Rank findings by supported impact and likelihood. Repair at least one issue, add a regression check, and ask the other learner to reproduce the finding from the report alone.",
+    "pitfall": "A long tool output is not an assessment report. Explain which observed behaviour violates which rule and what evidence supports that conclusion.",
+    "check": {
+      "question": "What best demonstrates a finding is reproducible?",
+      "choices": [
+        "Another learner can follow the scoped report and observe the same violated property",
+        "The original tester remembers the steps",
+        "The scanner lists many severity labels"
+      ],
+      "answer": 0,
+      "explanation": "Independent reproduction checks that the report contains sufficient evidence and instructions rather than relying on hidden knowledge."
+    }
+  },
+  "F01": {
+    "concept": "Memory corruption breaks the program's intended relationship between bytes, objects, and control flow. An out-of-bounds write may overwrite neighbouring data; use-after-free may let code access storage whose lifetime has ended. The resulting behaviour depends on layout, allocator decisions, compilation, and the surrounding program, not simply on the source line's appearance.",
+    "mechanism": "Reason from a minimal failing case. Identify the allocation, capacity, lifetime, write or read, and violated condition. Distinguish a crash from demonstrated control of data or execution. Use only the course's isolated binaries and benign inputs. The learning goal is to explain the defect and repair its cause, with evidence connecting input to invalid memory access.",
+    "example": "Take a deliberately unsafe local buffer exercise and draw its valid range. Use a diagnostic build to identify the first invalid access. Reduce the input until the smallest reproducer remains. Replace the unsafe length assumption with an explicit capacity check, then verify both the reproducer and ordinary boundary cases.",
+    "pitfall": "A crash is evidence of a failure, not automatically proof of a particular exploit capability or severity.",
+    "check": {
+      "question": "What is the strongest first step after observing a memory-related crash?",
+      "choices": [
+        "Assume arbitrary code execution has been demonstrated",
+        "Disable every diagnostic to improve speed",
+        "Find and minimise the input that causes the first invalid access"
+      ],
+      "answer": 2,
+      "explanation": "A minimal reproducer and diagnostic evidence support a causal explanation and a targeted repair."
+    }
+  },
+  "F02": {
+    "concept": "Memory-safety mitigations change exploit conditions. Stack canaries detect some stack corruption, non-executable pages restrict where code runs, address randomisation makes locations less predictable, and control-flow protections constrain some transfers. Each mitigation has a scope and assumptions. None should be described as making unsafe memory operations correct.",
+    "mechanism": "Memory-safe language features can prevent broad defect classes when used within their guarantees, but unsafe interfaces and foreign-function boundaries still need care. Apply mitigations as layers while fixing the original lifetime or bounds defect. Compare diagnostic builds with production hardening, since a sanitiser's purpose and operational costs differ from a deployment mitigation's.",
+    "example": "For a provided local program, identify which hardening features are enabled using the course tooling. Draw one bug's path and annotate which layer might interrupt it and which conditions bypass that layer's scope. Repair the bug and retain the mitigation. Explain the difference between preventing an invalid write and detecting one of its consequences.",
+    "pitfall": "A mitigation stopping one demonstration does not prove the underlying program is memory-safe.",
+    "check": {
+      "question": "What does a stack canary primarily do?",
+      "choices": [
+        "Detect certain stack overwrites before a protected return",
+        "Prevent all heap lifetime errors",
+        "Validate every application permission"
+      ],
+      "answer": 0,
+      "explanation": "A canary checks a particular integrity marker. It does not provide comprehensive bounds, lifetime, or authorisation safety."
+    }
+  },
+  "F03": {
+    "concept": "Privilege separation divides a system into components with different authority. A sandbox constrains a component's permitted actions. A capability combines access to a resource with authority to perform specified operations. The goal is to make compromise of one part insufficient to exercise every privilege in the system.",
+    "mechanism": "A confused deputy is a privileged component tricked into misusing its authority for a caller. Prevent it by tying authority to the intended request and resource, avoiding ambient privileges where practical, and checking caller context. Every interface between components needs validation; moving code into a second process without narrowing its authority changes structure more than security.",
+    "example": "Design a document-conversion service with an untrusted parser and a separate storage component. Grant the parser access only to its input and output, not the whole archive or network. Draw the message interface and state which component authorises the requested file. Consider what an attacker could still do after taking control of the parser.",
+    "pitfall": "A sandbox with an unrestricted host filesystem mount can inherit the very authority it was meant to remove.",
+    "check": {
+      "question": "What makes privilege separation useful after one component is compromised?",
+      "choices": [
+        "Every component runs as the same administrator",
+        "The compromised component has less authority than the whole service",
+        "The process names are different"
+      ],
+      "answer": 1,
+      "explanation": "Separating authority limits consequences. Process separation without permission separation may provide little containment."
+    }
+  },
+  "F04": {
+    "concept": "Hardening reduces unnecessary exposed behaviour and strengthens required behaviour. Inventory services, identities, configuration, update paths, and recovery requirements before disabling things. A firewall applies traffic policy at its position in the network path. An intrusion detector observes selected signals and alerts on patterns; it does not automatically prevent every malicious action.",
+    "mechanism": "Use explicit rules, least privilege, configuration baselines, and tested rollback procedures. Default-deny policies need documented allowances for legitimate traffic. Logs and monitoring should show whether controls work, while testing should verify both permitted and prohibited paths. Consider IPv6, host-local communication, and alternate interfaces instead of assuming one rule covers every route.",
+    "example": "For a disposable server, list listening services and define the minimum connections needed. Apply a narrow lab firewall policy, confirm the intended client still works, and verify an unwanted connection fails. Record the configuration before and after, the test source, and a recovery method in case management access is blocked.",
+    "pitfall": "A detector's silence is not proof that no incident occurred. It may lack the necessary visibility or rule.",
+    "check": {
+      "question": "What should accompany a new deny rule?",
+      "choices": [
+        "Only a screenshot of the rule's name",
+        "Removal of every recovery mechanism",
+        "Tests of both the intended blocked path and required allowed paths"
+      ],
+      "answer": 2,
+      "explanation": "A useful control must block the threat while preserving required operation and recoverability."
+    }
+  },
+  "F05": {
+    "concept": "Secure development makes security part of design, implementation, review, release, and maintenance. A dependency is code you trust indirectly; its version, origin, build process, and update channel matter. A secret is authority-bearing material such as a credential, not an ordinary configuration value to embed in public source or browser code.",
+    "mechanism": "Track dependencies and provenance, review sensitive changes, use least-privileged automation, and protect release credentials. A lockfile improves repeatability but does not prove its selected package is safe. An SBOM inventories components but does not itself remediate vulnerabilities. Plan secret rotation and incident response before exposure, and separate build-time authority from runtime authority.",
+    "example": "Review a tiny sample project. Identify direct and transitive dependencies, the release entry point, and where credentials would enter. Replace a synthetic hardcoded credential with a documented secret-injection mechanism and a harmless example configuration. Add a checklist covering dependency updates, code review, release verification, and credential rotation.",
+    "pitfall": "Removing a leaked secret from the latest file does not invalidate copies in history, logs, or caches.",
+    "check": {
+      "question": "What is the required response to an actually exposed live credential?",
+      "choices": [
+        "Revoke or rotate it through the issuing system and investigate its use",
+        "Only rename the variable",
+        "Only delete the newest source-code line"
+      ],
+      "answer": 0,
+      "explanation": "The authority must be invalidated. Editing one copy does not erase already exposed copies or prevent their use."
+    }
+  },
+  "D01": {
+    "concept": "Windows security analysis begins with normal administration. Accounts and groups identify principals; access-control lists grant or deny operations on objects. Services run background workloads under configured identities. The registry stores structured configuration, while event logs record selected system and application activities. PowerShell exposes objects and properties, not only lines of text.",
+    "mechanism": "Understand the host's baseline before interpreting an event. Record the machine, account, event source, event identifier, time convention, and collection method. Elevation changes authority and should be explicit. PowerShell scripts should use narrow targets and inspect objects before mutation, particularly on a shared or important machine.",
+    "example": "In a disposable Windows lab, enumerate a harmless directory's ACL and inspect a known service's configured account. Generate a benign test event using the course exercise and locate it in the relevant log. Export the event with context, then explain what it directly shows and what it cannot prove about the actor's intent.",
+    "pitfall": "An event identifier has meaning within its provider and context. A number alone is insufficient evidence.",
+    "check": {
+      "question": "What is distinctive about a normal PowerShell pipeline?",
+      "choices": ["It can pass structured objects with properties", "It can pass only raw pixels", "It automatically grants administrator access"],
+      "answer": 0,
+      "explanation": "PowerShell commonly passes objects. This supports property-based inspection but does not remove permission requirements."
+    }
+  },
+  "D02": {
+    "concept": "Active Directory centralises identities and policy in a Windows domain. Domain controllers perform critical directory and authentication functions. Kerberos uses tickets and trusted key relationships to authenticate access to services. NTLM is a different authentication family with different properties and risks; do not treat the two as interchangeable labels.",
+    "mechanism": "Map identity flows before studying abuse cases. Identify user, workstation, domain controller, service, service principal name, and relevant keys or tickets. Group Policy distributes configuration under domain rules. Privileged groups, service accounts, delegation, and credential exposure can expand an incident's reach, so administrative boundaries and recovery paths matter.",
+    "example": "Using a contained course environment or saved traces, draw a user obtaining a service ticket and accessing a domain service. Mark where long-term secrets and tickets are used. Inventory a synthetic administrative role and identify which systems it can control. Compare the intended access with the actual group and delegation configuration.",
+    "pitfall": "A domain-joined machine is not automatically trusted for every action, and a valid ticket does not replace the service's authorisation checks.",
+    "check": {
+      "question": "What is the role of a Kerberos service ticket?",
+      "choices": [
+        "Encrypt every file on the workstation automatically",
+        "Support authentication to a particular service under the protocol's trust relationships",
+        "Replace all object-level permissions"
+      ],
+      "answer": 1,
+      "explanation": "A ticket supports authentication for a service. The service must still enforce what the authenticated actor may do."
+    }
+  },
+  "D03": {
+    "concept": "Cloud services move some operational responsibilities to a provider while leaving others with the customer. The division depends on whether you use infrastructure, a managed platform, or a managed application. Identity and access management connects principals to allowed actions on resources, often with conditions. Read policy evaluation rules rather than assuming an allow statement is the whole decision.",
+    "mechanism": "Prefer short-lived workload credentials and narrow roles over distributing long-lived keys. Consider organisation policies, public exposure, encryption-key authority, logging, backups, and billing boundaries. This module's default exercise is an offline design: creating paid resources or changing a real account needs a separately planned deployment with current provider documentation.",
+    "example": "Design a hypothetical object store for private reports. Define reader, uploader, and administrator roles, and specify which identity may decrypt the contents. Draw provider-managed versus customer-managed responsibilities. Evaluate sample requests manually, including another account and an anonymous caller, without provisioning any cloud resources.",
+    "pitfall": "A provider securing its infrastructure does not automatically correct a customer's overly broad policy or public data exposure.",
+    "check": {
+      "question": "Who is responsible for a customer-configured overly permissive storage access policy?",
+      "choices": [
+        "No one, because the data is in the cloud",
+        "Only the physical datacentre guard",
+        "The customer must manage its policy within the service's responsibility model"
+      ],
+      "answer": 2,
+      "explanation": "Shared responsibility changes by service, but customer-controlled identity and access configuration remains a central customer obligation."
+    }
+  },
+  "D04": {
+    "concept": "A container image packages filesystem content and metadata for a workload. The running container also depends on its host, runtime, orchestration configuration, network, mounts, and identity. Image scanning covers only part of this system. A secure image can still be deployed with dangerous privileges or an exposed secret.",
+    "mechanism": "Run with the minimum capabilities and permissions needed, avoid privileged host access, restrict writable paths and egress where appropriate, and use workload identities with limited scope. Pin and track images according to the deployment's update strategy. Protect the build pipeline and registry as well as the runtime, since attackers may alter what gets deployed.",
+    "example": "Review a synthetic deployment manifest offline. Identify the image reference, user identity, mounted volumes, exposed ports, and secret sources. Remove an unnecessary host mount and narrow the workload's API permissions. Explain how each change reduces the consequences of application compromise, then verify the intended file and network requirements remain possible.",
+    "pitfall": "A container image digest identifies content; it does not establish that the content or deployment policy is trustworthy.",
+    "check": {
+      "question": "Why is mounting the host's container-management socket especially sensitive?",
+      "choices": [
+        "It may give the workload powerful control over the host's container environment",
+        "It only changes the container's font settings",
+        "It guarantees an independent kernel"
+      ],
+      "answer": 0,
+      "explanation": "Management interfaces can cross isolation boundaries and grant authority far beyond the workload's intended task."
+    }
+  },
+  "D05": {
+    "concept": "Logs are selected records produced by software under configuration and resource constraints. They are observations, not a complete recording of reality. A SIEM collects and queries such events. Good analysis requires a schema, reliable field interpretation, known collection gaps, and a time model that supports ordering events across systems.",
+    "mechanism": "Normalise timestamps while preserving originals and source timezone information. Distinguish event time from ingestion time. Deduplicate carefully, since similar events can be legitimate repeats. In a query language such as KQL, filter, project, aggregate, and join according to the question, and inspect a few raw records before trusting a summary.",
+    "example": "Use a synthetic dataset with two hosts and different timestamp offsets. Convert times to a shared reference, retain source values, and construct a login timeline. Count failures per account and inspect one account's raw records. Add a delayed-ingestion event and explain why sorting by ingestion time would misrepresent the sequence.",
+    "pitfall": "Missing logs may mean no collection, retention expiry, a parsing failure, or tampering; they do not uniquely prove any one explanation.",
+    "check": {
+      "question": "Why distinguish event time from ingestion time?",
+      "choices": [
+        "They are always identical by definition",
+        "Collection delays can make arrival order differ from the underlying event sequence",
+        "Ingestion time proves the user's local clock was correct"
+      ],
+      "answer": 1,
+      "explanation": "A pipeline can receive an old event late. Both timestamps have meaning, but they answer different questions."
+    }
+  },
+  "D06": {
+    "concept": "Threat intelligence adds context to observations: actor behaviours, infrastructure, techniques, and confidence. MITRE ATT&CK organises observed adversary techniques into a common vocabulary. Mapping an event to a technique can help explain coverage, but the label does not prove attribution or establish that every instance of the behaviour is malicious.",
+    "mechanism": "Separate raw evidence, analytic interpretation, and confidence. An indicator such as a domain can expire or be shared with benign activity. A behavioural pattern may generalise better but still needs context. Record the source, date, scope, and alternatives for each claim, and distinguish directly observed actions from inferred intent.",
+    "example": "Take a synthetic incident containing a script launch, a new scheduled task, and an outbound connection. Map only the supported behaviours to ATT&CK entries using their definitions. For each mapping, cite the specific evidence and a benign alternative. State which additional observation would help distinguish the explanations.",
+    "pitfall": "An ATT&CK technique label is neither an attribution verdict nor proof that a detection covers every implementation of that technique.",
+    "check": {
+      "question": "What should accompany an ATT&CK mapping?",
+      "choices": [
+        "A guaranteed attacker nationality",
+        "A claim of complete detection coverage",
+        "Specific supporting evidence and stated uncertainty"
+      ],
+      "answer": 2,
+      "explanation": "The framework helps describe behaviour. Evidence and uncertainty establish the limits of the mapping."
+    }
+  },
+  "D07": {
+    "concept": "Detection engineering turns a threat hypothesis into an observable rule and an operating process. Start with the behaviour, necessary telemetry, expected benign lookalikes, and analyst response. A rule that cannot observe its required fields has no useful coverage, however convincing its query text appears.",
+    "mechanism": "Test with labelled synthetic or authorised samples and report true positives, false positives, and known misses. Tune with a baseline representative of the target environment, avoiding overfitting to one demonstration. Version the query, data assumptions, validation cases, and response instructions together. Revisit the rule when logging schemas or attacker behaviour change.",
+    "example": "Write a hypothesis about repeated failed logins followed by success on one synthetic account. Define a time window and threshold, then test ordinary typos, a benign batch job, and the intended suspicious sequence. Inspect false alerts and document why the rule is a useful signal rather than proof of compromise.",
+    "pitfall": "A rule matching its own handcrafted example says little about false-positive rates in a real population.",
+    "check": {
+      "question": "What is required before claiming a detection can observe a behaviour?",
+      "choices": [
+        "The needed telemetry is collected with usable fields and coverage",
+        "The query contains a threat actor's name",
+        "The dashboard uses a red colour"
+      ],
+      "answer": 0,
+      "explanation": "Visibility is a prerequisite. A query cannot detect events absent from its data sources."
+    }
+  },
+  "D08": {
+    "concept": "Incident response coordinates preparation, investigation, containment, eradication, recovery, and learning. The order may overlap as evidence changes. Start with the observed facts, affected assets, possible impact, and decision authority. Preserve evidence relevant to the response while balancing the need to stop ongoing harm.",
+    "mechanism": "Containment limits damage; eradication removes the cause; recovery restores trusted operation. Restarting a machine may restore availability while destroying useful volatile evidence or leaving stolen credentials valid. Record decisions, times, owners, and uncertainty. Communication should distinguish confirmed facts from hypotheses and give recipients the actions they need.",
+    "example": "Run a tabletop for a synthetic compromised test account. Decide when to revoke sessions, rotate relevant credentials, preserve logs, notify the owner, and restore normal access. Explain the tradeoff of each action. Define a recovery check and one follow-up change that addresses the original failure rather than merely closing the alert.",
+    "pitfall": "Returning a service to a working state does not establish that the intrusion path or persistence has been removed.",
+    "check": {
+      "question": "Which action directly addresses stolen session authority?",
+      "choices": [
+        "Only change the website's colour theme",
+        "Revoke the affected sessions under the application's response process",
+        "Only archive the incident chat"
+      ],
+      "answer": 1,
+      "explanation": "Stolen sessions can remain usable independently of cosmetic changes or documentation. Their authority needs explicit invalidation."
+    }
+  },
+  "D09": {
+    "concept": "Forensics reconstructs events from artifacts while preserving the distinction between evidence and inference. Disk images, filesystem metadata, browser records, endpoint logs, and packet captures provide different views. Acquisition method can change what is captured, so record source, timing, tools, settings, and limitations.",
+    "mechanism": "Hashing supports later integrity comparisons of acquired artifacts but does not establish that the original source was truthful or complete. Preserve originals and work from copies where the exercise supports it. A timeline should cite each artifact and explain clock assumptions. Chain-of-custody documentation records handling; actual legal requirements depend on the jurisdiction and case context.",
+    "example": "Use the supplied training image, calculate its digest, and preserve a working copy. Extract three related artifacts and build a timeline with references back to source locations. Note one missing artifact and at least two explanations for its absence. Verify that another learner can reproduce your extraction from the same image and instructions.",
+    "pitfall": "A file's timestamp alone is not definitive proof that a particular person performed an action at that time.",
+    "check": {
+      "question": "What does matching an artifact's recorded cryptographic digest support?",
+      "choices": [
+        "That every statement inside the artifact is true",
+        "That no evidence was missing before acquisition",
+        "That the checked bytes match the previously hashed bytes, under the hash's assumptions"
+      ],
+      "answer": 2,
+      "explanation": "A digest supports integrity comparison. It does not prove completeness, provenance, or truth of the content by itself."
+    }
+  },
+  "D10": {
+    "concept": "A memory image captures selected volatile system state, potentially including processes, mappings, handles, and network structures. Volatility interprets that data using operating-system-specific knowledge. Results depend on image quality, platform support, symbols, and the selected analysis method. A missing result can reflect a tool limitation rather than absence of the activity.",
+    "mechanism": "Malware triage begins with safe static examination and known training artifacts. Unknown code can have destructive or spreading behaviour, so do not execute it on your personal computer or an ordinary shared-network container. Reverse engineering asks how code behaves through strings, imports, control flow, and carefully scoped analysis; suspicious appearance alone does not prove intent.",
+    "example": "Use a provider-supplied memory image and documented tool version. List processes, inspect one unusual relationship, and corroborate it with another artifact. For the reverse-engineering portion, inspect a harmless compiled sample whose source is available, then compare your inferred behaviour with the source. Record uncertainty instead of inventing missing evidence.",
+    "pitfall": "An unfamiliar process name or a single scanner label is a lead, not a complete malware verdict.",
+    "check": {
+      "question": "Why corroborate a suspicious memory finding with another artifact?",
+      "choices": [
+        "To test alternative explanations and reduce dependence on one tool interpretation",
+        "Because two screenshots automatically establish attribution",
+        "Because corroboration removes all uncertainty"
+      ],
+      "answer": 0,
+      "explanation": "Independent observations can strengthen or challenge a hypothesis while preserving the limits of each evidence source."
+    }
+  },
+  "G01": {
+    "concept": "Risk connects an unwanted outcome to its likelihood, impact, and uncertainty. Security decisions also involve cost, usability, dependencies, and opportunity. A qualitative matrix can structure discussion, but its categories are judgments, not measurements automatically comparable across organisations. Define the asset, scenario, time horizon, and decision before assigning labels.",
+    "mechanism": "Governance establishes who owns decisions, policies, exceptions, and review. Controls should have an owner and evidence of operation. Compliance can impose useful requirements, but meeting a checklist does not prove every important threat is controlled. Prioritise changes by supported risk reduction and operational feasibility rather than the number of findings alone.",
+    "example": "Compare two proposals for a small service: stronger account recovery and a rarely needed perimeter feature. State the incidents each might prevent, affected assets, implementation cost, and uncertainty. Recommend an order with an explicit rationale. Define how you would know the chosen control continues working after deployment.",
+    "pitfall": "Multiplying ordinal labels such as low=1 and high=3 does not magically create a precise monetary risk estimate.",
+    "check": {
+      "question": "What makes a risk recommendation reviewable?",
+      "choices": [
+        "An explicit scenario, assumptions, expected benefit, cost, and uncertainty",
+        "A severity label without an explanation",
+        "A promise that all residual risk disappears"
+      ],
+      "answer": 0,
+      "explanation": "Decision-makers need the reasoning and limits behind a priority, not only a numerical or coloured label."
+    }
+  },
+  "G02": {
+    "concept": "Human factors examines how real people interact with systems under constraints. Confusing recovery flows, excessive warnings, and impossible policies can create predictable workarounds. A useful control supports the user's task while resisting the relevant abuse. Evaluate behaviour through observable tasks rather than blaming users for not following an unusable design.",
+    "mechanism": "Privacy considers purpose, data minimisation, access, retention, and the effects of collection or inference. Security protects information under a threat model; privacy also asks whether collecting or using it is appropriate. Rights and regulatory obligations vary by place and context, so this lesson teaches analysis and source reading rather than offering a universal legal checklist.",
+    "example": "Review a hypothetical learning hub's data flow. List what progress data is needed, what can stay on the device, and what account syncing would collect. Draft a plain-language explanation of storage, deletion, and backup. Ask another learner to find their progress and explain who can access it, recording points of confusion.",
+    "pitfall": "A long consent notice does not by itself create understandable choices or justify collecting unnecessary data.",
+    "check": {
+      "question": "Which design follows data minimisation?",
+      "choices": [
+        "Collect everything because storage is inexpensive",
+        "Collect only the information needed for a defined purpose and limit retention",
+        "Keep personal records forever in case they become useful"
+      ],
+      "answer": 1,
+      "explanation": "Minimisation connects collection and retention to an explicit need, reducing unnecessary exposure and secondary use."
+    }
+  },
+  "A01": {
+    "concept": "Distributed systems coordinate components that can fail independently. A timeout means the caller does not know whether the remote operation completed; it does not necessarily mean nothing happened. Networks can delay, duplicate, reorder, or lose messages, and a process can stop between performing an action and reporting its result.",
+    "mechanism": "Retries therefore need explicit semantics. Idempotency associates repeated attempts with one intended logical operation, usually through scoped identifiers and durable state. State machines, ownership, and invariants help distinguish safe repetition from double effects. Consistency guarantees describe what observations are allowed, not a general promise that the system is always correct or secure.",
+    "example": "Model a payment-like transfer using only synthetic balances. The server commits the debit, but the response is lost. The client retries. Show how a naive implementation debits twice. Add a scoped idempotency key and stored result, then consider a crash before and after each write. State which updates must share an atomic boundary.",
+    "pitfall": "A timeout is uncertainty, not proof of failure. Treating it as a clean rollback can create duplicate actions.",
+    "check": {
+      "question": "After a request times out, what can the client safely conclude about server completion?",
+      "choices": [
+        "It is uncertain without additional protocol evidence",
+        "The operation definitely never ran",
+        "The operation definitely ran exactly once"
+      ],
+      "answer": 0,
+      "explanation": "The response may have been lost after completion, or the operation may not have completed. The protocol must resolve the uncertainty."
+    }
+  },
+  "A02": {
+    "concept": "A cryptographic security definition specifies a game: what the adversary sees, what it may request, what winning means, and which resources are bounded. A claim such as 'secure encryption' is incomplete without those details. Indistinguishability captures whether an adversary can tell selected encrypted messages apart beyond the permitted advantage.",
+    "mechanism": "A reduction relates breaking one construction to solving another assumed-hard problem. Read its quantifiers and losses: which adversary becomes which solver, with what probability and resource cost? A proof can be mathematically valid while its assumptions fail in an implementation through poor randomness, side channels, wrong parameters, or protocol misuse.",
+    "example": "For a course encryption game, write challenger and adversary steps in plain language. Identify the hidden bit, allowed queries, winning condition, and baseline guessing probability. Change one assumption, such as allowing a forbidden decryption query, and explain why the definition would collapse or need revision. Keep toy arithmetic separate from production implementation.",
+    "pitfall": "A proof for a primitive under one attack model does not automatically prove an entire deployed system secure.",
+    "check": {
+      "question": "What must a meaningful cryptographic security claim specify?",
+      "choices": [
+        "Only the ciphertext's apparent randomness",
+        "The adversary model, winning condition, assumptions, and resource bounds",
+        "Only the key's filename"
+      ],
+      "answer": 1,
+      "explanation": "Security is defined relative to a game and assumptions. Appearance and naming do not establish the claim."
+    }
+  },
+  "A03": {
+    "concept": "Fuzzing generates or mutates inputs to discover failures. Coverage-guided fuzzing uses execution feedback to explore code paths. Static analysis reasons about code without running each concrete input. Symbolic execution represents inputs symbolically and explores constraints along paths. These techniques trade precision, scale, and assumptions differently.",
+    "mechanism": "A finding needs triage: minimise the case, identify the violated property, determine reachability, and repair the cause. A tool's failure to find a bug is not proof of absence. Path explosion, environment models, uninstrumented code, and imperfect specifications can limit analysis. Track tool version, build flags, corpus, time budget, and the metric used to compare runs.",
+    "example": "Use a tiny local parser with a known boundary defect. Run the course's non-model fuzzing exercise in the isolated lab, minimise a failing input, and add a regression test. Compare the discovered path with a static warning or symbolic condition. Explain which program behaviours each method did not examine.",
+    "pitfall": "High code coverage is an exploration metric, not proof that all important states or semantic properties were checked.",
+    "check": {
+      "question": "Why minimise a fuzzing failure?",
+      "choices": [
+        "To guarantee the defect affects every production system",
+        "To avoid understanding the parser's requirements",
+        "To isolate a small reproducible input that clarifies the defect"
+      ],
+      "answer": 2,
+      "explanation": "A smaller reproducer helps establish causality, repair the bug, and maintain a focused regression test."
+    }
+  },
+  "A04": {
+    "concept": "Hardware provides the mechanisms on which software isolation depends: privilege levels, memory protection, caches, timers, and device interfaces. A cache stores recently used data or instructions to reduce access latency. Cache hits and misses have different timings, so shared microarchitectural state can reveal information even when direct reads are forbidden.",
+    "mechanism": "A side channel infers secrets from effects such as timing, power, or resource contention. A fault attack changes computation and studies the resulting behaviour. The attacker model must state proximity, shared resources, measurements, and control. Constant-time programming addresses selected timing dependencies, but system noise, compiler transformations, and other channels require careful analysis.",
+    "example": "Use a harmless simulation of a two-level memory hierarchy. Record the differing costs of a hit and a miss, then show how a secret-dependent array choice can influence observed time. Explain what a real experiment would need to control and why the toy result alone does not demonstrate an attack on actual hardware.",
+    "pitfall": "The absence of a direct memory read does not rule out information leakage through observable side effects.",
+    "check": {
+      "question": "Why can secret-dependent memory access leak information?",
+      "choices": [
+        "It may change shared cache state and observable timing",
+        "Caches always publish plaintext keys in log files",
+        "Virtual memory guarantees identical execution time"
+      ],
+      "answer": 0,
+      "explanation": "A secret can influence an observable resource pattern without being directly readable by the observer."
+    }
+  },
+  "A05": {
+    "concept": "Formal specification makes system behaviour explicit using states, transitions, and properties. An invariant is a safety claim about reachable states; a liveness property concerns eventual progress under stated conditions. A model checker explores a defined model to find counterexamples or establish properties within its supported scope.",
+    "mechanism": "TLA+ describes behaviours mathematically, while a tool such as TLC checks finite instances under configured bounds and assumptions. The model must represent the failure and concurrency conditions relevant to the claim. A correct model is not automatically a correct implementation: explain the mapping from real code to modeled states and which details were abstracted away.",
+    "example": "Specify a two-client single-use token model. Include read, consume, and retry transitions, then ask the checker whether consumption can occur twice. Inspect the counterexample trace from the naive model. Repair the transition to preserve the invariant and rerun the bounded model. Record constants and assumptions so another learner can reproduce the result.",
+    "pitfall": "A successful bounded check establishes a result for the checked model and configuration, not all possible deployed environments.",
+    "check": {
+      "question": "What is the most useful result of an invariant counterexample?",
+      "choices": [
+        "A guarantee that the programming language is unusable",
+        "A trace of modeled transitions that reaches a violating state",
+        "A proof that every implementation has the same defect"
+      ],
+      "answer": 1,
+      "explanation": "The trace explains how the modeled behaviour breaks the property and guides revision of the model or design."
+    }
+  },
+  "A06": {
+    "concept": "Mobile security spans hardware-backed trust, operating-system isolation, app permissions, interprocess communication, update distribution, and backend services. A permission grants a particular capability under platform rules, not blanket trust in an app. Sensitive data can also escape through logs, backups, notifications, screenshots, or an overly broad backend response.",
+    "mechanism": "Map the platform's actual storage and trust mechanisms using current official guidance. Protect tokens, validate server-side authorisation, minimise collected data, and consider lost devices and account recovery. This is an architectural survey: implementing secure Android or iOS applications additionally requires platform programming, lifecycle, build, and release skills beyond this core path.",
+    "example": "Threat-model a hypothetical mobile notes app. Draw local storage, OS key storage, authentication provider, API, backups, and update channel. Explain what remains protected if the phone is locked, if the user unlocks it for an attacker, or if the account is compromised. Avoid claiming one storage API solves all three scenarios.",
+    "pitfall": "Obfuscation may raise reverse-engineering effort but does not make a secret embedded in a distributed app reliably private.",
+    "check": {
+      "question": "Where should a mobile API enforce object ownership?",
+      "choices": ["Only in the app's hidden buttons", "Only in the app-store description", "On the backend, independent of the app's interface"],
+      "answer": 2,
+      "explanation": "Clients can be modified or replaced. Server-side permissions must protect the data regardless of the client."
+    }
+  },
+  "A07": {
+    "concept": "Cyber-physical systems connect computation to physical processes. A control action can affect equipment, people, or the environment, so availability, timing, integrity, and safe failure behaviour matter together. Telecom networks add shared infrastructure and protocol dependencies. A familiar IT containment action may have different consequences when an essential physical process depends on it.",
+    "mechanism": "Begin with system purpose, operational constraints, hazard analysis, and responsible operators. Segmentation, monitored access, tested recovery, and fail-safe design must fit the process. This module is a survey rather than training in industrial control engineering, radio-frequency analysis, or safety certification; those specialisations need their own mathematics, equipment, and supervision.",
+    "example": "Model a simulated water-level controller with sensor, controller, actuator, and operator. Define a safe range and describe the effect of stale measurements, delayed commands, and lost connectivity. Propose a monitoring and recovery plan in the simulation. Explain why scanning or rebooting real operational equipment without an agreed procedure is outside the exercise.",
+    "pitfall": "Protecting confidentiality alone may leave severe physical safety and service-continuity risks unaddressed.",
+    "check": {
+      "question": "Why can ordinary IT incident actions require extra care in operational technology?",
+      "choices": [
+        "They may disrupt physical processes with timing and safety constraints",
+        "Operational equipment never uses networks",
+        "Physical systems have no integrity requirements"
+      ],
+      "answer": 0,
+      "explanation": "Containment and recovery must account for the process's hazards and operational requirements."
+    }
+  },
+  "R01": {
+    "concept": "A research paper makes a bounded claim supported by an argument, method, or experiment. Read first for the problem, contribution, threat model, assumptions, and comparison baseline. Then inspect the mechanism and evidence. Distinguish the authors' results from your interpretation and from later claims that the paper did not test.",
+    "mechanism": "Critique constructively: ask whether the metric measures the stated goal, whether the baseline is fair, whether datasets represent the intended population, and whether limitations change applicability. Reconstruct one result before summarising the whole paper. The linked KLEE paper provides a concrete case connecting symbolic execution, test generation, and experimental evidence.",
+    "example": "Create a one-page claim-evidence table for the assigned paper. For each major claim, identify the supporting figure, theorem, or experiment and one limitation. Trace one reported result back to its setup and denominator. Explain the method to your partner without reading the abstract aloud, then answer their strongest counterexample.",
+    "pitfall": "Peer review and a respected venue do not eliminate the need to examine assumptions, measurements, and reproducibility.",
+    "check": {
+      "question": "Which question best tests a paper's empirical claim?",
+      "choices": [
+        "Does the title contain a fashionable term?",
+        "Can the abstract be repeated from memory?",
+        "Does the reported experiment and metric actually support the stated conclusion?"
+      ],
+      "answer": 2,
+      "explanation": "A research critique connects a precise claim to the method and evidence that justify it, including limitations."
+    }
+  },
+  "R02": {
+    "concept": "Reproducible research records enough detail to repeat an analysis under stated conditions. An artifact includes code, data or acquisition instructions, dependencies, configuration, and commands. Repetition on the same setup and independent replication are related but different forms of evidence. Neither guarantees that the original research question was meaningful.",
+    "mechanism": "Predefine the hypothesis, baseline, metrics, sample selection, and analysis plan. Preserve raw outputs and report unsuccessful cases rather than selecting only favourable results. Document randomness and uncertainty, and consider privacy, permissions, disclosure, and harm before collecting data. New public-system testing or paid computation requires an explicit scoped research plan beyond this lesson.",
+    "example": "Using only an offline synthetic dataset, package a small detector comparison. Give your partner a fresh setup procedure and ask them to reproduce the table from raw data. Record every undocumented step they needed. Revise the artifact, explain differences between runs, and state what the synthetic population cannot establish about production performance.",
+    "pitfall": "Reproducible numbers can still answer the wrong question or reflect a biased dataset. Method and relevance need separate scrutiny.",
+    "check": {
+      "question": "What should another learner receive to reproduce an analysis?",
+      "choices": [
+        "Raw or lawfully accessible data, code, environment details, configuration, and exact steps",
+        "Only the final chart",
+        "Only a statement that the experiment worked"
+      ],
+      "answer": 0,
+      "explanation": "The artifact must expose the path from inputs to results, including the environment and assumptions."
+    }
+  },
+  "R03": {
+    "concept": "The capstone integrates design, implementation, assessment, defence, and explanation. Select a narrow system you can actually understand, such as a private notes service in an isolated lab. Define assets, actors, trust boundaries, invariants, and success criteria before building. Use synthetic identities and data and keep all testing within the agreed scope.",
+    "mechanism": "Produce evidence across the lifecycle: reproducible setup, secure defaults, positive and negative tests, a scoped assessment, useful logs, a detection hypothesis, and a recovery exercise. Separate demonstrated results from untested claims. Specialisation adds depth through advanced coursework, paper reading, and a research question; this broad curriculum alone is not a degree or proof of universal mastery.",
+    "example": "Ask your partner to act as an independent reviewer. They should set up the project from your instructions, attempt the documented assessment, explain one trust boundary, and challenge one design assumption. Respond with evidence or an explicit limitation. Finish with a defended report and a next-study plan naming the prerequisites for your chosen specialisation.",
+    "pitfall": "A completed checklist is not the same as an independently defensible system. The explanation and reproducible evidence are part of the work.",
+    "check": {
+      "question": "What is the strongest capstone outcome?",
+      "choices": [
+        "A screenshot showing every video marked watched",
+        "A scoped system and report another learner can reproduce, test, and critically challenge",
+        "A claim of expertise across all cybersecurity fields"
+      ],
+      "answer": 1,
+      "explanation": "Independent reproduction and defence test understanding, implementation, and the limits of the conclusions."
+    }
+  }
+}
