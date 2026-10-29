@@ -177,7 +177,7 @@ function resources(m) {
 function lesson(id, tab) {
   const m = byId[id],
     l = lessons[id];
-  if (!m || !l) return '<div class="empty"><h1>Lesson not found</h1><a href="#path">Return to the curriculum</a></div>';
+  if (!ids.has(id) || !l) return '<div class="empty"><h1>Lesson not found</h1><a href="#path">Return to the curriculum</a></div>';
   const tabs = { learn: "Learn", resources: "Watch & read", practice: "Practise", assess: "Assess", notes: "My notes" };
   if (!tabs[tab]) tab = "learn";
   const r = store.record(active, id).values,
@@ -492,6 +492,10 @@ function openSettings() {
   $("#settings-status").textContent = "";
   $("#settings-dialog").showModal();
 }
+$(".skip").addEventListener("click", (e) => {
+  e.preventDefault();
+  $("#main").focus();
+});
 $("#settings-open").textContent = "Account & backups";
 $("#settings-open").addEventListener("click", openSettings);
 $("#account-open").addEventListener("click", openSettings);
