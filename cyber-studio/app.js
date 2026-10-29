@@ -485,7 +485,11 @@ function refreshIfIdle() {
 }
 async function init() {
   try {
-    const responses = await Promise.all([fetch("curriculum.json"), fetch("lessons.json"), fetch("credentials.json")]);
+    const responses = await Promise.all([
+      fetch("curriculum.json?v=20261029-3"),
+      fetch("lessons.json?v=20261029-3"),
+      fetch("credentials.json?v=20261029-3"),
+    ]);
     if (responses.some((r) => !r.ok)) throw Error("The curriculum files could not be loaded.");
     const [curriculum, content, certificateData] = await Promise.all(responses.map((r) => r.json()));
     modules = curriculum.modules;
