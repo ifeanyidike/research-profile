@@ -1,0 +1,142 @@
+O01
+A computer stores information in files, groups files in folders, and runs programs that interpret those files. A plain-text editor saves the characters you type; a word processor also saves formatting. A filename extension is a convention that helps software choose an interpreter. Renaming notes.txt to notes.py does not turn a paragraph into a working Python program.
+A local path describes a location on a filesystem. A URL identifies a resource using a scheme such as https, a host, and a path. Downloading a resource creates a local copy; editing that copy normally does not change the remote resource. Keep your learning work in one folder so that experiments and evidence can be found again.
+Create cyber-learning with notes, code, and evidence subfolders. Save a sentence as notes/first-lesson.txt. Close the editor, find the file using your file manager, and reopen it. Download a course handout into evidence. Record its original URL beside the local filename. You now have both the artifact and its provenance.
+An icon or filename alone does not establish what a file contains. Check the full name and open unfamiliar files with an appropriate viewer.
+Which action changes the remote course handout?
+Editing it through a service where you have permission to update the original
+Renaming your downloaded copy
+Moving your downloaded copy into another folder
+A download is a separate copy. Local file operations do not modify the server's original.
+
+O02
+Security means preserving properties that matter to someone. Confidentiality limits disclosure, integrity limits unauthorised change, and availability keeps a service usable when needed. These goals can conflict: disconnecting a server may reduce disclosure while preventing legitimate access. Begin with the asset, its owner, and the unwanted outcome rather than a favourite security tool.
+Permission defines where practical testing belongs. A training lab grants a limited scope; a public website being reachable does not grant permission to test it. Write down the systems, activities, accounts, and time window allowed by your own lab or an explicit authorisation. Stop when the exercise crosses that boundary. Use synthetic data, not real credentials or personal records.
+Model a family photo archive. Confidentiality means only selected people can view photos. Integrity means files cannot be silently replaced. Availability means a failed laptop does not destroy the only copy. Create a table with one failure and one control for each property, then identify which failures remain possible.
+A discovered weakness does not expand your permission. Keep evidence minimal and follow the lab or owner's reporting process.
+A lab permits testing one provided virtual machine. What is in scope?
+That virtual machine under the lab's stated rules
+Other machines on the same network
+The provider's production login service
+Scope attaches to the explicitly authorised systems and activities, not to everything technically reachable.
+
+O03
+An account links a person or service to permissions. A password is one way to prove control of that account; a second factor adds a different proof. A password manager helps create and store distinct passwords, reducing the damage when one service leaks a credential. Recovery methods also grant access and deserve the same attention as the normal login.
+Updates reduce exposure to known defects. Device locking reduces casual access. Backups recover information after loss, but only if the copies survive the same failure and can be restored. Synchronisation alone can replicate an accidental deletion. Privacy starts by asking what information is collected, who can access it, and how long it is retained.
+Choose a harmless document. Back it up to a separate location, modify the working copy, and restore the earlier version into a new folder. Compare contents. Next draw the recovery path for a test account: what happens if the primary device is lost? Store recovery codes securely rather than in a public notebook.
+A backup job reporting success is not proof of recovery. A restore test supplies stronger evidence.
+Which observation best supports a backup's usefulness?
+A separate copy was restored and its contents checked
+The backup application displayed a green icon
+A synchronisation folder exists on the same disk
+A verified restore tests the recovery outcome; a status icon tests only part of the process.
+
+M01
+Binary and hexadecimal are ways to write numbers, not encryption. In decimal, 507 means 5×100 + 0×10 + 7. Binary uses powers of two, so 1011 means 8 + 2 + 1 = 11. Hexadecimal uses sixteen symbols, 0–9 and A–F; one hex digit represents four bits. A byte has eight bits and can represent 256 distinct patterns.
+The same bits can represent an integer, text, an instruction, or a colour depending on the interpretation. An encoding defines that interpretation. Units matter too: bits and bytes differ by a factor of eight. Logarithms reverse exponentiation; log2(8)=3 tells us that three binary choices select among eight outcomes. Algebra lets us rearrange performance and risk equations without guessing.
+Convert decimal 13 to binary 1101 and hex D. Write a byte as 00001101 and observe that its value is unchanged by leading zeros. Then compare 10 megabits per second with 10 megabytes per second using the stated decimal units. Explain every conversion, including units, in your notebook.
+Hexadecimal-looking text is not evidence that information is protected. Encoding is reversible without a secret.
+How many distinct patterns fit in four bits?
+16
+4
+8
+Each independent bit doubles the possibilities: 2×2×2×2 = 16.
+
+P01
+A variable gives a name to a value. A function groups instructions behind a name, accepts inputs called parameters, and may return a result. Calling a function executes its body; defining one does not. Python values have types, so the string '12' and the integer 12 behave differently even when they print similarly.
+Follow data through a program in small steps. Input enters as text, conversion produces a number, a calculation produces another value, and output displays it. Keep calculation separate from interaction so the calculation can be tested with several inputs. A return value belongs to the caller; printing sends text to an output stream and is not a substitute for returning data.
+Define add_tax(price, rate) to return price * (1 + rate). Call it with 100 and 0.05 and record the returned 105. Then call it with 0 and with a second rate. Write down the value and type of every argument. Decide explicitly how invalid input will be handled instead of letting accidental conversions define the behaviour.
+A variable name does not enforce a type or a unit. Use meaningful names and validate values at boundaries.
+A function prints 5 but has no return statement. What does its caller receive in Python?
+None
+The integer 5
+The string '5'
+Printing and returning are different actions. A Python function without an explicit return value returns None.
+
+P02
+A condition chooses a branch; a loop repeats a block. An if/elif/else chain selects the first true branch. A for loop visits items in an iterable. A while loop continues while its condition remains true, so its body must make progress toward an exit when termination is intended. Indentation determines which instructions belong together.
+Trace a program using a table with one row per iteration. Record the current input, variable values, condition result, and output. This makes off-by-one errors visible. In Python, range(3) produces 0, 1, 2: the upper bound is excluded. An algorithm is the sequence of steps; code is one expression of those steps in a particular language.
+Start total at zero and loop over [2, 4, 6], adding each item. Your trace should show totals 2, 6, and 12. Next count values greater than 3, keeping the count separate from the sum. Test an empty list and a list containing only 3 to make the boundary rule explicit.
+A loop that works on one example may still fail on empty input or at a boundary. Trace those cases deliberately.
+How many times does a Python for loop over range(3) execute its body?
+Three
+Two
+Four
+The values are 0, 1, and 2. Excluding 3 does not exclude 0.
+
+P03
+Choose a collection according to the question it must answer. A list preserves a sequence; a dictionary maps keys to values; a set represents distinct members. Modifying a collection can affect every reference to that same object. Copying a variable name does not necessarily copy the underlying data.
+Data modelling means deciding what a record means before processing it. A login event might have an account, timestamp, and outcome. Missing fields and invalid values are different problems from an empty event list. Exceptions signal exceptional failures; catch the specific failures you can handle, and preserve useful context rather than silently treating every error as success.
+Represent three synthetic login events as dictionaries in a list. Count failures per account with another dictionary, and collect distinct accounts in a set. Add a malformed record. Decide whether to reject it or report it separately. Check that your answer does not change merely because the events arrive in a different order.
+A broad exception handler that returns an empty result can hide corruption and make failed analysis look like a clean system.
+You need one count per account name. Which collection directly models this?
+A dictionary mapping account names to counts
+A string containing all account names
+A single Boolean
+The account name is a key and the count is its associated value. This is a dictionary's natural relationship.
+
+P04
+A module packages related Python definitions for reuse. Files persist data after the program exits. CSV represents rows and columns; JSON represents nested values such as objects, arrays, strings, and numbers. A parser turns encoded text into program values. Parsing successfully does not establish that the resulting values are valid for your application.
+Separate reading, validation, analysis, and writing. Use a context manager to close files reliably, specify the text encoding, and handle malformed data explicitly. Timestamps need a timezone or an unambiguous convention. A local clock reading such as 01:30 can be ambiguous during a clock change; an offset-aware timestamp is safer for joining evidence from different systems.
+Read a small JSON array of synthetic events. Require account, outcome, and an offset-aware time. Reject an event missing its outcome and report the count of rejected records. Write a CSV summary of valid events. Reopen your output to confirm headers, row counts, and non-ASCII account names survived the round trip.
+A valid JSON document can still contain impossible values, unexpected types, or missing required fields.
+What should follow successful JSON parsing at an application boundary?
+Validation of the expected structure and value constraints
+Immediate trust in every value
+Removal of all error handling
+A parser verifies the format's grammar. Application validation checks whether the data makes sense for its intended use.
+
+P05
+A test states an expected behaviour and checks it repeatedly. Start with ordinary inputs, then boundaries, invalid values, and previously failing cases. A useful assertion would fail if an important behaviour broke. Debugging asks why observed behaviour differs from expected behaviour; reduce the case, inspect values, and test one hypothesis at a time.
+Regular expressions match patterns in text. Anchoring, character classes, repetition, and escaping control what matches. A pattern search is not equivalent to validating an entire field. Complicated patterns can also behave poorly on hostile input, so prefer simple bounded formats or dedicated parsers when the data has an established grammar.
+Write a function that accepts only a synthetic account label of 3–12 lowercase ASCII letters. Test a valid label, two letters, thirteen letters, digits, and a trailing newline. Use full-string matching. Deliberately remove the length limit and confirm that a test fails; this checks that the tests actually protect the requirement.
+Passing tests establish behaviour only for the cases and properties tested. They are evidence, not a universal proof.
+A validator must check the entire input. Which approach fits?
+A full-string match against the allowed format
+A search for any matching substring
+Accepting any input that contains one letter
+A substring match can ignore unwanted prefixes or suffixes. Full-string matching checks the whole field.
+
+L01
+The shell reads a command line and starts programs. The working directory is the location from which relative paths are interpreted. An absolute path begins at the filesystem root; a relative path begins at the current directory. The shell and the file manager operate on the same files, even though their interfaces differ.
+Learn pwd, ls, cd, mkdir, cp, mv, and the relevant help pages before combining destructive operations. Spaces and special characters have shell meanings, so quote paths that must remain a single argument. A command's output and exit status answer different questions: output carries data, while a conventional zero exit status indicates success.
+In a disposable practice folder, create a directory named case notes. Enter it using a quoted path. Save a text file, copy it, and compare the two copies. Use pwd before each operation and explain how the same relative filename would resolve from a different working directory. Keep removal exercises inside this disposable folder.
+A command copied from a tutorial may assume a different working directory. Confirm the target before changing files.
+From /tmp/lab, where does the relative path notes/a.txt resolve?
+/tmp/lab/notes/a.txt
+/notes/a.txt
+/tmp/notes/a.txt
+A relative path is interpreted from the current working directory, here /tmp/lab.
+
+L02
+A process is a running program with an identity, environment, and open resources. Unix permissions describe access for an owner, group, and others. Directory execute permission means traversal, rather than running the directory. Permission checks depend on identities and path components, not just the final file's mode.
+Pipes connect one program's standard output to another's standard input. Standard error remains a separate stream unless redirected. Environment variables pass configuration to child processes and can influence program behaviour. A shell script turns a sequence into a repeatable procedure; quote variable expansions, check failures, and avoid interpreting untrusted data as shell syntax.
+Create a harmless text file with owner-only permissions and inspect its mode. Build a pipeline that selects synthetic failed-login lines and counts them. Send an intentional error to a separate file and compare it with standard output. Write a script accepting one quoted filename; verify it works when the path contains spaces.
+Changing a file to executable does not grant the permissions needed to read its inputs or traverse its parent directories.
+What does a pipe normally connect?
+One process's standard output to another's standard input
+Every file on disk to the next process
+Only the first process's standard error
+The ordinary pipe operator transfers standard output. Standard error needs a separate redirection if it should join that stream.
+
+P06
+An object combines state with operations on that state. A class defines a pattern for constructing such objects. Use this when several values and behaviours belong together, rather than wrapping every function in a class. Understand the difference between independent instances and shared state before using classes to model security events.
+A virtual environment separates a Python project's installed packages from other projects. It does not isolate the operating system like a virtual machine. Record the Python version, dependency constraints, setup instructions, and a minimal test. Reproducibility requires more than installing whatever versions happen to be newest today.
+Create an EventCounter class whose instances each maintain their own count. Instantiate two counters, update one, and assert that the other stays at zero. Run the test inside a fresh virtual environment. Document installation and execution so another learner can repeat the result without borrowing your existing environment.
+A virtual environment is dependency isolation, not a safe boundary for executing malicious programs.
+Two independent counters unexpectedly share a mutable list. What should you inspect first?
+Whether the list was defined as shared class state
+The monitor's refresh rate
+Whether the source file has comments
+A mutable class attribute can be shared across instances. Per-instance state should be initialised for each object.
+
+L03
+Git records snapshots of tracked files in commits. The working tree contains current files; the staging area selects what the next commit will contain. A commit message explains the change, while the diff shows the exact content. Version history supports investigation because you can compare states and identify when behaviour changed.
+A repository should help another person reproduce your work. Include setup instructions, dependency information, test commands, and evidence references. Ignore generated caches and local secrets before adding files. Deleting a secret in a later commit does not erase earlier copies from history; credentials that have been exposed need replacement through the issuing system.
+Create a repository for a tiny parser. Commit the working version, change one validation rule, and inspect the diff before staging that file. Make a second commit with a clear explanation. Use git log and git show to recover the reasoning and content of the first version without guessing from today's files.
+A repository backup and a progress backup solve different problems. Your browser notebook is not automatically committed with your code.
+What determines which current changes enter the next Git commit?
+The staging area
+All files currently open in the editor
+The names in the last commit message
+Git commits the staged snapshot. Unstaged working-tree edits remain outside that commit.

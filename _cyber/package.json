@@ -1,0 +1,9 @@
+{
+  "name": "cyber-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check ../cyber-studio/model.js && node --check ../cyber-studio/app.js && node --check ../cyber-studio/account.js"
+  }
+}

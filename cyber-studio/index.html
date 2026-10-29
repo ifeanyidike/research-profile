@@ -1,0 +1,104 @@
+---
+layout: null
+title: cybersecurity
+nav: true
+nav_order: 7
+permalink: /cyber-studio/
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#173e35" />
+    <meta
+      name="description"
+      content="A guided cybersecurity education with clear lessons, university videos, hands-on practice and independent assessments. From computing foundations to advanced security engineering."
+    />
+    <title>Cyber Studio — Learn how security works</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=20261029-1" />
+    <script defer src="../algo-studio/runtime/supabase-2.118.0.js"></script>
+    <script type="module" src="app.js?v=20261029-1"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home"
+        ><span class="brand-mark" aria-hidden="true">c<span>↗</span></span
+        ><span>cyber<span class="brand-light">studio</span><small>UNDERSTAND. PRACTISE. DEFEND.</small></span></a
+      >
+      <p class="nav-label">YOUR LEARNING SPACE</p>
+      <nav aria-label="Main navigation">
+        <a href="#home" data-nav="home"><span aria-hidden="true">⌂</span>My learning</a>
+        <a href="#path" data-nav="path"><span aria-hidden="true">≋</span>Curriculum</a>
+        <a href="#review" data-nav="review"><span aria-hidden="true">↺</span>Recall & review</a>
+        <a href="#notebook" data-nav="notebook"><span aria-hidden="true">▤</span>My notebook</a>
+        <a href="#method" data-nav="method"><span aria-hidden="true">◇</span>How to learn</a>
+      </nav>
+      <div class="sidebar-note">
+        <span class="eyebrow">A LITTLE CLEARER, EVERY DAY</span>
+        <p>Learn the system.<br />Understand the risk.<br />Build the defence.</p>
+        <a href="../algo-studio/">Visit Algo Studio ↗</a>
+      </div>
+      <div class="sidebar-bottom">
+        <label for="learner">LEARNING AS</label
+        ><select id="learner" aria-label="Active learner"></select
+        ><button class="text-button" id="settings-open">Account & backups</button><a class="site-link" href="../">← ifeanyidike.com</a>
+      </div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <div class="breadcrumb">Cyber Studio <span>/</span> <strong id="page-name">My learning</strong></div>
+        <div class="top-actions">
+          <button class="button secondary" id="account-open">Sign in</button>
+          <button id="search-open" class="search-button">Search lessons <kbd>⌘ K</kbd></button
+          ><button class="icon-button" id="theme" aria-label="Switch colour theme">◐</button>
+        </div>
+      </header>
+      <div id="save-status" role="status" class="save-status">Progress is saved on this device.</div>
+      <main id="main" tabindex="-1"><div class="loading">Opening your learning space…</div></main>
+      <footer><span>Built for understanding, one idea at a time.</span><a href="#method">Learning method & sources</a></footer>
+    </div>
+    <dialog id="search-dialog" aria-labelledby="search-heading">
+      <div class="dialog-heading">
+        <h2 id="search-heading">Find an idea</h2>
+        <button class="icon-button" data-close="search-dialog" aria-label="Close search">×</button>
+      </div>
+      <label class="sr-only" for="search">Search topics and skills</label
+      ><input id="search" type="search" placeholder="Try Linux, passwords, HTTP, or cryptography…" autocomplete="off" />
+      <div id="search-results"></div>
+    </dialog>
+    <dialog id="settings-dialog" aria-labelledby="settings-heading">
+      <div class="dialog-heading">
+        <h2 id="settings-heading">Your learning space</h2>
+        <button class="icon-button" data-close="settings-dialog" aria-label="Close settings">×</button>
+      </div>
+      <div id="account-area"></div>
+      <p id="account-status" role="status"></p>
+      <hr />
+      <h3>Your display name</h3>
+      <form id="names-form">
+        <div id="name-fields"></div>
+        <button class="button" type="submit">Save names</button>
+      </form>
+      <hr />
+      <h3>Take your progress with you</h3>
+      <p>Export the active learner’s backup regularly. You can import it on another device or restore it here.</p>
+      <div class="button-row">
+        <button class="button secondary" id="export">Export this learner</button
+        ><label class="button secondary" for="import-file">Choose a backup</label
+        ><input id="import-file" type="file" accept="application/json,.json" hidden />
+      </div>
+      <div id="import-preview" hidden></div>
+      <p class="fine-print">
+        Signed-in accounts sync cybersecurity progress separately from Algo Studio. Guest profiles stay on this browser. Clearing browser data removes
+        unsynced work. Export backups and use a separate browser profile on shared devices.
+      </p>
+      <p id="settings-status" role="status"></p>
+    </dialog>
+    <noscript><p>This learning workspace needs JavaScript. Please enable it to open the lessons and your notebook.</p></noscript>
+  </body>
+</html>

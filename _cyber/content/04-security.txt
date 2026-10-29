@@ -1,0 +1,263 @@
+S01
+Threat modelling starts with what the system does and what must remain true. Identify assets, actors, entry points, data flows, and trust boundaries. A threat is a possible unwanted event; a vulnerability is a weakness that can enable it; a control changes the likelihood or impact. State assumptions so another person can challenge them.
+Secure design principles help turn a diagram into decisions. Least privilege limits granted authority. Complete mediation checks each relevant access. Fail-safe defaults deny access unless allowed. Defence in depth uses controls with different failure modes. Every control has costs and limits, so connect it to an actual threat rather than collecting controls without a reason.
+Draw a private notes service with browser, server, database, and backup store. Mark where identity is established and where note ownership is checked. Consider a stolen session and an accidental public backup. Add one preventive and one recovery control for each, and explain the residual risk after those controls fail or succeed.
+A threat model is a revisable argument, not a guarantee. Update it when data flows, dependencies, or assumptions change.
+Which is the strongest starting point for a threat model?
+The system's assets, behaviour, actors, and trust boundaries
+A list of fashionable security tools
+A promise that the framework is secure by default
+Controls make sense in relation to what the system must protect and where untrusted influence enters.
+
+S02
+Encryption hides plaintext under a key. Symmetric encryption uses shared secret key material for encryption and decryption. Confidentiality alone does not guarantee that a message is authentic or unchanged. Authenticated encryption with associated data, or AEAD, combines confidentiality and integrity while allowing selected metadata to be authenticated without being encrypted.
+A nonce is a value supplied to an encryption operation whose uniqueness requirements depend on the algorithm. Reusing a nonce with the same key can be catastrophic for common AEAD schemes. Keys need a cryptographically secure random source, appropriate storage, and an established library API. Learn the construction's rules; do not invent your own mode or use predictable random generators for secrets.
+With the course's supported cryptography library, encrypt a harmless message and authenticate a record identifier as associated data. Decrypt successfully, then alter the ciphertext or identifier and confirm authentication fails. Record the nonce-generation rule and key lifetime. Treat any authentication failure as failure, not as permission to display partially decrypted content.
+Encryption is not a substitute for key management. An exposed key can erase the intended protection.
+What should happen when AEAD authentication fails?
+Reject the message without using unauthenticated plaintext
+Return the plaintext with a warning and continue
+Ignore the failure if the ciphertext looks readable
+AEAD's authenticity guarantee depends on rejecting failed verification before relying on the data.
+
+S03
+A cryptographic hash maps arbitrary-length input to a fixed-length digest without a secret key. Collision resistance concerns finding two inputs with the same digest; preimage resistance concerns recovering an input from a target digest. A MAC uses a secret key to authenticate a message. These tools answer different questions from encryption.
+Password storage must resist guessing after a database leak. A unique salt prevents identical passwords from sharing one precomputed result; an appropriate password-hashing function adds configurable computational or memory cost. A salt is not a secret key. Use a maintained password-hashing API and its verification operation rather than designing a fast custom hash loop.
+Hash two different harmless messages and compare digests. Then authenticate a message using a standard MAC API and verify that a changed message fails. Finally use the course's password-storage API to store and verify a synthetic password twice with different salts. Explain why unequal stored values can still verify the same password.
+A plain hash does not prove who created a message. Anyone able to change the message may also recompute its unkeyed digest.
+Why use a unique salt for password hashing?
+To prevent reuse of one precomputed guess result across many stored passwords
+To make a weak password impossible to guess
+To encrypt the password so it can always be recovered
+Salts separate stored computations. They do not add password entropy or turn hashing into reversible encryption.
+
+S04
+Public-key systems separate public information from private secret material. A signature lets a private-key holder sign data so others can verify it with a public key. Key exchange establishes shared key material. These are distinct operations; a signature does not normally conceal the message, and encryption alone does not identify its author.
+The hard question is often binding a public key to the intended identity. Certificates express such bindings under an issuer's signature and validation rules. A chain is useful only when the verifier trusts an appropriate root and checks relevant names, validity, constraints, and usage. Possessing any mathematically valid key is not enough to impersonate a named service.
+Generate a lab signing key with an established library. Sign a short statement and verify it. Change one byte and observe failure. Then compare the successful mathematical verification with a separate identity question: why should a recipient believe this public key belongs to you? Document the trusted channel used to share the fingerprint.
+A signature establishes a relationship to a key under assumptions. Its human identity meaning depends on trustworthy key distribution.
+What does successful signature verification directly establish?
+The message matches a signature produced with the corresponding private key, under the scheme's assumptions
+The message is confidential
+The signer is necessarily a trustworthy person
+Verification binds data to a key. Confidentiality and the real-world identity or trustworthiness of the signer require separate reasoning.
+
+S05
+TLS protects a channel between endpoints through negotiated cryptographic mechanisms. In a typical authenticated HTTPS connection, certificate validation helps the client authenticate the server, a handshake establishes traffic keys, and authenticated encryption protects records. Learn the modern protocol through current documentation while using older lectures for concepts whose historical context is stated.
+Check both the cryptography and its use. A correctly encrypted connection to the wrong host is still wrong. Certificate name checks, trust roots, and validation failures matter. TLS termination at a proxy means the proxy sees plaintext; another segment may need separate protection. Channel security does not prevent an authorised endpoint from mishandling received information.
+Draw browser, TLS-terminating proxy, and application server. Mark which segments are encrypted and where plaintext exists. Inspect a legitimate site's certificate using browser tools and identify the subject names, issuer, and validity period. Explain why bypassing a certificate warning removes an important part of the intended authentication argument.
+HTTPS does not establish that an application's business logic, dependencies, or content are safe.
+A proxy terminates TLS and forwards plain HTTP internally. Where is the original TLS protection boundary?
+Between the client and that proxy
+Automatically through every downstream service and database
+Only around the visible HTML, excluding requests
+TLS protects its actual connection endpoints. A downstream connection is a separate channel with separate guarantees.
+
+S06
+Authentication asks who or what is presenting a credential. Authorisation asks whether that actor may perform an action on a resource. A session carries the application's continuing recognition of an authenticated actor. Least privilege grants only the authority required for a task, for only as long as needed.
+Design access checks around actor, action, resource, and context. Deny by default, enforce checks on the server, and consider session expiry and revocation. Multifactor authentication improves the login boundary under its threat model but does not repair a missing ownership check. Service accounts also need identities, limited permissions, and lifecycle management.
+Define read, edit, and delete permissions for owners, invited readers, and administrators in a notes service. Turn the matrix into positive and negative tests. Include a signed-in user requesting another user's note and an expired session requesting an owned note. Explain which failure is authentication-related and which is authorisation-related.
+Being signed in is not a universal access permission. A valid identity must still be evaluated against each protected operation.
+A signed-in learner can edit another learner's private notes. Which control is missing?
+Object-level authorisation
+Text formatting
+A larger password field
+The identity may be valid, but the requested action on that particular object lacks permission.
+
+W01
+Developer tools reveal the browser's requests, responses, storage, and script execution. An intercepting proxy lets you inspect and modify authorised lab HTTP traffic. These views answer different questions: a browser may transform a request before sending it, while a proxy sees traffic at its position in the connection path.
+Begin with a baseline request that succeeds normally. Record the actor, target, method, headers, body, response, and visible state change. Change one variable at a time so that you can attribute the result. A local proxy's trusted certificate affects your browser's trust decisions; use a dedicated lab profile and follow the provider's installation and removal guidance.
+In a provided training lab, capture a harmless form submission. Repeat it unchanged, then alter one non-sensitive input and compare the response and server-side result. Label each request so the original remains available. Explain which observations are direct evidence and which explanations are hypotheses requiring another check.
+An unusual response is not automatically a vulnerability. Establish the violated security property and reproduce it within scope.
+Why preserve an unmodified baseline request?
+It provides a comparison for attributing the effects of later changes
+It guarantees every later response is exploitable
+It removes the need to identify the active account
+A baseline helps separate normal behaviour from effects caused by a controlled change.
+
+W02
+SQL injection occurs when untrusted input changes the structure of a database query. The core boundary is code versus data. Concatenating input into SQL can let a value become syntax. Parameterised queries send the query structure and bound values separately so the database treats the values as data.
+Validation and least-privileged database accounts are useful additional controls, but they do not replace correct query construction. Parameters normally bind values, not arbitrary identifiers such as table names. When an identifier must vary, choose it from a fixed application-controlled mapping. Protect every query path, including background jobs and less-used administrative features.
+Use the linked deliberately vulnerable lab, then repair a local query by replacing string concatenation with the database driver's binding API. Test a normal name, a quote-containing name, and the lab's authorised failure case. The corrected version should preserve legitimate punctuation while preventing input from altering query structure.
+Deleting quote characters is not a general SQL injection defence and may damage valid data.
+What is the primary purpose of SQL value parameters?
+Keep input values separate from query syntax
+Encrypt the database connection automatically
+Grant every query administrator permissions
+Binding preserves the code-data boundary. Connection encryption and account permissions are separate controls.
+
+W03
+Cross-site scripting, or XSS, lets attacker-controlled content execute as script in another user's browser context. Reflected XSS returns input in a response; stored XSS persists it for later viewers; DOM-based XSS involves unsafe browser-side data flows. The important path is from an untrusted source to a code-interpreting sink.
+Use safe text APIs when displaying text. Where markup is required, use a maintained sanitiser under an explicit policy. Output encoding must match its context: HTML text, an attribute, JavaScript, and a URL have different rules. Content Security Policy can reduce some consequences, but it does not justify leaving unsafe insertion paths in place.
+In a local preview component, compare assigning a harmless tag-like string through textContent with inserting it as HTML. Draw the source-to-sink path without using real users or public targets. Replace the unsafe sink, then test ordinary text, angle brackets, quotes, and non-ASCII input to ensure the repair preserves intended content.
+One generic escaping function is not appropriate for every output context.
+A comment is meant to display plain text. Which browser API best preserves that intention?
+textContent
+An unrestricted innerHTML assignment
+Executing the comment with eval
+textContent creates text rather than asking the browser to interpret the value as markup or code.
+
+W04
+Cross-site request forgery, or CSRF, abuses credentials that a browser automatically attaches to a request. Another site may cause the victim's browser to send a state-changing request even when it cannot read the response. The server must distinguish an intended authorised action from a request merely carrying an ambient session cookie.
+Use the framework's CSRF protection, appropriate cookie settings, and suitable origin checks according to the application architecture. State-changing actions should not be implemented as safe navigation GETs. A valid anti-CSRF token must be checked by the server and bound according to the framework's design. XSS can undermine many browser-side CSRF defences, so these topics remain connected.
+For the provided lab, list the credentials sent automatically, the action changed, and the missing intent check. In a local repair, enable the framework's CSRF middleware and test a legitimate form, a missing token, and an incorrect token. Confirm the failed requests do not change server state.
+Same-origin restrictions on reading responses do not necessarily stop a browser from sending cross-origin requests.
+Why can CSRF work even when the attacker cannot read the response?
+The harmful effect may occur when the authenticated request is processed
+Every request requires the attacker to see the response first
+The same-origin policy blocks all cross-origin form submissions
+The attacker may need only the side effect. Read restrictions and request-sending rules are different.
+
+W05
+The same-origin policy limits browser script access across origins. CORS is a server-declared mechanism that allows selected cross-origin reads. A preflight may ask permission before certain requests. These browser behaviours are not an authentication system and do not stop non-browser clients from sending requests directly.
+A CORS policy should reflect the actual trusted origins and credential requirements. Automatically reflecting any Origin header while permitting credentials can expose authenticated data in unsafe configurations. Separately consider whether a request can be sent, whether cookies are attached, whether a preflight is required, and whether script can read the response. Those are related but distinct decisions.
+Draw a frontend on one origin and an API on another. Define exactly which origin needs readable responses. Test the allowed origin and a disallowed origin using the course lab. Record network activity separately from script-visible results so that a blocked read is not mistaken for proof that no request reached the server.
+CORS does not replace API access checks and is not enforced by arbitrary server-side HTTP clients.
+Who primarily enforces CORS restrictions on response access?
+The browser
+Every command-line HTTP client by universal rule
+The database engine
+CORS is a browser security mechanism. The server still needs authentication and authorisation for direct callers.
+
+W06
+Path traversal occurs when an input-controlled path escapes an intended directory or resource boundary. Path syntax can include parent components, absolute forms, alternate encodings, or platform-specific separators. A string that looks like a child path before normalisation may resolve elsewhere. A filename is therefore a security-sensitive input, not merely a display label.
+Prefer mapping an application-controlled identifier to a stored object rather than accepting arbitrary filesystem paths. If paths are necessary, resolve them according to the platform and enforce containment carefully, including symbolic-link and race considerations. Apply least privilege to the process so that an input-validation defect has a smaller reach.
+Inside the provided lab, identify the intended base directory and the point where input becomes a filesystem lookup. For a local repair, replace user-supplied paths with opaque IDs mapped to known files. Test a legitimate ID, an unknown ID, and boundary cases. Verify both the response and which file was actually accessed.
+Removing one occurrence of '../' is not a reliable containment strategy. Normalisation and alternate representations can defeat ad hoc filtering.
+Which design most directly reduces arbitrary path interpretation?
+Mapping an opaque identifier to an application-controlled stored object
+Appending input to a base path without checking
+Removing only the first parent-directory component
+An identifier mapping narrows the operation to known resources instead of treating caller input as path syntax.
+
+W07
+Command injection occurs when input becomes syntax for an operating-system command interpreter. A shell interprets separators, expansions, quoting, and redirection. Constructing a command string mixes application intent with this grammar. The boundary is different from simply passing data to a program's argument list.
+Prefer a library API that performs the operation directly. When starting a process is necessary, use an argument-vector API without a shell and a fixed executable. This removes shell parsing but does not remove every risk: the program may interpret an argument beginning with a dash as an option, and filenames or expressions may have their own syntax. Validate according to the invoked program's contract.
+Replace a local shell-based file-counting operation with a language library call. Compare handling of spaces and punctuation in harmless filenames. If the lab requires a process, pass explicit arguments and inspect the tool's end-of-options rules. Explain which interpreter was removed and which input semantics still remain.
+Avoiding a shell is a strong improvement, not proof that all possible argument injection has disappeared.
+What is the best first alternative to constructing a shell command for a file operation?
+Use a language library API for the operation
+Add more string concatenation
+Run the command with greater privileges
+A direct API avoids an unnecessary command language boundary and usually makes validation clearer.
+
+W08
+A file upload crosses several boundaries: incoming bytes, metadata, storage location, later processing, and eventual download or execution. A browser-supplied filename or content type is untrusted. A permitted extension alone cannot establish the actual format or safety of the file, and even a well-formed file may exploit a vulnerable parser.
+Use an explicit allowlist of required formats, size limits, controlled storage names, appropriate content verification, and safe handling paths. Store uploads where they cannot become executable application code. Serve downloads with suitable headers and authorise access to the stored object. Consider scanning and isolated processing as additional controls with known limits.
+Design an avatar upload pipeline using synthetic images. Rename files server-side, cap size, decode and validate the intended image format with a maintained library, and keep storage outside executable routes. Test a misleading extension, excessive size, and another user's image URL. Each test should target a separate boundary.
+A successful malware scan is not a universal proof that uploaded content is safe to parse, execute, or display.
+Why store uploaded content outside executable application paths?
+So accepted bytes cannot automatically become server-executed code
+So all files become confidential without access checks
+So file-size limits are unnecessary
+Storage and execution must remain separate. Access control, validation, and resource limits are still needed.
+
+W09
+XML represents structured data using elements and attributes. Some parser configurations support document type declarations and external entities, which can refer to resources outside the input document. XXE arises when untrusted XML gains unintended access through these features. Other parser features can consume excessive resources even without disclosing a file.
+Use the platform's documented safe parser configuration for untrusted XML. Disable unnecessary external resolution and document-type features, apply resource limits, and validate the application structure. A format being well-formed says nothing about whether its parser should access files or networks. JSON may simplify some interfaces, but changing formats does not eliminate ordinary validation needs.
+For a harmless local parser exercise, accept a fixed small record structure. Test a normal record, unexpected fields, oversized nesting, and a document containing a declaration that your safe configuration should reject. Confirm the parser makes no unexpected resource access using the provider's controlled lab, rather than relying only on the displayed error.
+XML schema validation and external-entity configuration solve different problems. Do not assume enabling one disables the other.
+Which capability should an untrusted XML parser usually avoid unless explicitly required?
+Resolving external entities through filesystem or network access
+Reading ordinary permitted element text
+Reporting malformed syntax
+External resolution introduces additional resource and trust boundaries beyond the submitted document.
+
+W10
+Server-side request forgery, or SSRF, turns a server's ability to fetch resources into an attacker-controlled request path. The server may reach destinations the original caller cannot. A URL therefore carries more than text: it selects a scheme, destination, port, and sometimes credentials or redirect behaviour under a particular parser.
+Prefer fetching from fixed known services or mapping IDs to approved resources. Where arbitrary destinations are required, validate supported schemes and destinations, account for name resolution and redirects, and enforce network-level egress restrictions. Revalidate each relevant hop. Cloud metadata and internal services need their own protections; a URL filter should not be the only boundary.
+Design a local thumbnail service that accepts IDs for a fixed image catalogue instead of free-form URLs. For the linked lab, record the server's network position and which boundary the unintended request crosses. Compare initial destination validation with redirect handling and explain why checking only the visible input string is incomplete.
+An apparently public hostname can resolve differently over time. Destination policy must consider the address actually used and subsequent hops.
+Why is SSRF dangerous even when the response is not returned to the caller?
+The server may still perform an unintended action or reach a protected service
+A hidden response guarantees no effect occurred
+Only browser-origin rules determine server-side access
+The request itself may have side effects or cross a network trust boundary, regardless of response visibility.
+
+W11
+An API exposes operations and data structures through documented interfaces. Object-level access control determines whether the current actor may use the object named by an ID. Guess-resistant identifiers can reduce enumeration but do not replace permission checks. An opaque ID can still be leaked, copied, or supplied by a different legitimate account.
+Validate type, range, allowed fields, relationships, and requested operation. Avoid mass assignment, where arbitrary supplied fields automatically become object attributes. Separate response schemas from internal storage schemas so sensitive fields are not returned accidentally. Test the same operation with multiple controlled identities and object ownership combinations.
+Create two synthetic accounts and one private note per account. Build a test matrix for read, update, and delete using each identity and each note ID. Add an unexpected owner_id field to a local update request and ensure the server does not silently reassign ownership. Record the expected result for every row before running the tests.
+API documentation describes intended behaviour; it does not enforce it. The implementation must reject forbidden combinations.
+What should happen when a valid user supplies another user's private object ID?
+The server applies object-level permission checks and denies unauthorised access
+The ID's existence automatically grants access
+The browser decides whether the database should return it
+The server must evaluate the actor-object-action relationship on every relevant operation.
+
+W12
+Authentication is a lifecycle, including registration, login, session creation, recovery, factor changes, and account closure. A strong login can be undermined by a weak recovery path. Account enumeration exposes whether an identity exists through responses, timing, or side effects, which can support later abuse depending on the threat model.
+Use established framework mechanisms for credential handling, secure session rotation, recovery tokens, and appropriate rate limits. Recovery tokens need sufficient unpredictability, a limited lifetime, and carefully enforced single use. Protect factor changes as sensitive actions. Error messages should avoid unnecessary disclosure while remaining usable for legitimate users.
+Draw a test account's normal login and lost-password paths. For a local recovery flow, test an expired token, a reused token, and a token presented for the wrong account. Confirm that a successful reset changes the intended credential and follows the application's session-revocation policy. Use only synthetic accounts in the training environment.
+A recovery message can be generic while other observable differences still reveal account existence. Examine the complete behaviour.
+Which path deserves the same security attention as normal login?
+Password and multifactor recovery
+Only the public colour-theme switch
+Only the site's logo download
+Recovery can confer account access, so its authority and abuse resistance are part of authentication security.
+
+W13
+Access control applies business rules to actions, not just URLs. Horizontal escalation crosses between peers' resources; vertical escalation gains a more privileged role. A business-logic flaw can violate a rule even when each individual request is syntactically valid and the user is authenticated.
+Write invariants in plain language before testing. For example, an invitation can grant only the permissions the inviter is allowed to delegate, and a refund cannot exceed the amount paid. Enforce checks in the operation that changes state. Do not trust role names, prices, ownership fields, or workflow state supplied by the client.
+Model an invitation flow with owner, editor, and viewer roles. Define who may invite whom and which roles may be granted. Test each permitted and forbidden transition with controlled accounts. Include a viewer directly calling the invitation endpoint, rather than assuming a hidden button prevents that action.
+Checking permissions only on page rendering leaves direct API requests unprotected.
+Where should the rule 'a viewer cannot grant editor access' be enforced?
+In the server operation that creates or changes the invitation
+Only by hiding the editor option in HTML
+Only in a welcome email
+The state-changing operation must enforce the rule regardless of how the request was constructed.
+
+W14
+A JSON Web Token is a structured format that can carry claims. A typical signed compact token contains encoded header, payload, and signature components. Encoding makes the claims readable; it does not encrypt them. A signature can protect integrity only when the verifier uses the intended algorithm, trusted key, and appropriate claim validation.
+Validate the token's issuer, audience, time constraints, algorithm policy, and purpose according to the protocol. Key selection must not become an arbitrary caller-controlled file or network lookup. A correctly signed token for a different service should not automatically work here. Consider revocation, rotation, and how long a stolen bearer token remains usable.
+Decode a synthetic course token without treating decoding as verification. List which claims are visible. Then use the provider's supported verification library to test valid, expired, wrong-audience, and altered tokens. Document the trusted key source separately from any untrusted key identifier in the token header.
+A library returning decoded JSON may not have verified authenticity. Read the API contract carefully.
+Does base64url-decoding a JWT establish its authenticity?
+No; signature and claim validation are separate required checks
+Yes; readable JSON is proof of a valid signature
+Yes; a token with three parts cannot be altered
+Decoding only interprets the representation. Verification establishes integrity under a trusted key and validation policy.
+
+W15
+OAuth delegates limited access to a resource; it is not by itself a complete login identity protocol. OpenID Connect adds an identity layer with its own tokens and validation rules. Distinguish the resource owner, client, authorisation server, and resource server, and identify which party receives each code or token.
+An authorisation-code flow uses carefully registered redirect URIs and transaction binding. PKCE binds code redemption to the client instance holding a verifier, helping resist code interception. State and applicable protocol-specific checks bind a response to the initiating interaction. Use maintained libraries and current provider guidance instead of inventing a flow from isolated redirect examples.
+Draw a modern authorisation-code flow with PKCE using a synthetic account in the course lab. Label the authorisation code, verifier, access token, and any ID token. Explain why an access token for one API is not automatically a valid login assertion for a different client. Test the lab's mismatched redirect or transaction case within scope.
+Access tokens and ID tokens have different audiences and purposes. Similar-looking token formats do not make them interchangeable.
+What does PKCE help bind?
+Authorisation-code redemption to possession of the initiating client's verifier
+All API permissions to the user's display name
+A password to every unrelated website
+The code challenge and verifier connect code redemption to the initiating client instance under the flow's assumptions.
+
+W16
+A web race condition occurs when overlapping requests violate an invariant. A limit such as 'redeem this coupon once' describes a state transition, not merely an input format. Two requests can both pass a check before either records the change. The bug lives in the interleaving of otherwise plausible operations.
+Use atomic database operations, transactions with appropriate isolation, uniqueness constraints, or carefully designed locking to preserve the relevant invariant. Idempotency makes repeated equivalent requests have one intended effect, but requires a trustworthy key scope and stored result. Merely slowing requests down or adding a client-side button lock does not establish correctness.
+Model one-use redemption as unused → used. Draw two requests both observing unused, then both granting credit. Repair the local model with an atomic conditional update or an appropriate unique constraint and transaction. Test overlapping requests in the authorised lab and verify the final ledger, not just the number of successful HTTP responses.
+A transaction boundary alone does not imply the isolation level needed for every invariant. State the guarantee you rely on.
+What must a single-use redemption protect?
+The eligibility check and state change as one invariant-preserving operation
+Only the visual button's disabled state
+Only the time between two browser clicks
+The server must prevent competing operations from both consuming the same entitlement.
+
+W17
+Request smuggling exploits disagreement between HTTP-processing components about where a request ends and the next begins. A frontend proxy and backend may interpret framing differently. The result can be a message boundary shift that affects another request. Understanding the complete proxy chain is essential before drawing conclusions from an isolated response.
+Use current maintained servers and consistent protocol handling, reject ambiguous framing, and follow the deployment platform's guidance. Connection reuse and protocol translation can change exposure. This is an advanced topic because HTTP semantics, transport streams, intermediary behaviour, and isolation all interact. Keep experiments inside provider-supplied labs where no unrelated users share the connection path.
+Draw a frontend-to-backend byte stream containing two harmless requests. Mark the boundary each component expects under the lab's controlled disagreement. Explain how the two interpretations diverge without testing public infrastructure. For the remediation exercise, state which component rejects ambiguity and verify the normal request path still functions.
+A timeout alone is not proof of request smuggling. It may reflect many unrelated parser or network behaviours.
+What is the central failure behind request smuggling?
+Intermediaries disagree about request framing boundaries
+The browser uses a long password
+A database table lacks an index
+Different framing interpretations let bytes acquire unintended meaning across shared connections.
+
+W18
+An integrated assessment connects individual weaknesses to the application's security model. Begin with scope, assets, roles, data flows, and intended business rules. Build an inventory of operations and trust boundaries before selecting tests. A useful result explains the violated property, necessary conditions, reproducible evidence, and practical effect.
+Separate discovery from reporting. Keep baseline requests, controlled account identities, timestamps, and minimal evidence. Confirm findings independently and avoid counting several symptoms of one root cause as unrelated successes. A repair is incomplete until it preserves legitimate behaviour and rejects the original unauthorised operation and meaningful variants.
+Assess the supplied application using an owner, a second user, and a logged-out session. Cover input handling, ownership, authentication lifecycle, cross-origin behaviour, file boundaries, and concurrent state changes. Rank findings by supported impact and likelihood. Repair at least one issue, add a regression check, and ask the other learner to reproduce the finding from the report alone.
+A long tool output is not an assessment report. Explain which observed behaviour violates which rule and what evidence supports that conclusion.
+What best demonstrates a finding is reproducible?
+Another learner can follow the scoped report and observe the same violated property
+The original tester remembers the steps
+The scanner lists many severity labels
+Independent reproduction checks that the report contains sufficient evidence and instructions rather than relying on hidden knowledge.

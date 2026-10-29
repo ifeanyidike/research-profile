@@ -1,0 +1,120 @@
+M02
+Logic gives precise meaning to claims. A proposition is true or false; a conjunction requires both parts, while an implication says that whenever its premise holds, its conclusion must hold. Sets collect elements, functions map inputs to outputs, and graphs represent relationships using vertices and edges. These tools make security policies less ambiguous.
+A state machine describes possible states and the transitions between them. An invariant is a property that must hold in every reachable state. To prove one by induction, show it holds initially and that each permitted transition preserves it. Testing several states can find a counterexample but does not replace reasoning over all permitted transitions.
+Model a document as private or shared, with read and share operations. Define the invariant: only an owner may change sharing. List every transition and the required actor. Find a transition that would violate the invariant if its permission check were omitted. Express the corrected rule as a condition over the actor and document owner.
+An implication does not assert its premise. 'If administrator, then may edit' does not mean everyone who may edit is an administrator.
+What makes a property an invariant of a state machine?
+It holds initially and is preserved by every permitted transition
+It held during one successful demo
+Its name contains the word secure
+Initial truth plus preservation establishes the property across all reachable states covered by the model.
+
+M03
+Modular arithmetic wraps integers around a fixed modulus. On a twelve-hour clock, 10 + 5 is congruent to 3 modulo 12. A prime has exactly two positive divisors. Integers a and n are coprime when their greatest common divisor is 1. This relationship determines when a has a multiplicative inverse modulo n.
+Counting describes how many possibilities exist before assigning probabilities. Independent choices multiply: four positions with ten choices each give 10,000 strings when repetition is allowed. Cryptographic arithmetic uses very large spaces, but a large number alone is not a security proof. The algorithm, assumptions, and adversary's abilities also matter.
+Compute 5×3 mod 7 = 1, so 3 is an inverse of 5 modulo 7. Compare this with 2 modulo 6: multiplying 2 by any integer cannot produce a remainder of 1. List the possible remainders to see why. Then count four-digit strings with and without repeated digits, explaining why the formulas differ.
+Ordinary division cannot simply be copied into modular arithmetic. An inverse may not exist.
+Does 2 have a multiplicative inverse modulo 6?
+No, because 2 and 6 are not coprime
+Yes, every nonzero number has one for every modulus
+Yes, its inverse is the decimal number 0.5
+An inverse must be an integer residue whose product is 1 modulo 6. None exists because gcd(2,6)=2.
+
+M04
+Probability describes uncertainty under stated assumptions. Conditional probability asks about an event after learning another event occurred. Independence means learning one event does not change the probability of the other; it cannot be assumed just because two events have different names. Entropy measures uncertainty in a distribution, not the visual complexity of a string.
+Security alerts must be interpreted alongside the base rate of actual incidents. A highly accurate detector can still produce mostly false alerts when malicious events are rare. Build a count table rather than relying on phrases such as '99% accurate'. Separate the true-positive rate from the probability that a positive result is malicious.
+Among 10,000 events, suppose 10 are malicious. A detector catches 9 and falsely flags 1% of 9,990 benign events, about 100. Only about 9 of 109 alerts are true positives. Check each denominator and explain how the answer changes if the population contains many more malicious events.
+A detector's sensitivity is not its precision. Both depend on which population and threshold are being measured.
+In the worked example, approximately what fraction of alerts are true positives?
+8 percent
+90 percent
+99 percent
+There are about 9 true alerts and 100 false alerts. Precision is 9/(9+100), about 8%.
+
+M05
+A sample is the data observed; a population is what you want to understand. Sampling bias arises when the selection process systematically excludes relevant cases. An average hides variation, so report distributions or suitable summaries alongside it. A confidence interval quantifies uncertainty under assumptions about how the data were produced; it does not repair biased measurement.
+Experiments compare a treatment with a baseline while controlling alternative explanations. Decide the hypothesis, metrics, datasets, and stopping rule before looking for a favourable result. In detection work, precision asks how many alerts are correct; recall asks how many malicious events were found. A change can improve one while worsening the other.
+For a labelled set with 20 malicious events, a detector finds 15 and produces 5 false alerts. Compute recall as 15/20 and precision as 15/20. Now add 15 false alerts without changing the true positives: recall stays fixed while precision drops. Document the dataset's source and why its event mix may differ from production.
+More decimal places do not mean greater certainty. Measurement quality and sample design determine what a result supports.
+A detector finds the same malicious events but doubles its false alerts. What happens?
+Recall stays the same and precision decreases
+Recall increases and precision stays the same
+Both necessarily increase
+Recall depends on true positives and missed malicious events. Extra false positives reduce precision without changing recall.
+
+C01
+C makes the relationship between source code and machine execution more visible. A compiler translates source into object code, and a linker combines objects and libraries into an executable. Types determine how values are represented and which operations are meaningful. A declaration is a promise to the compiler, not automatic validation of external input.
+Integer widths and signedness matter. Unsigned arithmetic wraps modulo a power of two; signed overflow in C is undefined behaviour. Undefined behaviour means the language does not promise a particular result, so an observed wraparound cannot be relied upon. Enable compiler warnings and understand each warning before treating a successful build as correct execution.
+Compile a program that prints sizeof values for selected integer types and reports the limits from the standard headers. Compare a safe boundary calculation with an intentionally avoided overflowing expression. Record compiler version and flags. Explain which observations come from this platform and which properties come from the language specification.
+A program compiling without errors does not prove memory safety or correct arithmetic.
+May portable C code rely on signed integer overflow wrapping around?
+No; signed overflow has undefined behaviour
+Yes; all C integers wrap identically
+Yes; a successful compilation guarantees it
+Unsigned wrapping is defined, but signed overflow is undefined. Optimisations may assume it never happens.
+
+C02
+An array stores a fixed sequence of elements. A C string convention uses a zero byte to mark its end; the terminator occupies space too. An array of four bytes can hold three single-byte characters plus a terminator. Text encodings complicate length: a character perceived by a reader need not occupy one byte.
+A buffer's capacity, the number of bytes currently used, and the length of decoded text are different quantities. Check bounds before writing and account for terminators and encoding expansion. A function receiving a pointer cannot usually infer the original array's capacity, so pass sizes explicitly and document whether a size includes the terminator.
+Draw a four-cell buffer containing c, a, t, and zero. Attempting to append another character requires a fifth cell for a new terminator. Rewrite the operation to check required capacity before modifying anything. Repeat with a non-ASCII UTF-8 word and count bytes separately from displayed characters.
+A null terminator is a byte value, not the same concept as a null pointer. Confusing the two leads to incorrect boundary reasoning.
+How much capacity does the C string "cat" require with its terminator?
+At least four bytes
+Exactly three bytes
+One pointer-sized cell regardless of contents
+Three character bytes plus the terminating zero byte require four bytes.
+
+C03
+An algorithm's cost describes how its work grows as input grows. Linear search may inspect every item, while binary search repeatedly halves an ordered search space. Big-O notation describes an asymptotic bound; it does not promise an exact runtime or account for every constant factor. State the operation being counted and assumptions about the input.
+Stacks remove the most recently added item; queues remove the earliest. Trees encode hierarchical relationships. Learn these abstract behaviours before implementing pointer-based structures. Recursion solves a problem through smaller instances and needs a base case plus progress toward it. Each recursive call also consumes execution resources.
+Search a sorted list of sixteen values by repeatedly selecting a midpoint and discarding the impossible half. Write the remaining interval after each comparison. Then trace recursive factorial for 3 down to its base case and back up. Explain why the binary search needs sorted input, while the factorial recursion needs a decreasing nonnegative argument.
+A theoretically faster algorithm may be slower on tiny inputs. Measure relevant workloads after establishing correctness.
+Which prerequisite makes ordinary binary search correct?
+The search interval is ordered according to the comparison rule
+The list contains an even number of items
+Every value is stored as text
+The decision to discard half the interval depends on its ordering. Without that property, the target could be discarded.
+
+C04
+A pointer stores an address. Dereferencing accesses the object at that address, provided the object exists and access is valid. Stack allocation commonly follows function-call lifetimes; dynamically allocated heap objects live until released. A pointer may still hold an address after an object's lifetime ends, creating a dangling pointer.
+Ownership answers who must release an allocation and when other code may use it. Linked structures connect separately allocated nodes through pointers, so freeing a node requires preserving the next link before the node becomes invalid. A memory leak loses access to allocated memory; use-after-free accesses memory after release. These are different defects.
+Draw two linked nodes with addresses, values, and next pointers. Walk from the head, saving next before freeing the current node. After the walk, set the head to null. Use a debugger or memory diagnostic on a small local implementation and compare its report with your ownership diagram rather than guessing from a crash alone.
+Setting one pointer to null does not invalidate other aliases that still point to the released object.
+Why is dereferencing an old alias unsafe after its allocation is freed?
+The object's lifetime has ended even if the address value remains
+Free automatically updates every alias to null
+Heap addresses are always immediately erased
+The pointer value can outlive the object. Access through it is invalid regardless of whether bytes still appear unchanged.
+
+C05
+Machine instructions operate on registers, memory, and control flow. Assembly is a readable notation for those instructions. A calling convention specifies how arguments, return values, and preserved registers cross function boundaries. An executable format such as ELF describes code, data, and metadata used by the operating system's loader.
+A debugger connects source-level intentions with machine state. Breakpoints pause execution; stepping advances it; register and memory views expose values. Optimised builds may rearrange or remove source operations, so use a simple debug build first and then compare optimisation effects. An address seen in one run is not necessarily stable in another.
+Compile a tiny function that adds two integers with debug information. Break at its entry, inspect the argument locations for your platform's calling convention, step through the addition, and inspect the return value. Disassemble the function and map each relevant instruction to the source operation. Record architecture and compiler flags with the evidence.
+Assembly syntax and calling conventions vary by architecture and platform. Do not apply an x86-64 register rule to every system.
+What does a calling convention define?
+How functions exchange arguments, results, and register responsibilities
+Which password a debugger requires
+The trustworthiness of an executable's author
+A calling convention is an interface agreement for machine-level function calls, not an authenticity check.
+
+C06
+The operating system manages processes, memory, devices, and files. User mode restricts what an ordinary process can do directly; system calls request controlled kernel operations. Virtual memory gives each process an address-space view that maps to physical memory and other backing storage. An address is meaningful in its process and mapping context.
+A filesystem maps names to stored objects and metadata. An open file descriptor refers to an opened resource, which may outlive a filename change. Access checks, process identities, and kernel enforcement work together. Isolation reduces interference, but privileged components and shared resources remain important parts of the trust boundary.
+Run a harmless program that opens a file, reads bytes, and closes it. Observe its system calls using the supplied course tooling. Draw the path from application request to kernel check to returned data. Compare two processes' address maps and explain why equal-looking virtual addresses need not refer to the same physical bytes.
+User-space checks cannot replace a required kernel or server-side enforcement boundary. A caller may bypass the intended interface.
+Why can two processes use the same virtual address without sharing that memory?
+Their address spaces can map it to different physical pages
+Virtual addresses are globally unique across all processes
+Equal addresses always prove a shared secret
+Virtual memory mappings are process-specific. The same numeric address may identify unrelated physical pages.
+
+C07
+Concurrency means tasks can make progress during overlapping periods. A race occurs when correctness depends on an uncontrolled ordering of accesses. A critical section groups operations that must not interleave in a harmful way. A lock can enforce mutual exclusion when every relevant participant follows the same locking protocol.
+Locks do not automatically preserve a larger invariant. A check followed by a later update can still race if the lock covers only one part. Deadlock occurs when tasks wait on one another and none can progress. Consistent lock ordering is one way to prevent circular waiting; smaller shared state and clearer ownership often simplify the problem.
+Two threads each read balance=10, subtract 7, and write 3. Both report success even though only one withdrawal should have been permitted. Draw that interleaving. Then protect the check and update together, so the second operation sees balance=3 and fails. Explain the invariant: accepted withdrawals must not make the balance negative.
+A sleep changes timing but does not establish synchronisation. A race disappearing during debugging may still exist.
+Which region must be atomic for a guarded withdrawal?
+Checking the balance and committing the debit together
+Only printing the receipt
+Only reading the account's display name
+The decision and its state update must share one protected operation. Separating them leaves an interleaving window.
