@@ -112,3 +112,10 @@ MIT's timed captions to narrow the assigned section to 41:30–48:13. Evidence
 levels and stable source links appear on resource cards. Voice/Child source maps
 also include their per-assignment evidence notes.
 See _learning/video-content-review-20261030.json for per-assignment limits.
+
+
+Release 20261030-9 supersedes the historical R02 evidence above. R02 now assigns
+5:12 of COS preregistration/registered-report teaching with readable captions.
+The native plan and reproducibility checklist remain required. The active
+44-assignment audit is _learning/video-content-review-20261030-complete.json;
+its scope does not extend to every video in Cyber Studio.

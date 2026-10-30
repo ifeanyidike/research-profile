@@ -1,4 +1,4 @@
-import { videoEmbed, videoLink } from "./video.js?v=20261030-8";
+import { videoEmbed, videoLink } from "./video.js?v=20261030-9";
 
 const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const reviewLabels = {

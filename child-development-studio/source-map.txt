@@ -121,8 +121,8 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 C07 — Assent, privacy, safeguarding and respectful care
 Prerequisites: C01, C05
 Path: Shared foundations
-Study assignment: Watch the 1:00 privacy animation and the named UNICEF participation material. Work the fictional consent/assent/refusal/privacy distinctions and use the NSPCC guidance with your local safeguarding route.
-Video coverage/access: The 1:00 eSafety animation supplies the digital-privacy component, with a complete visual transcript. The UNICEF participation video and assigned readings/native case cover child voice, assent, refusal and safeguarding; the animation is not a clinical consent or local protection procedure.
+Study assignment: Watch the 1:00 privacy animation and 8:30 of UNICEF participation excerpts. Work fictional consent/assent/refusal/privacy distinctions and connect the safeguarding reading to your local route.
+Video coverage/access: Core viewing totals 9:30: the complete privacy animation and two participation excerpts. These support digital privacy, child voice and practical access; local safeguarding and clinical consent/assent require the native distinctions and appropriate guidance.
 Videos:
   eSafety — sharenting and children’s digital privacy — https://www.esafety.gov.au/parents/issues-and-advice/privacy-child
     Assignment: Watch the complete named video, 0:00–1:00. Select only “Sharenting - a global trend putting kids at risk unintentionally”. Identify identifying details, audience/privacy settings and lower-exposure sharing choices. This short text animation supplies the privacy component. Complete the native assent/refusal example and the UNICEF/NSPCC readings for participation, safeguarding and local protection procedures; it does not teach clinical consent law.
@@ -130,9 +130,11 @@ Videos:
     Content evidence (transcript-reviewed): The publisher’s complete visual transcript matches the one-minute animation’s photo-sharing risks and four privacy precautions. This is a visual-text transcript; no spoken narration is claimed. Legal statements elsewhere on the Australian page are not universal consent rules.
       Publisher video and visual transcript: https://www.esafety.gov.au/parents/issues-and-advice/privacy-child
   UNICEF — meaningful participation of children with disabilities — https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation
-    Assignment: Watch the complete named video, 0:00–12:16. Listen for meaningful participation, barriers and being heard. Connect these to the native assent/consent distinction and how a child can decline or change their mind. This rights-based module does not replace local privacy law or safeguarding procedures. Participation in services and policy decisions supports the theme of being heard; it is not itself a clinical consent/assent procedure.
-    Content evidence (teaching-material-reviewed): The video’s facilitator guide describes meaningful participation, barriers and accessible involvement in decisions. This supports being heard; it is not a clinical consent or safeguarding protocol.
-      UNICEF video and facilitator guide: https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation
+    Assignment: Watch only 0:30–3:45 and 6:38–11:53 (8:30 total). Identify meaningful contribution, the child-led accessible-sink example and practical access arrangements. Apply the native consent/assent/refusal distinctions; participation in service decisions does not replace clinical consent or local safeguarding procedures.
+    Watch 0:30–3:45: Meaningful participation and child-led access
+    Watch 6:38–11:53: Practical arrangements for being heard
+    Content evidence (transcript-reviewed): English automatic captions support meaningful participation, a child-led accessible-sink example and concrete access arrangements. The core excerpts omit the intervening adult political/violence examples and credits.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=8aNB8k9VlMQ
 Readings:
   UNICEF — Convention on the Rights of the Child: child-friendly explanation — https://www.unicef.org/child-rights-convention/convention-text-childrens-version
     Assignment: Read the named article or specified sections: UNICEF — Convention on the Rights of the Child: child-friendly explanation. Focus on assent, safeguarding, privacy and use the native worked example to check your interpretation.
@@ -205,8 +207,8 @@ Video coverage/access: A focused UNICEF module now supplies first-person disabil
 Videos:
   UNICEF — disability, identity, barriers and inclusion — https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are
     Assignment: Watch the complete named video, 0:00–10:29. Hear young people describe disability as one part of identity and the barriers/misconceptions that restrict participation. Ask whose perspective and communication preferences are missing in the native goal critique; do not infer the same preferences for all disabled or neurodivergent people.
-    Content evidence (teaching-material-reviewed): The video’s facilitator guide describes first-person disability, identity and exclusion. It supports listening to individuals; it does not represent every neurodivergent or multilingual experience.
-      UNICEF video and facilitator guide: https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are
+    Content evidence (transcript-reviewed): The complete English automatic transcript supports disability as one part of identity, lived experience, communication preferences and barriers to inclusion.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=kWrPBCKnfA4
 Readings:
   ASHA — learning more than one language — https://www.asha.org/public/speech/development/learning-more-than-one-language/
     Assignment: Read the named article or specified sections: ASHA — learning more than one language. Focus on inclusion, culture, neurodiversity and use the native worked example to check your interpretation.
@@ -438,14 +440,14 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 G11 — Work with schools and a multidisciplinary team
 Prerequisites: C06, C07, G03, G05, G07
 Path: Caregiver education
-Study assignment: Watch the 7:15 coordinated-service example. Map the fictional team’s roles, shared priorities, information boundaries and unresolved disagreement into a feasible meeting agenda.
-Video coverage/access: Only the named CanChild coordinated-planning video is required. It illustrates family-centred coordination; local school processes, confidentiality and clinical recommendations still need their appropriate sources/professionals.
+Study assignment: Watch the 1:19 Family Help animation. Map the fictional team’s roles, shared priorities, information boundaries and unresolved disagreement into a feasible meeting agenda.
+Video coverage/access: Core viewing: 1:19, with a full council-published transcript. Coventry’s team-around-family sequence illustrates coordination; local school processes, confidentiality and clinical advice remain separate sources/professional responsibilities.
 Videos:
-  CanChild — coordinated service planning and family priorities — https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/
-    Assignment: Watch the complete named video, 0:00–7:15. Select only “Coordinated Service Planning & F-Words” on the source page. Identify how the young person’s/family’s priorities guide coordinated services and goals, then build the native meeting agenda and clarification request. The Ontario service example is not a universal school or referral procedure.
-    Access: Watch the named 7:15 Vimeo video on CanChild’s original multi-video page; the rest of the collection is not assigned.
-    Content evidence (teaching-material-reviewed): CanChild’s account of this exact family story supports coordinated planning around meaningful family goals. The spoken transcript could not be retrieved.
-      Named video and family account: https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/
+  Coventry City Council — Family Help and a team around the family — https://www.coventry.gov.uk/directory-record/78685/family-help-animation
+    Assignment: Watch the complete Family help animation, 0:00–1:19. Trace family concerns and strengths, a lead practitioner, a shared plan, team actions and regular review. Then build the native fictional meeting agenda with roles, information boundaries and a way to resolve disagreement. Coventry’s local service description is an example, not universal referral or school law.
+    Access: Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.
+    Content evidence (transcript-reviewed): The council’s complete published transcript matches the family-led planning and team-coordination sequence.
+      Publisher full transcript and video: https://www.coventry.gov.uk/directory-record/78685/family-help-animation
 Readings:
   NICE CG170 — support and management; read the named section for this topic — https://www.nice.org.uk/guidance/cg170/chapter/Recommendations
     Assignment: Read 1.1 General principles of care and 1.2 Families and carers. This NICE guidance concerns autistic children/young people under 19; do not generalise it to all children or use it as an individual treatment plan.
@@ -539,8 +541,9 @@ Video coverage/access: The focused ASHA video provides assessment/cultural-valid
 Videos:
   ASHA / Elizabeth Peña — what is dynamic assessment? — https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/
     Assignment: Watch the complete named video, 0:00–11:49. Compare dynamic assessment, standardised testing, observation and learning potential in the published examples. Apply the distinctions to the native assessment-quality critique and screening table. Observe only; do not administer a restricted test or infer a diagnosis.
-    Content evidence (teaching-material-reviewed): The exact ASHA slides compare dynamic assessment with static testing, observation and RTI. The video does not supply the lesson’s full reliability, validity or screening-statistics teaching.
-      ASHA module and teaching slides: https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/
+    Content evidence (transcript-reviewed): Test–teach–retest, learning process and comparison with static testing, observation and response-to-intervention match the assessment-quality lesson.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=saHMtIz7IgA
+      ASHA module and companion teaching material: https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/
 Readings:
   ASHA — assessment tools, techniques and data sources — https://www.asha.org/practice-portal/resources/assessment-tools-techniques-and-data-sources/
     Assignment: Read the named article or specified sections: ASHA — assessment tools, techniques and data sources. Focus on reliability, validity, functional assessment and use the native worked example to check your interpretation.
@@ -563,16 +566,19 @@ Video coverage/access: The three short professional videos total 33:27 (9:29 + 1
 Videos:
   ASHA / Elizabeth Peña — mediated learning experience — https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/
     Assignment: Watch the complete named video, 0:00–9:29. Identify intentionality, meaning, transcendence (transfer) and competence (planning for independence) in the published teaching examples. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child.
-    Content evidence (teaching-material-reviewed): The exact ASHA slides teach intentionality, meaning, transcendence and competence, with narrative examples. A spoken transcript remains unavailable.
-      ASHA module and teaching slides: https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/
+    Content evidence (transcript-reviewed): The full transcript explicitly teaches intentionality, meaning, transcendence/transfer and competence/independence, including culturally variable storytelling.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=N_pOZu3wYEQ
+      ASHA module and companion teaching material: https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/
   ASHA / Elizabeth Peña — observing modifiability — https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/
     Assignment: Watch the complete named video, 0:00–10:21. Distinguish the child’s response, examiner effort and change during supported learning. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Critique the published compliance ratings in light of C07/C11: refusal or distress is information about access and experience, not a reason to pursue compliance as the learning outcome.
-    Content evidence (teaching-material-reviewed): The exact ASHA slides support responsiveness and examiner-effort comparisons. Critique the historical compliance ratings; do not equate compliance with meaningful benefit.
-      ASHA module and teaching slides: https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/
+    Content evidence (transcript-reviewed): The full transcript links child responsiveness and examiner effort to modifiability, using historical social-emotional and cognitive ratings.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=Ig0a-9vJeCs
+      ASHA module and companion teaching material: https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/
   ASHA / Elizabeth Peña — clinical decision making — https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/
-    Assignment: Watch the complete named video, 0:00–13:37. Compare the published cases and explain what evidence supports or limits each interpretation. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Do not apply a cognitive-score cut-off shown in these particular cases as a universal diagnostic threshold; keep language exposure, appropriate methods and professional judgement in the interpretation.
-    Content evidence (teaching-material-reviewed): The exact ASHA slides compare pre/post narrative evidence and modifiability. The displayed case-specific cut-offs are not stand-alone diagnostic rules.
-      ASHA module and teaching slides: https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/
+    Assignment: Watch the complete named video, 0:00–13:37. Compare the published cases and explain what evidence supports or limits each interpretation. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Do not turn these case comparisons or companion-material scores into a universal diagnostic threshold; keep language exposure, appropriate methods and professional judgement in the interpretation.
+    Content evidence (transcript-reviewed): The full transcript compares emergence/mastery, pre/post narrative change and modifiability in bilingual Mateo/Adrian cases; it supports a contextual evidence critique.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=ZgEWYqGrqB0
+      ASHA module and companion teaching material: https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/
 Readings:
   ASHA — spoken language disorders Practice Portal — https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/
     Assignment: Read Assessment and Treatment, including differential reasoning, language/literacy relationships, culturally responsive practice and outcome/participation limits. No individual dosage or test administration is authorised.
@@ -770,15 +776,14 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 P14 — Documentation, supervision and professional accountability
 Prerequisites: P03, C07, C11
 Path: Professional preparation — supervised application required
-Study assignment: Watch 14:25–25:43 of the HCPC webinar, then rewrite the fictional note and state supervision/scope limits. Check the current regulator and qualification rules relevant to your actual jurisdiction.
-Video coverage/access: Only the 11:18 record-keeping standards section is required. The surrounding Northern Ireland event and electronic-record-system discussion are not the assignment; supervision and qualification limits remain in the native lesson/readings.
+Study assignment: Watch the first SCIE care-recording film, 0:00–8:44. Rewrite the fictional four-part note and state supervision/scope limits. Read current regulator and qualification requirements for your actual jurisdiction.
+Video coverage/access: Core viewing: 8:44, first SCIE film only, with a full publisher transcript. The adult England case illustrates harms from inaccurate records; current professional standards and the native child-context note exercise remain required.
 Videos:
-  HCPC — what the record-keeping standards require — https://www.hcpc-uk.org/standards/meeting-our-standards/record-keeping/webinar-keep-records-of-your-work/
-    Assignment: Watch only 14:25–25:43. Watch the named standards section only, skipping the event introductions, platform context and later administration. Apply the regulator’s record-quality expectations to the fictional reported/observed/interpreted/next-step note. The webinar is UK/HCPC guidance, not a licence or a statement of every jurisdiction’s rules.
-    Watch 14:25–25:43: What the standards say
-    Content evidence (teaching-material-reviewed): The regulator’s webinar slides support accurate, timely and secure records. The chapter boundaries identify the standards section; its complete spoken transcript remains unverified.
-      HCPC webinar: https://www.hcpc-uk.org/standards/meeting-our-standards/record-keeping/webinar-keep-records-of-your-work/
-      Exact webinar slides: https://www.hcpc-uk.org/globalassets/news-and-events/events/myhcpcstandards/2025/ni-record-keeping/myhcpcstandards-21-august-2025---meeting-your-record-keeping-standards-in-northern-ireland-slides.pdf
+  SCIE — the importance of care recording: a service user’s perspective — https://www.scie.org.uk/providing-care/recording/
+    Assignment: Watch only the complete first film, “Service user’s perspective – the importance of care recording”, 0:00–8:44. Follow how ignored evidence and inaccurate recording affected the speaker’s support and agency. Rewrite the native fictional reported/observed/interpreted/next-step note and check the current regulator’s standards. The adult England funding case does not establish child assessment or local eligibility rules.
+    Access: Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.
+    Content evidence (transcript-reviewed): SCIE’s complete published transcript and English-caption metadata support the consequences of inaccurate records and dismissing a person’s own account.
+      Publisher full transcript — first film only: https://www.scie.org.uk/providing-care/recording/
 Readings:
   HCPC — standards of conduct, performance and ethics — https://www.hcpc-uk.org/standards/standards-of-conduct-performance-and-ethics/
     Assignment: Read the named article or specified sections: HCPC — standards of conduct, performance and ethics. Focus on documentation, supervision, ethics and use the native worked example to check your interpretation.
@@ -806,9 +811,9 @@ Videos:
   Optional: UNICEF Innocenti — UNICEF Guidance on AI and Children (3.0): Launch webinar — https://www.youtube.com/watch?v=BwCVJCymmt8
     Assignment: Optional full UNICEF Guidance on AI and Children 3.0 launch webinar. The required task is the relevant guidance sections and a child-data/access/governance map; the whole launch event is not required.
   Optional: UNICRI — What to Be? A Journey Through AI (optional literacy example) — https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025
-    Assignment: Watch the complete named video, 0:00–5:27. Optional introductory animation after the child-rights interview. Identify bias, hallucination, digital safety and the difference between a chatbot response and accountable human judgement. It uses an adolescent school example, not therapy or a recommendation to upload a child’s information.
-    Content evidence (teaching-material-reviewed): UNICRI’s account of the animation describes Mia’s school task, bias, hallucinations and digital safety. It supports the optional literacy example; the spoken transcript remains unverified.
-      Publisher’s account of the animation: https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025
+    Assignment: Watch the complete named video, 0:00–5:27. Optional introductory animation after the core procurement video and child-rights reading. Identify bias, hallucination, digital safety and the difference between a chatbot response and accountable human judgement. It uses an adolescent school example, not therapy or a recommendation to upload a child’s information.
+    Content evidence (transcript-reviewed): The complete English transcript matches a school-age AI-literacy story about career stereotypes, next-word prediction, bias, hallucination and human judgement.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=_hBFH03HlsY
 Readings:
   ASHA — AAC Practice Portal: access, assessment and partners — https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication
     Assignment: Read the named article or specified sections: ASHA — AAC Practice Portal: access, assessment and partners. Focus on assistive technology, AI limits, privacy and use the native worked example to check your interpretation.

@@ -1353,25 +1353,42 @@
       "skills": ["seq2seq", "token decoding", "hallucinations"],
       "videos": [
         {
-          "label": "ICML 2023 / Whisper authors — Robust Speech Recognition via Large-Scale Weak Supervision",
-          "url": "https://slideslive.com/39002706",
-          "progressKey": "video:100",
-          "watchMode": "full",
-          "durationSeconds": 318,
-          "timingSource": "https://slideslive.com/39002706",
-          "assignment": "Watch the complete named video, 0:00–5:18. Watch the authors’ concise Whisper presentation, then identify the training/task setup, encoder–decoder path and reported limitations in the paper. Historical results describe the paper’s checkpoints and test conditions, not every later Whisper release.",
-          "accessNote": "Open this direct SlidesLive author-presentation page. The original conference page identifies the same recording; its embedded player may fail to load. The complete named presentation is 5:18, not the whole conference or an installation tutorial.",
+          "label": "Aleksa Gordić — Whisper paper walkthrough: architecture, tasks and data",
+          "url": "https://www.youtube.com/watch?v=AwJf8aQfChE",
+          "progressKey": "video:200",
+          "watchMode": "segments",
+          "durationSeconds": 3761,
+          "timingSource": "https://www.youtube.com/watch?v=AwJf8aQfChE",
+          "assignment": "Watch only 3:01–7:30 and 10:40–12:40 (6:29 total). Trace log-Mel input, encoder, cross-attending decoder, task/language/timestamp tokens and weakly supervised data filtering. Read paper §2 and Figure 1 for exact details. Skip the later code demonstration. These historical model details do not establish current release performance or authorise an inference run.",
+          "accessNote": "Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.",
           "provenanceUrl": "https://icml.cc/virtual/2023/poster/24519",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "All ten displayed author slides were inspected: training data, encoder–decoder architecture, task tokens and selected robustness results. Detailed decoding and hallucination analysis remain in the paper and lesson; no spoken transcript was available.",
+            "method": "transcript-reviewed",
+            "note": "The creator’s English automatic transcript matches the selected architecture/task-token and training-data passages, checked against the original paper §2/Figure 1.",
             "sources": [
               {
-                "label": "Original author presentation",
-                "url": "https://slideslive.com/39002706"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=AwJf8aQfChE"
+              },
+              {
+                "label": "Original Whisper paper — §2 and Figure 1",
+                "url": "https://arxiv.org/html/2212.04356v1"
               }
             ]
-          }
+          },
+          "playbackUrl": "https://www.youtube.com/watch?v=AwJf8aQfChE",
+          "segments": [
+            {
+              "start": 181,
+              "end": 450,
+              "label": "Encoder–decoder path and task tokens"
+            },
+            {
+              "start": 640,
+              "end": 760,
+              "label": "Weak supervision and transcript filtering"
+            }
+          ]
         },
         {
           "label": "Carnegie Mellon University Deep Learning — 11785 Spring 22 Lecture 18: Attention Models",
@@ -1404,7 +1421,7 @@
           "optional": true
         }
       ],
-      "videoNote": "The exact Whisper paper now has a short author video. The old attention lecture is optional prerequisite review. The paper and native task supply the detailed specification and hallucination/permission analysis.",
+      "videoNote": "Core viewing: 6:29 on architecture/task tokens and weakly supervised data. This is an independent walkthrough; the primary paper and native lesson supply exact details, limitations and permission analysis. The older attention lecture remains optional.",
       "pass_criteria": "1. Specify checkpoint, preprocessing, task/language, chunking and decoding choices. 2. Define the claimed accuracy unit, reference policy, independent data and counts. 3. Explain why fluent text from silence or an ambiguous name cannot authorise a write.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.",
       "practice_links": [
@@ -1419,7 +1436,7 @@
         "Define the claimed accuracy unit, reference policy, independent data and counts.",
         "Explain why fluent text from silence or an ambiguous name cannot authorise a write."
       ],
-      "study_focus": "Watch the 5:18 Whisper author presentation, then read the architecture, tasks, training data and limitations. Specify checkpoint, preprocessing, decoding and the data boundary in your fictional report.",
+      "study_focus": "Watch the 6:29 paper-walkthrough excerpts, then read Whisper §2/Figure 1 and limitations. Specify checkpoint, preprocessing, task tokens, decoding and the data boundary in the fictional report.",
       "practice": "Create a fictional review table with the reference, candidate transcript, uncertainty and next action for three cases: a proper name, an interrupted sentence and silence. Explain which ambiguities require clarification before a reservation tool may execute. Do not generate or upload audio.",
       "assessment": "A report names only “Whisper” and gives one accuracy percentage. Write the minimum additional specification needed to interpret or reproduce its claim, including the data boundary and what the percentage actually counts."
     },
@@ -1431,25 +1448,52 @@
       "skills": ["wav2vec 2.0", "pretraining", "adaptation"],
       "videos": [
         {
-          "label": "NeurIPS 2020 / wav2vec 2.0 authors — self-supervised speech representations",
-          "url": "https://slideslive.com/38937614",
-          "progressKey": "video:100",
-          "watchMode": "full",
-          "durationSeconds": 217,
-          "timingSource": "https://slideslive.com/38937614",
-          "assignment": "Watch the complete named video, 0:00–3:37. Trace the encoder, masking, contrastive targets and labelled adaptation in the authors’ wav2vec 2.0 explanation. Distinguish unlabelled pretraining from supervised fine-tuning. This original presentation does not establish multilingual performance or coverage; use the multilingual reading for that comparison.",
-          "accessNote": "Open this direct SlidesLive author-presentation page. The original conference page identifies the same recording; its embedded player may fail to load. The complete named presentation is 3:37, not the whole conference or an installation tutorial.",
+          "label": "Priyam Mazumdar — wav2vec 2.0 paper overview: pretraining and adaptation",
+          "url": "https://www.youtube.com/watch?v=wmAg1TGa00g",
+          "progressKey": "video:200",
+          "watchMode": "segments",
+          "durationSeconds": 3463,
+          "timingSource": "https://www.youtube.com/watch?v=wmAg1TGa00g",
+          "assignment": "Watch only 7:38–9:51, 31:15–32:31, 34:12–37:36 and 50:21–51:18 (7:50 total). Draw the convolutional features, masked Transformer context branch and separate unmasked quantized-target branch; distinguish contrastive pretraining from labelled CTC fine-tuning. Use paper §§2–3 for precise objectives and the separate multilingual reading for coverage claims. Skip implementation and the extended Gumbel/entropy derivations.",
+          "accessNote": "Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.",
           "provenanceUrl": "https://neurips.cc/virtual/2020/poster/18897",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "All eight displayed author slides were inspected: masked representations, quantised targets, fine-tuning and LibriSpeech comparisons. This short presentation does not establish multilingual performance; no spoken transcript was available.",
+            "method": "transcript-reviewed",
+            "note": "English automatic captions support the selected feature/masking, target-comparison and CTC passages; original paper §§2–3 resolves the diagram’s branch structure.",
             "sources": [
               {
-                "label": "Original author presentation",
-                "url": "https://slideslive.com/38937614"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=wmAg1TGa00g"
+              },
+              {
+                "label": "Original wav2vec 2.0 paper — §§2–3",
+                "url": "https://arxiv.org/html/2006.11477v3"
               }
             ]
-          }
+          },
+          "playbackUrl": "https://www.youtube.com/watch?v=wmAg1TGa00g",
+          "segments": [
+            {
+              "start": 458,
+              "end": 591,
+              "label": "Latent features, masking and quantized targets"
+            },
+            {
+              "start": 1875,
+              "end": 1951,
+              "label": "Why mask spans of audio features"
+            },
+            {
+              "start": 2052,
+              "end": 2256,
+              "label": "Contrastive targets and the diversity objective"
+            },
+            {
+              "start": 3021,
+              "end": 3078,
+              "label": "Labelled CTC fine-tuning"
+            }
+          ]
         }
       ],
       "readings": [
@@ -1472,7 +1516,7 @@
           "assignment": "Read the named article or specified sections: Edinburgh ASR 2026 — Lecture 16 Self-supervised learning slides and Lecture 17 multilingual slides (recordings restricted). Focus on wav2vec 2.0, pretraining, adaptation and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "Short author viewing now covers wav2vec 2.0’s pretraining/adaptation mechanism. Multilingual comparison, rights and leakage analysis remain explicit paper/native assignments.",
+      "videoNote": "Core viewing: 7:50 from a longer independent paper overview. Extended Gumbel/entropy derivations and implementation are not assigned. The primary paper fixes exact branch/objective details; multilingual evidence and rights/leakage analysis remain separate work.",
       "pass_criteria": "1. Separate unlabelled pretraining, labelled adaptation and independent testing. 2. Limit the one-speaker/session result to its actual setting. 3. Propose held-out target groups, rights, baselines and distribution-shift checks.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.",
       "practice_links": [
@@ -1487,7 +1531,7 @@
         "Limit the one-speaker/session result to its actual setting.",
         "Propose held-out target groups, rights, baselines and distribution-shift checks."
       ],
-      "study_focus": "Watch the 3:37 wav2vec 2.0 author overview, then draw pretraining and labelled adaptation. Read the separate multilingual work before making language-coverage or transfer claims.",
+      "study_focus": "Watch the four excerpts totalling 7:50, then draw masked context and unmasked target branches plus labelled CTC adaptation. Read the multilingual paper before making transfer or language-coverage claims.",
       "practice": "Write a pretraining/adaptation/test table for a fictional bilingual library kiosk. Specify language, speaker group, device, labels and rights for each stage. Identify two leakage risks and two distribution shifts. Keep all rows fictional and make no provider calls.",
       "assessment": "A team fine-tunes on 20 clips from one new speaker and reports a better result on another clip from that same session. Explain the narrow claim this might support, the broader claim it cannot support, and a corrected future study design."
     },
@@ -1499,36 +1543,37 @@
       "skills": ["edit distance", "WER", "subgroups", "error taxonomy"],
       "videos": [
         {
-          "label": "MIT 6.S191 / Rev.AI — WER, benchmarks and data selection",
-          "url": "https://introtodeeplearning.com/2022/",
-          "progressKey": "video:100",
+          "label": "Google Cloud / Calum Barnes — WER and reference-transcript quality",
+          "url": "https://www.youtube.com/watch?v=MzURq2Py4pc",
+          "progressKey": "video:200",
           "watchMode": "segments",
-          "durationSeconds": 2504,
-          "timingSource": "https://www.youtube.com/watch?v=sR6_bZ6VkAg",
-          "playbackUrl": "https://www.youtube.com/watch?v=sR6_bZ6VkAg",
+          "durationSeconds": 1560,
+          "timingSource": "https://www.youtube.com/watch?v=MzURq2Py4pc",
+          "playbackUrl": "https://www.youtube.com/watch?v=MzURq2Py4pc",
           "segments": [
             {
-              "start": 358,
-              "end": 489,
-              "label": "Word error rate"
+              "start": 152,
+              "end": 257,
+              "label": "Reference words, edit errors and WER"
             },
             {
-              "start": 573,
-              "end": 982,
-              "label": "Test benchmarks and data selection"
+              "start": 301,
+              "end": 320,
+              "label": "Ground-truth transcript quality"
             }
           ],
-          "assignment": "Watch only 5:58–8:09, 9:33–16:22. Work the WER examples, then examine how a benchmark and its data-selection policy change the meaning of a reported score. Apply this to the native subgroup/error table. These 2022 examples are not current product rankings or a complete fairness analysis.",
+          "assignment": "Watch only 2:32–4:17 and 5:01–5:20 (2:04 total). Identify substitutions, deletions and insertions, the reference-word denominator and why WER can exceed 100%. Then work the native minimum-edit/corpus-WER examples, declare reference/normalisation rules and report subgroup denominators and uncertainty. Skip the API/product walkthrough and fixed-duration sampling advice. No API, lab or model run is assigned.",
           "contentReview": {
-            "method": "description-only",
-            "note": "Chapter labels identify WER, benchmarks and data selection. Their speech and precise cut points remain unverified; the worked lesson and reading supply the error-counting and fairness analysis.",
+            "method": "transcript-reviewed",
+            "note": "The published English transcript correctly defines WER using reference words, distinguishes the three edit errors and explains reference-transcript quality.",
             "sources": [
               {
-                "label": "Original publisher source",
-                "url": "https://introtodeeplearning.com/2022/"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=MzURq2Py4pc"
               }
             ]
-          }
+          },
+          "accessNote": "Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned."
         },
         {
           "label": "Carnegie Mellon University Deep Learning — 11785 Spring 22 Recitation 8: CTC Decoding and Beam Search",
@@ -1555,7 +1600,7 @@
           "assignment": "Read the named article or specified sections: CMU — 11-785 Spring 2022 lecture/video source index. Focus on edit distance, WER, subgroups and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "Core viewing: 5:58–8:09 and 9:33–16:22 of the MIT ASR lecture. The old CTC decoding workshop remains optional. Subgroup inference and consequential errors are taught in the native task and readings.",
+      "videoNote": "Core viewing: 2:32–4:17 and 5:01–5:20 (2:04 total) from Google Cloud’s historical explanation. Native examples/readings supply calculation, corpus weighting and subgroup interpretation. The older CTC workshop remains optional.",
       "pass_criteria": "1. Show minimum edit counts and corpus WER with a defined normalisation policy. 2. Report group rates with word and speaker counts rather than equal-error shortcuts. 3. Produce a reporting template with no invented scores and a clarification rule.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "outcomes": [
@@ -1563,7 +1608,7 @@
         "Report group rates with word and speaker counts rather than equal-error shortcuts.",
         "Produce a reporting template with no invented scores and a clarification rule."
       ],
-      "study_focus": "Watch the assigned nine minutes of MIT ASR evaluation teaching. Calculate the supplied edit counts, specify reference/normalisation rules and report subgroup denominators and uncertainty without claiming fairness from an aggregate score.",
+      "study_focus": "Watch the 2:04 WER/reference-quality excerpts. Calculate the supplied minimum edit counts and corpus WER, declare reference/normalisation rules and report subgroup denominators and uncertainty without inferring fairness from an aggregate score.",
       "practice": "Use reference “open the library” and hypothesis “please open library now”. Show an alignment, counts and WER. Then compare two fictional groups: A has 4 errors/80 words from eight speakers; B has 4/20 from two. State what is observed and what remains uncertain.",
       "assessment": "Draft a one-page results table for a fictional recogniser comparison without inventing measured scores. Include metric conventions, independent units, critical-error categories, subgroup coverage and one decision rule for escalation in a booking task.",
       "practice_links": []
@@ -1915,12 +1960,12 @@
           "assignment": "Watch the complete named video, 0:00–4:02. Identify the language-understanding, explicit-logic and response components. Map them to the native proposal/state diagram before the flows example.",
           "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact video’s written lesson supports commands, dialogue management, flows and responses. It does not establish the studio’s approval/version invariants; the spoken transcript remains unverified.",
+            "method": "transcript-reviewed",
+            "note": "Architecture input/understanding, command generation, explicit flows/slots/actions and responses match the full English automatic transcript.",
             "sources": [
               {
-                "label": "Exact Rasa video and written lesson",
-                "url": "https://learning.rasa.com/rasa-pro/architecture-of-an-assistant/"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=zzUY5T9I730"
               }
             ]
           }
@@ -1936,12 +1981,12 @@
           "assignment": "Watch the complete named video, 0:00–10:12. Study flow components, collected values and branching. Map the video’s financial-services flow to the native booking example on paper; explain why extracting a slot is not authorisation to commit a booking.",
           "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact video’s written lesson uses a financial-services example with slots and branching. Map that example to the studio’s booking task; the spoken transcript remains unverified.",
+            "method": "transcript-reviewed",
+            "note": "The full English automatic transcript demonstrates collected values, validation, branching and explicit business logic in banking flows.",
             "sources": [
               {
-                "label": "Exact Rasa video and written lesson",
-                "url": "https://learning.rasa.com/rasa-pro/flows/"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=v1l75qxo4b0"
               }
             ]
           }
@@ -1957,19 +2002,19 @@
           "segments": [
             {
               "start": 0,
-              "end": 338,
-              "label": "Repair concepts and correction patterns"
+              "end": 295,
+              "label": "Repair patterns and deviations from the happy path"
             }
           ],
-          "assignment": "Watch only 0:00–5:38. Watch the introduction, repair patterns and advanced correction cases only. Distinguish a correction or clarification from confirmation of the current proposal version. Skip the later framework-customisation and handoff implementation.",
+          "assignment": "Watch only 0:00–4:55 (4:55 total). Identify the basic repair patterns: corrections, cancellation, clarification, chitchat, errors and handoff. Distinguish these from confirmation of the current proposal version in the native case. Stop before the framework implementation examples; no Rasa setup is required.",
           "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact video’s written lesson explains corrections, digressions, cancellations and repair patterns. The chosen excerpt’s spoken boundaries remain unverified.",
+            "method": "transcript-reviewed",
+            "note": "English automatic captions support repair definitions, correction/cancellation, clarification, chitchat, errors and handoff; the excerpt now stops before implementation examples.",
             "sources": [
               {
-                "label": "Exact Rasa video and written lesson",
-                "url": "https://learning.rasa.com/rasa-pro/deviations-from-happypath/"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=TREEZ-vT90I"
               }
             ]
           }
@@ -1995,7 +2040,7 @@
           "assignment": "Read the complete named chapter/paper: Jurafsky & Martin, August 2026 draft — Chapter 26: Conversation and its Structure. Follow its definitions and worked examples, then state which assumptions apply to the native exercise."
         }
       ],
-      "videoNote": "Core viewing totals 19:52 across three focused Rasa units/sections. These are concrete architectural examples; the native exercise supplies proposal-version and authorisation invariants, and no Rasa setup is required.",
+      "videoNote": "Core viewing totals 19:09 across architecture, flows and basic repair. The repair excerpt stops at 4:55 before implementation. Native work supplies proposal-version and authorisation invariants; no Rasa setup is required.",
       "pass_criteria": "1. Invalidate approval when proposal details/version change. 2. Make create_7, edit_8, approve_7 produce zero writes. 3. Keep confirmed, pending, committed and cancelled states distinct.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "outcomes": [
@@ -2056,7 +2101,7 @@
           "playbackUrl": "https://www.youtube.com/watch?v=yhuc2i29cS0",
           "segments": [
             {
-              "start": 46,
+              "start": 45,
               "end": 134,
               "label": "Types of actions"
             },
@@ -2066,15 +2111,15 @@
               "label": "Custom actions"
             }
           ],
-          "assignment": "Watch only 0:46–2:14, 7:03–9:53. Watch action types and the custom-action example only. Separate a model’s action request from the server-side validation, identity and permission checks required by the native tool contract. The video’s function execution example is not an authorisation design.",
+          "assignment": "Watch only 0:45–2:14, 7:03–9:53. Watch action types and the custom-action example only. Separate a model’s action request from the server-side validation, identity and permission checks required by the native tool contract. The video’s function execution example is not an authorisation design.",
           "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact video’s written lesson explains response/default/custom actions and a funds-check example. Execution is distinct from authorisation; the chosen excerpt’s speech remains unverified.",
+            "method": "transcript-reviewed",
+            "note": "English automatic captions match action categories and the named custom-action/slot/server example in the selected passages.",
             "sources": [
               {
-                "label": "Exact Rasa video and written lesson",
-                "url": "https://learning.rasa.com/rasa-pro/custom-actions/"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=yhuc2i29cS0"
               }
             ]
           }
@@ -2094,7 +2139,7 @@
           "assignment": "Read the named article or specified sections: LiveKit Agents — architecture and tool documentation. Focus on retrieval, tool contracts, authorisation and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "Core RAG viewing is 2:22–8:36 (6:14). Retrieval and generated context are illustrated; permissioned actions, safe retries and truthful pending states remain separate native/readings work.",
+      "videoNote": "Core viewing totals 10:33: RAG at 2:22–8:36 plus actions at 0:45–2:14 and 7:03–9:53. Permission checks, safe retries and truthful pending states remain native/readings work.",
       "pass_criteria": "1. Separate language modelling, retrieved evidence and permissioned tool execution. 2. Use account-bound proposal and stable idempotency key after an uncertain timeout. 3. Report pending status truthfully and reconcile before issuing another write.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "outcomes": [
@@ -2102,7 +2147,7 @@
         "Use account-bound proposal and stable idempotency key after an uncertain timeout.",
         "Report pending status truthfully and reconcile before issuing another write."
       ],
-      "study_focus": "Watch only the 6:14 RAG pipeline passage. Keep retrieved evidence, generated answers and tool authority separate in the native operation/idempotency exercise.",
+      "study_focus": "Watch the 6:14 RAG passage and the two action excerpts totalling 4:19. Keep retrieved evidence, generated answers and tool authority separate in the native operation/idempotency exercise.",
       "practice": "Define read-only tools for finding a museum exhibit and checking opening hours. Give each an input schema, allowed scope, error response and source-provenance fields. Then write one malicious retrieved sentence and explain why it cannot expand the tool permissions.",
       "assessment": "A reservation tool times out after the database may have committed. Design a retry protocol and the words the agent may safely say before the outcome is known. Include a unique operation identifier and an ownership check.",
       "practice_links": []
@@ -2338,19 +2383,19 @@
           "playbackUrl": "https://www.youtube.com/watch?v=jnedfk5PL2A",
           "segments": [
             {
-              "start": 11,
+              "start": 0,
               "end": 249,
               "label": "Pipeline latency and trace measurement"
             }
           ],
-          "assignment": "Watch only 0:11–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees.",
+          "assignment": "Watch only 0:00–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The publisher’s written guide supports the pipeline and measurement topics in the named chapters. The exact spoken excerpt and its cut points remain unverified.",
+            "method": "transcript-reviewed",
+            "note": "English automatic captions support end-of-speech to audible reply, pipeline components and trace measurement. The excerpt starts at 0:00 to retain the complete introduction.",
             "sources": [
               {
-                "label": "Video’s accompanying latency guide",
-                "url": "https://livekit.com/blog/understand-and-improve-agent-latency"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=jnedfk5PL2A"
               }
             ]
           }
@@ -2364,7 +2409,7 @@
           "assignment": "Read the named article or specified sections: OpenTelemetry — traces concepts. Focus on latency, percentiles, tracing and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "Only 3:58 of the 13:03 guide is required. Optimisation/setup and product promotion are outside the assignment; failure rates and success-only measurement bias remain explicit native requirements.",
+      "videoNote": "Only 4:09 of the 13:03 guide is required. The agent trace omits some network/user-side time. Native work supplies compatible-clock, queue, failure-rate and success-only measurement-bias checks.",
       "pass_criteria": "1. Calculate original and changed user-end-to-audible delays and their difference. 2. Separate queue wait, execution and audible playback using compatible clocks. 3. Report success and timeout counts/rates with explicit latency denominators and endpoint conventions.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "outcomes": [
@@ -2372,7 +2417,7 @@
         "Separate queue wait, execution and audible playback using compatible clocks.",
         "Report success and timeout counts/rates with explicit latency denominators and endpoint conventions."
       ],
-      "study_focus": "Watch 0:11–4:09 of the latency guide. Name the endpoints and trace spans, then calculate the supplied critical path, percentiles and queue waits without running a live service.",
+      "study_focus": "Watch 0:00–4:09 of the latency guide. Name endpoints and trace spans, distinguish agent traces from user-heard latency, then calculate supplied critical paths, percentiles and queue waits without running a service.",
       "practice": "Change tool readiness to 1,900 ms, first synthesis byte to 2,020 and first audible playback to 2,100. Calculate the new response delay and its increase. Then list the data needed to distinguish slow tool execution from time spent waiting in a tool queue.",
       "assessment": "A report excludes five timed-out calls and gives mean latency for 95 successful calls. Design a more honest summary with denominators, failure rate, latency endpoints and tail reporting. State what cannot be inferred without the saved traces.",
       "practice_links": []
@@ -2554,24 +2599,41 @@
           "timingSource": "https://www.youtube.com/watch?v=8Rn5pXCdZWU"
         },
         {
-          "label": "Google — Project Relate and non-standard speech access",
-          "url": "https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/",
-          "playbackUrl": "https://www.youtube.com/watch?v=EU2oCVlzEZk",
-          "progressKey": "video:102",
-          "watchMode": "full",
-          "durationSeconds": 146,
-          "timingSource": "https://www.youtube.com/watch?v=EU2oCVlzEZk",
-          "assignment": "Watch the complete named video, 0:00–2:26. Use the first-person example to identify an access barrier, user control and alternatives when speech recognition fails. This is a 2021 English-language research/product case, not proof of current availability or accuracy for every language, accent or disability. Complete the native multilingual task audit separately.",
+          "label": "CENMAC — Michael Cash on communication access and listener patience",
+          "url": "https://cenmac.com/2024/10/independence-through-technology/",
+          "playbackUrl": "https://www.youtube.com/watch?v=AFYOyunLQ5o",
+          "progressKey": "video:200",
+          "watchMode": "segments",
+          "durationSeconds": 888,
+          "timingSource": "https://www.youtube.com/watch?v=AFYOyunLQ5o",
+          "assignment": "Watch only 7:37–9:45 and 13:15–14:48 (3:41 total). Michael Cash describes communication technology and asks listeners to allow time and support the person’s own answers. He uses Voiceitt in the interview and works as its product specialist; this is one person’s experience with a commercial affiliation, not comparative accuracy evidence. Complete the native multilingual clarify/edit/confirm/cancel/receipt audit and preserve non-speech alternatives.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "Google’s accompanying article supports the historical non-standard-speech accessibility case. The spoken transcript was not retrieved; the lesson’s complete multilingual task audit remains required.",
+            "method": "transcript-reviewed",
+            "note": "The English (UK) captions and complete publisher PDF transcript support the two assigned first-person passages on workplace communication access and agency.",
             "sources": [
               {
-                "label": "Google’s video and accompanying article",
-                "url": "https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/"
+                "label": "Publisher complete interview transcript (PDF)",
+                "url": "https://cenmac.com/wp-content/uploads/2024/10/Mike-Cash-Interview-Transcript.pdf"
+              },
+              {
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=AFYOyunLQ5o"
               }
             ]
-          }
+          },
+          "accessNote": "Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.",
+          "segments": [
+            {
+              "start": 457,
+              "end": 585,
+              "label": "Communication technology in work and everyday tasks"
+            },
+            {
+              "start": 795,
+              "end": 888,
+              "label": "Listener patience and the speaker’s own answers"
+            }
+          ]
         }
       ],
       "readings": [
@@ -2588,7 +2650,7 @@
           "assignment": "Read the named article or specified sections: Hugging Face Audio Course — evaluation metrics for ASR: error-analysis foundation. Focus on accessibility, language switching, equity and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "Core viewing totals 4:30: the 2:26 Project Relate case plus W3C input/output examples of 1:10 and 0:54. The Google case is historical and English-specific; the native/HF/W3C work supplies multilingual analysis and complete-task accessibility.",
+      "videoNote": "Core viewing totals 5:45: CENMAC interview excerpts (3:41) plus W3C input/output (1:10 and 0:54). Michael Cash’s commercial affiliation is explicit; native/HF/W3C work supplies multilingual and complete-task accessibility.",
       "pass_criteria": "1. Preserve clarify, edit, confirm, cancel and receipt controls across voice/text/keyboard. 2. Keep a pending draft when switching modality and avoid forced disability disclosure. 3. State supported languages/locales and investigate mismatches without blaming speakers.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "outcomes": [
@@ -2596,7 +2658,7 @@
         "Keep a pending draft when switching modality and avoid forced disability disclosure.",
         "State supported languages/locales and investigate mismatches without blaming speakers."
       ],
-      "study_focus": "Watch the 2:26 Project Relate case and the short W3C input/output examples. Audit clarify/edit/confirm/cancel/receipt across modes, languages and communication preferences; test claims require appropriate evidence, not a demo.",
+      "study_focus": "Watch the 3:41 CENMAC interview excerpts and W3C input/output examples. Audit clarify/edit/confirm/cancel/receipt across modes, languages and preferences; a first-person product experience is not comparative accuracy evidence.",
       "practice": "Audit the fictional library assistant for a deaf user, a user with variable speech timing, a multilingual user and someone in a noisy shared space. For each, identify one barrier, an alternative task-completion path and an evidence question. Do not infer an individual's needs from a diagnosis.",
       "assessment": "A product adds captions but leaves cancellation available only by speaking within two seconds. Explain why the task remains inaccessible and redesign the cancellation contract, including focus, status and stale-confirmation handling.",
       "practice_links": []
@@ -2690,24 +2752,42 @@
           }
         },
         {
-          "label": "University of Edinburgh — Planning an Open Science Study",
-          "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
-          "progressKey": "video:100",
-          "watchMode": "full",
-          "durationSeconds": 363,
-          "timingSource": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
-          "assignment": "Watch the complete named video, 0:00–6:03. Study planning before results, testable questions, preregistration and a reproducibility checklist. The examples are from psychology; translate the planning principles to the supplied security/speech study. Write a plan only: this does not authorise model calls, new measurements or provider benchmarks. If you already studied this same video in Cyber R02, reuse your notes and apply them to the speech paper; a full replay is unnecessary.",
-          "accessNote": "Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions.",
+          "label": "Center for Open Science — Preregistration: A Plan, Not a Prison",
+          "url": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+          "progressKey": "video:200",
+          "watchMode": "segments",
+          "durationSeconds": 3631,
+          "timingSource": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+          "assignment": "Watch only 2:25–3:53, 5:28–7:38 and 52:04–53:38 (5:12 total). Distinguish preregistration from peer-reviewed registered reports, plan before data access/collection, and specify inclusion/exclusion and analysis decisions. Complete the native reproducibility checklist and fictional study plan; no account creation, new experiments, model calls or benchmarks are assigned. If you studied these same excerpts in Cyber R02, reuse your notes and apply them to the speech paper; a replay is unnecessary.",
+          "accessNote": "Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact presentation slides and accompanying questions support preregistration and the reproducibility checklist. The spoken transcript has not been retrieved.",
+            "method": "transcript-reviewed",
+            "note": "The selected English automatic transcript passages support prospective planning, transparent changes, registration/report distinctions and explicit analysis decisions.",
             "sources": [
               {
-                "label": "Publisher lesson and slides",
-                "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=NzZTtB2qkmg"
               }
             ]
-          }
+          },
+          "playbackUrl": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+          "segments": [
+            {
+              "start": 145,
+              "end": 233,
+              "label": "Definition, transparent updates and embargoes"
+            },
+            {
+              "start": 328,
+              "end": 458,
+              "label": "Registration versus registered reports; when to plan"
+            },
+            {
+              "start": 3124,
+              "end": 3218,
+              "label": "Deciding which methods and analysis rules to specify"
+            }
+          ]
         }
       ],
       "readings": [
@@ -2718,7 +2798,7 @@
           "assignment": "Read the named article or specified sections: NeurIPS — paper checklist and reproducibility guidance. Focus on paper critique, ablations, reproducibility and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "Two short university units total 11:07 and teach reading/planning skills. The speech paper, checklist and native exercise supply the domain-specific comparison, ablation and uncertainty analysis.",
+      "videoNote": "Core viewing totals 10:16. The reading method and prospective-planning excerpts support study design; domain-specific comparisons, ablations, uncertainty and reproducibility artifacts remain paper/native work.",
       "pass_criteria": "1. Separate each paper's claim, method, comparison, data boundary and evidence. 2. Specify one ablation and a falsifiable interpretation with an uncertainty plan. 3. Distinguish saved findings from a proposed future study; invent no measured outcomes.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "outcomes": [
@@ -2726,7 +2806,7 @@
         "Specify one ablation and a falsifiable interpretation with an uncertainty plan.",
         "Distinguish saved findings from a proposed future study; invent no measured outcomes."
       ],
-      "study_focus": "Watch the 5:04 paper-reading method followed by the 6:03 study-planning unit. Apply the NeurIPS checklist to a speech paper and write a bounded study plan; do not invent results or run models.",
+      "study_focus": "Watch the 5:04 paper-reading method and 5:12 COS planning excerpts (or reuse Cyber R02 notes). Apply the checklist to a speech paper and write a bounded plan; invent no results and run no models.",
       "practice": "Choose one assigned primary speech paper from V22–V24 or V29–V41. Write a one-page brief containing the research question, prerequisites, representation, objective, strongest evidence and three limits. Cite section or figure numbers and distinguish author reports from your own inference.",
       "assessment": "Design an ablation for a fictional endpointing system that adds a language cue to VAD. Specify what stays fixed, what changes, population/rights requirements, meaningful outcomes and potential confounds. Include a budget/approval checkpoint before any future execution.",
       "practice_links": []
@@ -2851,12 +2931,12 @@
           "playbackUrl": "https://www.youtube.com/watch?v=VNbzuPt5QYA",
           "assignment": "Watch the complete named video, 0:00–3:22. Identify title, research question, literature gap, method and references, then apply that structure to the voice research proposal. The video describes Leeds Business School’s application context; it does not establish requirements or acceptance at a computing programme.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact Leeds video’s written guide covers title, introduction, literature, methods, references and proofreading. Its full speech remains unverified; the stated application conventions belong to Leeds Business School.",
+            "method": "transcript-reviewed",
+            "note": "The complete English automatic transcript matches proposal title, introduction, literature gap, methods, timeline, references and proofreading.",
             "sources": [
               {
-                "label": "Leeds video and six-step written guide",
-                "url": "https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=VNbzuPt5QYA"
               }
             ]
           }

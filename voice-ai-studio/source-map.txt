@@ -504,14 +504,17 @@ Source notes: Public source assignments are study references, not institutional 
 V23 — Encoder–decoder ASR and Whisper
 Prerequisites: V19, V20, V22
 Path: All learners
-Study assignment: Watch the 5:18 Whisper author presentation, then read the architecture, tasks, training data and limitations. Specify checkpoint, preprocessing, decoding and the data boundary in your fictional report.
-Video coverage/access: The exact Whisper paper now has a short author video. The old attention lecture is optional prerequisite review. The paper and native task supply the detailed specification and hallucination/permission analysis.
+Study assignment: Watch the 6:29 paper-walkthrough excerpts, then read Whisper §2/Figure 1 and limitations. Specify checkpoint, preprocessing, task tokens, decoding and the data boundary in the fictional report.
+Video coverage/access: Core viewing: 6:29 on architecture/task tokens and weakly supervised data. This is an independent walkthrough; the primary paper and native lesson supply exact details, limitations and permission analysis. The older attention lecture remains optional.
 Videos:
-  ICML 2023 / Whisper authors — Robust Speech Recognition via Large-Scale Weak Supervision — https://slideslive.com/39002706
-    Assignment: Watch the complete named video, 0:00–5:18. Watch the authors’ concise Whisper presentation, then identify the training/task setup, encoder–decoder path and reported limitations in the paper. Historical results describe the paper’s checkpoints and test conditions, not every later Whisper release.
-    Access: Open this direct SlidesLive author-presentation page. The original conference page identifies the same recording; its embedded player may fail to load. The complete named presentation is 5:18, not the whole conference or an installation tutorial.
-    Content evidence (teaching-material-reviewed): All ten displayed author slides were inspected: training data, encoder–decoder architecture, task tokens and selected robustness results. Detailed decoding and hallucination analysis remain in the paper and lesson; no spoken transcript was available.
-      Original author presentation: https://slideslive.com/39002706
+  Aleksa Gordić — Whisper paper walkthrough: architecture, tasks and data — https://www.youtube.com/watch?v=AwJf8aQfChE
+    Assignment: Watch only 3:01–7:30 and 10:40–12:40 (6:29 total). Trace log-Mel input, encoder, cross-attending decoder, task/language/timestamp tokens and weakly supervised data filtering. Read paper §2 and Figure 1 for exact details. Skip the later code demonstration. These historical model details do not establish current release performance or authorise an inference run.
+    Watch 3:01–7:30: Encoder–decoder path and task tokens
+    Watch 10:40–12:40: Weak supervision and transcript filtering
+    Access: Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.
+    Content evidence (transcript-reviewed): The creator’s English automatic transcript matches the selected architecture/task-token and training-data passages, checked against the original paper §2/Figure 1.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=AwJf8aQfChE
+      Original Whisper paper — §2 and Figure 1: https://arxiv.org/html/2212.04356v1
   Optional: Carnegie Mellon University Deep Learning — 11785 Spring 22 Lecture 18: Attention Models — https://www.youtube.com/watch?v=q3CmsZFlrnc
     Assignment: Optional attention-model refresher from V19. It does not teach Whisper itself. Use the short Whisper author presentation and the Radford/HF sources for this topic’s model, data and limitations.
 Readings:
@@ -532,14 +535,19 @@ Source notes: Public source assignments are study references, not institutional 
 V24 — Self-supervised and multilingual speech learning
 Prerequisites: V19, V20, V22
 Path: All learners
-Study assignment: Watch the 3:37 wav2vec 2.0 author overview, then draw pretraining and labelled adaptation. Read the separate multilingual work before making language-coverage or transfer claims.
-Video coverage/access: Short author viewing now covers wav2vec 2.0’s pretraining/adaptation mechanism. Multilingual comparison, rights and leakage analysis remain explicit paper/native assignments.
+Study assignment: Watch the four excerpts totalling 7:50, then draw masked context and unmasked target branches plus labelled CTC adaptation. Read the multilingual paper before making transfer or language-coverage claims.
+Video coverage/access: Core viewing: 7:50 from a longer independent paper overview. Extended Gumbel/entropy derivations and implementation are not assigned. The primary paper fixes exact branch/objective details; multilingual evidence and rights/leakage analysis remain separate work.
 Videos:
-  NeurIPS 2020 / wav2vec 2.0 authors — self-supervised speech representations — https://slideslive.com/38937614
-    Assignment: Watch the complete named video, 0:00–3:37. Trace the encoder, masking, contrastive targets and labelled adaptation in the authors’ wav2vec 2.0 explanation. Distinguish unlabelled pretraining from supervised fine-tuning. This original presentation does not establish multilingual performance or coverage; use the multilingual reading for that comparison.
-    Access: Open this direct SlidesLive author-presentation page. The original conference page identifies the same recording; its embedded player may fail to load. The complete named presentation is 3:37, not the whole conference or an installation tutorial.
-    Content evidence (teaching-material-reviewed): All eight displayed author slides were inspected: masked representations, quantised targets, fine-tuning and LibriSpeech comparisons. This short presentation does not establish multilingual performance; no spoken transcript was available.
-      Original author presentation: https://slideslive.com/38937614
+  Priyam Mazumdar — wav2vec 2.0 paper overview: pretraining and adaptation — https://www.youtube.com/watch?v=wmAg1TGa00g
+    Assignment: Watch only 7:38–9:51, 31:15–32:31, 34:12–37:36 and 50:21–51:18 (7:50 total). Draw the convolutional features, masked Transformer context branch and separate unmasked quantized-target branch; distinguish contrastive pretraining from labelled CTC fine-tuning. Use paper §§2–3 for precise objectives and the separate multilingual reading for coverage claims. Skip implementation and the extended Gumbel/entropy derivations.
+    Watch 7:38–9:51: Latent features, masking and quantized targets
+    Watch 31:15–32:31: Why mask spans of audio features
+    Watch 34:12–37:36: Contrastive targets and the diversity objective
+    Watch 50:21–51:18: Labelled CTC fine-tuning
+    Access: Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.
+    Content evidence (transcript-reviewed): English automatic captions support the selected feature/masking, target-comparison and CTC passages; original paper §§2–3 resolves the diagram’s branch structure.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=wmAg1TGa00g
+      Original wav2vec 2.0 paper — §§2–3: https://arxiv.org/html/2006.11477v3
 Readings:
   Baevski et al. — wav2vec 2.0 — https://arxiv.org/abs/2006.11477
     Assignment: Read the named article or specified sections: Baevski et al. — wav2vec 2.0. Focus on wav2vec 2.0, pretraining, adaptation and use the native worked example to check your interpretation.
@@ -558,15 +566,16 @@ Source notes: Public source assignments are study references, not institutional 
 V25 — ASR error analysis, fairness and uncertainty
 Prerequisites: V09, V10, V23, V24
 Path: All learners
-Study assignment: Watch the assigned nine minutes of MIT ASR evaluation teaching. Calculate the supplied edit counts, specify reference/normalisation rules and report subgroup denominators and uncertainty without claiming fairness from an aggregate score.
-Video coverage/access: Core viewing: 5:58–8:09 and 9:33–16:22 of the MIT ASR lecture. The old CTC decoding workshop remains optional. Subgroup inference and consequential errors are taught in the native task and readings.
+Study assignment: Watch the 2:04 WER/reference-quality excerpts. Calculate the supplied minimum edit counts and corpus WER, declare reference/normalisation rules and report subgroup denominators and uncertainty without inferring fairness from an aggregate score.
+Video coverage/access: Core viewing: 2:32–4:17 and 5:01–5:20 (2:04 total) from Google Cloud’s historical explanation. Native examples/readings supply calculation, corpus weighting and subgroup interpretation. The older CTC workshop remains optional.
 Videos:
-  MIT 6.S191 / Rev.AI — WER, benchmarks and data selection — https://introtodeeplearning.com/2022/
-    Assignment: Watch only 5:58–8:09, 9:33–16:22. Work the WER examples, then examine how a benchmark and its data-selection policy change the meaning of a reported score. Apply this to the native subgroup/error table. These 2022 examples are not current product rankings or a complete fairness analysis.
-    Watch 5:58–8:09: Word error rate
-    Watch 9:33–16:22: Test benchmarks and data selection
-    Content evidence (description-only): Chapter labels identify WER, benchmarks and data selection. Their speech and precise cut points remain unverified; the worked lesson and reading supply the error-counting and fairness analysis.
-      Original publisher source: https://introtodeeplearning.com/2022/
+  Google Cloud / Calum Barnes — WER and reference-transcript quality — https://www.youtube.com/watch?v=MzURq2Py4pc
+    Assignment: Watch only 2:32–4:17 and 5:01–5:20 (2:04 total). Identify substitutions, deletions and insertions, the reference-word denominator and why WER can exceed 100%. Then work the native minimum-edit/corpus-WER examples, declare reference/normalisation rules and report subgroup denominators and uncertainty. Skip the API/product walkthrough and fixed-duration sampling advice. No API, lab or model run is assigned.
+    Watch 2:32–4:17: Reference words, edit errors and WER
+    Watch 5:01–5:20: Ground-truth transcript quality
+    Access: Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.
+    Content evidence (transcript-reviewed): The published English transcript correctly defines WER using reference words, distinguishes the three edit errors and explains reference-transcript quality.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=MzURq2Py4pc
   Optional: Carnegie Mellon University Deep Learning — 11785 Spring 22 Recitation 8: CTC Decoding and Beam Search — https://www.youtube.com/watch?v=penbvDelDuA
     Assignment: Optional CTC-decoding/beam-search workshop after V22. It helps explain decoder effects; it does not teach fairness, uncertainty or the complete error-analysis protocol. Use the native error table and HF metrics reading for those.
     Access: CMU Spring 2022 course index calls this Recitation 9; its published video title says Recitation 8. It is the same linked recording.
@@ -712,24 +721,24 @@ V32 — Meaning, dialogue state and conversation repair
 Prerequisites: V03, V13, V25
 Path: All learners
 Study assignment: Read the native state/confirmation explanation, then watch the architecture, flows and repair assignments. Trace slot corrections and invalidate old confirmations before considering a write.
-Video coverage/access: Core viewing totals 19:52 across three focused Rasa units/sections. These are concrete architectural examples; the native exercise supplies proposal-version and authorisation invariants, and no Rasa setup is required.
+Video coverage/access: Core viewing totals 19:09 across architecture, flows and basic repair. The repair excerpt stops at 4:55 before implementation. Native work supplies proposal-version and authorisation invariants; no Rasa setup is required.
 Videos:
   Rasa — architecture of a conversational assistant — https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series
     Assignment: Watch the complete named video, 0:00–4:02. Identify the language-understanding, explicit-logic and response components. Map them to the native proposal/state diagram before the flows example.
     Access: These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.
-    Content evidence (teaching-material-reviewed): The exact video’s written lesson supports commands, dialogue management, flows and responses. It does not establish the studio’s approval/version invariants; the spoken transcript remains unverified.
-      Exact Rasa video and written lesson: https://learning.rasa.com/rasa-pro/architecture-of-an-assistant/
+    Content evidence (transcript-reviewed): Architecture input/understanding, command generation, explicit flows/slots/actions and responses match the full English automatic transcript.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=zzUY5T9I730
   Rasa — flows and explicit conversation logic — https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series
     Assignment: Watch the complete named video, 0:00–10:12. Study flow components, collected values and branching. Map the video’s financial-services flow to the native booking example on paper; explain why extracting a slot is not authorisation to commit a booking.
     Access: These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.
-    Content evidence (teaching-material-reviewed): The exact video’s written lesson uses a financial-services example with slots and branching. Map that example to the studio’s booking task; the spoken transcript remains unverified.
-      Exact Rasa video and written lesson: https://learning.rasa.com/rasa-pro/flows/
+    Content evidence (transcript-reviewed): The full English automatic transcript demonstrates collected values, validation, branching and explicit business logic in banking flows.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=v1l75qxo4b0
   Rasa — conversation repair and deviations from the happy path — https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series
-    Assignment: Watch only 0:00–5:38. Watch the introduction, repair patterns and advanced correction cases only. Distinguish a correction or clarification from confirmation of the current proposal version. Skip the later framework-customisation and handoff implementation.
-    Watch 0:00–5:38: Repair concepts and correction patterns
+    Assignment: Watch only 0:00–4:55 (4:55 total). Identify the basic repair patterns: corrections, cancellation, clarification, chitchat, errors and handoff. Distinguish these from confirmation of the current proposal version in the native case. Stop before the framework implementation examples; no Rasa setup is required.
+    Watch 0:00–4:55: Repair patterns and deviations from the happy path
     Access: These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.
-    Content evidence (teaching-material-reviewed): The exact video’s written lesson explains corrections, digressions, cancellations and repair patterns. The chosen excerpt’s spoken boundaries remain unverified.
-      Exact Rasa video and written lesson: https://learning.rasa.com/rasa-pro/deviations-from-happypath/
+    Content evidence (transcript-reviewed): English automatic captions support repair definitions, correction/cancellation, clarification, chitchat, errors and handoff; the excerpt now stops before implementation examples.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=TREEZ-vT90I
 Readings:
   Jurafsky & Martin, August 2026 draft — Appendix K: Frame-based Dialogue Systems — https://web.stanford.edu/~jurafsky/slp3/K.pdf
     Assignment: Read the complete named chapter/paper: Jurafsky & Martin, August 2026 draft — Appendix K: Frame-based Dialogue Systems. Follow its definitions and worked examples, then state which assumptions apply to the native exercise.
@@ -745,8 +754,8 @@ Source notes: Public source assignments are study references, not institutional 
 V33 — LLMs, retrieval and permissioned tools for voice
 Prerequisites: V19, V32
 Path: All learners
-Study assignment: Watch only the 6:14 RAG pipeline passage. Keep retrieved evidence, generated answers and tool authority separate in the native operation/idempotency exercise.
-Video coverage/access: Core RAG viewing is 2:22–8:36 (6:14). Retrieval and generated context are illustrated; permissioned actions, safe retries and truthful pending states remain separate native/readings work.
+Study assignment: Watch the 6:14 RAG passage and the two action excerpts totalling 4:19. Keep retrieved evidence, generated answers and tool authority separate in the native operation/idempotency exercise.
+Video coverage/access: Core viewing totals 10:33: RAG at 2:22–8:36 plus actions at 0:45–2:14 and 7:03–9:53. Permission checks, safe retries and truthful pending states remain native/readings work.
 Videos:
   Conf42 / Alejandro Duarte — retrieval, context and generation — https://www.conf42.com/Database_DevOps_2026_Alejandro_Duarte_llm_vectors_semantic
     Assignment: Watch only 2:22–8:36. Trace product data → embeddings → retrieval → prompt context → generated answer. This is an architecture illustration; no Java, MariaDB installation or provider calls are needed. RAG can reduce some errors but does not guarantee truth, grant access to private data or authorise a tool write. Complete the native permission/idempotency exercise separately.
@@ -755,12 +764,12 @@ Videos:
       Organiser video and readable transcript: https://www.conf42.com/Database_DevOps_2026_Alejandro_Duarte_llm_vectors_semantic
       Organiser timed transcript: https://github.com/conf42/src/blob/main/srt/dbd2026_Alejandro_Duarte.srt
   Rasa — action types and custom tools — https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series
-    Assignment: Watch only 0:46–2:14, 7:03–9:53. Watch action types and the custom-action example only. Separate a model’s action request from the server-side validation, identity and permission checks required by the native tool contract. The video’s function execution example is not an authorisation design.
-    Watch 0:46–2:14: Types of actions
+    Assignment: Watch only 0:45–2:14, 7:03–9:53. Watch action types and the custom-action example only. Separate a model’s action request from the server-side validation, identity and permission checks required by the native tool contract. The video’s function execution example is not an authorisation design.
+    Watch 0:45–2:14: Types of actions
     Watch 7:03–9:53: Custom actions
     Access: These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.
-    Content evidence (teaching-material-reviewed): The exact video’s written lesson explains response/default/custom actions and a funds-check example. Execution is distinct from authorisation; the chosen excerpt’s speech remains unverified.
-      Exact Rasa video and written lesson: https://learning.rasa.com/rasa-pro/custom-actions/
+    Content evidence (transcript-reviewed): English automatic captions match action categories and the named custom-action/slot/server example in the selected passages.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=yhuc2i29cS0
 Readings:
   OWASP — LLM prompt injection prevention cheat sheet — https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html
     Assignment: Read the named article or specified sections: OWASP — LLM prompt injection prevention cheat sheet. Focus on retrieval, tool contracts, authorisation and use the native worked example to check your interpretation.
@@ -844,14 +853,14 @@ Source notes: Public source assignments are study references, not institutional 
 V37 — Latency budgets, buffers and traces
 Prerequisites: V09, V34, V35, V36
 Path: All learners
-Study assignment: Watch 0:11–4:09 of the latency guide. Name the endpoints and trace spans, then calculate the supplied critical path, percentiles and queue waits without running a live service.
-Video coverage/access: Only 3:58 of the 13:03 guide is required. Optimisation/setup and product promotion are outside the assignment; failure rates and success-only measurement bias remain explicit native requirements.
+Study assignment: Watch 0:00–4:09 of the latency guide. Name endpoints and trace spans, distinguish agent traces from user-heard latency, then calculate supplied critical paths, percentiles and queue waits without running a service.
+Video coverage/access: Only 4:09 of the 13:03 guide is required. The agent trace omits some network/user-side time. Native work supplies compatible-clock, queue, failure-rate and success-only measurement-bias checks.
 Videos:
   LiveKit — latency components and measuring a voice-agent trace — https://livekit.com/blog/understand-and-improve-agent-latency
-    Assignment: Watch only 0:11–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees.
-    Watch 0:11–4:09: Pipeline latency and trace measurement
-    Content evidence (teaching-material-reviewed): The publisher’s written guide supports the pipeline and measurement topics in the named chapters. The exact spoken excerpt and its cut points remain unverified.
-      Video’s accompanying latency guide: https://livekit.com/blog/understand-and-improve-agent-latency
+    Assignment: Watch only 0:00–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees.
+    Watch 0:00–4:09: Pipeline latency and trace measurement
+    Content evidence (transcript-reviewed): English automatic captions support end-of-speech to audible reply, pipeline components and trace measurement. The excerpt starts at 0:00 to retain the complete introduction.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=jnedfk5PL2A
 Readings:
   OpenTelemetry — traces concepts — https://opentelemetry.io/docs/concepts/signals/traces/
     Assignment: Read the named article or specified sections: OpenTelemetry — traces concepts. Focus on latency, percentiles, tracing and use the native worked example to check your interpretation.
@@ -910,8 +919,8 @@ Source notes: Public source assignments are study references, not institutional 
 V40 — Accessible and multilingual voice products
 Prerequisites: V13, V24, V25, V31, V36, V38
 Path: All learners
-Study assignment: Watch the 2:26 Project Relate case and the short W3C input/output examples. Audit clarify/edit/confirm/cancel/receipt across modes, languages and communication preferences; test claims require appropriate evidence, not a demo.
-Video coverage/access: Core viewing totals 4:30: the 2:26 Project Relate case plus W3C input/output examples of 1:10 and 0:54. The Google case is historical and English-specific; the native/HF/W3C work supplies multilingual analysis and complete-task accessibility.
+Study assignment: Watch the 3:41 CENMAC interview excerpts and W3C input/output examples. Audit clarify/edit/confirm/cancel/receipt across modes, languages and preferences; a first-person product experience is not comparative accuracy evidence.
+Video coverage/access: Core viewing totals 5:45: CENMAC interview excerpts (3:41) plus W3C input/output (1:10 and 0:54). Michael Cash’s commercial affiliation is explicit; native/HF/W3C work supplies multilingual and complete-task accessibility.
 Videos:
   W3C WAI — Speech Recognition accessibility demonstration — https://www.w3.org/WAI/perspective-videos/voice/
     Assignment: Assigned viewing: 0:00–1:10. Watch the complete short demonstration for speech-input access and failure barriers. Read the terminology correction; it does not establish multilingual/accent accuracy.
@@ -919,10 +928,14 @@ Videos:
   W3C WAI — Text to Speech accessibility demonstration — https://www.w3.org/WAI/perspective-videos/speech/
     Assignment: Assigned viewing: 0:00–0:54. Watch the complete short output-access demonstration. Relate speech, text alternatives and user control to the native accessibility exercise; complete multilingual error analysis separately.
     Access: The original W3C page also offers a transcript, captions and an audio-described version.
-  Google — Project Relate and non-standard speech access — https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/
-    Assignment: Watch the complete named video, 0:00–2:26. Use the first-person example to identify an access barrier, user control and alternatives when speech recognition fails. This is a 2021 English-language research/product case, not proof of current availability or accuracy for every language, accent or disability. Complete the native multilingual task audit separately.
-    Content evidence (teaching-material-reviewed): Google’s accompanying article supports the historical non-standard-speech accessibility case. The spoken transcript was not retrieved; the lesson’s complete multilingual task audit remains required.
-      Google’s video and accompanying article: https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/
+  CENMAC — Michael Cash on communication access and listener patience — https://cenmac.com/2024/10/independence-through-technology/
+    Assignment: Watch only 7:37–9:45 and 13:15–14:48 (3:41 total). Michael Cash describes communication technology and asks listeners to allow time and support the person’s own answers. He uses Voiceitt in the interview and works as its product specialist; this is one person’s experience with a commercial affiliation, not comparative accuracy evidence. Complete the native multilingual clarify/edit/confirm/cancel/receipt audit and preserve non-speech alternatives.
+    Watch 7:37–9:45: Communication technology in work and everyday tasks
+    Watch 13:15–14:48: Listener patience and the speaker’s own answers
+    Access: Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.
+    Content evidence (transcript-reviewed): The English (UK) captions and complete publisher PDF transcript support the two assigned first-person passages on workplace communication access and agency.
+      Publisher complete interview transcript (PDF): https://cenmac.com/wp-content/uploads/2024/10/Mike-Cash-Interview-Transcript.pdf
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=AFYOyunLQ5o
 Readings:
   W3C — Making Audio and Video Media Accessible — https://www.w3.org/WAI/media/av/
     Assignment: Read the named article or specified sections: W3C — Making Audio and Video Media Accessible. Focus on accessibility, language switching, equity and use the native worked example to check your interpretation.
@@ -959,18 +972,21 @@ Source notes: Public source assignments are study references, not institutional 
 V42 — Read research and design defensible studies
 Prerequisites: V10, V25, V31, V39, V41
 Path: All learners
-Study assignment: Watch the 5:04 paper-reading method followed by the 6:03 study-planning unit. Apply the NeurIPS checklist to a speech paper and write a bounded study plan; do not invent results or run models.
-Video coverage/access: Two short university units total 11:07 and teach reading/planning skills. The speech paper, checklist and native exercise supply the domain-specific comparison, ablation and uncertainty analysis.
+Study assignment: Watch the 5:04 paper-reading method and 5:12 COS planning excerpts (or reuse Cyber R02 notes). Apply the checklist to a speech paper and write a bounded plan; invent no results and run no models.
+Video coverage/access: Core viewing totals 10:16. The reading method and prospective-planning excerpts support study design; domain-specific comparisons, ablations, uncertainty and reproducibility artifacts remain paper/native work.
 Videos:
   University of Minnesota Libraries — reading research papers critically — https://www.youtube.com/watch?v=t2K6mJkSWoA
     Assignment: Watch the complete named video, 0:00–5:04. Use the paper-reading method to separate a speech paper’s question, contribution, comparison and limitations. Research formats differ; locate equivalent sections rather than insisting on biomedical headings. Work the native claim/evidence table and the assigned NeurIPS checklist. If you already studied this same video in Cyber R01, reuse your notes and apply them to the speech paper; a full replay is unnecessary.
     Content evidence (transcript-reviewed): The university-hosted timed captions support the reading-order, claim/evidence and note-taking assignment. Adapt the article-section names to the security or speech paper.
       University video and captions: https://mediaspace.umn.edu/media/t/1_rfb6wt56
-  University of Edinburgh — Planning an Open Science Study — https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html
-    Assignment: Watch the complete named video, 0:00–6:03. Study planning before results, testable questions, preregistration and a reproducibility checklist. The examples are from psychology; translate the planning principles to the supplied security/speech study. Write a plan only: this does not authorise model calls, new measurements or provider benchmarks. If you already studied this same video in Cyber R02, reuse your notes and apply them to the speech paper; a full replay is unnecessary.
-    Access: Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions.
-    Content evidence (teaching-material-reviewed): The exact presentation slides and accompanying questions support preregistration and the reproducibility checklist. The spoken transcript has not been retrieved.
-      Publisher lesson and slides: https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html
+  Center for Open Science — Preregistration: A Plan, Not a Prison — https://www.youtube.com/watch?v=NzZTtB2qkmg
+    Assignment: Watch only 2:25–3:53, 5:28–7:38 and 52:04–53:38 (5:12 total). Distinguish preregistration from peer-reviewed registered reports, plan before data access/collection, and specify inclusion/exclusion and analysis decisions. Complete the native reproducibility checklist and fictional study plan; no account creation, new experiments, model calls or benchmarks are assigned. If you studied these same excerpts in Cyber R02, reuse your notes and apply them to the speech paper; a replay is unnecessary.
+    Watch 2:25–3:53: Definition, transparent updates and embargoes
+    Watch 5:28–7:38: Registration versus registered reports; when to plan
+    Watch 52:04–53:38: Deciding which methods and analysis rules to specify
+    Access: Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.
+    Content evidence (transcript-reviewed): The selected English automatic transcript passages support prospective planning, transparent changes, registration/report distinctions and explicit analysis decisions.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=NzZTtB2qkmg
 Readings:
   NeurIPS — paper checklist and reproducibility guidance — https://neurips.cc/public/guides/PaperChecklist
     Assignment: Read the named article or specified sections: NeurIPS — paper checklist and reproducibility guidance. Focus on paper critique, ablations, reproducibility and use the native worked example to check your interpretation.
@@ -1020,8 +1036,8 @@ Video coverage/access: The short university video teaches proposal structure. It
 Videos:
   University of Leeds — structuring a research proposal — https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal
     Assignment: Watch the complete named video, 0:00–3:22. Identify title, research question, literature gap, method and references, then apply that structure to the voice research proposal. The video describes Leeds Business School’s application context; it does not establish requirements or acceptance at a computing programme.
-    Content evidence (teaching-material-reviewed): The exact Leeds video’s written guide covers title, introduction, literature, methods, references and proofreading. Its full speech remains unverified; the stated application conventions belong to Leeds Business School.
-      Leeds video and six-step written guide: https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal
+    Content evidence (transcript-reviewed): The complete English automatic transcript matches proposal title, introduction, literature gap, methods, timeline, references and proofreading.
+      Published English transcript — open Show transcript: https://www.youtube.com/watch?v=VNbzuPt5QYA
 Readings:
   Edinburgh — Speech and Language Processing MSc — https://study.ed.ac.uk/programmes/postgraduate-taught/290-speech-and-language-processing
     Assignment: Read the named article or specified sections: Edinburgh — Speech and Language Processing MSc. Focus on specialisation, literature review, proposal and use the native worked example to check your interpretation.

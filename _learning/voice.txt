@@ -823,6 +823,8 @@ TEACHING:: Separate acoustic evidence from language plausibility. A common phras
 
 Teacher forcing makes the training context different from free-running generation. A mistaken generated token can influence later choices. Decoding parameters, chunking, language selection and prompt context can alter outputs; compare systems under an explicit setup rather than treating the model name as a complete specification.
 
+In the assigned diagram, distinguish log magnitude from the Mel frequency scale: Mel is a nonlinear perceptual mapping, not simply a logarithmic frequency axis. The input also passes through a convolutional stem before the Transformer encoder; Figure 1 and §2 specify the complete path.
+
 Whisper is a useful research example of large-scale weakly supervised training and a multitask sequence-to-sequence design. Its published capabilities are bounded by the paper's data and measurements. A specific checkpoint, deployment wrapper or updated implementation needs its own documented contract and evidence.
 EXAMPLE:: Fictional audio reference: “reserve an atlas”.
 Candidate output A: “reserve an atlas”
@@ -850,6 +852,8 @@ BRIDGE:: V19 introduced learned representations, V20 dataset governance and V22 
 CONCEPT:: Self-supervised speech learning uses large collections of audio to learn representations before or alongside a labelled task. It can reduce dependence on manually transcribed data for some settings, but does not make language coverage, annotation quality or representativeness irrelevant.
 MECHANISM:: In wav2vec 2.0, a feature encoder processes waveform input, masked latent spans create a prediction task, and contextual representations are trained with a contrastive objective involving quantised targets. Supervised adaptation can then connect representations to transcript labels, often with CTC. Other self-supervised approaches use different targets and objectives.
 TEACHING:: Separate pretraining from adaptation. A model may have heard many hours of audio but still need labelled examples for a particular output vocabulary, language or deployment condition. The presence of unlabelled data does not establish that the learned features support every intended task equally well.
+
+Keep the two branches distinct: the Transformer receives continuous latent features with selected spans masked; the quantizer builds targets from the unmasked latent features. Quantized targets are not the Transformer input. The contrastive objective makes the correct target more similar to its contextual vector relative to negatives; the diversity term discourages collapse to a few codebook choices.
 
 Masking asks the contextual network to use surrounding information to distinguish appropriate targets. It does not mean the model literally fills in every missing waveform sample. Targets, time resolution and objective details matter; read them rather than treating self-supervision as one universal algorithm.
 
@@ -1423,7 +1427,7 @@ WRONG2:: Automatic permission to perform any action a voice requests.
 FEEDBACK:: Concurrency is a capability. Useful conversation, accessibility, authority and performance are separate properties.
 
 ID:: V42
-BRIDGE:: V10 supplies experimental boundaries, V25 and V31 measurement limits, and V39–V41 deployment/research context. This is a paper-reading and study-design workshop. Do not run a new experiment, model comparison or scoring harness.
+BRIDGE:: V10 supplies experimental boundaries, V25 and V31 measurement limits, and V39–V41 deployment/research context. Preregistration records a prospective plan and transparent deviations; a registered report adds peer review and in-principle acceptance before results. Neither guarantees a well-designed study. This is a paper-reading and study-design workshop. Do not run a new experiment, model comparison or scoring harness.
 CONCEPT:: Research reading means reconstructing what a paper claims, what evidence supports it and where that evidence stops. A research contribution is more than combining popular tools; it answers a defensible question with methods and reasoning that withstand criticism.
 MECHANISM:: Separate the problem, hypothesis, method, comparison, results and limitations. An ablation changes a component to investigate its role, but its interpretation depends on controls and fair budgets. Reproducibility includes data/rights, code revisions, environment, configuration, saved outputs and analysis conventions.
 TEACHING:: Read in passes. First inspect title, abstract, figures and conclusion to understand the proposed contribution. Next trace one central claim to its table, metric and dataset. Finally inspect methods, baselines, exclusions, uncertainty and limitations. Record unfamiliar prerequisites and repair them through earlier topics rather than guessing.
