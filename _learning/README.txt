@@ -142,3 +142,6 @@ MIT R03 now stops at 48:13, before recognition/fame advice, after a timed-captio
 check. ASHA examples need the existing C07/C11 inclusion/assent foundations via
 P03; their historical compliance ratings and case-specific cut-offs are for
 critical study, not universal diagnostic or treatment rules.
+
+Release 20261030-7 also aligns the R03 topic-level overview with the 6:43
+transcript-checked excerpt and refreshes the entry/data cache versions together.

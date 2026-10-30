@@ -216,4 +216,6 @@ test("content evidence stays attached to the reviewed assignment and exposes unr
   const defence = topics["cyber-studio/R03"].videos.find((r) => r.progressKey === "video:100");
   assert.equal(defence.segments[0].start, 2490);
   assert.equal(defence.segments[0].end, 2893);
+  assert.match(topics["cyber-studio/R03"].videoNote, /6:43/, "R03: obsolete core-viewing duration");
+  assert.doesNotMatch(topics["cyber-studio/R03"].videoNote, /11:36/);
 });

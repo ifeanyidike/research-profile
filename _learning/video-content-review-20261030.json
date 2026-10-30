@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "release": "20261030-6",
+  "release": "20261030-7",
   "scope": "The 43 new assignments and one narrowed existing WebRTC recording from release 20261030-5; 44 assignments, 42 distinct recordings. This is a qualitative source/content review, not automated scoring.",
   "methods": {
     "transcript-reviewed": "Complete publisher transcript/timed captions read and compared with the assigned lesson component.",
