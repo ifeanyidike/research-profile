@@ -25,6 +25,20 @@ def parse(path):
             raise ValueError('Text before field: ' + line)
     return {id: {k: v.strip() for k, v in lesson.items()} for id, lesson in blocks.items()}
 
+def resource_lines(items):
+    lines = []
+    def clock(seconds):
+        hours, remainder = divmod(seconds, 3600)
+        minutes, seconds = divmod(remainder, 60)
+        return (f'{hours}:{minutes:02}:' if hours else f'{minutes}:') + f'{seconds:02}'
+    for r in items:
+        lines.append('  ' + ('Optional: ' if r.get('optional') else '') + r['label'] + ' — ' + r['url'])
+        if r.get('assignment'): lines.append('    Assignment: ' + r['assignment'])
+        for segment in r.get('segments', []):
+            lines.append('    Watch ' + clock(segment['start']) + '–' + clock(segment['end']) + ': ' + segment['label'])
+        if r.get('accessNote'): lines.append('    Access: ' + r['accessNote'])
+    return lines
+
 def build(check=False):
     maps = json.loads((SOURCE / 'maps.json').read_text())
     for subject in ('voice', 'child'):
@@ -70,10 +84,10 @@ def build(check=False):
         lines=[data['name'], '='*len(data['name']), '', 'Source map reviewed 30 October 2026. Original lessons and fictional exercises; external providers own their materials.', '']
         for m in modules:
             lines += [m['id']+' — '+m['title'], 'Prerequisites: '+(', '.join(m['prerequisites']) or 'None'), 'Path: '+m.get('audienceLabel','All learners'), 'Study assignment: '+m['study_focus'], 'Video coverage/access: '+m['videoNote'], 'Videos:']
-            lines += ['  '+r['label']+' — '+r['url'] for r in m['videos']]
+            lines += resource_lines(m['videos'])
             if not m['videos']: lines += ['  No video assigned; follow the coverage note above.']
-            lines += ['Readings:']+['  '+r['label']+' — '+r['url'] for r in m['readings']]
-            lines += ['Additional practical materials:']+['  '+r['label']+' — '+r['url'] for r in m['practice_links']] if m['practice_links'] else []
+            lines += ['Readings:']+resource_lines(m['readings'])
+            lines += ['Additional practical materials:']+resource_lines(m['practice_links']) if m['practice_links'] else []
             lines += ['Practical: '+m['practice'], 'Independent assessment: '+m['assessment'], 'Pass criteria: '+m['pass_criteria'], 'Source notes: '+m['note'], '']
         if check:
             assert (dest/'source-map.txt').read_text() == '\n'.join(lines), 'Source map is stale'

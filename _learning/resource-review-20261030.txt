@@ -1,0 +1,86 @@
+Three-studio resource review — 30 October 2026
+Release 20261030-4
+
+Scope and method
+177 topics: Cyber 93, Voice AI 44, Child Development 40.
+Baseline: 734 assignments, 566 distinct public URLs. Every baseline URL was
+requested. Publisher pages, titles, uploader identities, available descriptions,
+chapter boundaries and transcripts were compared with lesson assignments. 36 PDF
+and 11 slide decks were downloaded/extracted to check their identities and topic
+coverage. A successful page request is not evidence of full video playback.
+Final catalogue: 304 video assignments, 410 readings and 39 practical links.
+123 explicitly bounded YouTube excerpts, plus named clips/sections on provider
+pages. Whole lectures remain where their connected argument is required.
+
+Principal corrections
+- Cyber O01: replace the full CS50 Scratch/AI lecture with a 2:16 files/folders
+  demonstration, MDN file operations and Mozilla address-bar/bookmark guidance.
+- Cyber M01: keep CS50 binary/ASCII/Unicode only at 16:06–44:57. Programming,
+  Scratch and the AI opening are outside this assignment. Remove the unresolved
+  Khan logarithm URL; the existing focused StatQuest explanation remains.
+- Bound CS50 Python/C/web, shell/Git, introductory AI and selected security
+  recordings using published chapter boundaries. Separate optional refreshers.
+- N03: remove an unrelated network-defence lecture from the DHCP/link-layer
+  assignment. Add the publisher-linked DHCP excerpt and correct socket numbering.
+- W01: add focused browser-inspection and PortSwigger Proxy demonstrations.
+- D03/D05: use identity/MFA/Key Vault and Sentinel excerpts rather than the whole
+  product survey. D02 labels Kerberos context optional, separate from AD teaching.
+- D07: remove an unavailable MITRE conclusion, preserving the substantive case.
+- A07: identify Anderson chapter 13 correctly as Locks and Alarms; it is optional
+  physical context, not a substitute for safety engineering.
+- Voice V01: replace advanced feature-engineering with W3C speech-input and
+  text-to-speech demonstrations. Distinguish speech from speaker recognition.
+- V04: add modules/JSON preparation. V14/V16: put filter-dependent source-filter
+  mechanics after filters. V08: derivative/chain-rule clips precede network depth.
+- V18/V19: focused network/backpropagation/attention explanations replace premature
+  TTS-specific teaching. Long CMU lectures are optional further study.
+- V21: add introductory HMM/state/Viterbi teaching before training overviews.
+- V20/V23/V25/V35/V40: label historical or narrow video coverage honestly; the
+  native lesson and exact papers/current documentation supply the remaining work.
+- V28: verified module page exposes the exact tokenisation, pronunciation and
+  prosody units. V29: assign only 41:06–58:18 of the historical 2019 end-to-end
+  talk; Tacotron 2 and VITS papers remain the architecture authorities.
+- V26/V30/V41: assign speech metrics, codec and AudioLM/Moshi sections, skipping
+  unrelated demonstrations, music detours and Q&A.
+- Child: specific NHS independence, foundation-skills, gross-motor and sensory
+  clips replace broad workshop requirements. Restricted NHS Vimeo clips remain
+  on their original NHS pages, identified by their actual names/subtitles.
+- C04: CDC's current index is 0–5; use the Johns Hopkins 6–12 source for school-age
+  examples. C12: replace a redirected relaxation page with Leeds NHS sleep-by-age.
+- P03/P06/G06: add multilingual-assessment, voice/feeding and OT evidence-boundary
+  references. IRIS challenge clips are case introductions, not complete methods.
+- WHO CST age range, NICE autistic-under-19 population, ASHA CE access and WWC
+  single-case sections are explicit. UNICEF's long launch webinar is optional.
+- Every resource now has an assignment guide; unsupported video topics remain
+  openly reading-led. No adjacent video is presented as complete topic coverage.
+
+Implementation and learner records
+The shared renderer shows assignments, optional status, full running times when
+verified, exact start/stop points and source access notes. YouTube start/end are
+absolute seconds. Embedded clips preserve both; external YouTube links seek to
+the start and tell the learner where to stop. Single clips do not inherit a course
+playlist. Multi-clip publisher pages are not misrepresented by their first iframe.
+Players load only after a click, receive keyboard focus and meet the 200px minimum
+height on narrow screens. Source-map downloads retain the assignments.
+Replacement resources receive unused progress identifiers. Moving an existing
+resource preserves its original identifier; old completions cannot falsely check
+new material. No progress schema, account, RLS or callback change is needed.
+
+Verification and boundaries
+38 offline tests cover URL bounds, escaped rendering, prerequisite packaging,
+backup/account behaviour and actual store-to-card completion identity. Mutations
+that discard end bounds or substitute array-index keys fail the relevant tests.
+Browser resource-page sweep checks all 177 topics against the authored catalogue.
+Production Jekyll and repository-wide formatting checks are required for release.
+
+Initial HTTP checks: 523 responses were 200, 29 were 406, 13 were 403 and one
+request timed out. Some 200 pages are access challenges; these are not treated as
+content verification. Six initially incomplete slide downloads were retried once;
+all 47 document identities became readable. Provider blocks, account restrictions,
+full playback and caption accuracy remain distinct from source alignment.
+This review did not watch every complete external recording, validate every claim
+in whole external textbooks, assess clinical treatment suitability or establish
+graduate competence. No CAPTCHA bypass, provider inference, replay/evaluation,
+training run, live lab execution, real child data or synthetic signup email was
+used. Clinical cases remain educational and fictional. Fresh OAuth, email recovery
+and actual two-device sync are outside this resource-renderer change.

@@ -94,3 +94,13 @@ after the first review, then 30 days after the second. The third ends the cycle.
 Videos use click-to-load youtube-nocookie embeds where an supported YouTube source is
 available, preserving chapter start and playlist parameters, and always retain a link to the provider. Embedded players may be
 unavailable; content, captions, accounts and pricing remain provider-controlled.
+
+Resource review — 30 October 2026
+--------------------------------
+Per-resource assignment/watchMode/segments are now maintained in curriculum.json.
+Use shared learning-studio/resources.js; cyber-studio/video.js re-exports the shared
+URL helper. Retain progressKey when reordering the same material; allocate unused
+100+ numeric keys for replacements. The old O01 Scratch/AI source is replaced by
+a short file-management demonstration. It remains only as a bounded binary/text
+encoding excerpt in M01. See _learning/README.txt for the authoring contract and
+_learning/resource-review-20261030.txt for audit coverage and limitations.

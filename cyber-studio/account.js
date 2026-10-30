@@ -1,5 +1,5 @@
 // Account records live in a dedicated table; Algo Studio's documents are untouched.
-import { parseBackup, mergeRecords, sameRecord, sameLessons } from "./model.js?v=20261029-2";
+import { parseBackup, mergeRecords, sameRecord, sameLessons } from "./model.js?v=20261030-4";
 export class Account {
   constructor({ client, ids, switchUser, store, status, changed }) {
     Object.assign(this, { client, ids, switchUser, store, status, changed });

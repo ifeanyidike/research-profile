@@ -19,11 +19,15 @@ test("memory-only guest and account work survives scope changes without mixing",
   assert.equal(get("guest").exportBackup("ifeanyi", "Guest").lessons.O01.values.notes, "guest pending");
   assert.equal(get("account:a").exportBackup("ifeanyi", "A").lessons.O01.values.notes, "A pending");
 });
-test("inline sources preserve chapters, durations and series", () => {
+test("inline sources preserve excerpt boundaries without enrolling a single video in a playlist", () => {
   assert.equal(new URL(videoEmbed("https://www.youtube.com/watch?v=-FJqb60wPSY&t=1629")).searchParams.get("start"), "1629");
   assert.equal(new URL(videoEmbed("https://youtu.be/-FJqb60wPSY?t=1h22m32s")).searchParams.get("start"), "4952");
   assert.equal(
     new URL(videoEmbed("https://www.youtube.com/watch?v=THOGnEqoStQ&list=PLLGRmm150VfC6p5RMJDMe1ZgliqDfXhvd")).searchParams.get("list"),
+    null
+  );
+  assert.equal(
+    new URL(videoEmbed("https://www.youtube.com/playlist?list=PLLGRmm150VfC6p5RMJDMe1ZgliqDfXhvd")).searchParams.get("list"),
     "PLLGRmm150VfC6p5RMJDMe1ZgliqDfXhvd"
   );
   assert.ok(videoEmbed("https://video.cs50.io/JP7ITIXGpHk").endsWith("JP7ITIXGpHk"));

@@ -1,5 +1,5 @@
 {
-  "reviewed": "30 October 2026 — second review",
+  "reviewed": "30 October 2026 — three-studio video and resource review",
   "scope": "Source-page and metadata inspection, prerequisite closure and original instructional cases. HTTP availability is not video playback or clinical validation.",
   "corrections": [
     "ASHA soft-404 public and professional URLs replaced with current topic pages.",
@@ -16,10 +16,16 @@
     "Youth.gov adolescent-development segments and a provider-linked Moshi/audio-LM talk fill three previously reading-led topics.",
     "C12 no longer assigns a sensory workshop as health/swallowing teaching; its video gap is explicit.",
     "An unavailable historical PyCon async video was rejected rather than labelled verified.",
-    "OpenStax anatomy sections and D2L regression/classification chapters are directly assigned; NICE population/section limits are explicit."
+    "OpenStax anatomy sections and D2L regression/classification chapters are directly assigned; NICE population/section limits are explicit.",
+    "Cyber orientation Scratch/AI mismatch replaced; binary/encoding chapters retained only in the maths bridge with exact bounds.",
+    "All three studios now display per-resource viewing/reading scope, optional extensions, bounded start/end excerpts and stable source completion identities.",
+    "Voice orientation uses short W3C input/output demonstrations; neural/backpropagation/attention teaching now has focused visual explanations with long CMU material optional.",
+    "Introductory HMM/state-sequence/Viterbi material now precedes connected-speech/training overviews. Detailed source-filter mechanics follow the filter lesson.",
+    "Child OT assignments now identify specific NHS modules. CDC school-age scope and redirected sleep-resource attribution are corrected.",
+    "Narrow webinars, decoder-only talks and historical API material are labelled as limited/optional coverage, not complete teaching of unrelated topics."
   ],
   "unverified_public_video_topics": {
-    "voice": ["V24", "V27", "V32", "V33", "V34", "V36", "V37", "V38", "V39", "V40", "V42", "V43", "V44"],
+    "voice": ["V24", "V27", "V32", "V33", "V34", "V36", "V37", "V38", "V39", "V42", "V43", "V44"],
     "child": ["C04", "C07", "C11", "C12", "G04", "G11", "G12", "P03", "P04", "P05", "P12", "P14"]
   },
   "limitations": [
@@ -27,6 +33,15 @@
     "Some sources block automated requests or require provider accounts; access notes and alternative original lessons/readings remain visible.",
     "Clinical competence and individual treatment suitability are not assessed; cases are fictional and formal training/supervision are separate.",
     "Hosted storage isolation/merge checks and callback configuration were verified on 30 October 2026; fresh OAuth/email/recovery and actual two-device sign-in remain untested.",
-    "Second-review public-page audit checked 189 distinct existing source/video URLs plus selected additions. HTTP 403/406/timeouts are unresolved access checks, not proof a source is missing. YouTube title/uploader metadata was checked; full playback/captions were not."
-  ]
+    "Second-review public-page audit checked 189 distinct existing source/video URLs plus selected additions. HTTP 403/406/timeouts are unresolved access checks, not proof a source is missing. YouTube title/uploader metadata was checked; full playback/captions were not.",
+    "This follow-up checked all 566 distinct baseline assignment URLs and inspected public publisher/video metadata, available transcripts and PDF/slide identities. Not every complete recording/caption track or every claim in an external textbook was independently validated. Some sources impose browser/account checks; no CAPTCHA was bypassed."
+  ],
+  "limited_video_coverage": {
+    "V20": "Classical TTS data examples are optional; dataset/consent/licensing teaching is native/text-led.",
+    "V23": "Attention refresher is optional; Whisper teaching is in the native lesson and exact paper.",
+    "V25": "CTC decoding workshop is optional; fairness and error analysis use the native task and scoped reading.",
+    "V35": "Historical WebRTC talk is optional; current transport readings are core.",
+    "V40": "Short demonstrations cover accessibility examples, not all multilingual error analysis.",
+    "P15": "Short assistive-output example plus optional UNICEF launch; the guidance is the core AI/child-rights source."
+  }
 }
