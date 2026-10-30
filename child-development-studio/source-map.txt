@@ -121,13 +121,14 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 C07 — Assent, privacy, safeguarding and respectful care
 Prerequisites: C01, C05
 Path: Shared foundations
-Study assignment: Watch the 2:15 safeguarding animation and 12:16 participation module. In the fictional case, distinguish assent, legal consent, privacy and a concern that must follow local safeguarding routes.
-Video coverage/access: The two videos cover context-sensitive safeguarding and meaningful participation. Legal consent, confidentiality exceptions and local reporting duties remain in the native lesson and authoritative readings.
+Study assignment: Watch the 1:00 privacy animation and the named UNICEF participation material. Work the fictional consent/assent/refusal/privacy distinctions and use the NSPCC guidance with your local safeguarding route.
+Video coverage/access: The 1:00 eSafety animation supplies the digital-privacy component, with a complete visual transcript. The UNICEF participation video and assigned readings/native case cover child voice, assent, refusal and safeguarding; the animation is not a clinical consent or local protection procedure.
 Videos:
-  NSPCC — safeguarding and the child’s wider context — https://sport.nspcc.org.uk/help-and-advice/introduction-to-safeguarding/contextual-safeguarding/
-    Assignment: Watch the complete named video, 0:00–2:15. Distinguish safeguarding from responding to a protection concern. The animation uses sport: map its people/place/context questions onto the fictional care setting, then follow the assigned recognising/responding guidance and your local safeguarding route.
-    Content evidence (description-only): NSPCC’s outline describes safeguarding beyond sports sessions, including travel and wider contexts. The animation’s spoken content remains unverified; local protection procedures remain a separate reading task.
-      Original publisher source: https://sport.nspcc.org.uk/help-and-advice/introduction-to-safeguarding/contextual-safeguarding/
+  eSafety — sharenting and children’s digital privacy — https://www.esafety.gov.au/parents/issues-and-advice/privacy-child
+    Assignment: Watch the complete named video, 0:00–1:00. Select only “Sharenting - a global trend putting kids at risk unintentionally”. Identify identifying details, audience/privacy settings and lower-exposure sharing choices. This short text animation supplies the privacy component. Complete the native assent/refusal example and the UNICEF/NSPCC readings for participation, safeguarding and local protection procedures; it does not teach clinical consent law.
+    Access: On the eSafety page, open the named Sharenting video and Read transcript. The publisher’s Vimeo recording is 1:00. Other links and jurisdiction-specific legal advice on the page are not assigned as universal rules.
+    Content evidence (transcript-reviewed): The publisher’s complete visual transcript matches the one-minute animation’s photo-sharing risks and four privacy precautions. This is a visual-text transcript; no spoken narration is claimed. Legal statements elsewhere on the Australian page are not universal consent rules.
+      Publisher video and visual transcript: https://www.esafety.gov.au/parents/issues-and-advice/privacy-child
   UNICEF — meaningful participation of children with disabilities — https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation
     Assignment: Watch the complete named video, 0:00–12:16. Listen for meaningful participation, barriers and being heard. Connect these to the native assent/consent distinction and how a child can decline or change their mind. This rights-based module does not replace local privacy law or safeguarding procedures. Participation in services and policy decisions supports the theme of being heard; it is not itself a clinical consent/assent procedure.
     Content evidence (teaching-material-reviewed): The video’s facilitator guide describes meaningful participation, barriers and accessible involvement in decisions. This supports being heard; it is not a clinical consent or safeguarding protocol.
@@ -219,17 +220,18 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 C12 — Health, sleep, feeding and when to seek help
 Prerequisites: C06, C07
 Path: Shared foundations
-Study assignment: Watch the 8:22 sleep video and 7:31 paediatric swallowing-service explanation. Use the age-specific NHS and ASHA readings to distinguish general support, missing information and reasons to seek qualified help.
-Video coverage/access: The two matched NHS videos total 15:53. They provide sleep education and swallowing-service/referral context, not an individual feeding, medical or sleep treatment programme.
+Study assignment: Watch only Why do we sleep? (1:30) and What happens in a videofluoroscopy swallow study? (4:18). Use age-specific NHS and ASHA readings to prepare the fictional eleven-year-old’s factual concern/referral summary; copy no clinical preparation or treatment instructions.
+Video coverage/access: Core viewing totals 5:48: the 1:30 sleep introduction and the 4:18 swallowing-assessment appointment. Both have readable publisher transcripts. They support general understanding and professional questions, not home feeding trials or an individual sleep/medical plan.
 Videos:
-  NHFT NHS — how to sleep well — https://www.nhft.nhs.uk/idiscover-toolkit
-    Assignment: Watch the complete named video, 0:00–8:22. Identify the general sleep suggestions and intended audience, then check each suggestion against the relevant Leeds NHS age band before applying it to the fictional case. General routines do not explain every sleep problem or justify diagnosis, medicines or an individual treatment plan.
-    Content evidence (description-only): The NHS toolkit identifies this sleep video, but no complete script was obtained. Its individual recommendations and age suitability remain unchecked; use the assigned age-specific NHS reading.
-      Original publisher source: https://www.nhft.nhs.uk/idiscover-toolkit
-  Bradford District Care NHS — paediatric eating and swallowing — https://www.clch.nhs.uk/services/speech-and-language-therapy-children
-    Assignment: Watch the complete named video, 0:00–7:31. Understand the role of paediatric eating/swallowing services and why concerns need appropriate professional assessment. Use the native referral exercise; do not try feeding techniques, textures or exercises on a child from a video.
-    Content evidence (description-only): The NHS source identifies paediatric eating/swallowing services. The video’s complete speech remains unverified; do not infer assessment or feeding instructions from its title.
-      Original publisher source: https://www.clch.nhs.uk/services/speech-and-language-therapy-children
+  NSW Health / Dr Chris Seton — why children need sleep — https://www.nsw.gov.au/health-and-wellbeing/healthy-living/healthy-living-for-children-and-families/sleep-and-childrens-health
+    Assignment: Watch the complete named video, 0:00–1:30. Select only “Why do we sleep?”. Relate sleep to learning, mood and participation, and note the general routine suggestions. Broad benefits in this short introduction are not a promise to cure mental-health or sleep conditions. For the fictional eleven-year-old, use the age-specific reading and prepare health/referral questions; no universal schedule, medication change or sleep treatment is prescribed.
+    Content evidence (transcript-reviewed): The complete publisher transcript matches the 1:30 introduction on sleep, learning, mood and general routines. The page separately distinguishes age-specific guidance and seeking professional advice; neither this video nor improved sleep establishes an individual diagnosis or cure.
+      Publisher video and complete transcript: https://www.nsw.gov.au/health-and-wellbeing/healthy-living/healthy-living-for-children-and-families/sleep-and-childrens-health
+  NHS / What? Why? Children in Hospital — a swallowing-assessment appointment — https://www.leedsth.nhs.uk/services/childrens-speech-and-language-therapy/childrens-speech-and-language-therapy-slt-videofluroscopy/
+    Assignment: Watch the complete named video, 0:00–4:18. Select only “What happens in a videofluoroscopy swallow study?”. Observe the SLT/radiology team, the assessment purpose, family questions and communication with the community therapist. The preparation instructions, barium, food/fluid choices and thicker-fluid advice belong to this depicted clinical appointment; do not copy them at home or for another child. Prepare the native fictional referral summary instead.
+    Access: Use the second named video and its Transcript button. The longer Operation Ouch compilation and the first video are not assigned. Follow only your own clinical team’s individual appointment instructions.
+    Content evidence (transcript-reviewed): The complete NHS-hosted transcript matches the 4:18 appointment demonstration, including the team, X-ray swallow assessment and individual follow-up. It is one child’s assessed care example, not a home feeding test, screening rule or general prescription.
+      NHS video and complete transcript: https://www.leedsth.nhs.uk/services/childrens-speech-and-language-therapy/childrens-speech-and-language-therapy-slt-videofluroscopy/
 Readings:
   ASHA — Pediatric Feeding and Swallowing (professional reference; seek individual advice) — https://www.asha.org/practice-portal/clinical-topics/pediatric-feeding-and-swallowing/
     Assignment: Read the named article or specified sections: ASHA — Pediatric Feeding and Swallowing (professional reference; seek individual advice). Focus on health needs, sleep, swallowing concerns and use the native worked example to check your interpretation.
@@ -301,13 +303,14 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 G04 — Multilingual homes and cultural responsiveness
 Prerequisites: C08, C11
 Path: Caregiver education
-Study assignment: Watch the 2:24 bilingual-family video, then read ASHA’s broader language guidance. Record fictional people, settings, languages, strengths and interpreter/assessment questions without abandoning a home language.
-Video coverage/access: The short health-service video is an early-years family example. The native exercise and ASHA reading cover broader developmental contexts and the limits of monolingual test norms.
+Study assignment: Watch the 2:50 family stories, then prepare the fictional language history across people, settings and strengths. Use the ASHA reading to distinguish multilingual exposure from diagnosis and to plan interpreter or qualified-assessment questions.
+Video coverage/access: Core viewing: 2:50 of bilingual-family stories with a complete transcript. These Australian families illustrate home-language relationships and community context; ASHA and the native exercise supply multilingual assessment/interpreter boundaries.
 Videos:
-  South Eastern Sydney Local Health District — helping your child learn two languages — https://www.healthtranslations.vic.gov.au/resources/helping-your-child-to-learn-two-languages-video
-    Assignment: Watch the complete named video, 0:00–2:24. Study how families can support both home and additional languages. Use the fictional language-history sheet; this early-years demonstration does not validate a translated test or mean an unfamiliar language is a disorder.
-    Content evidence (description-only): The NSW publisher describes bilingual language support before school. The spoken content remains unverified; this early-years example cannot validate a translated assessment or cover every age.
-      Original publisher source: https://www.healthtranslations.vic.gov.au/resources/helping-your-child-to-learn-two-languages-video
+  Raising Children Network — bilingual-family parent stories — https://raisingchildren.net.au/toddlers/videos/bilingualism-video
+    Assignment: Watch the complete named video, 0:00–2:50. Identify who uses each language, with whom and for which relationships or settings. Notice family-language comfort, emotions, books and community connections. These Australian parent stories are perspectives, not a requirement that every parent use English. Use ASHA and the native case for language history, interpreters and multilingual assessment; the video does not validate translated test norms.
+    Access: Watch the single 2:50 Vimeo video on the publisher page. The full Video transcript is visible directly below it.
+    Content evidence (transcript-reviewed): The complete publisher transcript matches the 2:50 parent stories about Turkish, Arabic, English, family comfort and community participation. Its English-learning advice is contextual; it does not establish a universal home-language rule or diagnose language difficulty.
+      Publisher video and complete transcript: https://raisingchildren.net.au/toddlers/videos/bilingualism-video
 Readings:
   ASHA — learning more than one language — https://www.asha.org/public/speech/development/learning-more-than-one-language/
     Assignment: Read the named article or specified sections: ASHA — learning more than one language. Focus on multilingual development, language difference, family language and use the native worked example to check your interpretation.
@@ -722,13 +725,16 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 P12 — Support plans, single-case designs and meaningful outcomes
 Prerequisites: P11, P02, C11
 Path: Professional preparation — supervised application required
-Study assignment: Watch the 19:09 research-design unit, then critique the supplied fictional graph with current WWC 5.0 standards. Keep communication, comfort, participation, denominators and qualified review alongside counts.
-Video coverage/access: The university video teaches research-design concepts; its 2018 examples are not a claim about current WWC certification or permission to run a clinical withdrawal experiment. The native exercise is a design critique only.
+Study assignment: Watch the 6:32 single-case graph/design passage, critique its withdrawal and narrow behaviour-outcome framing, then annotate the supplied fictional trend/denominator problem. Propose no treatment experiment or withdrawal of support.
+Video coverage/access: Core viewing: only 7:17–13:49 (6:32) of the university-hosted research talk. Manually stop the original player at 13:49. Treat its withdrawal illustration as an ethical design critique; native work/current WWC readings supply meaningful outcomes and appraisal standards.
 Videos:
-  Osmania University EMRC — types of single-subject research designs — https://www.youtube.com/watch?v=CYLeEW_VCbQ
-    Assignment: Watch the complete named video, 0:00–19:09. Compare repeated measurement, A–B change, experimental control and generalisability. If reversal/withdrawal examples are discussed, critique their design and ethical limits; do not try them with a child. Apply current WWC 5.0 standards and the native participation/balancing-measure questions; lower visible distress alone does not establish benefit.
-    Content evidence (description-only): The university uploader describes repeated baseline/intervention measurement and differences in internal validity. The full explanation remains unverified; the current WWC reading supplies the standards for the exercise.
-      Original publisher source: https://www.youtube.com/watch?v=CYLeEW_VCbQ
+  University-hosted research talk — single-case graphs and visual-analysis limits — https://digital.library.unt.edu/ark:/67531/metadc1858618/
+    Assignment: Watch only 7:17–13:49. Read the axes, baseline/treatment phases, repeated demonstrations, autocorrelation, level, trend and variability. Critique the historical ABAB/withdrawal illustration on paper only: never withdraw communication, care or necessary support. Reduced adult-disliked behaviour alone is not a meaningful outcome. Apply current WWC standards, participation/comfort measures and the native fictional graph; the later Bayesian analysis is not assigned.
+    Watch 7:17–13:49: Single-case phases, replication, autocorrelation and visual-analysis limits
+    Access: Open the UNT player and manually watch 7:17–13:49, then stop. This studio does not embed or automatically stop that provider. The full recording is 46:06; the rest is optional unassigned research context.
+    Content evidence (transcript-reviewed): The university-hosted timed automatic captions match the assigned graph/design/visual-analysis passage at 7:17–13:49. The talk’s older deficit-focused outcome framing and withdrawal example require the native ethical critique; current WWC standards and qualified review remain necessary.
+      University-hosted video and transcript: https://digital.library.unt.edu/ark:/67531/metadc1858618/
+      Accessible timed English captions: https://digital.library.unt.edu/ark:/67531/metadc1858618/m1/1/captions-eng.vtt
 Readings:
   What Works Clearinghouse — Version 5.0 Handbook, single-case design standards — https://ies.ed.gov/ncee/wwc/Handbooks
     Assignment: Choose the current Version 5.0 Procedures and Standards Handbook, then its single-case design standards sections. Compare repeated demonstrations, phase evidence and visual analysis with the fictional graph; the entire handbook is not assigned.
@@ -786,16 +792,17 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 P15 — Assistive technology, AI and child-data ethics
 Prerequisites: P02, P07, P14
 Path: Professional preparation — supervised application required
-Study assignment: Watch the 3:15 UNICEF child-centred-AI interview, then read the relevant 3.0 guidance and ASHA access/authorship principles. Map purpose, child participation, data flows, generated output, governance and non-AI backup; submit no child data.
-Video coverage/access: Core viewing totals 4:09: the 3:15 UNICEF child-AI-governance interview plus a 0:54 assistive-output example. The 5:27 UNICRI literacy animation and hour-long launch webinar are optional; the actual risk/rights decision requires the native case and 3.0 guidance.
+Study assignment: Watch only UTS Procuring AI (4:36) and the short W3C assistive-output example. Apply the relevant UNICEF 3.0 child-rights guidance and ASHA access/authorship principles to purpose, child participation, data flows, oversight and non-AI backup; submit no child data.
+Video coverage/access: Core viewing totals 5:30: UTS Procuring AI (4:36) and W3C assistive output (0:54). The procurement example is organisational, not a clinical/child-rights validation. UNICEF 3.0, ASHA and the native child-data/rights case remain required; the animation and launch webinar remain optional.
 Videos:
   W3C WAI — Text to Speech: an assistive-output example — https://www.w3.org/WAI/perspective-videos/speech/
     Assignment: Assigned viewing: 0:00–0:54. Watch the complete short demonstration to see an assistive-output use case. It is not an AI/child-therapy product demonstration or AAC assessment; study UNICEF and ASHA for those boundaries.
     Access: The original W3C page also offers a transcript, captions and an audio-described version.
-  ITU AI for Good / UNICEF — putting children at the centre of AI — https://www.youtube.com/watch?v=WQrSiQe5m6U
-    Assignment: Watch the complete named video, 0:00–3:15. Listen for child rights, data protection, local languages, connectivity and children’s participation in design. Apply these governance questions to the fictional assistive-AI data-flow review. This 2026 UNICEF interview is not a clinical efficacy study, product endorsement or substitute for the full 3.0 guidance.
-    Content evidence (description-only): The ITU description lists child rights, data protection, local languages, connectivity and participation. Those topics fit the lesson, but the interview’s full speech remains unverified.
-      Original publisher source: https://www.youtube.com/watch?v=WQrSiQe5m6U
+  UTS Human Technology Institute / CSIRO — procuring AI responsibly — https://www.uts.edu.au/research/centres/human-technology-institute/projects/what-ai-video-series
+    Assignment: Watch the complete named video, 0:00–4:36. Select only “Procuring AI” (the linked video title is “AI Procurement”). Extract the problem statement, data-use questions, impact assessment, team responsibilities and ongoing monitoring. This organisational example supplies procurement/governance skills; it is not child-specific clinical evidence. Apply UNICEF’s child-rights guidance, ASHA AAC access principles and the native child-data/backup exercise before drawing conclusions about a fictional child-facing tool.
+    Access: Scroll to Procuring AI and select Read transcript. Watch only that 4:36 video, not the whole eight-video series. No product trial, procurement decision or child-data upload is required.
+    Content evidence (transcript-reviewed): The complete UTS transcript covers the six procurement considerations, including purpose, training/input data, failure/misuse risks, multidisciplinary skills and continuing oversight. Child participation, clinical suitability, AAC access and children’s rights require the separate UNICEF/ASHA/native work.
+      Publisher video and complete transcript: https://www.uts.edu.au/research/centres/human-technology-institute/projects/what-ai-video-series
   Optional: UNICEF Innocenti — UNICEF Guidance on AI and Children (3.0): Launch webinar — https://www.youtube.com/watch?v=BwCVJCymmt8
     Assignment: Optional full UNICEF Guidance on AI and Children 3.0 launch webinar. The required task is the relevant guidance sections and a child-data/access/governance map; the whole launch event is not required.
   Optional: UNICRI — What to Be? A Journey Through AI (optional literacy example) — https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025

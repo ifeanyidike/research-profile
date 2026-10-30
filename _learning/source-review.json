@@ -24,7 +24,8 @@
     "Child OT assignments now identify specific NHS modules. CDC school-age scope and redirected sleep-resource attribution are corrected.",
     "Narrow webinars, decoder-only talks and historical API material are labelled as limited/optional coverage, not complete teaching of unrelated topics.",
     "Follow-up review adds 43 focused video assignments and narrows one existing recording across 31 formerly reading-led/optional-only topics plus two topics with thin illustrative coverage. Every new assignment has a verified running time, named unit and lesson-specific scope; longer sources use bounded excerpts.",
-    "Content follow-up distinguishes complete transcript evidence, exact-video teaching-material evidence and description-only matches for all 44 reviewed assignments. R03 is narrowed to 41:30–48:13; ASHA MLE components, historical rating/cut-off context and Rasa example attribution are clarified."
+    "Content follow-up distinguishes complete transcript evidence, exact-video teaching-material evidence and description-only matches for all 44 reviewed assignments. R03 is narrowed to 41:30–48:13; ASHA MLE components, historical rating/cut-off context and Rasa example attribution are clarified.",
+    "Transcript follow-up replaces fifteen description-only recordings, verifies one existing optional talk from its archived transcript and retains one unresolved ASR-evaluation assignment. Historical audits are preserved; replacement recordings use new completion keys."
   ],
   "unverified_public_video_topics": {
     "voice": [],
@@ -38,26 +39,38 @@
     "Second-review public-page audit checked 189 distinct existing source/video URLs plus selected additions. HTTP 403/406/timeouts are unresolved access checks, not proof a source is missing. YouTube title/uploader metadata was checked; full playback/captions were not.",
     "This follow-up checked all 566 distinct baseline assignment URLs and inspected public publisher/video metadata, available transcripts and PDF/slide identities. Not every complete recording/caption track or every claim in an external textbook was independently validated. Some sources impose browser/account checks; no CAPTCHA was bypassed.",
     "Video-gap follow-up verifies source identity, published content descriptions/available transcripts, durations and chapter markers. It does not claim complete playback/caption validation; videos may cover a named component while the native lesson/readings cover remaining objectives.",
-    "The content-review manifest records per-assignment evidence and unresolved speech checks. Companion slides/outlines and available caption metadata are not treated as verbatim transcript review."
+    "The content-review manifest records per-assignment evidence and unresolved speech checks. Companion slides/outlines and available caption metadata are not treated as verbatim transcript review.",
+    "The current 44-assignment audit has 23 transcript-reviewed, 20 teaching-material-only and one description-only assignment. This does not verify every existing video across the three complete curricula. Transcript review covers assigned excerpts and names automatic/visual transcript limitations."
   ],
   "limited_video_coverage": {
-    "V20": "Four-minute Datasheets author interview teaches documentation; speech annotation/rights/split decisions remain native/paper tasks.",
+    "V20": "Core viewing: 4:55 on datasheet documentation, with a readable transcript. The example is a web archive; audio annotation, consent/licensing and leakage-free splits remain native/paper tasks.",
     "V23": "Exact Whisper author presentation supports the native lesson and paper; attention replay remains optional.",
     "V25": "Bounded MIT WER/benchmark/data-selection teaching; subgroup inference remains native/HF work.",
-    "V35": "Only the historical signaling/STUN/TURN/security concepts are core; current WebRTC/WebSocket/RTP/SIP references remain required.",
+    "V35": "Core viewing is three selected passages totalling 6:09: the media/signalling diagram, STUN and TURN. Django is an illustrative server stack, not a prerequisite. Use current references for SDP/codecs and the native reconnect/authority exercise for implementation.",
     "V40": "First-person Project Relate access case plus W3C components; multilingual and complete-task accessibility still require the native/HF/W3C audit.",
-    "P15": "Current UNICEF child-AI governance interview plus assistive-output example; optional UNICRI literacy animation and launch event. Full rights/risk decisions still use the guidance/native case.",
+    "P15": "Core viewing totals 5:30: UTS Procuring AI (4:36) and W3C assistive output (0:54). The procurement example is organisational, not a clinical/child-rights validation. UNICEF 3.0, ASHA and the native child-data/rights case remain required; the animation and launch webinar remain optional.",
     "V24": "wav2vec 2.0 author presentation covers self-supervision/adaptation; multilingual claims require the separate reading.",
     "V27": "Matched AEC/gating explainer directly supports the native double-talk challenge; enhancement/separation mathematics and microphone assumptions remain native/readings.",
-    "P05": "CanChild supplies participation/outcome framing; ASHA readings supply language/literacy intervention evidence."
+    "P05": "CanChild supplies participation/outcome framing; ASHA readings supply language/literacy intervention evidence.",
+    "V33": "Core RAG viewing is 2:22–8:36 (6:14). Retrieval and generated context are illustrated; permissioned actions, safe retries and truthful pending states remain separate native/readings work.",
+    "V34": "Core viewing: 3:25–7:21 (3:56) of the standalone Python asyncio example. No Django setup is required. The optional 26:46 EuroPython TaskGroup talk now has a readable archived transcript; current Python docs and native event/queue reasoning remain required.",
+    "V36": "Core viewing is the 1:23 pause/endpointing demonstration with a readable creator transcript. It illustrates unfinished turns, not current model rankings, backchannel accuracy, safe interruption or tool commits. The native five-case trace and current documentation supply those boundaries.",
+    "V38": "Core viewing is 7:53–8:55 and 18:43–19:38 (1:57 total) on indirect inputs and tool authorisation. Study privacy, least privilege and minimal logging in the native lesson and OWASP/NIST readings; the talk’s reported attack-test results are not assigned facts.",
+    "V39": "Core viewing is 3:11–5:20, 10:52–14:45 and 16:08–17:26 (7:20 total). These passages teach reliability indicators, measurement and targets. Native exercises/readings cover voice costs, overload, retries, operation identity and truthful fallback.",
+    "V43": "Core viewing totals 7:50: MIT states/transitions at 1:13–4:31 and specification/boundary testing at 8:35–13:07. Stop before the remaining maths/testing lectures. The native capstone supplies the seven voice-event fixtures and commit/output assertions.",
+    "C07": "The 1:00 eSafety animation supplies the digital-privacy component, with a complete visual transcript. The UNICEF participation video and assigned readings/native case cover child voice, assent, refusal and safeguarding; the animation is not a clinical consent or local protection procedure.",
+    "C12": "Core viewing totals 5:48: the 1:30 sleep introduction and the 4:18 swallowing-assessment appointment. Both have readable publisher transcripts. They support general understanding and professional questions, not home feeding trials or an individual sleep/medical plan.",
+    "G04": "Core viewing: 2:50 of bilingual-family stories with a complete transcript. These Australian families illustrate home-language relationships and community context; ASHA and the native exercise supply multilingual assessment/interpreter boundaries.",
+    "P12": "Core viewing: only 7:17–13:49 (6:32) of the university-hosted research talk. Manually stop the original player at 13:49. Treat its withdrawal illustration as an ethical design critique; native work/current WWC readings supply meaningful outcomes and appraisal standards."
   },
   "video_content_review": {
-    "manifest": "_learning/video-content-review-20261030.json",
+    "manifest": "_learning/video-content-review-20261030-transcripts.json",
     "statusCounts": {
-      "transcript-reviewed": 7,
-      "description-only": 17,
-      "teaching-material-reviewed": 20
+      "transcript-reviewed": 23,
+      "teaching-material-reviewed": 20,
+      "description-only": 1
     },
-    "meaning": "An empty unverified_public_video_topics catalogue-gap list does not mean every spoken video has been verified."
+    "meaning": "An empty unverified_public_video_topics catalogue-gap list does not mean every spoken video has been verified.",
+    "replacements": "_learning/video-transcript-replacements-20261030.json"
   }
 }

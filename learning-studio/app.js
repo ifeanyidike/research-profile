@@ -1,7 +1,7 @@
-import { math } from "./math.js?v=20261030-7";
-import { createModel } from "./model.js?v=20261030-7";
-import { Account } from "./account.js?v=20261030-7";
-import { resourceCards, assignmentSummary } from "./resources.js?v=20261030-7";
+import { math } from "./math.js?v=20261030-8";
+import { createModel } from "./model.js?v=20261030-8";
+import { Account } from "./account.js?v=20261030-8";
+import { resourceCards, assignmentSummary } from "./resources.js?v=20261030-8";
 import { syncConfig } from "../algo-studio/sync-config.js";
 export function startStudio(config) {
   document.documentElement.dataset.studio = config.slug;
@@ -274,7 +274,7 @@ export function startStudio(config) {
     return `${trackPicker()}<article class="method source-map"><span class="eyebrow">RESEARCHED 30 OCTOBER 2026</span><h1>Your topic-by-topic source map</h1><p>${esc(config.sourcesNote)}</p><p><a href="curriculum.json" download>Download JSON ↓</a> · <a href="source-map.txt" download>Download readable source map ↓</a></p>${selectedModules()
       .map(
         (m) =>
-          `<details><summary>${esc(m.id)} · ${esc(m.title)}</summary><p>${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "All stages")}</p><p><strong>Prerequisites:</strong> ${m.prerequisites.length ? m.prerequisites.map((id) => lessonLink(id, byId[id].title)).join(" · ") : "None — start here"}</p><h3>Study assignment</h3>${paragraphs(m.study_focus)}<h3>Watch in order</h3><p>${esc(m.videoNote)}</p>${m.videos.length ? `<ol>${m.videos.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol>` : ""}<h3>Read in order</h3><ol>${m.readings.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol><h3>Practical exercise</h3>${paragraphs(m.practice)}${m.practice_links.length ? "<h3>Additional practical materials</h3><ul>" + m.practice_links.map((r) => "<li>" + link(r) + `<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("") + "</ul>" : ""}<h3>Independent assessment</h3>${paragraphs(m.assessment)}<h3>Pass criteria</h3>${outcomes(m)}<p class="fine-print">${esc(m.note)}</p><p>${lessonLink(m.id, "Open full lesson ↗")}</p></details>`
+          `<details><summary>${esc(m.id)} · ${esc(m.title)}</summary><p>${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "All stages")}</p><p><strong>Prerequisites:</strong> ${m.prerequisites.length ? m.prerequisites.map((id) => lessonLink(id, byId[id].title)).join(" · ") : "None — start here"}</p><h3>Study assignment</h3>${paragraphs(m.study_focus)}<h3>Watch in order</h3><p>${esc(m.videoNote)}</p>${m.videos.length ? `<ol>${m.videos.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p>${r.contentReview?.sources?.length ? `<p class="fine-print">${r.contentReview.sources.map(link).join(" · ")}</p>` : ""}</li>`).join("")}</ol>` : ""}<h3>Read in order</h3><ol>${m.readings.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol><h3>Practical exercise</h3>${paragraphs(m.practice)}${m.practice_links.length ? "<h3>Additional practical materials</h3><ul>" + m.practice_links.map((r) => "<li>" + link(r) + `<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("") + "</ul>" : ""}<h3>Independent assessment</h3>${paragraphs(m.assessment)}<h3>Pass criteria</h3>${outcomes(m)}<p class="fine-print">${esc(m.note)}</p><p>${lessonLink(m.id, "Open full lesson ↗")}</p></details>`
       )
       .join("")}</article>`;
   }

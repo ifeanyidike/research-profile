@@ -316,21 +316,21 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "NSPCC — safeguarding and the child’s wider context",
-          "url": "https://sport.nspcc.org.uk/help-and-advice/introduction-to-safeguarding/contextual-safeguarding/",
-          "progressKey": "video:100",
+          "label": "eSafety — sharenting and children’s digital privacy",
+          "url": "https://www.esafety.gov.au/parents/issues-and-advice/privacy-child",
+          "progressKey": "video:200",
           "watchMode": "full",
-          "durationSeconds": 135,
-          "timingSource": "https://www.youtube.com/watch?v=0WAoliBvKFQ",
-          "playbackUrl": "https://www.youtube.com/watch?v=0WAoliBvKFQ",
-          "assignment": "Watch the complete named video, 0:00–2:15. Distinguish safeguarding from responding to a protection concern. The animation uses sport: map its people/place/context questions onto the fictional care setting, then follow the assigned recognising/responding guidance and your local safeguarding route.",
+          "durationSeconds": 60,
+          "timingSource": "https://www.esafety.gov.au/parents/issues-and-advice/privacy-child",
+          "assignment": "Watch the complete named video, 0:00–1:00. Select only “Sharenting - a global trend putting kids at risk unintentionally”. Identify identifying details, audience/privacy settings and lower-exposure sharing choices. This short text animation supplies the privacy component. Complete the native assent/refusal example and the UNICEF/NSPCC readings for participation, safeguarding and local protection procedures; it does not teach clinical consent law.",
+          "accessNote": "On the eSafety page, open the named Sharenting video and Read transcript. The publisher’s Vimeo recording is 1:00. Other links and jurisdiction-specific legal advice on the page are not assigned as universal rules.",
           "contentReview": {
-            "method": "description-only",
-            "note": "NSPCC’s outline describes safeguarding beyond sports sessions, including travel and wider contexts. The animation’s spoken content remains unverified; local protection procedures remain a separate reading task.",
+            "method": "transcript-reviewed",
+            "note": "The publisher’s complete visual transcript matches the one-minute animation’s photo-sharing risks and four privacy precautions. This is a visual-text transcript; no spoken narration is claimed. Legal statements elsewhere on the Australian page are not universal consent rules.",
             "sources": [
               {
-                "label": "Original publisher source",
-                "url": "https://sport.nspcc.org.uk/help-and-advice/introduction-to-safeguarding/contextual-safeguarding/"
+                "label": "Publisher video and visual transcript",
+                "url": "https://www.esafety.gov.au/parents/issues-and-advice/privacy-child"
               }
             ]
           }
@@ -370,7 +370,7 @@
           "assignment": "Read the named article or specified sections: NSPCC — recognising and responding to abuse. Focus on assent, safeguarding, privacy and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "The two videos cover context-sensitive safeguarding and meaningful participation. Legal consent, confidentiality exceptions and local reporting duties remain in the native lesson and authoritative readings.",
+      "videoNote": "The 1:00 eSafety animation supplies the digital-privacy component, with a complete visual transcript. The UNICEF participation video and assigned readings/native case cover child voice, assent, refusal and safeguarding; the animation is not a clinical consent or local protection procedure.",
       "pass_criteria": "1. Replace the real-data notebook proposal with a wholly invented case. 2. Distinguish consent, assent/refusal, privacy and safeguarding responsibilities. 3. Pause a non-urgent educational activity when stop is signalled; identify qualified/local exceptions.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -378,7 +378,7 @@
         "Distinguish consent, assent/refusal, privacy and safeguarding responsibilities.",
         "Pause a non-urgent educational activity when stop is signalled; identify qualified/local exceptions."
       ],
-      "study_focus": "Watch the 2:15 safeguarding animation and 12:16 participation module. In the fictional case, distinguish assent, legal consent, privacy and a concern that must follow local safeguarding routes.",
+      "study_focus": "Watch the 1:00 privacy animation and the named UNICEF participation material. Work the fictional consent/assent/refusal/privacy distinctions and use the NSPCC guidance with your local safeguarding route.",
       "practice": "Review a fictional proposed notebook entry containing a child's full name, school, video link and appointment letter. Replace it with a wholly invented learning case. Explain which information should never enter this studio and where authorised professionals should keep necessary records.",
       "assessment": "An adult says “The parent agreed, so continue even though the child is repeatedly signalling stop.” Write the questions a responsible professional must consider and a respectful default for a non-urgent educational activity.",
       "practice_links": []
@@ -591,41 +591,42 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "NHFT NHS — how to sleep well",
-          "url": "https://www.nhft.nhs.uk/idiscover-toolkit",
-          "progressKey": "video:100",
+          "label": "NSW Health / Dr Chris Seton — why children need sleep",
+          "url": "https://www.nsw.gov.au/health-and-wellbeing/healthy-living/healthy-living-for-children-and-families/sleep-and-childrens-health",
+          "progressKey": "video:200",
           "watchMode": "full",
-          "durationSeconds": 502,
-          "timingSource": "https://www.youtube.com/watch?v=vPNCvZe6_48",
-          "playbackUrl": "https://www.youtube.com/watch?v=vPNCvZe6_48",
-          "assignment": "Watch the complete named video, 0:00–8:22. Identify the general sleep suggestions and intended audience, then check each suggestion against the relevant Leeds NHS age band before applying it to the fictional case. General routines do not explain every sleep problem or justify diagnosis, medicines or an individual treatment plan.",
+          "durationSeconds": 90,
+          "timingSource": "https://www.nsw.gov.au/health-and-wellbeing/healthy-living/healthy-living-for-children-and-families/sleep-and-childrens-health",
+          "playbackUrl": "https://www.youtube.com/watch?v=cPfpFbsgH8s",
+          "assignment": "Watch the complete named video, 0:00–1:30. Select only “Why do we sleep?”. Relate sleep to learning, mood and participation, and note the general routine suggestions. Broad benefits in this short introduction are not a promise to cure mental-health or sleep conditions. For the fictional eleven-year-old, use the age-specific reading and prepare health/referral questions; no universal schedule, medication change or sleep treatment is prescribed.",
           "contentReview": {
-            "method": "description-only",
-            "note": "The NHS toolkit identifies this sleep video, but no complete script was obtained. Its individual recommendations and age suitability remain unchecked; use the assigned age-specific NHS reading.",
+            "method": "transcript-reviewed",
+            "note": "The complete publisher transcript matches the 1:30 introduction on sleep, learning, mood and general routines. The page separately distinguishes age-specific guidance and seeking professional advice; neither this video nor improved sleep establishes an individual diagnosis or cure.",
             "sources": [
               {
-                "label": "Original publisher source",
-                "url": "https://www.nhft.nhs.uk/idiscover-toolkit"
+                "label": "Publisher video and complete transcript",
+                "url": "https://www.nsw.gov.au/health-and-wellbeing/healthy-living/healthy-living-for-children-and-families/sleep-and-childrens-health"
               }
             ]
           }
         },
         {
-          "label": "Bradford District Care NHS — paediatric eating and swallowing",
-          "url": "https://www.clch.nhs.uk/services/speech-and-language-therapy-children",
-          "progressKey": "video:101",
+          "label": "NHS / What? Why? Children in Hospital — a swallowing-assessment appointment",
+          "url": "https://www.leedsth.nhs.uk/services/childrens-speech-and-language-therapy/childrens-speech-and-language-therapy-slt-videofluroscopy/",
+          "progressKey": "video:201",
           "watchMode": "full",
-          "durationSeconds": 451,
-          "timingSource": "https://www.youtube.com/watch?v=WTMMZ-Cr9EA",
-          "playbackUrl": "https://www.youtube.com/watch?v=WTMMZ-Cr9EA",
-          "assignment": "Watch the complete named video, 0:00–7:31. Understand the role of paediatric eating/swallowing services and why concerns need appropriate professional assessment. Use the native referral exercise; do not try feeding techniques, textures or exercises on a child from a video.",
+          "durationSeconds": 258,
+          "timingSource": "https://www.leedsth.nhs.uk/services/childrens-speech-and-language-therapy/childrens-speech-and-language-therapy-slt-videofluroscopy/",
+          "playbackUrl": "https://www.youtube.com/watch?v=8T9J4jvxjZs",
+          "assignment": "Watch the complete named video, 0:00–4:18. Select only “What happens in a videofluoroscopy swallow study?”. Observe the SLT/radiology team, the assessment purpose, family questions and communication with the community therapist. The preparation instructions, barium, food/fluid choices and thicker-fluid advice belong to this depicted clinical appointment; do not copy them at home or for another child. Prepare the native fictional referral summary instead.",
+          "accessNote": "Use the second named video and its Transcript button. The longer Operation Ouch compilation and the first video are not assigned. Follow only your own clinical team’s individual appointment instructions.",
           "contentReview": {
-            "method": "description-only",
-            "note": "The NHS source identifies paediatric eating/swallowing services. The video’s complete speech remains unverified; do not infer assessment or feeding instructions from its title.",
+            "method": "transcript-reviewed",
+            "note": "The complete NHS-hosted transcript matches the 4:18 appointment demonstration, including the team, X-ray swallow assessment and individual follow-up. It is one child’s assessed care example, not a home feeding test, screening rule or general prescription.",
             "sources": [
               {
-                "label": "Original publisher source",
-                "url": "https://www.clch.nhs.uk/services/speech-and-language-therapy-children"
+                "label": "NHS video and complete transcript",
+                "url": "https://www.leedsth.nhs.uk/services/childrens-speech-and-language-therapy/childrens-speech-and-language-therapy-slt-videofluroscopy/"
               }
             ]
           }
@@ -645,7 +646,7 @@
           "assignment": "Read the section for the fictional child’s age: baby safe-sleep link, toddlers/preschoolers, school-age, or teenagers. Discuss persistent problems with an appropriate clinician; general routine guidance does not diagnose a medical cause."
         }
       ],
-      "videoNote": "The two matched NHS videos total 15:53. They provide sleep education and swallowing-service/referral context, not an individual feeding, medical or sleep treatment programme.",
+      "videoNote": "Core viewing totals 5:48: the 1:30 sleep introduction and the 4:18 swallowing-assessment appointment. Both have readable publisher transcripts. They support general understanding and professional questions, not home feeding trials or an individual sleep/medical plan.",
       "pass_criteria": "1. Summarise the new change, timing, impact and health/referral questions factually. 2. Reject unassessed supplements, diets and swallowing trials. 3. Distinguish ordinary educational planning from urgent danger and individual clinical advice.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -653,7 +654,7 @@
         "Reject unassessed supplements, diets and swallowing trials.",
         "Distinguish ordinary educational planning from urgent danger and individual clinical advice."
       ],
-      "study_focus": "Watch the 8:22 sleep video and 7:31 paediatric swallowing-service explanation. Use the age-specific NHS and ASHA readings to distinguish general support, missing information and reasons to seek qualified help.",
+      "study_focus": "Watch only Why do we sleep? (1:30) and What happens in a videofluoroscopy swallow study? (4:18). Use age-specific NHS and ASHA readings to prepare the fictional eleven-year-old’s factual concern/referral summary; copy no clinical preparation or treatment instructions.",
       "practice": "Prepare a fictional appointment summary with the change, timing, child's report, daily impact and unknowns. Add questions about which professional should assess the concern and what information they need. Explicitly exclude any home swallowing test or dietary experiment.",
       "assessment": "A video claims a supplement and restrictive diet will cure autism and all feeding difficulties. Appraise the claim's scope, evidence, nutritional risks and professional boundaries. State a safer route for a family concerned about eating.",
       "practice_links": []
@@ -820,21 +821,21 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "South Eastern Sydney Local Health District — helping your child learn two languages",
-          "url": "https://www.healthtranslations.vic.gov.au/resources/helping-your-child-to-learn-two-languages-video",
-          "progressKey": "video:100",
+          "label": "Raising Children Network — bilingual-family parent stories",
+          "url": "https://raisingchildren.net.au/toddlers/videos/bilingualism-video",
+          "progressKey": "video:200",
           "watchMode": "full",
-          "durationSeconds": 144,
-          "timingSource": "https://www.youtube.com/watch?v=PIrD7PkeDdg",
-          "playbackUrl": "https://www.youtube.com/watch?v=PIrD7PkeDdg",
-          "assignment": "Watch the complete named video, 0:00–2:24. Study how families can support both home and additional languages. Use the fictional language-history sheet; this early-years demonstration does not validate a translated test or mean an unfamiliar language is a disorder.",
+          "durationSeconds": 170,
+          "timingSource": "https://raisingchildren.net.au/toddlers/videos/bilingualism-video",
+          "assignment": "Watch the complete named video, 0:00–2:50. Identify who uses each language, with whom and for which relationships or settings. Notice family-language comfort, emotions, books and community connections. These Australian parent stories are perspectives, not a requirement that every parent use English. Use ASHA and the native case for language history, interpreters and multilingual assessment; the video does not validate translated test norms.",
+          "accessNote": "Watch the single 2:50 Vimeo video on the publisher page. The full Video transcript is visible directly below it.",
           "contentReview": {
-            "method": "description-only",
-            "note": "The NSW publisher describes bilingual language support before school. The spoken content remains unverified; this early-years example cannot validate a translated assessment or cover every age.",
+            "method": "transcript-reviewed",
+            "note": "The complete publisher transcript matches the 2:50 parent stories about Turkish, Arabic, English, family comfort and community participation. Its English-learning advice is contextual; it does not establish a universal home-language rule or diagnose language difficulty.",
             "sources": [
               {
-                "label": "Original publisher source",
-                "url": "https://www.healthtranslations.vic.gov.au/resources/helping-your-child-to-learn-two-languages-video"
+                "label": "Publisher video and complete transcript",
+                "url": "https://raisingchildren.net.au/toddlers/videos/bilingualism-video"
               }
             ]
           }
@@ -848,7 +849,7 @@
           "assignment": "Read the named article or specified sections: ASHA — learning more than one language. Focus on multilingual development, language difference, family language and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "The short health-service video is an early-years family example. The native exercise and ASHA reading cover broader developmental contexts and the limits of monolingual test norms.",
+      "videoNote": "Core viewing: 2:50 of bilingual-family stories with a complete transcript. These Australian families illustrate home-language relationships and community context; ASHA and the native exercise supply multilingual assessment/interpreter boundaries.",
       "pass_criteria": "1. Record language exposure/use by people, settings, topics and strengths. 2. Explain why informal translation does not preserve monolingual test norms. 3. Ask for appropriate multilingual/interpreter-informed assessment without diagnosing.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -856,7 +857,7 @@
         "Explain why informal translation does not preserve monolingual test norms.",
         "Ask for appropriate multilingual/interpreter-informed assessment without diagnosing."
       ],
-      "study_focus": "Watch the 2:24 bilingual-family video, then read ASHA’s broader language guidance. Record fictional people, settings, languages, strengths and interpreter/assessment questions without abandoning a home language.",
+      "study_focus": "Watch the 2:50 family stories, then prepare the fictional language history across people, settings and strengths. Use the ASHA reading to distinguish multilingual exposure from diagnosis and to plan interpreter or qualified-assessment questions.",
       "practice": "Prepare a fictional language-history sheet: people/settings, languages/modes, topics, strengths, concerns and changes. Add questions about interpreter access and how assessment will consider each relevant language. Use invented details rather than a real child's history.",
       "assessment": "A translated monolingual test produces a low score and is presented as a definitive diagnosis. Explain the validity problem and list additional information a responsible assessment should consider.",
       "practice_links": []
@@ -1967,20 +1968,32 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "Osmania University EMRC — types of single-subject research designs",
-          "url": "https://www.youtube.com/watch?v=CYLeEW_VCbQ",
-          "progressKey": "video:100",
-          "watchMode": "full",
-          "durationSeconds": 1149,
-          "timingSource": "https://www.youtube.com/watch?v=CYLeEW_VCbQ",
-          "assignment": "Watch the complete named video, 0:00–19:09. Compare repeated measurement, A–B change, experimental control and generalisability. If reversal/withdrawal examples are discussed, critique their design and ethical limits; do not try them with a child. Apply current WWC 5.0 standards and the native participation/balancing-measure questions; lower visible distress alone does not establish benefit.",
+          "label": "University-hosted research talk — single-case graphs and visual-analysis limits",
+          "url": "https://digital.library.unt.edu/ark:/67531/metadc1858618/",
+          "progressKey": "video:200",
+          "watchMode": "segments",
+          "durationSeconds": 2766,
+          "timingSource": "https://digital.library.unt.edu/ark:/67531/metadc1858618/",
+          "segments": [
+            {
+              "start": 437,
+              "end": 829,
+              "label": "Single-case phases, replication, autocorrelation and visual-analysis limits"
+            }
+          ],
+          "assignment": "Watch only 7:17–13:49. Read the axes, baseline/treatment phases, repeated demonstrations, autocorrelation, level, trend and variability. Critique the historical ABAB/withdrawal illustration on paper only: never withdraw communication, care or necessary support. Reduced adult-disliked behaviour alone is not a meaningful outcome. Apply current WWC standards, participation/comfort measures and the native fictional graph; the later Bayesian analysis is not assigned.",
+          "accessNote": "Open the UNT player and manually watch 7:17–13:49, then stop. This studio does not embed or automatically stop that provider. The full recording is 46:06; the rest is optional unassigned research context.",
           "contentReview": {
-            "method": "description-only",
-            "note": "The university uploader describes repeated baseline/intervention measurement and differences in internal validity. The full explanation remains unverified; the current WWC reading supplies the standards for the exercise.",
+            "method": "transcript-reviewed",
+            "note": "The university-hosted timed automatic captions match the assigned graph/design/visual-analysis passage at 7:17–13:49. The talk’s older deficit-focused outcome framing and withdrawal example require the native ethical critique; current WWC standards and qualified review remain necessary.",
             "sources": [
               {
-                "label": "Original publisher source",
-                "url": "https://www.youtube.com/watch?v=CYLeEW_VCbQ"
+                "label": "University-hosted video and transcript",
+                "url": "https://digital.library.unt.edu/ark:/67531/metadc1858618/"
+              },
+              {
+                "label": "Accessible timed English captions",
+                "url": "https://digital.library.unt.edu/ark:/67531/metadc1858618/m1/1/captions-eng.vtt"
               }
             ]
           }
@@ -2000,7 +2013,7 @@
           "assignment": "Read 1.4 Interventions for behaviour that challenges. This NICE guidance concerns autistic children/young people under 19; do not generalise it to all children or use it as an individual treatment plan."
         }
       ],
-      "videoNote": "The university video teaches research-design concepts; its 2018 examples are not a claim about current WWC certification or permission to run a clinical withdrawal experiment. The native exercise is a design critique only.",
+      "videoNote": "Core viewing: only 7:17–13:49 (6:32) of the university-hosted research talk. Manually stop the original player at 13:49. Treat its withdrawal illustration as an ethical design critique; native work/current WWC readings supply meaningful outcomes and appraisal standards.",
       "pass_criteria": "1. Plot fictional counts and identify the pre-existing trend and absent denominators. 2. Explain why A-to-B change is not by itself causal evidence. 3. Include communication, comfort, participation and qualified review when visible distress falls.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. NICE CG170 concerns autistic children and young people under 19; do not generalise it to every child or diagnosis.",
       "outcomes": [
@@ -2008,7 +2021,7 @@
         "Explain why A-to-B change is not by itself causal evidence.",
         "Include communication, comfort, participation and qualified review when visible distress falls."
       ],
-      "study_focus": "Watch the 19:09 research-design unit, then critique the supplied fictional graph with current WWC 5.0 standards. Keep communication, comfort, participation, denominators and qualified review alongside counts.",
+      "study_focus": "Watch the 6:32 single-case graph/design passage, critique its withdrawal and narrow behaviour-outcome framing, then annotate the supplied fictional trend/denominator problem. Propose no treatment experiment or withdrawal of support.",
       "practice": "Plot the supplied fictional counts and annotate three limits. Add a proposed participation outcome, opportunity denominator and balancing measure that could be considered in a qualified plan. Produce a design critique only, not a protocol to execute.",
       "assessment": "A service claims success because distress behaviour decreased after a new plan, but communication also decreased and no child perspective was sought. Write a balanced appraisal and a revised evidence/review framework.",
       "practice_links": []
@@ -2166,21 +2179,22 @@
           "timingSource": "https://www.youtube.com/watch?v=8Rn5pXCdZWU"
         },
         {
-          "label": "ITU AI for Good / UNICEF — putting children at the centre of AI",
-          "url": "https://www.youtube.com/watch?v=WQrSiQe5m6U",
-          "playbackUrl": "https://www.youtube.com/watch?v=WQrSiQe5m6U",
-          "progressKey": "video:101",
+          "label": "UTS Human Technology Institute / CSIRO — procuring AI responsibly",
+          "url": "https://www.uts.edu.au/research/centres/human-technology-institute/projects/what-ai-video-series",
+          "progressKey": "video:200",
           "watchMode": "full",
-          "durationSeconds": 195,
-          "timingSource": "https://www.youtube.com/watch?v=WQrSiQe5m6U",
-          "assignment": "Watch the complete named video, 0:00–3:15. Listen for child rights, data protection, local languages, connectivity and children’s participation in design. Apply these governance questions to the fictional assistive-AI data-flow review. This 2026 UNICEF interview is not a clinical efficacy study, product endorsement or substitute for the full 3.0 guidance.",
+          "durationSeconds": 276,
+          "timingSource": "https://www.uts.edu.au/research/centres/human-technology-institute/projects/what-ai-video-series",
+          "playbackUrl": "https://www.youtube.com/watch?v=tI-nAuUVg_w",
+          "assignment": "Watch the complete named video, 0:00–4:36. Select only “Procuring AI” (the linked video title is “AI Procurement”). Extract the problem statement, data-use questions, impact assessment, team responsibilities and ongoing monitoring. This organisational example supplies procurement/governance skills; it is not child-specific clinical evidence. Apply UNICEF’s child-rights guidance, ASHA AAC access principles and the native child-data/backup exercise before drawing conclusions about a fictional child-facing tool.",
+          "accessNote": "Scroll to Procuring AI and select Read transcript. Watch only that 4:36 video, not the whole eight-video series. No product trial, procurement decision or child-data upload is required.",
           "contentReview": {
-            "method": "description-only",
-            "note": "The ITU description lists child rights, data protection, local languages, connectivity and participation. Those topics fit the lesson, but the interview’s full speech remains unverified.",
+            "method": "transcript-reviewed",
+            "note": "The complete UTS transcript covers the six procurement considerations, including purpose, training/input data, failure/misuse risks, multidisciplinary skills and continuing oversight. Child participation, clinical suitability, AAC access and children’s rights require the separate UNICEF/ASHA/native work.",
             "sources": [
               {
-                "label": "Original publisher source",
-                "url": "https://www.youtube.com/watch?v=WQrSiQe5m6U"
+                "label": "Publisher video and complete transcript",
+                "url": "https://www.uts.edu.au/research/centres/human-technology-institute/projects/what-ai-video-series"
               }
             ]
           }
@@ -2230,7 +2244,7 @@
           "assignment": "Read the named article or specified sections: UNICEF — AI policy guidance for children. Focus on assistive technology, AI limits, privacy and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "Core viewing totals 4:09: the 3:15 UNICEF child-AI-governance interview plus a 0:54 assistive-output example. The 5:27 UNICRI literacy animation and hour-long launch webinar are optional; the actual risk/rights decision requires the native case and 3.0 guidance.",
+      "videoNote": "Core viewing totals 5:30: UTS Procuring AI (4:36) and W3C assistive output (0:54). The procurement example is organisational, not a clinical/child-rights validation. UNICEF 3.0, ASHA and the native child-data/rights case remain required; the animation and launch webinar remain optional.",
       "pass_criteria": "1. Map purpose, intended user, data flow, generated output, oversight and exit/backup. 2. Give three concrete defer reasons for a child-facing AI deployment. 3. Require qualified governance/access review without a real-child trial or treating a checklist as approval.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -2238,7 +2252,7 @@
         "Give three concrete defer reasons for a child-facing AI deployment.",
         "Require qualified governance/access review without a real-child trial or treating a checklist as approval."
       ],
-      "study_focus": "Watch the 3:15 UNICEF child-centred-AI interview, then read the relevant 3.0 guidance and ASHA access/authorship principles. Map purpose, child participation, data flows, generated output, governance and non-AI backup; submit no child data.",
+      "study_focus": "Watch only UTS Procuring AI (4:36) and the short W3C assistive-output example. Apply the relevant UNICEF 3.0 child-rights guidance and ASHA access/authorship principles to purpose, child participation, data flows, oversight and non-AI backup; submit no child data.",
       "practice": "Create a fictional technology review with purpose, user/task, access, evidence, data flow, oversight, failure, cost and exit/backup sections. Compare an offline picture board with a cloud AI communication assistant without assuming either is universally best.",
       "assessment": "Draft a go/no-go evidence checklist for a service considering a child-facing AI tool. Include three reasons to defer deployment and a plan for qualified review. Do not execute a trial or submit data.",
       "practice_links": []
