@@ -123,6 +123,39 @@ test("reported high-impact source mismatches and unintended full replays stay co
   assert.equal(c.D05.videos[1].segments[0].end, 5097);
   assert.ok(v.V08.videos.find((r) => r.url.includes("lYYkEx1Qx8s")).optional);
   assert.ok(v.V19.videos.find((r) => r.url.includes("thwZ-G8Gk6I")).optional);
-  assert.ok(v.V23.videos[0].optional);
-  assert.ok(d.P15.videos[0].optional);
+  assert.ok(v.V23.videos.find((r) => r.url.includes("q3CmsZFlrnc")).optional);
+  assert.ok(d.P15.videos.find((r) => r.url.includes("BwCVJCymmt8")).optional);
+});
+
+test("formerly reading-led topics have timed, scoped core videos without losing existing source identities", () => {
+  const review = JSON.parse(fs.readFileSync(new URL("../video-gap-review-20261030.json", import.meta.url)));
+  const topics = Object.fromEntries(studios.flatMap((slug) => read(slug).map((m) => [`${slug}/${m.id}`, m])));
+  assert.equal(review.topics.length, 33);
+  for (const [slug, ids] of Object.entries(review.topicGroups))
+    for (const id of ids) {
+      const key = `${slug}/${id}`;
+      const topic = topics[key];
+      assert.ok(
+        topic.videos.some((r) => !r.optional),
+        `${id}: missing core video`
+      );
+      assert.doesNotMatch(topic.videoNote, /no closely matched public teaching video|Reading-led topic/i);
+      for (const old of review.previousVideos[key]) {
+        const current = topic.videos.find((r) => r.progressKey === old.progressKey);
+        assert.equal(current?.url, old.url, `${id}: completion identity reassigned`);
+        if (old.optional && id !== "V35") assert.equal(current.optional, true, `${id}: an old refresher became required`);
+      }
+    }
+  for (const assignment of review.assignments) {
+    const r = topics[`${assignment.studio}/${assignment.topic}`].videos.find((r) => r.progressKey === assignment.progressKey);
+    assert.equal(r?.url, assignment.url);
+    assert.equal(r.label, assignment.label);
+    assert.equal(r.durationSeconds, assignment.durationSeconds);
+    assert.equal(Boolean(r.optional), assignment.optional);
+    const assigned = r.segments ? r.segments.reduce((n, s) => n + s.end - s.start, 0) : r.durationSeconds;
+    assert.equal(assigned, assignment.assignedSeconds);
+    const html = resourceCards([r], "video", []);
+    assert.ok(html.includes(r.segments ? "stop at" : "0:00–"), `${assignment.topic}: no visible viewing range`);
+    if (!assignment.reused) assert.ok(Number(r.progressKey.split(":")[1]) >= 100);
+  }
 });
