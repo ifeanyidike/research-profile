@@ -1,5 +1,5 @@
 {
-  "reviewed": "30 October 2026",
+  "reviewed": "30 October 2026 — second review",
   "scope": "Source-page and metadata inspection, prerequisite closure and original instructional cases. HTTP availability is not video playback or clinical validation.",
   "corrections": [
     "ASHA soft-404 public and professional URLs replaced with current topic pages.",
@@ -7,16 +7,26 @@
     "Edinburgh programme ID 277 resolved to Management; replaced with the verified Speech and Language Processing programme 290.",
     "Stanford CS224S current recordings identified as restricted; never advertised as public videos.",
     "ASHA EBP CE-credit access distinguished from hosted videos; Cochrane free account requirement recorded.",
-    "Native Python async bridge added; JavaScript-dependent reading replaced by Python asyncio sections."
+    "Native Python async bridge added; JavaScript-dependent reading replaced by Python asyncio sections.",
+    "All 84 topics now have specific study assignments and distinct observable assessment criteria.",
+    "MIT derivative/chain-rule videos precede optional network-based gradient-descent material.",
+    "CMU course numbering and differing YouTube metadata are identified explicitly; provider index remains authoritative for sequence.",
+    "Direct NHS Vimeo players that can reject external access now point to the exact named/subtitled clips on the NHS host page.",
+    "V17 now starts with a regression video; V30 uses a provider-linked neural-codec keynote instead of an impulse-response-only assignment.",
+    "Youth.gov adolescent-development segments and a provider-linked Moshi/audio-LM talk fill three previously reading-led topics.",
+    "C12 no longer assigns a sensory workshop as health/swallowing teaching; its video gap is explicit.",
+    "An unavailable historical PyCon async video was rejected rather than labelled verified.",
+    "OpenStax anatomy sections and D2L regression/classification chapters are directly assigned; NICE population/section limits are explicit."
   ],
   "unverified_public_video_topics": {
-    "voice": ["V24", "V27", "V32", "V33", "V34", "V36", "V37", "V38", "V39", "V40", "V41", "V42", "V43", "V44"],
-    "child": ["C04", "C05", "C07", "C11", "G04", "G09", "G11", "G12", "P03", "P04", "P05", "P12", "P14"]
+    "voice": ["V24", "V27", "V32", "V33", "V34", "V36", "V37", "V38", "V39", "V40", "V42", "V43", "V44"],
+    "child": ["C04", "C07", "C11", "C12", "G04", "G11", "G12", "P03", "P04", "P05", "P12", "P14"]
   },
   "limitations": [
     "No complete playback/caption audit of every external video.",
     "Some sources block automated requests or require provider accounts; access notes and alternative original lessons/readings remain visible.",
     "Clinical competence and individual treatment suitability are not assessed; cases are fictional and formal training/supervision are separate.",
-    "Hosted storage isolation/merge checks and callback configuration were verified on 30 October 2026; fresh OAuth/email/recovery and actual two-device sign-in remain untested."
+    "Hosted storage isolation/merge checks and callback configuration were verified on 30 October 2026; fresh OAuth/email/recovery and actual two-device sign-in remain untested.",
+    "Second-review public-page audit checked 189 distinct existing source/video URLs plus selected additions. HTTP 403/406/timeouts are unresolved access checks, not proof a source is missing. YouTube title/uploader metadata was checked; full playback/captions were not."
   ]
 }

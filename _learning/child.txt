@@ -7,6 +7,10 @@ TEACHING:: Begin with a participation question: what does the child want or need
 Keep roles explicit. A caregiver can learn to notice patterns, offer responsive interaction, ask questions and collaborate on an agreed plan. Diagnosing a disorder, administering restricted assessments, prescribing a treatment or using specialist equipment requires appropriate professional competence and local authority.
 
 Professional preparation in this hub means learning concepts, appraising evidence and practising fictional case reasoning. It does not replace an accredited programme, placement, supervised clinical experience, registration or discipline-specific certification. Requirements vary by country; verify them with the regulator and programme before committing money or claiming a title.
+
+Keep three kinds of document separate. A learning note explains a concept using an invented case. A real clinical record belongs to an authorised service with appropriate professional governance. A research record belongs to an approved study process. This hub is for the first kind only. A name-free case can still identify someone through school, unusual history, voice or images, so use wholly fictional details rather than lightly disguising a real child.
+
+For each new topic, identify the child or young person's meaningful goal, the observation supporting the question, and the qualified role needed for anything beyond education. Caregiver education can make a family a stronger partner without turning them into a clinician. Professional preparation can develop reasoning without authorising examination or treatment. Use the Qualifications page early when deciding whether you want personal understanding, a regulated career or graduate research.
 EXAMPLE:: Fictional family priority:
 “Our nine-year-old wants to join the board game with cousins.”
 Questions to explore:
@@ -37,6 +41,10 @@ TEACHING:: Observe the whole situation. A child may communicate by reaching, tur
 Milestones describe age-related patterns, with variation and defined purposes. The ASHA material linked here covers birth to five and explicitly serves conversation and referral, not diagnosis. If a caregiver has concerns, loss of previously acquired skills or hearing concerns, seek timely professional advice rather than waiting for a course score.
 
 Family circumstances shape opportunities. Language exposure, disability, prematurity history and health can be relevant to a professional's interpretation. Avoid blaming caregivers or assuming that one household practice caused a difficulty. Ask what support the family needs and what the child enjoys.
+
+Organise early development across domains instead of memorising a single spoken-word total. Movement affects reaching and exploring; sensory access affects what is noticed; communication includes sounds, gestures and shared routines; social-emotional development includes relationships and regulation. An opportunity to participate can draw on several domains at once. These domains interact, but difficulty in one cannot be inferred from another without appropriate information.
+
+In the first year, a caregiver discussion might concern engagement in familiar exchanges, access to sound and movement opportunities. In the toddler years, it may concern communicating choices, exploration, play and emerging daily routines. These are discussion organisers, not diagnostic thresholds. Use the assigned age-specific milestone page to check the provider's actual descriptions and limits. Record a strength, a concern and the context; do not turn a list into a pass/fail developmental exam.
 EXAMPLE:: Fictional observation, 20-month-old during play:
 Adult places a closed toy box nearby.
 Child reaches toward it and vocalises.
@@ -66,6 +74,10 @@ TEACHING:: Begin with what the child enjoys. Repetitive, solitary, imaginative, 
 Look at demands separately. A craft activity may require understanding a long instruction, tolerating a crowded table, manipulating tools and waiting. A difficulty joining it could arise from any combination. Simplifying the explanation or offering a different tool may be more relevant than asking the child to try harder.
 
 Everyday support differs from a specialist intervention. A caregiver can offer safe choices, time and accessible materials. Pain, persistent movement difficulty, significant communication concerns or loss of skills should prompt appropriate professional advice. Do not apply specialist handling, sensory equipment or feeding techniques from a general lesson.
+
+A play observation can separate the activity's purpose from its format. An invented child may enjoy arranging figures but not an adult's turn-taking game. Record the chosen objects, actions and communication, what the adult offered, and whether the child wanted to continue. Solitary or repetitive play alone does not establish a disorder or justify a goal to eliminate it.
+
+A task-demand map makes alternatives easier to discuss. For the art table, draw one row each for understanding the instruction, choosing materials, accessing objects, manipulating glue, sharing space and communicating help/stop. Put an observed fact beside each and leave unknowns blank. This avoids the shortcut “cannot do art” when the evidence only describes one crowded, difficult setup.
 EXAMPLE:: Fictional preschool art table:
 Activity: make a picture with paper pieces.
 Barrier candidates: noisy room, unclear steps, hard-to-grip glue bottle.
@@ -95,6 +107,10 @@ TEACHING:: Separate knowledge from the means of showing it. A child may understa
 Listen to the child. Ask what feels difficult, useful or embarrassing in an accessible way, without making them defend their needs publicly. Peer relationships, bullying, fatigue and anxiety can affect participation. A plan should consider belonging and safety alongside academic goals.
 
 Support should have a meaningful purpose and review. Examples to discuss with the team include clearer instructions, accessible materials, alternative response formats and predictable routines. Their suitability depends on the individual and setting; this lesson does not prescribe a standard school treatment plan or a jurisdiction-specific entitlement.
+
+Separate decoding, language comprehension and producing a response. Decoding concerns recognising printed words; comprehension concerns making meaning; writing additionally involves formulation and motor/output demands. A pupil may understand a spoken story while finding its written version difficult, or read words aloud without understanding them. These patterns motivate questions; they do not diagnose the cause.
+
+School-age learning also requires organising attention, remembering relevant information, adjusting to task changes and managing effort. These processes depend on context and support, not character judgements. In the fictional worksheet case, compare the actual demands of the successful spoken account with the unfinished written task. Ask which information format and response mode were available and whether pain, fatigue or a noisy setting changed access.
 EXAMPLE:: Fictional pupil, age nine:
 Explains a story clearly aloud in a quiet conversation.
 Leaves a written worksheet unfinished in a busy classroom.
@@ -124,6 +140,10 @@ TEACHING:: Do not use a brain-development fact to dismiss a teenager's views. Ad
 Privacy becomes increasingly important. Local consent, capacity and safeguarding rules vary; professionals must follow their jurisdiction and role. Avoid promising unconditional secrecy, particularly if immediate safety or abuse concerns arise. Explain what information might need sharing, with whom and why, in an age-appropriate way.
 
 Transition should begin as a process, not a sudden birthday event. Education, health services, communication access, daily routines and future work or study can involve different systems. A plan should record the young person's priorities and the support needed to participate in decisions, not only adult targets.
+
+A population-level brain-development finding is not an individual decision-making test. Adolescents vary, and competence for one decision cannot be read from a birthday or a scan description. Separate understanding the choice, communicating a preference, weighing relevant information and accessing chosen help. Professionals must apply local consent/capacity requirements rather than substituting a general neuroscience claim.
+
+Use a transition map with columns for the young person's priority, current support, future setting, person responsible and unresolved local question. School, health, social care and work/study supports may use different eligibility or transition rules. Check them rather than assuming one universal age. Review the map with an accessible account of what the young person wants; a plan written entirely by adults can miss its central purpose.
 EXAMPLE:: Fictional teenager, age sixteen:
 Goal: travel to a familiar club with less adult prompting.
 Preference: a private checklist on their phone, not public reminders.
@@ -211,6 +231,10 @@ TEACHING:: Separate understanding from expression. A child may understand more t
 Partners influence access. Long instructions, rapid questioning, interruptions or unavailable communication tools can make a capable communicator seem less successful. Allow time and attend to established signals. Accept a meaningful answer through the person's preferred accessible mode rather than requiring speech as proof of understanding.
 
 Different languages and dialects are not disorders. A professional must distinguish language difference from difficulty using appropriate culturally and linguistically informed assessment. Caregivers should not be told to abandon a valued home language simply because an English-only observation was difficult.
+
+Build a vocabulary for language. Phonology concerns a language's sound-pattern system; morphology concerns meaningful word parts, such as plural endings; syntax concerns how words combine; semantics concerns meaning; pragmatics concerns language use in context. These are useful distinctions for asking questions, not five online diagnostic tests. Speech additionally involves producing sounds, voice and fluency, while communication includes non-speech modes.
+
+Consider the invented instruction “Before you pack the red books, put the blue folder by the door.” Following it may involve understanding before, plural books, colour terms, sentence structure, memory and access to the spoken message. A wrong response does not identify which demand caused difficulty. Compare simpler information formats and relevant contexts only as a professional information-gathering question; do not administer an improvised test. Include the person's languages, chosen modes and own account.
 EXAMPLE:: Fictional interaction:
 Adult asks two questions quickly while moving a picture board away.
 Child reaches toward the board and turns away from the adult.
@@ -353,6 +377,10 @@ TEACHING:: Start with noticing. A reach, gesture, sign, word or AAC selection ma
 An expansion adds a little language while preserving the message. If a fictional child says “car go”, an adult might respond “The red car goes down” in the play context. It is a model, not an exam demand. The adult need not insist that the child repeat the longer sentence.
 
 Shared reading can involve looking, pointing, commenting, predicting or enjoying a familiar page. Reading every word is not the only useful exchange. Follow comfort and interest, use the family's languages and chosen communication modes, and respect a wish to stop. Concerns about development still deserve professional advice rather than relying on an activity alone.
+
+A responsive exchange has an observable loop: notice a contribution, interpret tentatively, respond to its meaning, and leave room for the next contribution or correction. For adult role-play, compare “What colour? Say red. Say it again” with “You chose the red car. It is going down the ramp” followed by a pause. The second adds language without making access to play depend on repeating it.
+
+Judge your own partner behaviour in this exercise: did you leave the object or communication mode available, allow a response, acknowledge refusal and avoid deciding the message for the other person? A count of your adult role-play behaviours can help reflection; it is not a child's developmental score or evidence of a treatment effect. A relevant professional can advise how everyday interaction relates to an individual's assessed needs.
 EXAMPLE:: Adult role-play with an invented book scene:
 Partner as child: points to a dog and says “dog wet”.
 Adult: “Yes, the dog is wet. It jumped in the puddle.”
@@ -411,6 +439,10 @@ TEACHING:: Do not make speech or a supposed readiness test the price of communic
 Partners need time and practice too. They should notice the person's established signals, keep the system available and allow the person to complete a message. Do not take away the device as a general reward/punishment mechanism or physically guide a message and then attribute it uncritically to the person.
 
 Technology is not the whole plan. A powered device may need charging, repair or a backup. A paper board can be useful but still needs appropriate content, access and partner support. Work with the relevant professionals and the person to plan reliable communication across home, school and community.
+
+Distinguish aided from unaided communication. Gesture or signing can be unaided; a paper board, writing or a speech-generating system can be aided. A person may combine modes in one exchange or use different modes when tired or in a noisy place. Speech being present does not establish that every message can be expressed accessibly through speech alone.
+
+Plan beyond a device's vocabulary list. Can the person initiate, reject, repair a misunderstanding, ask a new question and express an unanticipated idea? Can the chosen mode be reached and understood in the actual activity? Does a backup preserve meaningful communication when power or connectivity fails? These questions support collaboration with an AAC team; they do not select an access method, app or treatment from a general lesson.
 EXAMPLE:: Fictional communication inventory, age thirteen:
 Existing modes: speech for familiar phrases, typing for detailed ideas,
 gestures for yes/no, agreed board for quick choices.
@@ -678,8 +710,10 @@ communication access, team questions, safety boundaries and review.
 EXPLANATION:: The case contains enough material for a thoughtful discussion but not a diagnosis. Keeping the board available and understanding arrival demands are questions of access to discuss; a full individual support plan requires the relevant people and assessment.
 PITFALL:: Do not fill missing history with an invented diagnosis and then present the result as clinical reasoning. Unknowns are a legitimate and necessary part of a good caregiver portfolio.
 EXERCISE:: Produce a two-page portfolio for case B or an entirely invented alternative. Include all eight sections, three linked authoritative resources with correct age/scope, five questions for a team and one adult role-play. Use no real child data and no intervention trial.
+
+Use the downloadable fictional-case and portfolio sheet for complete supplied cases, required sections and review prompts.
 SOLUTION:: A reviewable portfolio preserves the child's priority and modes, distinguishes observed noise/instruction demands from hypotheses and identifies appropriate referral questions. It cites resources for their actual scope, includes assent/privacy and offers a feasible review discussion. It does not claim treatment effectiveness or a diagnosis.
-CHALLENGE:: Give the portfolio to a consenting adult partner. Ask them to challenge one unsupported inference, one inaccessible assumption and one unclear professional boundary. Revise the document and write a short account of what changed and why.
+CHALLENGE:: Give the portfolio to a consenting adult partner. Ask them to challenge one unsupported inference, one inaccessible assumption and one unclear professional boundary. Revise the document and write a short account of what changed and why. If a consenting adult partner is unavailable, write the three strongest counterarguments yourself and label this self-review; do not invent partner feedback. Independent qualified feedback remains a separate next step.
 CHALLENGE_SOLUTION:: The final artefact should show concrete revisions, such as removing a diagnostic label, preserving AAC access or replacing a treatment prescription with a professional question. A partner review strengthens clarity but is not clinical validation. Your self-assessed pass records the educational work you completed.
 QUESTION:: What should the caregiver capstone demonstrate?
 CORRECT:: Respectful, evidence-aware observation and collaboration with explicit limits, using fictional cases.
@@ -696,6 +730,12 @@ TEACHING:: Learn relationships before memorising isolated terms. Distinguish the
 Study levels of analysis. A cell-level process, a neural pathway, a whole-body movement and a meaningful activity are related but not interchangeable explanations. Professional assessment connects them with appropriate methods and scope, rather than inferring a lesion or diagnosis from one classroom behaviour.
 
 Build a prerequisite notebook. For each system, draw an original labelled diagram, describe its ordinary function, name what you do not understand and identify which profession can assess a relevant concern. Do not perform oral-motor, reflex, hearing or swallowing examinations from this lesson. Those require trained procedures, interpretation and supervision.
+
+A basic speech-production map begins with respiration: lungs and breathing musculature create airflow. At the larynx, vocal folds can vibrate to contribute a voiced source. The pharyngeal, oral and nasal cavities shape resonance; tongue, lips, jaw and palate contribute to articulation and oral/nasal routing. This is a simplified functional map, not a prescription for strengthening or an explanation of one child's intelligibility.
+
+A basic hearing map follows sound through the outer ear, middle-ear mechanical transmission and inner-ear transduction, then neural pathways. Hearing access and language interpretation are related but distinct questions. A classroom non-response cannot localise a problem to one structure. Professional hearing procedures require the relevant training and interpretation; a browser sound check is not an audiological assessment.
+
+For movement, distinguish skeletal structures and joints, muscles that generate forces, and nervous-system processes that coordinate action. Occupation-level reasoning then asks how the person performs a meaningful task in a particular environment. Anatomy can inform that reasoning without replacing it. Complete the specifically assigned textbook sections and draw three explanatory maps before treating this bridge as preparation for discipline-specific assessment study.
 EXAMPLE:: Fictional claim to analyse:
 “The child is hard to understand, so the tongue must be weak.”
 Missing distinctions:
@@ -725,6 +765,12 @@ TEACHING:: Define the outcome and unit. A score can measure a narrow task while 
 Separate association from causation. Two changes occurring together may reflect a third factor, maturation, measurement changes or selection. Random allocation can reduce some confounding, but does not eliminate every bias or guarantee transfer. A p-value is not the probability that an intervention works for a particular child.
 
 Use effect estimates with context. Absolute change, spread, uncertainty, baseline differences, missingness and burden all matter. Do not treat a statistically detectable average difference as a guaranteed meaningful benefit. This workshop uses invented data and does not involve a clinical study or model-based scoring run.
+
+Start the statistics bridge with a denominator. Six successful opportunities out of ten gives 60%; six out of twenty gives 30%. Neither is a rate per hour unless time is the denominator. A percentage without its count and opportunity definition is hard to interpret. A mean describes an average; a median is the middle ordered value; spread describes variation. Repeated observations within a child are not independent children.
+
+Use an invented nonclinical numerical comparison to understand effect size: if group A changes from mean 4 to 5 and group B from 4 to 4.5, the difference in mean changes is 0.5 score units. Its importance depends on what the score measures. Its uncertainty depends on sampling, variability and design. A p-value concerns compatibility with a specified statistical null model under assumptions; it is not the probability that the null is true or that a particular child will benefit.
+
+Missingness can change a conclusion. If ten fictional participants enter and six complete follow-up, a mean for those six is a completer result, not a ten-person result. Ask why four are missing and whether burden, adverse experiences or lack of benefit influenced follow-up. Do not invent their outcomes. Complete the assigned introductory statistics and evidence-appraisal exercises before interpreting advanced clinical studies.
 EXAMPLE:: Fictional group outcome scores:
 Group A before: [2,4,6]; after: [3,5,7].
 Mean before = 4; mean after = 5; mean change = +1.
@@ -754,6 +800,12 @@ TEACHING:: Start with the referral question. Choosing a familiar test before ide
 Inspect the tool's intended population, age range, norms, procedures and evidence. Changing language, instructions, materials or response mode may change interpretation. An accommodation may be necessary for access, but it must be documented and its effect on standard-score validity considered. Never invent a normed interpretation after translating items informally.
 
 Triangulate information. A classroom observation, family history and test result may disagree because contexts differ or measurement is imperfect. Treat disagreement as a question to investigate rather than deleting inconvenient evidence. Explain uncertainty accessibly and distinguish screening, diagnosis, eligibility and intervention planning.
+
+Reliability concerns consistency of a measurement process; validity concerns the interpretation/use supported by evidence. A scale that consistently adds five units can be repeatable but inaccurate. A reliable writing-speed measure can still be an invalid basis for a claim about story comprehension. Neither a familiar tool nor a numerical score automatically establishes an appropriate decision.
+
+Work a fictional screening table, not a child assessment. A reference classification has 20 positive and 80 negative cases. A screen flags 16 of the 20 and 8 of the 80. Sensitivity is 16/20 = 80%; specificity is 72/80 = 90%. Of the 24 flagged cases, 16 match the reference, so positive predictive value is 16/24 ≈ 66.7%. These answer different questions, and predictive value changes with the case mix. Assume the reference and definitions are fixed for this arithmetic; real reference standards also have limitations.
+
+A screening flag prompts the relevant next assessment process; it is not itself a diagnosis. Document intended age/population, language, norms, access, changes to procedures and qualified interpretation. An informal translation can provide descriptive information in context while failing to support the original standard-score interpretation. Do not repair that validity problem by adding a confident-looking percentage.
 EXAMPLE:: Fictional measurement problem:
 A speeded handwriting task is used to judge knowledge of a story.
 The pupil accurately explains the story using an accessible mode.
@@ -764,7 +816,11 @@ What access or motor factors affect the result? What else is needed?
 EXPLANATION:: A reliable timing measurement can still be a poor basis for inferring story comprehension. Validity belongs to the proposed interpretation/use, not a permanent all-purpose badge attached to a test.
 PITFALL:: Do not use one score as a complete portrait of a person or claim more precision than the tool supports. Professional interpretation must consider uncertainty, scope, culture and functional context.
 EXERCISE:: Compare three fictional methods for understanding a school participation concern: caregiver interview, classroom observation and standardised task. For each, state purpose, strength, limitation, access issue and who should interpret it. Include an example of a reliable but invalid inference.
+
+Using the supplied fictional 100-case screening table, write true positives, false negatives, false positives and true negatives. Calculate sensitivity, specificity and positive predictive value with their distinct denominators. Explain why no individual diagnosis follows.
 SOLUTION:: Interviews provide history but can reflect recall/context; observations show real activity but limited sampled settings; standardised tasks support defined comparisons but require suitable norms/procedures. A consistently timed handwriting task cannot automatically measure comprehension. Each method contributes within its purpose and professional scope.
+
+Counts are TP=16, FN=4, FP=8 and TN=72. Sensitivity=80%, specificity=90% and PPV≈66.7%. The proportions describe this invented table under its assumptions; a screen is not an individual diagnostic assessment.
 CHALLENGE:: A translated test with altered instructions is reported with an original normed score and no caveat. Write an assessment-quality critique and a corrected reporting plan without assigning a diagnosis.
 CHALLENGE_SOLUTION:: Translation and procedure changes can invalidate the original comparison. Document modifications, access needs and limits; use appropriate descriptive/functional information and qualified culturally responsive methods. Seek relevant expertise or a suitable tool. Do not present an unsupported standard score as decisive diagnostic evidence.
 QUESTION:: Can a measure be reliable but unsuitable for a particular inference?
@@ -810,6 +866,10 @@ TEACHING:: Separate a functional goal from an instructional target. “Share an 
 Choose outcomes that match the goal. Accuracy on trained items can differ from generalisation to new material, retention over time or spontaneous use. Record the support provided: a response after a full model is not the same as an independent response. Avoid turning independence into a requirement that removes needed communication access.
 
 Intensity and approach are not universal. Age, assessed needs, preferences, setting, evidence and feasibility matter. Professionals should explain expected benefit, limits and what would trigger revision. Caregivers and teachers need clear agreed roles rather than a large unexplained homework burden.
+
+Make the goal-to-measure link inspectable. In an invented book-club planning record, “contribute an idea” is incomplete until the team agrees what counts as a relevant contribution, which communication mode remains available and what support is recorded. A full adult model, a general prompt and an independently initiated contribution are different support conditions; count them separately rather than merging them into one success percentage.
+
+Compare learning stages without prescribing a programme. Trained-item performance concerns material already practised. Retention asks whether relevant learning remains after time; transfer asks about appropriate new material or contexts. A fictional learner may achieve 9/10 trained items with a model and 2/5 novel items without that model. These observations answer different questions and cannot be averaged into a general claim of functional success. Professional interpretation must connect them to the child's priorities, context and assessed needs.
 EXAMPLE:: Fictional assessed priority, age ten:
 Child wants to contribute to a book-club discussion.
 Supplied finding: needs support organising a short explanation.
@@ -838,6 +898,10 @@ TEACHING:: Describe before categorising. “Repeated sounds while speaking” is
 Respect the person's experience. A small visible feature can have substantial participation impact, while an adult's concern may not match the child's priority. Ask about effort, feelings, avoidance, access and goals in a suitable way. Avoid selecting appearance or perfect fluency as the only outcome.
 
 Swallowing is a clear safety boundary. Do not trial textures, thickening, oral exercises or feeding procedures from this lesson. Voice changes, breathing concerns or other health signs may require medical coordination. A fictional educational case cannot settle diagnosis, urgency or treatment for an individual.
+
+Keep a working glossary while reading the professional sources. A speech-sound pattern concerns how sounds are organised/produced within language and dialect. Motor-speech reasoning considers planning/programming or execution, requiring appropriate differential assessment. Fluency concerns the flow of speech and its impact; voice concerns the produced vocal quality/function. Feeding and swallowing involve distinct health/safety questions. Similar listener impressions can arise through different mechanisms, so a short clip cannot choose among them.
+
+A conceptual comparison table should therefore state a question rather than a label: is the difficulty systematic across relevant sounds and contexts? What does the person report about effort or interruption? Are hearing, structural, respiratory or other health questions relevant? Who is qualified to assess each? Study the disorder-specific sources for terminology and evidence; do not convert this glossary into a screening checklist or a universal exercise package.
 EXAMPLE:: Three fictional referral summaries:
 A: speech is difficult for unfamiliar listeners in several settings.
 B: teenager reports distress when others interrupt their stammered speech.
@@ -866,6 +930,10 @@ TEACHING:: Start with participation and vocabulary functions. A system should no
 Access is multidimensional. Touch selection, switches, eye gaze or other methods have different assessment and configuration needs. A particular diagnosis does not determine one best interface. Fatigue, positioning, vision, language and environmental conditions may affect use. Appropriate specialist assessment is necessary before prescribing access technology.
 
 Plan the support system. Communication must remain available during transitions, repairs or power loss. Partners need agreed ways to model, wait, respond and support without taking over authorship. Data storage, cloud features and voice-output settings require privacy and consent review, especially for children.
+
+Feature matching starts with a goal and a required function, then asks which features could support it. For an invented club discussion, rapid familiar messages and novel explanations are different needs. A system with ten prerecorded choices may cover the first while limiting the second. A typed system can allow novel messages yet be inaccessible if entry demands or fatigue are unsuitable. No winner follows without the person's assessed access and preferences.
+
+Document authorship separately from assistance. A partner can support access and understanding, but a message physically guided or generated by another source cannot automatically be attributed to the user. Record how the person can accept, reject and correct a message and communicate something unexpected. This is an assessment-quality and agency question, not permission to trial unvalidated access methods.
 EXAMPLE:: Fictional user priority, age fourteen:
 Wants to contribute detailed ideas in a school club and say stop privately.
 Uses some speech and typing; fatigue varies.
@@ -894,6 +962,10 @@ TEACHING:: Start with meaning. Two children may perform the same task for differ
 Analyse demands explicitly: sequence, objects, space, social expectations, timing, body/movement requirements, cognitive/communication demands and sensory conditions. Describe what is required without assuming that any one demand is the cause of difficulty. Distinguish performance in the observed setting from underlying capacity.
 
 Do not prescribe from analysis alone. Pain, fatigue, equipment needs or complex movement concerns may need relevant specialist assessment. Intimate activities such as dressing or toileting require additional dignity, consent and safeguarding considerations. A learning exercise should remain fictional and avoid bodily assessment or handling.
+
+The occupational profile asks what matters to the person, their routines, contexts, strengths and concerns. Activity analysis asks what a task demands even before assigning those demands to a particular person's difficulty. Performance analysis then examines the person-task-environment interaction using appropriate professional methods. These three lenses support one another but do not mean the same thing.
+
+For the invented baking club, “hold a bowl” is only one demand. The task also involves understanding steps, choosing roles, sharing space and communicating help around hazards. A generic grip score cannot answer all those questions. An access option may change the task/environment while assessment examines another concern. Participation goals need not require an unaided or typical-looking performance when chosen support meets the meaningful purpose safely.
 EXAMPLE:: Fictional occupation: joining a baking club, age twelve.
 Meaning: enjoys creating food with friends.
 Demands: read steps, organise tools, stand/reach, manipulate utensils,
@@ -922,6 +994,10 @@ TEACHING:: Distinguish capacity, performance and participation. A child may comp
 Feedback and practice conditions need individual reasoning. A general principle about learning does not specify a universal number of repetitions or permission to continue through pain. A qualified professional considers developmental needs, fatigue, consent, safety, evidence and the chosen task.
 
 Adaptation is not failure. A different everyday tool or response format may enable meaningful access while other skills are assessed or developed. Avoid making a particular movement pattern the only acceptable outcome when the person's goal can be met safely and comfortably another way.
+
+Performance during practice is not the same as learning. An immediate change after feedback may depend on the feedback or setting. Retention concerns later performance; transfer concerns a relevant different condition. In fictional records, write the task, support, setting and observation time beside each result. A faster trained peg task cannot by itself prove easier dressing or comfortable participation in a chosen club.
+
+Knowledge of results describes an outcome, such as whether an agreed task goal was reached. Knowledge of performance describes aspects of how an action occurred. These are conceptual feedback categories, not a recommended dose or technique for a child. A qualified professional weighs evidence, assessment, preferences, pain/fatigue, accessibility and task meaning before selecting any practice approach.
 EXAMPLE:: Fictional goal, age eleven:
 Wants to take part in a chosen craft club.
 Can manipulate large pieces in a quiet setting.
@@ -971,7 +1047,7 @@ WRONG2:: Only whether an advertisement contains a before/after video.
 FEEDBACK:: Evidence applies to defined methods and contexts. A broad label cannot carry an unlimited claim.
 
 ID:: P11
-BRIDGE:: P03 covers measurement, C10 context, C07 ethics and C12 health. Functional assessment requires appropriate professional training and safeguards. This lesson uses supplied fictional observations and never asks you to provoke or manipulate a child's distress.
+BRIDGE:: P03 covers measurement, C10 context, C07 ethics and C12 health. Functional assessment requires appropriate professional training and safeguards. This lesson uses supplied fictional observations and never asks you to provoke or manipulate a child's distress. Complete the assigned IRIS Behavioral Principles module before its FBA module; the native terminology example provides an entry bridge, not clinical assessment training.
 CONCEPT:: Behavioral assessment seeks a defensible understanding of actions in context, including what the person communicates and what affects participation. A functional hypothesis is tentative. It does not replace health assessment or justify coercive goals.
 MECHANISM:: Operational definitions make observations interpretable. ABC records organise antecedents, observable actions and consequences. A broader assessment considers history, setting events, communication, health, environment and multiple information sources. Experimental functional analysis is a specialised procedure with distinct risks and requirements, not a caregiver homework exercise.
 TEACHING:: Define behaviour without judging character. “Left the chair and walked toward the door” can be observed; “was manipulative” cannot be measured directly. Specify context, start/stop conventions and opportunity denominator where appropriate. Counting without those definitions can produce misleading comparisons.
@@ -979,6 +1055,12 @@ TEACHING:: Define behaviour without judging character. “Left the chair and wal
 Do not infer function from one sequence. A task ending after distress does not prove that the only cause or function is escape. Pain, unclear instructions, sensory conditions, anxiety or communication barriers may be relevant. Ask what evidence could distinguish explanations and who is competent to investigate.
 
 Choose meaningful, ethical goals. Communication access, safety, participation and quality of life matter more than suppressing harmless difference or obtaining obedience. The child's assent/refusal and cultural context need appropriate consideration. Qualified professionals should explain rationale, evidence, safeguards and alternatives.
+
+Learn behavioral terminology without treating it as a moral judgement. Reinforcement names a consequence-related increase in a defined behaviour; punishment names a decrease. Positive means something is added and negative means something is removed. These technical words do not mean kind versus unkind, and an adult's intention does not establish an observed effect. A reward label alone does not prove reinforcement.
+
+Use a nonclinical adult-office example: after a reminder chime, an adult clicks a button that stops it; if clicking becomes more frequent in comparable circumstances, removal of the chime could function as negative reinforcement. It is not punishment simply because negative appears in the name. The example explains terminology, not a plan to deliver consequences to children.
+
+An antecedent occurs before an action; a consequence follows it. An ABC note records a sequence, while a functional hypothesis proposes a relationship requiring adequate evidence and qualified interpretation. Respondent processes, health and broader context can also matter. No single sequence establishes function, and terminology never authorises coercion, deprivation of communication or intentionally evoked distress.
 EXAMPLE:: Fictional observation set:
 Three difficult transitions occurred on crowded, noisy days.
 Two quiet transitions were completed with chosen support.
@@ -1007,6 +1089,10 @@ TEACHING:: Define meaningful outcomes and balancing measures. A lower rate of an
 Do not infer causation from any visible change. Maturation, illness, staff changes, measurement drift or concurrent supports can explain a pattern. A simple A-to-B sequence is usually vulnerable to alternative explanations. Appropriate single-case standards and professional research ethics are needed before stronger claims.
 
 Plans need implementation clarity and feasibility. Who is qualified to deliver which part, how consent/assent is handled, what signals a need to stop/review, and who responds to concerns? Caregivers should receive understandable explanations and a manageable role, rather than hidden responsibility for a complex protocol.
+
+Read a single-case graph with time on the horizontal axis and a clearly defined outcome/denominator on the vertical axis. Inspect level, trend, variability, immediacy, overlap and consistency across comparable phases. In the supplied [2,3,4] then [5,6,7] series, the increase begins before the phase change, so the boundary alone does not explain it. If available opportunities also rose, raw counts would be even harder to interpret.
+
+Repeated measurement is necessary but not sufficient for a strong single-case causal claim. Designs may arrange repeated demonstrations across phases or stagger changes across settings/behaviours/participants under suitable assumptions. A multiple-baseline design is not simply one baseline per person followed by arbitrary support. Design selection must meet relevant standards, ethics, feasibility and safety. Withdrawing helpful support or engineering distress is not justified by a desire for a clearer graph; this task is a design critique only.
 EXAMPLE:: Fictional weekly participation counts:
 Before support: [2, 3, 4].
 After support: [5, 6, 7].
@@ -1063,6 +1149,10 @@ TEACHING:: Write for the next responsible reader and the person concerned. Use c
 Supervision should match the task and competence. Know who is responsible for assessment, decisions, escalation and sign-off. A supervisor's presence does not automatically authorise every activity, and a learner must not conceal uncertainty to appear independent. Discuss limits before an unfamiliar task affects a child.
 
 Qualifications vary by country and profession. Verify programme accreditation, registration, protected titles, supervised experience and current credential rules with the appropriate authority. ASHA certification, HCPC registration, NBCOT certification and BACB credentials are different systems with eligibility and jurisdiction limits; they are not interchangeable international licences.
+
+A defensible note identifies source and time. “Teacher reports three unfinished tasks this week” attributes a report; “completed the demonstrated first step in this invented observation” describes the supplied event. A hypothesis should name what supports it and what information would change it. A plan names the responsible qualified person and review/escalation route instead of saying “monitor” without an owner.
+
+Correction is part of accountability. If a later source contradicts an earlier report, preserve the distinction rather than rewriting history as if the uncertainty never existed. Follow the authorised record system's correction policy. For educational practice, revise the wholly fictional note and explain the revision; do not import a real chart or create a clinical record in this hub.
 EXAMPLE:: Fictional note structure:
 Purpose: clarify participation concern in a classroom activity.
 Reported: teacher describes difficulty with multi-step directions.
@@ -1132,8 +1222,10 @@ Proposal: one bounded research question, plan only.
 EXPLANATION:: The case supports a thoughtful interprofessional inquiry without authorising treatment. Fatigue/discomfort require appropriate consideration rather than being automatically attributed to a developmental label. The teenager's priorities and privacy remain central.
 PITFALL:: Do not present an elaborate plan as clinically valid because it cites many sources. The reasoning must match the person, evidence and competence; missing assessment cannot be replaced by citation volume.
 EXERCISE:: Produce a four-page fictional portfolio: one page of facts/unknowns, one of professional questions and boundaries, one evidence-appraisal table and one further-training plan. Include eight authoritative sources with correct scope and a clear statement that no child was assessed or treated.
+
+Use the downloadable fictional-case and portfolio sheet for complete supplied cases, required sections and review prompts.
 SOLUTION:: A strong portfolio distinguishes disciplines, preserves accessible participation, considers health/referral and names uncompleted scientific and practical prerequisites. The evidence table critiques applicability rather than collecting logos. The training plan identifies actual programmes/regulators and supervised competencies to verify.
-CHALLENGE:: Write a two-page research proposal linked to the case, then ask a consenting adult partner to challenge its outcome meaning, cultural/access assumptions and causal claims. Revise it and record which questions still require a qualified academic or clinical supervisor.
+CHALLENGE:: Write a two-page research proposal linked to the case, then ask a consenting adult partner to challenge its outcome meaning, cultural/access assumptions and causal claims. Revise it and record which questions still require a qualified academic or clinical supervisor. If a consenting adult partner is unavailable, write the three strongest counterarguments yourself and label this self-review; do not invent partner feedback. Independent qualified feedback remains a separate next step.
 CHALLENGE_SOLUTION:: The final proposal states an answerable question, suitable methods and outcomes, alternative explanations, ethics/data needs, resources and limits. Partner feedback improves clarity but is not clinical or ethics approval. No research is executed, and no professional credential is awarded by the hub's self-assessed pass.
 QUESTION:: What should this professional capstone establish?
 CORRECT:: Evidence of academic preparation and fictional case reasoning, with explicit further-training and supervision needs.

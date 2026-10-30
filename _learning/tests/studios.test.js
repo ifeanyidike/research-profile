@@ -28,6 +28,7 @@ for (const [slug, count, table] of [
     const allowed = [...tableBlock.matchAll(/\x27([A-Z][0-9]{2})\x27/g)].map((match) => match[1]);
     assert.deepEqual(new Set(allowed), ids, "SQL and curriculum IDs differ");
     assert.equal(ids.size, count);
+    assert.equal(new Set(modules.map((m) => m.pass_criteria)).size, count, "Assessment rubrics must be topic-specific");
     assert.equal(Object.keys(lessons).length, count);
     const seen = new Set();
     for (const m of modules) {
@@ -36,6 +37,11 @@ for (const [slug, count, table] of [
         m.id
       );
       seen.add(m.id);
+      assert.equal(m.outcomes.length, 3, `${m.id}: three observable criteria`);
+      assert.ok(m.outcomes.every((outcome) => typeof outcome === "string" && outcome.trim()));
+      assert.equal(m.pass_criteria, m.outcomes.map((item, i) => `${i + 1}. ${item}`).join(" "));
+      assert.ok(m.study_focus.length > 80, `${m.id}: explicit source assignment`);
+      assert.ok(m.videoNote.length > 80, `${m.id}: coverage/access must be stated even with videos`);
       const l = lessons[m.id];
       for (const field of ["concept", "mechanism", "pitfall"]) assert.ok(l[field].length > 70, `${m.id} ${field}`);
       for (const field of ["bridge", "teaching", "example", "explanation", "exercise", "solution", "challenge", "challenge_solution"])
@@ -51,6 +57,8 @@ for (const [slug, count, table] of [
       for (const source of [...m.videos, ...m.readings, ...m.practice_links]) {
         assert.equal(new URL(source.url).protocol, "https:");
         assert.ok(source.label.length > 8);
+        const u = new URL(source.url);
+        if (u.hostname === "ifeanyidike.com") assert.ok(fs.existsSync(new URL(`../../${u.pathname.slice(1)}`, import.meta.url)), source.url);
       }
       assert.ok(m.pass_criteria.length > 80);
     }
@@ -205,4 +213,36 @@ test("shared merge converges on equal timestamps, including Unicode and key-orde
   assert.ok(model.sameRecord(a, b));
   const c = { values: { notes: "\ue000" }, changed: { notes: 100 } };
   assert.deepEqual(model.mergeRecords(a, c), model.mergeRecords(c, a));
+});
+
+test("renderer, entry points and data consumers use one release version", async () => {
+  const root = new URL("../../", import.meta.url);
+  const shared = fs.readFileSync(new URL("learning-studio/app.js", root), "utf8");
+  for (const slug of ["voice-ai-studio", "child-development-studio"]) {
+    const config = (await import(`../../${slug}/config.js`)).default;
+    const html = fs.readFileSync(new URL(`${slug}/index.html`, root), "utf8");
+    const entry = fs.readFileSync(new URL(`${slug}/app.js`, root), "utf8");
+    const versions = [...(html + entry + shared).matchAll(/(?:\?v=|version: ")([0-9]{8}-[0-9]+)/g)].map((match) => match[1]);
+    assert.ok(versions.length >= 7, "Entry/styles/config/shared imports are covered");
+    assert.ok(
+      versions.every((version) => version === config.version),
+      `${slug}: mixed cached schema/runtime`
+    );
+  }
+});
+
+test("revised source order preserves old completion identities without marking new material watched", () => {
+  const modules = read("voice-ai-studio", "curriculum.json").modules;
+  const topic = (id) => modules.find((m) => m.id === id);
+  assert.equal(topic("V08").videos.find((v) => v.url.includes("lYYkEx1Qx8s")).progressKey, "video:0");
+  assert.equal(topic("V17").videos.find((v) => v.url.endsWith("decision-tree/")).progressKey, "video:0");
+  assert.equal(topic("V17").videos[0].progressKey, "video:100");
+  assert.equal(topic("V30").videos[0].progressKey, "video:100", "Old impulse-response checkbox cannot count a new codec talk");
+  assert.equal(topic("V15").readings.find((r) => r.url.includes("chapter1/preprocessing")).progressKey, "reading:0");
+  for (const slug of ["voice-ai-studio", "child-development-studio"])
+    for (const m of read(slug, "curriculum.json").modules) {
+      const resources = [...m.videos, ...m.readings];
+      assert.equal(new Set(resources.map((r) => r.progressKey)).size, resources.length, m.id);
+      for (const r of resources) assert.match(r.progressKey, /^(video|reading):[0-9]{1,3}$/);
+    }
 });
