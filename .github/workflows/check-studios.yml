@@ -1,0 +1,32 @@
+name: Check learning studios
+
+on:
+  pull_request:
+    paths:
+      - "_learning/**"
+      - "learning-studio/**"
+      - "voice-ai-studio/**"
+      - "child-development-studio/**"
+      - "_cyber/**"
+      - "cyber-studio/**"
+      - ".github/workflows/check-studios.yml"
+      - ".github/workflows/deploy.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  offline-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Check generated curriculum matches its authored sources
+        run: python3 _learning/build.py --check
+      - name: Run isolated offline storage and curriculum tests
+        run: node --test _learning/tests/*.test.js _cyber/tests/*.test.js

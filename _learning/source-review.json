@@ -1,0 +1,22 @@
+{
+  "reviewed": "30 October 2026",
+  "scope": "Source-page and metadata inspection, prerequisite closure and original instructional cases. HTTP availability is not video playback or clinical validation.",
+  "corrections": [
+    "ASHA soft-404 public and professional URLs replaced with current topic pages.",
+    "Moved librosa, SpeechBrain, LiveKit and Kyutai paths corrected.",
+    "Edinburgh programme ID 277 resolved to Management; replaced with the verified Speech and Language Processing programme 290.",
+    "Stanford CS224S current recordings identified as restricted; never advertised as public videos.",
+    "ASHA EBP CE-credit access distinguished from hosted videos; Cochrane free account requirement recorded.",
+    "Native Python async bridge added; JavaScript-dependent reading replaced by Python asyncio sections."
+  ],
+  "unverified_public_video_topics": {
+    "voice": ["V24", "V27", "V32", "V33", "V34", "V36", "V37", "V38", "V39", "V40", "V41", "V42", "V43", "V44"],
+    "child": ["C04", "C05", "C07", "C11", "G04", "G09", "G11", "G12", "P03", "P04", "P05", "P12", "P14"]
+  },
+  "limitations": [
+    "No complete playback/caption audit of every external video.",
+    "Some sources block automated requests or require provider accounts; access notes and alternative original lessons/readings remain visible.",
+    "Clinical competence and individual treatment suitability are not assessed; cases are fictional and formal training/supervision are separate.",
+    "Hosted storage isolation/merge checks and callback configuration were verified on 30 October 2026; fresh OAuth/email/recovery and actual two-device sign-in remain untested."
+  ]
+}
