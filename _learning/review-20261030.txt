@@ -41,10 +41,11 @@ Counterexample | temporary shared-prefix mutation | isolation assertion fails
 for the intended leaked value | /tmp mutation log | verified test sensitivity.
 Sync merge | two mocked devices and reordered JSONB-like objects | independent
 fields converge and unchanged sync does not upload | offline tests | verified
-with mocked Supabase I/O; hosted service remains uncovered.
+with mocked Supabase I/O; hosted database contract checked separately below.
 RLS | synthetic identities, own/other/anonymous access | other access denied;
 newer notes survive independent practice update | disposable PostgreSQL 16 and
-transactional verification SQL | verified locally; auth.uid was emulated.
+transactional verification SQL | verified locally and on hosted Supabase; hosted
+auth.uid used, all synthetic users/progress rolled back, both row counts zero.
 Backup UI | wrong studio then valid synthetic file | rejection before merge,
 destination preview, escaped text preserved | browser QA | verified.
 Progress gate | correct retrieval + practice + evidence then unmet conditions |
@@ -59,9 +60,11 @@ full playback/captions and future provider availability are not established.
 Clinical scope | fictional cases and role/credential boundaries | no diagnosis,
 prescription or claimed licence from hub progress | source/content inspection |
 educational review only, not independent clinical accreditation or validation.
-Hosted state | intended two tables and two callbacks | installation pending |
-browser tool reports Local browser use is disabled in Work settings | uncovered;
-keep PR draft and do not publish a signed-in-sync claim before verification.
+Hosted state | two dedicated tables and exact production callbacks | tables
+installed, RLS on, three own-account policies per table, anon SELECT and account
+DELETE denied, zero remaining test rows; five callbacks including the preserved
+three, original Site URL unchanged | Supabase dashboard inspection and hosted
+verify.sql | verified 30 October 2026 after browser access was restored.
 
 Executed checks
 ---------------
@@ -72,10 +75,10 @@ synthetic pass/notes/import flows, search, themes and responsive navigation.
 Local PostgreSQL RLS/merge verification passes; synthetic progress rolled back,
 remaining row counts zero; disposable container stopped.
 
-Important uncovered work: hosted schema/callback installation and inspection,
-fresh real OAuth/email/recovery and cross-device sign-in flows, every external
-video's actual playback/captions, individual treatment suitability and supervised
+Important uncovered work: fresh real OAuth/email/recovery and cross-device
+sign-in flows, every external video's actual playback/captions, individual
+treatment suitability and supervised
 professional competence. No model inference, replay/evaluation harness, live
 telephone call, clinical intervention, email signup or sensitive child-data
-upload was used for validation. The current artefact is a draft, not a claim of
-complete production readiness.
+upload was used for validation. Hosted checks establish the storage contract
+and callback configuration; they do not establish a fresh end-to-end login.

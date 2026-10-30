@@ -27,3 +27,13 @@ public configuration and bundled Supabase SDK. Account UUIDs share the project's
 identity system, but the new tables cannot overwrite Algo/Cyber progress.
 No private keys, database passwords or service-role credentials belong in the
 static site. Never collect real child/clinical records in the learning workspace.
+
+Installation evidence — 30 October 2026
+--------------------------------------
+Installed setup.sql in the existing project after preflight confirmed both new
+tables absent and no custom auth.users hooks. Hosted verify.sql completed with
+no errors and rolled back synthetic users/progress. Dashboard inspection showed
+RLS enabled, three own-account policies per table, anonymous reads/account
+deletes denied and zero rows in both new tables. Both exact production callbacks
+were saved; the three existing callbacks and Site URL were preserved.
+Fresh OAuth/email/recovery and actual two-device sign-in remain untested.
