@@ -185,7 +185,16 @@ test("content evidence stays attached to the reviewed assignment and exposes unr
     seen.add(key);
     const r = topics[`${a.studio}/${a.topic}`].videos.find((r) => r.progressKey === a.progressKey);
     assert.deepEqual(
-      { url: r.url, assignment: r.assignment, durationSeconds: r.durationSeconds, segments: r.segments || [] },
+      {
+        label: r.label,
+        url: r.url,
+        playbackUrl: r.playbackUrl || r.url,
+        watchMode: r.watchMode,
+        timingSource: r.timingSource,
+        assignment: r.assignment,
+        durationSeconds: r.durationSeconds,
+        segments: r.segments || [],
+      },
       a.reviewedAssignment,
       key + ": assignment changed after content review"
     );
@@ -207,4 +216,6 @@ test("content evidence stays attached to the reviewed assignment and exposes unr
   const defence = topics["cyber-studio/R03"].videos.find((r) => r.progressKey === "video:100");
   assert.equal(defence.segments[0].start, 2490);
   assert.equal(defence.segments[0].end, 2893);
+  assert.match(topics["cyber-studio/R03"].videoNote, /6:43/, "R03: obsolete core-viewing duration");
+  assert.doesNotMatch(topics["cyber-studio/R03"].videoNote, /11:36/);
 });

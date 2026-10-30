@@ -131,7 +131,8 @@ two categories do not establish complete spoken-content or speech-level timing
 verification. Metadata advertising captions is not evidence that they were read.
 
 contentReview.method/note/sources appear on the Watch & read cards and in source
-maps. Keep this status attached to its URL, assignment and excerpt ranges;
+maps. Keep this status attached to its named video, publisher/playback URLs, timing
+source, viewing mode, assignment and excerpt ranges;
 changing those requires revisiting the evidence and review manifest. Preserve
 existing progressKey identities. Never publish signed/expiring caption URLs,
 provider sessions or copied complete transcripts in the repository. Link to the
@@ -141,3 +142,6 @@ MIT R03 now stops at 48:13, before recognition/fame advice, after a timed-captio
 check. ASHA examples need the existing C07/C11 inclusion/assent foundations via
 P03; their historical compliance ratings and case-specific cut-offs are for
 critical study, not universal diagnostic or treatment rules.
+
+Release 20261030-7 also aligns the R03 topic-level overview with the 6:43
+transcript-checked excerpt and refreshes the entry/data cache versions together.

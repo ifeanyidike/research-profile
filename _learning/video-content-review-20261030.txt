@@ -1,5 +1,5 @@
 Video content review — 30 October 2026
-Release 20261030-6
+Release 20261030-7
 
 What was checked
 This review covers the 43 newly added assignments and the one narrowed existing
@@ -21,6 +21,8 @@ Corrections
   preserving the end of the sentence: 41:30–48:13, 6:43 instead of 11:36.
   The guide now specifies context, rehearsal and contributions; the native
   capstone supplies evidence, limitations and implementation requirements.
+  The topic-level viewing summary also states 6:43; a regression check rejects
+  the obsolete 11:36 summary while retaining the same recording/key.
 - ASHA P04: name all four mediated-learning components, including competence.
   Explain that historical compliance ratings and case-specific cut-offs need
   critique, not unqualified use as clinical rules. The existing P03 -> C11 -> C07
@@ -75,7 +77,8 @@ assigned lesson component. Teaching material reviewed: exact-video materials
 checked, with speech still unverified. Spoken content unverified: provisional
 identity/outline match only. Every record names remaining teaching limitations.
 No claim of universal accuracy is made for the 37 assignments lacking full speech
-verification. The JSON manifest freezes the assignment URL/text/range reviewed;
+verification. The JSON manifest freezes the named video, publisher/playback URLs, timing
+source, viewing mode, assignment text and range reviewed;
 changes require renewed review instead of silently inheriting the old evidence.
 
 
