@@ -1,3 +1,4 @@
+import { introduction } from "./introduction.js?v=20261030-1";
 import { videoEmbed } from "./video.js?v=20261029-2";
 import { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } from "./model.js?v=20261029-2";
 import { Account } from "./account.js?v=20261029-2";
@@ -127,7 +128,7 @@ function stageCards() {
 function home() {
   const s = state(),
     next = s.next;
-  return `<section class="hero"><div><span class="eyebrow">YOUR CYBERSECURITY LEARNING SPACE</span><h1>Understand the system.<br /><em>Learn to secure it.</em></h1><p class="hero-copy">A clear path from your first line of code to security engineering and research. Learn the ideas, follow the evidence, and put each lesson into practice.</p><div class="button-row"><a class="button" href="#lesson/${next?.id || "R03"}/learn">${s.passed ? "Continue learning" : "Start your first lesson"} <span aria-hidden="true">↗</span></a><a class="button secondary" href="#path">Explore the curriculum</a></div></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-core">c<span>↗</span></div><span class="art-label label-one">UNDERSTAND</span><span class="art-label label-two">BUILD</span><span class="art-label label-three">DEFEND</span><span class="art-dot dot-one"></span><span class="art-dot dot-two"></span></div></section>
+  return `<section class="hero"><div><span class="eyebrow">YOUR CYBERSECURITY LEARNING SPACE</span><h1>Understand the system.<br /><em>Learn to secure it.</em></h1><p class="hero-copy">A clear path from your first line of code to security engineering and research. Learn the ideas, follow the evidence, and put each lesson into practice.</p><div class="button-row"><a class="button" href="#lesson/${next?.id || "R03"}/learn">${s.passed ? "Continue learning" : "Start your first lesson"} <span aria-hidden="true">↗</span></a><a class="button secondary" href="#path">Explore the curriculum</a></div><p class="hero-intro-link"><a href="#why-cybersecurity">Discover the field, AI relevance & career paths ↗</a></p></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-core">c<span>↗</span></div><span class="art-label label-one">UNDERSTAND</span><span class="art-label label-two">BUILD</span><span class="art-label label-three">DEFEND</span><span class="art-dot dot-one"></span><span class="art-dot dot-two"></span></div></section>
  <div class="welcome-line"><h2>Make yourself at home, ${esc(currentName())}.</h2><span>${user ? "Your own learning account" : "Try the lessons as a guest, or sign in to keep your own workspace."}</span></div>
  <div class="stat-row"><div><strong>${s.passed}<span> / ${modules.length}</span></strong><span>Topics self-assessed</span></div><div><strong>${s.practised}</strong><span>Topics practised</span></div><a href="#review"><strong>${s.due.length}</strong><span>Reviews ready for you ↗</span></a><div><strong>${stages.length}</strong><span>Connected learning stages</span></div></div>
  ${next ? `<section class="continue-card"><div><span class="eyebrow">YOUR NEXT STEP · ${esc(next.id)}</span><h3>${esc(next.title)}</h3><p>${esc(next.skills.join(" · "))}</p></div><a class="button" href="#lesson/${next.id}/learn">Open lesson ↗</a></section>` : `<section class="continue-card"><div><h3>Your broad foundation is complete.</h3><p>Return to review, defend your capstone, and choose a specialisation for deeper study.</p></div><a class="button" href="#review">Review learning ↗</a></section>`}
@@ -275,6 +276,7 @@ function render(focus = false) {
     notebook: "My notebook",
     method: "How to learn",
     certifications: "Certifications",
+    "why-cybersecurity": "Why cybersecurity?",
     lesson: byId[route[1]]?.id || "Lesson",
   };
   $("#page-name").textContent = titles[view] || "My learning";
@@ -292,7 +294,9 @@ function render(focus = false) {
               ? method()
               : view === "certifications"
                 ? certifications()
-                : home();
+                : view === "why-cybersecurity"
+                  ? introduction()
+                  : home();
   document.querySelectorAll("[data-nav]").forEach((a) => {
     a.classList.toggle("active", a.dataset.nav === view);
     if (a.dataset.nav === view) a.setAttribute("aria-current", "page");
