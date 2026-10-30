@@ -2166,7 +2166,7 @@
             "assignment": "Read the named article or specified sections: Google web.dev — original WebRTC video provenance and explanatory article (historical examples). Focus on packets, jitter, RTP and use the native worked example to check your interpretation."
           }
         ],
-        "videoNote": "Core viewing is three selected passages totalling 6:49: the media/signalling diagram, STUN and TURN. Django is an illustrative server stack, not a prerequisite. Use current references for SDP/codecs and the native reconnect/authority exercise for implementation.",
+        "videoNote": "Core viewing is three selected passages totalling 6:09: the media/signalling diagram, STUN and TURN. Django is an illustrative server stack, not a prerequisite. Use current references for SDP/codecs and the native reconnect/authority exercise for implementation.",
         "pass_criteria": "1. Name signalling/media, codec, authentication and relay boundaries. 2. Specify session/generation, sequence, timestamp and exact audio format in a frame envelope. 3. Define reconnect handling that cannot replay old audio as a new turn.",
         "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
         "outcomes": [
@@ -2174,7 +2174,7 @@
           "Specify session/generation, sequence, timestamp and exact audio format in a frame envelope.",
           "Define reconnect handling that cannot replay old audio as a new turn."
         ],
-        "study_focus": "Watch the three listed WebRTC passages (6:49 total). Treat Django/Channels as examples of web/signalling servers. Use the readings to distinguish media, signalling, codec, authentication and relay responsibilities, then write the native frame and reconnect contract."
+        "study_focus": "Watch the three listed WebRTC passages (6:09 total). Treat Django/Channels as examples of web/signalling servers. Use the readings to distinguish media, signalling, codec, authentication and relay responsibilities, then write the native frame and reconnect contract."
       },
       {
         "id": "V36",

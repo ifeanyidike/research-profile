@@ -798,8 +798,8 @@ Source notes: Public source assignments are study references, not institutional 
 V35 — WebRTC, WebSockets and telephony fundamentals
 Prerequisites: V12, V34
 Path: All learners
-Study assignment: Watch the three listed WebRTC passages (6:49 total). Treat Django/Channels as examples of web/signalling servers. Use the readings to distinguish media, signalling, codec, authentication and relay responsibilities, then write the native frame and reconnect contract.
-Video coverage/access: Core viewing is three selected passages totalling 6:49: the media/signalling diagram, STUN and TURN. Django is an illustrative server stack, not a prerequisite. Use current references for SDP/codecs and the native reconnect/authority exercise for implementation.
+Study assignment: Watch the three listed WebRTC passages (6:09 total). Treat Django/Channels as examples of web/signalling servers. Use the readings to distinguish media, signalling, codec, authentication and relay responsibilities, then write the native frame and reconnect contract.
+Video coverage/access: Core viewing is three selected passages totalling 6:09: the media/signalling diagram, STUN and TURN. Django is an illustrative server stack, not a prerequisite. Use current references for SDP/codecs and the native reconnect/authority exercise for implementation.
 Videos:
   DjangoCon US / Ken Whitesell — media, signalling, STUN and TURN — https://djangotv.com/videos/djangocon-us/2024/webrtc-with-django-channels-htmx-and-coturn-with-ken-whitesell/
     Assignment: Watch only 4:11–6:29, 22:12–24:31, 26:12–27:44. Use the diagram to separate peer media from WebSocket signalling, then compare STUN address discovery with TURN relaying. Django/Channels are examples of web/signalling servers, not prerequisites or required tools. The depicted mesh is one topology, not every WebRTC deployment. Use current WebRTC/RFC readings for SDP, codecs and protocol details, and the native task for authentication, frame contracts and reconnect rules.

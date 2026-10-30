@@ -310,3 +310,18 @@ test("provider-only excerpts give manual stop instructions instead of promising 
   assert.doesNotMatch(html, /The embedded excerpt uses|class="video-load"/);
   assert.ok(assignmentSummary(r).includes("7:17–13:49"));
 });
+
+test("whole-topic viewing totals agree with the actual assigned core excerpts", () => {
+  for (const [studio, ids] of [
+    ["voice-ai-studio", ["V35", "V39", "V43"]],
+    ["child-development-studio", ["C12", "P15"]],
+  ]) {
+    for (const id of ids) {
+      const m = read(studio).find((m) => m.id === id);
+      const seconds = m.videos
+        .filter((r) => !r.optional)
+        .reduce((n, r) => n + (r.segments ? r.segments.reduce((total, s) => total + s.end - s.start, 0) : r.durationSeconds), 0);
+      assert.ok(m.videoNote.includes(formatTime(seconds)), id + ": obsolete core-viewing total");
+    }
+  }
+});
