@@ -1,0 +1,39 @@
+Why cybersecurity? — editorial source notes
+Checked 30 October 2026. Page: cyber-studio/introduction.js.
+
+NCSC definition/importance
+https://www.ncsc.gov.uk/section/about-ncsc/what-is-cyber-security
+Concept orientation only; examples and study advice are authored for this hub.
+
+BLS Information Security Analysts
+https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm
+May2025: annual median USD129180; highest decile above USD199850.
+Projection2025–2035: employment +21%. Occupation/country specific.
+Do not label the median a starter offer or the decile a seniority band.
+
+UK National Careers Service: cyber intelligence officer
+https://nationalcareers.service.gov.uk/job-profiles/cyber-intelligence-officer
+Current profile: GBP32000 starter; GBP65000 experienced; annual guidance.
+Different role/measure from BLS. No Nigeria-wide salary inferred or FX conversion.
+
+UK Cyber Security Skills in the Labour Market2026 (29 September2026)
+https://www.gov.uk/government/publications/cyber-security-skills-in-the-uk-labour-market-2026/cyber-security-skills-in-the-uk-labour-market-2026
+Posting analysis uses2025; core postings +7% versus2024.
+70% of surveyed cyber businesses report day-to-day staff AI use.
+Sections5.5/6 discuss entry barriers and qualitative automation concerns.
+Interview views are not a measured count of AI-caused job losses.
+
+NCSC AI threat assessment2025, horizon2027
+https://www.ncsc.gov.uk/report/impact-ai-cyber-threat-now-2027
+Label as an assessment/forecast, including defensive benefits; no certainty
+that a particular career or headcount is immune to automation.
+
+NIST AI RMF core, GOVERN2
+https://airc.nist.gov/airmf-resources/airmf/5-sec-core/
+Organisational roles and executive accountability; the page's concrete
+application-authorisation examples connect to the hub's own I03/I04 lessons.
+
+Maintenance
+Recheck figures and original periods together. Advance introduction.js's
+import version after edits, and the entry-script version when shipping.
+Do not equate skills gaps with funded vacancies or guaranteed first jobs.

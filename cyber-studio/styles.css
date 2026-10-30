@@ -126,6 +126,8 @@ small,
   display: flex;
   flex-direction: column;
   z-index: 20;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .brand {
   display: flex;
@@ -1798,4 +1800,130 @@ input[type="radio"] {
 .credential-topics {
   line-height: 2;
   overflow-wrap: anywhere;
+}
+
+/* Career orientation uses the same typography and colours as the learning hub. */
+.introduction {
+  max-width: 1050px;
+}
+.intro-hero {
+  max-width: 48rem;
+  padding: 1rem 0 2rem;
+}
+.intro-hero h1 {
+  line-height: 1.12;
+}
+.intro-hero h1 em {
+  color: var(--pine);
+  font-style: normal;
+}
+.intro-hero .lead {
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+.introduction > section {
+  padding: 2rem 0;
+  border-top: 1px solid var(--line);
+}
+.introduction h2 {
+  max-width: 30ch;
+  line-height: 1.25;
+  margin: 0.5rem 0 1.25rem;
+}
+.introduction > section > p {
+  max-width: 78ch;
+}
+.introduction p {
+  line-height: 1.8;
+}
+.intro-principles,
+.career-grid,
+.pay-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.intro-principles {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.intro-principles > div,
+.career-card,
+.pay-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1.4rem;
+  border-radius: var(--radius);
+  min-width: 0;
+}
+.intro-principles p {
+  margin-bottom: 0;
+}
+.career-grid,
+.pay-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.career-card h3,
+.pay-card h3 {
+  margin-top: 0;
+  line-height: 1.35;
+}
+.career-card p {
+  font-size: 0.96rem;
+}
+.career-fit {
+  color: var(--muted);
+}
+.employer-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem 2rem;
+  padding-left: 1.3rem;
+}
+.career-steps {
+  max-width: 78ch;
+  padding-left: 1.3rem;
+}
+.career-steps li {
+  padding-left: 0.5rem;
+  margin: 1rem 0;
+}
+.pay-card {
+  background: var(--soft);
+}
+.pay-card h3 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+.pay-card small {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+.intro-next {
+  margin-top: 1rem;
+}
+.intro-source-note {
+  max-width: 85ch;
+}
+.hero-intro-link {
+  font-size: 0.95rem;
+  margin: 1.25rem 0 0;
+}
+@media (max-width: 760px) {
+  .intro-principles,
+  .career-grid,
+  .pay-grid,
+  .employer-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .intro-hero {
+    padding-top: 0;
+  }
+  .intro-hero .lead {
+    font-size: 1.1rem;
+  }
+  .introduction > section {
+    padding: 1.5rem 0;
+  }
 }
