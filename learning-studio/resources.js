@@ -1,4 +1,4 @@
-import { videoEmbed, videoLink } from "./video.js?v=20261030-4";
+import { videoEmbed, videoLink } from "./video.js?v=20261030-5";
 
 const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 export function formatTime(seconds) {

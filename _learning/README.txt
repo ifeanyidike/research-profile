@@ -103,3 +103,19 @@ get a new unused key. Cyber now follows the same resource-key rule as the other
 studios. No learner-record rewrite or database migration is required.
 Full source playback, every caption track and all claims in external books are
 separate from source/topic alignment checks. Record access limits honestly.
+
+Video coverage follow-up — release 20261030-5
+-------------------------------------------
+_learning/video-gap-review-20261030.json records the 31 topics that previously
+had no core video, plus two topics with thin illustrative coverage. There are
+43 new video assignments and one narrowed existing recording. Every new source
+has durationSeconds, timingSource and a lesson-specific viewing guide with an
+explicit range. Five existing W3C assignments now also state their full times.
+The guide distinguishes video coverage from remaining native/reading objectives.
+Several recordings are historical architecture/concept examples; their original
+API, availability and benchmark claims must not be treated as current facts.
+Video units on CanChild or conference collection pages are named explicitly; the
+full collection is never implied. ASHA assessment Modules 2 and 3 precede Module 4
+in P04, following Module 1 in P03. Imported old checkboxes keep their old source
+identities. The follow-up changes no account or hosted-progress schema.
+See video-gap-review-20261030.txt for verification evidence and access limits.

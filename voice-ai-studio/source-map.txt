@@ -10,10 +10,10 @@ Study assignment: Watch the two short W3C input/output demonstrations, read the 
 Video coverage/access: Two short, beginner-accessible demonstrations replace the former advanced feature-engineering clip. Speech recognition means recognising words here; speaker recognition is a different task.
 Videos:
   W3C WAI — Speech Recognition: a short accessibility demonstration — https://www.w3.org/WAI/perspective-videos/voice/
-    Assignment: Watch the complete named unit: W3C WAI — Speech Recognition: a short accessibility demonstration. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions.
+    Assignment: Assigned viewing: 0:00–1:10. Watch the complete named unit: W3C WAI — Speech Recognition: a short accessibility demonstration. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions.
     Access: The original W3C page also offers a transcript, captions and an audio-described version. Its terminology note distinguishes speech from speaker recognition.
   W3C WAI — Text to Speech: a short output demonstration — https://www.w3.org/WAI/perspective-videos/speech/
-    Assignment: Watch the complete Text to Speech clip, then contrast speech input with spoken output in the native pipeline. No signal-processing or model-training knowledge is assumed.
+    Assignment: Assigned viewing: 0:00–0:54. Watch the complete Text to Speech clip, then contrast speech input with spoken output in the native pipeline. No signal-processing or model-training knowledge is assumed.
     Access: The original W3C page also offers a transcript, captions and an audio-described version.
 Readings:
   Stanford CS224S — scope, prerequisites and curriculum (recordings restricted) — https://web.stanford.edu/class/cs224s/index.html
@@ -431,9 +431,12 @@ Source notes: Public source assignments are study references, not institutional 
 V20 — Speech datasets, annotation, consent and licensing
 Prerequisites: V05, V10, V13
 Path: All learners
-Study assignment: Use the recording/annotation clips as a database example. Read rights, consent and documentation guidance separately, then produce a fictional manifest with uncertainty and split groups.
-Video coverage/access: Classical TTS database clips are optional examples, not complete teaching on consent, licensing or annotation quality. The native lesson and exact dataset/datasheet readings are the core.
+Study assignment: Watch the four-minute Datasheets author interview, then document the fictional dataset: provenance, audio rights, annotation uncertainty and speaker/session splits. Classical TTS clips are optional illustrations.
+Video coverage/access: Core viewing is the 4:00 dataset-documentation interview. Speech annotation, consent/licensing decisions and split construction are completed in the native exercise and paper; optional TTS clips do not replace those requirements.
 Videos:
+  ACM / Timnit Gebru — Datasheets for Datasets — https://vimeo.com/639588440?h=a28bc8a741
+    Assignment: Watch the complete named video, 0:00–4:00. In this author interview, Timnit Gebru explains why dataset documentation should record provenance, collection, uses and limitations. Map those questions to the fictional speech manifest, rights record and speaker/session split; the interview is not a speech-annotation software tutorial.
+    Access: Original ACM author interview hosted on Vimeo. Its public oEmbed metadata identifies CACM and a 4:00 running time. Playback is on the provider page; the assigned paper remains the detailed checklist.
   Optional: Edinburgh speech.zone — Script Design — https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/script-design/
     Assignment: Optional classical TTS database-design example after the native dataset/annotation introduction. Read Datasheets for Datasets and the dataset licence for consent, coverage and reuse requirements; these TTS clips do not teach all those requirements. Alignment details may be revisited after V21/V28.
   Optional: Edinburgh speech.zone — Annotating The Database — https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/annotating-the-database/
@@ -498,18 +501,21 @@ Source notes: Public source assignments are study references, not institutional 
 V23 — Encoder–decoder ASR and Whisper
 Prerequisites: V19, V20, V22
 Path: All learners
-Study assignment: Read Whisper's architecture, training/task setup and limitations. The attention video is prerequisite support rather than a Whisper-specific lecture; optional HF Unit 5 requires the earlier framework foundation.
-Video coverage/access: The video is an optional attention prerequisite refresher. Whisper is taught by the native lesson and its exact paper/reading; a generic attention lecture is not labelled as a Whisper tutorial.
+Study assignment: Watch the 5:18 Whisper author presentation, then read the architecture, tasks, training data and limitations. Specify checkpoint, preprocessing, decoding and the data boundary in your fictional report.
+Video coverage/access: The exact Whisper paper now has a short author video. The old attention lecture is optional prerequisite review. The paper and native task supply the detailed specification and hallucination/permission analysis.
 Videos:
+  ICML 2023 / Whisper authors — Robust Speech Recognition via Large-Scale Weak Supervision — https://slideslive.com/39002706
+    Assignment: Watch the complete named video, 0:00–5:18. Watch the authors’ concise Whisper presentation, then identify the training/task setup, encoder–decoder path and reported limitations in the paper. Historical results describe the paper’s checkpoints and test conditions, not every later Whisper release.
+    Access: Open this direct SlidesLive author-presentation page. The original conference page identifies the same recording; its embedded player may fail to load. The complete named presentation is 5:18, not the whole conference or an installation tutorial.
   Optional: Carnegie Mellon University Deep Learning — 11785 Spring 22 Lecture 18: Attention Models — https://www.youtube.com/watch?v=q3CmsZFlrnc
-    Assignment: Optional attention-model refresher already assigned in V19. It does not teach Whisper itself; the required Whisper architecture/data/limitation material is the Radford paper and HF Seq2Seq reading.
+    Assignment: Optional attention-model refresher from V19. It does not teach Whisper itself. Use the short Whisper author presentation and the Radford/HF sources for this topic’s model, data and limitations.
 Readings:
   Hugging Face Audio Course — Seq2Seq architectures — https://huggingface.co/learn/audio-course/chapter3/seq2seq
     Assignment: Read the named article or specified sections: Hugging Face Audio Course — Seq2Seq architectures. Focus on seq2seq, token decoding, hallucinations and use the native worked example to check your interpretation.
   Radford et al. — Robust Speech Recognition via Large-Scale Weak Supervision — https://arxiv.org/abs/2212.04356
     Assignment: Read the named article or specified sections: Radford et al. — Robust Speech Recognition via Large-Scale Weak Supervision. Focus on seq2seq, token decoding, hallucinations and use the native worked example to check your interpretation.
-  CMU — 11-785 Spring 2022 lecture/video source index — https://deeplearning.cs.cmu.edu/S22/
-    Assignment: Read the named article or specified sections: CMU — 11-785 Spring 2022 lecture/video source index. Focus on seq2seq, token decoding, hallucinations and use the native worked example to check your interpretation.
+  Optional: CMU — 11-785 Spring 2022 lecture/video source index — https://deeplearning.cs.cmu.edu/S22/
+    Assignment: Optional source index for the older attention/sequence-model refresher. This Spring 2022 course predates Whisper and is not assigned as Whisper-specific teaching.
 Additional practical materials:
   Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements) — https://huggingface.co/learn/audio-course/chapter5/hands_on
     Assignment: Optional additional provider practice. Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements). Follow the source’s preparation, account and compute notes; the studio’s native exercise remains the core task.
@@ -521,10 +527,12 @@ Source notes: Public source assignments are study references, not institutional 
 V24 — Self-supervised and multilingual speech learning
 Prerequisites: V19, V20, V22
 Path: All learners
-Study assignment: Read wav2vec 2.0's model/pretraining and fine-tuning sections and the multilingual work. Draw encoder, masking, targets and adaptation; distinguish their objectives and data boundaries.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Watch the 3:37 wav2vec 2.0 author overview, then draw pretraining and labelled adaptation. Read the separate multilingual work before making language-coverage or transfer claims.
+Video coverage/access: Short author viewing now covers wav2vec 2.0’s pretraining/adaptation mechanism. Multilingual comparison, rights and leakage analysis remain explicit paper/native assignments.
 Videos:
-  No video assigned; follow the coverage note above.
+  NeurIPS 2020 / wav2vec 2.0 authors — self-supervised speech representations — https://slideslive.com/38937614
+    Assignment: Watch the complete named video, 0:00–3:37. Trace the encoder, masking, contrastive targets and labelled adaptation in the authors’ wav2vec 2.0 explanation. Distinguish unlabelled pretraining from supervised fine-tuning. This original presentation does not establish multilingual performance or coverage; use the multilingual reading for that comparison.
+    Access: Open this direct SlidesLive author-presentation page. The original conference page identifies the same recording; its embedded player may fail to load. The complete named presentation is 3:37, not the whole conference or an installation tutorial.
 Readings:
   Baevski et al. — wav2vec 2.0 — https://arxiv.org/abs/2006.11477
     Assignment: Read the named article or specified sections: Baevski et al. — wav2vec 2.0. Focus on wav2vec 2.0, pretraining, adaptation and use the native worked example to check your interpretation.
@@ -543,9 +551,13 @@ Source notes: Public source assignments are study references, not institutional 
 V25 — ASR error analysis, fairness and uncertainty
 Prerequisites: V09, V10, V23, V24
 Path: All learners
-Study assignment: Read the HF ASR metric definitions, normalisation and error examples. The CMU clip supports decoding, not a complete fairness lesson; build the reporting table with speaker/group limits.
-Video coverage/access: The available video covers decoder mechanics, not fairness/error analysis in full. It is optional; use the native error-analysis exercise and scoped metrics reading as the core.
+Study assignment: Watch the assigned nine minutes of MIT ASR evaluation teaching. Calculate the supplied edit counts, specify reference/normalisation rules and report subgroup denominators and uncertainty without claiming fairness from an aggregate score.
+Video coverage/access: Core viewing: 5:58–8:09 and 9:33–16:22 of the MIT ASR lecture. The old CTC decoding workshop remains optional. Subgroup inference and consequential errors are taught in the native task and readings.
 Videos:
+  MIT 6.S191 / Rev.AI — WER, benchmarks and data selection — https://introtodeeplearning.com/2022/
+    Assignment: Watch only 5:58–8:09, 9:33–16:22. Work the WER examples, then examine how a benchmark and its data-selection policy change the meaning of a reported score. Apply this to the native subgroup/error table. These 2022 examples are not current product rankings or a complete fairness analysis.
+    Watch 5:58–8:09: Word error rate
+    Watch 9:33–16:22: Test benchmarks and data selection
   Optional: Carnegie Mellon University Deep Learning — 11785 Spring 22 Recitation 8: CTC Decoding and Beam Search — https://www.youtube.com/watch?v=penbvDelDuA
     Assignment: Optional CTC-decoding/beam-search workshop after V22. It helps explain decoder effects; it does not teach fairness, uncertainty or the complete error-analysis protocol. Use the native error table and HF metrics reading for those.
     Access: CMU Spring 2022 course index calls this Recitation 9; its published video title says Recitation 8. It is the same linked recording.
@@ -581,10 +593,11 @@ Source notes: Public source assignments are study references, not institutional 
 V27 — Noise, separation, echo and microphone arrays
 Prerequisites: V14, V16, V18, V25
 Path: All learners
-Study assignment: Read the assigned enhancement/separation sources for target, mixture and objective definitions. Draw echo reference/double-talk and microphone timing assumptions; design comparisons only.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Watch the 4:13 echo-cancellation explainer, then label reference, acoustic path, microphone and independent user speech in the supplied exercise. Read enhancement/separation definitions and microphone timing assumptions before the design critique.
+Video coverage/access: The focused video covers echo/full-duplex behaviour and gating, directly supporting the native challenge. Enhancement/separation mathematics and microphone alignment remain native/readings; the video is not presented as complete coverage of those components.
 Videos:
-  No video assigned; follow the coverage note above.
+  LookingPoint / Sean Barr — acoustic echo cancellation and the limits of gating — https://www.youtube.com/watch?v=x36mm3_r9I8
+    Assignment: Watch the complete named video, 0:00–4:13. Explain how loudspeaker output re-enters a microphone and why muting the other side loses full-duplex conversation. Relate that example to the native playback/reference/user-speech diagram and the double-talk challenge. This is an engineering explainer, not a complete adaptive-filter derivation.
 Readings:
   SpeechBrain — Speech Enhancement From Scratch (read only; do not execute training cells) — https://speechbrain.readthedocs.io/en/stable/tutorials/tasks/speech-enhancement-from-scratch.html
     Assignment: Read the named article or specified sections: SpeechBrain — Speech Enhancement From Scratch (read only; do not execute training cells). Focus on enhancement, separation, beamforming and use the native worked example to check your interpretation.
@@ -687,10 +700,19 @@ Source notes: Public source assignments are study references, not institutional 
 V32 — Meaning, dialogue state and conversation repair
 Prerequisites: V03, V13, V25
 Path: All learners
-Study assignment: Read the assigned dialogue material for intent, slots, state, grounding and repair. Trace proposal-version changes and explicit confirmation before a write.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Read the native state/confirmation explanation, then watch the architecture, flows and repair assignments. Trace slot corrections and invalidate old confirmations before considering a write.
+Video coverage/access: Core viewing totals 19:52 across three focused Rasa units/sections. These are concrete architectural examples; the native exercise supplies proposal-version and authorisation invariants, and no Rasa setup is required.
 Videos:
-  No video assigned; follow the coverage note above.
+  Rasa — architecture of a conversational assistant — https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series
+    Assignment: Watch the complete named video, 0:00–4:02. Identify the language-understanding, explicit-logic and response components. Map them to the native proposal/state diagram before the flows example.
+    Access: These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.
+  Rasa — flows and explicit conversation logic — https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series
+    Assignment: Watch the complete named video, 0:00–10:12. Study flow components, collected values and branching. Trace the supplied booking example on paper; explain why extracting a slot is not authorisation to commit a booking.
+    Access: These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.
+  Rasa — conversation repair and deviations from the happy path — https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series
+    Assignment: Watch only 0:00–5:38. Watch the introduction, repair patterns and advanced correction cases only. Distinguish a correction or clarification from confirmation of the current proposal version. Skip the later framework-customisation and handoff implementation.
+    Watch 0:00–5:38: Repair concepts and correction patterns
+    Access: These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.
 Readings:
   Jurafsky & Martin, August 2026 draft — Appendix K: Frame-based Dialogue Systems — https://web.stanford.edu/~jurafsky/slp3/K.pdf
     Assignment: Read the complete named chapter/paper: Jurafsky & Martin, August 2026 draft — Appendix K: Frame-based Dialogue Systems. Follow its definitions and worked examples, then state which assumptions apply to the native exercise.
@@ -706,10 +728,16 @@ Source notes: Public source assignments are study references, not institutional 
 V33 — LLMs, retrieval and permissioned tools for voice
 Prerequisites: V19, V32
 Path: All learners
-Study assignment: Read OWASP prompt-injection boundaries and LiveKit architecture/tools. Explain language-model context, retrieval provenance and server-side tool authority separately; no provider call is needed.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Watch the RAG explanation and selected action/tool examples. Draw content provenance, model proposals and server-owned authority separately, then work the permissioned booking contract.
+Video coverage/access: Core viewing is 10:53: IBM’s 6:35 RAG explanation plus 4:18 of Rasa action examples. The native lesson/OWASP reading supplies the security boundaries; product demos are viewed only, not executed.
 Videos:
-  No video assigned; follow the coverage note above.
+  IBM / Marina Danilevsky — retrieval-augmented generation — https://www.youtube.com/watch?v=T-D1OfcDW1M
+    Assignment: Watch the complete named video, 0:00–6:35. Draw retrieval, evidence/context and generation separately. Identify where retrieved material can be stale, wrong or adversarial; retrieval does not automatically make an answer true or grant permission to act.
+  Rasa — action types and custom tools — https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series
+    Assignment: Watch only 0:46–2:14, 7:03–9:53. Watch action types and the custom-action example only. Separate a model’s action request from the server-side validation, identity and permission checks required by the native tool contract. The video’s function execution example is not an authorisation design.
+    Watch 0:46–2:14: Types of actions
+    Watch 7:03–9:53: Custom actions
+    Access: These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.
 Readings:
   OWASP — LLM prompt injection prevention cheat sheet — https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html
     Assignment: Read the named article or specified sections: OWASP — LLM prompt injection prevention cheat sheet. Focus on retrieval, tool contracts, authorisation and use the native worked example to check your interpretation.
@@ -723,10 +751,16 @@ Source notes: Public source assignments are study references, not institutional 
 V34 — Streaming, asynchronous events and cancellation
 Prerequisites: V04, V05, V32
 Path: All learners
-Study assignment: Read Python 3.13 Coroutines and Tasks: coroutines, creating tasks, cancellation and task groups. Trace session/generation/event/operation IDs; keep queue and commit cancellation separate.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Read the native async bridge, then watch the three listed primer excerpts. Trace scheduling, cancellation, queue/state ownership and uncertain commits using only the supplied fictional events.
+Video coverage/access: The 1:42:41 tutorial is reduced to three assigned sections totalling 33:22. The 26:46 EuroPython treatment is optional depth. Current Python 3.13 documentation and the native cancellation exercise remain core.
 Videos:
-  No video assigned; follow the coverage note above.
+  Corey Schafer — asyncio foundations, concurrent tasks and task groups — https://www.youtube.com/watch?v=oAkLSJNr5zY
+    Assignment: Watch only 1:00–13:52, 25:40–34:00, 55:10–1:07:20. Study the event loop, awaitables/tasks, the corrected concurrency example and gather/task groups. Skip the long refactoring/network-demo section. Then trace session/generation/event/operation IDs and cancellation in the native offline fixture; task cancellation alone does not undo a committed side effect.
+    Watch 1:00–13:52: Concurrency, coroutines and tasks
+    Watch 25:40–34:00: Correcting concurrent execution
+    Watch 55:10–1:07:20: Gather and task groups
+  Optional: EuroPython / Junya Fukuda — TaskGroup exceptions and cancellation — https://pyvideo.org/europython-2023/asyncio-evolved-enhanced-exception-handling-with-taskgroup-in-python-311.html
+    Assignment: Watch the complete named video, 0:00–26:46. Optional deeper treatment of exception groups and TaskGroup cancellation after the selected primer. This is a Python 3.11-era talk; use the assigned Python 3.13 documentation for the exact target-version behaviour. View only; do not run provider or network examples.
 Readings:
   Python 3.13 — Coroutines and Tasks: coroutines, creating tasks, cancellation and concurrency sections — https://docs.python.org/3.13/library/asyncio-task.html
     Assignment: Read the named article or specified sections: Python 3.13 — Coroutines and Tasks: coroutines, creating tasks, cancellation and concurrency sections. Focus on event ordering, queues, session state and use the native worked example to check your interpretation.
@@ -738,11 +772,12 @@ Source notes: Public source assignments are study references, not institutional 
 V35 — WebRTC, WebSockets and telephony fundamentals
 Prerequisites: V12, V34
 Path: All learners
-Study assignment: Use WebRTC's overview, RFC 3550 Sections 1–5 and RFC 3261 Sections 1–6. The 2013 clip is historical architecture, not current browser API instructions; draw format/security termination points.
-Video coverage/access: This historical talk is optional background. Current WebRTC overview, RTP and SIP readings supply the core transport assignment; the talk does not teach all three protocols or current APIs.
+Study assignment: Watch only the 6:50 signaling/STUN/TURN/security section, then use current WebRTC documentation and the assigned RTP/SIP sections to draw media, signaling, format and security termination points.
+Video coverage/access: A bounded historical concept section replaces the optional full replay. It is not current browser setup, WebSocket or SIP instruction; those parts remain in the native lesson and current readings.
 Videos:
-  Optional: Google for Developers — Real-time communication with WebRTC: Google I/O 2013 — https://www.youtube.com/watch?v=p2HzZkd2A40
-    Assignment: Optional full historical WebRTC talk from 2013. Use it for browser-media/peer/signalling concepts only. Deprecated APIs and demonstrations are not setup instructions; current WebRTC/RFC readings are the required source.
+  Google for Developers — signaling, STUN/TURN and transport security (historical concepts) — https://www.youtube.com/watch?v=p2HzZkd2A40
+    Assignment: Watch only 16:31–23:21 (6:50): signaling, NAT traversal with STUN/TURN and transport-security concepts. This is a 2013 talk; browser/API availability, platform support and product claims are historical. Use the current WebRTC and RTP/SIP readings for the implementation/standards boundary.
+    Watch 16:31–23:21: Signaling, STUN/TURN and security
 Readings:
   WebRTC — getting started overview — https://webrtc.org/getting-started/overview
     Assignment: Read the named article or specified sections: WebRTC — getting started overview. Focus on packets, jitter, RTP and use the native worked example to check your interpretation.
@@ -760,10 +795,12 @@ Source notes: Public source assignments are study references, not institutional 
 V36 — VAD, endpointing, turn-taking and barge-in
 Prerequisites: V25, V32, V34, V35
 Path: All learners
-Study assignment: Read the turn-taking/endpointing sources and compare speech activity with conversational completion. Specify five synthetic cases and playback/state recovery rather than selecting a universal silence threshold.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Watch the 2:37 turn-detection demonstration, then distinguish VAD, semantic completion, interruption and playback recovery in all five synthetic cases. Read current provider details as version-specific examples.
+Video coverage/access: The short LiveKit demonstration supplies an exact conversational example. It does not establish a universal endpoint threshold, current audio-model performance or safe tool-commit behaviour; the native task covers those limits.
 Videos:
-  No video assigned; follow the coverage note above.
+  LiveKit — turn detection versus speech activity — https://docs.livekit.io/agents/logic/turns/turn-detector/
+    Assignment: Watch the complete named video, 0:00–2:37. Contrast detecting speech activity with predicting a completed conversational turn. Apply the examples to the native pause, backchannel and interruption cases. This 2025 demonstration concerns the earlier text-based detector, not the newer audio-model implementation or a universal timing threshold.
+    Access: The short publisher demonstration illustrates the concept. Read current documentation for the current audio/text model distinction and configuration; do not copy historical defaults or run inference for the exercise.
 Readings:
   LiveKit Agents — turn detection and interruptions — https://docs.livekit.io/agents/logic/turns/
     Assignment: Read the named article or specified sections: LiveKit Agents — turn detection and interruptions. Focus on VAD, endpointing, interruptions and use the native worked example to check your interpretation.
@@ -775,10 +812,12 @@ Source notes: Public source assignments are study references, not institutional 
 V37 — Latency budgets, buffers and traces
 Prerequisites: V09, V34, V35, V36
 Path: All learners
-Study assignment: Read the assigned latency/observability sections for measurement endpoints and trace spans. Calculate the supplied critical path, compatible clocks and queue waits; report failures beside success-only latency.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Watch 0:11–4:09 of the latency guide. Name the endpoints and trace spans, then calculate the supplied critical path, percentiles and queue waits without running a live service.
+Video coverage/access: Only 3:58 of the 13:03 guide is required. Optimisation/setup and product promotion are outside the assignment; failure rates and success-only measurement bias remain explicit native requirements.
 Videos:
-  No video assigned; follow the coverage note above.
+  LiveKit — latency components and measuring a voice-agent trace — https://livekit.com/blog/understand-and-improve-agent-latency
+    Assignment: Watch only 0:11–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees.
+    Watch 0:11–4:09: Pipeline latency and trace measurement
 Readings:
   OpenTelemetry — traces concepts — https://opentelemetry.io/docs/concepts/signals/traces/
     Assignment: Read the named article or specified sections: OpenTelemetry — traces concepts. Focus on latency, percentiles, tracing and use the native worked example to check your interpretation.
@@ -790,10 +829,11 @@ Source notes: Public source assignments are study references, not institutional 
 V38 — Voice privacy, prompt injection and abuse resistance
 Prerequisites: V20, V31, V33, V36
 Path: All learners
-Study assignment: Read the security sources as boundary and enforcement guidance. Build an asset/data-flow map, then distinguish content, identity, permission and confirmation in each attack case.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Watch the 10:57 injection explanation, then map assets and enforcement in the four native voice-agent attack cases. Keep transcript content, speaker identity, permission and confirmation separate.
+Video coverage/access: The video teaches the prompt-injection component. Voice spoofing, audio privacy and permission enforcement remain native/OWASP reading requirements; no attack is executed against a live service.
 Videos:
-  No video assigned; follow the coverage note above.
+  IBM / Jeff Crume — prompt-injection attacks and trust boundaries — https://www.youtube.com/watch?v=jrHRe9lSqqA
+    Assignment: Watch the complete named video, 0:00–10:57. Identify direct/indirect instruction injection and why untrusted content cannot become authority. Apply the idea to transcripts and retrieved voice-agent context. An audio voice match is not identity proof, and a prompt-only defence is not a server-side permission check.
 Readings:
   OWASP — LLM prompt injection prevention cheat sheet — https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html
     Assignment: Read the named article or specified sections: OWASP — LLM prompt injection prevention cheat sheet. Focus on privacy, trust boundaries, voice spoofing and use the native worked example to check your interpretation.
@@ -807,10 +847,11 @@ Source notes: Public source assignments are study references, not institutional 
 V39 — Deployment, reliability, observability and cost
 Prerequisites: V05, V10, V37, V38
 Path: All learners
-Study assignment: Use the reliability and operational readings to define task indicators, bounded retries and reconciliation. Calculate only the supplied fictional rates; verify provider prices separately before spending.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Watch the 8:12 SRE explanation. Define voice-task indicators, failure/fallback ownership and bounded retries, then use only the supplied fictional rates for cost calculations.
+Video coverage/access: The focused SRE video supplies operational foundations. Voice-specific observability, uncertain outcomes and cost arithmetic remain in the native exercise/current readings; no cloud signup or workload is required.
 Videos:
-  No video assigned; follow the coverage note above.
+  IBM / Bradley Knapp — site reliability engineering — https://www.youtube.com/watch?v=ztIIcXNzMN4
+    Assignment: Watch the complete named video, 0:00–8:12. Study reliability as an engineering responsibility, service objectives and reducing repetitive operational work. Apply the principles to the native success/failure indicators, bounded retry/reconciliation plan and fictional cost table. This general SRE overview does not provide current voice-provider pricing.
 Readings:
   Google SRE book — service level objectives — https://sre.google/sre-book/service-level-objectives/
     Assignment: Read the named article or specified sections: Google SRE book — service level objectives. Focus on reliability, cost models, fallbacks and use the native worked example to check your interpretation.
@@ -824,15 +865,17 @@ Source notes: Public source assignments are study references, not institutional 
 V40 — Accessible and multilingual voice products
 Prerequisites: V13, V24, V25, V31, V36, V38
 Path: All learners
-Study assignment: Read W3C media accessibility guidance and HF ASR error definitions. Audit the complete clarify/edit/confirm/cancel/receipt task across modes, including locale and communication preferences.
-Video coverage/access: These short W3C demonstrations cover input/output accessibility examples. The native lesson and HF/W3C readings cover the wider accessibility and multilingual-analysis requirements.
+Study assignment: Watch the 2:26 Project Relate case and the short W3C input/output examples. Audit clarify/edit/confirm/cancel/receipt across modes, languages and communication preferences; test claims require appropriate evidence, not a demo.
+Video coverage/access: Core viewing totals 4:30: the 2:26 Project Relate case plus W3C input/output examples of 1:10 and 0:54. The Google case is historical and English-specific; the native/HF/W3C work supplies multilingual analysis and complete-task accessibility.
 Videos:
   W3C WAI — Speech Recognition accessibility demonstration — https://www.w3.org/WAI/perspective-videos/voice/
-    Assignment: Watch the complete short demonstration for speech-input access and failure barriers. Read the terminology correction; it does not establish multilingual/accent accuracy.
+    Assignment: Assigned viewing: 0:00–1:10. Watch the complete short demonstration for speech-input access and failure barriers. Read the terminology correction; it does not establish multilingual/accent accuracy.
     Access: The original W3C page also offers a transcript, captions and an audio-described version. Its terminology note distinguishes speech from speaker recognition.
   W3C WAI — Text to Speech accessibility demonstration — https://www.w3.org/WAI/perspective-videos/speech/
-    Assignment: Watch the complete short output-access demonstration. Relate speech, text alternatives and user control to the native accessibility exercise; complete multilingual error analysis separately.
+    Assignment: Assigned viewing: 0:00–0:54. Watch the complete short output-access demonstration. Relate speech, text alternatives and user control to the native accessibility exercise; complete multilingual error analysis separately.
     Access: The original W3C page also offers a transcript, captions and an audio-described version.
+  Google — Project Relate and non-standard speech access — https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/
+    Assignment: Watch the complete named video, 0:00–2:26. Use the first-person example to identify an access barrier, user control and alternatives when speech recognition fails. This is a 2021 English-language research/product case, not proof of current availability or accuracy for every language, accent or disability. Complete the native multilingual task audit separately.
 Readings:
   W3C — Making Audio and Video Media Accessible — https://www.w3.org/WAI/media/av/
     Assignment: Read the named article or specified sections: W3C — Making Audio and Video Media Accessible. Focus on accessibility, language switching, equity and use the native worked example to check your interpretation.
@@ -869,10 +912,14 @@ Source notes: Public source assignments are study references, not institutional 
 V42 — Read research and design defensible studies
 Prerequisites: V10, V25, V31, V39, V41
 Path: All learners
-Study assignment: Use the NeurIPS checklist to inspect a relevant primary speech paper's claim, data, comparison, ablation and uncertainty. Produce a critique and study plan, not new measured results.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Watch the 5:04 paper-reading method followed by the 6:03 study-planning unit. Apply the NeurIPS checklist to a speech paper and write a bounded study plan; do not invent results or run models.
+Video coverage/access: Two short university units total 11:07 and teach reading/planning skills. The speech paper, checklist and native exercise supply the domain-specific comparison, ablation and uncertainty analysis.
 Videos:
-  No video assigned; follow the coverage note above.
+  University of Minnesota Libraries — reading research papers critically — https://www.youtube.com/watch?v=t2K6mJkSWoA
+    Assignment: Watch the complete named video, 0:00–5:04. Use the paper-reading method to separate a speech paper’s question, contribution, comparison and limitations. Research formats differ; locate equivalent sections rather than insisting on biomedical headings. Work the native claim/evidence table and the assigned NeurIPS checklist. If you already studied this same video in Cyber R01, reuse your notes and apply them to the speech paper; a full replay is unnecessary.
+  University of Edinburgh — Planning an Open Science Study — https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html
+    Assignment: Watch the complete named video, 0:00–6:03. Study planning before results, testable questions, preregistration and a reproducibility checklist. The examples are from psychology; translate the planning principles to the supplied security/speech study. Write a plan only: this does not authorise model calls, new measurements or provider benchmarks. If you already studied this same video in Cyber R02, reuse your notes and apply them to the speech paper; a full replay is unnecessary.
+    Access: Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions.
 Readings:
   NeurIPS — paper checklist and reproducibility guidance — https://neurips.cc/public/guides/PaperChecklist
     Assignment: Read the named article or specified sections: NeurIPS — paper checklist and reproducibility guidance. Focus on paper critique, ablations, reproducibility and use the native worked example to check your interpretation.
@@ -884,10 +931,13 @@ Source notes: Public source assignments are study references, not institutional 
 V43 — Capstone: a deterministic voice-agent simulator
 Prerequisites: V04, V32, V34, V36, V37, V38, V39, V40
 Path: All learners
-Study assignment: Use the downloadable capstone contract alongside earlier state, cancellation, ownership and reliability lessons. Implement or trace all seven supplied fixtures and the uncertain-outcome extension offline.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Watch the 7:02 state-model unit followed by the 7:57 testing unit. Map states, events and guards onto the supplied offline capstone contract, then justify each fixture and uncertain outcome.
+Video coverage/access: Two focused TU Delft units total 14:59. Only the model/testing concepts are assigned, not the whole Java course. The native contract and fixtures define the voice-agent capstone.
 Videos:
-  No video assigned; follow the coverage note above.
+  TU Delft — introduction to state-machine models — https://ocw.tudelft.nl/course-lectures/2-1-1-video-state-based-testing/
+    Assignment: Watch the complete named video, 0:00–7:02. Study states, inputs and transitions as a model for behaviour. Translate the example to the native deterministic voice-agent contract; do not build a Java application or add a model provider.
+  TU Delft — state-based testing — https://ocw.tudelft.nl/course-lectures/2-2-1-video-state-based-testing/
+    Assignment: Watch the complete named video, 0:00–7:57. Derive tests from state/transition behaviour, then use that method to organise the seven supplied fixtures and uncertain-outcome extension. The source uses software examples from a Java course; the reasoning is language-independent and does not implement this studio’s capstone for you.
 Readings:
   Python — unittest documentation — https://docs.python.org/3/library/unittest.html
     Assignment: Read the named article or specified sections: Python — unittest documentation. Focus on integration, state transitions, fault handling and use the native worked example to check your interpretation.
@@ -906,10 +956,11 @@ Source notes: Public source assignments are study references, not institutional 
 V44 — Graduate study and an original research proposal
 Prerequisites: V27, V42, V43
 Path: All learners
-Study assignment: Use the actual programme/research guidance and three directly relevant primary papers. Audit missing prerequisites and write a falsifiable proposal with resources, stopping criteria and clearly unexecuted future work.
-Video coverage/access: Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.
+Study assignment: Watch the 3:22 proposal-structure guide. Write the voice research question, literature/evidence gap, method, resources, limits and supervision needs; check your actual programme’s requirements separately.
+Video coverage/access: The short university video teaches proposal structure. Its local business-school admissions context is not presented as universal; the native research exercise and actual programme guidance remain authoritative for your next step.
 Videos:
-  No video assigned; follow the coverage note above.
+  University of Leeds — structuring a research proposal — https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal
+    Assignment: Watch the complete named video, 0:00–3:22. Identify title, research question, literature gap, method and references, then apply that structure to the voice research proposal. The video describes Leeds Business School’s application context; it does not establish requirements or acceptance at a computing programme.
 Readings:
   Edinburgh — Speech and Language Processing MSc — https://study.ed.ac.uk/programmes/postgraduate-taught/290-speech-and-language-processing
     Assignment: Read the named article or specified sections: Edinburgh — Speech and Language Processing MSc. Focus on specialisation, literature review, proposal and use the native worked example to check your interpretation.

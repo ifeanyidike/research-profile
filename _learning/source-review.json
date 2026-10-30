@@ -22,11 +22,12 @@
     "Voice orientation uses short W3C input/output demonstrations; neural/backpropagation/attention teaching now has focused visual explanations with long CMU material optional.",
     "Introductory HMM/state-sequence/Viterbi material now precedes connected-speech/training overviews. Detailed source-filter mechanics follow the filter lesson.",
     "Child OT assignments now identify specific NHS modules. CDC school-age scope and redirected sleep-resource attribution are corrected.",
-    "Narrow webinars, decoder-only talks and historical API material are labelled as limited/optional coverage, not complete teaching of unrelated topics."
+    "Narrow webinars, decoder-only talks and historical API material are labelled as limited/optional coverage, not complete teaching of unrelated topics.",
+    "Follow-up review adds 43 focused video assignments and narrows one existing recording across 31 formerly reading-led/optional-only topics plus two topics with thin illustrative coverage. Every new assignment has a verified running time, named unit and lesson-specific scope; longer sources use bounded excerpts."
   ],
   "unverified_public_video_topics": {
-    "voice": ["V24", "V27", "V32", "V33", "V34", "V36", "V37", "V38", "V39", "V42", "V43", "V44"],
-    "child": ["C04", "C07", "C11", "C12", "G04", "G11", "G12", "P03", "P04", "P05", "P12", "P14"]
+    "voice": [],
+    "child": []
   },
   "limitations": [
     "No complete playback/caption audit of every external video.",
@@ -34,14 +35,18 @@
     "Clinical competence and individual treatment suitability are not assessed; cases are fictional and formal training/supervision are separate.",
     "Hosted storage isolation/merge checks and callback configuration were verified on 30 October 2026; fresh OAuth/email/recovery and actual two-device sign-in remain untested.",
     "Second-review public-page audit checked 189 distinct existing source/video URLs plus selected additions. HTTP 403/406/timeouts are unresolved access checks, not proof a source is missing. YouTube title/uploader metadata was checked; full playback/captions were not.",
-    "This follow-up checked all 566 distinct baseline assignment URLs and inspected public publisher/video metadata, available transcripts and PDF/slide identities. Not every complete recording/caption track or every claim in an external textbook was independently validated. Some sources impose browser/account checks; no CAPTCHA was bypassed."
+    "This follow-up checked all 566 distinct baseline assignment URLs and inspected public publisher/video metadata, available transcripts and PDF/slide identities. Not every complete recording/caption track or every claim in an external textbook was independently validated. Some sources impose browser/account checks; no CAPTCHA was bypassed.",
+    "Video-gap follow-up verifies source identity, published content descriptions/available transcripts, durations and chapter markers. It does not claim complete playback/caption validation; videos may cover a named component while the native lesson/readings cover remaining objectives."
   ],
   "limited_video_coverage": {
-    "V20": "Classical TTS data examples are optional; dataset/consent/licensing teaching is native/text-led.",
-    "V23": "Attention refresher is optional; Whisper teaching is in the native lesson and exact paper.",
-    "V25": "CTC decoding workshop is optional; fairness and error analysis use the native task and scoped reading.",
-    "V35": "Historical WebRTC talk is optional; current transport readings are core.",
-    "V40": "Short demonstrations cover accessibility examples, not all multilingual error analysis.",
-    "P15": "Short assistive-output example plus optional UNICEF launch; the guidance is the core AI/child-rights source."
+    "V20": "Four-minute Datasheets author interview teaches documentation; speech annotation/rights/split decisions remain native/paper tasks.",
+    "V23": "Exact Whisper author presentation supports the native lesson and paper; attention replay remains optional.",
+    "V25": "Bounded MIT WER/benchmark/data-selection teaching; subgroup inference remains native/HF work.",
+    "V35": "Only the historical signaling/STUN/TURN/security concepts are core; current WebRTC/WebSocket/RTP/SIP references remain required.",
+    "V40": "First-person Project Relate access case plus W3C components; multilingual and complete-task accessibility still require the native/HF/W3C audit.",
+    "P15": "Current UNICEF child-AI governance interview plus assistive-output example; optional UNICRI literacy animation and launch event. Full rights/risk decisions still use the guidance/native case.",
+    "V24": "wav2vec 2.0 author presentation covers self-supervision/adaptation; multilingual claims require the separate reading.",
+    "V27": "Matched AEC/gating explainer directly supports the native double-talk challenge; enhancement/separation mathematics and microphone assumptions remain native/readings.",
+    "P05": "CanChild supplies participation/outcome framing; ASHA readings supply language/literacy intervention evidence."
   }
 }

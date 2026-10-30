@@ -5101,6 +5101,15 @@
       "skills": ["research question threat model contribution", "methodology evidence limitations", "related work and claim checking"],
       "videos": [
         {
+          "label": "University of Minnesota Libraries — reading and comprehending scientific research articles",
+          "url": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
+          "progressKey": "video:100",
+          "watchMode": "full",
+          "durationSeconds": 304,
+          "timingSource": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
+          "assignment": "Watch the complete named video, 0:00–5:04. Identify the question, main claim, evidence and limits before detailed reading. Apply the method to KLEE: systems papers may use design/evaluation sections rather than the scientific article format shown here. Produce the claim/evidence table in the native exercise."
+        },
+        {
           "label": "MIT OpenCourseWare — 10. Symbolic Execution",
           "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/resources/lecture-10-symbolic-execution/",
           "progressKey": "video:0",
@@ -5140,8 +5149,8 @@
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The paper is a stable worked example for research methods. Its historical results are not current performance guarantees.",
       "practice_links": [],
-      "study_focus": "Study research question threat model contribution, methodology evidence limitations, related work and claim checking. Use the worked example to connect each source to the practical task; the video and reading guides below define the required scope.",
-      "videoNote": "Follow the viewing guide on each card. An excerpt is sufficient where times are listed. A full lecture is assigned only when its argument is part of this topic; split long study into sessions. Optional references are not a second viewing requirement."
+      "study_focus": "Watch the five-minute paper-reading tutorial, then apply it to the assigned security paper. Locate the threat model, claim, evaluation and limitations before writing your critique.",
+      "videoNote": "Core viewing: a 5:04 paper-reading method. The existing KLEE and side-channel lectures remain optional examples; no full replay is required."
     },
     {
       "id": "R02",
@@ -5150,6 +5159,16 @@
       "prerequisites": ["R01", "L03", "M05"],
       "skills": ["experiment design controls baselines", "artifact provenance and reproduction", "uncertainty ethics and disclosure"],
       "videos": [
+        {
+          "label": "University of Edinburgh — Planning an Open Science Study",
+          "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+          "progressKey": "video:100",
+          "watchMode": "full",
+          "durationSeconds": 363,
+          "timingSource": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+          "assignment": "Watch the complete named video, 0:00–6:03. Study planning before results, testable questions, preregistration and a reproducibility checklist. The examples are from psychology; translate the planning principles to the supplied security/speech study. Write a plan only: this does not authorise model calls, new measurements or provider benchmarks.",
+          "accessNote": "Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions."
+        },
         {
           "label": "StatQuest with Josh Starmer — Hypothesis Testing and The Null Hypothesis, Clearly Explained!!!",
           "url": "https://youtu.be/0oc49DyA3hU",
@@ -5203,8 +5222,8 @@
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The required reproduction uses a local parser and synthetic data.",
       "practice_links": [],
-      "study_focus": "Study experiment design controls baselines, artifact provenance and reproduction, uncertainty ethics and disclosure. Use the worked example to connect each source to the practical task; the video and reading guides below define the required scope.",
-      "videoNote": "Follow the viewing guide on each card. An excerpt is sufficient where times are listed. A full lecture is assigned only when its argument is part of this topic; split long study into sessions. Optional references are not a second viewing requirement."
+      "study_focus": "Watch the 6:03 study-planning unit. Define the question, inputs, controls, analysis and artifact manifest before working the harmless local example. Distinguish a plan from measured evidence.",
+      "videoNote": "The short Edinburgh unit supplies the core planning method. The existing statistics clips are optional refreshers, not extra required viewing. Artifact, ethics and responsible-disclosure readings remain required."
     },
     {
       "id": "R03",
@@ -5213,6 +5232,23 @@
       "prerequisites": ["R02"],
       "skills": ["secure system design implementation review", "incident investigation and reporting", "specialisation evidence and oral defence"],
       "videos": [
+        {
+          "label": "MIT / Patrick Winston — presenting and defending your work",
+          "url": "https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/resources/how-to-speak-non-external/",
+          "progressKey": "video:100",
+          "watchMode": "segments",
+          "durationSeconds": 3822,
+          "timingSource": "https://www.youtube.com/watch?v=Unzc731iCUY",
+          "playbackUrl": "https://www.youtube.com/watch?v=Unzc731iCUY",
+          "segments": [
+            {
+              "start": 2490,
+              "end": 3186,
+              "label": "Persuading: oral exams and job talks"
+            }
+          ],
+          "assignment": "Watch only 41:30–53:06. Use the oral-exam and job-talk section to organise a defensible argument: problem, contribution, evidence and limits. Apply it to your own security capstone. This teaches presentation/defence, not implementation of the supplied project."
+        },
         {
           "label": "Security Engineering — Security Engineering Lecture 2: Threat Models and Security Policies",
           "url": "https://www.youtube.com/watch?v=GDwbNs3J4ec",
@@ -5263,8 +5299,8 @@
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Completion demonstrates the capabilities evidenced by the work. A PhD-level research contribution additionally requires original results and expert assessment; finishing these resources alone does not establish that.",
       "practice_links": [],
-      "study_focus": "Study secure system design implementation review, incident investigation and reporting, specialisation evidence and oral defence. Use the worked example to connect each source to the practical task; the video and reading guides below define the required scope.",
-      "videoNote": "Follow the viewing guide on each card. An excerpt is sufficient where times are listed. A full lecture is assigned only when its argument is part of this topic; split long study into sessions. Optional references are not a second viewing requirement."
+      "study_focus": "Complete the supplied capstone first. Watch 41:30–53:06 of the MIT presentation lesson, then defend your threat model, evidence, trade-offs and unresolved limits.",
+      "videoNote": "Core viewing is an 11:36 oral-defence section. The security refresher recordings remain optional; the capstone deliverables and independent defence remain your own work."
     },
     {
       "id": "I01",

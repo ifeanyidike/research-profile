@@ -91,8 +91,8 @@ practice confirmation, prerequisite passes, reviewed criteria and at least 40
 characters of assessment evidence. It schedules recall at 2 days, then 7 days
 after the first review, then 30 days after the second. The third ends the cycle.
 
-Videos use click-to-load youtube-nocookie embeds where an supported YouTube source is
-available, preserving chapter start and playlist parameters, and always retain a link to the provider. Embedded players may be
+Videos use click-to-load youtube-nocookie embeds where a supported YouTube source is
+available, preserving excerpt start/end bounds, and always retain a link to the provider. Embedded players may be
 unavailable; content, captions, accounts and pricing remain provider-controlled.
 
 Resource review — 30 October 2026

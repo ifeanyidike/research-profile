@@ -1,0 +1,751 @@
+{
+  "date": "2026-10-30",
+  "release": "20261030-5",
+  "topics": [
+    "C04",
+    "C07",
+    "C11",
+    "C12",
+    "G04",
+    "G11",
+    "G12",
+    "P03",
+    "P04",
+    "P05",
+    "P12",
+    "P14",
+    "P15",
+    "R01",
+    "R02",
+    "R03",
+    "V20",
+    "V23",
+    "V24",
+    "V25",
+    "V27",
+    "V32",
+    "V33",
+    "V34",
+    "V35",
+    "V36",
+    "V37",
+    "V38",
+    "V39",
+    "V40",
+    "V42",
+    "V43",
+    "V44"
+  ],
+  "assignments": [
+    {
+      "topic": "C04",
+      "progressKey": "video:100",
+      "url": "https://raisingchildren.net.au/school-age/multimedia/development-6-8-years",
+      "label": "Raising Children Network — child development at 6–8 years",
+      "durationSeconds": 174,
+      "assignedSeconds": 174,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=iI_whNYHKaM",
+      "basis": "Publisher-linked presentation/player metadata",
+      "source": "https://raisingchildren.net.au/school-age/multimedia/development-6-8-years",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "C07",
+      "progressKey": "video:100",
+      "url": "https://sport.nspcc.org.uk/help-and-advice/introduction-to-safeguarding/contextual-safeguarding/",
+      "label": "NSPCC — safeguarding and the child’s wider context",
+      "durationSeconds": 135,
+      "assignedSeconds": 135,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=0WAoliBvKFQ",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://sport.nspcc.org.uk/help-and-advice/introduction-to-safeguarding/contextual-safeguarding/",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "C07",
+      "progressKey": "video:101",
+      "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation",
+      "label": "UNICEF — meaningful participation of children with disabilities",
+      "durationSeconds": 736,
+      "assignedSeconds": 736,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "C11",
+      "progressKey": "video:100",
+      "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are",
+      "label": "UNICEF — disability, identity, barriers and inclusion",
+      "durationSeconds": 629,
+      "assignedSeconds": 629,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=kWrPBCKnfA4",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "C12",
+      "progressKey": "video:100",
+      "url": "https://www.nhft.nhs.uk/idiscover-toolkit",
+      "label": "NHFT NHS — how to sleep well",
+      "durationSeconds": 502,
+      "assignedSeconds": 502,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=vPNCvZe6_48",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.nhft.nhs.uk/idiscover-toolkit",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "C12",
+      "progressKey": "video:101",
+      "url": "https://www.clch.nhs.uk/services/speech-and-language-therapy-children",
+      "label": "Bradford District Care NHS — paediatric eating and swallowing",
+      "durationSeconds": 451,
+      "assignedSeconds": 451,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=WTMMZ-Cr9EA",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.clch.nhs.uk/services/speech-and-language-therapy-children",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "G04",
+      "progressKey": "video:100",
+      "url": "https://www.healthtranslations.vic.gov.au/resources/helping-your-child-to-learn-two-languages-video",
+      "label": "South Eastern Sydney Local Health District — helping your child learn two languages",
+      "durationSeconds": 144,
+      "assignedSeconds": 144,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=PIrD7PkeDdg",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.healthtranslations.vic.gov.au/resources/helping-your-child-to-learn-two-languages-video",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "G11",
+      "progressKey": "video:100",
+      "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/",
+      "label": "CanChild — coordinated service planning and family priorities",
+      "durationSeconds": 435,
+      "assignedSeconds": 435,
+      "optional": false,
+      "timingSource": "https://vimeo.com/526359322?h=58d9baef4e",
+      "basis": "Publisher-linked presentation/player metadata",
+      "source": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "G12",
+      "progressKey": "video:100",
+      "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/",
+      "label": "CanChild — a parent’s strengths-based F-words story",
+      "durationSeconds": 241,
+      "assignedSeconds": 241,
+      "optional": false,
+      "timingSource": "https://vimeo.com/939106459?h=b61d3c3634",
+      "basis": "Publisher-linked presentation/player metadata",
+      "source": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "P03",
+      "progressKey": "video:100",
+      "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/",
+      "label": "ASHA / Elizabeth Peña — what is dynamic assessment?",
+      "durationSeconds": 709,
+      "assignedSeconds": 709,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=saHMtIz7IgA",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "P04",
+      "progressKey": "video:100",
+      "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/",
+      "label": "ASHA / Elizabeth Peña — mediated learning experience",
+      "durationSeconds": 569,
+      "assignedSeconds": 569,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=N_pOZu3wYEQ",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "P04",
+      "progressKey": "video:101",
+      "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/",
+      "label": "ASHA / Elizabeth Peña — observing modifiability",
+      "durationSeconds": 621,
+      "assignedSeconds": 621,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=Ig0a-9vJeCs",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "P04",
+      "progressKey": "video:102",
+      "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/",
+      "label": "ASHA / Elizabeth Peña — clinical decision making",
+      "durationSeconds": 817,
+      "assignedSeconds": 817,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "P05",
+      "progressKey": "video:100",
+      "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/",
+      "label": "CanChild — ICF, family-centred planning and meaningful outcomes",
+      "durationSeconds": 451,
+      "assignedSeconds": 451,
+      "optional": false,
+      "timingSource": "https://vimeo.com/939110775?h=b0463c35dd",
+      "basis": "Publisher-linked presentation/player metadata",
+      "source": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "P12",
+      "progressKey": "video:100",
+      "url": "https://www.youtube.com/watch?v=CYLeEW_VCbQ",
+      "label": "Osmania University EMRC — types of single-subject research designs",
+      "durationSeconds": 1149,
+      "assignedSeconds": 1149,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=CYLeEW_VCbQ",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.youtube.com/watch?v=CYLeEW_VCbQ",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "P14",
+      "progressKey": "video:100",
+      "url": "https://www.hcpc-uk.org/standards/meeting-our-standards/record-keeping/webinar-keep-records-of-your-work/",
+      "label": "HCPC — what the record-keeping standards require",
+      "durationSeconds": 2478,
+      "assignedSeconds": 678,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=qijSY-7XIiU",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.hcpc-uk.org/standards/meeting-our-standards/record-keeping/webinar-keep-records-of-your-work/",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "P15",
+      "progressKey": "video:101",
+      "url": "https://www.youtube.com/watch?v=WQrSiQe5m6U",
+      "label": "ITU AI for Good / UNICEF — putting children at the centre of AI",
+      "durationSeconds": 195,
+      "assignedSeconds": 195,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=WQrSiQe5m6U",
+      "basis": "Original publisher link plus public video identity/duration metadata",
+      "source": "https://www.youtube.com/watch?v=WQrSiQe5m6U",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "P15",
+      "progressKey": "video:102",
+      "url": "https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025",
+      "label": "UNICRI — What to Be? A Journey Through AI (optional literacy example)",
+      "durationSeconds": 327,
+      "assignedSeconds": 327,
+      "optional": true,
+      "timingSource": "https://www.youtube.com/watch?v=_hBFH03HlsY",
+      "basis": "Original publisher link plus public video identity/duration metadata",
+      "source": "https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025",
+      "studio": "child-development-studio"
+    },
+    {
+      "topic": "R01",
+      "progressKey": "video:100",
+      "url": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
+      "label": "University of Minnesota Libraries — reading and comprehending scientific research articles",
+      "durationSeconds": 304,
+      "assignedSeconds": 304,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
+      "studio": "cyber-studio"
+    },
+    {
+      "topic": "R02",
+      "progressKey": "video:100",
+      "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+      "label": "University of Edinburgh — Planning an Open Science Study",
+      "durationSeconds": 363,
+      "assignedSeconds": 363,
+      "optional": false,
+      "timingSource": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+      "basis": "Publisher-linked presentation/player metadata",
+      "source": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+      "studio": "cyber-studio"
+    },
+    {
+      "topic": "R03",
+      "progressKey": "video:100",
+      "url": "https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/resources/how-to-speak-non-external/",
+      "label": "MIT / Patrick Winston — presenting and defending your work",
+      "durationSeconds": 3822,
+      "assignedSeconds": 696,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=Unzc731iCUY",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/resources/how-to-speak-non-external/",
+      "studio": "cyber-studio"
+    },
+    {
+      "topic": "V20",
+      "progressKey": "video:100",
+      "url": "https://vimeo.com/639588440?h=a28bc8a741",
+      "label": "ACM / Timnit Gebru — Datasheets for Datasets",
+      "durationSeconds": 240,
+      "assignedSeconds": 240,
+      "optional": false,
+      "timingSource": "https://vimeo.com/639588440?h=a28bc8a741",
+      "basis": "Publisher-linked presentation/player metadata",
+      "source": "https://vimeo.com/639588440?h=a28bc8a741",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V23",
+      "progressKey": "video:100",
+      "url": "https://slideslive.com/39002706",
+      "label": "ICML 2023 / Whisper authors — Robust Speech Recognition via Large-Scale Weak Supervision",
+      "durationSeconds": 318,
+      "assignedSeconds": 318,
+      "optional": false,
+      "timingSource": "https://slideslive.com/39002706",
+      "basis": "Publisher-linked presentation/player metadata",
+      "source": "https://icml.cc/virtual/2023/poster/24519",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V24",
+      "progressKey": "video:100",
+      "url": "https://slideslive.com/38937614",
+      "label": "NeurIPS 2020 / wav2vec 2.0 authors — self-supervised speech representations",
+      "durationSeconds": 217,
+      "assignedSeconds": 217,
+      "optional": false,
+      "timingSource": "https://slideslive.com/38937614",
+      "basis": "Publisher-linked presentation/player metadata",
+      "source": "https://neurips.cc/virtual/2020/poster/18897",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V25",
+      "progressKey": "video:100",
+      "url": "https://introtodeeplearning.com/2022/",
+      "label": "MIT 6.S191 / Rev.AI — WER, benchmarks and data selection",
+      "durationSeconds": 2504,
+      "assignedSeconds": 540,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=sR6_bZ6VkAg",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://introtodeeplearning.com/2022/",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V27",
+      "progressKey": "video:100",
+      "url": "https://www.youtube.com/watch?v=x36mm3_r9I8",
+      "label": "LookingPoint / Sean Barr — acoustic echo cancellation and the limits of gating",
+      "durationSeconds": 253,
+      "assignedSeconds": 253,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=x36mm3_r9I8",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.youtube.com/watch?v=x36mm3_r9I8",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V32",
+      "progressKey": "video:100",
+      "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+      "label": "Rasa — architecture of a conversational assistant",
+      "durationSeconds": 242,
+      "assignedSeconds": 242,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=zzUY5T9I730",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V32",
+      "progressKey": "video:101",
+      "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+      "label": "Rasa — flows and explicit conversation logic",
+      "durationSeconds": 612,
+      "assignedSeconds": 612,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=v1l75qxo4b0",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V32",
+      "progressKey": "video:102",
+      "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+      "label": "Rasa — conversation repair and deviations from the happy path",
+      "durationSeconds": 630,
+      "assignedSeconds": 338,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=TREEZ-vT90I",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V33",
+      "progressKey": "video:100",
+      "url": "https://www.youtube.com/watch?v=T-D1OfcDW1M",
+      "label": "IBM / Marina Danilevsky — retrieval-augmented generation",
+      "durationSeconds": 395,
+      "assignedSeconds": 395,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=T-D1OfcDW1M",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.youtube.com/watch?v=T-D1OfcDW1M",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V33",
+      "progressKey": "video:101",
+      "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+      "label": "Rasa — action types and custom tools",
+      "durationSeconds": 753,
+      "assignedSeconds": 258,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=yhuc2i29cS0",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V34",
+      "progressKey": "video:100",
+      "url": "https://www.youtube.com/watch?v=oAkLSJNr5zY",
+      "label": "Corey Schafer — asyncio foundations, concurrent tasks and task groups",
+      "durationSeconds": 6161,
+      "assignedSeconds": 2002,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=oAkLSJNr5zY",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.youtube.com/watch?v=oAkLSJNr5zY",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V34",
+      "progressKey": "video:101",
+      "url": "https://pyvideo.org/europython-2023/asyncio-evolved-enhanced-exception-handling-with-taskgroup-in-python-311.html",
+      "label": "EuroPython / Junya Fukuda — TaskGroup exceptions and cancellation",
+      "durationSeconds": 1606,
+      "assignedSeconds": 1606,
+      "optional": true,
+      "timingSource": "https://www.youtube.com/watch?v=FvWXyAXyb4Q",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://pyvideo.org/europython-2023/asyncio-evolved-enhanced-exception-handling-with-taskgroup-in-python-311.html",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V35",
+      "progressKey": "video:0",
+      "url": "https://www.youtube.com/watch?v=p2HzZkd2A40",
+      "label": "Google for Developers — signaling, STUN/TURN and transport security (historical concepts)",
+      "durationSeconds": 2657,
+      "assignedSeconds": 410,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=p2HzZkd2A40",
+      "basis": "Previously verified publisher description chapters; same recording narrowed",
+      "reused": true,
+      "source": "https://www.youtube.com/watch?v=p2HzZkd2A40",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V36",
+      "progressKey": "video:100",
+      "url": "https://docs.livekit.io/agents/logic/turns/turn-detector/",
+      "label": "LiveKit — turn detection versus speech activity",
+      "durationSeconds": 157,
+      "assignedSeconds": 157,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=EYDrSSEP0h0",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://docs.livekit.io/agents/logic/turns/turn-detector/",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V37",
+      "progressKey": "video:100",
+      "url": "https://livekit.com/blog/understand-and-improve-agent-latency",
+      "label": "LiveKit — latency components and measuring a voice-agent trace",
+      "durationSeconds": 783,
+      "assignedSeconds": 238,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=jnedfk5PL2A",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://livekit.com/blog/understand-and-improve-agent-latency",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V38",
+      "progressKey": "video:100",
+      "url": "https://www.youtube.com/watch?v=jrHRe9lSqqA",
+      "label": "IBM / Jeff Crume — prompt-injection attacks and trust boundaries",
+      "durationSeconds": 657,
+      "assignedSeconds": 657,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=jrHRe9lSqqA",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.youtube.com/watch?v=jrHRe9lSqqA",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V39",
+      "progressKey": "video:100",
+      "url": "https://www.youtube.com/watch?v=ztIIcXNzMN4",
+      "label": "IBM / Bradley Knapp — site reliability engineering",
+      "durationSeconds": 492,
+      "assignedSeconds": 492,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=ztIIcXNzMN4",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.youtube.com/watch?v=ztIIcXNzMN4",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V40",
+      "progressKey": "video:102",
+      "url": "https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/",
+      "label": "Google — Project Relate and non-standard speech access",
+      "durationSeconds": 146,
+      "assignedSeconds": 146,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=EU2oCVlzEZk",
+      "basis": "Original publisher link plus public video identity/duration metadata",
+      "source": "https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V42",
+      "progressKey": "video:100",
+      "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+      "label": "University of Edinburgh — Planning an Open Science Study",
+      "durationSeconds": 363,
+      "assignedSeconds": 363,
+      "optional": false,
+      "timingSource": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+      "basis": "Publisher-linked presentation/player metadata",
+      "source": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V42",
+      "progressKey": "video:101",
+      "url": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
+      "label": "University of Minnesota Libraries — reading research papers critically",
+      "durationSeconds": 304,
+      "assignedSeconds": 304,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V43",
+      "progressKey": "video:100",
+      "url": "https://ocw.tudelft.nl/course-lectures/2-1-1-video-state-based-testing/",
+      "label": "TU Delft — introduction to state-machine models",
+      "durationSeconds": 422,
+      "assignedSeconds": 422,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=X4LABvRgqik",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://ocw.tudelft.nl/course-lectures/2-1-1-video-state-based-testing/",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V43",
+      "progressKey": "video:101",
+      "url": "https://ocw.tudelft.nl/course-lectures/2-2-1-video-state-based-testing/",
+      "label": "TU Delft — state-based testing",
+      "durationSeconds": 477,
+      "assignedSeconds": 477,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=s06ncjp92WU",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://ocw.tudelft.nl/course-lectures/2-2-1-video-state-based-testing/",
+      "studio": "voice-ai-studio"
+    },
+    {
+      "topic": "V44",
+      "progressKey": "video:100",
+      "url": "https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal",
+      "label": "University of Leeds — structuring a research proposal",
+      "durationSeconds": 202,
+      "assignedSeconds": 202,
+      "optional": false,
+      "timingSource": "https://www.youtube.com/watch?v=VNbzuPt5QYA",
+      "basis": "Public source-hosted video metadata and chapter markers",
+      "source": "https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal",
+      "studio": "voice-ai-studio"
+    }
+  ],
+  "limits": [
+    "Source identity, available descriptions/transcripts, durations and public chapter boundaries were checked. Not every complete recording or caption track was watched.",
+    "Selected provider pages may impose access checks. Original sources and text lessons remain available; no CAPTCHA was bypassed.",
+    "Video coverage is scoped per topic; it is not a claim that every lesson objective is taught by video alone.",
+    "No model calls, replays/evaluations, live lab execution, clinical assessment or real child data was used."
+  ],
+  "previousVideos": {
+    "cyber-studio/R01": [
+      {
+        "progressKey": "video:0",
+        "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/resources/lecture-10-symbolic-execution/",
+        "optional": true
+      },
+      {
+        "progressKey": "video:1",
+        "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/resources/lecture-16-side-channel-attacks/",
+        "optional": true
+      }
+    ],
+    "cyber-studio/R02": [
+      {
+        "progressKey": "video:0",
+        "url": "https://youtu.be/0oc49DyA3hU",
+        "optional": true
+      },
+      {
+        "progressKey": "video:1",
+        "url": "https://youtu.be/vemZtEM63GY",
+        "optional": true
+      },
+      {
+        "progressKey": "video:2",
+        "url": "https://youtu.be/Exk0OoRG0PQ",
+        "optional": true
+      }
+    ],
+    "cyber-studio/R03": [
+      {
+        "progressKey": "video:0",
+        "url": "https://www.youtube.com/watch?v=GDwbNs3J4ec",
+        "optional": true
+      },
+      {
+        "progressKey": "video:1",
+        "url": "https://www.youtube.com/watch?v=cmWQF2FDlG8",
+        "optional": true
+      }
+    ],
+    "voice-ai-studio/V20": [
+      {
+        "progressKey": "video:0",
+        "url": "https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/script-design/",
+        "optional": true
+      },
+      {
+        "progressKey": "video:1",
+        "url": "https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/annotating-the-database/",
+        "optional": true
+      }
+    ],
+    "voice-ai-studio/V23": [
+      {
+        "progressKey": "video:0",
+        "url": "https://www.youtube.com/watch?v=q3CmsZFlrnc",
+        "optional": true
+      }
+    ],
+    "voice-ai-studio/V24": [],
+    "voice-ai-studio/V25": [
+      {
+        "progressKey": "video:0",
+        "url": "https://www.youtube.com/watch?v=penbvDelDuA",
+        "optional": true
+      }
+    ],
+    "voice-ai-studio/V27": [],
+    "voice-ai-studio/V32": [],
+    "voice-ai-studio/V33": [],
+    "voice-ai-studio/V34": [],
+    "voice-ai-studio/V35": [
+      {
+        "progressKey": "video:0",
+        "url": "https://www.youtube.com/watch?v=p2HzZkd2A40",
+        "optional": true
+      }
+    ],
+    "voice-ai-studio/V36": [],
+    "voice-ai-studio/V37": [],
+    "voice-ai-studio/V38": [],
+    "voice-ai-studio/V39": [],
+    "voice-ai-studio/V40": [
+      {
+        "progressKey": "video:100",
+        "url": "https://www.w3.org/WAI/perspective-videos/voice/",
+        "optional": false
+      },
+      {
+        "progressKey": "video:101",
+        "url": "https://www.w3.org/WAI/perspective-videos/speech/",
+        "optional": false
+      }
+    ],
+    "voice-ai-studio/V42": [],
+    "voice-ai-studio/V43": [],
+    "voice-ai-studio/V44": [],
+    "child-development-studio/C04": [],
+    "child-development-studio/C07": [],
+    "child-development-studio/C11": [],
+    "child-development-studio/C12": [],
+    "child-development-studio/G04": [],
+    "child-development-studio/G11": [],
+    "child-development-studio/G12": [],
+    "child-development-studio/P03": [],
+    "child-development-studio/P04": [],
+    "child-development-studio/P05": [],
+    "child-development-studio/P12": [],
+    "child-development-studio/P14": [],
+    "child-development-studio/P15": [
+      {
+        "progressKey": "video:0",
+        "url": "https://www.youtube.com/watch?v=BwCVJCymmt8",
+        "optional": true
+      },
+      {
+        "progressKey": "video:100",
+        "url": "https://www.w3.org/WAI/perspective-videos/speech/",
+        "optional": false
+      }
+    ]
+  },
+  "topicGroups": {
+    "cyber-studio": ["R01", "R02", "R03"],
+    "voice-ai-studio": ["V20", "V23", "V24", "V25", "V27", "V32", "V33", "V34", "V35", "V36", "V37", "V38", "V39", "V40", "V42", "V43", "V44"],
+    "child-development-studio": ["C04", "C07", "C11", "C12", "G04", "G11", "G12", "P03", "P04", "P05", "P12", "P14", "P15"]
+  },
+  "thinCoverageTopics": ["voice-ai-studio/V40", "child-development-studio/P15"],
+  "distinctNewRecordings": 41
+}

@@ -1,0 +1,90 @@
+Focused video coverage follow-up — 30 October 2026
+Release 20261030-5
+
+Coverage
+The source audit identified 24 topics with no video and seven with only optional
+refreshers. This follow-up gives all 31 a matched core viewing assignment. It also
+improves V40 accessibility and P15 child-AI ethics, which previously had only
+narrow component demonstrations. This is 33 topics: 3 Cyber, 17 Voice AI, 13 Child.
+43 video assignments are added, and V35's existing full historical replay becomes a 6:50
+concept excerpt. Five existing W3C assignments gain verified 1:10/0:54 timings.
+Every new video states 0:00–end for a complete focused unit or exact excerpt
+ranges. The JSON manifest records source identity, duration and assigned time.
+Video support does not mean every objective is taught by video alone.
+
+Source and lesson matching
+Cyber R01 uses University of Minnesota Libraries' 5:04 paper-reading method;
+R02 uses Edinburgh's 6:03 planning/reproducibility unit; R03 assigns only
+41:30–53:06 of MIT/Patrick Winston's oral-exam/presentation guidance. Existing
+security/statistics refreshers remain optional. The native capstone is not solved
+or graded by watching a presentation.
+
+Voice includes the exact author presentations for Whisper 5:18 and wav2vec 2.0
+3:37, ACM/Timnit Gebru's dataset-documentation interview 4:00, and nine minutes of
+MIT ASR evaluation teaching. Rasa units illustrate explicit flows, repair and
+custom actions; they are historical 3.7.8 examples, not current installation
+instructions or security guarantees. The 102-minute asyncio recording is reduced
+to three concept/worked sections totalling 33:22; a matched 26:46 TaskGroup talk is
+optional. A short AEC explanation directly supports the gating/double-talk task.
+An antenna-array beamforming candidate was rejected as an unnecessary prerequisite
+and topic detour. Current provider documentation remains required for versions.
+LiveKit supports turn detection and trace-measurement examples; IBM supplies
+RAG, injection and SRE foundations. TU Delft's state/testing units support the
+offline capstone. Leeds' 3:22 proposal structure is explicitly distinguished from
+any computing programme's own admissions rules. Google's 2:26 Project Relate case
+is a historical English-language accessibility example, not universal performance
+or availability evidence. The multilingual/task audit remains native work.
+
+Child sources include Raising Children Network's 2:54 school-age 6–8 example,
+NSPCC safeguarding, UNICEF participation/inclusion, NHS sleep and paediatric
+swallowing, NSW bilingual-family guidance, and CanChild's family/service-planning
+and outcome units. ASHA's actual videos are 11:49, 9:29, 10:21 and 13:37, not the
+surrounding 30-minute course listings. P03 assigns the introductory unit; P04
+keeps mediated learning and modifiability before case decision making. These are
+published cases to study, not permission to administer restricted assessments.
+Osmania University supplies 19:09 of research-design concepts for P12, with
+current WWC 5.0 standards still required. No child withdrawal experiment is
+prescribed. P14 assigns only 14:25–25:43 of HCPC record-keeping standards.
+P15 now has a direct 3:15 UNICEF child-AI-rights/governance interview; a 5:27
+UNICRI literacy animation and the hour-long launch event are optional.
+
+Evidence and exclusions
+Public source pages, original uploader/author identities, descriptions, available
+publisher transcripts, player running times and public chapter metadata were
+checked. Conference presentations' direct SlidesLive VideoObject metadata gives
+5:18/3:37. Vimeo's public oEmbed metadata gives the original ACM/CanChild titles,
+owners and durations; only metadata was read, without sign-in or media download.
+Edinburgh's embedded public Kaltura metadata gives 363 seconds. Raising Children's
+video was observed in the normal public browser player at 2:54; its official page
+supplies the complete transcript. Caption controls were unavailable in that check.
+Long recording excerpts use source descriptions or public player chapter markers;
+they are study bounds, not a promise of sample-accurate seeking.
+
+Keshav's linked research-advice recording and the old PyColorado 2019 asyncio
+recording reported unavailable and were rejected. ASHA's embedded IPP stream
+returned 403, so the matched CanChild coordination video was used. Alberta's
+otherwise relevant goal-setting page timed out and was not assigned. Some Vimeo
+HTML pages show an access check even though their public metadata is available;
+these videos remain on their original provider/collection pages. No access
+control or CAPTCHA was bypassed. The Corey transcript export was unavailable;
+its identity, duration, teaching description and chapter markers were inspected.
+This is not a complete full-playback or caption audit. Every remaining lesson
+objective, current API claim and clinical suitability is not established by a
+short explainer. Source providers control future access, captions and content.
+
+Validation
+Offline packaging validates prerequisite closure and authored/generated parity.
+The regression suite checks every added assignment's rendered viewing range,
+expected duration and stable completion identity, and retains old optional source
+checks after reordering. No authentication, database or progress migration occurs.
+Browser QA, repository-wide formatting, production build and public deployment
+checks are recorded in the accompanying work evidence. Source research runs no
+model inference, replays/evaluations, linked lab code or real-child activities.
+
+Provider-page browser check
+The ICML paper page displayed its Video heading but its external embed script
+failed to initialise. The direct SlidesLive page rendered the original Whisper
+presentation and 5:18 player correctly, so V23/V24 link to their direct hosted
+presentations while retaining conference provenance. V42 allows learners who
+already watched the same research-skills video in Cyber to reuse notes.
+43 new assignments represent 41 distinct newly linked recordings across studios.
