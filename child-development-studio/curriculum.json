@@ -339,21 +339,33 @@
           "label": "UNICEF — meaningful participation of children with disabilities",
           "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation",
           "progressKey": "video:101",
-          "watchMode": "full",
+          "watchMode": "segments",
           "durationSeconds": 736,
           "timingSource": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
           "playbackUrl": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
-          "assignment": "Watch the complete named video, 0:00–12:16. Listen for meaningful participation, barriers and being heard. Connect these to the native assent/consent distinction and how a child can decline or change their mind. This rights-based module does not replace local privacy law or safeguarding procedures. Participation in services and policy decisions supports the theme of being heard; it is not itself a clinical consent/assent procedure.",
+          "assignment": "Watch only 0:30–3:45 and 6:38–11:53 (8:30 total). Identify meaningful contribution, the child-led accessible-sink example and practical access arrangements. Apply the native consent/assent/refusal distinctions; participation in service decisions does not replace clinical consent or local safeguarding procedures.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The video’s facilitator guide describes meaningful participation, barriers and accessible involvement in decisions. This supports being heard; it is not a clinical consent or safeguarding protocol.",
+            "method": "transcript-reviewed",
+            "note": "English automatic captions support meaningful participation, a child-led accessible-sink example and concrete access arrangements. The core excerpts omit the intervening adult political/violence examples and credits.",
             "sources": [
               {
-                "label": "UNICEF video and facilitator guide",
-                "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=8aNB8k9VlMQ"
               }
             ]
-          }
+          },
+          "segments": [
+            {
+              "start": 30,
+              "end": 225,
+              "label": "Meaningful participation and child-led access"
+            },
+            {
+              "start": 398,
+              "end": 713,
+              "label": "Practical arrangements for being heard"
+            }
+          ]
         }
       ],
       "readings": [
@@ -370,7 +382,7 @@
           "assignment": "Read the named article or specified sections: NSPCC — recognising and responding to abuse. Focus on assent, safeguarding, privacy and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "The 1:00 eSafety animation supplies the digital-privacy component, with a complete visual transcript. The UNICEF participation video and assigned readings/native case cover child voice, assent, refusal and safeguarding; the animation is not a clinical consent or local protection procedure.",
+      "videoNote": "Core viewing totals 9:30: the complete privacy animation and two participation excerpts. These support digital privacy, child voice and practical access; local safeguarding and clinical consent/assent require the native distinctions and appropriate guidance.",
       "pass_criteria": "1. Replace the real-data notebook proposal with a wholly invented case. 2. Distinguish consent, assent/refusal, privacy and safeguarding responsibilities. 3. Pause a non-urgent educational activity when stop is signalled; identify qualified/local exceptions.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -378,7 +390,7 @@
         "Distinguish consent, assent/refusal, privacy and safeguarding responsibilities.",
         "Pause a non-urgent educational activity when stop is signalled; identify qualified/local exceptions."
       ],
-      "study_focus": "Watch the 1:00 privacy animation and the named UNICEF participation material. Work the fictional consent/assent/refusal/privacy distinctions and use the NSPCC guidance with your local safeguarding route.",
+      "study_focus": "Watch the 1:00 privacy animation and 8:30 of UNICEF participation excerpts. Work fictional consent/assent/refusal/privacy distinctions and connect the safeguarding reading to your local route.",
       "practice": "Review a fictional proposed notebook entry containing a child's full name, school, video link and appointment letter. Replace it with a wholly invented learning case. Explain which information should never enter this studio and where authorised professionals should keep necessary records.",
       "assessment": "An adult says “The parent agreed, so continue even though the child is repeatedly signalling stop.” Write the questions a responsible professional must consider and a respectful default for a non-urgent educational activity.",
       "practice_links": []
@@ -542,12 +554,12 @@
           "playbackUrl": "https://www.youtube.com/watch?v=kWrPBCKnfA4",
           "assignment": "Watch the complete named video, 0:00–10:29. Hear young people describe disability as one part of identity and the barriers/misconceptions that restrict participation. Ask whose perspective and communication preferences are missing in the native goal critique; do not infer the same preferences for all disabled or neurodivergent people.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The video’s facilitator guide describes first-person disability, identity and exclusion. It supports listening to individuals; it does not represent every neurodivergent or multilingual experience.",
+            "method": "transcript-reviewed",
+            "note": "The complete English automatic transcript supports disability as one part of identity, lived experience, communication preferences and barriers to inclusion.",
             "sources": [
               {
-                "label": "UNICEF video and facilitator guide",
-                "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=kWrPBCKnfA4"
               }
             ]
           }
@@ -1183,24 +1195,25 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "CanChild — coordinated service planning and family priorities",
-          "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/",
-          "progressKey": "video:100",
+          "label": "Coventry City Council — Family Help and a team around the family",
+          "url": "https://www.coventry.gov.uk/directory-record/78685/family-help-animation",
+          "progressKey": "video:200",
           "watchMode": "full",
-          "durationSeconds": 435,
-          "timingSource": "https://vimeo.com/526359322?h=58d9baef4e",
-          "assignment": "Watch the complete named video, 0:00–7:15. Select only “Coordinated Service Planning & F-Words” on the source page. Identify how the young person’s/family’s priorities guide coordinated services and goals, then build the native meeting agenda and clarification request. The Ontario service example is not a universal school or referral procedure.",
-          "accessNote": "Watch the named 7:15 Vimeo video on CanChild’s original multi-video page; the rest of the collection is not assigned.",
+          "durationSeconds": 79,
+          "timingSource": "https://www.youtube.com/watch?v=vpbFZ1mjKCE",
+          "assignment": "Watch the complete Family help animation, 0:00–1:19. Trace family concerns and strengths, a lead practitioner, a shared plan, team actions and regular review. Then build the native fictional meeting agenda with roles, information boundaries and a way to resolve disagreement. Coventry’s local service description is an example, not universal referral or school law.",
+          "accessNote": "Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "CanChild’s account of this exact family story supports coordinated planning around meaningful family goals. The spoken transcript could not be retrieved.",
+            "method": "transcript-reviewed",
+            "note": "The council’s complete published transcript matches the family-led planning and team-coordination sequence.",
             "sources": [
               {
-                "label": "Named video and family account",
-                "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/"
+                "label": "Publisher full transcript and video",
+                "url": "https://www.coventry.gov.uk/directory-record/78685/family-help-animation"
               }
             ]
-          }
+          },
+          "playbackUrl": "https://www.youtube.com/watch?v=vpbFZ1mjKCE"
         }
       ],
       "readings": [
@@ -1217,7 +1230,7 @@
           "assignment": "Read the introduction’s audience, aims and programme structure. WHO CST here targets families of children aged 2–9 with developmental delays/disabilities; it does not supply a 0–18 therapy curriculum or professional qualification."
         }
       ],
-      "videoNote": "Only the named CanChild coordinated-planning video is required. It illustrates family-centred coordination; local school processes, confidentiality and clinical recommendations still need their appropriate sources/professionals.",
+      "videoNote": "Core viewing: 1:19, with a full council-published transcript. Coventry’s team-around-family sequence illustrates coordination; local school processes, confidentiality and clinical advice remain separate sources/professional responsibilities.",
       "pass_criteria": "1. Name roles, unresolved disagreement, priorities and information-sharing limits. 2. Request coordination of conflicting recommendations without independently prescribing either. 3. Include purpose, evidence, burden, feasibility and who will review the agreed next step.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -1225,7 +1238,7 @@
         "Request coordination of conflicting recommendations without independently prescribing either.",
         "Include purpose, evidence, burden, feasibility and who will review the agreed next step."
       ],
-      "study_focus": "Watch the 7:15 coordinated-service example. Map the fictional team’s roles, shared priorities, information boundaries and unresolved disagreement into a feasible meeting agenda.",
+      "study_focus": "Watch the 1:19 Family Help animation. Map the fictional team’s roles, shared priorities, information boundaries and unresolved disagreement into a feasible meeting agenda.",
       "practice": "Create a fictional one-page meeting agenda: priority, strengths, observations, questions, roles, information-sharing boundaries and review. Include one unresolved disagreement and a respectful way to seek clarification. Do not copy a real appointment letter or child history.",
       "assessment": "Two professionals propose conflicting home activities and the caregiver cannot sustain both. Draft a coordination request covering purpose, evidence, burden, priorities and a feasible agreed next step. Avoid choosing a treatment from your own authority.",
       "practice_links": []
@@ -1444,11 +1457,15 @@
           "playbackUrl": "https://www.youtube.com/watch?v=saHMtIz7IgA",
           "assignment": "Watch the complete named video, 0:00–11:49. Compare dynamic assessment, standardised testing, observation and learning potential in the published examples. Apply the distinctions to the native assessment-quality critique and screening table. Observe only; do not administer a restricted test or infer a diagnosis.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact ASHA slides compare dynamic assessment with static testing, observation and RTI. The video does not supply the lesson’s full reliability, validity or screening-statistics teaching.",
+            "method": "transcript-reviewed",
+            "note": "Test–teach–retest, learning process and comparison with static testing, observation and response-to-intervention match the assessment-quality lesson.",
             "sources": [
               {
-                "label": "ASHA module and teaching slides",
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=saHMtIz7IgA"
+              },
+              {
+                "label": "ASHA module and companion teaching material",
                 "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/"
               }
             ]
@@ -1508,11 +1525,15 @@
           "playbackUrl": "https://www.youtube.com/watch?v=N_pOZu3wYEQ",
           "assignment": "Watch the complete named video, 0:00–9:29. Identify intentionality, meaning, transcendence (transfer) and competence (planning for independence) in the published teaching examples. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact ASHA slides teach intentionality, meaning, transcendence and competence, with narrative examples. A spoken transcript remains unavailable.",
+            "method": "transcript-reviewed",
+            "note": "The full transcript explicitly teaches intentionality, meaning, transcendence/transfer and competence/independence, including culturally variable storytelling.",
             "sources": [
               {
-                "label": "ASHA module and teaching slides",
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=N_pOZu3wYEQ"
+              },
+              {
+                "label": "ASHA module and companion teaching material",
                 "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/"
               }
             ]
@@ -1528,11 +1549,15 @@
           "playbackUrl": "https://www.youtube.com/watch?v=Ig0a-9vJeCs",
           "assignment": "Watch the complete named video, 0:00–10:21. Distinguish the child’s response, examiner effort and change during supported learning. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Critique the published compliance ratings in light of C07/C11: refusal or distress is information about access and experience, not a reason to pursue compliance as the learning outcome.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact ASHA slides support responsiveness and examiner-effort comparisons. Critique the historical compliance ratings; do not equate compliance with meaningful benefit.",
+            "method": "transcript-reviewed",
+            "note": "The full transcript links child responsiveness and examiner effort to modifiability, using historical social-emotional and cognitive ratings.",
             "sources": [
               {
-                "label": "ASHA module and teaching slides",
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=Ig0a-9vJeCs"
+              },
+              {
+                "label": "ASHA module and companion teaching material",
                 "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/"
               }
             ]
@@ -1546,13 +1571,17 @@
           "durationSeconds": 817,
           "timingSource": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
           "playbackUrl": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
-          "assignment": "Watch the complete named video, 0:00–13:37. Compare the published cases and explain what evidence supports or limits each interpretation. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Do not apply a cognitive-score cut-off shown in these particular cases as a universal diagnostic threshold; keep language exposure, appropriate methods and professional judgement in the interpretation.",
+          "assignment": "Watch the complete named video, 0:00–13:37. Compare the published cases and explain what evidence supports or limits each interpretation. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Do not turn these case comparisons or companion-material scores into a universal diagnostic threshold; keep language exposure, appropriate methods and professional judgement in the interpretation.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact ASHA slides compare pre/post narrative evidence and modifiability. The displayed case-specific cut-offs are not stand-alone diagnostic rules.",
+            "method": "transcript-reviewed",
+            "note": "The full transcript compares emergence/mastery, pre/post narrative change and modifiability in bilingual Mateo/Adrian cases; it supports a contextual evidence critique.",
             "sources": [
               {
-                "label": "ASHA module and teaching slides",
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=ZgEWYqGrqB0"
+              },
+              {
+                "label": "ASHA module and companion teaching material",
                 "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/"
               }
             ]
@@ -2099,35 +2128,25 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "HCPC — what the record-keeping standards require",
-          "url": "https://www.hcpc-uk.org/standards/meeting-our-standards/record-keeping/webinar-keep-records-of-your-work/",
-          "progressKey": "video:100",
-          "watchMode": "segments",
-          "durationSeconds": 2478,
-          "timingSource": "https://www.youtube.com/watch?v=qijSY-7XIiU",
-          "playbackUrl": "https://www.youtube.com/watch?v=qijSY-7XIiU",
-          "segments": [
-            {
-              "start": 865,
-              "end": 1543,
-              "label": "What the standards say"
-            }
-          ],
-          "assignment": "Watch only 14:25–25:43. Watch the named standards section only, skipping the event introductions, platform context and later administration. Apply the regulator’s record-quality expectations to the fictional reported/observed/interpreted/next-step note. The webinar is UK/HCPC guidance, not a licence or a statement of every jurisdiction’s rules.",
+          "label": "SCIE — the importance of care recording: a service user’s perspective",
+          "url": "https://www.scie.org.uk/providing-care/recording/",
+          "progressKey": "video:200",
+          "watchMode": "full",
+          "durationSeconds": 524,
+          "timingSource": "https://vimeo.com/348569221",
+          "playbackUrl": "https://vimeo.com/348569221",
+          "assignment": "Watch only the complete first film, “Service user’s perspective – the importance of care recording”, 0:00–8:44. Follow how ignored evidence and inaccurate recording affected the speaker’s support and agency. Rewrite the native fictional reported/observed/interpreted/next-step note and check the current regulator’s standards. The adult England funding case does not establish child assessment or local eligibility rules.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The regulator’s webinar slides support accurate, timely and secure records. The chapter boundaries identify the standards section; its complete spoken transcript remains unverified.",
+            "method": "transcript-reviewed",
+            "note": "SCIE’s complete published transcript and English-caption metadata support the consequences of inaccurate records and dismissing a person’s own account.",
             "sources": [
               {
-                "label": "HCPC webinar",
-                "url": "https://www.hcpc-uk.org/standards/meeting-our-standards/record-keeping/webinar-keep-records-of-your-work/"
-              },
-              {
-                "label": "Exact webinar slides",
-                "url": "https://www.hcpc-uk.org/globalassets/news-and-events/events/myhcpcstandards/2025/ni-record-keeping/myhcpcstandards-21-august-2025---meeting-your-record-keeping-standards-in-northern-ireland-slides.pdf"
+                "label": "Publisher full transcript — first film only",
+                "url": "https://www.scie.org.uk/providing-care/recording/"
               }
             ]
-          }
+          },
+          "accessNote": "Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned."
         }
       ],
       "readings": [
@@ -2144,7 +2163,7 @@
           "assignment": "Read the named article or specified sections: ASHA — SLP certification standards (check current effective version). Focus on documentation, supervision, ethics and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "Only the 11:18 record-keeping standards section is required. The surrounding Northern Ireland event and electronic-record-system discussion are not the assignment; supervision and qualification limits remain in the native lesson/readings.",
+      "videoNote": "Core viewing: 8:44, first SCIE film only, with a full publisher transcript. The adult England case illustrates harms from inaccurate records; current professional standards and the native child-context note exercise remain required.",
       "pass_criteria": "1. Separate reported, observed, interpreted and next-step sections respectfully. 2. State actual learner role and refuse to sign as qualified for an unfamiliar restricted test. 3. Resolve the request through appropriate supervision, scope clarification and authorised records.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -2152,7 +2171,7 @@
         "State actual learner role and refuse to sign as qualified for an unfamiliar restricted test.",
         "Resolve the request through appropriate supervision, scope clarification and authorised records."
       ],
-      "study_focus": "Watch 14:25–25:43 of the HCPC webinar, then rewrite the fictional note and state supervision/scope limits. Check the current regulator and qualification rules relevant to your actual jurisdiction.",
+      "study_focus": "Watch the first SCIE care-recording film, 0:00–8:44. Rewrite the fictional four-part note and state supervision/scope limits. Read current regulator and qualification requirements for your actual jurisdiction.",
       "practice": "Rewrite a fictional note saying “lazy child, definitely a language disorder, parent not trying” into respectful reported/observed/interpreted/next-step sections. Add three questions for a supervisor and one explicit competence boundary.",
       "assessment": "A learner is asked to administer an unfamiliar restricted assessment alone and sign as qualified. Write a professional response and a plan to resolve the request without misrepresenting competence.",
       "practice_links": []
@@ -2216,15 +2235,15 @@
           "watchMode": "full",
           "durationSeconds": 327,
           "timingSource": "https://www.youtube.com/watch?v=_hBFH03HlsY",
-          "assignment": "Watch the complete named video, 0:00–5:27. Optional introductory animation after the child-rights interview. Identify bias, hallucination, digital safety and the difference between a chatbot response and accountable human judgement. It uses an adolescent school example, not therapy or a recommendation to upload a child’s information.",
+          "assignment": "Watch the complete named video, 0:00–5:27. Optional introductory animation after the core procurement video and child-rights reading. Identify bias, hallucination, digital safety and the difference between a chatbot response and accountable human judgement. It uses an adolescent school example, not therapy or a recommendation to upload a child’s information.",
           "optional": true,
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "UNICRI’s account of the animation describes Mia’s school task, bias, hallucinations and digital safety. It supports the optional literacy example; the spoken transcript remains unverified.",
+            "method": "transcript-reviewed",
+            "note": "The complete English transcript matches a school-age AI-literacy story about career stereotypes, next-word prediction, bias, hallucination and human judgement.",
             "sources": [
               {
-                "label": "Publisher’s account of the animation",
-                "url": "https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=_hBFH03HlsY"
               }
             ]
           }

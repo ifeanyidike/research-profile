@@ -8,8 +8,10 @@ import { workspaceStores } from "../../cyber-studio/model.js";
 const read = (slug) => JSON.parse(fs.readFileSync(new URL(`../../${slug}/curriculum.json`, import.meta.url))).modules;
 const studios = ["cyber-studio", "voice-ai-studio", "child-development-studio"];
 const replacementReview = JSON.parse(fs.readFileSync(new URL("../video-transcript-replacements-20261030.json", import.meta.url)));
+const followupReview = JSON.parse(fs.readFileSync(new URL("../video-transcript-followup-20261030.json", import.meta.url)));
+const allReplacements = [...replacementReview.replacements, ...followupReview.replacements];
 const replacementFor = (studio, topic, progressKey) =>
-  replacementReview.replacements.find((a) => a.studio === studio && a.topic === topic && a.previousProgressKey === progressKey);
+  allReplacements.find((a) => a.studio === studio && a.topic === topic && a.previousProgressKey === progressKey);
 const currentVideo = (studio, topic, progressKey, videos) =>
   videos.find((r) => r.progressKey === (replacementFor(studio, topic, progressKey)?.replacementProgressKey || progressKey));
 
@@ -186,7 +188,15 @@ test("formerly reading-led topics have timed, scoped core videos without losing 
     assert.equal(r.durationSeconds, assignment.durationSeconds);
     assert.equal(Boolean(r.optional), assignment.optional);
     const assigned = r.segments ? r.segments.reduce((n, s) => n + s.end - s.start, 0) : r.durationSeconds;
-    assert.equal(assigned, assignment.assignedSeconds);
+    const narrowed = followupReview.verifiedExisting.find(
+      (a) => a.studio === assignment.studio && a.topic === assignment.topic && a.progressKey === assignment.progressKey
+    );
+    const expectedSeconds = narrowed
+      ? narrowed.reviewedAssignment.segments.length
+        ? narrowed.reviewedAssignment.segments.reduce((n, s) => n + s.end - s.start, 0)
+        : narrowed.reviewedAssignment.durationSeconds
+      : assignment.assignedSeconds;
+    assert.equal(assigned, expectedSeconds);
     const html = resourceCards([r], "video", []);
     assert.ok(html.includes(r.segments ? "stop at" : "0:00–"), `${assignment.topic}: no visible viewing range`);
     if (!assignment.reused) assert.ok(Number(r.progressKey.split(":")[1]) >= 100);
@@ -194,7 +204,7 @@ test("formerly reading-led topics have timed, scoped core videos without losing 
 });
 
 test("content evidence stays attached to the reviewed assignment and exposes unresolved speech checks", () => {
-  const review = JSON.parse(fs.readFileSync(new URL("../video-content-review-20261030-transcripts.json", import.meta.url)));
+  const review = JSON.parse(fs.readFileSync(new URL("../video-content-review-20261030-complete.json", import.meta.url)));
   const topics = Object.fromEntries(studios.flatMap((slug) => read(slug).map((m) => [`${slug}/${m.id}`, m])));
   const counts = {};
   const seen = new Set();
@@ -268,9 +278,9 @@ test("the description-only audit accounts for all seventeen sources without rewr
   assert.equal(accounted.size, 17);
   const pending = read("voice-ai-studio")
     .find((m) => m.id === "V25")
-    .videos.find((r) => r.progressKey === "video:100");
-  assert.equal(pending.contentReview.method, "description-only");
-  assert.match(resourceCards([pending], "video", []), /Spoken content unverified/);
+    .videos.find((r) => r.progressKey === "video:200");
+  assert.equal(pending.contentReview.method, "transcript-reviewed");
+  assert.match(resourceCards([pending], "video", []), /Transcript reviewed/);
 });
 
 test("different recordings never inherit a learner's retired video checkmarks", () => {
@@ -279,7 +289,7 @@ test("different recordings never inherit a learner's retired video checkmarks", 
   const all = new Map(studios.flatMap((slug) => read(slug).map((m) => [`${slug}/${m.id}`, m])));
   const stores = workspaceStores(db, new Set([...all.values()].map((m) => m.id)), () => 100);
   const store = stores("guest");
-  for (const a of replacementReview.replacements) {
+  for (const a of allReplacements) {
     const m = all.get(`${a.studio}/${a.topic}`);
     store.update("ifeanyi", m.id, { resources: JSON.stringify([a.previousProgressKey, "reading:0"]) });
     const checked = JSON.parse(store.record("ifeanyi", m.id).values.resources);
@@ -313,8 +323,8 @@ test("provider-only excerpts give manual stop instructions instead of promising 
 
 test("whole-topic viewing totals agree with the actual assigned core excerpts", () => {
   for (const [studio, ids] of [
-    ["voice-ai-studio", ["V35", "V39", "V43"]],
-    ["child-development-studio", ["C12", "P15"]],
+    ["voice-ai-studio", ["V32", "V33", "V35", "V37", "V39", "V40", "V42", "V43"]],
+    ["child-development-studio", ["C07", "C12", "G11", "P14", "P15"]],
   ]) {
     for (const id of ids) {
       const m = read(studio).find((m) => m.id === id);
@@ -324,4 +334,42 @@ test("whole-topic viewing totals agree with the actual assigned core excerpts", 
       assert.ok(m.videoNote.includes(formatTime(seconds)), id + ": obsolete core-viewing total");
     }
   }
+});
+
+test("the remaining twenty assignments and V25 have current transcript evidence without rewriting history", () => {
+  const baseline = JSON.parse(fs.readFileSync(new URL("../video-content-review-20261030-transcripts.json", import.meta.url)));
+  const current = JSON.parse(fs.readFileSync(new URL("../video-content-review-20261030-complete.json", import.meta.url)));
+  const targets = baseline.assignments.filter((a) => a.method !== "transcript-reviewed");
+  assert.equal(targets.length, 21);
+  assert.equal(followupReview.replacements.length, 8);
+  assert.equal(followupReview.verifiedExisting.length, 13);
+  assert.deepEqual(followupReview.unresolved, []);
+  const key = (a, p = a.progressKey) => `${a.studio}/${a.topic}/${p}`;
+  const seen = new Set();
+  for (const a of [...followupReview.replacements, ...followupReview.verifiedExisting]) {
+    const id = key(a, a.previousProgressKey || a.progressKey);
+    assert.ok(!seen.has(id));
+    seen.add(id);
+    assert.deepEqual(a.previousAssignment, targets.find((t) => key(t) === id)?.reviewedAssignment);
+    const now = current.assignments.find((t) => key(t) === key(a, a.replacementProgressKey || a.progressKey));
+    assert.equal(now.method, "transcript-reviewed");
+    assert.deepEqual(now.reviewedAssignment, a.replacementAssignment || a.reviewedAssignment);
+    if (!a.replacementProgressKey) {
+      assert.equal(now.reviewedAssignment.playbackUrl, a.previousAssignment.playbackUrl);
+      for (const s of now.reviewedAssignment.segments) {
+        const ranges = a.previousAssignment.segments.length
+          ? a.previousAssignment.segments
+          : [{ start: 0, end: a.previousAssignment.durationSeconds }];
+        // Retaining a key is valid for narrowed assignments or a sentence-complete boundary adjustment.
+        assert.ok(ranges.some((old) => s.start >= Math.max(0, old.start - (a.topic === "V37" ? 11 : a.topic === "V33" ? 1 : 0)) && s.end <= old.end));
+      }
+    }
+  }
+  assert.equal(seen.size, 21);
+  assert.deepEqual(current.statusCounts, { "transcript-reviewed": 44 });
+  const v25 = read("voice-ai-studio").find((m) => m.id === "V25");
+  assert.ok(v25.videos.some((r) => r.progressKey === "video:200" && r.url.endsWith("MzURq2Py4pc")));
+  assert.ok(!JSON.stringify(v25.videos).includes("hoEWRdHi7dI"));
+  const v32 = read("voice-ai-studio").find((m) => m.id === "V32");
+  assert.equal(v32.videos.find((r) => r.progressKey === "video:102").segments[0].end, 295);
 });

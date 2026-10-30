@@ -5170,24 +5170,42 @@
       "skills": ["experiment design controls baselines", "artifact provenance and reproduction", "uncertainty ethics and disclosure"],
       "videos": [
         {
-          "label": "University of Edinburgh — Planning an Open Science Study",
-          "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
-          "progressKey": "video:100",
-          "watchMode": "full",
-          "durationSeconds": 363,
-          "timingSource": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
-          "assignment": "Watch the complete named video, 0:00–6:03. Study planning before results, testable questions, preregistration and a reproducibility checklist. The examples are from psychology; translate the planning principles to the supplied security/speech study. Write a plan only: this does not authorise model calls, new measurements or provider benchmarks.",
-          "accessNote": "Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions.",
+          "label": "Center for Open Science — Preregistration: A Plan, Not a Prison",
+          "url": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+          "progressKey": "video:200",
+          "watchMode": "segments",
+          "durationSeconds": 3631,
+          "timingSource": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+          "assignment": "Watch only 2:25–3:53, 5:28–7:38 and 52:04–53:38 (5:12 total). Distinguish preregistration from peer-reviewed registered reports, plan before data access/collection, and specify inclusion/exclusion and analysis decisions. Complete the native reproducibility checklist and fictional study plan; no account creation, new experiments, model calls or benchmarks are assigned.",
+          "accessNote": "Use the linked transcript alongside the assigned viewing. Other videos on the publisher page are not assigned.",
           "contentReview": {
-            "method": "teaching-material-reviewed",
-            "note": "The exact presentation slides and accompanying questions support preregistration and the reproducibility checklist. The spoken transcript has not been retrieved.",
+            "method": "transcript-reviewed",
+            "note": "The selected English automatic transcript passages support prospective planning, transparent changes, registration/report distinctions and explicit analysis decisions.",
             "sources": [
               {
-                "label": "Publisher lesson and slides",
-                "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html"
+                "label": "Published English transcript — open Show transcript",
+                "url": "https://www.youtube.com/watch?v=NzZTtB2qkmg"
               }
             ]
-          }
+          },
+          "playbackUrl": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+          "segments": [
+            {
+              "start": 145,
+              "end": 233,
+              "label": "Definition, transparent updates and embargoes"
+            },
+            {
+              "start": 328,
+              "end": 458,
+              "label": "Registration versus registered reports; when to plan"
+            },
+            {
+              "start": 3124,
+              "end": 3218,
+              "label": "Deciding which methods and analysis rules to specify"
+            }
+          ]
         },
         {
           "label": "StatQuest with Josh Starmer — Hypothesis Testing and The Null Hypothesis, Clearly Explained!!!",
@@ -5242,8 +5260,8 @@
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The required reproduction uses a local parser and synthetic data.",
       "practice_links": [],
-      "study_focus": "Watch the 6:03 study-planning unit. Define the question, inputs, controls, analysis and artifact manifest before working the harmless local example. Distinguish a plan from measured evidence.",
-      "videoNote": "The short Edinburgh unit supplies the core planning method. The existing statistics clips are optional refreshers, not extra required viewing. Artifact, ethics and responsible-disclosure readings remain required."
+      "study_focus": "Watch the 5:12 COS planning excerpts. Distinguish preregistration from registered reports, specify decisions before data access and complete the fictional reproducibility plan without running experiments.",
+      "videoNote": "Core viewing: 5:12 of transcript-checked prospective-planning teaching. The native reproducibility/artifact checklist and research readings supply security-specific scope; no model calls or new measurements are assigned."
     },
     {
       "id": "R03",

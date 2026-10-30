@@ -1,0 +1,718 @@
+{
+  "date": "2026-10-30",
+  "release": "20261030-9",
+  "baseline": "_learning/video-content-review-20261030-transcripts.json",
+  "scope": "The 20 teaching-material-only assignments and V25 from release 20261030-8. Existing public transcripts/captions were read; no new transcription, model scoring or live experiments were run.",
+  "replacements": [
+    {
+      "studio": "child-development-studio",
+      "topic": "G11",
+      "previousAssignment": {
+        "label": "CanChild — coordinated service planning and family priorities",
+        "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/",
+        "playbackUrl": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/",
+        "watchMode": "full",
+        "timingSource": "https://vimeo.com/526359322?h=58d9baef4e",
+        "assignment": "Watch the complete named video, 0:00–7:15. Select only “Coordinated Service Planning & F-Words” on the source page. Identify how the young person’s/family’s priorities guide coordinated services and goals, then build the native meeting agenda and clarification request. The Ontario service example is not a universal school or referral procedure.",
+        "durationSeconds": 435,
+        "segments": []
+      },
+      "previousProgressKey": "video:100",
+      "replacementProgressKey": "video:200",
+      "replacementAssignment": {
+        "label": "Coventry City Council — Family Help and a team around the family",
+        "url": "https://www.coventry.gov.uk/directory-record/78685/family-help-animation",
+        "playbackUrl": "https://www.youtube.com/watch?v=vpbFZ1mjKCE",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=vpbFZ1mjKCE",
+        "assignment": "Watch the complete Family help animation, 0:00–1:19. Trace family concerns and strengths, a lead practitioner, a shared plan, team actions and regular review. Then build the native fictional meeting agenda with roles, information boundaries and a way to resolve disagreement. Coventry’s local service description is an example, not universal referral or school law.",
+        "durationSeconds": 79,
+        "segments": []
+      }
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P14",
+      "previousAssignment": {
+        "label": "HCPC — what the record-keeping standards require",
+        "url": "https://www.hcpc-uk.org/standards/meeting-our-standards/record-keeping/webinar-keep-records-of-your-work/",
+        "playbackUrl": "https://www.youtube.com/watch?v=qijSY-7XIiU",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=qijSY-7XIiU",
+        "assignment": "Watch only 14:25–25:43. Watch the named standards section only, skipping the event introductions, platform context and later administration. Apply the regulator’s record-quality expectations to the fictional reported/observed/interpreted/next-step note. The webinar is UK/HCPC guidance, not a licence or a statement of every jurisdiction’s rules.",
+        "durationSeconds": 2478,
+        "segments": [
+          {
+            "start": 865,
+            "end": 1543,
+            "label": "What the standards say"
+          }
+        ]
+      },
+      "previousProgressKey": "video:100",
+      "replacementProgressKey": "video:200",
+      "replacementAssignment": {
+        "label": "SCIE — the importance of care recording: a service user’s perspective",
+        "url": "https://www.scie.org.uk/providing-care/recording/",
+        "playbackUrl": "https://vimeo.com/348569221",
+        "watchMode": "full",
+        "timingSource": "https://vimeo.com/348569221",
+        "assignment": "Watch only the complete first film, “Service user’s perspective – the importance of care recording”, 0:00–8:44. Follow how ignored evidence and inaccurate recording affected the speaker’s support and agency. Rewrite the native fictional reported/observed/interpreted/next-step note and check the current regulator’s standards. The adult England funding case does not establish child assessment or local eligibility rules.",
+        "durationSeconds": 524,
+        "segments": []
+      }
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "R02",
+      "previousAssignment": {
+        "label": "University of Edinburgh — Planning an Open Science Study",
+        "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+        "playbackUrl": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+        "watchMode": "full",
+        "timingSource": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+        "assignment": "Watch the complete named video, 0:00–6:03. Study planning before results, testable questions, preregistration and a reproducibility checklist. The examples are from psychology; translate the planning principles to the supplied security/speech study. Write a plan only: this does not authorise model calls, new measurements or provider benchmarks.",
+        "durationSeconds": 363,
+        "segments": []
+      },
+      "previousProgressKey": "video:100",
+      "replacementProgressKey": "video:200",
+      "replacementAssignment": {
+        "label": "Center for Open Science — Preregistration: A Plan, Not a Prison",
+        "url": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+        "playbackUrl": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+        "assignment": "Watch only 2:25–3:53, 5:28–7:38 and 52:04–53:38 (5:12 total). Distinguish preregistration from peer-reviewed registered reports, plan before data access/collection, and specify inclusion/exclusion and analysis decisions. Complete the native reproducibility checklist and fictional study plan; no account creation, new experiments, model calls or benchmarks are assigned.",
+        "durationSeconds": 3631,
+        "segments": [
+          {
+            "start": 145,
+            "end": 233,
+            "label": "Definition, transparent updates and embargoes"
+          },
+          {
+            "start": 328,
+            "end": 458,
+            "label": "Registration versus registered reports; when to plan"
+          },
+          {
+            "start": 3124,
+            "end": 3218,
+            "label": "Deciding which methods and analysis rules to specify"
+          }
+        ]
+      }
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V42",
+      "previousAssignment": {
+        "label": "University of Edinburgh — Planning an Open Science Study",
+        "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+        "playbackUrl": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+        "watchMode": "full",
+        "timingSource": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
+        "assignment": "Watch the complete named video, 0:00–6:03. Study planning before results, testable questions, preregistration and a reproducibility checklist. The examples are from psychology; translate the planning principles to the supplied security/speech study. Write a plan only: this does not authorise model calls, new measurements or provider benchmarks. If you already studied this same video in Cyber R02, reuse your notes and apply them to the speech paper; a full replay is unnecessary.",
+        "durationSeconds": 363,
+        "segments": []
+      },
+      "previousProgressKey": "video:100",
+      "replacementProgressKey": "video:200",
+      "replacementAssignment": {
+        "label": "Center for Open Science — Preregistration: A Plan, Not a Prison",
+        "url": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+        "playbackUrl": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=NzZTtB2qkmg",
+        "assignment": "Watch only 2:25–3:53, 5:28–7:38 and 52:04–53:38 (5:12 total). Distinguish preregistration from peer-reviewed registered reports, plan before data access/collection, and specify inclusion/exclusion and analysis decisions. Complete the native reproducibility checklist and fictional study plan; no account creation, new experiments, model calls or benchmarks are assigned. If you studied these same excerpts in Cyber R02, reuse your notes and apply them to the speech paper; a replay is unnecessary.",
+        "durationSeconds": 3631,
+        "segments": [
+          {
+            "start": 145,
+            "end": 233,
+            "label": "Definition, transparent updates and embargoes"
+          },
+          {
+            "start": 328,
+            "end": 458,
+            "label": "Registration versus registered reports; when to plan"
+          },
+          {
+            "start": 3124,
+            "end": 3218,
+            "label": "Deciding which methods and analysis rules to specify"
+          }
+        ]
+      }
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V23",
+      "previousAssignment": {
+        "label": "ICML 2023 / Whisper authors — Robust Speech Recognition via Large-Scale Weak Supervision",
+        "url": "https://slideslive.com/39002706",
+        "playbackUrl": "https://slideslive.com/39002706",
+        "watchMode": "full",
+        "timingSource": "https://slideslive.com/39002706",
+        "assignment": "Watch the complete named video, 0:00–5:18. Watch the authors’ concise Whisper presentation, then identify the training/task setup, encoder–decoder path and reported limitations in the paper. Historical results describe the paper’s checkpoints and test conditions, not every later Whisper release.",
+        "durationSeconds": 318,
+        "segments": []
+      },
+      "previousProgressKey": "video:100",
+      "replacementProgressKey": "video:200",
+      "replacementAssignment": {
+        "label": "Aleksa Gordić — Whisper paper walkthrough: architecture, tasks and data",
+        "url": "https://www.youtube.com/watch?v=AwJf8aQfChE",
+        "playbackUrl": "https://www.youtube.com/watch?v=AwJf8aQfChE",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=AwJf8aQfChE",
+        "assignment": "Watch only 3:01–7:30 and 10:40–12:40 (6:29 total). Trace log-Mel input, encoder, cross-attending decoder, task/language/timestamp tokens and weakly supervised data filtering. Read paper §2 and Figure 1 for exact details. Skip the later code demonstration. These historical model details do not establish current release performance or authorise an inference run.",
+        "durationSeconds": 3761,
+        "segments": [
+          {
+            "start": 181,
+            "end": 450,
+            "label": "Encoder–decoder path and task tokens"
+          },
+          {
+            "start": 640,
+            "end": 760,
+            "label": "Weak supervision and transcript filtering"
+          }
+        ]
+      }
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V24",
+      "previousAssignment": {
+        "label": "NeurIPS 2020 / wav2vec 2.0 authors — self-supervised speech representations",
+        "url": "https://slideslive.com/38937614",
+        "playbackUrl": "https://slideslive.com/38937614",
+        "watchMode": "full",
+        "timingSource": "https://slideslive.com/38937614",
+        "assignment": "Watch the complete named video, 0:00–3:37. Trace the encoder, masking, contrastive targets and labelled adaptation in the authors’ wav2vec 2.0 explanation. Distinguish unlabelled pretraining from supervised fine-tuning. This original presentation does not establish multilingual performance or coverage; use the multilingual reading for that comparison.",
+        "durationSeconds": 217,
+        "segments": []
+      },
+      "previousProgressKey": "video:100",
+      "replacementProgressKey": "video:200",
+      "replacementAssignment": {
+        "label": "Priyam Mazumdar — wav2vec 2.0 paper overview: pretraining and adaptation",
+        "url": "https://www.youtube.com/watch?v=wmAg1TGa00g",
+        "playbackUrl": "https://www.youtube.com/watch?v=wmAg1TGa00g",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=wmAg1TGa00g",
+        "assignment": "Watch only 7:38–9:51, 31:15–32:31, 34:12–37:36 and 50:21–51:18 (7:50 total). Draw the convolutional features, masked Transformer context branch and separate unmasked quantized-target branch; distinguish contrastive pretraining from labelled CTC fine-tuning. Use paper §§2–3 for precise objectives and the separate multilingual reading for coverage claims. Skip implementation and the extended Gumbel/entropy derivations.",
+        "durationSeconds": 3463,
+        "segments": [
+          {
+            "start": 458,
+            "end": 591,
+            "label": "Latent features, masking and quantized targets"
+          },
+          {
+            "start": 1875,
+            "end": 1951,
+            "label": "Why mask spans of audio features"
+          },
+          {
+            "start": 2052,
+            "end": 2256,
+            "label": "Contrastive targets and the diversity objective"
+          },
+          {
+            "start": 3021,
+            "end": 3078,
+            "label": "Labelled CTC fine-tuning"
+          }
+        ]
+      }
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V25",
+      "previousAssignment": {
+        "label": "MIT 6.S191 / Rev.AI — WER, benchmarks and data selection",
+        "url": "https://introtodeeplearning.com/2022/",
+        "playbackUrl": "https://www.youtube.com/watch?v=sR6_bZ6VkAg",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=sR6_bZ6VkAg",
+        "assignment": "Watch only 5:58–8:09, 9:33–16:22. Work the WER examples, then examine how a benchmark and its data-selection policy change the meaning of a reported score. Apply this to the native subgroup/error table. These 2022 examples are not current product rankings or a complete fairness analysis.",
+        "durationSeconds": 2504,
+        "segments": [
+          {
+            "start": 358,
+            "end": 489,
+            "label": "Word error rate"
+          },
+          {
+            "start": 573,
+            "end": 982,
+            "label": "Test benchmarks and data selection"
+          }
+        ]
+      },
+      "previousProgressKey": "video:100",
+      "replacementProgressKey": "video:200",
+      "replacementAssignment": {
+        "label": "Google Cloud / Calum Barnes — WER and reference-transcript quality",
+        "url": "https://www.youtube.com/watch?v=MzURq2Py4pc",
+        "playbackUrl": "https://www.youtube.com/watch?v=MzURq2Py4pc",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=MzURq2Py4pc",
+        "assignment": "Watch only 2:32–4:17 and 5:01–5:20 (2:04 total). Identify substitutions, deletions and insertions, the reference-word denominator and why WER can exceed 100%. Then work the native minimum-edit/corpus-WER examples, declare reference/normalisation rules and report subgroup denominators and uncertainty. Skip the API/product walkthrough and fixed-duration sampling advice. No API, lab or model run is assigned.",
+        "durationSeconds": 1560,
+        "segments": [
+          {
+            "start": 152,
+            "end": 257,
+            "label": "Reference words, edit errors and WER"
+          },
+          {
+            "start": 301,
+            "end": 320,
+            "label": "Ground-truth transcript quality"
+          }
+        ]
+      }
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V40",
+      "previousAssignment": {
+        "label": "Google — Project Relate and non-standard speech access",
+        "url": "https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/",
+        "playbackUrl": "https://www.youtube.com/watch?v=EU2oCVlzEZk",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=EU2oCVlzEZk",
+        "assignment": "Watch the complete named video, 0:00–2:26. Use the first-person example to identify an access barrier, user control and alternatives when speech recognition fails. This is a 2021 English-language research/product case, not proof of current availability or accuracy for every language, accent or disability. Complete the native multilingual task audit separately.",
+        "durationSeconds": 146,
+        "segments": []
+      },
+      "previousProgressKey": "video:102",
+      "replacementProgressKey": "video:200",
+      "replacementAssignment": {
+        "label": "CENMAC — Michael Cash on communication access and listener patience",
+        "url": "https://cenmac.com/2024/10/independence-through-technology/",
+        "playbackUrl": "https://www.youtube.com/watch?v=AFYOyunLQ5o",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=AFYOyunLQ5o",
+        "assignment": "Watch only 7:37–9:45 and 13:15–14:48 (3:41 total). Michael Cash describes communication technology and asks listeners to allow time and support the person’s own answers. He uses Voiceitt in the interview and works as its product specialist; this is one person’s experience with a commercial affiliation, not comparative accuracy evidence. Complete the native multilingual clarify/edit/confirm/cancel/receipt audit and preserve non-speech alternatives.",
+        "durationSeconds": 888,
+        "segments": [
+          {
+            "start": 457,
+            "end": 585,
+            "label": "Communication technology in work and everyday tasks"
+          },
+          {
+            "start": 795,
+            "end": 888,
+            "label": "Listener patience and the speaker’s own answers"
+          }
+        ]
+      }
+    }
+  ],
+  "verifiedExisting": [
+    {
+      "studio": "child-development-studio",
+      "topic": "C07",
+      "previousAssignment": {
+        "label": "UNICEF — meaningful participation of children with disabilities",
+        "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation",
+        "playbackUrl": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
+        "assignment": "Watch the complete named video, 0:00–12:16. Listen for meaningful participation, barriers and being heard. Connect these to the native assent/consent distinction and how a child can decline or change their mind. This rights-based module does not replace local privacy law or safeguarding procedures. Participation in services and policy decisions supports the theme of being heard; it is not itself a clinical consent/assent procedure.",
+        "durationSeconds": 736,
+        "segments": []
+      },
+      "reviewedAssignment": {
+        "label": "UNICEF — meaningful participation of children with disabilities",
+        "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation",
+        "playbackUrl": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
+        "assignment": "Watch only 0:30–3:45 and 6:38–11:53 (8:30 total). Identify meaningful contribution, the child-led accessible-sink example and practical access arrangements. Apply the native consent/assent/refusal distinctions; participation in service decisions does not replace clinical consent or local safeguarding procedures.",
+        "durationSeconds": 736,
+        "segments": [
+          {
+            "start": 30,
+            "end": 225,
+            "label": "Meaningful participation and child-led access"
+          },
+          {
+            "start": 398,
+            "end": 713,
+            "label": "Practical arrangements for being heard"
+          }
+        ]
+      },
+      "progressKey": "video:101"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C11",
+      "previousAssignment": {
+        "label": "UNICEF — disability, identity, barriers and inclusion",
+        "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are",
+        "playbackUrl": "https://www.youtube.com/watch?v=kWrPBCKnfA4",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=kWrPBCKnfA4",
+        "assignment": "Watch the complete named video, 0:00–10:29. Hear young people describe disability as one part of identity and the barriers/misconceptions that restrict participation. Ask whose perspective and communication preferences are missing in the native goal critique; do not infer the same preferences for all disabled or neurodivergent people.",
+        "durationSeconds": 629,
+        "segments": []
+      },
+      "reviewedAssignment": {
+        "label": "UNICEF — disability, identity, barriers and inclusion",
+        "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are",
+        "playbackUrl": "https://www.youtube.com/watch?v=kWrPBCKnfA4",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=kWrPBCKnfA4",
+        "assignment": "Watch the complete named video, 0:00–10:29. Hear young people describe disability as one part of identity and the barriers/misconceptions that restrict participation. Ask whose perspective and communication preferences are missing in the native goal critique; do not infer the same preferences for all disabled or neurodivergent people.",
+        "durationSeconds": 629,
+        "segments": []
+      },
+      "progressKey": "video:100"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P03",
+      "previousAssignment": {
+        "label": "ASHA / Elizabeth Peña — what is dynamic assessment?",
+        "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/",
+        "playbackUrl": "https://www.youtube.com/watch?v=saHMtIz7IgA",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=saHMtIz7IgA",
+        "assignment": "Watch the complete named video, 0:00–11:49. Compare dynamic assessment, standardised testing, observation and learning potential in the published examples. Apply the distinctions to the native assessment-quality critique and screening table. Observe only; do not administer a restricted test or infer a diagnosis.",
+        "durationSeconds": 709,
+        "segments": []
+      },
+      "reviewedAssignment": {
+        "label": "ASHA / Elizabeth Peña — what is dynamic assessment?",
+        "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/",
+        "playbackUrl": "https://www.youtube.com/watch?v=saHMtIz7IgA",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=saHMtIz7IgA",
+        "assignment": "Watch the complete named video, 0:00–11:49. Compare dynamic assessment, standardised testing, observation and learning potential in the published examples. Apply the distinctions to the native assessment-quality critique and screening table. Observe only; do not administer a restricted test or infer a diagnosis.",
+        "durationSeconds": 709,
+        "segments": []
+      },
+      "progressKey": "video:100"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P04",
+      "previousAssignment": {
+        "label": "ASHA / Elizabeth Peña — mediated learning experience",
+        "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/",
+        "playbackUrl": "https://www.youtube.com/watch?v=N_pOZu3wYEQ",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=N_pOZu3wYEQ",
+        "assignment": "Watch the complete named video, 0:00–9:29. Identify intentionality, meaning, transcendence (transfer) and competence (planning for independence) in the published teaching examples. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child.",
+        "durationSeconds": 569,
+        "segments": []
+      },
+      "reviewedAssignment": {
+        "label": "ASHA / Elizabeth Peña — mediated learning experience",
+        "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/",
+        "playbackUrl": "https://www.youtube.com/watch?v=N_pOZu3wYEQ",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=N_pOZu3wYEQ",
+        "assignment": "Watch the complete named video, 0:00–9:29. Identify intentionality, meaning, transcendence (transfer) and competence (planning for independence) in the published teaching examples. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child.",
+        "durationSeconds": 569,
+        "segments": []
+      },
+      "progressKey": "video:100"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P04",
+      "previousAssignment": {
+        "label": "ASHA / Elizabeth Peña — observing modifiability",
+        "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/",
+        "playbackUrl": "https://www.youtube.com/watch?v=Ig0a-9vJeCs",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=Ig0a-9vJeCs",
+        "assignment": "Watch the complete named video, 0:00–10:21. Distinguish the child’s response, examiner effort and change during supported learning. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Critique the published compliance ratings in light of C07/C11: refusal or distress is information about access and experience, not a reason to pursue compliance as the learning outcome.",
+        "durationSeconds": 621,
+        "segments": []
+      },
+      "reviewedAssignment": {
+        "label": "ASHA / Elizabeth Peña — observing modifiability",
+        "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/",
+        "playbackUrl": "https://www.youtube.com/watch?v=Ig0a-9vJeCs",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=Ig0a-9vJeCs",
+        "assignment": "Watch the complete named video, 0:00–10:21. Distinguish the child’s response, examiner effort and change during supported learning. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Critique the published compliance ratings in light of C07/C11: refusal or distress is information about access and experience, not a reason to pursue compliance as the learning outcome.",
+        "durationSeconds": 621,
+        "segments": []
+      },
+      "progressKey": "video:101"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P04",
+      "previousAssignment": {
+        "label": "ASHA / Elizabeth Peña — clinical decision making",
+        "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/",
+        "playbackUrl": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
+        "assignment": "Watch the complete named video, 0:00–13:37. Compare the published cases and explain what evidence supports or limits each interpretation. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Do not apply a cognitive-score cut-off shown in these particular cases as a universal diagnostic threshold; keep language exposure, appropriate methods and professional judgement in the interpretation.",
+        "durationSeconds": 817,
+        "segments": []
+      },
+      "reviewedAssignment": {
+        "label": "ASHA / Elizabeth Peña — clinical decision making",
+        "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/",
+        "playbackUrl": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
+        "assignment": "Watch the complete named video, 0:00–13:37. Compare the published cases and explain what evidence supports or limits each interpretation. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Do not turn these case comparisons or companion-material scores into a universal diagnostic threshold; keep language exposure, appropriate methods and professional judgement in the interpretation.",
+        "durationSeconds": 817,
+        "segments": []
+      },
+      "progressKey": "video:102"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P15",
+      "previousAssignment": {
+        "label": "UNICRI — What to Be? A Journey Through AI (optional literacy example)",
+        "url": "https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025",
+        "playbackUrl": "https://www.youtube.com/watch?v=_hBFH03HlsY",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=_hBFH03HlsY",
+        "assignment": "Watch the complete named video, 0:00–5:27. Optional introductory animation after the child-rights interview. Identify bias, hallucination, digital safety and the difference between a chatbot response and accountable human judgement. It uses an adolescent school example, not therapy or a recommendation to upload a child’s information.",
+        "durationSeconds": 327,
+        "segments": []
+      },
+      "reviewedAssignment": {
+        "label": "UNICRI — What to Be? A Journey Through AI (optional literacy example)",
+        "url": "https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025",
+        "playbackUrl": "https://www.youtube.com/watch?v=_hBFH03HlsY",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=_hBFH03HlsY",
+        "assignment": "Watch the complete named video, 0:00–5:27. Optional introductory animation after the core procurement video and child-rights reading. Identify bias, hallucination, digital safety and the difference between a chatbot response and accountable human judgement. It uses an adolescent school example, not therapy or a recommendation to upload a child’s information.",
+        "durationSeconds": 327,
+        "segments": []
+      },
+      "progressKey": "video:102"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V32",
+      "previousAssignment": {
+        "label": "Rasa — architecture of a conversational assistant",
+        "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+        "playbackUrl": "https://www.youtube.com/watch?v=zzUY5T9I730",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=zzUY5T9I730",
+        "assignment": "Watch the complete named video, 0:00–4:02. Identify the language-understanding, explicit-logic and response components. Map them to the native proposal/state diagram before the flows example.",
+        "durationSeconds": 242,
+        "segments": []
+      },
+      "reviewedAssignment": {
+        "label": "Rasa — architecture of a conversational assistant",
+        "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+        "playbackUrl": "https://www.youtube.com/watch?v=zzUY5T9I730",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=zzUY5T9I730",
+        "assignment": "Watch the complete named video, 0:00–4:02. Identify the language-understanding, explicit-logic and response components. Map them to the native proposal/state diagram before the flows example.",
+        "durationSeconds": 242,
+        "segments": []
+      },
+      "progressKey": "video:100"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V32",
+      "previousAssignment": {
+        "label": "Rasa — flows and explicit conversation logic",
+        "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+        "playbackUrl": "https://www.youtube.com/watch?v=v1l75qxo4b0",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=v1l75qxo4b0",
+        "assignment": "Watch the complete named video, 0:00–10:12. Study flow components, collected values and branching. Map the video’s financial-services flow to the native booking example on paper; explain why extracting a slot is not authorisation to commit a booking.",
+        "durationSeconds": 612,
+        "segments": []
+      },
+      "reviewedAssignment": {
+        "label": "Rasa — flows and explicit conversation logic",
+        "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+        "playbackUrl": "https://www.youtube.com/watch?v=v1l75qxo4b0",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=v1l75qxo4b0",
+        "assignment": "Watch the complete named video, 0:00–10:12. Study flow components, collected values and branching. Map the video’s financial-services flow to the native booking example on paper; explain why extracting a slot is not authorisation to commit a booking.",
+        "durationSeconds": 612,
+        "segments": []
+      },
+      "progressKey": "video:101"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V32",
+      "previousAssignment": {
+        "label": "Rasa — conversation repair and deviations from the happy path",
+        "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+        "playbackUrl": "https://www.youtube.com/watch?v=TREEZ-vT90I",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=TREEZ-vT90I",
+        "assignment": "Watch only 0:00–5:38. Watch the introduction, repair patterns and advanced correction cases only. Distinguish a correction or clarification from confirmation of the current proposal version. Skip the later framework-customisation and handoff implementation.",
+        "durationSeconds": 630,
+        "segments": [
+          {
+            "start": 0,
+            "end": 338,
+            "label": "Repair concepts and correction patterns"
+          }
+        ]
+      },
+      "reviewedAssignment": {
+        "label": "Rasa — conversation repair and deviations from the happy path",
+        "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+        "playbackUrl": "https://www.youtube.com/watch?v=TREEZ-vT90I",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=TREEZ-vT90I",
+        "assignment": "Watch only 0:00–4:55 (4:55 total). Identify the basic repair patterns: corrections, cancellation, clarification, chitchat, errors and handoff. Distinguish these from confirmation of the current proposal version in the native case. Stop before the framework implementation examples; no Rasa setup is required.",
+        "durationSeconds": 630,
+        "segments": [
+          {
+            "start": 0,
+            "end": 295,
+            "label": "Repair patterns and deviations from the happy path"
+          }
+        ]
+      },
+      "progressKey": "video:102"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V33",
+      "previousAssignment": {
+        "label": "Rasa — action types and custom tools",
+        "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=yhuc2i29cS0",
+        "assignment": "Watch only 0:46–2:14, 7:03–9:53. Watch action types and the custom-action example only. Separate a model’s action request from the server-side validation, identity and permission checks required by the native tool contract. The video’s function execution example is not an authorisation design.",
+        "durationSeconds": 753,
+        "playbackUrl": "https://www.youtube.com/watch?v=yhuc2i29cS0",
+        "segments": [
+          {
+            "start": 46,
+            "end": 134,
+            "label": "Types of actions"
+          },
+          {
+            "start": 423,
+            "end": 593,
+            "label": "Custom actions"
+          }
+        ]
+      },
+      "reviewedAssignment": {
+        "label": "Rasa — action types and custom tools",
+        "url": "https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series",
+        "playbackUrl": "https://www.youtube.com/watch?v=yhuc2i29cS0",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=yhuc2i29cS0",
+        "assignment": "Watch only 0:45–2:14, 7:03–9:53. Watch action types and the custom-action example only. Separate a model’s action request from the server-side validation, identity and permission checks required by the native tool contract. The video’s function execution example is not an authorisation design.",
+        "durationSeconds": 753,
+        "segments": [
+          {
+            "start": 45,
+            "end": 134,
+            "label": "Types of actions"
+          },
+          {
+            "start": 423,
+            "end": 593,
+            "label": "Custom actions"
+          }
+        ]
+      },
+      "progressKey": "video:101"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V37",
+      "previousAssignment": {
+        "label": "LiveKit — latency components and measuring a voice-agent trace",
+        "url": "https://livekit.com/blog/understand-and-improve-agent-latency",
+        "playbackUrl": "https://www.youtube.com/watch?v=jnedfk5PL2A",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=jnedfk5PL2A",
+        "assignment": "Watch only 0:11–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees.",
+        "durationSeconds": 783,
+        "segments": [
+          {
+            "start": 11,
+            "end": 249,
+            "label": "Pipeline latency and trace measurement"
+          }
+        ]
+      },
+      "reviewedAssignment": {
+        "label": "LiveKit — latency components and measuring a voice-agent trace",
+        "url": "https://livekit.com/blog/understand-and-improve-agent-latency",
+        "playbackUrl": "https://www.youtube.com/watch?v=jnedfk5PL2A",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=jnedfk5PL2A",
+        "assignment": "Watch only 0:00–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees.",
+        "durationSeconds": 783,
+        "segments": [
+          {
+            "start": 0,
+            "end": 249,
+            "label": "Pipeline latency and trace measurement"
+          }
+        ]
+      },
+      "progressKey": "video:100"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V44",
+      "previousAssignment": {
+        "label": "University of Leeds — structuring a research proposal",
+        "url": "https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal",
+        "playbackUrl": "https://www.youtube.com/watch?v=VNbzuPt5QYA",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=VNbzuPt5QYA",
+        "assignment": "Watch the complete named video, 0:00–3:22. Identify title, research question, literature gap, method and references, then apply that structure to the voice research proposal. The video describes Leeds Business School’s application context; it does not establish requirements or acceptance at a computing programme.",
+        "durationSeconds": 202,
+        "segments": []
+      },
+      "reviewedAssignment": {
+        "label": "University of Leeds — structuring a research proposal",
+        "url": "https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal",
+        "playbackUrl": "https://www.youtube.com/watch?v=VNbzuPt5QYA",
+        "watchMode": "full",
+        "timingSource": "https://www.youtube.com/watch?v=VNbzuPt5QYA",
+        "assignment": "Watch the complete named video, 0:00–3:22. Identify title, research question, literature gap, method and references, then apply that structure to the voice research proposal. The video describes Leeds Business School’s application context; it does not establish requirements or acceptance at a computing programme.",
+        "durationSeconds": 202,
+        "segments": []
+      },
+      "progressKey": "video:100"
+    }
+  ],
+  "unresolved": [],
+  "rejectedCandidates": [
+    {
+      "url": "https://www.youtube.com/watch?v=hoEWRdHi7dI",
+      "finding": "The quick-brown-fox example labels a substitution where minimum-edit alignment has two deletions (quick, lazy) and one insertion (again). Its explanation also switches away from the reference-word denominator. Rejected for V25."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=EU2oCVlzEZk",
+      "finding": "The retrieved German automatic track largely contains music markers and does not support verification of the English Project Relate narration. Replaced with a captioned first-person interview; this is an evidence-access failure, not a finding that the original narration is false."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=sR6_bZ6VkAg",
+      "finding": "The retrieved English transcript shows benchmark WER comparisons, not the WER calculation promised by the former guide. Replaced with a focused definition/reference-quality explanation."
+    }
+  ]
+}

@@ -145,3 +145,16 @@ critical study, not universal diagnostic or treatment rules.
 
 Release 20261030-7 also aligns the R03 topic-level overview with the 6:43
 transcript-checked excerpt and refreshes the entry/data cache versions together.
+
+
+Remaining transcript follow-up — release 20261030-9
+-------------------------------------------------
+The active audit is video-content-review-20261030-complete.json. Its 44 current
+assignments have scoped transcript evidence. video-transcript-followup-20261030.json
+accounts for the 20 remaining teaching-material-only assignments and V25 from
+release 8: thirteen recordings retained and eight assignments replaced. Historical
+audits are immutable. New recordings use unused video:200 keys; narrowed passages
+of the same recording keep their existing identities. Read the per-source limits:
+automatic caption errors, historical claims, independent paper explanations,
+commercial affiliation and professional/jurisdictional scope remain explicit.
+This is not an audit of every video in the full three curricula.
