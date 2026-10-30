@@ -112,7 +112,7 @@ Videos:
 Readings:
   MIT 18.06 — problem sets and solutions — https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/assignments/
 Practical: Recalculate the example for x = [1, 0]. Then write a matrix that turns [left, right] into [left + right, left - right]. Apply it to [3, 1]. Finally explain why a (3, 4) matrix cannot multiply a (5, 1) column vector.
-Independent assessment: A model receives (8, 50, 40) with batch/time/feature axes. It applies a 12-output linear layer independently at each time step. State the weight shape, output shape, number of weights and number of biases. Explain what would change if time and feature were accidentally swapped.
+Independent assessment: A model receives \((8,50,40)\) with batch/time/feature axes. It applies a 12-output linear layer independently at each time step. State the weight shape, output shape, number of weights and number of biases. Explain what would change if time and feature were accidentally swapped.
 Pass criteria: 1. Derive the weight/output shapes and parameter/bias counts for the supplied batch and linear layer. 2. Name batch, time and feature axes and explain a time/feature swap. 3. Demonstrate a matrix-vector calculation rather than only listing shapes.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
@@ -128,8 +128,8 @@ Videos:
 Readings:
   MIT 18.01SC — Differentiation Part A: Sessions 1–3, 6–11 and Problem Set 1 with solutions — https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/
   CMU — 11-785 Spring 2022 lecture/video source index — https://deeplearning.cs.cmu.edu/S22/
-Practical: Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate L(w) = (2w − 6)² using the chain rule.
-Independent assessment: For L(a,b) = (a − 1)² + 2(b + 2)², start at (0,0) with rate 0.1. Compute the gradient, one update and the old/new loss. State why one successful update is not a universal convergence argument.
+Practical: Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate \(L(w)=(2w-6)^2\) using the chain rule.
+Independent assessment: For \(L(a,b)=(a-1)^2+2(b+2)^2\), start at (0,0) with rate 0.1. Compute the gradient, one update and the old/new loss. State why one successful update is not a universal convergence argument.
 Pass criteria: 1. Compute the gradient, simultaneous parameter update and old/new loss for the two-parameter challenge. 2. Use simultaneous old-parameter gradients with the stated learning rate. 3. Explain the local nature of a gradient and limits of a single successful update.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
@@ -237,7 +237,7 @@ Readings:
   Hugging Face Audio Course — pre-processing audio data — https://huggingface.co/learn/audio-course/chapter1/preprocessing
 Practical: Calculate duration and bin spacing for N = 256 and N = 512 at 16 kHz. Calculate the time between frame starts for a 128-sample hop. Explain which setting you would inspect for a rapid consonant transition and what frequency-detail trade-off you would report.
 
-Before the plot critique, reproduce the four-point transform for [1,0,-1,0] and then [0,1,0,-1] using the supplied sine/cosine factors. Report real and imaginary parts and explain why equal magnitudes do not mean identical signals.
+Before the plot critique, reproduce the four-point transform for \([1,0,-1,0]\) and then \([0,1,0,-1]\) using the supplied sine/cosine factors. Report real and imaginary parts and explain why equal magnitudes do not mean identical signals.
 Independent assessment: A report compares two spectrograms without providing sample rate, window length or dB reference and claims one model removes noise. Write a corrected reporting checklist and explain why the images alone cannot establish improved speech quality.
 Pass criteria: 1. Calculate window duration, hop and bin spacing without confusing them. 2. Compute the supplied four-point Fourier coefficients and explain magnitude/phase. 3. Name missing plot settings and why a spectrogram alone cannot establish quality.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.

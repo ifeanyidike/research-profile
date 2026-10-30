@@ -2022,3 +2022,24 @@ input[type="radio"] {
 :root[data-studio="child-development-studio"] .art-core {
   background: #5c4675;
 }
+
+/* SVG equations inherit the active theme and scroll within the lesson. */
+.math-example {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--soft);
+}
+.lesson-body mjx-container[display="true"],
+.source-map mjx-container[display="true"],
+.review-card mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0.15rem;
+  color: inherit;
+}
+mjx-container:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

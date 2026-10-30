@@ -32,6 +32,24 @@ The client and hosted validators accept these existing numeric checklist keys;
 no progress schema migration or learner-data rewrite is needed for this release. Do not run provider demos,
 training recipes, speech inference or evaluation harnesses to validate the site.
 
+Mathematics
+-----------
+Use \( ... \) for inline TeX and \[ ... \] for display equations in authored
+lesson text, questions, solutions and source-map prose. Do not use dollar
+signs as delimiters. Escape backslashes normally when editing JSON directly;
+the named-field text files retain literal backslashes. Use EXAMPLE_FORMAT:: math
+for a worked example containing mathematical prose/equations; omit it for
+literal Python, event traces or other code. Base and AMS macros are supported.
+Define symbols, show units and work a small example before the compact formula.
+MathJax 3.2.2 is pinned and self-hosted under learning-studio/vendor, with its
+licence and verified package provenance. It loads only on authored math views.
+SVG output includes assistive MathML. Long display equations scroll and receive
+keyboard focus. Notebook data and code blocks are never typeset.
+The shared runtime serializes asynchronous typesetting, ignores disconnected
+views and clears MathJax records before replacing lesson content. A load failure
+leaves readable TeX and displays a retry notice. Bump the shared module/entry/
+HTML/config versions together when changing the renderer or authored release.
+
 Verification
 ------------
 node --test _learning/tests/*.test.js

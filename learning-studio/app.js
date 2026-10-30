@@ -1,6 +1,7 @@
-import { createModel } from "./model.js?v=20261030-2";
-import { Account } from "./account.js?v=20261030-2";
-import { videoEmbed } from "./video.js?v=20261030-2";
+import { math } from "./math.js?v=20261030-3";
+import { createModel } from "./model.js?v=20261030-3";
+import { Account } from "./account.js?v=20261030-3";
+import { videoEmbed } from "./video.js?v=20261030-3";
 import { syncConfig } from "../algo-studio/sync-config.js";
 export function startStudio(config) {
   document.documentElement.dataset.studio = config.slug;
@@ -182,7 +183,7 @@ export function startStudio(config) {
   }
   function workshop(l) {
     const g = l.guide;
-    return `<div class="callout"><strong>Before this lesson</strong>${paragraphs(g.bridge)}</div><h2>Step by step</h2>${paragraphs(g.teaching)}<div class="worked-example"><span class="eyebrow">FOLLOW THE WHOLE EXAMPLE</span><h3>Worked example and supplied data</h3><pre class="lesson-code" tabindex="0" aria-label="Worked example"><code>${esc(g.example)}</code></pre>${paragraphs(g.explanation)}</div>`;
+    return `<div class="callout"><strong>Before this lesson</strong>${paragraphs(g.bridge)}</div><h2>Step by step</h2>${paragraphs(g.teaching)}<div class="worked-example"><span class="eyebrow">FOLLOW THE WHOLE EXAMPLE</span><h3>Worked example and supplied data</h3>${g.example_format === "math" ? `<div class="math-example" aria-label="Worked mathematical example">${paragraphs(g.example)}</div>` : `<pre class="lesson-code" tabindex="0" aria-label="Worked example"><code>${esc(g.example)}</code></pre>`}${paragraphs(g.explanation)}</div>`;
   }
   function practiceWorkshop(l) {
     return `<h3>Your complete workshop</h3>${paragraphs(l.guide.exercise)}<details class="solution"><summary>Reveal the worked solution after your attempt</summary>${paragraphs(l.guide.solution)}</details>`;
@@ -307,6 +308,7 @@ export function startStudio(config) {
     };
     $("#page-name").textContent = titles[view] || "My learning";
     document.title = `${titles[view] || "My learning"} — ${config.name}`;
+    math.clear($("#main"));
     $("#main").innerHTML =
       view === "sources"
         ? sourceMap()
@@ -334,6 +336,17 @@ export function startStudio(config) {
     $("#menu").setAttribute("aria-expanded", "false");
     syncSidebar();
     bindView(route);
+    const mathRoots = [...$("#main").querySelectorAll(".lesson-body, .source-map, .review-card")];
+    math.typeset(mathRoots).catch((error) => {
+      for (const root of mathRoots.filter((node) => node.isConnected)) {
+        const notice = document.createElement("p");
+        notice.className = "fine-print";
+        notice.setAttribute("role", "status");
+        notice.textContent = "Equation formatting is unavailable. The TeX is still readable; reload to try again.";
+        root.prepend(notice);
+      }
+      console.warn("Equation formatting unavailable:", error.message);
+    });
     if (focus) {
       $("#main").focus({ preventScroll: true });
       window.scrollTo(0, 0);

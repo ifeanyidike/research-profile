@@ -46,6 +46,8 @@ def build(check=False):
             fields = ['bridge', 'concept', 'mechanism', 'teaching', 'example', 'explanation', 'pitfall', 'exercise', 'solution', 'challenge', 'challenge_solution', 'question', 'correct', 'wrong1', 'wrong2', 'feedback']
             assert all(a.get(f) for f in fields), m['id']
             guide = {f: a[f] for f in ['bridge', 'teaching', 'example', 'explanation', 'exercise', 'solution', 'challenge', 'challenge_solution']}
+            guide['example_format'] = a.get('example_format', 'text')
+            assert guide['example_format'] in ('math', 'text'), m['id']
             # Rotate choices so correct answers have no positional pattern.
             choices = [a['correct'], a['wrong1'], a['wrong2']]
             rotate = len(lessons) % 3
