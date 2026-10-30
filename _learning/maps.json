@@ -1,0 +1,2335 @@
+{
+  "voice": {
+    "slug": "voice-ai-studio",
+    "name": "Voice AI Studio",
+    "modules": [
+      {
+        "id": "V01",
+        "title": "What a voice system actually does",
+        "prerequisites": [],
+        "stage": "Starting from zero",
+        "skills": ["system boundaries", "tasks", "learning plan"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Overview 1 Of 5",
+            "url": "https://speech.zone/courses/speech-processing/module-7-speech-recognition-pattern-matching/videos/overview-1-of-5/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Stanford CS224S — scope, prerequisites and curriculum (recordings restricted)",
+            "url": "https://web.stanford.edu/class/cs224s/index.html"
+          },
+          {
+            "label": "Hugging Face Audio Course — course scope and prerequisites",
+            "url": "https://huggingface.co/learn/audio-course/chapter0/introduction"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V02",
+        "title": "Python: values, functions and clear inputs",
+        "prerequisites": ["V01"],
+        "stage": "Starting from zero",
+        "skills": ["Python", "variables", "functions"],
+        "videos": [
+          {
+            "label": "Harvard CS50P — Week 0 lecture and notes",
+            "url": "https://cs50.harvard.edu/python/weeks/0/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "CS50P — Week 0 notes",
+            "url": "https://cs50.harvard.edu/python/notes/0/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+        "practice_links": [
+          {
+            "label": "Harvard CS50P — optional problem set 0",
+            "url": "https://cs50.harvard.edu/python/psets/0/"
+          }
+        ]
+      },
+      {
+        "id": "V03",
+        "title": "Python: decisions, loops and collections",
+        "prerequisites": ["V02"],
+        "stage": "Starting from zero",
+        "skills": ["conditionals", "loops", "lists", "dictionaries"],
+        "videos": [
+          {
+            "label": "Harvard CS50P — Week 1 lecture and notes",
+            "url": "https://cs50.harvard.edu/python/weeks/1/"
+          },
+          {
+            "label": "Harvard CS50P — Week 2 lecture and notes",
+            "url": "https://cs50.harvard.edu/python/weeks/2/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "CS50P — Week 1 notes",
+            "url": "https://cs50.harvard.edu/python/notes/1/"
+          },
+          {
+            "label": "CS50P — Week 2 notes",
+            "url": "https://cs50.harvard.edu/python/notes/2/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+        "practice_links": [
+          {
+            "label": "Harvard CS50P — optional problem set 2",
+            "url": "https://cs50.harvard.edu/python/psets/2/"
+          }
+        ]
+      },
+      {
+        "id": "V04",
+        "title": "Files, modules, errors and offline tests",
+        "prerequisites": ["V03"],
+        "stage": "Starting from zero",
+        "skills": ["JSON", "files", "exceptions", "unit tests"],
+        "videos": [
+          {
+            "label": "Harvard CS50P — Week 3 lecture and notes",
+            "url": "https://cs50.harvard.edu/python/weeks/3/"
+          },
+          {
+            "label": "Harvard CS50P — Week 5 lecture and notes",
+            "url": "https://cs50.harvard.edu/python/weeks/5/"
+          },
+          {
+            "label": "Harvard CS50P — Week 6 lecture and notes",
+            "url": "https://cs50.harvard.edu/python/weeks/6/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "CS50P — File I/O notes",
+            "url": "https://cs50.harvard.edu/python/notes/6/"
+          },
+          {
+            "label": "CS50P — Unit tests notes",
+            "url": "https://cs50.harvard.edu/python/notes/5/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+        "practice_links": [
+          {
+            "label": "Harvard CS50P — optional problem set 5",
+            "url": "https://cs50.harvard.edu/python/psets/5/"
+          }
+        ]
+      },
+      {
+        "id": "V05",
+        "title": "Terminal, environments, Git and reproducibility",
+        "prerequisites": ["V04"],
+        "stage": "Starting from zero",
+        "skills": ["shell", "environments", "version control"],
+        "videos": [
+          {
+            "label": "MIT Missing Semester — Course Overview and the Shell",
+            "url": "https://www.youtube.com/watch?v=Z56Jmr9Z34Q"
+          },
+          {
+            "label": "MIT Missing Semester — Version Control (Git)",
+            "url": "https://www.youtube.com/watch?v=2sjqTHE0zok"
+          }
+        ],
+        "readings": [
+          {
+            "label": "The Missing Semester — shell lecture and exercises",
+            "url": "https://missing.csail.mit.edu/2020/course-shell/"
+          },
+          {
+            "label": "The Missing Semester — version control",
+            "url": "https://missing.csail.mit.edu/2020/version-control/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V06",
+        "title": "Maths bridge: algebra, units, powers and logs",
+        "prerequisites": ["V02"],
+        "stage": "Maths and scientific thinking",
+        "skills": ["algebra", "units", "logarithms", "decibels"],
+        "videos": [
+          {
+            "label": "StatQuest — Logs (logarithms), clearly explained",
+            "url": "https://www.youtube.com/watch?v=VSi0Z04fWj0"
+          },
+          {
+            "label": "Radians — trigonometry bridge selected by Edinburgh speech.zone",
+            "url": "https://youtu.be/cgPYLJ-s5II"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Edinburgh — mathematics tutorials: algebra and logarithms",
+            "url": "https://homepages.inf.ed.ac.uk/sgwater/math_tutorials.html"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V07",
+        "title": "Vectors, matrices and tensor shapes",
+        "prerequisites": ["V06"],
+        "stage": "Maths and scientific thinking",
+        "skills": ["linear algebra", "dot products", "shapes"],
+        "videos": [
+          {
+            "label": "MIT 18.06 — Lecture 1: The Geometry of Linear Equations",
+            "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-1-the-geometry-of-linear-equations/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "MIT 18.06 — problem sets and solutions",
+            "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/assignments/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V08",
+        "title": "Derivatives, gradients and optimisation",
+        "prerequisites": ["V06", "V07"],
+        "stage": "Maths and scientific thinking",
+        "skills": ["calculus", "chain rule", "gradient descent"],
+        "videos": [
+          {
+            "label": "CMU 11-785 Spring 2022 — Lecture 4: Gradient Descent (after the calculus reading)",
+            "url": "https://www.youtube.com/watch?v=lYYkEx1Qx8s"
+          }
+        ],
+        "readings": [
+          {
+            "label": "MIT 18.01SC — derivatives, chain rule and optimisation units",
+            "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/"
+          },
+          {
+            "label": "CMU — 11-785 Spring 2022 lecture/video source index",
+            "url": "https://deeplearning.cs.cmu.edu/S22/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V09",
+        "title": "Probability, statistics and uncertainty",
+        "prerequisites": ["V06"],
+        "stage": "Maths and scientific thinking",
+        "skills": ["conditional probability", "mean", "variance", "sampling"],
+        "videos": [
+          {
+            "label": "MIT 6.042J — Lecture 18: Probability Introduction",
+            "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/resources/lecture-18-probability-introduction/"
+          },
+          {
+            "label": "StatQuest — Estimating Mean, Variance and Standard Deviation",
+            "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Harvard Stat 110 — probability book and lectures",
+            "url": "https://stat110.hsites.harvard.edu/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V10",
+        "title": "Experimental design and data leakage",
+        "prerequisites": ["V04", "V09"],
+        "stage": "Maths and scientific thinking",
+        "skills": ["splits", "confounding", "baselines", "uncertainty"],
+        "videos": [
+          {
+            "label": "StatQuest — Hypothesis Testing (supporting study-design foundation)",
+            "url": "https://www.youtube.com/watch?v=0oc49DyA3hU"
+          }
+        ],
+        "readings": [
+          {
+            "label": "scikit-learn — common pitfalls and data leakage",
+            "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V11",
+        "title": "Sound waves, frequency, amplitude and phase",
+        "prerequisites": ["V06"],
+        "stage": "Speech and audio foundations",
+        "skills": ["acoustics", "frequency", "phase"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Periodic Signal",
+            "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Pitch",
+            "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/pitch/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Edinburgh speech.zone — Periodic Signal",
+            "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V12",
+        "title": "Sampling, quantisation, channels and codecs",
+        "prerequisites": ["V04", "V11"],
+        "stage": "Speech and audio foundations",
+        "skills": ["sample rate", "PCM", "aliasing", "bitrate"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Digital Signal",
+            "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/digital-signal/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Hugging Face Audio Course — audio data: sampling rate, amplitude and channels",
+            "url": "https://huggingface.co/learn/audio-course/chapter1/audio_data"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V13",
+        "title": "Speech production, phonetics and the IPA",
+        "prerequisites": ["V11"],
+        "stage": "Speech and audio foundations",
+        "skills": ["articulation", "phonemes", "IPA", "coarticulation"],
+        "videos": [
+          {
+            "label": "UBC eNunciate — Introduction to Articulatory Phonetics: Consonants",
+            "url": "https://www.youtube.com/watch?v=dfoRdKuPF9I"
+          },
+          {
+            "label": "UBC eNunciate — Introduction to Articulatory Phonetics: Vowels",
+            "url": "https://www.youtube.com/watch?v=u7jQ8FELbIo"
+          },
+          {
+            "label": "UBC eNunciate — Introduction to the International Phonetic Alphabet",
+            "url": "https://www.youtube.com/watch?v=g_SHfoUDj8A"
+          }
+        ],
+        "readings": [
+          {
+            "label": "UBC eNunciate — interactive phonetics resources",
+            "url": "https://enunciate.arts.ubc.ca/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V14",
+        "title": "Source–filter models, pitch and formants",
+        "prerequisites": ["V11", "V13"],
+        "stage": "Speech and audio foundations",
+        "skills": ["voicing", "pitch", "resonance", "formants"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Harmonics",
+            "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/harmonics/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Source Filter Model",
+            "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Edinburgh speech.zone — Source Filter Model",
+            "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Vocal Tract Resonance Formants",
+            "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/vocal-tract-resonance-formants/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V15",
+        "title": "Fourier transforms, windows and spectrograms",
+        "prerequisites": ["V07", "V12", "V14"],
+        "stage": "Speech and audio foundations",
+        "skills": ["DFT", "STFT", "windows", "time-frequency tradeoffs"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Short Term Analysis",
+            "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/short-term-analysis/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Fourier Analysis",
+            "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/fourier-analysis/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Frequency Domain",
+            "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/frequency-domain/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Hugging Face Audio Course — pre-processing audio data",
+            "url": "https://huggingface.co/learn/audio-course/chapter1/preprocessing"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V16",
+        "title": "Filters, convolution, mel features and MFCCs",
+        "prerequisites": ["V15"],
+        "stage": "Speech and audio foundations",
+        "skills": ["convolution", "filter banks", "features"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Filter",
+            "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/filter/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Convolution",
+            "url": "https://speech.zone/courses/speech-processing/module-6-speech-synthesis-waveform-generation-and-connected-speech/videos/convolution/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "librosa — mel-spectrogram parameters (development documentation; check installed version)",
+            "url": "https://librosa.org/doc/main/api/generated/librosa.feature.melspectrogram.html"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V17",
+        "title": "Machine learning: regression and classification",
+        "prerequisites": ["V07", "V08", "V09", "V10"],
+        "stage": "Machine learning foundations",
+        "skills": ["loss", "generalisation", "regularisation"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Decision Tree",
+            "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/decision-tree/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Learning Decision Trees",
+            "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/learning-decision-trees/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Dive into Deep Learning — linear neural networks, regression and classification",
+            "url": "https://d2l.ai/chapter_linear-networks/index.html"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V18",
+        "title": "Neural networks and backpropagation",
+        "prerequisites": ["V17"],
+        "stage": "Machine learning foundations",
+        "skills": ["layers", "activations", "gradients", "batching"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — What Is A Neural Network",
+            "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos/what-is-a-neural-network/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Training A Neural Network",
+            "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos/training-a-neural-network/"
+          },
+          {
+            "label": "CMU 11-785 Spring 2022 — Lecture 5: Backpropagation, part 1",
+            "url": "https://www.youtube.com/watch?v=G_N3IS-nqYQ"
+          },
+          {
+            "label": "CMU 11-785 Spring 2022 — Lecture 5: Backpropagation, part 2",
+            "url": "https://www.youtube.com/watch?v=NLpc-tNfEt8"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Dive into Deep Learning — multilayer perceptrons",
+            "url": "https://d2l.ai/chapter_multilayer-perceptrons/index.html"
+          },
+          {
+            "label": "CMU — 11-785 Spring 2022 lecture/video source index",
+            "url": "https://deeplearning.cs.cmu.edu/S22/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+        "practice_links": [
+          {
+            "label": "Framework prerequisite for optional ML projects: PyTorch Learn the Basics, tensors through optimisation",
+            "url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html"
+          }
+        ]
+      },
+      {
+        "id": "V19",
+        "title": "Sequences, attention and transformers",
+        "prerequisites": ["V18", "V16"],
+        "stage": "Machine learning foundations",
+        "skills": ["attention", "masking", "positions", "sequence models"],
+        "videos": [
+          {
+            "label": "CMU 11-785 Spring 2022 — Lecture 18: Seq2Seq and Attention",
+            "url": "https://www.youtube.com/watch?v=q3CmsZFlrnc"
+          },
+          {
+            "label": "CMU 11-785 Spring 2022 — Lecture 19: Transformers and GNNs (transformer portion)",
+            "url": "https://www.youtube.com/watch?v=thwZ-G8Gk6I"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Vaswani et al. — Attention Is All You Need",
+            "url": "https://arxiv.org/abs/1706.03762"
+          },
+          {
+            "label": "Hugging Face Audio Course — transformer refresher",
+            "url": "https://huggingface.co/learn/audio-course/chapter3/introduction"
+          },
+          {
+            "label": "CMU — 11-785 Spring 2022 lecture/video source index",
+            "url": "https://deeplearning.cs.cmu.edu/S22/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V20",
+        "title": "Speech datasets, annotation, consent and licensing",
+        "prerequisites": ["V05", "V10", "V13"],
+        "stage": "Machine learning foundations",
+        "skills": ["manifests", "annotation", "rights", "speaker splits"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Script Design",
+            "url": "https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/script-design/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Annotating The Database",
+            "url": "https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/annotating-the-database/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Datasheets for Datasets",
+            "url": "https://arxiv.org/abs/1803.09010"
+          },
+          {
+            "label": "Common Voice — dataset and licensing information",
+            "url": "https://commonvoice.mozilla.org/en/datasets"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V21",
+        "title": "Classical ASR: alignment, HMMs and decoding",
+        "prerequisites": ["V09", "V16", "V17", "V20"],
+        "stage": "Recognising and understanding audio",
+        "skills": ["state sequences", "alignment", "decoding"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Overview 1 Of 3",
+            "url": "https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/videos/overview-1-of-3/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Overview 2 Of 3",
+            "url": "https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/videos/overview-2-of-3/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Jurafsky & Martin, August 2026 draft — Appendix A: Hidden Markov Models (including Viterbi)",
+            "url": "https://web.stanford.edu/~jurafsky/slp3/A.pdf"
+          },
+          {
+            "label": "Edinburgh speech.zone — Overview 3 Of 3",
+            "url": "https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/videos/overview-3-of-3/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V22",
+        "title": "CTC: learning without frame labels",
+        "prerequisites": ["V19", "V21"],
+        "stage": "Recognising and understanding audio",
+        "skills": ["CTC", "blank symbols", "collapse", "alignment paths"],
+        "videos": [
+          {
+            "label": "CMU 11-785 Spring 2022 — Lecture 17: CTC, part 1",
+            "url": "https://www.youtube.com/watch?v=jSoBgIzhh3I"
+          },
+          {
+            "label": "CMU 11-785 Spring 2022 — Lecture 17: CTC, part 2",
+            "url": "https://www.youtube.com/watch?v=cEyt72kwoKo"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Hugging Face Audio Course — CTC architectures",
+            "url": "https://huggingface.co/learn/audio-course/chapter3/ctc"
+          },
+          {
+            "label": "Graves et al. — Connectionist Temporal Classification, ICML 2006",
+            "url": "https://www.cs.toronto.edu/~graves/icml_2006.pdf"
+          },
+          {
+            "label": "CMU — 11-785 Spring 2022 lecture/video source index",
+            "url": "https://deeplearning.cs.cmu.edu/S22/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V23",
+        "title": "Encoder–decoder ASR and Whisper",
+        "prerequisites": ["V19", "V20", "V22"],
+        "stage": "Recognising and understanding audio",
+        "skills": ["seq2seq", "token decoding", "hallucinations"],
+        "videos": [
+          {
+            "label": "CMU 11-785 Spring 2022 — Seq2Seq and Attention (foundation; read Whisper paper separately)",
+            "url": "https://www.youtube.com/watch?v=q3CmsZFlrnc"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Hugging Face Audio Course — Seq2Seq architectures",
+            "url": "https://huggingface.co/learn/audio-course/chapter3/seq2seq"
+          },
+          {
+            "label": "Radford et al. — Robust Speech Recognition via Large-Scale Weak Supervision",
+            "url": "https://arxiv.org/abs/2212.04356"
+          },
+          {
+            "label": "CMU — 11-785 Spring 2022 lecture/video source index",
+            "url": "https://deeplearning.cs.cmu.edu/S22/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.",
+        "practice_links": [
+          {
+            "label": "Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements)",
+            "url": "https://huggingface.co/learn/audio-course/chapter5/hands_on"
+          }
+        ]
+      },
+      {
+        "id": "V24",
+        "title": "Self-supervised and multilingual speech learning",
+        "prerequisites": ["V19", "V20", "V22"],
+        "stage": "Recognising and understanding audio",
+        "skills": ["wav2vec 2.0", "pretraining", "adaptation"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "Baevski et al. — wav2vec 2.0",
+            "url": "https://arxiv.org/abs/2006.11477"
+          },
+          {
+            "label": "Hugging Face Audio Course — CTC architectures and pretrained encoders",
+            "url": "https://huggingface.co/learn/audio-course/chapter3/ctc"
+          },
+          {
+            "label": "Edinburgh ASR 2026 — Lecture 16 Self-supervised learning slides and Lecture 17 multilingual slides (recordings restricted)",
+            "url": "https://opencourse.inf.ed.ac.uk/asr/lectures"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.",
+        "practice_links": [
+          {
+            "label": "Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements)",
+            "url": "https://huggingface.co/learn/audio-course/chapter5/hands_on"
+          }
+        ]
+      },
+      {
+        "id": "V25",
+        "title": "ASR error analysis, fairness and uncertainty",
+        "prerequisites": ["V09", "V10", "V23", "V24"],
+        "stage": "Recognising and understanding audio",
+        "skills": ["edit distance", "WER", "subgroups", "error taxonomy"],
+        "videos": [
+          {
+            "label": "CMU 11-785 Spring 2022 — Recitation 9: CTC and Beam Search (decoding foundation)",
+            "url": "https://www.youtube.com/watch?v=penbvDelDuA"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Hugging Face Audio Course — evaluation metrics for ASR",
+            "url": "https://huggingface.co/learn/audio-course/chapter5/evaluation"
+          },
+          {
+            "label": "CMU — 11-785 Spring 2022 lecture/video source index",
+            "url": "https://deeplearning.cs.cmu.edu/S22/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V26",
+        "title": "Who spoke when? Diarisation and speaker identity",
+        "prerequisites": ["V18", "V20", "V25"],
+        "stage": "Recognising and understanding audio",
+        "skills": ["segmentation", "embeddings", "clustering", "verification"],
+        "videos": [
+          {
+            "label": "Hervé Bredin, AI Engineer Europe 2026 — Beyond Transcription: Building Voice AI That Actually Understands Conversations (0:16–21:26; concepts/error analysis, no demo execution)",
+            "url": "https://www.youtube.com/watch?v=mFLlVpnGpds"
+          }
+        ],
+        "readings": [
+          {
+            "label": "pyannote.audio — speaker diarisation project and documentation",
+            "url": "https://github.com/pyannote/pyannote-audio"
+          },
+          {
+            "label": "Original conference page and timestamped chapters for Bredin’s talk",
+            "url": "https://ai.engineer/talks/mFLlVpnGpds-beyond-transcription-building-voice-ai-that"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V27",
+        "title": "Noise, separation, echo and microphone arrays",
+        "prerequisites": ["V14", "V16", "V18", "V25"],
+        "stage": "Recognising and understanding audio",
+        "skills": ["enhancement", "separation", "beamforming", "distortion"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "SpeechBrain — Speech Enhancement From Scratch (read only; do not execute training cells)",
+            "url": "https://speechbrain.readthedocs.io/en/stable/tutorials/tasks/speech-enhancement-from-scratch.html"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V28",
+        "title": "TTS front ends: text, pronunciation and prosody",
+        "prerequisites": ["V13", "V14", "V20"],
+        "stage": "Generating speech",
+        "skills": ["normalisation", "pronunciation", "prosody"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Tokenisation Normalisation",
+            "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/tokenisation-normalisation/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Pronunciation",
+            "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/pronunciation/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Prosody",
+            "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/prosody/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Edinburgh speech.zone — Tokenisation Normalisation",
+            "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/tokenisation-normalisation/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Pronunciation",
+            "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/pronunciation/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V29",
+        "title": "Neural TTS: acoustic models and alignment",
+        "prerequisites": ["V19", "V28"],
+        "stage": "Generating speech",
+        "skills": ["acoustic models", "duration", "Tacotron 2", "VITS"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Doing Text To Speech",
+            "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos/doing-text-to-speech/"
+          },
+          {
+            "label": "Edinburgh speech.zone — End To End",
+            "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos-2/end-to-end/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Shen et al. — Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions (Tacotron 2)",
+            "url": "https://arxiv.org/abs/1712.05884"
+          },
+          {
+            "label": "Kim et al. — Conditional Variational Autoencoder with Adversarial Learning for End-to-End TTS (VITS)",
+            "url": "https://arxiv.org/abs/2106.06103"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Complete the PyTorch primer in V18 and the provider’s full Unit 6 before the optional project; review voice/data permissions and compute/submission requirements.",
+        "practice_links": [
+          {
+            "label": "Optional deeper project — Hugging Face Unit 6 SpeechT5 fine-tuning assignment (complete Unit 6 preparation; compute/account requirements)",
+            "url": "https://huggingface.co/learn/audio-course/chapter6/hands_on"
+          }
+        ]
+      },
+      {
+        "id": "V30",
+        "title": "Vocoders, neural codecs and audio tokens",
+        "prerequisites": ["V16", "V18", "V29"],
+        "stage": "Generating speech",
+        "skills": ["WaveNet", "codec tokens", "bitrate", "reconstruction"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Impulse Response",
+            "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/impulse-response/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "van den Oord et al. — WaveNet",
+            "url": "https://arxiv.org/abs/1609.03499"
+          },
+          {
+            "label": "Défossez et al. — High Fidelity Neural Audio Compression",
+            "url": "https://arxiv.org/abs/2210.13438"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V31",
+        "title": "Speech quality, listener studies and voice consent",
+        "prerequisites": ["V10", "V20", "V29", "V30"],
+        "stage": "Generating speech",
+        "skills": ["MOS", "intelligibility", "consent", "comparison design"],
+        "videos": [
+          {
+            "label": "Edinburgh speech.zone — Subjective Evaluation",
+            "url": "https://speech.zone/courses/speech-synthesis/module-5-evaluation/videos/subjective-evaluation/"
+          },
+          {
+            "label": "Edinburgh speech.zone — Objective Evaluation",
+            "url": "https://speech.zone/courses/speech-synthesis/module-5-evaluation/videos/objective-evaluation/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ITU-T P.800 — subjective determination of transmission quality",
+            "url": "https://www.itu.int/rec/T-REC-P.800"
+          },
+          {
+            "label": "Edinburgh speech.zone — Subjective Evaluation",
+            "url": "https://speech.zone/courses/speech-synthesis/module-5-evaluation/videos/subjective-evaluation/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V32",
+        "title": "Meaning, dialogue state and conversation repair",
+        "prerequisites": ["V03", "V13", "V25"],
+        "stage": "Engineering conversational voice systems",
+        "skills": ["intent", "state machines", "repair", "confirmation"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "Jurafsky & Martin, August 2026 draft — Appendix K: Frame-based Dialogue Systems",
+            "url": "https://web.stanford.edu/~jurafsky/slp3/K.pdf"
+          },
+          {
+            "label": "Stanford CS224S — dialogue and conversational-system syllabus",
+            "url": "https://web.stanford.edu/class/cs224s/index.html"
+          },
+          {
+            "label": "Jurafsky & Martin, August 2026 draft — Chapter 26: Conversation and its Structure",
+            "url": "https://web.stanford.edu/~jurafsky/slp3/26.pdf"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V33",
+        "title": "LLMs, retrieval and permissioned tools for voice",
+        "prerequisites": ["V19", "V32"],
+        "stage": "Engineering conversational voice systems",
+        "skills": ["retrieval", "tool contracts", "authorisation", "grounding"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "OWASP — LLM prompt injection prevention cheat sheet",
+            "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html"
+          },
+          {
+            "label": "LiveKit Agents — architecture and tool documentation",
+            "url": "https://docs.livekit.io/agents/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V34",
+        "title": "Streaming, asynchronous events and cancellation",
+        "prerequisites": ["V04", "V05", "V32"],
+        "stage": "Engineering conversational voice systems",
+        "skills": ["event ordering", "queues", "session state", "cancellation"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "Python 3.13 — Coroutines and Tasks: coroutines, creating tasks, cancellation and concurrency sections",
+            "url": "https://docs.python.org/3.13/library/asyncio-task.html"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V35",
+        "title": "WebRTC, WebSockets and telephony fundamentals",
+        "prerequisites": ["V12", "V34"],
+        "stage": "Engineering conversational voice systems",
+        "skills": ["packets", "jitter", "RTP", "WebRTC", "SIP"],
+        "videos": [
+          {
+            "label": "Google I/O 2013 — WebRTC overview (historical architecture; use current official API readings)",
+            "url": "https://www.youtube.com/watch?v=p2HzZkd2A40"
+          }
+        ],
+        "readings": [
+          {
+            "label": "WebRTC — getting started overview",
+            "url": "https://webrtc.org/getting-started/overview"
+          },
+          {
+            "label": "IETF RFC 3550 — Sections 1–5: introduction, terminology, examples and RTP data transfer",
+            "url": "https://www.rfc-editor.org/rfc/rfc3550"
+          },
+          {
+            "label": "IETF RFC 3261 — Sections 1–6: SIP purpose, operation and terminology",
+            "url": "https://www.rfc-editor.org/rfc/rfc3261"
+          },
+          {
+            "label": "Google web.dev — original WebRTC video provenance and explanatory article (historical examples)",
+            "url": "https://web.dev/articles/webrtc-basics"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V36",
+        "title": "VAD, endpointing, turn-taking and barge-in",
+        "prerequisites": ["V25", "V32", "V34", "V35"],
+        "stage": "Engineering conversational voice systems",
+        "skills": ["VAD", "endpointing", "interruptions", "turn state"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "LiveKit Agents — turn detection and interruptions",
+            "url": "https://docs.livekit.io/agents/logic/turns/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V37",
+        "title": "Latency budgets, buffers and traces",
+        "prerequisites": ["V09", "V34", "V35", "V36"],
+        "stage": "Engineering conversational voice systems",
+        "skills": ["latency", "percentiles", "tracing", "backpressure"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "OpenTelemetry — traces concepts",
+            "url": "https://opentelemetry.io/docs/concepts/signals/traces/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V38",
+        "title": "Voice privacy, prompt injection and abuse resistance",
+        "prerequisites": ["V20", "V31", "V33", "V36"],
+        "stage": "Engineering conversational voice systems",
+        "skills": ["privacy", "trust boundaries", "voice spoofing", "safe tools"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "OWASP — LLM prompt injection prevention cheat sheet",
+            "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html"
+          },
+          {
+            "label": "NIST — AI Risk Management Framework",
+            "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V39",
+        "title": "Deployment, reliability, observability and cost",
+        "prerequisites": ["V05", "V10", "V37", "V38"],
+        "stage": "Engineering conversational voice systems",
+        "skills": ["reliability", "cost models", "fallbacks", "operations"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "Google SRE book — service level objectives",
+            "url": "https://sre.google/sre-book/service-level-objectives/"
+          },
+          {
+            "label": "Google SRE book — handling overload",
+            "url": "https://sre.google/sre-book/handling-overload/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V40",
+        "title": "Accessible and multilingual voice products",
+        "prerequisites": ["V13", "V24", "V25", "V31", "V36", "V38"],
+        "stage": "Engineering conversational voice systems",
+        "skills": ["accessibility", "language switching", "equity", "fallback channels"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "W3C — Making Audio and Video Media Accessible",
+            "url": "https://www.w3.org/WAI/media/av/"
+          },
+          {
+            "label": "Hugging Face Audio Course — evaluation metrics for ASR: error-analysis foundation",
+            "url": "https://huggingface.co/learn/audio-course/chapter5/evaluation"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V41",
+        "title": "Speech-to-speech and full-duplex systems",
+        "prerequisites": ["V19", "V30", "V33", "V36", "V37"],
+        "stage": "Engineering conversational voice systems",
+        "skills": ["audio tokens", "duplex", "Moshi", "incrementality"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "Défossez et al. — Moshi: a speech-text foundation model for real-time dialogue",
+            "url": "https://arxiv.org/abs/2410.00037"
+          },
+          {
+            "label": "Kyutai — Moshi research and architecture",
+            "url": "https://github.com/kyutai-labs/moshi"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+        "practice_links": [
+          {
+            "label": "Optional deeper project — Hugging Face Unit 7 cascaded speech-to-speech translation assignment (complete provider unit; this differs from the Moshi full-duplex architecture)",
+            "url": "https://huggingface.co/learn/audio-course/chapter7/hands_on"
+          }
+        ]
+      },
+      {
+        "id": "V42",
+        "title": "Read research and design defensible studies",
+        "prerequisites": ["V10", "V25", "V31", "V39", "V41"],
+        "stage": "Research and independent work",
+        "skills": ["paper critique", "ablations", "reproducibility", "research ethics"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "NeurIPS — paper checklist and reproducibility guidance",
+            "url": "https://neurips.cc/public/guides/PaperChecklist"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V43",
+        "title": "Capstone: a deterministic voice-agent simulator",
+        "prerequisites": ["V04", "V32", "V34", "V36", "V37", "V38", "V39", "V40"],
+        "stage": "Research and independent work",
+        "skills": ["integration", "state transitions", "fault handling", "portfolio"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "Python — unittest documentation",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          },
+          {
+            "label": "LiveKit Agents — architectural comparison",
+            "url": "https://docs.livekit.io/agents/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      },
+      {
+        "id": "V44",
+        "title": "Graduate study and an original research proposal",
+        "prerequisites": ["V27", "V42", "V43"],
+        "stage": "Research and independent work",
+        "skills": ["specialisation", "literature review", "proposal", "supervision"],
+        "videos": [],
+        "readings": [
+          {
+            "label": "Edinburgh — Speech and Language Processing MSc",
+            "url": "https://study.ed.ac.uk/programmes/postgraduate-taught/290-speech-and-language-processing"
+          },
+          {
+            "label": "CMU — Language Technologies Institute academic programmes",
+            "url": "https://lti.cs.cmu.edu/academics/"
+          }
+        ],
+        "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
+        "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+        "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them."
+      }
+    ]
+  },
+  "child": {
+    "slug": "child-development-studio",
+    "name": "Child Development & Therapy Studio",
+    "modules": [
+      {
+        "id": "C01",
+        "title": "Choose your role, goals and learning path",
+        "prerequisites": [],
+        "stage": "Development across childhood",
+        "skills": ["roles", "scope", "caregiver education", "professional preparation"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [
+          {
+            "label": "Croydon NHS — Workshop 2 introduction: the role of everyday participation",
+            "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+          }
+        ],
+        "readings": [
+          {
+            "label": "WHO — Caregiver Skills Training introduction (programme scope: ages 2–9)",
+            "url": "https://www.who.int/publications/i/item/9789240048836"
+          },
+          {
+            "label": "HCPC — approved professional programmes",
+            "url": "https://www.hcpc-uk.org/education/approved-programmes/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "C02",
+        "title": "Development in infancy and toddlerhood",
+        "prerequisites": ["C01"],
+        "stage": "Development across childhood",
+        "skills": ["developmental domains", "relationships", "variation"],
+        "age": "Ages 0–3",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [
+          {
+            "label": "Harvard — Experiences Build Brain Architecture",
+            "url": "https://www.youtube.com/watch?v=VNNsN9IJkws"
+          },
+          {
+            "label": "Harvard — Serve & Return Interaction Shapes Brain Circuitry",
+            "url": "https://www.youtube.com/watch?v=m_5u8-QSh6A"
+          }
+        ],
+        "readings": [
+          {
+            "label": "CDC — positive parenting and development by age (choose the assigned age group)",
+            "url": "https://www.cdc.gov/child-development/positive-parenting-tips/"
+          },
+          {
+            "label": "ASHA — developmental milestones (birth–5; conversation aid, not diagnosis)",
+            "url": "https://www.asha.org/public/developmental-milestones/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "C03",
+        "title": "Preschool development, play and participation",
+        "prerequisites": ["C02"],
+        "stage": "Development across childhood",
+        "skills": ["play", "communication", "self-care", "early years"],
+        "age": "Ages 3–6",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [
+          {
+            "label": "Harvard — five steps for brain-building serve and return",
+            "url": "https://www.youtube.com/watch?v=KNrnZag17Ek"
+          },
+          {
+            "label": "Birmingham NHS — SALT strategy video 2 - supporting language development through play (subtitled)",
+            "url": "https://player.vimeo.com/video/710279184?badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        ],
+        "readings": [
+          {
+            "label": "CDC — positive parenting and development by age (choose the assigned age group)",
+            "url": "https://www.cdc.gov/child-development/positive-parenting-tips/"
+          },
+          {
+            "label": "RCOT — occupational therapy and play practice guideline",
+            "url": "https://www.rcot.co.uk/explore-resources/children-young-people-families/play-practice-guideline"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "C04",
+        "title": "School-age development and learning",
+        "prerequisites": ["C03"],
+        "stage": "Development across childhood",
+        "skills": ["literacy", "peer relationships", "participation"],
+        "age": "Ages 6–12",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [],
+        "readings": [
+          {
+            "label": "CDC — positive parenting and development by age (choose the assigned age group)",
+            "url": "https://www.cdc.gov/child-development/positive-parenting-tips/"
+          },
+          {
+            "label": "ASHA — spoken language disorders Practice Portal",
+            "url": "https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. The ASHA Spoken Language Disorders professional portal focuses on ages 3–21 using oral communication; it is not a complete infant assessment or AAC protocol."
+      },
+      {
+        "id": "C05",
+        "title": "Adolescence, identity and growing autonomy",
+        "prerequisites": ["C04"],
+        "stage": "Development across childhood",
+        "skills": ["puberty", "autonomy", "executive skills"],
+        "age": "Ages 12–18",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [],
+        "readings": [
+          {
+            "label": "NIMH — The Teen Brain: 7 Things to Know",
+            "url": "https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "C06",
+        "title": "Observation, hearing, concerns and referral",
+        "prerequisites": ["C02", "C03", "C04", "C05"],
+        "stage": "Shared foundations for respectful support",
+        "skills": ["observation", "milestones", "hearing", "referral"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [
+          {
+            "label": "Birmingham NHS — Getting Started with Communication",
+            "url": "https://player.vimeo.com/video/405368362?h=f8adc62ba1&badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — developmental milestones (birth–5; conversation aid, not diagnosis)",
+            "url": "https://www.asha.org/public/developmental-milestones/"
+          },
+          {
+            "label": "ASHA — hearing loss in children",
+            "url": "https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "C07",
+        "title": "Assent, privacy, safeguarding and respectful care",
+        "prerequisites": ["C01", "C05"],
+        "stage": "Shared foundations for respectful support",
+        "skills": ["assent", "safeguarding", "privacy", "boundaries"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [],
+        "readings": [
+          {
+            "label": "UNICEF — Convention on the Rights of the Child: child-friendly explanation",
+            "url": "https://www.unicef.org/child-rights-convention/convention-text-childrens-version"
+          },
+          {
+            "label": "NSPCC — recognising and responding to abuse",
+            "url": "https://learning.nspcc.org.uk/child-abuse-and-neglect/recognising-and-responding-to-abuse"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "C08",
+        "title": "How communication and language work",
+        "prerequisites": ["C03", "C06"],
+        "stage": "Shared foundations for respectful support",
+        "skills": ["speech", "language", "interaction", "communication modes"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [
+          {
+            "label": "Birmingham NHS — Getting Started with Communication",
+            "url": "https://player.vimeo.com/video/405368362?h=f8adc62ba1&badge=0&autopause=0&player_id=0&app_id=58479"
+          },
+          {
+            "label": "Birmingham NHS — Language Needs in the Early Years",
+            "url": "https://player.vimeo.com/video/409714667?h=ff336690aa&badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — developmental milestones (birth–5; conversation aid, not diagnosis)",
+            "url": "https://www.asha.org/public/developmental-milestones/"
+          },
+          {
+            "label": "ASHA public information — Childhood Language Disorders (helpingyoucommunicate.org)",
+            "url": "https://helpingyoucommunicate.org/article/childhood-language-disorders"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "C09",
+        "title": "Movement, sensory differences and everyday participation",
+        "prerequisites": ["C04", "C06"],
+        "stage": "Shared foundations for respectful support",
+        "skills": ["occupations", "movement", "sensory needs", "access"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [
+          {
+            "label": "Croydon NHS — Workshop 2: introduction and foundation-skills modules",
+            "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Croydon NHS — Building Independence in Everyday Activities",
+            "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "C10",
+        "title": "Behavior, emotions, stress and context",
+        "prerequisites": ["C05", "C07", "C08", "C09"],
+        "stage": "Shared foundations for respectful support",
+        "skills": ["distress", "context", "co-regulation", "observation"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [
+          {
+            "label": "Harvard — Toxic Stress Derails Healthy Development",
+            "url": "https://www.youtube.com/watch?v=rVwFkcOZHJw"
+          }
+        ],
+        "readings": [
+          {
+            "label": "IRIS — Learning and Behavior",
+            "url": "https://iris.peabody.vanderbilt.edu/module/bp/cresource/q1/p01/"
+          },
+          {
+            "label": "NICE CG170 — support and management; read the named section for this topic",
+            "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "C11",
+        "title": "Inclusion, neurodiversity, culture and disability",
+        "prerequisites": ["C07", "C08", "C09", "C10"],
+        "stage": "Shared foundations for respectful support",
+        "skills": ["inclusion", "culture", "neurodiversity", "access"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [],
+        "readings": [
+          {
+            "label": "ASHA — learning more than one language",
+            "url": "https://www.asha.org/public/speech/development/learning-more-than-one-language/"
+          },
+          {
+            "label": "NICE CG170 — support and management; read the named section for this topic",
+            "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "C12",
+        "title": "Health, sleep, feeding and when to seek help",
+        "prerequisites": ["C06", "C07"],
+        "stage": "Shared foundations for respectful support",
+        "skills": ["health needs", "sleep", "swallowing concerns", "referral"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver", "professional"],
+        "audienceLabel": "Shared foundations",
+        "videos": [
+          {
+            "label": "Croydon NHS — Workshop 1: sensory processing and everyday routines (context, not medical advice)",
+            "url": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — Pediatric Feeding and Swallowing (professional reference; seek individual advice)",
+            "url": "https://www.asha.org/practice-portal/clinical-topics/pediatric-feeding-and-swallowing/"
+          },
+          {
+            "label": "NHS — healthy sleep tips for children",
+            "url": "https://www.nhs.uk/live-well/sleep-and-tiredness/healthy-sleep-tips-for-children/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G01",
+        "title": "Responsive interaction, play and shared reading",
+        "prerequisites": ["C08", "C07"],
+        "stage": "Caregiver: communication and connection",
+        "skills": ["responsive interaction", "play", "shared reading"],
+        "age": "Ages 0–6",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [
+          {
+            "label": "Harvard — five steps for brain-building serve and return",
+            "url": "https://www.youtube.com/watch?v=KNrnZag17Ek"
+          },
+          {
+            "label": "Birmingham NHS — SALT strategy video 1 - developing joint attention (subtitled)",
+            "url": "https://player.vimeo.com/video/710278833?badge=0&autopause=0&player_id=0&app_id=58479"
+          },
+          {
+            "label": "Birmingham NHS — SALT strategy video 2 - supporting language development through play (subtitled)",
+            "url": "https://player.vimeo.com/video/710279184?badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        ],
+        "readings": [
+          {
+            "label": "NHS — help your baby learn to talk",
+            "url": "https://www.nhs.uk/baby/babys-development/play-and-learning/help-your-baby-learn-to-talk/"
+          },
+          {
+            "label": "Harvard — five steps for serve and return",
+            "url": "https://developingchild.harvard.edu/resources/videos/how-to-5-steps-for-brain-building-serve-and-return/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G02",
+        "title": "Support speech sounds and stammering respectfully",
+        "prerequisites": ["C08", "C07"],
+        "stage": "Caregiver: communication and connection",
+        "skills": ["speech sounds", "fluency", "listening", "referral"],
+        "age": "Ages 2–18",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [
+          {
+            "label": "Birmingham NHS — Speech Sound Difficulty",
+            "url": "https://player.vimeo.com/video/409715633?badge=0&autopause=0&player_id=0&app_id=58479"
+          },
+          {
+            "label": "Birmingham NHS — Children Who Stammer",
+            "url": "https://player.vimeo.com/video/409712467?h=a9c0835d01&badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — speech sound disorders",
+            "url": "https://www.asha.org/public/speech/disorders/speech-sound-disorders/"
+          },
+          {
+            "label": "ASHA — stuttering",
+            "url": "https://www.asha.org/public/speech/disorders/stuttering/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G03",
+        "title": "Support communication with AAC",
+        "prerequisites": ["C08", "C07", "C11"],
+        "stage": "Caregiver: communication and connection",
+        "skills": ["AAC", "communication access", "partner support"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [
+          {
+            "label": "Birmingham NHS — SALT strategy video 6 - using a communication board (subtitled)",
+            "url": "https://player.vimeo.com/video/710298261?badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — AAC for families",
+            "url": "https://www.asha.org/public/speech/disorders/aac/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G04",
+        "title": "Multilingual homes and cultural responsiveness",
+        "prerequisites": ["C08", "C11"],
+        "stage": "Caregiver: communication and connection",
+        "skills": ["multilingual development", "language difference", "family language"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [],
+        "readings": [
+          {
+            "label": "ASHA — learning more than one language",
+            "url": "https://www.asha.org/public/speech/development/learning-more-than-one-language/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G05",
+        "title": "Everyday routines and independence",
+        "prerequisites": ["C09", "C07", "C12"],
+        "stage": "Caregiver: participation and school",
+        "skills": ["task analysis", "dressing", "self-care", "participation"],
+        "age": "Ages 3–18",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [
+          {
+            "label": "Croydon NHS — Workshop 2: everyday-activity skill modules",
+            "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Croydon NHS — Building Independence in Everyday Activities",
+            "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G06",
+        "title": "Understand sensory needs and adapt environments",
+        "prerequisites": ["C09", "C10", "C12"],
+        "stage": "Caregiver: participation and school",
+        "skills": ["sensory preferences", "environment", "comfort", "review"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [
+          {
+            "label": "Croydon NHS — Workshop 1: sensory-processing modules",
+            "url": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Croydon NHS — Sensory Processing and How It Impacts on Everyday Activities",
+            "url": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G07",
+        "title": "Co-regulation and positive behavioral support",
+        "prerequisites": ["C10", "C07", "C12"],
+        "stage": "Caregiver: participation and school",
+        "skills": ["co-regulation", "predictability", "communication", "dignity"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [
+          {
+            "label": "IRIS — Behavioral Principles: Challenge video, then Page 2 ABC Model",
+            "url": "https://iris.peabody.vanderbilt.edu/module/bp/challenge/"
+          },
+          {
+            "label": "Birmingham NHS — SALT strategy video 3 - now and next (subtitled)",
+            "url": "https://player.vimeo.com/video/710279541?badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        ],
+        "readings": [
+          {
+            "label": "IRIS — The ABC Model",
+            "url": "https://iris.peabody.vanderbilt.edu/module/bp/cresource/q1/p02/"
+          },
+          {
+            "label": "NICE CG170 — support and management; read the named section for this topic",
+            "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G08",
+        "title": "School communication, literacy and friendships",
+        "prerequisites": ["C04", "C08", "C11"],
+        "stage": "Caregiver: participation and school",
+        "skills": ["school collaboration", "literacy", "peer access"],
+        "age": "Ages 6–12",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [
+          {
+            "label": "Birmingham NHS — Language Needs at School Age",
+            "url": "https://player.vimeo.com/video/409713397?h=4e9045d35e&badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — spoken language disorders Practice Portal",
+            "url": "https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/"
+          },
+          {
+            "label": "Birmingham NHS — Language Needs at School Age (video and service guidance)",
+            "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. The ASHA Spoken Language Disorders professional portal focuses on ages 3–21 using oral communication; it is not a complete infant assessment or AAC protocol."
+      },
+      {
+        "id": "G09",
+        "title": "Support adolescent autonomy and daily planning",
+        "prerequisites": ["C05", "C07", "C10", "C11"],
+        "stage": "Caregiver: adolescence, teamwork and portfolio",
+        "skills": ["autonomy", "planning", "puberty", "transition"],
+        "age": "Ages 12–18",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [],
+        "readings": [
+          {
+            "label": "NIMH — The Teen Brain",
+            "url": "https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know"
+          },
+          {
+            "label": "CDC — Essentials for Parenting Teens",
+            "url": "https://www.cdc.gov/parenting-teens/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G10",
+        "title": "Mental health, loss and caregiver well-being",
+        "prerequisites": ["C10", "C12", "C07"],
+        "stage": "Caregiver: adolescence, teamwork and portfolio",
+        "skills": ["anxiety", "grief", "support", "caregiver well-being"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [
+          {
+            "label": "NIMH — Facebook Live: Childhood Irritability",
+            "url": "https://www.youtube.com/watch?v=t176yeEdVMM"
+          },
+          {
+            "label": "NIMH — Mental Health Minute: Stress and Anxiety in Adolescents ",
+            "url": "https://www.youtube.com/watch?v=wr4N-SdekqY"
+          },
+          {
+            "label": "NIMH — Mental Health Minute: Attention-Deficit/Hyperactivity Disorder",
+            "url": "https://www.youtube.com/watch?v=-j2PqoFCzX0"
+          }
+        ],
+        "readings": [
+          {
+            "label": "NHS — anxiety disorders in children",
+            "url": "https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/anxiety-disorders-in-children/"
+          },
+          {
+            "label": "NHS — children and bereavement",
+            "url": "https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/children-and-bereavement/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G11",
+        "title": "Work with schools and a multidisciplinary team",
+        "prerequisites": ["C06", "C07", "G03", "G05", "G07"],
+        "stage": "Caregiver: adolescence, teamwork and portfolio",
+        "skills": ["care coordination", "goals", "appointments", "school support"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [],
+        "readings": [
+          {
+            "label": "NICE CG170 — support and management; read the named section for this topic",
+            "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations"
+          },
+          {
+            "label": "WHO — Caregiver Skills Training introduction (programme scope: ages 2–9)",
+            "url": "https://www.who.int/publications/i/item/9789240048836"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "G12",
+        "title": "Caregiver capstone: a fictional support portfolio",
+        "prerequisites": ["G01", "G02", "G03", "G04", "G05", "G06", "G07", "G08", "G09", "G10", "G11"],
+        "stage": "Caregiver: adolescence, teamwork and portfolio",
+        "skills": ["portfolio", "family priorities", "safe boundaries", "review"],
+        "age": "Ages 0–18",
+        "tracks": ["caregiver"],
+        "audienceLabel": "Caregiver education",
+        "videos": [],
+        "readings": [
+          {
+            "label": "WHO — Caregiver Skills Training introduction (programme scope: ages 2–9)",
+            "url": "https://www.who.int/publications/i/item/9789240048836"
+          },
+          {
+            "label": "UNICEF — child rights and participation",
+            "url": "https://www.unicef.org/child-rights-convention/convention-text-childrens-version"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P01",
+        "title": "Anatomy, physiology and neurodevelopment bridge",
+        "prerequisites": ["C06", "C08", "C09", "C12"],
+        "stage": "Professional: scientific foundations",
+        "skills": ["anatomy", "hearing", "motor systems", "neurodevelopment"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "UBC eNunciate — articulation of consonants",
+            "url": "https://www.youtube.com/watch?v=dfoRdKuPF9I"
+          },
+          {
+            "label": "UBC eNunciate — articulation of vowels",
+            "url": "https://www.youtube.com/watch?v=u7jQ8FELbIo"
+          }
+        ],
+        "readings": [
+          {
+            "label": "UBC eNunciate — speech production demonstrations",
+            "url": "https://enunciate.arts.ubc.ca/"
+          },
+          {
+            "label": "ASHA — hearing loss in children",
+            "url": "https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders"
+          },
+          {
+            "label": "OpenStax — Anatomy and Physiology 2e: study respiratory, nervous, muscular and head/neck systems in the contents",
+            "url": "https://openstax.org/details/books/anatomy-and-physiology-2e"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P02",
+        "title": "Research methods, statistics and evidence quality",
+        "prerequisites": ["C01", "C07"],
+        "stage": "Professional: scientific foundations",
+        "skills": ["PICO", "study design", "effect size", "critical appraisal"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "ASHA — EBP Basics and Tools for Practicing Clinicians: seven-part video module; CE credit is a separate paid option",
+            "url": "https://www.asha.org/research/ebp/evidence-based-decision-making-micro-course-series/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — evidence-based practice and decision-making tools",
+            "url": "https://www.asha.org/Research/EBP/"
+          },
+          {
+            "label": "Cochrane — understanding evidence",
+            "url": "https://www.cochrane.org/evidence"
+          },
+          {
+            "label": "Cochrane Evidence Essentials — Modules 1–4, evidence, trials and reviews (free account required)",
+            "url": "https://www.cochrane.org/learn/courses-and-resources/evidence-essentials"
+          },
+          {
+            "label": "OpenIntro Statistics — data, descriptive statistics, probability and inference chapters, with published exercises (free PDF option)",
+            "url": "https://www.openintro.org/book/os/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. Cochrane examples include adult health scenarios; use them for research-method concepts, not as pediatric treatment protocols."
+      },
+      {
+        "id": "P03",
+        "title": "Assessment principles, measurement and cultural validity",
+        "prerequisites": ["P01", "P02", "C11"],
+        "stage": "Professional: scientific foundations",
+        "skills": ["reliability", "validity", "functional assessment", "cultural bias"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [],
+        "readings": [
+          {
+            "label": "ASHA — assessment tools, techniques and data sources",
+            "url": "https://www.asha.org/practice-portal/resources/assessment-tools-techniques-and-data-sources/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P04",
+        "title": "Speech-language assessment and differential reasoning",
+        "prerequisites": ["P03", "C08"],
+        "stage": "Professional: speech, language and AAC",
+        "skills": ["language samples", "differential reasoning", "hearing", "scope"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [],
+        "readings": [
+          {
+            "label": "ASHA — spoken language disorders Practice Portal",
+            "url": "https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/"
+          },
+          {
+            "label": "ASHA — multilingual service delivery",
+            "url": "https://www.asha.org/practice-portal/professional-issues/multilingual-service-delivery/"
+          },
+          {
+            "label": "ASHA — Early Intervention (birth–3): professional process and family-centred scope",
+            "url": "https://www.asha.org/practice-portal/professional-issues/early-intervention/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. The ASHA Spoken Language Disorders professional portal focuses on ages 3–21 using oral communication; it is not a complete infant assessment or AAC protocol."
+      },
+      {
+        "id": "P05",
+        "title": "Language, literacy and communication intervention planning",
+        "prerequisites": ["P04", "P02", "C11"],
+        "stage": "Professional: speech, language and AAC",
+        "skills": ["goals", "language", "literacy", "outcome review"],
+        "age": "Ages 3–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [],
+        "readings": [
+          {
+            "label": "ASHA — spoken language disorders Practice Portal",
+            "url": "https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/"
+          },
+          {
+            "label": "ASHA — written language disorders",
+            "url": "https://www.asha.org/practice-portal/clinical-topics/written-language-disorders/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. The ASHA Spoken Language Disorders professional portal focuses on ages 3–21 using oral communication; it is not a complete infant assessment or AAC protocol."
+      },
+      {
+        "id": "P06",
+        "title": "Speech sound, motor speech, fluency and swallowing boundaries",
+        "prerequisites": ["P04", "P01", "C12"],
+        "stage": "Professional: speech, language and AAC",
+        "skills": ["speech disorders", "fluency", "motor speech", "swallowing referral"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "Birmingham NHS — Speech Sound Difficulty",
+            "url": "https://player.vimeo.com/video/409715633?badge=0&autopause=0&player_id=0&app_id=58479"
+          },
+          {
+            "label": "Birmingham NHS — Children Who Stammer",
+            "url": "https://player.vimeo.com/video/409712467?h=a9c0835d01&badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — speech sound disorders: articulation and phonology",
+            "url": "https://www.asha.org/practice-portal/clinical-topics/articulation-and-phonology/"
+          },
+          {
+            "label": "ASHA — childhood apraxia of speech",
+            "url": "https://www.asha.org/practice-portal/clinical-topics/childhood-apraxia-of-speech/"
+          },
+          {
+            "label": "ASHA — stuttering, cluttering and fluency",
+            "url": "https://www.asha.org/practice-portal/clinical-topics/fluency-disorders/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P07",
+        "title": "AAC assessment, access and communication partnerships",
+        "prerequisites": ["P03", "C08", "C11"],
+        "stage": "Professional: speech, language and AAC",
+        "skills": ["AAC", "feature matching", "access", "partner training"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "Birmingham NHS — SALT strategy video 6 - using a communication board (subtitled)",
+            "url": "https://player.vimeo.com/video/710298261?badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — AAC Practice Portal: access, assessment and partners",
+            "url": "https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P08",
+        "title": "OT occupational profiles and activity analysis",
+        "prerequisites": ["P03", "C09"],
+        "stage": "Professional: occupational participation",
+        "skills": ["occupational profile", "activity analysis", "participation"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "Croydon NHS — Workshop 2 introductory and task-analysis modules",
+            "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+          }
+        ],
+        "readings": [
+          {
+            "label": "AOTA — occupational profile template",
+            "url": "https://www.aota.org/practice/practice-essentials/documentation/occupational-profile"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P09",
+        "title": "Motor skills, coordination and accessible participation",
+        "prerequisites": ["P08", "P01", "C11"],
+        "stage": "Professional: occupational participation",
+        "skills": ["motor learning", "coordination", "adaptation", "outcomes"],
+        "age": "Ages 3–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "Croydon NHS — Workshop 2 foundation-skills modules",
+            "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+          }
+        ],
+        "readings": [
+          {
+            "label": "RCOT — occupational therapy and play practice guideline",
+            "url": "https://www.rcot.co.uk/explore-resources/children-young-people-families/play-practice-guideline"
+          },
+          {
+            "label": "Croydon NHS — Building Independence in Everyday Activities",
+            "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P10",
+        "title": "Sensory evidence and occupation-centred reasoning",
+        "prerequisites": ["P08", "P02", "C10", "C12"],
+        "stage": "Professional: occupational participation",
+        "skills": ["sensory assessment", "evidence limits", "participation", "review"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "Croydon NHS — Workshop 1: introductory context (critical appraisal required)",
+            "url": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10"
+          }
+        ],
+        "readings": [
+          {
+            "label": "AOTA — Practice Smart recommendations",
+            "url": "https://www.aota.org/practice/practice-essentials/evidencebased-practiceknowledge-translation/practice-smart"
+          },
+          {
+            "label": "ASHA — evidence-based practice and decision-making tools",
+            "url": "https://www.asha.org/Research/EBP/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P11",
+        "title": "Behavioral principles and functional assessment",
+        "prerequisites": ["P03", "C10", "C07", "C12"],
+        "stage": "Professional: behavioral support and mental health",
+        "skills": ["ABC observations", "functional hypotheses", "measurement", "ethics"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "IRIS — Behavioral Principles: Challenge video",
+            "url": "https://iris.peabody.vanderbilt.edu/module/bp/challenge/"
+          },
+          {
+            "label": "IRIS — Functional Behavioral Assessment (Elementary): Challenge video",
+            "url": "https://iris.peabody.vanderbilt.edu/module/fba-elem/challenge/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "IRIS — Behavioral Principles: complete this module before FBA",
+            "url": "https://iris.peabody.vanderbilt.edu/module/bp/"
+          },
+          {
+            "label": "IRIS — Functional Behavioral Assessment (Elementary)",
+            "url": "https://iris.peabody.vanderbilt.edu/module/fba-elem/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. The assigned IRIS FBA module is explicitly Elementary; its study principles do not replace age-appropriate early-years or secondary-school professional training."
+      },
+      {
+        "id": "P12",
+        "title": "Support plans, single-case designs and meaningful outcomes",
+        "prerequisites": ["P11", "P02", "C11"],
+        "stage": "Professional: behavioral support and mental health",
+        "skills": ["support planning", "single-case design", "generalisability", "quality of life"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [],
+        "readings": [
+          {
+            "label": "What Works Clearinghouse — standards and procedures handbooks (single-case design sections)",
+            "url": "https://ies.ed.gov/ncee/wwc/Handbooks"
+          },
+          {
+            "label": "NICE CG170 — support and management; read the named section for this topic",
+            "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P13",
+        "title": "Mental health, trauma awareness and referral networks",
+        "prerequisites": ["P03", "C10", "C12", "C07"],
+        "stage": "Professional: behavioral support and mental health",
+        "skills": ["mental health", "trauma awareness", "scope", "referral"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "NIMH — Facebook Live: Childhood Irritability",
+            "url": "https://www.youtube.com/watch?v=t176yeEdVMM"
+          },
+          {
+            "label": "NIMH — Mental Health Minute: Stress and Anxiety in Adolescents ",
+            "url": "https://www.youtube.com/watch?v=wr4N-SdekqY"
+          },
+          {
+            "label": "NIMH — Mental Health Minute: Attention-Deficit/Hyperactivity Disorder",
+            "url": "https://www.youtube.com/watch?v=-j2PqoFCzX0"
+          }
+        ],
+        "readings": [
+          {
+            "label": "NIMH — child and adolescent mental health",
+            "url": "https://www.nimh.nih.gov/health/topics/child-and-adolescent-mental-health"
+          },
+          {
+            "label": "NICE — ADHD diagnosis and management",
+            "url": "https://www.nice.org.uk/guidance/ng87/chapter/Recommendations"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P14",
+        "title": "Documentation, supervision and professional accountability",
+        "prerequisites": ["P03", "C07", "C11"],
+        "stage": "Professional: accountable practice and research",
+        "skills": ["documentation", "supervision", "ethics", "licensure"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [],
+        "readings": [
+          {
+            "label": "HCPC — standards of conduct, performance and ethics",
+            "url": "https://www.hcpc-uk.org/standards/standards-of-conduct-performance-and-ethics/"
+          },
+          {
+            "label": "ASHA — SLP certification standards (check current effective version)",
+            "url": "https://www.asha.org/certification/2020-slp-certification-standards/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P15",
+        "title": "Assistive technology, AI and child-data ethics",
+        "prerequisites": ["P02", "P07", "P14"],
+        "stage": "Professional: accountable practice and research",
+        "skills": ["assistive technology", "AI limits", "privacy", "accessibility"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "UNICEF — Video accompanying the linked guidance",
+            "url": "https://www.youtube.com/watch?v=BwCVJCymmt8"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — AAC Practice Portal: access, assessment and partners",
+            "url": "https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication"
+          },
+          {
+            "label": "UNICEF — AI policy guidance for children",
+            "url": "https://www.unicef.org/innocenti/reports/policy-guidance-ai-children"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      },
+      {
+        "id": "P16",
+        "title": "Professional capstone and graduate research proposal",
+        "prerequisites": ["P05", "P06", "P07", "P09", "P10", "P12", "P13", "P14", "P15"],
+        "stage": "Professional: accountable practice and research",
+        "skills": ["interprofessional reasoning", "portfolio", "research proposal", "training plan"],
+        "age": "Ages 0–18",
+        "tracks": ["professional"],
+        "audienceLabel": "Professional preparation — supervised application required",
+        "videos": [
+          {
+            "label": "ASHA — Troubleshooting Common Obstacles to External Scientific Evidence: named microcourse on this page; CE credit has separate terms",
+            "url": "https://www.asha.org/research/ebp/evidence-based-decision-making-micro-course-series/"
+          }
+        ],
+        "readings": [
+          {
+            "label": "ASHA — evidence-based practice and decision-making tools",
+            "url": "https://www.asha.org/Research/EBP/"
+          },
+          {
+            "label": "HCPC — approved professional programmes",
+            "url": "https://www.hcpc-uk.org/education/approved-programmes/"
+          }
+        ],
+        "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+        "pass_criteria": "Answer every part of the fictional case task; separate observation from inference; include the child’s preferences, relevant age and context, a proportionate next step and the limits of your role. Do not diagnose, prescribe or test an intervention on a child.",
+        "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson."
+      }
+    ]
+  }
+}

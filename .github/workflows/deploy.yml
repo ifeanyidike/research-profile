@@ -9,6 +9,10 @@ on:
       - "assets/**"
       - "cyber-studio/**"
       - "_cyber/**"
+      - "voice-ai-studio/**"
+      - "child-development-studio/**"
+      - "learning-studio/**"
+      - "_learning/**"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
@@ -60,6 +64,11 @@ jobs:
 
       - name: Check Cyber Studio
         run: node --test _cyber/tests/*.test.js
+
+      - name: Check Voice AI and Child Development Studios
+        run: |
+          python3 _learning/build.py --check
+          node --test _learning/tests/*.test.js
 
       - name: Install and Build 🔧
         run: |

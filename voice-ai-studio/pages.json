@@ -1,0 +1,159 @@
+{
+  "overview": {
+    "title": "Speech, audio and conversational voice AI",
+    "lead": "Voice AI Studio follows a broader foundation than building a talking chatbot: the signal, the models and the real-time system all matter.",
+    "sections": [
+      {
+        "title": "The field in plain language",
+        "text": "Speech recognition maps audio to text or other representations. Speech synthesis generates audio from linguistic or other conditioning. Diarisation groups who spoke when. Enhancement, separation and speaker-related tasks solve other audio problems. Conversational systems combine some of these with dialogue, tools, transport and application rules.",
+        "links": [
+          {
+            "label": "Edinburgh speech.zone — public course collection",
+            "url": "https://speech.zone/courses/"
+          },
+          {
+            "label": "Stanford CS224S — curriculum and prerequisites",
+            "url": "https://web.stanford.edu/class/cs224s/index.html"
+          }
+        ]
+      },
+      {
+        "title": "Why broaden beyond “voice agents”?",
+        "text": "A library of API recipes can help you start, but deeper work requires acoustics, phonetics, sampling, signal representations, probability, learning and experimental reasoning. These foundations help you investigate errors, read research and adapt when products or libraries change. The studio therefore covers Speech, Audio & Voice AI while keeping a clear conversational-systems destination.",
+        "links": []
+      },
+      {
+        "title": "Your route from fundamentals",
+        "text": "There are 44 topics in eight stages: programming; maths/scientific thinking; speech/audio; machine learning; recognition/perception; generation; conversational engineering; research and independent work. Every topic has explicit prerequisites, authored explanations, a worked example, a complete exercise and an independent task with expected reasoning. Readiness follows your self-assessed passes.",
+        "links": []
+      },
+      {
+        "title": "Build and research roles",
+        "text": "The skills connect to speech/audio ML, conversational product engineering, real-time media, language technology, accessibility, data quality, research and reliability/security. A portfolio should demonstrate the specific work you can defend. Course completion alone does not guarantee employment or research competence.",
+        "links": []
+      },
+      {
+        "title": "What the hub runs",
+        "text": "The website teaches and records progress. It does not record your microphone, place calls, generate voices, train models, execute code or run provider evaluations. Native exercises use supplied numbers, fictional text, deterministic event traces and design artefacts. Some external optional assignments require accounts, compute or public submissions; inspect their rights, cost and requirements first.",
+        "links": []
+      },
+      {
+        "title": "From foundations to research",
+        "text": "The final topics cover primary-paper critique, full-duplex architectures, a deterministic system simulator and an original proposal. Graduate work needs deeper specialist coursework, sustained projects, feedback and, where applicable, ethics review and supervision. The studio is independent preparation, not an accredited degree.",
+        "links": [
+          {
+            "label": "CMU — public 11-785 lectures",
+            "url": "https://deeplearning.cs.cmu.edu/S22/"
+          },
+          {
+            "label": "Hugging Face — Audio Course scope",
+            "url": "https://huggingface.co/learn/audio-course/chapter0/introduction"
+          }
+        ]
+      }
+    ],
+    "eyebrow": "UNDERSTAND THE FIELD"
+  },
+  "method": {
+    "title": "How to learn here",
+    "lead": "Build an explanation you can defend, then practise, assess and revisit it.",
+    "sections": [
+      {
+        "title": "The learning loop",
+        "text": "Read the native explanation and prerequisite bridge. Work through the supplied example before revealing its explanation. Follow the exact readings/videos in order. Complete the practical task, attempt the independent assessment without the solution, and record evidence in your own words. Teach the idea to a partner and invite a challenge.",
+        "links": []
+      },
+      {
+        "title": "Prerequisites and honest passes",
+        "text": "You may explore any lesson. A recorded pass requires prerequisite passes, practice confirmation, a correct retrieval answer in the current session, confirmation of the criteria and at least 40 characters of assessment evidence. The website records your judgement; it does not automatically grade external work or establish competence.",
+        "links": []
+      },
+      {
+        "title": "Recall after a delay",
+        "text": "After a pass, review after two days, then seven days after that review, then thirty days after the next. Recall first, check the source and try a changed example. If a foundation remains unclear, follow its prerequisite links rather than treating a progress percentage as proof of understanding.",
+        "links": []
+      },
+      {
+        "title": "Depth and limits",
+        "text": "The final stages introduce graduate-level concepts and research preparation. Short native lessons do not replace full courses in calculus, linear algebra, probability, signal processing and machine learning. Follow the linked depth material and complete substantial projects with appropriate feedback.",
+        "links": []
+      },
+      {
+        "title": "How long the route takes",
+        "text": "There are 44 topics. At one fully completed topic per day, the sequence is 44 study days. Watching a short clip is not a complete topic: readings, exercises and assessment can require several sessions, especially in maths and advanced work. Delayed review and deeper projects add time; the calendar count is not a mastery promise.",
+        "links": []
+      },
+      {
+        "title": "Sources and missing public videos",
+        "text": "The map combines Harvard CS50P, MIT OpenCourseWare/Missing Semester, Edinburgh speech.zone, CMU 11-785, primary speech papers, the Hugging Face Audio Course and official engineering documentation. Public clips are linked exactly where verified. Some topics still have a clearly marked public-video gap. Related foundation clips are labelled as such, rather than represented as complete coverage of a newer model.\n\nThe inventory was researched on 30 October 2026. Providers control captions, accounts, fees, availability and embedding. A linked source is not mirrored here or endorsed by its institution. Where a matched public video has not been verified, that gap is displayed and the lesson/readings remain available.",
+        "links": []
+      },
+      {
+        "title": "Your account and privacy",
+        "text": "Use your existing site learning account or create your own through the account panel. Each studio has separate progress storage, local cache, backup format and auth session. Guest work stays separate when you sign in; export then deliberately import if you want to move it.\n\nDo not save personal recordings, private transcripts, credentials or confidential work data. Voice can be identifying even when filenames omit names. Use supplied fictional/synthetic material in the hub and review rights before using external datasets or services.\n\nUse your own browser profile on shared devices. Export backups regularly. Clearing browser data removes unsynced work. Videos connect to YouTube only when loaded; provider links open externally.",
+        "links": []
+      },
+      {
+        "title": "What completion means",
+        "text": "A self-assessed learning record describes the work you performed. It is not an accredited qualification, institutional exam credit or independent professional certification. The Qualifications page explains formal routes and their different requirements.",
+        "links": []
+      }
+    ],
+    "eyebrow": "UNDERSTAND · APPLY · EXPLAIN · REVIEW"
+  },
+  "qualifications": {
+    "title": "Learning records, portfolios and further study",
+    "lead": "Choose an external award only when its scope and requirements match your goal. There is no automatic credential from watching linked university lectures.",
+    "sections": [
+      {
+        "title": "What this studio records",
+        "text": "Self-assessed topic passes, delayed reviews, notes and practical/assessment evidence belong to your workspace. They are not an accredited degree, a provider-issued certificate or a guarantee of professional mastery. Export your portfolio and explain exactly which work you completed.",
+        "links": []
+      },
+      {
+        "title": "Hugging Face Audio Course certificate",
+        "text": "The provider’s published route offers a completion certificate after three of four hands-on assignments, and an excellence certificate after all four. The certificate process is listed as free. The assignments have their own criteria and can require training, model uploads and a public demo, so compute, rights, privacy and submission requirements need review. Hub passes do not satisfy those assignments automatically.",
+        "links": [
+          {
+            "label": "Hugging Face — exact certificate requirements",
+            "url": "https://huggingface.co/learn/audio-course/chapter8/certification"
+          }
+        ]
+      },
+      {
+        "title": "University courses and degrees",
+        "text": "Harvard, MIT, Stanford, CMU and Edinburgh make different kinds of material public. Public access does not make you enrolled or award credit. For a formal degree, verify current admissions, prerequisites, assessments, supervision, fees and recognition directly with the institution. Stanford CS224S 2025 recordings are restricted; its public syllabus is a depth reference, not an open-video promise.",
+        "links": [
+          {
+            "label": "Stanford — CS224S access and prerequisites",
+            "url": "https://web.stanford.edu/class/cs224s/index.html"
+          },
+          {
+            "label": "Edinburgh — Speech and Language Processing programme",
+            "url": "https://study.ed.ac.uk/programmes/postgraduate-taught/290-speech-and-language-processing"
+          },
+          {
+            "label": "CMU LTI — academic programmes",
+            "url": "https://lti.cs.cmu.edu/academics/"
+          }
+        ]
+      },
+      {
+        "title": "Build a defensible portfolio",
+        "text": "Include a documented preprocessing example, a recognition/decoding explanation, a critical paper brief, a state/latency/privacy design and the deterministic simulator from V43. Separate synthetic tests from real provider integration evidence. Never fabricate scores or publish recordings without appropriate rights and consent.",
+        "links": []
+      },
+      {
+        "title": "Pick a specialism before buying more courses",
+        "text": "Possible directions include ASR/multilingual learning, TTS/codecs, enhancement, human conversation, accessible interfaces and reliable real-time systems. Use V44 to map missing mathematics, signal processing and research prerequisites. A generic cloud credential may cover infrastructure, but should not be represented as proof of speech-model research competence.",
+        "links": []
+      },
+      {
+        "title": "Details checked 30 October 2026",
+        "text": "Issuers control current eligibility, fees, assessment, public-submission rules and availability. Confirm the current official requirements before committing time or money. No listed institution endorses this independent studio.",
+        "links": []
+      }
+    ],
+    "eyebrow": "EVIDENCE, AWARDS AND NEXT STEPS"
+  }
+}

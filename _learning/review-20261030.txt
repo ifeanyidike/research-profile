@@ -1,0 +1,81 @@
+Outside-view review and evidence ledger — 30 October 2026
+=======================================================
+
+Reviewed scope: two new learning apps, shared runtime, source maps, original
+teaching, dedicated progress SQL, directory navigation and offline CI checks.
+Cyber runtime/content and Algo Studio are unchanged; Cyber's navigation entry
+now lives in the four-studio directory.
+
+Findings corrected
+------------------
+1. Global previous/next links crossed child learning paths. The lesson consumer
+   now selects the active path's sequence; browser checks assert C12 -> P01 in
+   professional mode and no next lesson after G12 in caregiver mode.
+2. Empty stages and global stage numbers confused path selection. Empty cards
+   are suppressed and each selected path is numbered consecutively.
+3. Child wordmark clipped and squeezed its mark. A compact childstudio wordmark
+   and non-shrinking mark fit; narrow headers use ellipsis. Desktop/mobile/theme
+   screenshots were inspected, and overflow assertions pass.
+4. Several sources returned soft 404s or unrelated content. Corrected ASHA,
+   librosa, SpeechBrain, LiveKit and Kyutai paths; Edinburgh programme 277 was
+   Management, replaced with verified Speech and Language Processing 290.
+5. The async reading assumed JavaScript. Replaced it with Python asyncio and
+   added an explicit native bridge; added a trigonometry bridge and statistics
+   depth source. Restricted recordings are not advertised as public videos.
+6. An empty-notebook URL retained an uninterpolated expression. Corrected and
+   checked routes for malformed links.
+7. Copied SQL resource checks were weaker than browser validation. Both new
+   validators now reject non-array/invalid resource checklists; local SQL confirms.
+
+Contract | sequence | observable outcome | evidence | status
+----------------------------------------------------------
+Prerequisite closure | all 84 topics and both child subsets | no missing or
+cross-path prerequisite IDs | build --check and offline tests | verified.
+Native content | all topics x five sections | examples, solutions, assessments,
+sources and notes render | 420-section browser sweep | verified structurally.
+Path choice | caregiver -> professional -> caregiver | 24/28 topics, 5/7 stages,
+correct numbering and path-specific pagination | browser QA | verified.
+Data namespaces | same account and even same synthetic ID in both studios |
+no shared local record, wrong backup rejected | offline + UI | verified.
+Counterexample | temporary shared-prefix mutation | isolation assertion fails
+for the intended leaked value | /tmp mutation log | verified test sensitivity.
+Sync merge | two mocked devices and reordered JSONB-like objects | independent
+fields converge and unchanged sync does not upload | offline tests | verified
+with mocked Supabase I/O; hosted service remains uncovered.
+RLS | synthetic identities, own/other/anonymous access | other access denied;
+newer notes survive independent practice update | disposable PostgreSQL 16 and
+transactional verification SQL | verified locally; auth.uid was emulated.
+Backup UI | wrong studio then valid synthetic file | rejection before merge,
+destination preview, escaped text preserved | browser QA | verified.
+Progress gate | correct retrieval + practice + evidence then unmet conditions |
+pass records only with requirements; next topic follows | browser QA | verified.
+Navigation | mobile menu, Escape, search, short desktop settings | reachable
+controls and no document overflow | 375x812 / 900x600 checks | verified.
+Dependency construction | real bundled SDK in built guest app | guest UI and
+account form initialise without console errors | browser | verified only as guest.
+Sources | primary pages, metadata, returned titles and soft-404 checks | scope,
+age and access corrections visible | source-review.json | partial verification;
+full playback/captions and future provider availability are not established.
+Clinical scope | fictional cases and role/credential boundaries | no diagnosis,
+prescription or claimed licence from hub progress | source/content inspection |
+educational review only, not independent clinical accreditation or validation.
+Hosted state | intended two tables and two callbacks | installation pending |
+browser tool reports Local browser use is disabled in Work settings | uncovered;
+keep PR draft and do not publish a signed-in-sync claim before verification.
+
+Executed checks
+---------------
+27 isolated offline tests pass (19 existing Cyber + 8 new studio checks).
+Production Docker/Jekyll build passes; full-repository Prettier check passes.
+Browser: 420 lesson sections, 14 information views, both path sequences,
+synthetic pass/notes/import flows, search, themes and responsive navigation.
+Local PostgreSQL RLS/merge verification passes; synthetic progress rolled back,
+remaining row counts zero; disposable container stopped.
+
+Important uncovered work: hosted schema/callback installation and inspection,
+fresh real OAuth/email/recovery and cross-device sign-in flows, every external
+video's actual playback/captions, individual treatment suitability and supervised
+professional competence. No model inference, replay/evaluation harness, live
+telephone call, clinical intervention, email signup or sensitive child-data
+upload was used for validation. The current artefact is a draft, not a claim of
+complete production readiness.
