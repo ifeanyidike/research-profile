@@ -180,3 +180,24 @@ Important limits remain real OAuth/email/recovery/two-device sign-in, complete
 external playback/captions and availability, supervised clinical competence and
 individual suitability. No replay/evaluation workload, provider inference,
 training, live telephone call, email signup or real child-data collection ran.
+
+
+TeX follow-up — release 20261030-3
+---------------------------------
+Twenty-four worked examples now use mathematical prose instead of code blocks.
+Twenty-seven topics contain authored TeX across 38 Learn/Practise/Assess views.
+Fractions, matrices, derivatives, Fourier sums, attention and screening examples
+render with a local, integrity-verified copy of the existing MathJax 3.2.2 pin.
+All 38 math-bearing views were checked with the real renderer: SVG and assistive
+MathML counts match; zero MathJax error nodes. Python examples remain code.
+At a real 375px viewport, the Fourier page has 360px client/scroll width; long
+equations scroll inside their container and ArrowRight moves focused math.
+Child screening math also fits without document overflow. Desktop screenshots
+were inspected. Offline scheduling tests cover navigation while loading,
+serialized in-flight rendering/cleanup, lazy loading and rejection recovery.
+No inference, training, model evaluation or new authentication/DB operation ran.
+A mutation that bypasses the async queue fails the intended overlapping-call
+assertion (2 calls instead of 1). The real implementation passes all 33 offline
+tests. A 900px viewport also has equal document client/scroll widths. Revealed
+matrix solutions render; rapid section switching returns exactly eight equation
+containers without stale math or console errors.

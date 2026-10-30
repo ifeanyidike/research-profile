@@ -289,7 +289,7 @@
       ],
       "study_focus": "Work MIT 18.06 Lecture 1 examples and the accompanying linear-equation material. Explain a dot product, matrix multiplication, orthogonality and axis meanings by hand.",
       "practice": "Recalculate the example for x = [1, 0]. Then write a matrix that turns [left, right] into [left + right, left - right]. Apply it to [3, 1]. Finally explain why a (3, 4) matrix cannot multiply a (5, 1) column vector.",
-      "assessment": "A model receives (8, 50, 40) with batch/time/feature axes. It applies a 12-output linear layer independently at each time step. State the weight shape, output shape, number of weights and number of biases. Explain what would change if time and feature were accidentally swapped.",
+      "assessment": "A model receives \\((8,50,40)\\) with batch/time/feature axes. It applies a 12-output linear layer independently at each time step. State the weight shape, output shape, number of weights and number of biases. Explain what would change if time and feature were accidentally swapped.",
       "practice_links": []
     },
     {
@@ -336,8 +336,8 @@
         "Explain the local nature of a gradient and limits of a single successful update."
       ],
       "study_focus": "Study MIT Sessions 1–3 and 6–11 in Differentiation Part A as needed, completing Problem Set 1 and checking its solutions. Follow the native scalar/partial-derivative examples before the optional CMU network application; revisit that clip after V18.",
-      "practice": "Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate L(w) = (2w − 6)² using the chain rule.",
-      "assessment": "For L(a,b) = (a − 1)² + 2(b + 2)², start at (0,0) with rate 0.1. Compute the gradient, one update and the old/new loss. State why one successful update is not a universal convergence argument.",
+      "practice": "Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate \\(L(w)=(2w-6)^2\\) using the chain rule.",
+      "assessment": "For \\(L(a,b)=(a-1)^2+2(b+2)^2\\), start at (0,0) with rate 0.1. Compute the gradient, one update and the old/new loss. State why one successful update is not a universal convergence argument.",
       "practice_links": []
     },
     {
@@ -612,7 +612,7 @@
         "Name missing plot settings and why a spectrogram alone cannot establish quality."
       ],
       "study_focus": "Watch short-term analysis, Fourier analysis and frequency domain in order. Reproduce the four-point transform; read the HF preprocessing section only as application context, not a Fourier proof.",
-      "practice": "Calculate duration and bin spacing for N = 256 and N = 512 at 16 kHz. Calculate the time between frame starts for a 128-sample hop. Explain which setting you would inspect for a rapid consonant transition and what frequency-detail trade-off you would report.\n\nBefore the plot critique, reproduce the four-point transform for [1,0,-1,0] and then [0,1,0,-1] using the supplied sine/cosine factors. Report real and imaginary parts and explain why equal magnitudes do not mean identical signals.",
+      "practice": "Calculate duration and bin spacing for N = 256 and N = 512 at 16 kHz. Calculate the time between frame starts for a 128-sample hop. Explain which setting you would inspect for a rapid consonant transition and what frequency-detail trade-off you would report.\n\nBefore the plot critique, reproduce the four-point transform for \\([1,0,-1,0]\\) and then \\([0,1,0,-1]\\) using the supplied sine/cosine factors. Report real and imaginary parts and explain why equal magnitudes do not mean identical signals.",
       "assessment": "A report compares two spectrograms without providing sample rate, window length or dB reference and claims one model removes noise. Write a corrected reporting checklist and explain why the images alone cannot establish improved speech quality.",
       "practice_links": []
     },

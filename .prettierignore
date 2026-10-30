@@ -15,3 +15,6 @@ _data/citations.yml
 # Preserve bundled third-party Algo Studio distributions.
 algo-studio/runtime/**
 algo-studio/fonts/OFL.txt
+
+# Preserve unmodified, licensed MathJax distributions.
+learning-studio/vendor/**

@@ -1,0 +1,5 @@
+MathJax 3.2.2, the same pinned major/version already used by this site.
+Official npm package: https://registry.npmjs.org/mathjax/-/mathjax-3.2.2.tgz
+Registry SHA512 integrity verified before extracting these selected assets.
+License: Apache-2.0; see LICENSE. Distributions are unmodified.
+SVG output embeds glyph paths; no remote font service is needed.

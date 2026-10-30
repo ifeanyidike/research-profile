@@ -771,14 +771,16 @@ Start the statistics bridge with a denominator. Six successful opportunities out
 Use an invented nonclinical numerical comparison to understand effect size: if group A changes from mean 4 to 5 and group B from 4 to 4.5, the difference in mean changes is 0.5 score units. Its importance depends on what the score measures. Its uncertainty depends on sampling, variability and design. A p-value concerns compatibility with a specified statistical null model under assumptions; it is not the probability that the null is true or that a particular child will benefit.
 
 Missingness can change a conclusion. If ten fictional participants enter and six complete follow-up, a mean for those six is a completer result, not a ten-person result. Ask why four are missing and whether burden, adverse experiences or lack of benefit influenced follow-up. Do not invent their outcomes. Complete the assigned introductory statistics and evidence-appraisal exercises before interpreting advanced clinical studies.
-EXAMPLE:: Fictional group outcome scores:
-Group A before: [2,4,6]; after: [3,5,7].
-Mean before = 4; mean after = 5; mean change = +1.
-Group B before: [2,4,6]; after: [3,5,7].
-Mean change = +1 as well.
+EXAMPLE:: Fictional group A scores are \([2,4,6]\) before and \([3,5,7]\) after. Group B has exactly the same supplied values.
 
-An A-only before/after improvement does not show an advantage over B.
-The score's meaning and study design remain unspecified.
+\[\begin{aligned}
+\overline x_{A,\text{before}}&=\frac{2+4+6}{3}=4,\\
+\overline x_{A,\text{after}}&=\frac{3+5+7}{3}=5,\\
+\Delta\overline x_A&=5-4=1,\\
+\Delta\overline x_A-\Delta\overline x_B&=1-1=0.
+\end{aligned}\]
+
+A-only before/after improvement does not establish an advantage over B. The score's meaning, sampling and study design remain unspecified.
 EXPLANATION:: Improvement over time can happen without an intervention-specific advantage. These six fictional observations cannot establish an effect, significance or individual suitability. The example teaches comparison logic and denominator clarity only.
 PITFALL:: Do not equate a certificate, expert testimonial or before/after video with strong causal evidence. Expertise and lived experience matter, but claims about effects need methods appropriate to those claims.
 EXERCISE:: Turn “Does this help children?” into two focused questions: one about a meaningful outcome and one about acceptability or experience. List suitable evidence types, major bias questions and the person's/family's role. Calculate the supplied means independently.
@@ -790,6 +792,7 @@ CORRECT:: Observed change under that setup, with alternative explanations still 
 WRONG1:: Guaranteed causal benefit for every child.
 WRONG2:: Proof that missing follow-up data cannot matter.
 FEEDBACK:: Change and causal attribution are different claims. Evidence-based decisions also include expertise, values, feasibility and individual context.
+EXAMPLE_FORMAT:: math
 
 ID:: P03
 BRIDGE:: P01 supplies scientific prerequisites, P02 evidence/statistics and C11 cultural inclusion. This topic explains measurement concepts. It does not authorise administering restricted tests or interpreting real clinical scores independently.
@@ -803,16 +806,26 @@ Triangulate information. A classroom observation, family history and test result
 
 Reliability concerns consistency of a measurement process; validity concerns the interpretation/use supported by evidence. A scale that consistently adds five units can be repeatable but inaccurate. A reliable writing-speed measure can still be an invalid basis for a claim about story comprehension. Neither a familiar tool nor a numerical score automatically establishes an appropriate decision.
 
-Work a fictional screening table, not a child assessment. A reference classification has 20 positive and 80 negative cases. A screen flags 16 of the 20 and 8 of the 80. Sensitivity is 16/20 = 80%; specificity is 72/80 = 90%. Of the 24 flagged cases, 16 match the reference, so positive predictive value is 16/24 ≈ 66.7%. These answer different questions, and predictive value changes with the case mix. Assume the reference and definitions are fixed for this arithmetic; real reference standards also have limitations.
+Work a fictional screening table, not a child assessment. A reference classification has 20 positive and 80 negative cases. A screen flags 16 of the 20 and 8 of the 80. Sensitivity is \(16/20=80\%\); specificity is \(72/80=90\%\). Of the 24 flagged cases, 16 match the reference, so positive predictive value is \(16/24\approx66.7\%\). These answer different questions, and predictive value changes with the case mix. Assume the reference and definitions are fixed for this arithmetic; real reference standards also have limitations.
 
 A screening flag prompts the relevant next assessment process; it is not itself a diagnosis. Document intended age/population, language, norms, access, changes to procedures and qualified interpretation. An informal translation can provide descriptive information in context while failing to support the original standard-score interpretation. Do not repair that validity problem by adding a confident-looking percentage.
-EXAMPLE:: Fictional measurement problem:
-A speeded handwriting task is used to judge knowledge of a story.
-The pupil accurately explains the story using an accessible mode.
-The handwriting score may reflect output demands as well as knowledge.
+EXAMPLE:: The handwriting-versus-comprehension case illustrates validity: a repeatable writing-speed result does not automatically measure story understanding.
 
-Questions: What interpretation is intended? Which construct is measured?
-What access or motor factors affect the result? What else is needed?
+For a separate, invented 100-case screening table, assume a fixed reference classification:
+
+\[\begin{array}{l|rr}
+&\text{Reference positive}&\text{Reference negative}\\\hline
+\text{Flagged}&16&8\\
+\text{Not flagged}&4&72
+\end{array}\]
+
+\[\begin{aligned}
+\text{Sensitivity}&=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}}=\frac{16}{20}=80\%,\\
+\text{Specificity}&=\frac{\mathrm{TN}}{\mathrm{TN}+\mathrm{FP}}=\frac{72}{80}=90\%,\\
+\text{PPV}&=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FP}}=\frac{16}{24}\approx66.7\%.
+\end{aligned}\]
+
+The denominators answer different questions. This arithmetic does not diagnose a child, establish a valid reference standard or validate an actual screening tool.
 EXPLANATION:: A reliable timing measurement can still be a poor basis for inferring story comprehension. Validity belongs to the proposed interpretation/use, not a permanent all-purpose badge attached to a test.
 PITFALL:: Do not use one score as a complete portrait of a person or claim more precision than the tool supports. Professional interpretation must consider uncertainty, scope, culture and functional context.
 EXERCISE:: Compare three fictional methods for understanding a school participation concern: caregiver interview, classroom observation and standardised task. For each, state purpose, strength, limitation, access issue and who should interpret it. Include an example of a reliable but invalid inference.
@@ -828,6 +841,7 @@ CORRECT:: Yes. Consistency does not establish validity for every proposed use.
 WRONG1:: No. Any repeated number measures every ability accurately.
 WRONG2:: No. Validity and reliability always mean exactly the same thing.
 FEEDBACK:: Reliability concerns consistency; validity concerns justified interpretation and use. Both need context and evidence.
+EXAMPLE_FORMAT:: math
 
 ID:: P04
 BRIDGE:: P03 covers assessment quality and C08 language/communication. Speech-language assessment requires formal training and supervised competence. Here you practise a fictional reasoning framework, not test administration, diagnosis or an individual treatment decision.
@@ -1093,13 +1107,14 @@ Plans need implementation clarity and feasibility. Who is qualified to deliver w
 Read a single-case graph with time on the horizontal axis and a clearly defined outcome/denominator on the vertical axis. Inspect level, trend, variability, immediacy, overlap and consistency across comparable phases. In the supplied [2,3,4] then [5,6,7] series, the increase begins before the phase change, so the boundary alone does not explain it. If available opportunities also rose, raw counts would be even harder to interpret.
 
 Repeated measurement is necessary but not sufficient for a strong single-case causal claim. Designs may arrange repeated demonstrations across phases or stagger changes across settings/behaviours/participants under suitable assumptions. A multiple-baseline design is not simply one baseline per person followed by arbitrary support. Design selection must meet relevant standards, ethics, feasibility and safety. Withdrawing helpful support or engineering distress is not justified by a desire for a clearer graph; this task is a design critique only.
-EXAMPLE:: Fictional weekly participation counts:
-Before support: [2, 3, 4].
-After support: [5, 6, 7].
-Observation: counts increase across both periods.
-Alternative explanation: an existing upward trend continues.
-Missing: opportunities, definition, reliability, other changes,
-child experience and a design supporting causal inference.
+EXAMPLE:: Fictional participation counts are:
+
+\[\begin{aligned}
+\mathbf{y}_{\text{before}}&=[2,3,4],\\
+\mathbf{y}_{\text{after}}&=[5,6,7].
+\end{aligned}\]
+
+Counts already increase before the phase change. Continuing an existing trend is an alternative explanation. Opportunities, outcome definition, reliability, other changes and child experience are missing. These supplied counts do not establish a causal effect.
 EXPLANATION:: The plot would look positive, but its trend begins before the phase change. A label saying intervention started does not establish that it caused the increase. Counts without opportunity denominators can also be misleading.
 PITFALL:: Never withdraw essential communication, safety or care to create an experimental contrast. Research design must operate within ethical and professional requirements, not override them.
 EXERCISE:: Plot the supplied fictional counts and annotate three limits. Add a proposed participation outcome, opportunity denominator and balancing measure that could be considered in a qualified plan. Produce a design critique only, not a protocol to execute.
@@ -1111,6 +1126,7 @@ CORRECT:: A narrow target can improve while communication, comfort or meaningful
 WRONG1:: Only the adult's preferred behaviour count can matter.
 WRONG2:: They allow essential support to be withdrawn without review.
 FEEDBACK:: Outcomes should reflect the person's life and safety, not only a single visible target. Ethical boundaries apply to measurement and intervention.
+EXAMPLE_FORMAT:: math
 
 ID:: P13
 BRIDGE:: P03 covers assessment quality, C10 emotional context, C12 health and C07 safeguarding. Mental-health assessment and therapy require relevant qualifications and supervision. This lesson concerns recognition, collaboration and referral boundaries, not delivering psychotherapy.

@@ -182,32 +182,36 @@ FEEDBACK:: A commit is one part of reproducibility. Inputs, environment and exec
 ID:: V06
 BRIDGE:: V02 used division to convert samples to time. Before studying waves or learning algorithms, practise rearranging equations, tracking units and interpreting powers. Use pencil and paper or an ordinary calculator.
 CONCEPT:: Algebra describes relationships between quantities. Units say what those quantities mean. Powers describe repeated multiplication, and logarithms undo exponentiation. These tools explain audio duration, memory requirements and relative signal levels.
-MECHANISM:: If N = rate × duration, dividing both sides by rate gives duration = N/rate. A logarithm answers an exponent question: log10(1000) = 3 because 10 cubed is 1000. Decibels express a ratio on a logarithmic scale; the formula depends on whether the ratio describes power or an amplitude measured under matching conditions.
+MECHANISM:: If N = rate × duration, dividing both sides by rate gives duration = N/rate. A logarithm answers an exponent question: \(\log_{10}(1000)=3\) because 10 cubed is 1000. Decibels express a ratio on a logarithmic scale; the formula depends on whether the ratio describes power or an amplitude measured under matching conditions.
 TEACHING:: Always write the unit before substituting numbers. A rate of 16 kHz means 16,000 samples each second, not 16 samples. Milli means one thousandth; kilo means one thousand. Converting 250 milliseconds gives 0.25 seconds, so one channel at 16,000 samples/second contains 4,000 samples in that interval.
 
 Bit depth describes bits per sample per channel in uncompressed PCM. Multiplying rate, duration, channels and bits/sample gives a bit count. Dividing by eight converts bits to bytes. Headers, container metadata and compression are separate, so this is an audio-payload calculation.
 
-For a power ratio P2/P1, decibels equal 10 log10(P2/P1). For matching impedance and comparable amplitude definitions, power is proportional to amplitude squared, giving 20 log10(A2/A1). A digital amplitude ratio is not automatically a calibrated sound-pressure level near someone's ears.
+For a power ratio P2/P1, decibels equal \(10\log_{10}(P_2/P_1)\). For matching impedance and comparable amplitude definitions, power is proportional to amplitude squared, giving \(20\log_{10}(A_2/A_1)\). A digital amplitude ratio is not automatically a calibrated sound-pressure level near someone's ears.
 
-Algebra bridge: an equation keeps two quantities equal. If bytes = rate × seconds × channels × bits / 8, isolate seconds by multiplying both sides by 8 and dividing by the other positive factors. For 64000 bytes at 16000 Hz, mono and 16 bits, seconds = 64000 × 8 / (16000 × 1 × 16) = 2. Parentheses matter: divide by the complete denominator, not only its first number.
+Algebra bridge: an equation keeps two quantities equal. If \(B=f_sTCb/8\), isolate seconds by multiplying both sides by 8 and dividing by the other positive factors. For 64000 bytes at 16000 Hz, mono and 16 bits, \(T=\frac{64000\times8}{16000\times1\times16}=2\ \mathrm{s}\). Parentheses matter: divide by the complete denominator, not only its first number.
 
-A power means repeated multiplication: 2³ = 8. A negative exponent reverses it: 2⁻³ = 1/8. A logarithm asks for an exponent: log10(1000) = 3 because 10³ = 1000. Natural logs use base e, approximately 2.718; ln(e²) = 2. For positive a and b, log(ab) = log(a) + log(b). This turns a product of small probabilities into a sum of logs in V21. Zero has no finite logarithm; a log floor is an explicit approximation, not evidence that zero was positive.
+A power means repeated multiplication: \(2^3=8\). A negative exponent reverses it: \(2^{-3}=\frac18\). A logarithm asks for an exponent: \(\log_{10}(1000)=3\) because \(10^3=1000\). Natural logs use base e, approximately 2.718; \(\ln(e^2)=2\). For positive a and b, \(\log(ab)=\log(a)+\log(b)\). This turns a product of small probabilities into a sum of logs in V21. Zero has no finite logarithm; a log floor is an explicit approximation, not evidence that zero was positive.
 
-Check yourself before V08/V15: solve 3x + 2 = 14 by subtracting two then dividing by three (x = 4); explain 10⁻² = 0.01; convert 20 ms to 0.020 s. If these steps are unfamiliar, complete the assigned algebra/logarithm tutorial exercises before proceeding.
-EXAMPLE:: PCM payload:
-rate = 16,000 samples/second
-duration = 2 seconds
-channels = 1
-depth = 16 bits/sample
-bits = 16,000 × 2 × 1 × 16 = 512,000
-bytes = 512,000 / 8 = 64,000
+Check yourself before V08/V15: solve \(3x+2=14\) by subtracting two then dividing by three (\(x=4\)); explain \(10^{-2}=0.01\); convert 20 ms to 0.020 s. If these steps are unfamiliar, complete the assigned algebra/logarithm tutorial exercises before proceeding.
+EXAMPLE:: For uncompressed PCM payload, let \(f_s\) be samples/second, \(T\) seconds, \(C\) channels and \(b\) bits/sample/channel. Headers and compression are excluded.
 
-Amplitude ratio 2 gives 20 log10(2) ≈ 6.02 dB.
-Power ratio 2 gives 10 log10(2) ≈ 3.01 dB.
+\[\begin{aligned}
+B&=\frac{f_sTCb}{8}\\
+ &=\frac{16{,}000\times2\times1\times16}{8}\\
+ &=64{,}000\ \text{bytes}.
+\end{aligned}\]
+
+Under the stated comparable-amplitude/impedance assumptions:
+
+\[\begin{aligned}
+20\log_{10}(2)&\approx6.02\ \mathrm{dB}\quad\text{(amplitude ratio)},\\
+10\log_{10}(2)&\approx3.01\ \mathrm{dB}\quad\text{(power ratio)}.
+\end{aligned}\]
 EXPLANATION:: The two decibel answers differ because amplitude and power are different quantities. The payload is 64,000 decimal bytes; this does not include the file header. A stereo recording at the same rate and depth doubles the payload because it stores two channels.
 PITFALL:: A value in dB needs a ratio or reference. “The audio is 60 dB” is incomplete unless the measurement and reference are specified. Do not turn digital sample values into hearing-safety claims.
 EXERCISE:: Calculate the payload for 0.5 seconds of stereo PCM at 48 kHz and 16 bits/sample. Show every conversion. Then find the duration of 24,000 mono samples at 16 kHz. Explain the difference between doubling amplitude and doubling power in the stated matching conditions.
-SOLUTION:: Payload is 48,000 × 0.5 × 2 × 16 / 8 = 96,000 bytes. Duration is 24,000/16,000 = 1.5 seconds. Doubling amplitude corresponds to four times the power and about +6.02 dB; doubling power is about +3.01 dB.
+SOLUTION:: Payload is \(48{,}000\times0.5\times2\times16/8=96{,}000\) bytes. Duration is \(24{,}000/16{,}000=1.5\) seconds. Doubling amplitude corresponds to four times the power and about +6.02 dB; doubling power is about +3.01 dB.
 CHALLENGE:: A specification says “one minute, 16 kHz, 16-bit, mono, under 1 MB uncompressed”. Check the claim using decimal MB and show how long one million payload bytes can hold, excluding a header.
 CHALLENGE_SOLUTION:: One minute requires 16,000 × 60 × 16 / 8 = 1,920,000 bytes. One million bytes holds 1,000,000 / 32,000 = 31.25 seconds of payload. The requirement needs revision or compression; changing a filename extension does not change the payload format.
 QUESTION:: Which formula gives uncompressed PCM payload bytes?
@@ -215,6 +219,7 @@ CORRECT:: Sample rate × duration × channel count × bits per sample ÷ 8.
 WRONG1:: Sample rate ÷ duration, regardless of channels.
 WRONG2:: Duration × decibels, because louder audio always uses more bytes.
 FEEDBACK:: PCM payload size follows the number and representation of stored samples, not the signal's loudness.
+EXAMPLE_FORMAT:: math
 
 ID:: V07
 BRIDGE:: V06 established arithmetic and units. A vector is simply an ordered collection of numbers; a matrix is a rectangular table. You do not need to have studied tensors before this lesson. Work through the tiny shapes before moving to the assigned linear-algebra course.
@@ -226,98 +231,114 @@ For multiple scores, put one weight vector in each matrix row. Each row produces
 
 Shapes are not enough to guarantee meaning. Two arrays can both have length two while representing different units or feature orders. Record the axis names and preprocessing contract alongside dimensions. Never “fix” a mismatch by reshaping until the multiplication happens without understanding which axis moved.
 
-A dot product multiplies matching coordinates then adds: [1,2] · [3,4] = 1×3 + 2×4 = 11. It is defined for equal-length vectors. The squared length of [3,4] is its self-dot-product, 25; its length is √25 = 5. Dividing each coordinate by five gives a unit-length vector [0.6,0.8]. A zero vector cannot be normalised this way because its length is zero.
+A dot product multiplies matching coordinates then adds: \([1,2]\cdot[3,4]=1\cdot3+2\cdot4=11\). It is defined for equal-length vectors. The squared length of [3,4] is its self-dot-product, 25; its length is \(\sqrt{25}=5\). Dividing each coordinate by five gives a unit-length vector [0.6,0.8]. A zero vector cannot be normalised this way because its length is zero.
 
-Orthogonal vectors have dot product zero: [1,1] · [1,-1] = 0. In V15 this gives a way to separate signal patterns; in attention, dot products give matching scores. Similarity is still representation-dependent: a large score from badly scaled features may reflect scale rather than meaning. Broadcasting is a library rule for extending compatible shapes; it is not permission to ignore axis meanings. Before library-based work, complete the assigned matrix exercises by hand and label every axis.
-EXAMPLE:: Input column x = [2, 3], shape (2, 1).
-Weights W = [[1, 2],
-             [-1, 1]], shape (2, 2).
-Bias b = [0, 4], shape (2, 1).
-First output: 1×2 + 2×3 + 0 = 8.
-Second output: -1×2 + 1×3 + 4 = 5.
-Result y = [8, 5], shape (2, 1).
+Orthogonal vectors have dot product zero: \([1,1]\cdot[1,-1]=0\). In V15 this gives a way to separate signal patterns; in attention, dot products give matching scores. Similarity is still representation-dependent: a large score from badly scaled features may reflect scale rather than meaning. Broadcasting is a library rule for extending compatible shapes; it is not permission to ignore axis meanings. Before library-based work, complete the assigned matrix exercises by hand and label every axis.
+EXAMPLE:: Use a column-vector convention. The input and bias have shape \((2,1)\); the weight matrix has shape \((2,2)\).
 
-A batch of 4 clips, 100 frames each, 80 features/frame:
-shape (4, 100, 80) when axes are batch, time, feature.
+\[\mathbf{x}=\begin{bmatrix}2\\3\end{bmatrix},\quad
+W=\begin{bmatrix}1&2\\-1&1\end{bmatrix},\quad
+\mathbf{b}=\begin{bmatrix}0\\4\end{bmatrix}.\]
+
+\[\begin{aligned}
+\mathbf{y}&=W\mathbf{x}+\mathbf{b}\\
+&=\begin{bmatrix}1\cdot2+2\cdot3+0\\-1\cdot2+1\cdot3+4\end{bmatrix}
+=\begin{bmatrix}8\\5\end{bmatrix}.
+\end{aligned}\]
+
+A batch of four clips, each with 100 frames and 80 features per frame, has shape \((4,100,80)\) when the axes are batch, time, feature.
 EXPLANATION:: Each matrix row consumes both input features. The bias does not change the output shape. The three-axis example has 32,000 numeric entries, but says nothing about their numeric precision, sampling rate or physical duration unless the frame construction is also defined.
 PITFALL:: A shape-compatible operation can still combine the wrong quantities. Broadcasting can silently repeat values across an unintended axis. Name and check each axis before interpreting a result.
 EXERCISE:: Recalculate the example for x = [1, 0]. Then write a matrix that turns [left, right] into [left + right, left - right]. Apply it to [3, 1]. Finally explain why a (3, 4) matrix cannot multiply a (5, 1) column vector.
-SOLUTION:: The first result is [1, 3]. The sum/difference matrix is [[1,1],[1,-1]], producing [4,2]. In the invalid multiplication, the inner dimensions 4 and 5 do not match. This is a structural error, not a rounding problem.
-CHALLENGE:: A model receives (8, 50, 40) with batch/time/feature axes. It applies a 12-output linear layer independently at each time step. State the weight shape, output shape, number of weights and number of biases. Explain what would change if time and feature were accidentally swapped.
-CHALLENGE_SOLUTION:: Weights have shape (12,40), output (8,50,12), with 480 weights and 12 biases. Swapping time and feature changes the last-axis length to 50 and makes the existing weights incompatible; rebuilding weights would define a different function over time positions, not repair the original meaning.
+SOLUTION:: The first result is [1, 3]. The sum/difference matrix is \(\begin{bmatrix}1&1\\1&-1\end{bmatrix}\), producing [4,2]. In the invalid multiplication, the inner dimensions 4 and 5 do not match. This is a structural error, not a rounding problem.
+CHALLENGE:: A model receives \((8,50,40)\) with batch/time/feature axes. It applies a 12-output linear layer independently at each time step. State the weight shape, output shape, number of weights and number of biases. Explain what would change if time and feature were accidentally swapped.
+CHALLENGE_SOLUTION:: Weights have shape \((12,40)\), output (8,50,12), with 480 weights and 12 biases. Swapping time and feature changes the last-axis length to 50 and makes the existing weights incompatible; rebuilding weights would define a different function over time positions, not repair the original meaning.
 QUESTION:: What must agree in ordinary matrix multiplication?
 CORRECT:: The left matrix's column count and the right matrix's row count.
 WRONG1:: Only the total number of values in the two arrays.
 WRONG2:: Every axis must have the same size.
 FEEDBACK:: Inner dimensions align the entries used by each dot product. Matching dimensions still requires matching semantic axes.
+EXAMPLE_FORMAT:: math
 
 ID:: V08
 BRIDGE:: V06 introduced equations and V07 introduced vectors. A derivative measures how an output changes when an input changes slightly. The graduate material uses calculus repeatedly; complete the assigned calculus units if the chain rule remains unfamiliar after this example.
 CONCEPT:: Optimisation adjusts parameters to reduce a stated loss. The gradient points toward the fastest local increase in a differentiable function, so gradient descent takes a small step in the opposite direction. It is a local method with assumptions, not a guarantee of the best possible model.
-MECHANISM:: For L(w) = (w − 3)², the derivative is 2(w − 3). An update is w_new = w − learning_rate × derivative. In several dimensions, one partial derivative is computed for each parameter. The chain rule connects derivatives through composed functions, which later makes neural-network training possible.
+MECHANISM:: For \(L(w)=(w-3)^2\), the derivative is 2(w − 3). An update is w_new = w − learning_rate × derivative. In several dimensions, one partial derivative is computed for each parameter. The chain rule connects derivatives through composed functions, which later makes neural-network training possible.
 TEACHING:: Understand the loss before the update. Squaring the distance from three makes all errors non-negative and gives a minimum at three. If w is below three, the derivative is negative; subtracting a negative number increases w toward three. If w is above three, the direction reverses.
 
 The learning rate controls step size. Too small may progress slowly; too large may overshoot or diverge. A decreasing training loss says the parameters fit the training objective better. It says nothing by itself about independent examples, subgroup performance or the suitability of the objective.
 
-For a composition, track intermediate variables. If z = 2w and L = (z − 6)², then dL/dz = 2(z − 6), dz/dw = 2 and dL/dw = 4(z − 6). Omitting a chain-rule factor changes the update even when the code still runs.
+For a composition, track intermediate variables. If z = 2w and L = (z − 6)², then \(\frac{dL}{dz}=2(z-6)\), \(\frac{dz}{dw}=2\) and \(\frac{dL}{dw}=4(z-6)\). Omitting a chain-rule factor changes the update even when the code still runs.
 
-A derivative is a local rate of change. Around w = 1, L(w) = (w−3)² has slope about −4: a small positive change in w lowers this loss. The finite-difference quotient compares losses at nearby points and divides by their separation. It approximates a derivative; rounding and step size affect its accuracy. The derivative is not the loss itself and does not promise that a large step helps.
+A derivative is a local rate of change. Around w = 1, \(L(w)=(w-3)^2\) has slope about −4: a small positive change in w lowers this loss. The finite-difference quotient compares losses at nearby points and divides by their separation. It approximates a derivative; rounding and step size affect its accuracy. The derivative is not the loss itself and does not promise that a large step helps.
 
-For multiple parameters, a partial derivative varies one parameter while holding the others fixed. For L(a,b) = (a−1)² + 2(b+2)², the gradient is [2(a−1),4(b+2)]. At (0,0) that is [-2,8]. A simultaneous step of 0.1 gives (0.2,-0.8), so the loss drops from 9 to 0.64 + 2.88 = 3.52. Compute all gradients at the old point before updating; mixing old and new coordinates implements a different procedure. V18 uses this same bookkeeping through a chain of intermediate values.
-EXAMPLE:: L(w) = (w - 3)^2; learning rate = 0.1.
-Start w0 = 0; L = 9.
-Gradient = 2(0 - 3) = -6.
-w1 = 0 - 0.1(-6) = 0.6; L = 5.76.
-Next gradient = 2(0.6 - 3) = -4.8.
-w2 = 0.6 - 0.1(-4.8) = 1.08; L = 3.6864.
+For multiple parameters, a partial derivative varies one parameter while holding the others fixed. For \(L(a,b)=(a-1)^2+2(b+2)^2\), the gradient is \([2(a-1),4(b+2)]\). At (0,0) that is \([-2,8]\). A simultaneous step of 0.1 gives \((0.2,-0.8)\), so the loss drops from 9 to \(0.64+2.88=3.52\). Compute all gradients at the old point before updating; mixing old and new coordinates implements a different procedure. V18 uses this same bookkeeping through a chain of intermediate values.
+EXAMPLE:: Start with a scalar squared loss, step size \(\eta=0.1\), and initial parameter \(w_0=0\).
 
-Finite-difference check near w = 1:
-[L(1.001) - L(0.999)] / 0.002 ≈ -4.
+\[L(w)=(w-3)^2,\qquad L'(w)=2(w-3).\]
+
+\[\begin{aligned}
+w_1&=w_0-\eta L'(w_0)=0-0.1(-6)=0.6,\\
+L(w_1)&=(0.6-3)^2=5.76,\\
+w_2&=0.6-0.1(-4.8)=1.08,\\
+L(w_2)&=(1.08-3)^2=3.6864.
+\end{aligned}\]
+
+A central finite-difference check near \(w=1\) gives:
+
+\[\frac{L(1.001)-L(0.999)}{0.002}\approx-4.\]
 EXPLANATION:: The finite difference estimates slope by comparing nearby points. It is a check on this small calculation, not a substitute for a general proof or an instruction to launch a model experiment. All quantities are supplied, so pencil-and-paper reasoning is sufficient.
 PITFALL:: A lower loss does not establish that a speech system understands a request. It only describes the chosen objective on the data used to compute it. Generalisation and useful behaviour require separate evidence.
-EXERCISE:: Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate L(w) = (2w − 6)² using the chain rule.
-SOLUTION:: From five, the updates are 4.6 then 4.28, with losses 2.56 and 1.6384. At rate 1.2, the first new value is 0.2 and loss is 7.84, worse than the original loss four. The composed derivative is 4(2w − 6), equivalently 8w − 24.
-CHALLENGE:: For L(a,b) = (a − 1)² + 2(b + 2)², start at (0,0) with rate 0.1. Compute the gradient, one update and the old/new loss. State why one successful update is not a universal convergence argument.
-CHALLENGE_SOLUTION:: The gradient is (-2,8); the new point is (0.2,-0.8). Old loss is nine; new loss is 0.64 + 2(1.44) = 3.52. This quadratic and step behaved well once. Different curvature, non-convex losses and step sizes can behave differently; one observed decrease does not prove convergence.
+EXERCISE:: Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate \(L(w)=(2w-6)^2\) using the chain rule.
+SOLUTION:: From five, the updates are 4.6 then 4.28, with losses 2.56 and 1.6384. At rate 1.2, the first new value is 0.2 and loss is 7.84, worse than the original loss four. The composed derivative is \(4(2w-6)\), equivalently \(8w-24\).
+CHALLENGE:: For \(L(a,b)=(a-1)^2+2(b+2)^2\), start at (0,0) with rate 0.1. Compute the gradient, one update and the old/new loss. State why one successful update is not a universal convergence argument.
+CHALLENGE_SOLUTION:: The gradient is (-2,8); the new point is \((0.2,-0.8)\). Old loss is nine; new loss is 0.64 + 2(1.44) = 3.52. This quadratic and step behaved well once. Different curvature, non-convex losses and step sizes can behave differently; one observed decrease does not prove convergence.
 QUESTION:: What does the gradient-descent update subtract?
 CORRECT:: The learning rate multiplied by the gradient of the chosen loss.
 WRONG1:: The loss itself from every parameter, regardless of its derivative.
 WRONG2:: A fixed amount of audio from the input waveform.
 FEEDBACK:: A loss value measures error; its gradient describes local parameter sensitivity. They play different roles.
+EXAMPLE_FORMAT:: math
 
 ID:: V09
 BRIDGE:: V06 provides fractions and powers. This topic introduces uncertainty with small counts. No prior statistics is assumed. Keep population claims separate from the tiny fictional samples used for arithmetic practice.
 CONCEPT:: Probability describes uncertainty under a model. Statistics uses observations to estimate quantities and investigate claims. A proportion or average is useful only when we know what was counted, how it was sampled and which population it is meant to represent.
-MECHANISM:: A conditional probability restricts attention to a stated condition: P(error | noisy) means the error rate among noisy examples. The mean adds values and divides by their count. Variance describes spread around that mean. Independent sampling assumptions and sample size affect uncertainty; many near-duplicate clips are not many independent speakers.
-TEACHING:: Define the denominator first. If two of ten noisy clips contain a transcription error, the observed clip-error proportion is 2/10. It is not a word-error rate, because the unit is clips. It also does not estimate performance for every language or microphone.
+MECHANISM:: A conditional probability restricts attention to a stated condition: \(P(\mathrm{error}\mid\mathrm{noisy})\) means the error rate among noisy examples. The mean adds values and divides by their count. Variance describes spread around that mean. Independent sampling assumptions and sample size affect uncertainty; many near-duplicate clips are not many independent speakers.
+TEACHING:: Define the denominator first. If two of ten noisy clips contain a transcription error, the observed clip-error proportion is \(2/10\). It is not a word-error rate, because the unit is clips. It also does not estimate performance for every language or microphone.
 
-Conditioning changes a question. P(error | noisy) and P(noisy | error) need different denominators. Bayes' rule connects these probabilities when the relevant base rates are known. Ignoring how common each condition is can produce misleading conclusions.
+Conditioning changes a question. \(P(\mathrm{error}\mid\mathrm{noisy})\) and \(P(\mathrm{noisy}\mid\mathrm{error})\) need different denominators. Bayes' rule connects these probabilities when the relevant base rates are known. Ignoring how common each condition is can produce misleading conclusions.
 
 Summaries can hide distribution shape. The mean latency of 100,100,100,100,600 milliseconds is 200, while the median is 100. A user encountering the long delay experiences something the mean alone conceals. Report counts, spread, a clearly defined percentile convention and relevant grouping, rather than one attractive number.
 
 Build spread from a small example. For latencies [100,100,400] ms, the mean is 200 ms. Deviations are [-100,-100,200] ms; squared deviations are [10000,10000,40000] ms². Dividing their sum by three gives the population variance of this supplied list, 20000 ms². Its square root is about 141.4 ms. When estimating a population variance from an independent sample, the usual sample formula divides by n−1 instead, yielding 30000 ms² here. State which quantity you mean.
 
 Spread of observations is different from uncertainty about an estimated mean. With suitable independent sampling, a larger number of independent units generally reduces the latter; many nearly identical clips from one speaker are not many independent speakers. A confidence interval describes a procedure's repeated-sampling coverage under assumptions. It is not a guarantee for a particular future user. Before interpreting research uncertainty, study the assigned probability/statistics exercises on random variables, expectation, variance and sampling; the toy arithmetic is an entry bridge.
-EXAMPLE:: Fictional labelled clip counts:
-                 Error   No error   Total
-Noisy              6        14       20
-Quiet              4        76       80
-Total             10        90      100
+EXAMPLE:: Fictional labelled clip counts (the unit is clips, not words):
 
-P(error | noisy) = 6/20 = 0.30.
-P(noisy | error) = 6/10 = 0.60.
-Overall observed error proportion = 10/100 = 0.10.
+\[\begin{array}{l|rr|r}
+&\text{Error}&\text{No error}&\text{Total}\\\hline
+\text{Noisy}&6&14&20\\
+\text{Quiet}&4&76&80\\\hline
+\text{Total}&10&90&100
+\end{array}\]
+
+\[\begin{aligned}
+P(\text{error}\mid\text{noisy})&=\frac{6}{20}=0.30,\\
+P(\text{noisy}\mid\text{error})&=\frac{6}{10}=0.60,\\
+\widehat p_{\text{error}}&=\frac{10}{100}=0.10.
+\end{aligned}\]
 EXPLANATION:: The overall rate is dominated by quiet clips because they form 80% of this sample. A deployment with a different noise mix can have a different overall rate even if each conditional rate stays unchanged. None of these counts establishes causation by itself.
 PITFALL:: A large number of correlated frames does not create a large independent sample. Speaker, session and recording-device dependence can make naive uncertainty estimates much too confident.
 EXERCISE:: For a fictional deployment containing 50 noisy and 50 quiet clips, assume the conditional rates above remain unchanged. Calculate the expected number with errors and the overall expected rate. Then calculate the mean and median of the five supplied latencies. State two assumptions behind the error prediction.
-SOLUTION:: Expected errors are 50×0.30 + 50×0.05 = 17.5, an expected rate of 17.5%; an expectation need not be an integer observed count. Mean latency is 200 ms and median is 100 ms. The calculation assumes the conditional rates transfer and that the categories and error definitions remain comparable.
+SOLUTION:: Expected errors are \(50(0.30)+50(0.05)=17.5\), an expected rate of 17.5%; an expectation need not be an integer observed count. Mean latency is 200 ms and median is 100 ms. The calculation assumes the conditional rates transfer and that the categories and error definitions remain comparable.
 CHALLENGE:: One report counts 1,000 clips from two speakers; another counts 200 clips from 200 speakers. Explain why clip count alone cannot decide which better supports a claim about new speakers. Propose the missing sampling information and a sensible grouping for uncertainty analysis.
 CHALLENGE_SOLUTION:: The first report has many within-speaker observations but little speaker diversity. The second may better address new-speaker transfer, but selection, languages, clip difficulty and session independence still matter. Ask for speaker/session distributions and the target population. Group uncertainty calculations at an appropriate independent unit, often speaker or session, and describe the assumptions.
-QUESTION:: In the supplied table, what is P(noisy | error)?
-CORRECT:: 6/10, because the denominator is all error clips.
-WRONG1:: 6/20, because the denominator is all noisy clips.
+QUESTION:: In the supplied table, what is \(P(\mathrm{noisy}\mid\mathrm{error})\)?
+CORRECT:: \(6/10\), because the denominator is all error clips.
+WRONG1:: \(6/20\), because the denominator is all noisy clips.
 WRONG2:: 20/100, because the overall noisy proportion answers every conditional question.
 FEEDBACK:: Conditioning defines the subset you count within. Reversing the condition usually changes the probability.
+EXAMPLE_FORMAT:: math
 
 ID:: V10
 BRIDGE:: V04 supplied deterministic tests and V09 supplied sampling concepts. This lesson is about planning and critiquing studies using fictional records. It does not ask you to train a model, call a provider or run an evaluation harness.
@@ -354,23 +375,24 @@ FEEDBACK:: Separation must match the intended novelty. Preventing speaker leakag
 ID:: V11
 BRIDGE:: V06 supplies units and powers. Frequency means repetitions per second. You may inspect the supplied numbers visually; no listening experiment, loud playback or microphone recording is needed.
 CONCEPT:: Sound is a changing physical pressure that travels through a medium. A microphone converts a local pressure variation into an electrical signal, which a digital system samples. Frequency, amplitude and phase describe different aspects of a repeating signal.
-MECHANISM:: A sinusoid can be written x(t) = A sin(2πft + φ). A sets its amplitude, f its frequency in hertz, and φ its phase offset in radians. Period T = 1/f. Real speech combines many changing components rather than one perfectly repeating sine wave.
-TEACHING:: Maths bridge: a full turn around a circle is 2π radians. Sine and cosine connect an angle to coordinates on a unit circle; their values range from -1 to 1. Increasing the angle continuously produces a repeating pattern. In 2πft, frequency in cycles/second times time in seconds gives cycles, and multiplying by 2π converts those cycles into radians. This makes the sinusoid formula a timed repeating pattern rather than unexplained notation.
+MECHANISM:: A sinusoid can be written x(t) = A sin(\(2\pi ft\) + φ). A sets its amplitude, f its frequency in hertz, and φ its phase offset in radians. Period T = 1/f. Real speech combines many changing components rather than one perfectly repeating sine wave.
+TEACHING:: Maths bridge: a full turn around a circle is \(2\pi\) radians. Sine and cosine connect an angle to coordinates on a unit circle; their values range from -1 to 1. Increasing the angle continuously produces a repeating pattern. In \(2\pi ft\), frequency in cycles/second times time in seconds gives cycles, and multiplying by 2π converts those cycles into radians. This makes the sinusoid formula a timed repeating pattern rather than unexplained notation.
 
 Imagine following one point on a wave over time. Frequency says how quickly a pattern repeats there; amplitude describes the size of the variation. Phase describes where within a repeating cycle the pattern starts relative to a reference. Two signals can share frequency and amplitude but have different phase.
 
 Physical sound-pressure amplitude, a microphone's electrical voltage and a stored digital number are connected through a measurement chain. Changing microphone gain changes stored amplitude without necessarily changing the original source. Comparing levels across devices requires calibration and context.
 
 Pitch and loudness are perceptions, while frequency and amplitude are signal properties. They are related but not identical. A complex periodic signal may contain harmonics at multiples of a fundamental; pitch perception does not reduce to choosing the largest visible spectral peak in every case.
-EXAMPLE:: Signal A: x(t) = sin(2π × 200 × t).
-Frequency = 200 Hz; period = 1/200 s = 0.005 s = 5 ms.
-In 20 ms it completes 4 cycles.
+EXAMPLE:: A sinusoidal example and its period are:
 
-Signal B: -sin(2π × 200 × t).
-Same frequency and amplitude magnitude; opposite phase.
-Adding A and B at perfectly aligned sample times gives zero.
+\[x(t)=\sin(2\pi\cdot200t),\qquad f=200\ \mathrm{Hz}.\]
 
-Harmonics of 200 Hz include 400, 600 and 800 Hz.
+\[\begin{aligned}
+T&=\frac1f=\frac1{200}\ \mathrm{s}=5\ \mathrm{ms},\\
+N_{\text{cycles}}&=f\Delta t=200\times0.020=4.
+\end{aligned}\]
+
+The opposite-phase signal \(-x(t)\) has the same frequency and amplitude magnitude. Perfectly aligned addition gives \(x(t)+[-x(t)]=0\). Harmonics of this fundamental include \(400\), \(600\) and \(800\ \mathrm{Hz}\).
 EXPLANATION:: Cancellation in this ideal arithmetic example requires exact alignment and equal opposite signals. Real rooms contain reflections, different paths and changing delays. The example explains phase sensitivity; it does not establish that any noise can be removed by simply reversing recorded samples.
 PITFALL:: Frequency is not sample rate. A 200 Hz tone can be represented by many samples per cycle; a 16 kHz sampling rate says how often measurements are stored, not that the sound's pitch is 16 kHz.
 EXERCISE:: Calculate periods for 100 Hz, 250 Hz and 1 kHz. Count how many cycles each completes in 40 ms. Draw two cycles of a 250 Hz signal, labelling the time axis in milliseconds. Explain what changes if amplitude halves while frequency stays fixed.
@@ -382,25 +404,27 @@ CORRECT:: 4 milliseconds.
 WRONG1:: 250 seconds.
 WRONG2:: 16,000 samples, regardless of sample rate.
 FEEDBACK:: Period is reciprocal frequency: 1/250 second = 0.004 second. Sample counts need a sampling rate.
+EXAMPLE_FORMAT:: math
 
 ID:: V12
 BRIDGE:: V11 described continuous-time waves and V06 calculated payload sizes. Now connect a physical signal to stored numbers. Keep sample rate, channel count, numeric format and byte order together as one format contract.
 CONCEPT:: Sampling records a signal at selected time points. Quantisation maps each measurement to one of finitely many numeric levels. A codec encodes and decodes audio, often using compression; a container organises encoded data and metadata.
 MECHANISM:: For a band-limited signal, the sampling theorem requires a sample rate greater than twice the highest retained frequency for ideal reconstruction. Practical acquisition and resampling use anti-alias filtering. Quantisation introduces finite-resolution error. A filename extension alone cannot tell a program how to interpret arbitrary bytes.
-TEACHING:: At 16 kHz, consecutive samples are separated by 1/16,000 second, or 62.5 microseconds. That rate has a Nyquist frequency of 8 kHz. This does not mean practical filters retain every component up to exactly 8 kHz without a transition region.
+TEACHING:: At 16 kHz, consecutive samples are separated by \(1/16{,}000\ \mathrm{s}\), or 62.5 microseconds. That rate has a Nyquist frequency of 8 kHz. This does not mean practical filters retain every component up to exactly 8 kHz without a transition region.
 
 Changing a metadata label does not resample a waveform. If 16,000 samples captured at 16 kHz are played as 8 kHz, playback lasts two seconds rather than one and pitch changes. Proper resampling computes a new sequence while preserving intended duration and the supported bandwidth.
 
 PCM stores sample values directly in a specified integer or floating-point representation. Stereo channels may be interleaved. Compressed formats such as Opus use a different representation; their bytes cannot be treated as raw 16-bit samples. Decoding, channel conversion and resampling are distinct steps that should be documented.
-EXAMPLE:: Supplied PCM assumptions: mono, signed 16-bit little-endian.
-Bytes 00 00 → integer 0.
-Bytes 01 00 → integer 1.
-Bytes FF FF → integer -1.
+EXAMPLE:: PCM assumptions: mono, signed 16-bit little-endian. Bytes 00 00 represent 0; 01 00 represent 1; FF FF represent −1. These are byte encodings, not TeX arithmetic.
 
-At 16 kHz, 320 samples span 20 ms.
-At 8 kHz, the same count spans 40 ms.
-A 10 kHz sinusoid sampled at 16 kHz aliases to 6 kHz
-without appropriate pre-sampling filtering.
+For a frame containing \(N=320\) samples:
+
+\[\begin{aligned}
+T_{16\,\mathrm{kHz}}&=\frac{320}{16{,}000}\ \mathrm{s}=20\ \mathrm{ms},\\
+T_{8\,\mathrm{kHz}}&=\frac{320}{8{,}000}\ \mathrm{s}=40\ \mathrm{ms}.
+\end{aligned}\]
+
+Without appropriate pre-sampling filtering, a \(10\ \mathrm{kHz}\) sinusoid sampled at \(16\ \mathrm{kHz}\) aliases to \(6\ \mathrm{kHz}\).
 EXPLANATION:: The byte examples rely on all stated format assumptions. Aliasing makes different continuous-time signals produce indistinguishable sampled patterns. Once that information has been lost during acquisition, simply increasing the sampling-rate label cannot recover it.
 PITFALL:: Downsampling by keeping every other sample without filtering can fold unsupported frequencies into the retained band. Upsampling later does not reconstruct the original lost information.
 EXERCISE:: For 48 kHz mono PCM, calculate the samples in 10, 20 and 30 ms. Calculate the payload bytes for each at 16 bits/sample. Then explain how the answer changes for stereo. Finally describe the steps required to turn a compressed stereo recording into mono 16 kHz PCM without merely relabelling it.
@@ -412,6 +436,7 @@ CORRECT:: No. Proper resampling computes a new sample sequence with appropriate 
 WRONG1:: Yes. The same stored samples automatically gain the missing information.
 WRONG2:: Yes, provided the filename ends in .wav.
 FEEDBACK:: Interpretation metadata and signal transformation are separate. Confusing them changes duration, pitch or downstream assumptions.
+EXAMPLE_FORMAT:: math
 
 ID:: V13
 BRIDGE:: V11 introduced waves. Now learn the human mechanisms that create speech. The IPA is a notation system, not a requirement that everyone speak with one accent. Use demonstrations and diagrams; do not perform an examination on anyone.
@@ -451,14 +476,13 @@ TEACHING:: Think of two controls. Changing the source repetition rate changes th
 Formants describe resonant regions of the vocal-tract filtering effect, not individual harmonics. A spectral peak near a resonance can reflect both the filter envelope and available source harmonics. Short analysis windows, noise and high fundamental frequencies can complicate estimation.
 
 For a vowel, the first two formants often help describe its acoustic quality, but their values vary with speaker, language and context. A small table of frequencies is not enough to classify every vowel or infer personal characteristics. Later TTS systems learn richer representations, while this model remains a helpful conceptual bridge.
-EXAMPLE:: Hypothetical voiced source:
-fundamental F0 = 100 Hz
-harmonics = 100, 200, 300, 400, ... Hz
-filter resonances near 500 and 1,500 Hz
+EXAMPLE:: Keep the simplified source and filter separate:
 
-Raise F0 to 200 Hz, keeping the simplified filter fixed:
-harmonics become 200, 400, 600, 800, ... Hz.
-The filter resonant regions remain near 500 and 1,500 Hz.
+\[F_0=100\ \mathrm{Hz},\qquad f_k=kF_0\quad(k=1,2,3,\ldots).\]
+
+The initial harmonic grid is \(100,200,300,\ldots\ \mathrm{Hz}\). Assume filter resonances near \(500\) and \(1{,}500\ \mathrm{Hz}\).
+
+If the source changes to \(F_0=200\ \mathrm{Hz}\) while that simplified filter stays fixed, the grid becomes \(200,400,600,\ldots\ \mathrm{Hz}\). The filter's resonant regions remain near the same two values; harmonics and formants are different objects.
 EXPLANATION:: Doubling F0 changes the harmonic grid; it does not, in this simplified model, double the formant frequencies. The source may sample a filter envelope sparsely, so one cannot read a resonance by blindly selecting the tallest harmonic.
 PITFALL:: Pitch shifting and changing vowel quality are not the same transformation. A model that separates them approximately still has limitations, especially for rapid, mixed or irregular phonation.
 EXERCISE:: Draw a harmonic grid for F0 values 100 and 250 Hz up to 2 kHz. Overlay a broad resonant region at 700 Hz. Explain why the strongest nearby harmonic may appear at different locations. Then list two reasons real speech would depart from this stationary diagram.
@@ -470,6 +494,7 @@ CORRECT:: The repetition rate of the voiced excitation source.
 WRONG1:: The filename of the recording.
 WRONG2:: The first formant always equals the fundamental frequency.
 FEEDBACK:: Source repetition and filter resonances are distinct model components. Their observed interaction still depends on analysis and real-speech limitations.
+EXAMPLE_FORMAT:: math
 
 ID:: V15
 BRIDGE:: V07 introduced vectors, V12 digital samples and V14 harmonics. A Fourier transform expresses a finite signal using sinusoidal components. Work with the tiny supplied sequence before studying larger spectrograms.
@@ -481,27 +506,38 @@ Window length creates a trade-off. A longer window provides finer frequency-bin 
 
 Windowing reduces abrupt edge discontinuities but changes how energy spreads across bins. Zero-padding creates a denser sampled display of a spectrum; it does not create the information of a longer observed signal. Always label sample rate, window, hop, frequency scale and magnitude scale when sharing a spectrogram.
 
-Make the transform concrete with four samples x = [1,0,-1,0]. For this example use a rectangular window, N = 4 and the unnormalised forward DFT. At bin k, multiply each sample by cos(2πkn/N) − i sin(2πkn/N), then sum over n = 0,1,2,3. The symbol i satisfies i² = −1; a + bi stores two real components. Its magnitude is √(a²+b²). You do not need to manipulate an unexplained exponential to do this four-point case.
+Make the transform concrete with four samples \(\mathbf{x}=[1,0,-1,0]\). For this example use a rectangular window, N = 4 and the unnormalised forward DFT. At bin k, multiply each sample by \(\cos(2\pi kn/N)-i\sin(2\pi kn/N)\), then sum over n = 0,1,2,3. The symbol i satisfies \(i^2=-1\); \(a+bi\) stores two real components. Its magnitude is \(\sqrt{a^2+b^2}\). You do not need to manipulate an unexplained exponential to do this four-point case.
 
-At k = 0 all cosine factors are one and sine factors zero, so X[0] = 1+0−1+0 = 0. At k = 1, cosine factors [1,0,-1,0] and sine factors [0,1,0,-1] give real part 2 and imaginary part 0. At k = 2 the alternating cosine pattern gives zero. Bin 3 gives 2 again. Thus X = [0,2,0,2]. At fs = 8 Hz, the bin frequencies are 0,2,4,6 Hz; for a real input the final bin represents the matching negative-frequency component. This is a tiny synthetic illustration, not a recording.
+At k = 0 all cosine factors are one and sine factors zero, so \(X[0]=1+0-1+0=0\). At k = 1, cosine factors \([1,0,-1,0]\) and sine factors \([0,1,0,-1]\) give real part 2 and imaginary part 0. At k = 2 the alternating cosine pattern gives zero. Bin 3 gives 2 again. Thus \(\mathbf{X}=[0,2,0,2]\). At fs = 8 Hz, the bin frequencies are 0,2,4,6 Hz; for a real input the final bin represents the matching negative-frequency component. This is a tiny synthetic illustration, not a recording.
 
-Change only the input to [0,1,0,-1]. The coefficients become [0,-2i,0,2i]: the magnitudes stay [0,2,0,2] but the phase changes. That is why a magnitude plot alone loses information. In speech, repeat an appropriately windowed transform across overlapping frames to obtain an STFT. Do not confuse bin spacing fs/N with the ability to resolve arbitrary nearby tones; window duration, shape and leakage matter.
-EXAMPLE:: fs = 16,000 samples/second.
-N = 400 samples → window duration 25 ms.
-DFT bin spacing = 16,000/400 = 40 Hz.
-Hop = 160 samples → 10 ms between frame starts.
+Change only the input to \([0,1,0,-1]\). The coefficients become \([0,-2i,0,2i]\): the magnitudes stay \([0,2,0,2]\) but the phase changes. That is why a magnitude plot alone loses information. In speech, repeat an appropriately windowed transform across overlapping frames to obtain an STFT. Do not confuse bin spacing fs/N with the ability to resolve arbitrary nearby tones; window duration, shape and leakage matter.
 
-For N = 800 at the same fs:
-window = 50 ms; bin spacing = 20 Hz.
-Zero-padding 400 observed samples to 800 does not observe 50 ms.
+The unnormalised forward transform used above can be written compactly as:
+
+\[X[k]=\sum_{n=0}^{N-1}x[n]\left[\cos\!\left(\frac{2\pi kn}{N}\right)-i\sin\!\left(\frac{2\pi kn}{N}\right)\right].\]
+
+Here \(n\) indexes time samples and \(k\) indexes frequency bins. This is the same sine/cosine calculation already worked above, not a different transform.
+EXAMPLE:: Let \(f_s=16{,}000\ \mathrm{Hz}\), frame length \(N=400\), and hop length \(H=160\).
+
+\[\begin{aligned}
+T_{\text{window}}&=\frac{N}{f_s}=25\ \mathrm{ms},\\
+\Delta f&=\frac{f_s}{N}=40\ \mathrm{Hz},\\
+T_{\text{hop}}&=\frac{H}{f_s}=10\ \mathrm{ms}.
+\end{aligned}\]
+
+For \(N=800\) at the same sample rate:
+
+\[T_{\text{window}}=50\ \mathrm{ms},\qquad\Delta f=20\ \mathrm{Hz}.\]
+
+Zero-padding 400 observed samples to length 800 does not observe 50 ms of sound. It changes the display grid, not the duration of the evidence.
 EXPLANATION:: The 800-sample observed window can resolve finer frequency structure under appropriate conditions because it contains more time information. Padding a shorter window changes the display grid rather than the amount of observed evidence. A 10 ms hop does not make a 25 ms window instantaneous.
 PITFALL:: A spectrogram is an analysis choice, not a photograph of uniquely determined frequency truth. Different windows and scales can make the same recording look different.
 EXERCISE:: Calculate duration and bin spacing for N = 256 and N = 512 at 16 kHz. Calculate the time between frame starts for a 128-sample hop. Explain which setting you would inspect for a rapid consonant transition and what frequency-detail trade-off you would report.
 
-Before the plot critique, reproduce the four-point transform for [1,0,-1,0] and then [0,1,0,-1] using the supplied sine/cosine factors. Report real and imaginary parts and explain why equal magnitudes do not mean identical signals.
+Before the plot critique, reproduce the four-point transform for \([1,0,-1,0]\) and then \([0,1,0,-1]\) using the supplied sine/cosine factors. Report real and imaginary parts and explain why equal magnitudes do not mean identical signals.
 SOLUTION:: The windows are 16 and 32 ms, with bin spacings 62.5 and 31.25 Hz. The hop is 8 ms. The shorter window may better localise a rapid transition, while offering coarser frequency discrimination. State that the suitability depends on the particular analysis question, window shape and signal.
 
-The respective transforms are [0,2,0,2] and [0,-2i,0,2i] under the stated forward convention. Their magnitudes agree, but their samples and phases differ. Reversing the transform sign convention changes the imaginary signs; it must be stated consistently.
+The respective transforms are \([0,2,0,2]\) and \([0,-2i,0,2i]\) under the stated forward convention. Their magnitudes agree, but their samples and phases differ. Reversing the transform sign convention changes the imaginary signs; it must be stated consistently.
 CHALLENGE:: A report compares two spectrograms without providing sample rate, window length or dB reference and claims one model removes noise. Write a corrected reporting checklist and explain why the images alone cannot establish improved speech quality.
 CHALLENGE_SOLUTION:: Request sample rate, frame/hop lengths, window function, transform size, magnitude/power convention, scale/reference and identical display limits. Also require an appropriate comparison using the same input and meaningful quality evidence. Plot settings can hide energy or change contrast; speech may be distorted while the display looks cleaner.
 QUESTION:: What does zero-padding a short frame provide?
@@ -509,6 +545,7 @@ CORRECT:: A denser frequency display grid, without adding newly observed signal 
 WRONG1:: The same information as recording a genuinely longer interval.
 WRONG2:: Guaranteed recovery of every missing speech component.
 FEEDBACK:: Observation duration and transform size are related but distinct. More plotted bins do not imply more independent information.
+EXAMPLE_FORMAT:: math
 
 ID:: V16
 BRIDGE:: V15 supplies spectra and windows. Here a filter transforms a signal, while a feature summarises selected aspects of it. You need addition, multiplication and careful indexing; work through the short sequence before using an audio library.
@@ -520,20 +557,23 @@ For speech features, start with framed spectra. Choose a magnitude or power conv
 
 The mel scale provides a frequency-warping convention used widely in speech systems. MFCCs additionally transform log-band energies and often retain selected coefficients. They can be helpful for some models but may remove detail needed for reconstruction or newer systems. Do not add familiar preprocessing to a pretrained model unless it matches that model's expected input contract.
 
-Follow one feature frame all the way through. Suppose three non-negative spectral-power bins are [1,4,1]. A deliberately tiny two-band bank with rows [0.5,0.5,0] and [0,0.5,0.5] produces energies [2.5,2.5] by matrix multiplication. Taking natural logarithms gives approximately [0.9163,0.9163]. Real mel banks use documented frequency locations and usually many more bands; these toy weights only expose the operations.
+Follow one feature frame all the way through. Suppose three non-negative spectral-power bins are [1,4,1]. A deliberately tiny two-band bank with rows [0.5,0.5,0] and [0,0.5,0.5] produces energies [2.5,2.5] by matrix multiplication. Taking natural logarithms gives approximately \([0.9163,0.9163]\). Real mel banks use documented frequency locations and usually many more bands; these toy weights only expose the operations.
 
-MFCCs apply a discrete cosine transform to the log-band vector. Under an unnormalised two-point DCT-II, coefficient k is the sum of log_energy[m] × cos(πk(m+0.5)/2) over m = 0,1. Here k=0 gives 1.8326 and k=1 gives zero because the cosine weights cancel. Other normalisations rescale these numbers. Keeping only selected coefficients discards information. A mel spectrogram and an MFCC array are therefore different interfaces even if their dimensions accidentally match.
+MFCCs apply a discrete cosine transform to the log-band vector. Under an unnormalised two-point DCT-II, coefficient k is the sum of log_energy[m] × \(\cos\!\left(\frac{\pi k(m+0.5)}{2}\right)\) over m = 0,1. Here k=0 gives 1.8326 and k=1 gives zero because the cosine weights cancel. Other normalisations rescale these numbers. Keeping only selected coefficients discards information. A mel spectrogram and an MFCC array are therefore different interfaces even if their dimensions accidentally match.
 
 For the moving-average exercise, also try x = [0,2,2,2]. The first four causal outputs are [0,1,2,2], and full convolution adds a final 1. Truncation hides a nonzero tail in this version. Boundary handling is part of a filter contract, not an incidental plotting choice.
-EXAMPLE:: Input x = [2, 4, 0, 2].
-Filter h = [0.5, 0.5].
-Assume x[-1] = 0; produce four causal outputs.
-y[0] = 0.5×2 + 0.5×0 = 1.
-y[1] = 0.5×4 + 0.5×2 = 3.
-y[2] = 0.5×0 + 0.5×4 = 2.
-y[3] = 0.5×2 + 0.5×0 = 1.
+EXAMPLE:: Use \(\mathbf{x}=[2,4,0,2]\), \(\mathbf{h}=[\tfrac12,\tfrac12]\), zero initial history \(x[-1]=0\), and four causal outputs:
 
-This stated output convention truncates the filter tail.
+\[y[n]=\tfrac12x[n]+\tfrac12x[n-1].\]
+
+\[\begin{aligned}
+y[0]&=\tfrac12(2)+\tfrac12(0)=1,\\
+y[1]&=\tfrac12(4)+\tfrac12(2)=3,\\
+y[2]&=\tfrac12(0)+\tfrac12(4)=2,\\
+y[3]&=\tfrac12(2)+\tfrac12(0)=1.
+\end{aligned}\]
+
+This convention truncates the filter tail. Full convolution would include the final sample \(y[4]=1\).
 EXPLANATION:: A full convolution would include one additional tail output, also equal to one here. Both outputs can be legitimate under different conventions, but they answer different questions. Explicit boundary and alignment rules prevent a silent one-frame timing error later in a voice pipeline.
 PITFALL:: Feature extraction is part of the model contract. Matching the number of features does not establish compatibility if sample rate, frame alignment, normalisation or power conventions differ.
 EXERCISE:: Apply the same causal filter to [0, 2, 2, 0] using zero initial history. Write four outputs and the full-convolution tail. Then list six parameters you would record when exporting log-mel features for another researcher.
@@ -541,7 +581,7 @@ EXERCISE:: Apply the same causal filter to [0, 2, 2, 0] using zero initial histo
 Repeat with [0,2,2,2] and show the nonzero tail. Then compute the two-band energies, logs and two DCT coefficients in the toy feature frame from Step by step, naming its normalisation.
 SOLUTION:: Outputs are [0,1,2,1] and the extra tail is zero. Record sample rate, frame length, hop, window, frequency/mel-band configuration and magnitude/power plus log-floor convention; also document normalisation, transform size and boundary handling where relevant. A feature array alone is insufficient documentation.
 
-For [0,2,2,2], truncated output is [0,1,2,2] and the extra full-convolution sample is 1. Toy band energies are [2.5,2.5], natural logs approximately [0.9163,0.9163], and the stated unnormalised DCT-II gives [1.8326,0].
+For [0,2,2,2], truncated output is [0,1,2,2] and the extra full-convolution sample is 1. Toy band energies are [2.5,2.5], natural logs approximately \([0.9163,0.9163]\), and the stated unnormalised DCT-II gives \([1.8326,0]\).
 CHALLENGE:: Two systems both export 80 features per frame, but one uses 16 kHz audio with 10 ms hops and the other 48 kHz with 20 ms hops. Explain why their arrays cannot simply be exchanged, and draft a compatibility check before any model is loaded.
 CHALLENGE_SOLUTION:: Their timing, bandwidth and potentially band definitions differ. Compare full preprocessing specifications, expected dimensions, numeric scales, normalisation and boundary alignment against the receiving model's documentation. Reject or deliberately transform incompatible data with documented loss; do not assume equal feature count establishes equal meaning.
 QUESTION:: Why document a convolution boundary convention?
@@ -549,6 +589,7 @@ CORRECT:: It determines output length, edge values and timing alignment.
 WRONG1:: Boundaries never affect finite signals.
 WRONG2:: It guarantees that every filter improves speech intelligibility.
 FEEDBACK:: Finite signals require an assumption outside the observed interval. That assumption changes the computed result and its alignment.
+EXAMPLE_FORMAT:: math
 
 ID:: V17
 BRIDGE:: V07 provides vector calculations, V08 gradients, V09 probability and V10 data boundaries. Combine them into a small model whose arithmetic you can inspect. The supplied exercise uses fictional numbers and no training service.
@@ -560,17 +601,20 @@ Compare with a simple baseline. If a sophisticated model barely improves on pred
 
 Overfitting means a model captures training-specific detail that does not transfer adequately. Regularisation expresses preferences such as smaller weights, but does not repair leakage or an unrepresentative dataset. Consider the complete data process before attributing every failure to architecture.
 
-Classification needs more than a threshold label. In a binary logistic model, z = w·x+b is converted to p = 1/(1+exp(−z)). At z=0, p=0.5; at z=ln(3), p=0.75. A threshold converts this score to a decision, while calibration asks whether similar predicted probabilities match observed frequencies in appropriate independent data. A threshold and a probability are different objects.
+Classification needs more than a threshold label. In a binary logistic model, \(z=\mathbf{w}\cdot\mathbf{x}+b\) is converted to \(p=\frac1{1+\exp(-z)}\). At z=0, p=0.5; at \(z=\ln3\), p=0.75. A threshold converts this score to a decision, while calibration asks whether similar predicted probabilities match observed frequencies in appropriate independent data. A threshold and a probability are different objects.
 
-For target y=1, binary cross-entropy is −ln(p); for y=0 it is −ln(1−p). A correct-class probability 0.75 gives loss about 0.288, whereas 0.25 gives about 1.386. The loss penalises confident errors strongly, but minimising it still does not choose the right product trade-off. With 98 silent clips and two speech clips, always predicting silence misses both speech clips despite 98% accuracy. Write a confusion table and define costs before choosing an endpointing threshold.
-EXAMPLE:: Fictional training pairs: (x,y) = (0,1), (1,3), (2,5).
-Model A: y_hat = 2x + 1 → [1,3,5].
-Squared errors = [0,0,0]; mean = 0.
-Baseline B: always predict training mean 3 → [3,3,3].
-Squared errors = [4,0,4]; mean = 8/3.
+For target y=1, binary cross-entropy is \(-\ln p\); for y=0 it is \(-\ln(1-p)\). A correct-class probability 0.75 gives loss about 0.288, whereas 0.25 gives about 1.386. The loss penalises confident errors strongly, but minimising it still does not choose the right product trade-off. With 98 silent clips and two speech clips, always predicting silence misses both speech clips despite 98% accuracy. Write a confusion table and define costs before choosing an endpointing threshold.
+EXAMPLE:: Fictional training pairs are \((0,1),(1,3),(2,5)\). For a prediction rule \(\widehat y\), define:
 
-For a new supplied pair (3,8), Model A predicts 7,
-so its squared error on that pair is 1.
+\[\mathrm{MSE}=\frac1n\sum_{i=1}^{n}(\widehat y_i-y_i)^2.\]
+
+\[\begin{aligned}
+\text{Model A: }\widehat y&=2x+1, & \mathrm{MSE}_A&=0,\\
+\text{Baseline: }\widehat y&=\overline y_{\text{train}}=3,
+& \mathrm{MSE}_{\text{base}}&=\frac{4+0+4}{3}=\frac83.
+\end{aligned}\]
+
+On the separate supplied pair \((3,8)\), Model A predicts \(7\), with squared error \((7-8)^2=1\). This one pair is not a generalisation study.
 EXPLANATION:: Zero loss on three training pairs does not imply zero loss everywhere. The new pair exposes the distinction immediately. This calculation compares stated predictions; it does not establish that either model is appropriate for speech, nor require fitting or running a provider model.
 PITFALL:: A numeric score becomes meaningful only through its definition and validation. A classifier output of 0.95 is not a universal 95% guarantee of correctness, especially after distribution shift.
 EXERCISE:: For the same training pairs, calculate predictions and mean squared error for y_hat = x + 1. Compare all three candidate rules. Write one validation question about transfer and one about annotation quality. Identify which quantities were chosen before seeing the new pair.
@@ -582,6 +626,7 @@ CORRECT:: Agreement with the chosen training objective on those examples, subjec
 WRONG1:: Guaranteed correct behaviour on every future speaker.
 WRONG2:: Proof that every training label is correct.
 FEEDBACK:: Training fit, label quality and generalisation are separate claims requiring different evidence.
+EXAMPLE_FORMAT:: math
 
 ID:: V18
 BRIDGE:: V17 supplied losses and learned parameters. V08's chain rule now connects several transformations. Use the supplied arithmetic first; the linked lectures and book develop the full derivation before you attempt larger networks independently.
@@ -592,15 +637,21 @@ TEACHING:: Trace the forward pass before the backward pass. Save each intermedia
 For a loss built from squared error, the output derivative reflects the difference from the target. Multiplying by successive local derivatives tells us how an upstream weight influenced that error. A negative gradient means increasing the parameter locally reduces the loss under a sufficiently small step.
 
 Training procedure matters. Parameter initialisation, scale, optimiser settings, batching, masking and preprocessing can alter learning. A larger network has more capacity, not automatic immunity to bad labels, speaker leakage or a mismatched deployment setting. Keep the scientific boundaries from V10 even when a library handles the arithmetic.
-EXAMPLE:: x=2, w=1, b=0, output weight v=3, target y=4.
-z=wx+b=2; h=ReLU(z)=2; prediction=v×h=6.
-Loss=(prediction-y)^2=4.
-dL/dprediction=2(6-4)=4.
-dL/dv=4×h=8.
-dL/dw=4×v×1×x=24.
-dL/db=4×v×1=12.
+EXAMPLE:: Given \(x=2,w=1,b=0,v=3,y=4\), use \(h=\operatorname{ReLU}(z)\):
 
-All gradients refer to the original parameter values.
+\[\begin{aligned}
+z&=wx+b=2,&h&=2,\\
+\widehat y&=vh=6,&L&=(\widehat y-y)^2=4.
+\end{aligned}\]
+
+All gradients refer to those original parameter values:
+
+\[\begin{aligned}
+\frac{\partial L}{\partial\widehat y}&=2(6-4)=4,\\
+\frac{\partial L}{\partial v}&=4h=8,\\
+\frac{\partial L}{\partial w}&=4v\cdot1\cdot x=24,\\
+\frac{\partial L}{\partial b}&=4v\cdot1=12.
+\end{aligned}\]
 EXPLANATION:: When updating several parameters, compute their gradients from one consistent forward pass before applying the step. Updating v early and then using its new value to calculate w's old-pass gradient would mix two different computations.
 PITFALL:: A gradient is not an explanation that a model's decision is clinically, socially or linguistically correct. It measures local mathematical sensitivity of a specific objective.
 EXERCISE:: Repeat the forward pass with w=-1, keeping the other supplied values fixed. Calculate prediction, loss and the gradients for w, b and v away from ReLU's zero point. Explain why this single example can leave the hidden unit inactive.
@@ -612,28 +663,37 @@ CORRECT:: They must refer to the same parameter state and forward computation.
 WRONG1:: It guarantees the network cannot overfit.
 WRONG2:: It makes the training labels correct automatically.
 FEEDBACK:: Consistent gradients establish the intended mathematical update. They do not solve data quality or generalisation problems.
+EXAMPLE_FORMAT:: math
 
 ID:: V19
 BRIDGE:: V18 introduced composed layers, V16 audio features and V07 tensor axes. A sequence is an ordered collection whose positions matter. The assigned sequence and attention lectures provide the mathematical depth beyond this small attention calculation.
 CONCEPT:: Speech unfolds over time. Sequence models represent dependencies across frames or tokens. Attention lets a position combine information from selected other positions; transformer architectures build networks from attention, feed-forward layers and supporting mechanisms.
-MECHANISM:: Scaled dot-product attention forms scores QKᵀ/√d, applies a mask where required, converts scores to weights with softmax, and uses those weights to combine V values. Queries, keys and values are learned representations. A causal mask prevents access to later positions; padding masks prevent fabricated padding from acting like real data.
+MECHANISM:: Scaled dot-product attention forms scores \(QK^{\mathsf T}\)/√d, applies a mask where required, converts scores to weights with softmax, and uses those weights to combine V values. Queries, keys and values are learned representations. A causal mask prevents access to later positions; padding masks prevent fabricated padding from acting like real data.
 TEACHING:: Think of a query as the information a position is looking for, a key as an address-like matching representation and a value as information to combine. This is an intuition, not a literal database lookup: attention generally mixes several values rather than returning one discrete record.
 
 Softmax turns finite scores into positive weights summing to one. Equal scores give equal weights. Adding a constant to every score leaves the distribution unchanged. The scaling factor helps control score size as representation dimension grows; numerical implementations still need stable arithmetic.
 
 Order and availability are separate concerns. Position information distinguishes otherwise similar tokens at different sequence locations. A causal mask enforces a temporal information boundary. An offline encoder may use future audio, whereas a streaming system cannot access samples that have not arrived. An architecture claim must state this difference.
 
-Work an unequal-score example using V07's dot product. Let q=[1,0], k1=[0,1], k2=[ln(3),0], with d_k=2. Raw dot products are 0 and ln(3). Scaled scores divide by √2, giving 0 and about 0.7768. Softmax exponentiates then normalises: [1,2.1746]/3.1746 ≈ [0.3150,0.6850]. For values [2,6], the weighted output is about 4.740. Without the scaling the weights would be [0.25,0.75], so omitting it changes the calculation.
+Work an unequal-score example using V07's dot product. Let q=[1,0], k1=[0,1], k2=[\(\ln3\),0], with d_k=2. Raw dot products are 0 and \(\ln3\). Scaled scores divide by \(\sqrt2\), giving 0 and about 0.7768. Softmax exponentiates then normalises: [1,2.1746]/3.1746 ≈ \([0.3150,0.6850]\). For values [2,6], the weighted output is about 4.740. Without the scaling the weights would be \([0.25,0.75]\), so omitting it changes the calculation.
 
-With T query positions and feature width d_k, Q and K have shapes (T,d_k); QKᵀ is (T,T). Each row scores the available key positions for one query. Values may have width d_v, giving output shape (T,d_v). Mask forbidden logits before softmax. A row with no allowed keys needs an explicit handling policy; softmax of an all-masked row is not a meaningful distribution. Residual connections add a transformed representation to its input when shapes match; normalisation and feed-forward layers are further transformer components, not synonyms for attention.
-EXAMPLE:: One query has equal scores for two allowed positions.
-Softmax weights = [0.5, 0.5].
-Their scalar values are [2, 6].
-Attention output = 0.5×2 + 0.5×6 = 4.
+With T query positions and feature width d_k, Q and K have shapes \((T,d_k)\); \(QK^{\mathsf T}\) is \((T,T)\). Each row scores the available key positions for one query. Values may have width d_v, giving output shape \((T,d_v)\). Mask forbidden logits before softmax. A row with no allowed keys needs an explicit handling policy; softmax of an all-masked row is not a meaningful distribution. Residual connections add a transformed representation to its input when shapes match; normalisation and feed-forward layers are further transformer components, not synonyms for attention.
 
-If the second position is future information and is masked:
-weights become [1, 0]; output = 2.
-The mask changes available evidence, not just formatting.
+Scaled dot-product attention puts those operations together:
+
+\[\operatorname{Attention}(Q,K,V)=\operatorname{softmax}\!\left(\frac{QK^{\mathsf T}}{\sqrt{d_k}}+M\right)V.\]
+
+The mask \(M\) has zero at allowed locations and \(-\infty\) at forbidden locations, with at least one permitted key per processed row. Softmax acts across each query's key scores.
+EXAMPLE:: Equal allowed scores give equal softmax weights. With two scalar values \(v_1=2,v_2=6\):
+
+\[\alpha=[0.5,0.5],\qquad
+z=\sum_i\alpha_i v_i=0.5(2)+0.5(6)=4.\]
+
+If the second position is unavailable future information, mask it before softmax:
+
+\[\alpha_{\text{masked}}=[1,0],\qquad z_{\text{masked}}=2.\]
+
+The mask changes which evidence can affect the output; it is not merely formatting.
 EXPLANATION:: The toy example avoids matrix complexity while showing the effect of a causal boundary. Real attention uses vector values and many positions and heads. A high attention weight is not, by itself, a complete causal explanation of a model's answer.
 PITFALL:: A system described as streaming may still use substantial lookahead or wait for a full chunk. Ask how much future context each prediction needs and include that delay in latency accounting.
 EXERCISE:: With equal scores and scalar values [1,4,7], calculate unmasked attention. Then calculate attention at the middle position under a causal mask. Explain the result if a fourth padded position is mistakenly included with value 100 and equal score.
@@ -645,6 +705,7 @@ CORRECT:: A position cannot use later positions that the stated policy makes una
 WRONG1:: Every token must attend equally to every other token.
 WRONG2:: Attention weights prove a model's answer is correct.
 FEEDBACK:: A mask restricts information flow. Correct masking does not establish language understanding or factual accuracy.
+EXAMPLE_FORMAT:: math
 
 ID:: V20
 BRIDGE:: V05 covered reproducibility, V10 data boundaries and V13 pronunciation variation. Now design a dataset contract. Use fictional manifest rows; do not upload recordings or identifiable speech to the studio.
@@ -692,19 +753,17 @@ An acoustic path is not yet a complete account of language. Pronunciation and la
 
 Here is an actual Viterbi update. Start probabilities are A:0.6 and B:0.4. Transition probabilities are A→A:0.7, A→B:0.3, B→A:0.4, B→B:0.6. For observation one, emissions are A:0.5 and B:0.1; best initial joint scores are therefore A:0.30 and B:0.04. For observation two, emissions are A:0.1 and B:0.8.
 
-To reach A at time two, compare 0.30×0.7×0.1 = 0.021 from A with 0.04×0.4×0.1 = 0.0016 from B. Keep 0.021 and a backpointer to A. To reach B, compare 0.30×0.3×0.8 = 0.072 with 0.04×0.6×0.8 = 0.0192. Keep 0.072 and a backpointer to A. The best final path is A→B. You retained one score per ending state, not just the globally best state at the previous time.
+To reach A at time two, compare \(0.30\times0.7\times0.1=0.021\) from A with \(0.04\times0.4\times0.1=0.0016\) from B. Keep 0.021 and a backpointer to A. To reach B, compare \(0.30\times0.3\times0.8=0.072\) with \(0.04\times0.6\times0.8=0.0192\). Keep 0.072 and a backpointer to A. The best final path is A→B. You retained one score per ending state, not just the globally best state at the previous time.
 
-The recurrence is best[t,s] = emission(s,observation[t]) × max_previous(best[t−1,previous] × transition(previous,s)). In log space replace multiplication by addition; impossible probabilities correspond to negative infinity, not log(0) evaluated as an ordinary number. A forward algorithm sums incoming path scores instead of maximising them. These are different objectives, which prepares the best-path versus summed-transcript distinction in V22.
-EXAMPLE:: Two candidate state paths for two observations:
-Path A: start probability 0.5,
-  first observation likelihood 0.8,
-  transition 0.6, second observation likelihood 0.7.
-Score A = 0.5×0.8×0.6×0.7 = 0.168.
+The recurrence is \(D_t(s)=e_s(o_t)\max_r\{D_{t-1}(r)a_{rs}\}\), where \(D_t(s)\) is the best partial joint score ending in state \(s\), \(a_{rs}\) is a transition probability and \(e_s(o_t)\) is an emission likelihood. In log space replace multiplication by addition; impossible probabilities correspond to negative infinity, not log(0) evaluated as an ordinary number. A forward algorithm sums incoming path scores instead of maximising them. These are different objectives, which prepares the best-path versus summed-transcript distinction in V22.
+EXAMPLE:: Two candidate paths for two observations have these supplied factors:
 
-Path B: start 0.5, first likelihood 0.4,
-  transition 0.9, second likelihood 0.8.
-Score B = 0.144.
-Among these two candidates, A has the larger joint score.
+\[\begin{aligned}
+P_A&=0.5\times0.8\times0.6\times0.7=0.168,\\
+P_B&=0.5\times0.4\times0.9\times0.8=0.144.
+\end{aligned}\]
+
+The factors represent start probability, first observation likelihood, transition and second observation likelihood. Among these two candidates, \(P_A>P_B\). This is a joint-path comparison, not a complete recogniser or a normalised posterior over transcripts.
 EXPLANATION:: We have compared two supplied joint path scores, not calculated a normalised posterior over every possible transcript. If several paths map to one transcript, the most likely single path and the highest summed transcript probability can disagree.
 PITFALL:: The best alignment path is not necessarily the most probable transcript after summing all its possible alignments. State the decoding objective before interpreting the answer.
 EXERCISE:: Change Path B's transition to 1.0 and recalculate its score. Then change its first likelihood to 0.6 as well. Determine when the preferred path switches. Draw a two-state, three-time-step trellis and label what information a dynamic-programming table would retain.
@@ -720,6 +779,7 @@ CORRECT:: The most probable state path under the specified model.
 WRONG1:: The sum of probabilities of every path for every transcript automatically.
 WRONG2:: The speaker's true intention regardless of the model assumptions.
 FEEDBACK:: Path optimisation and transcript marginalisation are distinct operations. Neither directly measures intention.
+EXAMPLE_FORMAT:: math
 
 ID:: V22
 BRIDGE:: V19 introduced sequence outputs and V21 alignment paths. CTC, connectionist temporal classification, allows learning from sequence labels without a supplied frame-by-frame alignment. Learn its collapse rule carefully before looking at architecture diagrams.
@@ -731,7 +791,7 @@ The order of collapse operations matters. For a path a,a,blank,a, merging adjace
 
 Greedy decoding chooses the most likely label at each frame and collapses that path. It does not necessarily return the transcript with highest summed probability across all paths. Beam search approximates a richer search; external language constraints change the decoding setup. Record these details when comparing systems.
 
-Check a complete tiny probability calculation. Use two frames, labels a and blank, and independent frame distributions P(a)=0.6, P(blank)=0.4 at each frame. Four paths exist: aa scores 0.36, a_ scores 0.24, _a scores 0.24 and __ scores 0.16. The first three collapse to a, giving P(a)=0.84; the last collapses to the empty transcript, giving 0.16. These sums total one under this toy model. Two output a labels cannot fit into two frames because a separating blank would require a third frame.
+Check a complete tiny probability calculation. Use two frames, labels a and blank, and independent frame distributions \(P(a)=0.6\), \(P(\mathrm{blank})=0.4\) at each frame. Four paths exist: aa scores 0.36, a_ scores 0.24, _a scores 0.24 and __ scores 0.16. The first three collapse to a, giving \(P(a)=0.84\); the last collapses to the empty transcript, giving 0.16. These sums total one under this toy model. Two output a labels cannot fit into two frames because a separating blank would require a third frame.
 
 CTC's conditional-independence structure is a modelling assumption. It permits efficient dynamic programming over valid alignments, but it is not a statement that real speech frames are independent. Decoder search, language-model scoring and tokenisation can change how the frame outputs become the final transcript. A greedy path may be easy to inspect while still missing the transcript with the greatest summed mass.
 EXAMPLE:: Use _ for CTC blank.
@@ -795,7 +855,7 @@ Masking asks the contextual network to use surrounding information to distinguis
 
 For multilingual work, count representation and labels separately. A language can be absent, scarce or mismatched in accent, device or domain. Adaptation may improve one group while harming another. Define the target population and comparisons before making a general multilingual claim, and preserve speaker/session boundaries throughout.
 
-Connect the representation-learning objective to V19. An encoder turns waveform spans into latent vectors; selected positions are masked before a contextual network sees them. In wav2vec 2.0, a contrastive objective distinguishes a quantised target from distractors. As a simplified illustration, if the correct candidate has score ln(3) and one distractor has score 0 at temperature one, its softmax probability is 0.75 and negative log-probability is about 0.288. This is illustrative score arithmetic, not the full paper's training objective or a request to train anything.
+Connect the representation-learning objective to V19. An encoder turns waveform spans into latent vectors; selected positions are masked before a contextual network sees them. In wav2vec 2.0, a contrastive objective distinguishes a quantised target from distractors. As a simplified illustration, if the correct candidate has score \(\ln3\) and one distractor has score 0 at temperature one, its softmax probability is 0.75 and negative log-probability is about 0.288. This is illustrative score arithmetic, not the full paper's training objective or a request to train anything.
 
 Read an architecture in stages: waveform encoder, contextual representation, pretraining target/loss, then a task head and adaptation procedure. HuBERT uses a different target-construction approach; self-supervised does not mean all methods share one objective. Multilingual pretraining changes the data mixture and representation question, not the need to measure transfer for the intended language/device/population. Write these stages in your evidence table before using a model-family name as an explanation.
 EXAMPLE:: Fictional study inventory:
@@ -827,14 +887,17 @@ TEACHING:: Define tokenisation and normalisation first. Lowercasing, punctuation
 Inspect consequences alongside counts. Confusing “can” with “cannot” can matter more than a stylistic punctuation difference. A low average can conceal serious errors in names, quantities or a particular speaker group. Scores must connect to the product task without replacing faithful reference comparison with subjective tidying.
 
 Compare subgroup evidence proportionately. State sample sizes, speaker/session independence and uncertainty. A difference from a tiny group is a reason to investigate, not proof of a universal population characteristic. System errors should prompt design improvements and accessible alternatives rather than blaming speakers.
-EXAMPLE:: Reference: “please reserve the blue atlas” (5 words)
-Hypothesis: “please reserve a blue atlas now”
-One minimum alignment: the→a substitution; now insertion.
-S=1, D=0, I=1; WER=2/5=40%.
+EXAMPLE:: Reference: “please reserve the blue atlas” (five words). Hypothesis: “please reserve a blue atlas now”. A minimum alignment substitutes the→a and inserts now.
 
-Utterance A: 1 error / 2 reference words = 50%.
-Utterance B: 1 error / 18 words ≈ 5.56%.
-Aggregate WER = 2/20 = 10%, not their unweighted mean.
+\[S=1,\quad D=0,\quad I=1,\quad N=5.\]
+
+\[\mathrm{WER}=\frac{S+D+I}{N}=\frac25=40\%.\]
+
+For two utterances with one error each and reference lengths 2 and 18:
+
+\[\mathrm{WER}_{\text{corpus}}=\frac{1+1}{2+18}=10\%.\]
+
+It is not the unweighted mean of the two utterance WERs.
 EXPLANATION:: Both utterances contribute one edit, but their reference lengths differ. The aggregate weights reference words. WER can exceed 100% when insertions are numerous; it is an edit ratio, not a bounded probability that a transcript is wrong.
 PITFALL:: Never describe 1 − WER as a universally valid accuracy probability. Insertion-heavy outputs can make it negative, and a word-level score does not represent task success or subgroup fairness by itself.
 EXERCISE:: Use reference “open the library” and hypothesis “please open library now”. Show an alignment, counts and WER. Then compare two fictional groups: A has 4 errors/80 words from eight speakers; B has 4/20 from two. State what is observed and what remains uncertain.
@@ -846,6 +909,7 @@ CORRECT:: The total number of reference words under the stated tokenisation poli
 WRONG1:: The number of model parameters.
 WRONG2:: The number of hypothesis words, regardless of the reference.
 FEEDBACK:: WER counts minimum-alignment edits relative to reference length. Its interpretation depends on the complete scoring convention.
+EXAMPLE_FORMAT:: math
 
 ID:: V26
 BRIDGE:: V18 supplies learned embeddings, V20 permissions and V25 error analysis. Distinguish anonymous speaker grouping from identifying a person. Use only the fictional timeline supplied here.
@@ -857,20 +921,19 @@ Define comparison conventions. Diarisation error can include missed speech, fals
 
 Treat biometric uses separately. A diarisation demonstration does not validate authentication, forensic attribution or clinical identity. Voice characteristics change with conditions, and spoofing or replay can challenge identity systems. Consequential access needs an appropriate security design beyond an embedding similarity threshold.
 
-A diarisation denominator can count speaker-time rather than elapsed recording time. In the supplied timeline, A is active for three seconds and B for three, so total reference speaker-time is six seconds although the recording lasts five. Assume zero boundary collar, overlap included, correct speech elsewhere and optimal anonymous label mapping. Missing B during the one-second overlap then contributes 1/6, about 16.7%, to diarisation error under these conventions. A different overlap/collar policy can change that result.
+A diarisation denominator can count speaker-time rather than elapsed recording time. In the supplied timeline, A is active for three seconds and B for three, so total reference speaker-time is six seconds although the recording lasts five. Assume zero boundary collar, overlap included, correct speech elsewhere and optimal anonymous label mapping. Missing B during the one-second overlap then contributes \(\frac16\approx16.7\%\), to diarisation error under these conventions. A different overlap/collar policy can change that result.
 
 Speaker verification asks whether a sample matches a claimed identity under a threshold; identification selects among identities, while diarisation groups activity within a recording. None of those tasks automatically checks liveness, account permissions or whether a synthetic/replayed sample is authorised. Keep similarity, identity evidence and permission as separate claims.
-EXAMPLE:: Fictional reference timeline:
-0–2 s: A
-2–3 s: A and B overlap
-3–5 s: B
+EXAMPLE:: Fictional reference: A speaks from 0–3 s; B speaks from 2–5 s, so 2–3 s overlaps. The hypothesis assigns speaker_0 to 0–3 s and speaker_1 to 3–5 s.
 
-Hypothesis:
-0–3 s: speaker_0
-3–5 s: speaker_1
+After optimal anonymous label mapping, the one-second B activity during overlap is missing. Under zero collar, overlap included and otherwise correct activity:
 
-After mapping labels, B's activity during 2–3 s is missing.
-The exact score needs the overlap and denominator convention.
+\[\begin{aligned}
+T_{\text{reference speakers}}&=3+3=6\ \mathrm{s},\\
+\mathrm{DER}_{\text{this case}}&=\frac{1}{6}\approx16.7\%.
+\end{aligned}\]
+
+These conventions are part of the result. Elapsed recording time is five seconds; reference speaker-time is six.
 EXPLANATION:: The hypothesis can represent the non-overlapping portions correctly while failing on overlap. We can identify that qualitative error without claiming a particular DER value from an unspecified scoring setup.
 PITFALL:: A cluster name is not a verified real-world identity. Do not turn “speaker_1 said this” into “this named person said this” without independent, appropriate evidence.
 EXERCISE:: Draw the supplied reference and hypothesis on parallel timelines. Add a second hypothesis whose labels are swapped but intervals are identical. Explain why a label mapping should leave substantive performance unchanged. List the permissions needed before handling an actual meeting recording.
@@ -882,6 +945,7 @@ CORRECT:: A model's grouping of speech regions within its stated setup, not a ve
 WRONG1:: A legally verified name and account owner.
 WRONG2:: Guaranteed authentication across every microphone and session.
 FEEDBACK:: Grouping, identifying and authenticating are different tasks. Evidence for one does not automatically validate the others.
+EXAMPLE_FORMAT:: math
 
 ID:: V27
 BRIDGE:: V14 introduced source/filter reasoning, V16 convolution and V25 comparison limits. Audio enhancement can improve some signals while damaging others. Use equations and supplied synthetic values; do not process a person's recordings.
@@ -892,18 +956,23 @@ TEACHING:: Define the target before saying audio is cleaner. Removing all sound 
 Echo differs from arbitrary noise because a system often has a reference for its own playback. The acoustic path adds delay and filtering. If those change, cancellation needs to track them. A user talking while the agent speaks creates double-talk; suppressing everything during playback would also suppress the user's interruption.
 
 Multi-microphone processing needs synchronised channels and geometry assumptions. A delay error can attenuate rather than reinforce the target. More microphones do not automatically help if channels are misaligned, devices drift or the deployment differs from the tested room.
-EXAMPLE:: Supplied synthetic vectors:
-target s = [1, 0, -1]
-noise n = [0.5, 0.5, 0.5]
-mixture x = [1.5, 0.5, -0.5]
-estimate A = [1, 0, -1] → zero target error here.
-estimate B = [0, 0, 0] → quiet, but loses the target.
+EXAMPLE:: Supplied synthetic target, noise and mixture:
 
-An ideal reference example cannot predict real-room performance.
+\[\mathbf{s}=[1,0,-1],\quad\mathbf{n}=[0.5,0.5,0.5],\quad
+\mathbf{x}=\mathbf{s}+\mathbf{n}=[1.5,0.5,-0.5].\]
+
+Use the squared target-error sum \(E(\widehat{\mathbf{s}})=\sum_i(\widehat s_i-s_i)^2\).
+
+\[\begin{aligned}
+\widehat{\mathbf{s}}_A&=[1,0,-1], &E_A&=0,\\
+\widehat{\mathbf{s}}_B&=[0,0,0], &E_B&=1+0+1=2.
+\end{aligned}\]
+
+Silence is quiet but destroys the target. This supplied idealised comparison does not predict real-room performance.
 EXPLANATION:: Lower output energy does not establish better recovery. The target is known only because this is a constructed example. Real recordings may not provide a clean reference, so the comparison design and perceptual/task measures need careful justification.
 PITFALL:: A visually smooth waveform or attractive spectrogram is not sufficient evidence of intelligibility or faithful content. Enhancement can remove weak consonants or introduce artefacts.
 EXERCISE:: Calculate the squared target error sum for estimates A and B. Add estimate C=[0.8,0,-0.8] and compare it with B. Draw an echo path from agent playback through loudspeaker, room and microphone; label reference, delay and user speech.
-SOLUTION:: A has error zero; B has 1+0+1=2; C has 0.04+0+0.04=0.08. C preserves more target structure despite not being exact. In the echo diagram, the playback reference precedes the room path, while independent user speech joins at the microphone and must not be treated as known echo.
+SOLUTION:: A has error zero; B has 1+0+1=2; C has \(0.04+0+0.04=0.08\). C preserves more target structure despite not being exact. In the echo diagram, the playback reference precedes the room path, while independent user speech joins at the microphone and must not be treated as known echo.
 CHALLENGE:: A demo suppresses all microphone input while the assistant speaks and calls this “perfect echo cancellation”. Explain what it actually does, the lost capability and a comparison plan that would distinguish echo suppression from preserving user speech.
 CHALLENGE_SOLUTION:: It gates the microphone during playback. This can hide echo by discarding every signal, including barge-in. A proper plan includes controlled playback-only, user-only and double-talk conditions with appropriate permissions and target measures. The supplied design critique requires no live call or model run.
 QUESTION:: Why is a silent output not automatically successful enhancement?
@@ -911,6 +980,7 @@ CORRECT:: It may remove the desired speech along with the interference.
 WRONG1:: Any output with lower energy is necessarily more intelligible.
 WRONG2:: A flat waveform proves exact recovery of the original speaker.
 FEEDBACK:: The goal concerns preservation of the target, not minimising sound indiscriminately.
+EXAMPLE_FORMAT:: math
 
 ID:: V28
 BRIDGE:: V13 distinguishes letters and sounds, V14 pitch and resonances, and V20 rights and annotation. A TTS front end turns written material into a pronunciation-oriented representation. Work with fictional phrases and explicit language assumptions.
@@ -951,14 +1021,15 @@ TEACHING:: Keep time scales explicit. A short sentence may contain tens of lingu
 Attention-based alignment can skip or repeat material when it fails. Duration-based approaches need a duration mechanism and training assumptions. Architecture names alone do not tell you pronunciation accuracy, speaker coverage, expressiveness or streaming delay. Compare the intended task and available evidence.
 
 The Tacotron 2 and VITS papers illustrate different designs and objectives. Read their diagrams, conditioning information, data, losses and reported limitations. Do not describe a modern system as Tacotron-like merely because it speaks naturally; identify the actual representation and generation process.
-EXAMPLE:: Fictional phoneme-duration plan:
-tokens: [A, B, C]
-durations in acoustic frames: [2, 1, 3]
-expanded alignment: [A, A, B, C, C, C]
-frame hop: 10 ms
-total planned duration: 6×10 = 60 ms.
+EXAMPLE:: Fictional tokens are A, B and C, with durations in acoustic frames:
 
-If C's duration is accidentally zero, its acoustic contribution can vanish.
+\[\mathbf{d}=[2,1,3],\qquad N_{\text{frames}}=\sum_i d_i=6.\]
+
+The expanded alignment is [A, A, B, C, C, C]. At a frame hop of \(10\ \mathrm{ms}\):
+
+\[T=6\times10\ \mathrm{ms}=60\ \mathrm{ms}.\]
+
+If C is accidentally assigned zero duration, its acoustic contribution can vanish. The abstract alignment does not establish intelligibility.
 EXPLANATION:: The symbols are abstract tokens rather than a real utterance. The example isolates duration accounting without pretending that repeating token labels generates a waveform. Acoustic modelling and waveform generation still need their own defined transformations.
 PITFALL:: Naturalness and fidelity are different. An attractive synthetic voice may omit a word, misread a number or imitate a speaker without appropriate permission.
 EXERCISE:: Expand durations [1,3,2,2] for four abstract tokens and calculate duration at 12.5 ms/frame. Introduce a repeated-token error and an omitted-token error in separate alignments. Explain which product details each could corrupt in a reservation confirmation.
@@ -970,6 +1041,7 @@ CORRECT:: How linguistic units align to a longer acoustic timeline.
 WRONG1:: Whether a user has authorised a calendar change.
 WRONG2:: Whether every possible synthetic voice is legally available to clone.
 FEEDBACK:: Alignment is a temporal modelling problem. Authorisation and voice rights are separate system responsibilities.
+EXAMPLE_FORMAT:: math
 
 ID:: V30
 BRIDGE:: V16 supplies filters/features and V29 acoustic-model outputs. A waveform contains many samples per second. Vocoders and neural codecs provide different ways to generate or represent those samples; keep their purpose and interfaces distinct.
@@ -977,7 +1049,7 @@ CONCEPT:: A vocoder generates a waveform from a conditioning representation. A n
 MECHANISM:: WaveNet models waveform samples autoregressively in its original formulation, conditioned on prior samples and optional context. A codec encoder maps audio to latent features, quantisation selects finite codebook entries and a decoder reconstructs audio. Multiple residual codebooks can refine the representation, increasing bitrate and potentially fidelity under a specific design.
 TEACHING:: Separate generation rate from audible duration. A waveform at 24 kHz contains 24,000 samples per second. A codec can represent a second with a smaller number of frame-level tokens, but the exact rate depends on frame rate, codebooks and vocabulary size. Fewer tokens do not automatically mean lower end-to-end latency.
 
-Compute a nominal token payload before discussing compression. With K codebooks, frame rate F and V entries per codebook, a fixed-length index representation uses K×F×log2(V) bits/second when V is a power of two. Real files may add headers, entropy coding, framing and other overhead.
+Compute a nominal token payload before discussing compression. With K codebooks, frame rate F and V entries per codebook, a fixed-length index representation uses \(KF\log_2 V\) bits/second when V is a power of two. Real files may add headers, entropy coding, framing and other overhead.
 
 Reconstruction is not guaranteed identical to the input. A codec designed for perceptual quality can discard detail. Downstream speaker, clinical or forensic analysis may care about details that are not central to perceived naturalness. Review task suitability rather than treating every compressed representation as interchangeable.
 
@@ -986,17 +1058,21 @@ A neural codec usually has an encoder, a quantiser and a decoder. The encoder ma
 Residual vector quantisation represents what earlier codebooks missed. Use a one-dimensional toy latent 2.7: the first codebook {0,2} chooses 2, leaving residual 0.7. A second codebook {0,0.5,1} chooses 0.5, leaving residual 0.2. Reconstruction is 2+0.5=2.5. The two indices describe this approximation; adding codebooks can change rate, compute and reconstruction error. This small scalar example illustrates the operation and does not describe EnCodec's actual learned vectors or settings.
 
 Quality objectives are distinct. Waveform distance, spectral distance, adversarial training and perceptual judgements emphasise different properties. A plausible reconstruction can still change a name, speaker cue or low-energy sound relevant to a downstream task. Read the codec paper's representation, objectives and experiments separately from its compression headline.
-EXAMPLE:: Fictional codec assumptions:
-frame rate = 50 frames/second
-codebooks = 4
-entries/codebook = 1,024 → 10 bits/index
-nominal index rate = 50×4×10 = 2,000 bits/second.
-For 3 seconds: 6,000 bits = 750 bytes of indices.
-This excludes headers and any additional metadata.
+EXAMPLE:: Fictional fixed-length index coding uses \(F=50\) frames/second, \(K=4\) codebooks and \(V=1024\) entries per codebook:
+
+\[b_{\text{index}}=\log_2 V=10\ \text{bits/index}.\]
+
+\[\begin{aligned}
+R&=FK\log_2 V\\
+ &=50\times4\times10=2000\ \text{bits/s},\\
+B_{3\,\mathrm{s}}&=\frac{3R}{8}=750\ \text{bytes}.
+\end{aligned}\]
+
+This excludes headers, entropy coding and additional metadata. It is a nominal payload calculation, not a quality or latency result.
 EXPLANATION:: The count describes a hypothetical representation, not a measured codec's quality or file size. It also does not specify how long the encoder must wait for context before producing a frame. Bitrate, compute throughput and algorithmic delay are distinct properties.
 PITFALL:: A small compressed stream is not automatically a low-latency system. Lookahead, buffering, computation and transport can dominate the delay even when the token payload is tiny.
 EXERCISE:: Recalculate the nominal index rate for eight codebooks at the same frame rate and vocabulary size. Compare it with mono 24 kHz, 16-bit PCM. State the ratio and three reasons it does not establish that this codec is suitable for a particular voice product.
-SOLUTION:: Eight codebooks give 4,000 bits/second. PCM is 24,000×16=384,000 bits/second, a nominal ratio of 96:1 before overhead. Quality, supported audio conditions, delay, compute and licensing remain unknown. A payload ratio is not a quality or suitability result.
+SOLUTION:: Eight codebooks give 4,000 bits/second. PCM is \(24{,}000\times16=384{,}000\) bits/second, a nominal ratio of 96:1 before overhead. Quality, supported audio conditions, delay, compute and licensing remain unknown. A payload ratio is not a quality or suitability result.
 CHALLENGE:: A diagram says “audio tokens at 25 Hz” but omits codebook count and vocabulary. Explain what can and cannot be calculated, and request the additional details needed for bandwidth and latency planning.
 CHALLENGE_SOLUTION:: Frame spacing is 40 ms if 25 Hz refers to frame rate. Bitrate needs tokens per frame, vocabulary/index coding, overhead and framing. Delay needs lookahead, buffering, encoder/decoder compute and transport behaviour. Do not confuse one frame interval with measured time to first audible response.
 QUESTION:: Which quantities are needed for a nominal fixed-length codec-index bitrate?
@@ -1004,6 +1080,7 @@ CORRECT:: Frame rate, codebooks or indices per frame, and bits per index.
 WRONG1:: Only the number of letters in the model name.
 WRONG2:: Only the speaker's perceived loudness.
 FEEDBACK:: Representation rate follows the encoded index structure. Audio quality and latency require additional evidence.
+EXAMPLE_FORMAT:: math
 
 ID:: V31
 BRIDGE:: V10 supplies study design, V20 rights and V29–V30 generation architectures. This lesson designs a listener study on paper and analyses supplied ratings. It does not recruit listeners, generate voices or launch scoring runs.
@@ -1014,13 +1091,11 @@ TEACHING:: Define the question first. Asking “How natural is this?” differs 
 Use comparable materials and conditions. Loudness differences, order, sentence selection and headphones can influence judgements. Describe exclusions and accessibility needs before collection, and avoid treating one mean as evidence for every language or listener population. Appropriate consent and data handling apply to both speakers and listeners.
 
 Voice similarity raises a separate permission question. A recognisable imitation can have misuse consequences even if a study participant rates it highly. Authorisation for recording, synthesis, publication and future use may differ. A model provider's interface cannot grant rights that it does not hold.
-EXAMPLE:: Supplied fictional naturalness ratings for one condition:
-listener 1: 4, listener 2: 3, listener 3: 5, listener 4: 2.
-Mean = (4+3+5+2)/4 = 3.5 on this stated five-point scale.
+EXAMPLE:: Fictional naturalness ratings on a stated five-point scale are \(4,3,5,2\):
 
-Separate text check:
-reference date: 14 June; spoken candidate says 40 June.
-The mean naturalness rating cannot make the date correct.
+\[\overline r=\frac{4+3+5+2}{4}=3.5.\]
+
+A separate text check finds reference date “14 June” but spoken candidate “40 June”. The mean naturalness rating cannot make the date correct, establish intelligibility or supply voice-use consent.
 EXPLANATION:: The tiny ratings illustrate arithmetic, not a valid population comparison. The impossible date illustrates why fidelity needs an independent measure. Report the scale anchors and exact question whenever presenting ratings, not just the label MOS.
 PITFALL:: Comparing MOS numbers from unrelated studies is often misleading when sentences, listeners, instructions, languages or playback differ. A shared numeric range does not make the studies equivalent.
 EXERCISE:: Design a fictional paired comparison of two TTS systems reading library information. Specify eight sentence types, including names and numbers; two separate judgement questions; an order-balancing rule; and a permission record. Do not generate audio or recruit anyone.
@@ -1032,6 +1107,7 @@ CORRECT:: A summary of those ratings under that study's question and conditions.
 WRONG1:: Guaranteed faithful pronunciation of every number and name.
 WRONG2:: Permission to clone any recognisable voice.
 FEEDBACK:: A perceptual summary answers its defined question. Fidelity, transfer and rights need their own evidence.
+EXAMPLE_FORMAT:: math
 
 ID:: V32
 BRIDGE:: V03 introduced dictionaries and loops, V13 communication structure and V25 consequential recognition errors. A dialogue state machine is a useful first conversational system because its assumptions and transitions can be inspected directly.
@@ -1126,7 +1202,7 @@ PITFALL:: Calling cancel does not guarantee every callback disappears. Design fo
 EXERCISE:: Trace start_R1, start_R2_after_interrupt, finish_R1, finish_R2. For each event, record active generation and whether output is allowed. Add a duplicate finish_R2 and state how you prevent duplicate playback. Use only a paper table or local synthetic event list.
 SOLUTION:: R1's completion is stale once generation two is active. R2's first valid completion may publish. A consumed-event identifier or response-completion flag rejects its duplicate. The policy must be session-scoped so another user's response cannot share the same state accidentally.
 CHALLENGE:: A producer adds 50 frames/second while a consumer handles 40. Starting with an empty queue, calculate backlog after 10 seconds and its queued duration if each frame represents 20 ms. Propose a bounded policy and identify one category of event that must not be dropped silently.
-CHALLENGE_SOLUTION:: Backlog grows by 100 frames, representing two seconds of audio. Capacity limits and an explicit overload response prevent unlimited delay. Use backpressure or a documented safe discard strategy for obsolete audio. Approved tool writes and confirmation events require reliable, explicit handling rather than silent dropping.
+CHALLENGE_SOLUTION:: Backlog grows by 100 frames, representing two seconds of audio. Capacity limits and an explicit overload response prevent unlimited delay. Use backpressure or a documented safe discard strategy for obsolete audio. Approved tool writes and confirmation events require reliable, explicit handling rather than silent dropping. The arithmetic is \((50-40)\times10=100\) frames and \(100\times20\ \mathrm{ms}=2\ \mathrm{s}\).
 QUESTION:: Why keep a generation check after requesting cancellation?
 CORRECT:: Obsolete work can still complete, so late results must be rejected before publication.
 WRONG1:: Cancellation always reverses a database commit.
@@ -1204,15 +1280,15 @@ TEACHING:: Use one clock domain or document clock synchronisation. A server time
 Draw dependencies before adding numbers. If recognition streams during user speech, its total processing span may overlap the input rather than occur entirely after the user finishes. A tool that must complete before a truthful answer lies on the response critical path. Speculative speech must not falsely announce success to hide that wait.
 
 Summarise the distribution, not just the average. State sample counts and percentile convention, and investigate long-tail delays, cancellations and failed sessions. Excluding timeouts can make a system appear faster by discarding its worst experiences. Keep latency and successful task completion visible together.
-EXAMPLE:: Fictional turn, all times from one clock:
-User's last sample: 1,000 ms
-Endpoint confirmed: 1,250 ms
-Required tool result ready: 1,500 ms
-First synthesis byte: 1,620 ms
-First audible playback: 1,700 ms
+EXAMPLE:: All supplied timestamps use one clock, measured in milliseconds. The user's last sample is at 1000; endpoint confirmation at 1250; required tool result at 1500; first synthesis byte at 1620; first audible playback at 1700.
 
-User-end to audible response = 700 ms.
-Endpoint wait = 250 ms; post-endpoint path = 450 ms.
+\[\begin{aligned}
+\Delta t_{\text{response}}&=1700-1000=700\ \mathrm{ms},\\
+\Delta t_{\text{endpoint}}&=1250-1000=250\ \mathrm{ms},\\
+\Delta t_{\text{after endpoint}}&=1700-1250=450\ \mathrm{ms}.
+\end{aligned}\]
+
+The first-byte and first-audible endpoints are different. Do not subtract timestamps from unsynchronised clocks.
 EXPLANATION:: The trace defines exactly what the 700 ms includes. It does not measure the first input word to completed task or the length of the spoken answer. A different metric can be useful, but it must be named rather than compared as if identical.
 PITFALL:: A fast first audio byte is not necessarily a fast useful answer. Empty acknowledgements, queueing and buffering can separate server throughput from the user's experience.
 EXERCISE:: Change tool readiness to 1,900 ms, first synthesis byte to 2,020 and first audible playback to 2,100. Calculate the new response delay and its increase. Then list the data needed to distinguish slow tool execution from time spent waiting in a tool queue.
@@ -1224,6 +1300,7 @@ CORRECT:: When the user can first hear the agent's output, including relevant tr
 WRONG1:: When the server creates its first text token, regardless of playback.
 WRONG2:: When a request is merely added to a queue.
 FEEDBACK:: Latency endpoints must match the user-facing claim. Intermediate milestones are useful but different measurements.
+EXAMPLE_FORMAT:: math
 
 ID:: V38
 BRIDGE:: V20 covers data rights, V31 voice consent, V33 tools and V36 interruption. Now combine the boundaries into a threat model. Use fictional assets and attack sentences; do not test external systems or impersonate a real person.
@@ -1262,13 +1339,16 @@ TEACHING:: Define success from the user's task. A connected call is not necessar
 Model the bill before scaling. Different components may charge per audio minute, token, request, compute time or session. Use explicit rates and units, then include retry assumptions and non-model infrastructure. Verify current provider prices separately before purchasing; the numbers below are fictional arithmetic, not recommendations or live quotes.
 
 Operate with safe observability. Correlation IDs and stage durations can explain many failures without logging full conversations. Define access and retention for any content you truly need. Test a release with deterministic contracts and staged, authorised verification appropriate to its dependencies; do not infer production reliability from mocks alone.
-EXAMPLE:: Fictional workload: 100 sessions, 3 input minutes each.
-Input-audio rate: 0.01 currency units/minute.
-Generated-audio rate: 0.02/minute, 1 minute/session.
-Text processing: 0.005/session.
-Base variable cost = 300×0.01 + 100×0.02 + 100×0.005 = 5.5.
-Add 20% repeated billable workload: 6.6.
-Hosting, telephone, storage and tax are not included.
+EXAMPLE:: Use fictional currency units (CU), not current provider prices. There are 100 sessions, each with three input-audio minutes, one generated-audio minute and a text charge of 0.005 CU. Audio rates are 0.01 and 0.02 CU/minute respectively.
+
+\[\begin{aligned}
+C_{\text{base}}&=(100\times3)(0.01)\\
+&\quad+(100\times1)(0.02)+100(0.005)\\
+&=5.5\ \mathrm{CU},\\
+C_{\text{repeated}}&=1.20\,C_{\text{base}}=6.6\ \mathrm{CU}.
+\end{aligned}\]
+
+The 20% increase is a supplied repeated-workload assumption. Hosting, telephone, storage and tax are excluded.
 EXPLANATION:: The calculation makes its scope visible. A real provider may meter retries, partial calls and rounding differently, so the percentage is an assumption. A low variable estimate cannot establish a profitable or reliable product without the omitted costs and actual workload evidence.
 PITFALL:: Automatically retrying every failure can duplicate state changes, amplify outages and increase bills. Classify errors and make retries bounded and idempotent where needed.
 EXERCISE:: For 200 sessions with the same assumptions, calculate base and retry-adjusted cost. Then define three service indicators: one task outcome, one latency measure and one failure/recovery measure. Specify denominators and a response when each objective is missed.
@@ -1280,6 +1360,7 @@ CORRECT:: The remote action may already have committed, and a new operation coul
 WRONG1:: Every timeout proves that nothing happened remotely.
 WRONG2:: Retries never affect cost or load.
 FEEDBACK:: Lost responses and failed operations are different. Stable operation identity and status reconciliation are essential around writes.
+EXAMPLE_FORMAT:: math
 
 ID:: V40
 BRIDGE:: V13 covers pronunciation variation, V24 multilingual representations, V25 subgroup evidence, V31 listening conditions and V36 timing. Accessible voice design starts with varied users rather than adding one fallback after the main design is fixed.
