@@ -1927,3 +1927,37 @@ input[type="radio"] {
     padding: 1.5rem 0;
   }
 }
+
+/* Keep excerpt instructions above each click-to-load player. */
+.resource-assignment {
+  border-left: 3px solid var(--line);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.resource-assignment p {
+  margin: 0.5rem 0;
+}
+.resource-assignment ol {
+  padding-left: 1.25rem;
+}
+.assigned-clip {
+  margin: 1rem 0;
+}
+.assigned-clip .video-load {
+  aspect-ratio: auto;
+  min-height: 105px;
+  padding: 1rem;
+}
+.assigned-clip .video-load strong {
+  max-width: 55ch;
+}
+
+.video-frame {
+  min-height: 200px;
+}
+
+@media (max-width: 400px) {
+  .resource-info {
+    padding: 12px;
+  }
+}

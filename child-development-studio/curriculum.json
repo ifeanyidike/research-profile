@@ -12,24 +12,30 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "Croydon NHS — Workshop 2 introduction: the role of everyday participation",
-          "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
-          "progressKey": "video:0"
+          "label": "CroydonHealth — Introduction to: Building Independence in Everyday Activities",
+          "url": "https://www.youtube.com/watch?v=Dc05W-B2qDI",
+          "progressKey": "video:100",
+          "assignment": "Watch the whole introductory OT clip for everyday participation context. It does not define every therapy profession or qualification; read the role/qualification material and native path guide.",
+          "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
+          "durationSeconds": 436,
+          "watchMode": "full"
         }
       ],
       "readings": [
         {
           "label": "WHO — Caregiver Skills Training introduction (programme scope: ages 2–9)",
           "url": "https://www.who.int/publications/i/item/9789240048836",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the introduction’s audience, aims and programme structure. WHO CST here targets families of children aged 2–9 with developmental delays/disabilities; it does not supply a 0–18 therapy curriculum or professional qualification."
         },
         {
           "label": "HCPC — approved professional programmes",
           "url": "https://www.hcpc-uk.org/education/approved-programmes/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: HCPC — approved professional programmes. Focus on roles, scope, caregiver education and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "videoNote": "Watch only the named short NHS modules on these cards. The full multi-video workshop is not assigned. The examples provide educational context, not individual assessment or a prescribed programme.",
       "pass_criteria": "1. Give distinct caregiver and professional learning goals with scope boundaries. 2. Challenge the weekend qualification claim using accreditation, supervised assessment and regulator questions. 3. Explain why an attendance certificate does not establish professional authority.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -53,26 +59,34 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "Harvard — Experiences Build Brain Architecture",
+          "label": "Center on the Developing Child at Harvard University — Experiences Build Brain Architecture",
           "url": "https://www.youtube.com/watch?v=VNNsN9IJkws",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "durationSeconds": 117,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: Experiences Build Brain Architecture - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         },
         {
-          "label": "Harvard — Serve & Return Interaction Shapes Brain Circuitry",
+          "label": "Center on the Developing Child at Harvard University — Serve & Return Interaction Shapes Brain Circuitry",
           "url": "https://www.youtube.com/watch?v=m_5u8-QSh6A",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "durationSeconds": 102,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: Serve & Return Interaction Shapes Brain Circuitry - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         }
       ],
       "readings": [
         {
-          "label": "CDC — positive parenting and development by age (choose the assigned age group)",
+          "label": "CDC — infant and toddler development by age",
           "url": "https://www.cdc.gov/child-development/positive-parenting-tips/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:100",
+          "assignment": "Choose only Infants (0–1), Toddlers (1–2) and Toddlers (2–3) from the page. Read development, parenting and safety within those age bands. These are general descriptions, not a diagnostic score."
         },
         {
           "label": "ASHA — developmental milestones (birth–5; conversation aid, not diagnosis)",
           "url": "https://www.asha.org/public/developmental-milestones/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read only the relevant birth–5 age band and the advice about discussing concerns. Use observations to prepare questions, not a diagnosis; school-age/adolescent examples require the other sources."
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
@@ -99,26 +113,33 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "Harvard — five steps for brain-building serve and return",
+          "label": "Center on the Developing Child at Harvard University — 5 Steps for Brain-Building Serve and Return",
           "url": "https://www.youtube.com/watch?v=KNrnZag17Ek",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "durationSeconds": 366,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: 5 Steps for Brain-Building Serve and Return - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         },
         {
-          "label": "Birmingham NHS page — choose “SALT strategy video 2 - supporting language development through play (subtitled)”",
+          "label": "Birmingham NHS — supporting language development through play (subtitles)",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "assignment": "On the provider page choose only “supporting language development through play (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
-          "label": "CDC — positive parenting and development by age (choose the assigned age group)",
-          "url": "https://www.cdc.gov/child-development/positive-parenting-tips/",
-          "progressKey": "reading:0"
+          "label": "CDC — Positive Parenting Tips: Preschoolers (3–5 years)",
+          "url": "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html",
+          "progressKey": "reading:100",
+          "assignment": "Read the preschool development and interaction sections. Use the stated 3–5 age range; do not infer an individual delay from one listed behaviour."
         },
         {
           "label": "RCOT — occupational therapy and play practice guideline",
           "url": "https://www.rcot.co.uk/explore-resources/children-young-people-families/play-practice-guideline",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: RCOT — occupational therapy and play practice guideline. Focus on play, communication, self-care and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.",
@@ -146,17 +167,19 @@
       "videos": [],
       "readings": [
         {
-          "label": "CDC — positive parenting and development by age (choose the assigned age group)",
-          "url": "https://www.cdc.gov/child-development/positive-parenting-tips/",
-          "progressKey": "reading:0"
+          "label": "Johns Hopkins Medicine — The Growing Child: School-Age (6 to 12 Years)",
+          "url": "https://www.hopkinsmedicine.org/health/wellness-and-prevention/the-growing-child-schoolage-6-to-12-years",
+          "progressKey": "reading:100",
+          "assignment": "Read the opening variability statement, What can my child do and What does my child understand. These are illustrative population descriptions, not mandatory milestones, diagnostic thresholds or assumptions about a child’s interests or identity."
         },
         {
           "label": "ASHA — spoken language disorders Practice Portal",
           "url": "https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the family-accessible Overview, Signs and Symptoms, and school/learning implications; professional assessment/treatment detail is context only."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Preserve the pupil's successful spoken account and reported writing discomfort. 2. List contextual, reading, motor and health questions without inferring cause. 3. Replace refusal/blame wording with observable facts and a collaborative information plan.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. The ASHA Spoken Language Disorders professional portal focuses on ages 3–21 using oral communication; it is not a complete infant assessment or AAC protocol.",
       "outcomes": [
@@ -164,7 +187,7 @@
         "List contextual, reading, motor and health questions without inferring cause.",
         "Replace refusal/blame wording with observable facts and a collaborative information plan."
       ],
-      "study_focus": "Choose CDC's middle-childhood material; use ASHA's school-relevant language/access sections as professional context. Separate reading, understanding and writing demands in the fictional pupil case.",
+      "study_focus": "Read the school-age 6–12 development sections and ASHA school-relevant language/access material. Separate reading, understanding and handwriting demands in the fictional pupil case; general age descriptions do not diagnose an individual.",
       "practice": "Prepare a fictional meeting sheet with the pupil's stated concern, strengths, task/context differences and five questions for the school and relevant professionals. Include one way to obtain the pupil's view privately and accessibly. Avoid diagnostic conclusions.",
       "assessment": "Rewrite “She knows it but refuses to work” into an observation-based note and a plan for gathering relevant information. Explain how you would avoid blaming either the child or the teacher.",
       "practice_links": []
@@ -180,21 +203,26 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "Youth.gov / HHS TAG Talk — Segment 1: The Power of the Adolescent Brain",
+          "label": "youth.gov — The Power of the Adolescent Brain: Segment 1",
           "url": "https://www.youtube.com/watch?v=G6dTKM6ljas",
-          "progressKey": "video:100"
+          "progressKey": "video:100",
+          "durationSeconds": 265,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: The Power of the Adolescent Brain: Segment 1 - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         }
       ],
       "readings": [
         {
           "label": "NIMH — The Teen Brain: 7 Things to Know",
           "url": "https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: NIMH — The Teen Brain: 7 Things to Know. Focus on puberty, autonomy, executive skills and use the native worked example to check your interpretation."
         },
         {
           "label": "Youth.gov — TAG Talk segment transcripts and family/professional discussion guides",
           "url": "https://youth.gov/feature-article/power-adolescent-brain-tag-talk",
-          "progressKey": "reading:100"
+          "progressKey": "reading:100",
+          "assignment": "Read the named article or specified sections: Youth.gov — TAG Talk segment transcripts and family/professional discussion guides. Focus on puberty, autonomy, executive skills and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "An introductory population-level adolescent-development talk, with provider transcripts and discussion guides. It is not an individual capacity test, clinical assessment or complete transition-services course.",
@@ -221,21 +249,25 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "Birmingham NHS page — choose “Getting Started with Communication”",
+          "label": "Birmingham NHS — Getting Started with Communication",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "assignment": "On the provider page choose only “Getting Started with Communication” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
           "label": "ASHA — developmental milestones (birth–5; conversation aid, not diagnosis)",
           "url": "https://www.asha.org/public/developmental-milestones/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read only the relevant birth–5 age band and the advice about discussing concerns. Use observations to prepare questions, not a diagnosis; school-age/adolescent examples require the other sources."
         },
         {
-          "label": "ASHA — hearing loss in children",
+          "label": "ASHA — Early Identification of Speech, Language, Swallowing and Hearing Disorders",
           "url": "https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the hearing/communication signs and seeking-help sections. This is broader early-identification guidance, not a hearing test or proof of cause."
         }
       ],
       "videoNote": "Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.",
@@ -265,15 +297,17 @@
         {
           "label": "UNICEF — Convention on the Rights of the Child: child-friendly explanation",
           "url": "https://www.unicef.org/child-rights-convention/convention-text-childrens-version",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: UNICEF — Convention on the Rights of the Child: child-friendly explanation. Focus on assent, safeguarding, privacy and use the native worked example to check your interpretation."
         },
         {
           "label": "NSPCC — recognising and responding to abuse",
           "url": "https://learning.nspcc.org.uk/child-abuse-and-neglect/recognising-and-responding-to-abuse",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: NSPCC — recognising and responding to abuse. Focus on assent, safeguarding, privacy and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Replace the real-data notebook proposal with a wholly invented case. 2. Distinguish consent, assent/refusal, privacy and safeguarding responsibilities. 3. Pause a non-urgent educational activity when stop is signalled; identify qualified/local exceptions.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -297,26 +331,32 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "Birmingham NHS page — choose “Getting Started with Communication”",
+          "label": "Birmingham NHS — Getting Started with Communication",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "assignment": "On the provider page choose only “Getting Started with Communication” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         },
         {
-          "label": "Birmingham NHS page — choose “Language Needs in the Early Years”",
+          "label": "Birmingham NHS — Language Needs in the Early Years",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "assignment": "On the provider page choose only “Language Needs in the Early Years” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
           "label": "ASHA — developmental milestones (birth–5; conversation aid, not diagnosis)",
           "url": "https://www.asha.org/public/developmental-milestones/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read only the relevant birth–5 age band and the advice about discussing concerns. Use observations to prepare questions, not a diagnosis; school-age/adolescent examples require the other sources."
         },
         {
           "label": "ASHA public information — Childhood Language Disorders (helpingyoucommunicate.org)",
           "url": "https://helpingyoucommunicate.org/article/childhood-language-disorders",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: ASHA public information — Childhood Language Disorders (helpingyoucommunicate.org). Focus on speech, language, interaction and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.",
@@ -343,19 +383,24 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "Croydon NHS — Workshop 2: introduction and foundation-skills modules",
-          "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
-          "progressKey": "video:0"
+          "label": "CroydonHealth — Module 2 - Foundation Skills",
+          "url": "https://www.youtube.com/watch?v=mVBv0TE3pq4",
+          "progressKey": "video:100",
+          "assignment": "Watch the complete short foundation-skills module. Identify task/environment/access demands; do not turn the examples into a diagnosis or individual exercise prescription.",
+          "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
+          "durationSeconds": 412,
+          "watchMode": "full"
         }
       ],
       "readings": [
         {
           "label": "Croydon NHS — Building Independence in Everyday Activities",
           "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: Croydon NHS — Building Independence in Everyday Activities. Focus on occupations, movement, sensory needs and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "videoNote": "Watch only the named short NHS modules on these cards. The full multi-video workshop is not assigned. The examples provide educational context, not individual assessment or a prescribed programme.",
       "pass_criteria": "1. Break dressing into six demands without assuming a motor or sensory diagnosis. 2. Separate a comfort/access option from specialist equipment or handling. 3. Include pain, child preference and the professional questions needed for safe participation.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -379,21 +424,26 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "Harvard — Toxic Stress Derails Healthy Development",
+          "label": "Center on the Developing Child at Harvard University — Toxic Stress Derails Healthy Development",
           "url": "https://www.youtube.com/watch?v=rVwFkcOZHJw",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "durationSeconds": 112,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: Toxic Stress Derails Healthy Development - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         }
       ],
       "readings": [
         {
           "label": "IRIS — Learning and Behavior",
           "url": "https://iris.peabody.vanderbilt.edu/module/bp/cresource/q1/p01/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: IRIS — Learning and Behavior. Focus on distress, context, co-regulation and use the native worked example to check your interpretation."
         },
         {
           "label": "NICE CG170 — support and management; read the named section for this topic",
           "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read 1.4 Factors that may contribute to behaviour that challenges. This NICE guidance concerns autistic children/young people under 19; do not generalise it to all children or use it as an individual treatment plan."
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
@@ -423,15 +473,17 @@
         {
           "label": "ASHA — learning more than one language",
           "url": "https://www.asha.org/public/speech/development/learning-more-than-one-language/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — learning more than one language. Focus on inclusion, culture, neurodiversity and use the native worked example to check your interpretation."
         },
         {
           "label": "NICE CG170 — support and management; read the named section for this topic",
           "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read 1.1 General principles of care and 1.3 Specific interventions for core features. This NICE guidance concerns autistic children/young people under 19; do not generalise it to all children or use it as an individual treatment plan."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Appraise the purpose, harms and child's view behind each proposed goal. 2. Preserve communication/disability identity and valued home language. 3. Request culturally informed assessment instead of treating English-only expectations as universal.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -458,15 +510,17 @@
         {
           "label": "ASHA — Pediatric Feeding and Swallowing (professional reference; seek individual advice)",
           "url": "https://www.asha.org/practice-portal/clinical-topics/pediatric-feeding-and-swallowing/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — Pediatric Feeding and Swallowing (professional reference; seek individual advice). Focus on health needs, sleep, swallowing concerns and use the native worked example to check your interpretation."
         },
         {
-          "label": "NHS — healthy sleep tips for children",
-          "url": "https://www.nhs.uk/live-well/sleep-and-tiredness/healthy-sleep-tips-for-children/",
-          "progressKey": "reading:1"
+          "label": "Leeds Community Healthcare NHS — sleep by age, babies to teenagers",
+          "url": "https://leedscommunityhealthcare.nhs.uk/our-services-a-z/0-to-19-public-health-integrated-nursing-service-0-to-19-phins/sleep/",
+          "progressKey": "reading:100",
+          "assignment": "Read the section for the fictional child’s age: baby safe-sleep link, toddlers/preschoolers, school-age, or teenagers. Discuss persistent problems with an appropriate clinician; general routine guidance does not diagnose a medical cause."
         }
       ],
-      "videoNote": "No directly matched public health/feeding/swallowing video is verified for this topic. An earlier sensory-workshop assignment was removed because it does not teach the medical/referral content. Use the native case and exact ASHA/NHS readings; do not infer treatment from a general clip.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Summarise the new change, timing, impact and health/referral questions factually. 2. Reject unassessed supplements, diets and swallowing trials. 3. Distinguish ordinary educational planning from urgent danger and individual clinical advice.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -474,7 +528,7 @@
         "Reject unassessed supplements, diets and swallowing trials.",
         "Distinguish ordinary educational planning from urgent danger and individual clinical advice."
       ],
-      "study_focus": "Read the ASHA feeding/swallowing overview and signs/referral material as professional context, plus NHS sleep guidance. Do not use a sensory workshop as medical or swallowing instruction.",
+      "study_focus": "Read ASHA’s feeding/swallowing overview and referral material as professional context, plus the relevant age band in Leeds NHS sleep guidance. Do not use sensory workshops as medical/swallowing instruction.",
       "practice": "Prepare a fictional appointment summary with the change, timing, child's report, daily impact and unknowns. Add questions about which professional should assess the concern and what information they need. Explicitly exclude any home swallowing test or dietary experiment.",
       "assessment": "A video claims a supplement and restrictive diet will cure autism and all feeding difficulties. Appraise the claim's scope, evidence, nutritional risks and professional boundaries. State a safer route for a family concerned about eating.",
       "practice_links": []
@@ -490,31 +544,40 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "Harvard — five steps for brain-building serve and return",
+          "label": "Center on the Developing Child at Harvard University — 5 Steps for Brain-Building Serve and Return",
           "url": "https://www.youtube.com/watch?v=KNrnZag17Ek",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "durationSeconds": 366,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: 5 Steps for Brain-Building Serve and Return - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         },
         {
-          "label": "Birmingham NHS page — choose “SALT strategy video 1 - developing joint attention (subtitled)”",
+          "label": "Birmingham NHS — developing joint attention (subtitles)",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "assignment": "On the provider page choose only “developing joint attention (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         },
         {
-          "label": "Birmingham NHS page — choose “SALT strategy video 2 - supporting language development through play (subtitled)”",
+          "label": "Birmingham NHS — supporting language development through play (subtitles)",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:2"
+          "progressKey": "video:2",
+          "assignment": "On the provider page choose only “supporting language development through play (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
           "label": "NHS — help your baby learn to talk",
           "url": "https://www.nhs.uk/baby/babys-development/play-and-learning/help-your-baby-learn-to-talk/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: NHS — help your baby learn to talk. Focus on responsive interaction, play, shared reading and use the native worked example to check your interpretation."
         },
         {
           "label": "Harvard — five steps for serve and return",
           "url": "https://developingchild.harvard.edu/resources/videos/how-to-5-steps-for-brain-building-serve-and-return/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: Harvard — five steps for serve and return. Focus on responsive interaction, play, shared reading and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.",
@@ -541,26 +604,32 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "Birmingham NHS page — choose “Speech Sound Difficulty”",
+          "label": "Birmingham NHS — Speech Sound Difficulty",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "assignment": "On the provider page choose only “Speech Sound Difficulty” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         },
         {
-          "label": "Birmingham NHS page — choose “Children Who Stammer”",
+          "label": "Birmingham NHS — Children Who Stammer",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "assignment": "On the provider page choose only “Children Who Stammer” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
           "label": "ASHA — speech sound disorders",
           "url": "https://www.asha.org/public/speech/disorders/speech-sound-disorders/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — speech sound disorders. Focus on speech sounds, fluency, listening and use the native worked example to check your interpretation."
         },
         {
           "label": "ASHA — stuttering",
           "url": "https://www.asha.org/public/speech/disorders/stuttering/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: ASHA — stuttering. Focus on speech sounds, fluency, listening and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.",
@@ -587,16 +656,19 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "Birmingham NHS page — choose “SALT strategy video 6 - using a communication board (subtitled)”",
+          "label": "Birmingham NHS — using a communication board (subtitles)",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "assignment": "On the provider page choose only “using a communication board (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
           "label": "ASHA — AAC for families",
           "url": "https://www.asha.org/public/speech/disorders/aac/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — AAC for families. Focus on AAC, communication access, partner support and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.",
@@ -626,10 +698,11 @@
         {
           "label": "ASHA — learning more than one language",
           "url": "https://www.asha.org/public/speech/development/learning-more-than-one-language/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — learning more than one language. Focus on multilingual development, language difference, family language and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Record language exposure/use by people, settings, topics and strengths. 2. Explain why informal translation does not preserve monolingual test norms. 3. Ask for appropriate multilingual/interpreter-informed assessment without diagnosing.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -653,19 +726,24 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "Croydon NHS — Workshop 2: everyday-activity skill modules",
-          "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
-          "progressKey": "video:0"
+          "label": "CroydonHealth — Module 6 - Home Based Activities",
+          "url": "https://www.youtube.com/watch?v=mpbnQMHEfH0",
+          "progressKey": "video:100",
+          "assignment": "Watch the whole home-activity module as a set of examples, then choose one fictional routine for the task-demand map. No need to watch the handwriting/typing/scissor/bike modules for this lesson.",
+          "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
+          "durationSeconds": 1146,
+          "watchMode": "full"
         }
       ],
       "readings": [
         {
           "label": "Croydon NHS — Building Independence in Everyday Activities",
           "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: Croydon NHS — Building Independence in Everyday Activities. Focus on task analysis, dressing, self-care and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "videoNote": "Watch only the named short NHS modules on these cards. The full multi-video workshop is not assigned. The examples provide educational context, not individual assessment or a prescribed programme.",
       "pass_criteria": "1. Map the routine's separate organisational, physical and comfort demands. 2. Retain chosen support and a meaningful participation goal rather than withdrawing all help. 3. Name pain/referral and review questions without prescribing handling or intimate-care procedures.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -689,19 +767,39 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "Croydon NHS — Workshop 1: sensory-processing modules",
-          "url": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10",
-          "progressKey": "video:0"
+          "label": "CroydonHealth — Module 1: What is Sensory Processing?",
+          "url": "https://www.youtube.com/watch?v=h1rPF4bd4xI",
+          "progressKey": "video:100",
+          "assignment": "Watch the complete introductory terminology clip, then appraise its claims with the evidence reading. A workshop example does not justify a sensory protocol for a child.",
+          "provenance": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10",
+          "durationSeconds": 396,
+          "watchMode": "full"
+        },
+        {
+          "label": "CroydonHealth — Module 3 - Detective Work",
+          "url": "https://www.youtube.com/watch?v=0L1EuzrlKZQ",
+          "progressKey": "video:101",
+          "assignment": "Watch the short observation/context clip. Treat observations as questions, not proof of a sensory explanation. The remaining workshop modules are optional and may require specialist interpretation.",
+          "provenance": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10",
+          "durationSeconds": 239,
+          "watchMode": "full"
         }
       ],
       "readings": [
         {
           "label": "Croydon NHS — Sensory Processing and How It Impacts on Everyday Activities",
           "url": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: Croydon NHS — Sensory Processing and How It Impacts on Everyday Activities. Focus on sensory preferences, environment, comfort and use the native worked example to check your interpretation."
+        },
+        {
+          "label": "AOTA Practice Smart — recommendation 2 on sensory-based interventions",
+          "url": "https://www.aota.org/practice/practice-essentials/evidencebased-practiceknowledge-translation/practice-smart",
+          "progressKey": "reading:100",
+          "assignment": "Read recommendation 2 and its rationale only. Use it to prepare questions for a qualified OT about assessment, meaningful goals and evidence; it is not a parent assessment procedure. Member-only handouts are optional."
         }
       ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "videoNote": "Watch only the named short NHS modules on these cards. The full multi-video workshop is not assigned. The examples provide educational context, not individual assessment or a prescribed programme.",
       "pass_criteria": "1. Map dining-hall context, child's report and competing health/access questions. 2. Propose ordinary options for discussion and exclude independent specialist protocols. 3. Appraise the product claim's evidence, commercial interest and individual suitability.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -727,24 +825,31 @@
         {
           "label": "IRIS — Behavioral Principles: Challenge video, then Page 2 ABC Model",
           "url": "https://iris.peabody.vanderbilt.edu/module/bp/challenge/",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "assignment": "Watch only the 0:59 Challenge introduction, then read the assigned Behavioral Principles pages, especially The ABC Model. This introductory movie does not teach a complete support or assessment procedure.",
+          "durationSeconds": 59,
+          "watchMode": "sections"
         },
         {
-          "label": "Birmingham NHS page — choose “SALT strategy video 3 - now and next (subtitled)”",
+          "label": "Birmingham NHS — now and next (subtitles)",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "assignment": "On the provider page choose only “now and next (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
           "label": "IRIS — The ABC Model",
           "url": "https://iris.peabody.vanderbilt.edu/module/bp/cresource/q1/p02/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: IRIS — The ABC Model. Focus on co-regulation, predictability, communication and use the native worked example to check your interpretation."
         },
         {
           "label": "NICE CG170 — support and management; read the named section for this topic",
           "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read 1.4 Interventions for behaviour that challenges. This NICE guidance concerns autistic children/young people under 19; do not generalise it to all children or use it as an individual treatment plan."
         }
       ],
       "videoNote": "Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.",
@@ -771,21 +876,25 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "Birmingham NHS page — choose “Language Needs at School Age”",
+          "label": "Birmingham NHS — Language Needs at School Age",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "assignment": "On the provider page choose only “Language Needs at School Age” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
           "label": "ASHA — spoken language disorders Practice Portal",
           "url": "https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the family-accessible Overview, Signs and Symptoms, and school/learning implications; professional assessment/treatment detail is context only."
         },
         {
           "label": "Birmingham NHS — Language Needs at School Age (video and service guidance)",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: Birmingham NHS — Language Needs at School Age (video and service guidance). Focus on school collaboration, literacy, peer access and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.",
@@ -812,26 +921,32 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "Youth.gov / HHS TAG Talk — Segment 5: What Adults Need to Know and Do",
+          "label": "youth.gov — The Power of the Adolescent Brain: Segment 5",
           "url": "https://www.youtube.com/watch?v=Kj1n_lQG66o",
-          "progressKey": "video:100"
+          "progressKey": "video:100",
+          "durationSeconds": 247,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: The Power of the Adolescent Brain: Segment 5 - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         }
       ],
       "readings": [
         {
           "label": "NIMH — The Teen Brain",
           "url": "https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: NIMH — The Teen Brain. Focus on autonomy, planning, puberty and use the native worked example to check your interpretation."
         },
         {
           "label": "CDC — Essentials for Parenting Teens",
           "url": "https://www.cdc.gov/parenting-teens/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: CDC — Essentials for Parenting Teens. Focus on autonomy, planning, puberty and use the native worked example to check your interpretation."
         },
         {
           "label": "Youth.gov — TAG Talk segment transcripts and family/professional discussion guides",
           "url": "https://youth.gov/feature-article/power-adolescent-brain-tag-talk",
-          "progressKey": "reading:100"
+          "progressKey": "reading:100",
+          "assignment": "Read the named article or specified sections: Youth.gov — TAG Talk segment transcripts and family/professional discussion guides. Focus on autonomy, planning, puberty and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "An introductory population-level adolescent-development talk, with provider transcripts and discussion guides. It is not an individual capacity test, clinical assessment or complete transition-services course.",
@@ -858,31 +973,43 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "NIMH — Facebook Live: Childhood Irritability",
+          "label": "National Institute of Mental Health (NIMH) — Facebook Live: Childhood Irritability",
           "url": "https://www.youtube.com/watch?v=t176yeEdVMM",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "optional": true,
+          "assignment": "Optional full NIMH discussion of childhood irritability. It is one focused mental-health example, not a comprehensive lesson on anxiety, bereavement or caregiver well-being. Start with the two Mental Health Minute clips and assigned family readings.",
+          "watchMode": "full",
+          "durationSeconds": 1799
         },
         {
-          "label": "NIMH — Mental Health Minute: Stress and Anxiety in Adolescents ",
+          "label": "National Institute of Mental Health (NIMH) — Mental Health Minute: Stress and Anxiety in Adolescents",
           "url": "https://www.youtube.com/watch?v=wr4N-SdekqY",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "durationSeconds": 88,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: Mental Health Minute: Stress and Anxiety in Adolescents - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         },
         {
-          "label": "NIMH — Mental Health Minute: Attention-Deficit/Hyperactivity Disorder",
+          "label": "National Institute of Mental Health (NIMH) — Mental Health Minute: Attention-Deficit/Hyperactivity Disorder",
           "url": "https://www.youtube.com/watch?v=-j2PqoFCzX0",
-          "progressKey": "video:2"
+          "progressKey": "video:2",
+          "durationSeconds": 66,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: Mental Health Minute: Attention-Deficit/Hyperactivity Disorder - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         }
       ],
       "readings": [
         {
           "label": "NHS — anxiety disorders in children",
           "url": "https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/anxiety-disorders-in-children/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: NHS — anxiety disorders in children. Focus on anxiety, grief, support and use the native worked example to check your interpretation."
         },
         {
           "label": "NHS — children and bereavement",
           "url": "https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/children-and-bereavement/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: NHS — children and bereavement. Focus on anxiety, grief, support and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
@@ -912,15 +1039,17 @@
         {
           "label": "NICE CG170 — support and management; read the named section for this topic",
           "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read 1.1 General principles of care and 1.2 Families and carers. This NICE guidance concerns autistic children/young people under 19; do not generalise it to all children or use it as an individual treatment plan."
         },
         {
           "label": "WHO — Caregiver Skills Training introduction (programme scope: ages 2–9)",
           "url": "https://www.who.int/publications/i/item/9789240048836",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the introduction’s audience, aims and programme structure. WHO CST here targets families of children aged 2–9 with developmental delays/disabilities; it does not supply a 0–18 therapy curriculum or professional qualification."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Name roles, unresolved disagreement, priorities and information-sharing limits. 2. Request coordination of conflicting recommendations without independently prescribing either. 3. Include purpose, evidence, burden, feasibility and who will review the agreed next step.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -947,15 +1076,17 @@
         {
           "label": "WHO — Caregiver Skills Training introduction (programme scope: ages 2–9)",
           "url": "https://www.who.int/publications/i/item/9789240048836",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the introduction’s audience, aims and programme structure. WHO CST here targets families of children aged 2–9 with developmental delays/disabilities; it does not supply a 0–18 therapy curriculum or professional qualification."
         },
         {
           "label": "UNICEF — child rights and participation",
           "url": "https://www.unicef.org/child-rights-convention/convention-text-childrens-version",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: UNICEF — child rights and participation. Focus on portfolio, family priorities, safe boundaries and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Submit all eight portfolio sections and three age/scope-appropriate sources. 2. Include five team questions, an adult role-play and a way for the fictional child to disagree. 3. Record partner challenges and concrete revisions without claiming clinical validation.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -967,7 +1098,8 @@
       "practice_links": [
         {
           "label": "Download fictional cases, portfolio sections and review prompts",
-          "url": "https://ifeanyidike.com/child-development-studio/practice/fictional-portfolio.txt"
+          "url": "https://ifeanyidike.com/child-development-studio/practice/fictional-portfolio.txt",
+          "assignment": "Use only this named practical material for the scoped lesson task: Download fictional cases, portfolio sections and review prompts. Read its setup and authorisation boundary before doing anything."
         }
       ],
       "practice": "Produce a two-page portfolio for case B or an entirely invented alternative. Include all eight sections, three linked authoritative resources with correct age/scope, five questions for a team and one adult role-play. Use no real child data and no intervention trial.\n\nUse the downloadable fictional-case and portfolio sheet for complete supplied cases, required sections and review prompts.",
@@ -984,41 +1116,53 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "UBC eNunciate — articulation of consonants",
+          "label": "Ubc VISIBLE SPEECH — Introduction to Articulatory Phonetics (Consonants)",
           "url": "https://www.youtube.com/watch?v=dfoRdKuPF9I",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "durationSeconds": 374,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: Introduction to Articulatory Phonetics (Consonants) - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         },
         {
-          "label": "UBC eNunciate — articulation of vowels",
+          "label": "Ubc VISIBLE SPEECH — Introduction to Articulatory Phonetics (Vowels)",
           "url": "https://www.youtube.com/watch?v=u7jQ8FELbIo",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "durationSeconds": 303,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: Introduction to Articulatory Phonetics (Vowels) - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         }
       ],
       "readings": [
         {
           "label": "UBC eNunciate — speech production demonstrations",
           "url": "https://enunciate.arts.ubc.ca/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: UBC eNunciate — speech production demonstrations. Focus on anatomy, hearing, motor systems and use the native worked example to check your interpretation.",
+          "accessNote": "The publisher may show browser verification. The separately linked official UBC demonstration videos provide the assigned articulation examples."
         },
         {
-          "label": "ASHA — hearing loss in children",
+          "label": "ASHA — Early Identification of Speech, Language, Swallowing and Hearing Disorders",
           "url": "https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the hearing/communication signs and seeking-help sections. This is broader early-identification guidance, not a hearing test or proof of cause."
         },
         {
           "label": "OpenStax A&P 2e 22.1 — respiratory structures, especially pharynx/larynx",
           "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-1-organs-and-structures-of-the-respiratory-system",
-          "progressKey": "reading:100"
+          "progressKey": "reading:100",
+          "assignment": "Read the named article or specified sections: OpenStax A&P 2e 22.1 — respiratory structures, especially pharynx/larynx. Focus on anatomy, hearing, motor systems and use the native worked example to check your interpretation."
         },
         {
           "label": "OpenStax A&P 2e 12.1 — basic nervous-system structure and function",
           "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-1-basic-structure-and-function-of-the-nervous-system",
-          "progressKey": "reading:101"
+          "progressKey": "reading:101",
+          "assignment": "Read the named article or specified sections: OpenStax A&P 2e 12.1 — basic nervous-system structure and function. Focus on anatomy, hearing, motor systems and use the native worked example to check your interpretation."
         },
         {
           "label": "OpenStax A&P 2e 14.1 — read the Hearing subsection",
           "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception",
-          "progressKey": "reading:102"
+          "progressKey": "reading:102",
+          "assignment": "Read the named article or specified sections: OpenStax A&P 2e 14.1 — read the Hearing subsection. Focus on anatomy, hearing, motor systems and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
@@ -1047,29 +1191,35 @@
         {
           "label": "ASHA — EBP Basics and Tools for Practicing Clinicians: seven-part video module; CE credit is a separate paid option",
           "url": "https://www.asha.org/research/ebp/evidence-based-decision-making-micro-course-series/",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "watchMode": "sections",
+          "assignment": "Choose only EBP Basics and Tools for Practicing Clinicians and its seven parts (about 30 minutes in total). Do not complete every microcourse on the page. Use the linked activity/slides; CE credit/purchase is separate."
         }
       ],
       "readings": [
         {
           "label": "ASHA — evidence-based practice and decision-making tools",
           "url": "https://www.asha.org/Research/EBP/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — evidence-based practice and decision-making tools. Focus on PICO, study design, effect size and use the native worked example to check your interpretation."
         },
         {
           "label": "Cochrane — understanding evidence",
           "url": "https://www.cochrane.org/evidence",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: Cochrane — understanding evidence. Focus on PICO, study design, effect size and use the native worked example to check your interpretation."
         },
         {
           "label": "Cochrane Evidence Essentials — Modules 1–4, evidence, trials and reviews (free account required)",
           "url": "https://www.cochrane.org/learn/courses-and-resources/evidence-essentials",
-          "progressKey": "reading:2"
+          "progressKey": "reading:2",
+          "assignment": "Read the named article or specified sections: Cochrane Evidence Essentials — Modules 1–4, evidence, trials and reviews (free account required). Focus on PICO, study design, effect size and use the native worked example to check your interpretation."
         },
         {
           "label": "OpenIntro Statistics — data, descriptive statistics, probability and inference chapters, with published exercises (free PDF option)",
           "url": "https://www.openintro.org/book/os/",
-          "progressKey": "reading:3"
+          "progressKey": "reading:3",
+          "assignment": "Use only the named chapters, sections, units or exercises in this assignment: OpenIntro Statistics — data, descriptive statistics, probability and inference chapters, with published exercises (free PDF option). Do not read the entire book/course before proceeding. Record assumptions and work the relevant examples independently."
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
@@ -1099,15 +1249,23 @@
         {
           "label": "ASHA — assessment tools, techniques and data sources",
           "url": "https://www.asha.org/practice-portal/resources/assessment-tools-techniques-and-data-sources/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — assessment tools, techniques and data sources. Focus on reliability, validity, functional assessment and use the native worked example to check your interpretation."
         },
         {
           "label": "OpenIntro Statistics — probability and conditional probability; work the native screening table first",
           "url": "https://www.openintro.org/book/os/",
-          "progressKey": "reading:100"
+          "progressKey": "reading:100",
+          "assignment": "Use only the named chapters, sections, units or exercises in this assignment: OpenIntro Statistics — probability and conditional probability; work the native screening table first. Do not read the entire book/course before proceeding. Record assumptions and work the relevant examples independently."
+        },
+        {
+          "label": "ASHA — Multilingual Service Delivery: assessment validity",
+          "url": "https://www.asha.org/practice-portal/professional-issues/multilingual-service-delivery/",
+          "progressKey": "reading:101",
+          "assignment": "Read assessment and cultural/linguistic considerations, especially when a standard score is not valid and how interpreters/context affect evidence. Do not translate or administer a restricted test."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Distinguish reliability, validity, sensitivity, specificity and decision purpose. 2. Compare interview, observation and standardised task with access/interpretation limits. 3. Correct the altered/translated normed-score report without assigning a diagnosis.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -1134,20 +1292,23 @@
         {
           "label": "ASHA — spoken language disorders Practice Portal",
           "url": "https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read Assessment and Treatment, including differential reasoning, language/literacy relationships, culturally responsive practice and outcome/participation limits. No individual dosage or test administration is authorised."
         },
         {
           "label": "ASHA — multilingual service delivery",
           "url": "https://www.asha.org/practice-portal/professional-issues/multilingual-service-delivery/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: ASHA — multilingual service delivery. Focus on language samples, differential reasoning, hearing and use the native worked example to check your interpretation."
         },
         {
           "label": "ASHA — Early Intervention (birth–3): professional process and family-centred scope",
           "url": "https://www.asha.org/practice-portal/professional-issues/early-intervention/",
-          "progressKey": "reading:2"
+          "progressKey": "reading:2",
+          "assignment": "Read family-centred assessment/team process within the stated birth–3 early-intervention scope. It is not school-age or adolescent service guidance."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Build a four-column hypothesis table including hearing, language exposure, demands and child account. 2. Keep facts, hypotheses, missing information and professional methods separate. 3. Write an assessment-plan opening rather than a definitive unsupported diagnostic conclusion.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. The ASHA Spoken Language Disorders professional portal focuses on ages 3–21 using oral communication; it is not a complete infant assessment or AAC protocol.",
       "outcomes": [
@@ -1174,15 +1335,17 @@
         {
           "label": "ASHA — spoken language disorders Practice Portal",
           "url": "https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read Assessment and Treatment, including differential reasoning, language/literacy relationships, culturally responsive practice and outcome/participation limits. No individual dosage or test administration is authorised."
         },
         {
           "label": "ASHA — written language disorders",
           "url": "https://www.asha.org/practice-portal/clinical-topics/written-language-disorders/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: ASHA — written language disorders. Focus on goals, language, literacy and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Separate participation goal, assessed target, trained-item result and transfer. 2. Appraise 90% repeated-item accuracy with baseline, prompts, retention and experience questions. 3. Specify meaningful everyday outcomes without deriving treatment intensity from the case.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. The ASHA Spoken Language Disorders professional portal focuses on ages 3–21 using oral communication; it is not a complete infant assessment or AAC protocol.",
       "outcomes": [
@@ -1206,31 +1369,50 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "Birmingham NHS page — choose “Speech Sound Difficulty”",
+          "label": "Birmingham NHS — Speech Sound Difficulty",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "assignment": "On the provider page choose only “Speech Sound Difficulty” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         },
         {
-          "label": "Birmingham NHS page — choose “Children Who Stammer”",
+          "label": "Birmingham NHS — Children Who Stammer",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "assignment": "On the provider page choose only “Children Who Stammer” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
           "label": "ASHA — speech sound disorders: articulation and phonology",
           "url": "https://www.asha.org/practice-portal/clinical-topics/articulation-and-phonology/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — speech sound disorders: articulation and phonology. Focus on speech disorders, fluency, motor speech and use the native worked example to check your interpretation."
         },
         {
           "label": "ASHA — childhood apraxia of speech",
           "url": "https://www.asha.org/practice-portal/clinical-topics/childhood-apraxia-of-speech/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: ASHA — childhood apraxia of speech. Focus on speech disorders, fluency, motor speech and use the native worked example to check your interpretation."
         },
         {
           "label": "ASHA — stuttering, cluttering and fluency",
           "url": "https://www.asha.org/practice-portal/clinical-topics/fluency-disorders/",
-          "progressKey": "reading:2"
+          "progressKey": "reading:2",
+          "assignment": "Read the named article or specified sections: ASHA — stuttering, cluttering and fluency. Focus on speech disorders, fluency, motor speech and use the native worked example to check your interpretation."
+        },
+        {
+          "label": "ASHA — Voice Disorders: overview and professional assessment boundaries",
+          "url": "https://www.asha.org/practice-portal/clinical-topics/voice-disorders/",
+          "progressKey": "reading:100",
+          "assignment": "Read Overview, Roles and Responsibilities and Assessment to distinguish voice quality from speech-sound/fluency/motor problems. Individual diagnosis and treatment require relevant professional competence."
+        },
+        {
+          "label": "ASHA — Pediatric Feeding and Swallowing: scope and referral boundaries",
+          "url": "https://www.asha.org/practice-portal/clinical-topics/pediatric-feeding-and-swallowing/",
+          "progressKey": "reading:101",
+          "assignment": "Revisit Overview, Signs and Symptoms and Roles and Responsibilities from C12. No swallowing manoeuvres, textures or diet changes are assigned by this lesson."
         }
       ],
       "videoNote": "Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.",
@@ -1257,16 +1439,19 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "Birmingham NHS page — choose “SALT strategy video 6 - using a communication board (subtitled)”",
+          "label": "Birmingham NHS — using a communication board (subtitles)",
           "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "assignment": "On the provider page choose only “using a communication board (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
           "label": "ASHA — AAC Practice Portal: access, assessment and partners",
           "url": "https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — AAC Practice Portal: access, assessment and partners. Focus on AAC, feature matching, access and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.",
@@ -1293,19 +1478,24 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "Croydon NHS — Workshop 2 introductory and task-analysis modules",
-          "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
-          "progressKey": "video:0"
+          "label": "CroydonHealth — Introduction to: Building Independence in Everyday Activities",
+          "url": "https://www.youtube.com/watch?v=Dc05W-B2qDI",
+          "progressKey": "video:100",
+          "assignment": "Watch the introductory participation context. Occupational profiling and task/performance analysis are taught by the native example and AOTA reading; this clip is not a full professional assessment course.",
+          "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
+          "durationSeconds": 436,
+          "watchMode": "full"
         }
       ],
       "readings": [
         {
           "label": "AOTA — occupational profile template",
           "url": "https://www.aota.org/practice/practice-essentials/documentation/occupational-profile",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: AOTA — occupational profile template. Focus on occupational profile, activity analysis, participation and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "videoNote": "Watch only the named short NHS modules on these cards. The full multi-video workshop is not assigned. The examples provide educational context, not individual assessment or a prescribed programme.",
       "pass_criteria": "1. Write the occupational profile around meaning, strengths, routines and priorities. 2. Separate task, environment, body/movement, communication and safety demands. 3. Connect a score to a valued occupation through qualified assessment rather than prescribing from a table.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -1329,24 +1519,39 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "Croydon NHS — Workshop 2 foundation-skills modules",
-          "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
-          "progressKey": "video:0"
+          "label": "CroydonHealth — Module 2 - Foundation Skills",
+          "url": "https://www.youtube.com/watch?v=mVBv0TE3pq4",
+          "progressKey": "video:100",
+          "assignment": "Watch the whole foundation-skills module, noting what is an example versus assessed individual need.",
+          "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
+          "durationSeconds": 412,
+          "watchMode": "full"
+        },
+        {
+          "label": "CroydonHealth — Module 7 - Gross Motor Activities",
+          "url": "https://www.youtube.com/watch?v=bz5wV6dFsX0",
+          "progressKey": "video:101",
+          "assignment": "Watch the named short gross-motor module as activity examples. Critique access, preference, pain/fatigue and participation; do not administer a motor test or prescribe activities from the video.",
+          "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
+          "durationSeconds": 537,
+          "watchMode": "full"
         }
       ],
       "readings": [
         {
           "label": "RCOT — occupational therapy and play practice guideline",
           "url": "https://www.rcot.co.uk/explore-resources/children-young-people-families/play-practice-guideline",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: RCOT — occupational therapy and play practice guideline. Focus on motor learning, coordination, adaptation and use the native worked example to check your interpretation."
         },
         {
           "label": "Croydon NHS — Building Independence in Everyday Activities",
           "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: Croydon NHS — Building Independence in Everyday Activities. Focus on motor learning, coordination, adaptation and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "videoNote": "Watch only the named short NHS modules on these cards. The full multi-video workshop is not assigned. The examples provide educational context, not individual assessment or a prescribed programme.",
       "pass_criteria": "1. Distinguish performance, retention, transfer and participation with support conditions. 2. Interpret improved peg speed without claiming unmeasured everyday benefit. 3. Propose relevant outcome/access questions without increasing drills or conducting a motor test.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -1370,24 +1575,30 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "Croydon NHS — Workshop 1: introductory context (critical appraisal required)",
-          "url": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10",
-          "progressKey": "video:0"
+          "label": "CroydonHealth — Module 1: What is Sensory Processing?",
+          "url": "https://www.youtube.com/watch?v=h1rPF4bd4xI",
+          "progressKey": "video:100",
+          "assignment": "Watch the short terminology introduction as context only. Compare any clinical claim against the specified approach, assessment, evidence and meaningful occupation in Practice Smart; the workshop is not efficacy evidence.",
+          "provenance": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10",
+          "durationSeconds": 396,
+          "watchMode": "full"
         }
       ],
       "readings": [
         {
           "label": "AOTA — Practice Smart recommendations",
           "url": "https://www.aota.org/practice/practice-essentials/evidencebased-practiceknowledge-translation/practice-smart",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read recommendations 1, 2 and 6 and their cited rationales: meaningful occupation, documented sensory assessment and collaborative occupational profiling. Member-only implementation handouts are not required."
         },
         {
           "label": "ASHA — evidence-based practice and decision-making tools",
           "url": "https://www.asha.org/Research/EBP/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: ASHA — evidence-based practice and decision-making tools. Focus on sensory assessment, evidence limits, participation and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "videoNote": "Watch only the named short NHS modules on these cards. The full multi-video workshop is not assigned. The examples provide educational context, not individual assessment or a prescribed programme.",
       "pass_criteria": "1. Define the proposed sensory approach, population, provider training and outcome. 2. Distinguish an environmental accommodation from a specialist intervention. 3. Request method, comparison, reliability, adverse-effect and child-experience evidence.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -1413,24 +1624,32 @@
         {
           "label": "IRIS — Behavioral Principles: Challenge video",
           "url": "https://iris.peabody.vanderbilt.edu/module/bp/challenge/",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "assignment": "Watch only the 0:59 Challenge introduction, then read the assigned Behavioral Principles pages, especially The ABC Model. This introductory movie does not teach a complete support or assessment procedure.",
+          "durationSeconds": 59,
+          "watchMode": "sections"
         },
         {
           "label": "IRIS — Functional Behavioral Assessment (Elementary): Challenge video",
           "url": "https://iris.peabody.vanderbilt.edu/module/fba-elem/challenge/",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "assignment": "Watch the 3:00 Challenge case, then complete the named elementary-school FBA reading module. The case movie is not instruction to administer an FBA independently or to use the example teacher responses as recommended treatment.",
+          "durationSeconds": 180,
+          "watchMode": "sections"
         }
       ],
       "readings": [
         {
           "label": "IRIS — Behavioral Principles: complete this module before FBA",
           "url": "https://iris.peabody.vanderbilt.edu/module/bp/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: IRIS — Behavioral Principles: complete this module before FBA. Focus on ABC observations, functional hypotheses, measurement and use the native worked example to check your interpretation."
         },
         {
           "label": "IRIS — Functional Behavioral Assessment (Elementary)",
           "url": "https://iris.peabody.vanderbilt.edu/module/fba-elem/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: IRIS — Functional Behavioral Assessment (Elementary). Focus on ABC observations, functional hypotheses, measurement and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
@@ -1458,17 +1677,19 @@
       "videos": [],
       "readings": [
         {
-          "label": "What Works Clearinghouse — standards and procedures handbooks (single-case design sections)",
+          "label": "What Works Clearinghouse — Version 5.0 Handbook, single-case design standards",
           "url": "https://ies.ed.gov/ncee/wwc/Handbooks",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Choose the current Version 5.0 Procedures and Standards Handbook, then its single-case design standards sections. Compare repeated demonstrations, phase evidence and visual analysis with the fictional graph; the entire handbook is not assigned."
         },
         {
           "label": "NICE CG170 Section 1.4 — behaviour that challenges in autistic under-19s (defined population)",
           "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read 1.4 Interventions for behaviour that challenges. This NICE guidance concerns autistic children/young people under 19; do not generalise it to all children or use it as an individual treatment plan."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Plot fictional counts and identify the pre-existing trend and absent denominators. 2. Explain why A-to-B change is not by itself causal evidence. 3. Include communication, comfort, participation and qualified review when visible distress falls.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. NICE CG170 concerns autistic children and young people under 19; do not generalise it to every child or diagnosis.",
       "outcomes": [
@@ -1492,31 +1713,42 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "NIMH — Facebook Live: Childhood Irritability",
+          "label": "National Institute of Mental Health (NIMH) — Facebook Live: Childhood Irritability",
           "url": "https://www.youtube.com/watch?v=t176yeEdVMM",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "assignment": "Watch the full NIMH irritability discussion as a bounded professional case example, then use the current reading for wider referral questions. It is not a trauma/diagnostic training course or an individual treatment plan.",
+          "durationSeconds": 1799,
+          "watchMode": "full"
         },
         {
-          "label": "NIMH — Mental Health Minute: Stress and Anxiety in Adolescents ",
+          "label": "National Institute of Mental Health (NIMH) — Mental Health Minute: Stress and Anxiety in Adolescents",
           "url": "https://www.youtube.com/watch?v=wr4N-SdekqY",
-          "progressKey": "video:1"
+          "progressKey": "video:1",
+          "durationSeconds": 88,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: Mental Health Minute: Stress and Anxiety in Adolescents - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         },
         {
-          "label": "NIMH — Mental Health Minute: Attention-Deficit/Hyperactivity Disorder",
+          "label": "National Institute of Mental Health (NIMH) — Mental Health Minute: Attention-Deficit/Hyperactivity Disorder",
           "url": "https://www.youtube.com/watch?v=-j2PqoFCzX0",
-          "progressKey": "video:2"
+          "progressKey": "video:2",
+          "durationSeconds": 66,
+          "watchMode": "full",
+          "assignment": "Watch the complete named unit: Mental Health Minute: Attention-Deficit/Hyperactivity Disorder - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
         }
       ],
       "readings": [
         {
           "label": "NIMH — child and adolescent mental health",
           "url": "https://www.nimh.nih.gov/health/topics/child-and-adolescent-mental-health",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: NIMH — child and adolescent mental health. Focus on mental health, trauma awareness, scope and use the native worked example to check your interpretation."
         },
         {
           "label": "NICE — ADHD diagnosis and management",
           "url": "https://www.nice.org.uk/guidance/ng87/chapter/Recommendations",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read recognition/referral and diagnosis sections concerning children/young people, noting who is qualified to diagnose. Do not treat this ADHD-specific guidance as all-purpose mental-health/trauma guidance."
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
@@ -1546,15 +1778,17 @@
         {
           "label": "HCPC — standards of conduct, performance and ethics",
           "url": "https://www.hcpc-uk.org/standards/standards-of-conduct-performance-and-ethics/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: HCPC — standards of conduct, performance and ethics. Focus on documentation, supervision, ethics and use the native worked example to check your interpretation."
         },
         {
           "label": "ASHA — SLP certification standards (check current effective version)",
           "url": "https://www.asha.org/certification/2020-slp-certification-standards/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: ASHA — SLP certification standards (check current effective version). Focus on documentation, supervision, ethics and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "No directly matched, publicly accessible teaching video has been verified for this topic. Use this guided lesson and the assigned authoritative readings; professional recordings may require enrolment or payment.",
+      "videoNote": "Reading-led topic: no closely matched public teaching video was verified for this assignment. Use the native lesson, exact readings and complete exercises; adjacent talks are not substituted as coverage.",
       "pass_criteria": "1. Separate reported, observed, interpreted and next-step sections respectfully. 2. State actual learner role and refuse to sign as qualified for an unfamiliar restricted test. 3. Resolve the request through appropriate supervision, scope clarification and authorised records.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -1578,21 +1812,36 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "UNICEF — Video accompanying the linked guidance",
+          "label": "UNICEF Innocenti — UNICEF Guidance on AI and Children (3.0): Launch webinar",
           "url": "https://www.youtube.com/watch?v=BwCVJCymmt8",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "optional": true,
+          "assignment": "Optional full UNICEF Guidance on AI and Children 3.0 launch webinar. The required task is the relevant guidance sections and a child-data/access/governance map; the whole launch event is not required.",
+          "watchMode": "full",
+          "durationSeconds": 3629
+        },
+        {
+          "label": "W3C WAI — Text to Speech: an assistive-output example",
+          "url": "https://www.w3.org/WAI/perspective-videos/speech/",
+          "progressKey": "video:100",
+          "assignment": "Watch the complete short demonstration to see an assistive-output use case. It is not an AI/child-therapy product demonstration or AAC assessment; study UNICEF and ASHA for those boundaries.",
+          "watchMode": "full",
+          "playbackUrl": "https://www.youtube.com/watch?v=8Rn5pXCdZWU",
+          "accessNote": "The original W3C page also offers a transcript, captions and an audio-described version."
         }
       ],
       "readings": [
         {
           "label": "ASHA — AAC Practice Portal: access, assessment and partners",
           "url": "https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — AAC Practice Portal: access, assessment and partners. Focus on assistive technology, AI limits, privacy and use the native worked example to check your interpretation."
         },
         {
           "label": "UNICEF — AI policy guidance for children",
           "url": "https://www.unicef.org/innocenti/reports/policy-guidance-ai-children",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: UNICEF — AI policy guidance for children. Focus on assistive technology, AI limits, privacy and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
@@ -1621,19 +1870,23 @@
         {
           "label": "ASHA — Troubleshooting Common Obstacles to External Scientific Evidence: named microcourse on this page; CE credit has separate terms",
           "url": "https://www.asha.org/research/ebp/evidence-based-decision-making-micro-course-series/",
-          "progressKey": "video:0"
+          "progressKey": "video:0",
+          "watchMode": "sections",
+          "assignment": "Choose only Troubleshooting Common Obstacles to External Scientific Evidence and its six parts (about 30 minutes total). Do not complete every microcourse on the page. Use the linked activity/slides; CE credit/purchase is separate."
         }
       ],
       "readings": [
         {
           "label": "ASHA — evidence-based practice and decision-making tools",
           "url": "https://www.asha.org/Research/EBP/",
-          "progressKey": "reading:0"
+          "progressKey": "reading:0",
+          "assignment": "Read the named article or specified sections: ASHA — evidence-based practice and decision-making tools. Focus on interprofessional reasoning, portfolio, research proposal and use the native worked example to check your interpretation."
         },
         {
           "label": "HCPC — approved professional programmes",
           "url": "https://www.hcpc-uk.org/education/approved-programmes/",
-          "progressKey": "reading:1"
+          "progressKey": "reading:1",
+          "assignment": "Read the named article or specified sections: HCPC — approved professional programmes. Focus on interprofessional reasoning, portfolio, research proposal and use the native worked example to check your interpretation."
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
@@ -1648,7 +1901,8 @@
       "practice_links": [
         {
           "label": "Download fictional cases, portfolio sections and review prompts",
-          "url": "https://ifeanyidike.com/child-development-studio/practice/fictional-portfolio.txt"
+          "url": "https://ifeanyidike.com/child-development-studio/practice/fictional-portfolio.txt",
+          "assignment": "Use only this named practical material for the scoped lesson task: Download fictional cases, portfolio sections and review prompts. Read its setup and authorisation boundary before doing anything."
         }
       ],
       "practice": "Produce a four-page fictional portfolio: one page of facts/unknowns, one of professional questions and boundaries, one evidence-appraisal table and one further-training plan. Include eight authoritative sources with correct scope and a clear statement that no child was assessed or treated.\n\nUse the downloadable fictional-case and portfolio sheet for complete supplied cases, required sections and review prompts.",

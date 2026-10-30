@@ -1,8 +1,7 @@
 Voice AI Studio and Child Development & Therapy Studio
 ====================================================
 
-Two independent apps use the learning-studio browser runtime. Cyber and Algo
-Studio are unchanged. Public routes are /voice-ai-studio/ and
+Two independent apps use the learning-studio browser runtime. Algo Studio is unchanged; Cyber shares the scoped-resource renderer. Public routes are /voice-ai-studio/ and
 /child-development-studio/. Each has its own auth session, local storage prefix,
 backup kind and hosted progress table. A backup from one cannot enter another.
 
@@ -66,8 +65,8 @@ metadata and official professional guidance are reviewed, not mirrored.
 Public video links point to exact clips or explicitly named sections on the
 provider page. Restricted recordings and absent videos must be labelled honestly.
 Stanford CS224S 2025 recordings require enrolment; its syllabus is a depth
-reference, not the public video backbone. Edinburgh speech.zone is the public
-speech lecture backbone. Older model lectures are conceptual, not current API
+reference, not the public video backbone. Edinburgh supplies focused speech clips; 3Blue1Brown provides the network/attention
+introductions, with long university recordings labelled as optional depth where appropriate. Older model lectures are conceptual, not current API
 instructions. Textbook chapters and official research papers provide depth.
 Child source notes distinguish age coverage, educational modules, evidence
 guidance and professional eligibility. WHO CST primarily covers ages 2–9 and
@@ -80,3 +79,27 @@ Install the dedicated progress-table SQL and verify RLS/merge behavior before
 claiming hosted sync works. Preserve all existing tables, users, callbacks and
 Site URL. Add only the two new production callbacks. Never test by emailing
 synthetic users or submitting real child data.
+
+Viewing and reading assignments — release 20261030-4
+-------------------------------------------------
+All three studios use learning-studio/resources.js and video.js. Keep the title,
+URL and completion identity distinct from the assigned scope. Every video has an
+assignment and watchMode (full, sections or segments). Full means the coherent
+named unit is assigned; sections means named clips on a multi-item provider page.
+Optional means further study, not another core viewing requirement.
+For bounded YouTube excerpts add segments with integer start/end seconds and a
+label, durationSeconds for the complete recording, and timingSource identifying
+the published chapter/timing evidence. End is absolute from the recording start,
+not an offset from start. Do not guess timestamps or derive them from runtime.
+The player preserves both bounds; external watch links seek to the start and the
+visible guide tells the learner where to stop. A single video does not inherit a
+playlist. Validate ordered nonempty ranges within the known recording duration.
+playbackUrl is used only when the publisher explicitly identifies the same video.
+Do not infer that one iframe is the whole assignment on a multi-clip session page.
+Readings and practical links also carry their scoped assignment. The readable
+source-map downloads include assignments and excerpt ranges. Existing stable
+progressKey values must remain attached to their original materials; replacements
+get a new unused key. Cyber now follows the same resource-key rule as the other
+studios. No learner-record rewrite or database migration is required.
+Full source playback, every caption track and all claims in external books are
+separate from source/topic alignment checks. Record access limits honestly.
