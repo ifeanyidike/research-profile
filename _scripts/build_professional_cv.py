@@ -84,41 +84,41 @@ def build():
     story.append(Spacer(1, 3))
 
     p("PROFILE", "section")
-    p("Senior software engineer with <b>8+ years of experience</b> building backend services, web applications and real-time systems. Builds <b>Python/Go services and React/TypeScript interfaces</b>, with recent work in production voice AI, call scheduling and background processing. Takes features from design through deployment and production debugging, working remotely with teams in the US and Canada.")
+    p("Senior software engineer with <b>8+ years</b> in backend and real-time systems. Builds and debugs <b>production voice AI</b> using Python, Go, React and TypeScript. Works remotely with US and Canadian teams.")
 
     p("PROFESSIONAL EXPERIENCE", "section")
     job("DataStrut AI", "Founding AI Engineer / Senior Software Engineer", "Aug 2025 - Present")
-    bullet("Migrated the production voice platform from Vapi to self-hosted Python/Pipecat, connecting telephony, streaming speech, LLM orchestration, recordings and post-call reports.")
-    bullet("Built call admission and a Fly.io machine pool with <b>atomic Redis reservations</b>. Versioned reservations stop late events from releasing a machine assigned to a new call; active-work checks prevent premature suspension.")
-    bullet("Separated outbound scheduling from report processing with <b>dedicated RQ workers</b>, duplicate-call protection and capacity-aware retries, so dial retries and reporting can run independently.")
-    bullet("Reduced steady-state speech-recognition sessions from <b>3 to 1 per call</b> in three-agent workflows. Added regression tests and playback-aligned traces to investigate interruptions and recording errors.")
-    bullet("Built <b>PostgreSQL data models and reporting workflows</b> that combine input from callers in different roles into a shared report.")
-    bullet("Build features across the <b>React frontend and Python services</b>, including FastAPI APIs and a Flask photo-processing backend.")
-
-    job("Cenphi", "Co-Founder and Lead Developer", "Mar 2025 - Present", "Independent project")
-    bullet("Built a <b>React/TypeScript frontend and Go/Python backend</b> for asynchronous video processing, transcription, speaker diarization and story composition.")
-    bullet("Built <b>server-sent event (SSE) progress updates</b> for background media jobs. Fixed stale connections, duplicate completion events and cross-session delivery; added workspace access checks and "
-           + link("https://github.com/ifeanyidike/cenphi/commit/99648406fe174c55858db7f7bbafc13b7e5cb099", "offline regression tests") + ".")
+    bullet("Migrated production voice AI from Vapi to self-hosted Python/Pipecat, integrating telephony, streaming speech, LLMs and PostgreSQL reporting.")
+    bullet("<b>Traced interruptions and dead air</b> to stale model decisions and timer races using timestamped voice pipeline events.")
+    bullet("<b>Excluded speech cancelled before playback release</b> from recordings; used Twilio dual-channel audio to align both speakers on one timeline.")
+    bullet("Built Fly.io call admission with <b>atomic, versioned Redis reservations</b> and active-work checks. Separated scheduling and reporting with dedicated RQ workers, capacity-aware retries and duplicate-call protection.")
+    bullet("Reduced memory by <b>over 70% across two production FastAPI services</b> using memray and Gunicorn preloading; cut steady-state STT sessions from <b>3 to 1 per call</b> in three-agent workflows.")
+    bullet("Ran voice load tests reaching <b>40 occupied phone lines</b>; <b>48 populated reports (96 jobsites)</b> were ready within <b>121.2 seconds</b> of AI-session end. Identified audio-loss and call-setup failures.")
+    bullet("Built <b>React report editing</b> with version checks, history, account isolation and drafts preserved after failed refreshes.")
 
     job("Fynance Hub", "Technical Lead", "Oct 2024 - Present", "Remote, part-time")
-    bullet("Built a <b>React/TypeScript mortgage lead-generation product</b> with Go/Python services, PostgreSQL and Redis. The product has generated hundreds of leads for Canadian mortgage agents.")
-    bullet("Worked directly with the founder/product owner to turn broker requirements into frontend and backend features; built RAG recommendations and automated outbound voice verification.")
-    bullet("<b>Separate contract:</b> building MajorDairy AI's React Native/Expo app and FastAPI backend for dairy-farm workflows. Deployed the backend on <b>Railway</b>; the app is in Google Play testing. Built a DairyComp 305 importer for legacy herd records.")
+    bullet("Built a <b>React/TypeScript mortgage platform</b> with Go/Python, PostgreSQL and Redis, generating <b>hundreds of leads</b> for Canadian brokers.")
+    bullet("Worked with the founder to turn broker requirements into features, including RAG recommendations and outbound voice verification.")
+    bullet("<b>Separate contract:</b> building MajorDairy AI's React Native/Expo app and FastAPI backend for dairy-farm workflows. Deployed on <b>Railway</b>; app in Google Play testing. Built a DairyComp 305 record importer.")
 
     story.append(PageBreak())
     p("PROFESSIONAL EXPERIENCE - CONTINUED", "section")
     job("Arbor Platform Inc.", "Senior Software Engineer", "Feb 2023 - Oct 2024")
-    bullet("Developed <b>React/TypeScript interfaces</b> for a content studio, B-roll asset management and one-click social distribution; integrated DatoCMS through GraphQL, backend APIs and cloud services.")
-    bullet("Built Claude/OpenAI-powered video workflows that reduced production time by <b>60%</b> and improved throughput by <b>80%</b>.")
-    bullet("Delivered text-to-video and audio-transcription features for AI-assisted editing.")
+    bullet("Built <b>React/TypeScript interfaces</b> for a content studio, B-roll tools and social publishing; integrated DatoCMS through GraphQL.")
+    bullet("Built Claude/OpenAI video and transcription workflows, reducing production time by <b>60%</b> and increasing throughput by <b>80%</b>.")
 
     job("Howdy Learning", "Senior Software Development Engineer", "May 2020 - Mar 2023")
-    bullet("Reduced <b>WebSocket network traffic by more than 99%</b> through real-time communication optimizations. Built live-video infrastructure supporting up to <b>10,000 concurrent connections</b>.")
-    bullet("Developed a GetStream/WebSocket chat system serving approximately <b>100 communities</b>.")
-    bullet("Delivered embedded video, voice and SSO widgets for Thinkific and WordPress, with integrations used by <b>more than 100 customers</b>.")
+    bullet("Reduced <b>WebSocket network traffic by over 99%</b>; built live-video infrastructure supporting up to <b>10,000 concurrent connections</b>.")
+    bullet("Built GetStream/WebSocket chat serving about <b>100 communities</b>.")
+    bullet("Delivered video, voice and SSO integrations for Thinkific and WordPress, used by <b>over 100 customers</b>.")
 
     job("Bujuwa Nigeria Limited", "Software Developer", "Jul 2018 - Dec 2019", "Abuja, Nigeria")
-    bullet("Delivered web and mobile assessment systems, from requirements and architecture to implementation.")
+    bullet("Built web and mobile assessment systems, from requirements through design and delivery.")
+
+    p("SELECTED INDEPENDENT PROJECT", "section")
+    p("<b>Cenphi</b> | Co-Founder and Lead Developer | Mar 2025 - Present")
+    bullet("Built <b>React/TypeScript and Go/Python video workflows</b> with SSE progress updates. Added connection cleanup, completion deduplication, session isolation, access checks and "
+           + link("https://github.com/ifeanyidike/cenphi/commit/99648406fe174c55858db7f7bbafc13b7e5cb099", "regression tests") + ".")
 
     p("TECHNICAL SKILLS", "section")
     p("<b>Backend:</b> Python, asyncio, Go, FastAPI, Flask, gRPC, PostgreSQL, Redis, MongoDB, RQ.")
@@ -129,17 +129,17 @@ def build():
     p("RESEARCH, OPEN SOURCE &amp; WRITING", "section")
     p("<b>Voice-agent evaluation:</b> Sole-author preprints on "
       + link("https://doi.org/10.5281/zenodo.20548903", "ATR")
-      + " and Full-Duplex-Bench reproduction; released "
+      + " and Full-Duplex-Bench reproduction, with "
       + link("https://github.com/ifeanyidike/atr-metric", "ATR code") + " and the "
-      + link("https://github.com/ifeanyidike/full-duplex-bench-repro", "benchmark implementation")
-      + ". Four co-authored IEEE IEMCON conference papers (2018).")
-    p("<b>Pipecat:</b> Reported and documented an Anthropic integration bug ("
+      + link("https://github.com/ifeanyidike/full-duplex-bench-repro", "benchmark code")
+      + ". Four co-authored IEEE IEMCON papers (2018).")
+    p("<b>Pipecat:</b> Reported an Anthropic integration bug ("
       + link("https://github.com/pipecat-ai/pipecat/issues/5035", "#5035") + " and "
       + link("https://github.com/pipecat-ai/pipecat/issues/5036", "#5036")
-      + "); maintainers implemented the fix in "
-      + link("https://github.com/pipecat-ai/pipecat/pull/5041", "PR #5041") + ".")
+      + "); maintainer fix: "
+      + link("https://github.com/pipecat-ai/pipecat/pull/5041", "#5041") + ".")
     p("<b>Technical writing:</b> "
-      + link("https://ifeanyidike.com/blog/2026/scaling-voice-agents-machine-ownership/", "Call admission and a Fly.io machine pool")
+      + link("https://ifeanyidike.com/blog/2026/the-sentence-nobody-heard-voice-ai-recording/", "Debugging voice recordings")
       + "; " + link("https://ifeanyidike.com/blog/2026/python-memory-profiling-heroku/", "profiling Python memory in production") + ".")
 
     p("EDUCATION", "section")
