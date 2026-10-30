@@ -1118,7 +1118,17 @@
             "durationSeconds": 240,
             "timingSource": "https://vimeo.com/639588440?h=a28bc8a741",
             "assignment": "Watch the complete named video, 0:00–4:00. In this author interview, Timnit Gebru explains why dataset documentation should record provenance, collection, uses and limitations. Map those questions to the fictional speech manifest, rights record and speaker/session split; the interview is not a speech-annotation software tutorial.",
-            "accessNote": "Original ACM author interview hosted on Vimeo. Its public oEmbed metadata identifies CACM and a 4:00 running time. Playback is on the provider page; the assigned paper remains the detailed checklist."
+            "accessNote": "Original ACM author interview hosted on Vimeo. Its public oEmbed metadata identifies CACM and a 4:00 running time. Playback is on the provider page; the assigned paper remains the detailed checklist.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "ACM identifies this as the Datasheets author interview. Its full speech remains unverified; use the assigned paper for documentation questions and the native lesson for speech-data rights and splits.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://vimeo.com/639588440?h=a28bc8a741"
+                }
+              ]
+            }
           },
           {
             "label": "Edinburgh speech.zone — Script Design",
@@ -1287,7 +1297,17 @@
             "timingSource": "https://slideslive.com/39002706",
             "assignment": "Watch the complete named video, 0:00–5:18. Watch the authors’ concise Whisper presentation, then identify the training/task setup, encoder–decoder path and reported limitations in the paper. Historical results describe the paper’s checkpoints and test conditions, not every later Whisper release.",
             "accessNote": "Open this direct SlidesLive author-presentation page. The original conference page identifies the same recording; its embedded player may fail to load. The complete named presentation is 5:18, not the whole conference or an installation tutorial.",
-            "provenanceUrl": "https://icml.cc/virtual/2023/poster/24519"
+            "provenanceUrl": "https://icml.cc/virtual/2023/poster/24519",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "All ten displayed author slides were inspected: training data, encoder–decoder architecture, task tokens and selected robustness results. Detailed decoding and hallucination analysis remain in the paper and lesson; no spoken transcript was available.",
+              "sources": [
+                {
+                  "label": "Original author presentation",
+                  "url": "https://slideslive.com/39002706"
+                }
+              ]
+            }
           },
           {
             "label": "Carnegie Mellon University Deep Learning — 11785 Spring 22 Lecture 18: Attention Models",
@@ -1353,7 +1373,17 @@
             "timingSource": "https://slideslive.com/38937614",
             "assignment": "Watch the complete named video, 0:00–3:37. Trace the encoder, masking, contrastive targets and labelled adaptation in the authors’ wav2vec 2.0 explanation. Distinguish unlabelled pretraining from supervised fine-tuning. This original presentation does not establish multilingual performance or coverage; use the multilingual reading for that comparison.",
             "accessNote": "Open this direct SlidesLive author-presentation page. The original conference page identifies the same recording; its embedded player may fail to load. The complete named presentation is 3:37, not the whole conference or an installation tutorial.",
-            "provenanceUrl": "https://neurips.cc/virtual/2020/poster/18897"
+            "provenanceUrl": "https://neurips.cc/virtual/2020/poster/18897",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "All eight displayed author slides were inspected: masked representations, quantised targets, fine-tuning and LibriSpeech comparisons. This short presentation does not establish multilingual performance; no spoken transcript was available.",
+              "sources": [
+                {
+                  "label": "Original author presentation",
+                  "url": "https://slideslive.com/38937614"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -1420,7 +1450,17 @@
                 "label": "Test benchmarks and data selection"
               }
             ],
-            "assignment": "Watch only 5:58–8:09, 9:33–16:22. Work the WER examples, then examine how a benchmark and its data-selection policy change the meaning of a reported score. Apply this to the native subgroup/error table. These 2022 examples are not current product rankings or a complete fairness analysis."
+            "assignment": "Watch only 5:58–8:09, 9:33–16:22. Work the WER examples, then examine how a benchmark and its data-selection policy change the meaning of a reported score. Apply this to the native subgroup/error table. These 2022 examples are not current product rankings or a complete fairness analysis.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "Chapter labels identify WER, benchmarks and data selection. Their speech and precise cut points remain unverified; the worked lesson and reading supply the error-counting and fairness analysis.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://introtodeeplearning.com/2022/"
+                }
+              ]
+            }
           },
           {
             "label": "Carnegie Mellon University Deep Learning — 11785 Spring 22 Recitation 8: CTC Decoding and Beam Search",
@@ -1519,7 +1559,17 @@
             "watchMode": "full",
             "durationSeconds": 253,
             "timingSource": "https://www.youtube.com/watch?v=x36mm3_r9I8",
-            "assignment": "Watch the complete named video, 0:00–4:13. Explain how loudspeaker output re-enters a microphone and why muting the other side loses full-duplex conversation. Relate that example to the native playback/reference/user-speech diagram and the double-talk challenge. This is an engineering explainer, not a complete adaptive-filter derivation."
+            "assignment": "Watch the complete named video, 0:00–4:13. Explain how loudspeaker output re-enters a microphone and why muting the other side loses full-duplex conversation. Relate that example to the native playback/reference/user-speech diagram and the double-talk challenge. This is an engineering explainer, not a complete adaptive-filter derivation.",
+            "contentReview": {
+              "method": "transcript-reviewed",
+              "note": "The uploader’s full transcript explains returned loudspeaker audio and the conversational cost of muting the other side. Use the lesson and readings for adaptive filtering and microphone-array mathematics.",
+              "sources": [
+                {
+                  "label": "Uploader video and transcript",
+                  "url": "https://www.youtube.com/watch?v=x36mm3_r9I8"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -1775,7 +1825,17 @@
             "timingSource": "https://www.youtube.com/watch?v=zzUY5T9I730",
             "playbackUrl": "https://www.youtube.com/watch?v=zzUY5T9I730",
             "assignment": "Watch the complete named video, 0:00–4:02. Identify the language-understanding, explicit-logic and response components. Map them to the native proposal/state diagram before the flows example.",
-            "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination."
+            "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The exact video’s written lesson supports commands, dialogue management, flows and responses. It does not establish the studio’s approval/version invariants; the spoken transcript remains unverified.",
+              "sources": [
+                {
+                  "label": "Exact Rasa video and written lesson",
+                  "url": "https://learning.rasa.com/rasa-pro/architecture-of-an-assistant/"
+                }
+              ]
+            }
           },
           {
             "label": "Rasa — flows and explicit conversation logic",
@@ -1785,8 +1845,18 @@
             "durationSeconds": 612,
             "timingSource": "https://www.youtube.com/watch?v=v1l75qxo4b0",
             "playbackUrl": "https://www.youtube.com/watch?v=v1l75qxo4b0",
-            "assignment": "Watch the complete named video, 0:00–10:12. Study flow components, collected values and branching. Trace the supplied booking example on paper; explain why extracting a slot is not authorisation to commit a booking.",
-            "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination."
+            "assignment": "Watch the complete named video, 0:00–10:12. Study flow components, collected values and branching. Map the video’s financial-services flow to the native booking example on paper; explain why extracting a slot is not authorisation to commit a booking.",
+            "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The exact video’s written lesson uses a financial-services example with slots and branching. Map that example to the studio’s booking task; the spoken transcript remains unverified.",
+              "sources": [
+                {
+                  "label": "Exact Rasa video and written lesson",
+                  "url": "https://learning.rasa.com/rasa-pro/flows/"
+                }
+              ]
+            }
           },
           {
             "label": "Rasa — conversation repair and deviations from the happy path",
@@ -1804,7 +1874,17 @@
               }
             ],
             "assignment": "Watch only 0:00–5:38. Watch the introduction, repair patterns and advanced correction cases only. Distinguish a correction or clarification from confirmation of the current proposal version. Skip the later framework-customisation and handoff implementation.",
-            "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination."
+            "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The exact video’s written lesson explains corrections, digressions, cancellations and repair patterns. The chosen excerpt’s spoken boundaries remain unverified.",
+              "sources": [
+                {
+                  "label": "Exact Rasa video and written lesson",
+                  "url": "https://learning.rasa.com/rasa-pro/deviations-from-happypath/"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -1851,7 +1931,17 @@
             "watchMode": "full",
             "durationSeconds": 395,
             "timingSource": "https://www.youtube.com/watch?v=T-D1OfcDW1M",
-            "assignment": "Watch the complete named video, 0:00–6:35. Draw retrieval, evidence/context and generation separately. Identify where retrieved material can be stale, wrong or adversarial; retrieval does not automatically make an answer true or grant permission to act."
+            "assignment": "Watch the complete named video, 0:00–6:35. Draw retrieval, evidence/context and generation separately. Identify where retrieved material can be stale, wrong or adversarial; retrieval does not automatically make an answer true or grant permission to act.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "IBM’s outline supports retrieval, generation and citing evidence. The full speech remains unverified; use the native lesson to test stale/adversarial evidence and enforce tool permissions.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://www.youtube.com/watch?v=T-D1OfcDW1M"
+                }
+              ]
+            }
           },
           {
             "label": "Rasa — action types and custom tools",
@@ -1874,7 +1964,17 @@
               }
             ],
             "assignment": "Watch only 0:46–2:14, 7:03–9:53. Watch action types and the custom-action example only. Separate a model’s action request from the server-side validation, identity and permission checks required by the native tool contract. The video’s function execution example is not an authorisation design.",
-            "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination."
+            "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The exact video’s written lesson explains response/default/custom actions and a funds-check example. Execution is distinct from authorisation; the chosen excerpt’s speech remains unverified.",
+              "sources": [
+                {
+                  "label": "Exact Rasa video and written lesson",
+                  "url": "https://learning.rasa.com/rasa-pro/custom-actions/"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -1932,7 +2032,17 @@
                 "label": "Gather and task groups"
               }
             ],
-            "assignment": "Watch only 1:00–13:52, 25:40–34:00, 55:10–1:07:20. Study the event loop, awaitables/tasks, the corrected concurrency example and gather/task groups. Skip the long refactoring/network-demo section. Then trace session/generation/event/operation IDs and cancellation in the native offline fixture; task cancellation alone does not undo a committed side effect."
+            "assignment": "Watch only 1:00–13:52, 25:40–34:00, 55:10–1:07:20. Study the event loop, awaitables/tasks, the corrected concurrency example and gather/task groups. Skip the long refactoring/network-demo section. Then trace session/generation/event/operation IDs and cancellation in the native offline fixture; task cancellation alone does not undo a committed side effect.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "The author describes event-loop, coroutine and task teaching with worked animations. The selected sections’ full speech and cut points remain unverified; use the native fixture for stale events, queues and cancellation.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://www.youtube.com/watch?v=oAkLSJNr5zY"
+                }
+              ]
+            }
           },
           {
             "label": "EuroPython / Junya Fukuda — TaskGroup exceptions and cancellation",
@@ -1943,7 +2053,17 @@
             "timingSource": "https://www.youtube.com/watch?v=FvWXyAXyb4Q",
             "playbackUrl": "https://www.youtube.com/watch?v=FvWXyAXyb4Q",
             "assignment": "Watch the complete named video, 0:00–26:46. Optional deeper treatment of exception groups and TaskGroup cancellation after the selected primer. This is a Python 3.11-era talk; use the assigned Python 3.13 documentation for the exact target-version behaviour. View only; do not run provider or network examples.",
-            "optional": true
+            "optional": true,
+            "contentReview": {
+              "method": "description-only",
+              "note": "The conference outline describes Python 3.11 TaskGroup exception/cancellation behaviour. The full talk remains unverified; this optional source does not establish the current target-version semantics.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://pyvideo.org/europython-2023/asyncio-evolved-enhanced-exception-handling-with-taskgroup-in-python-311.html"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -1985,7 +2105,17 @@
                 "label": "Signaling, STUN/TURN and security"
               }
             ],
-            "timingSource": "https://www.youtube.com/watch?v=p2HzZkd2A40"
+            "timingSource": "https://www.youtube.com/watch?v=p2HzZkd2A40",
+            "contentReview": {
+              "method": "description-only",
+              "note": "Uploader chapters identify signaling, STUN/TURN and security in 16:31–23:21. The spoken excerpt remains unverified; use current transport references for implementation details.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://www.youtube.com/watch?v=p2HzZkd2A40"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2040,7 +2170,17 @@
             "timingSource": "https://www.youtube.com/watch?v=EYDrSSEP0h0",
             "playbackUrl": "https://www.youtube.com/watch?v=EYDrSSEP0h0",
             "assignment": "Watch the complete named video, 0:00–2:37. Contrast detecting speech activity with predicting a completed conversational turn. Apply the examples to the native pause, backchannel and interruption cases. This 2025 demonstration concerns the earlier text-based detector, not the newer audio-model implementation or a universal timing threshold.",
-            "accessNote": "The short publisher demonstration illustrates the concept. Read current documentation for the current audio/text model distinction and configuration; do not copy historical defaults or run inference for the exercise."
+            "accessNote": "The short publisher demonstration illustrates the concept. Read current documentation for the current audio/text model distinction and configuration; do not copy historical defaults or run inference for the exercise.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "The original source identifies the earlier turn-detector demonstration. The full speech remains unverified; the native lesson supplies the backchannel, interruption and uncertainty policies.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://docs.livekit.io/agents/logic/turns/turn-detector/"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2083,7 +2223,17 @@
                 "label": "Pipeline latency and trace measurement"
               }
             ],
-            "assignment": "Watch only 0:11–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees."
+            "assignment": "Watch only 0:11–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The publisher’s written guide supports the pipeline and measurement topics in the named chapters. The exact spoken excerpt and its cut points remain unverified.",
+              "sources": [
+                {
+                  "label": "Video’s accompanying latency guide",
+                  "url": "https://livekit.com/blog/understand-and-improve-agent-latency"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2118,7 +2268,17 @@
             "watchMode": "full",
             "durationSeconds": 657,
             "timingSource": "https://www.youtube.com/watch?v=jrHRe9lSqqA",
-            "assignment": "Watch the complete named video, 0:00–10:57. Identify direct/indirect instruction injection and why untrusted content cannot become authority. Apply the idea to transcripts and retrieved voice-agent context. An audio voice match is not identity proof, and a prompt-only defence is not a server-side permission check."
+            "assignment": "Watch the complete named video, 0:00–10:57. Record the injection examples actually shown and classify them using the direct/indirect distinction in the required reading. Explain why untrusted content cannot become authority. Apply the idea to transcripts and retrieved voice-agent context. An audio voice match is not identity proof, and a prompt-only defence is not a server-side permission check.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "IBM identifies a prompt-injection overview. The spoken examples and defences remain unverified; classify only the examples actually shown and use the required reading for the direct/indirect distinction.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://www.youtube.com/watch?v=jrHRe9lSqqA"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2159,7 +2319,17 @@
             "watchMode": "full",
             "durationSeconds": 492,
             "timingSource": "https://www.youtube.com/watch?v=ztIIcXNzMN4",
-            "assignment": "Watch the complete named video, 0:00–8:12. Study reliability as an engineering responsibility, service objectives and reducing repetitive operational work. Apply the principles to the native success/failure indicators, bounded retry/reconciliation plan and fictional cost table. This general SRE overview does not provide current voice-provider pricing."
+            "assignment": "Watch the complete named video, 0:00–8:12. Study the reliability/performance role, collaboration and automation overview. Then define service objectives in the native lesson. Apply the principles to the native success/failure indicators, bounded retry/reconciliation plan and fictional cost table. This general SRE overview does not provide current voice-provider pricing.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "IBM’s outline describes reliability, performance, collaboration and automation. The full speech remains unverified; service objectives, voice costs and recovery rules are taught in the native lesson.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://www.youtube.com/watch?v=ztIIcXNzMN4"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2223,7 +2393,17 @@
             "watchMode": "full",
             "durationSeconds": 146,
             "timingSource": "https://www.youtube.com/watch?v=EU2oCVlzEZk",
-            "assignment": "Watch the complete named video, 0:00–2:26. Use the first-person example to identify an access barrier, user control and alternatives when speech recognition fails. This is a 2021 English-language research/product case, not proof of current availability or accuracy for every language, accent or disability. Complete the native multilingual task audit separately."
+            "assignment": "Watch the complete named video, 0:00–2:26. Use the first-person example to identify an access barrier, user control and alternatives when speech recognition fails. This is a 2021 English-language research/product case, not proof of current availability or accuracy for every language, accent or disability. Complete the native multilingual task audit separately.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "Google’s accompanying article supports the historical non-standard-speech accessibility case. The spoken transcript was not retrieved; the lesson’s complete multilingual task audit remains required.",
+              "sources": [
+                {
+                  "label": "Google’s video and accompanying article",
+                  "url": "https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2324,7 +2504,17 @@
             "watchMode": "full",
             "durationSeconds": 304,
             "timingSource": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
-            "assignment": "Watch the complete named video, 0:00–5:04. Use the paper-reading method to separate a speech paper’s question, contribution, comparison and limitations. Research formats differ; locate equivalent sections rather than insisting on biomedical headings. Work the native claim/evidence table and the assigned NeurIPS checklist. If you already studied this same video in Cyber R01, reuse your notes and apply them to the speech paper; a full replay is unnecessary."
+            "assignment": "Watch the complete named video, 0:00–5:04. Use the paper-reading method to separate a speech paper’s question, contribution, comparison and limitations. Research formats differ; locate equivalent sections rather than insisting on biomedical headings. Work the native claim/evidence table and the assigned NeurIPS checklist. If you already studied this same video in Cyber R01, reuse your notes and apply them to the speech paper; a full replay is unnecessary.",
+            "contentReview": {
+              "method": "transcript-reviewed",
+              "note": "The university-hosted timed captions support the reading-order, claim/evidence and note-taking assignment. Adapt the article-section names to the security or speech paper.",
+              "sources": [
+                {
+                  "label": "University video and captions",
+                  "url": "https://mediaspace.umn.edu/media/t/1_rfb6wt56"
+                }
+              ]
+            }
           },
           {
             "label": "University of Edinburgh — Planning an Open Science Study",
@@ -2334,7 +2524,17 @@
             "durationSeconds": 363,
             "timingSource": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
             "assignment": "Watch the complete named video, 0:00–6:03. Study planning before results, testable questions, preregistration and a reproducibility checklist. The examples are from psychology; translate the planning principles to the supplied security/speech study. Write a plan only: this does not authorise model calls, new measurements or provider benchmarks. If you already studied this same video in Cyber R02, reuse your notes and apply them to the speech paper; a full replay is unnecessary.",
-            "accessNote": "Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions."
+            "accessNote": "Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The exact presentation slides and accompanying questions support preregistration and the reproducibility checklist. The spoken transcript has not been retrieved.",
+              "sources": [
+                {
+                  "label": "Publisher lesson and slides",
+                  "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2370,7 +2570,17 @@
             "durationSeconds": 422,
             "timingSource": "https://www.youtube.com/watch?v=X4LABvRgqik",
             "playbackUrl": "https://www.youtube.com/watch?v=X4LABvRgqik",
-            "assignment": "Watch the complete named video, 0:00–7:02. Study states, inputs and transitions as a model for behaviour. Translate the example to the native deterministic voice-agent contract; do not build a Java application or add a model provider."
+            "assignment": "Watch the complete named video, 0:00–7:02. Study states, inputs and transitions as a model for behaviour. Translate the example to the native deterministic voice-agent contract; do not build a Java application or add a model provider.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "TU Delft identifies this as the state-machine introduction in its testing course. The full speech remains unverified; use the native lesson to construct the voice-agent state and event contract.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://ocw.tudelft.nl/course-lectures/2-1-1-video-state-based-testing/"
+                }
+              ]
+            }
           },
           {
             "label": "TU Delft — state-based testing",
@@ -2380,7 +2590,17 @@
             "durationSeconds": 477,
             "timingSource": "https://www.youtube.com/watch?v=s06ncjp92WU",
             "playbackUrl": "https://www.youtube.com/watch?v=s06ncjp92WU",
-            "assignment": "Watch the complete named video, 0:00–7:57. Derive tests from state/transition behaviour, then use that method to organise the seven supplied fixtures and uncertain-outcome extension. The source uses software examples from a Java course; the reasoning is language-independent and does not implement this studio’s capstone for you."
+            "assignment": "Watch the complete named video, 0:00–7:57. Derive tests from state/transition behaviour, then use that method to organise the seven supplied fixtures and uncertain-outcome extension. The source uses software examples from a Java course; the reasoning is language-independent and does not implement this studio’s capstone for you.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "TU Delft identifies this state-based testing unit. Its complete speech remains unverified; the seven voice-agent fixtures and uncertain-outcome extension are supplied by the studio.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://ocw.tudelft.nl/course-lectures/2-2-1-video-state-based-testing/"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2429,7 +2649,17 @@
             "durationSeconds": 202,
             "timingSource": "https://www.youtube.com/watch?v=VNbzuPt5QYA",
             "playbackUrl": "https://www.youtube.com/watch?v=VNbzuPt5QYA",
-            "assignment": "Watch the complete named video, 0:00–3:22. Identify title, research question, literature gap, method and references, then apply that structure to the voice research proposal. The video describes Leeds Business School’s application context; it does not establish requirements or acceptance at a computing programme."
+            "assignment": "Watch the complete named video, 0:00–3:22. Identify title, research question, literature gap, method and references, then apply that structure to the voice research proposal. The video describes Leeds Business School’s application context; it does not establish requirements or acceptance at a computing programme.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The exact Leeds video’s written guide covers title, introduction, literature, methods, references and proofreading. Its full speech remains unverified; the stated application conventions belong to Leeds Business School.",
+              "sources": [
+                {
+                  "label": "Leeds video and six-step written guide",
+                  "url": "https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2626,7 +2856,17 @@
             "timingSource": "https://www.youtube.com/watch?v=iI_whNYHKaM",
             "playbackUrl": "https://www.youtube.com/watch?v=iI_whNYHKaM",
             "assignment": "Watch the complete named video, 0:00–2:54. Study everyday learning, play, friendships, growing independence and variability at ages 6–8. Apply those observations to the fictional pupil case; do not use a general age description to diagnose an individual or extrapolate it to all ages 6–12.",
-            "accessNote": "The publisher page supplies the complete transcript. The public YouTube player was checked at 2:54; caption controls were unavailable in that check. The Hopkins reading covers the broader 6–12 band."
+            "accessNote": "The publisher page supplies the complete transcript. The public YouTube player was checked at 2:54; caption controls were unavailable in that check. The Hopkins reading covers the broader 6–12 band.",
+            "contentReview": {
+              "method": "transcript-reviewed",
+              "note": "The publisher’s complete transcript matches play, friendships, family support and variable development at ages 6–8. It does not describe the entire 6–12 age range.",
+              "sources": [
+                {
+                  "label": "Publisher video transcript",
+                  "url": "https://raisingchildren.net.au/school-age/multimedia/development-6-8-years"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2756,7 +2996,17 @@
             "durationSeconds": 135,
             "timingSource": "https://www.youtube.com/watch?v=0WAoliBvKFQ",
             "playbackUrl": "https://www.youtube.com/watch?v=0WAoliBvKFQ",
-            "assignment": "Watch the complete named video, 0:00–2:15. Distinguish safeguarding from responding to a protection concern. The animation uses sport: map its people/place/context questions onto the fictional care setting, then follow the assigned recognising/responding guidance and your local safeguarding route."
+            "assignment": "Watch the complete named video, 0:00–2:15. Distinguish safeguarding from responding to a protection concern. The animation uses sport: map its people/place/context questions onto the fictional care setting, then follow the assigned recognising/responding guidance and your local safeguarding route.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "NSPCC’s outline describes safeguarding beyond sports sessions, including travel and wider contexts. The animation’s spoken content remains unverified; local protection procedures remain a separate reading task.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://sport.nspcc.org.uk/help-and-advice/introduction-to-safeguarding/contextual-safeguarding/"
+                }
+              ]
+            }
           },
           {
             "label": "UNICEF — meaningful participation of children with disabilities",
@@ -2766,7 +3016,17 @@
             "durationSeconds": 736,
             "timingSource": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
             "playbackUrl": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
-            "assignment": "Watch the complete named video, 0:00–12:16. Listen for meaningful participation, barriers and being heard. Connect these to the native assent/consent distinction and how a child can decline or change their mind. This rights-based module does not replace local privacy law or safeguarding procedures."
+            "assignment": "Watch the complete named video, 0:00–12:16. Listen for meaningful participation, barriers and being heard. Connect these to the native assent/consent distinction and how a child can decline or change their mind. This rights-based module does not replace local privacy law or safeguarding procedures. Participation in services and policy decisions supports the theme of being heard; it is not itself a clinical consent/assent procedure.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The video’s facilitator guide describes meaningful participation, barriers and accessible involvement in decisions. This supports being heard; it is not a clinical consent or safeguarding protocol.",
+              "sources": [
+                {
+                  "label": "UNICEF video and facilitator guide",
+                  "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2941,7 +3201,17 @@
             "durationSeconds": 629,
             "timingSource": "https://www.youtube.com/watch?v=kWrPBCKnfA4",
             "playbackUrl": "https://www.youtube.com/watch?v=kWrPBCKnfA4",
-            "assignment": "Watch the complete named video, 0:00–10:29. Hear young people describe disability as one part of identity and the barriers/misconceptions that restrict participation. Ask whose perspective and communication preferences are missing in the native goal critique; do not infer the same preferences for all disabled or neurodivergent people."
+            "assignment": "Watch the complete named video, 0:00–10:29. Hear young people describe disability as one part of identity and the barriers/misconceptions that restrict participation. Ask whose perspective and communication preferences are missing in the native goal critique; do not infer the same preferences for all disabled or neurodivergent people.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The video’s facilitator guide describes first-person disability, identity and exclusion. It supports listening to individuals; it does not represent every neurodivergent or multilingual experience.",
+              "sources": [
+                {
+                  "label": "UNICEF video and facilitator guide",
+                  "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -2986,7 +3256,17 @@
             "durationSeconds": 502,
             "timingSource": "https://www.youtube.com/watch?v=vPNCvZe6_48",
             "playbackUrl": "https://www.youtube.com/watch?v=vPNCvZe6_48",
-            "assignment": "Watch the complete named video, 0:00–8:22. Study age-appropriate sleep-support principles and everyday context, then compare them with the relevant Leeds NHS age band. General routines do not explain every sleep problem or justify diagnosis, medicines or an individual treatment plan."
+            "assignment": "Watch the complete named video, 0:00–8:22. Identify the general sleep suggestions and intended audience, then check each suggestion against the relevant Leeds NHS age band before applying it to the fictional case. General routines do not explain every sleep problem or justify diagnosis, medicines or an individual treatment plan.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "The NHS toolkit identifies this sleep video, but no complete script was obtained. Its individual recommendations and age suitability remain unchecked; use the assigned age-specific NHS reading.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://www.nhft.nhs.uk/idiscover-toolkit"
+                }
+              ]
+            }
           },
           {
             "label": "Bradford District Care NHS — paediatric eating and swallowing",
@@ -2996,7 +3276,17 @@
             "durationSeconds": 451,
             "timingSource": "https://www.youtube.com/watch?v=WTMMZ-Cr9EA",
             "playbackUrl": "https://www.youtube.com/watch?v=WTMMZ-Cr9EA",
-            "assignment": "Watch the complete named video, 0:00–7:31. Understand the role of paediatric eating/swallowing services and why concerns need appropriate professional assessment. Use the native referral exercise; do not try feeding techniques, textures or exercises on a child from a video."
+            "assignment": "Watch the complete named video, 0:00–7:31. Understand the role of paediatric eating/swallowing services and why concerns need appropriate professional assessment. Use the native referral exercise; do not try feeding techniques, textures or exercises on a child from a video.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "The NHS source identifies paediatric eating/swallowing services. The video’s complete speech remains unverified; do not infer assessment or feeding instructions from its title.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://www.clch.nhs.uk/services/speech-and-language-therapy-children"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -3183,7 +3473,17 @@
             "durationSeconds": 144,
             "timingSource": "https://www.youtube.com/watch?v=PIrD7PkeDdg",
             "playbackUrl": "https://www.youtube.com/watch?v=PIrD7PkeDdg",
-            "assignment": "Watch the complete named video, 0:00–2:24. Study how families can support both home and additional languages. Use the fictional language-history sheet; this early-years demonstration does not validate a translated test or mean an unfamiliar language is a disorder."
+            "assignment": "Watch the complete named video, 0:00–2:24. Study how families can support both home and additional languages. Use the fictional language-history sheet; this early-years demonstration does not validate a translated test or mean an unfamiliar language is a disorder.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "The NSW publisher describes bilingual language support before school. The spoken content remains unverified; this early-years example cannot validate a translated assessment or cover every age.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://www.healthtranslations.vic.gov.au/resources/helping-your-child-to-learn-two-languages-video"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -3514,7 +3814,17 @@
             "durationSeconds": 435,
             "timingSource": "https://vimeo.com/526359322?h=58d9baef4e",
             "assignment": "Watch the complete named video, 0:00–7:15. Select only “Coordinated Service Planning & F-Words” on the source page. Identify how the young person’s/family’s priorities guide coordinated services and goals, then build the native meeting agenda and clarification request. The Ontario service example is not a universal school or referral procedure.",
-            "accessNote": "Watch the named 7:15 Vimeo video on CanChild’s original multi-video page; the rest of the collection is not assigned."
+            "accessNote": "Watch the named 7:15 Vimeo video on CanChild’s original multi-video page; the rest of the collection is not assigned.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "CanChild’s account of this exact family story supports coordinated planning around meaningful family goals. The spoken transcript could not be retrieved.",
+              "sources": [
+                {
+                  "label": "Named video and family account",
+                  "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -3559,7 +3869,17 @@
             "durationSeconds": 241,
             "timingSource": "https://vimeo.com/939106459?h=b61d3c3634",
             "assignment": "Watch the complete named video, 0:00–4:01. Select only “F-words for Child Development: From the voice of a Parent”. Use its strengths/family-priority perspective to audit the fictional portfolio and make room for the child’s own preferences. It is a planning framework, not a worked solution to this studio’s capstone.",
-            "accessNote": "Watch only the named 4:01 family video on the original collection page. Use fictional material in your own portfolio."
+            "accessNote": "Watch only the named 4:01 family video on the original collection page. Use fictional material in your own portfolio.",
+            "contentReview": {
+              "method": "transcript-reviewed",
+              "note": "Publisher-uploaded English captions support a strengths-based family story and the six F-words. The video provides a planning perspective; the portfolio requirements are taught in this lesson.",
+              "sources": [
+                {
+                  "label": "Named video on CanChild",
+                  "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -3735,7 +4055,17 @@
             "durationSeconds": 709,
             "timingSource": "https://www.youtube.com/watch?v=saHMtIz7IgA",
             "playbackUrl": "https://www.youtube.com/watch?v=saHMtIz7IgA",
-            "assignment": "Watch the complete named video, 0:00–11:49. Compare dynamic assessment, standardised testing, observation and learning potential in the published examples. Apply the distinctions to the native assessment-quality critique and screening table. Observe only; do not administer a restricted test or infer a diagnosis."
+            "assignment": "Watch the complete named video, 0:00–11:49. Compare dynamic assessment, standardised testing, observation and learning potential in the published examples. Apply the distinctions to the native assessment-quality critique and screening table. Observe only; do not administer a restricted test or infer a diagnosis.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The exact ASHA slides compare dynamic assessment with static testing, observation and RTI. The video does not supply the lesson’s full reliability, validity or screening-statistics teaching.",
+              "sources": [
+                {
+                  "label": "ASHA module and teaching slides",
+                  "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -3786,7 +4116,17 @@
             "durationSeconds": 569,
             "timingSource": "https://www.youtube.com/watch?v=N_pOZu3wYEQ",
             "playbackUrl": "https://www.youtube.com/watch?v=N_pOZu3wYEQ",
-            "assignment": "Watch the complete named video, 0:00–9:29. Identify intentionality, meaning and transfer in the published teaching examples. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child."
+            "assignment": "Watch the complete named video, 0:00–9:29. Identify intentionality, meaning, transcendence (transfer) and competence (planning for independence) in the published teaching examples. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The exact ASHA slides teach intentionality, meaning, transcendence and competence, with narrative examples. A spoken transcript remains unavailable.",
+              "sources": [
+                {
+                  "label": "ASHA module and teaching slides",
+                  "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/"
+                }
+              ]
+            }
           },
           {
             "label": "ASHA / Elizabeth Peña — observing modifiability",
@@ -3796,7 +4136,17 @@
             "durationSeconds": 621,
             "timingSource": "https://www.youtube.com/watch?v=Ig0a-9vJeCs",
             "playbackUrl": "https://www.youtube.com/watch?v=Ig0a-9vJeCs",
-            "assignment": "Watch the complete named video, 0:00–10:21. Distinguish the child’s response, examiner effort and change during supported learning. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child."
+            "assignment": "Watch the complete named video, 0:00–10:21. Distinguish the child’s response, examiner effort and change during supported learning. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Critique the published compliance ratings in light of C07/C11: refusal or distress is information about access and experience, not a reason to pursue compliance as the learning outcome.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The exact ASHA slides support responsiveness and examiner-effort comparisons. Critique the historical compliance ratings; do not equate compliance with meaningful benefit.",
+              "sources": [
+                {
+                  "label": "ASHA module and teaching slides",
+                  "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/"
+                }
+              ]
+            }
           },
           {
             "label": "ASHA / Elizabeth Peña — clinical decision making",
@@ -3806,7 +4156,17 @@
             "durationSeconds": 817,
             "timingSource": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
             "playbackUrl": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
-            "assignment": "Watch the complete named video, 0:00–13:37. Compare the published cases and explain what evidence supports or limits each interpretation. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child."
+            "assignment": "Watch the complete named video, 0:00–13:37. Compare the published cases and explain what evidence supports or limits each interpretation. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Do not apply a cognitive-score cut-off shown in these particular cases as a universal diagnostic threshold; keep language exposure, appropriate methods and professional judgement in the interpretation.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The exact ASHA slides compare pre/post narrative evidence and modifiability. The displayed case-specific cut-offs are not stand-alone diagnostic rules.",
+              "sources": [
+                {
+                  "label": "ASHA module and teaching slides",
+                  "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -3857,7 +4217,17 @@
             "durationSeconds": 451,
             "timingSource": "https://vimeo.com/939110775?h=b0463c35dd",
             "assignment": "Watch the complete named video, 0:00–7:31. Select only “The ICF and F-words: Learning Through Family Stories”. Study participation, family priorities and meaningful outcomes, then connect them to language/literacy goals and the native trained-item-versus-transfer critique. This is outcome framing, not a language-treatment protocol.",
-            "accessNote": "Watch the named 7:31 learner video on the original CanChild page, not the full video collection. ASHA readings supply speech/language-specific intervention evidence."
+            "accessNote": "Watch the named 7:31 learner video on the original CanChild page, not the full video collection. ASHA readings supply speech/language-specific intervention evidence.",
+            "contentReview": {
+              "method": "transcript-reviewed",
+              "note": "Publisher-uploaded English captions support participation, family priorities, context and collaborative goals. Language-treatment methods and trained-item transfer require the assigned lesson and readings.",
+              "sources": [
+                {
+                  "label": "Named video on CanChild",
+                  "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -4190,7 +4560,17 @@
             "watchMode": "full",
             "durationSeconds": 1149,
             "timingSource": "https://www.youtube.com/watch?v=CYLeEW_VCbQ",
-            "assignment": "Watch the complete named video, 0:00–19:09. Compare repeated measurement, A–B change, experimental control and generalisability. Treat historical reversal/withdrawal examples as designs to critique, not procedures to try with a child. Apply current WWC 5.0 standards and the native participation/balancing-measure questions; lower visible distress alone does not establish benefit."
+            "assignment": "Watch the complete named video, 0:00–19:09. Compare repeated measurement, A–B change, experimental control and generalisability. If reversal/withdrawal examples are discussed, critique their design and ethical limits; do not try them with a child. Apply current WWC 5.0 standards and the native participation/balancing-measure questions; lower visible distress alone does not establish benefit.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "The university uploader describes repeated baseline/intervention measurement and differences in internal validity. The full explanation remains unverified; the current WWC reading supplies the standards for the exercise.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://www.youtube.com/watch?v=CYLeEW_VCbQ"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -4301,7 +4681,21 @@
                 "label": "What the standards say"
               }
             ],
-            "assignment": "Watch only 14:25–25:43. Watch the named standards section only, skipping the event introductions, platform context and later administration. Apply the regulator’s record-quality expectations to the fictional reported/observed/interpreted/next-step note. The webinar is UK/HCPC guidance, not a licence or a statement of every jurisdiction’s rules."
+            "assignment": "Watch only 14:25–25:43. Watch the named standards section only, skipping the event introductions, platform context and later administration. Apply the regulator’s record-quality expectations to the fictional reported/observed/interpreted/next-step note. The webinar is UK/HCPC guidance, not a licence or a statement of every jurisdiction’s rules.",
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "The regulator’s webinar slides support accurate, timely and secure records. The chapter boundaries identify the standards section; its complete spoken transcript remains unverified.",
+              "sources": [
+                {
+                  "label": "HCPC webinar",
+                  "url": "https://www.hcpc-uk.org/standards/meeting-our-standards/record-keeping/webinar-keep-records-of-your-work/"
+                },
+                {
+                  "label": "Exact webinar slides",
+                  "url": "https://www.hcpc-uk.org/globalassets/news-and-events/events/myhcpcstandards/2025/ni-record-keeping/myhcpcstandards-21-august-2025---meeting-your-record-keeping-standards-in-northern-ireland-slides.pdf"
+                }
+              ]
+            }
           }
         ],
         "readings": [
@@ -4357,7 +4751,17 @@
             "watchMode": "full",
             "durationSeconds": 195,
             "timingSource": "https://www.youtube.com/watch?v=WQrSiQe5m6U",
-            "assignment": "Watch the complete named video, 0:00–3:15. Listen for child rights, data protection, local languages, connectivity and children’s participation in design. Apply these governance questions to the fictional assistive-AI data-flow review. This 2026 UNICEF interview is not a clinical efficacy study, product endorsement or substitute for the full 3.0 guidance."
+            "assignment": "Watch the complete named video, 0:00–3:15. Listen for child rights, data protection, local languages, connectivity and children’s participation in design. Apply these governance questions to the fictional assistive-AI data-flow review. This 2026 UNICEF interview is not a clinical efficacy study, product endorsement or substitute for the full 3.0 guidance.",
+            "contentReview": {
+              "method": "description-only",
+              "note": "The ITU description lists child rights, data protection, local languages, connectivity and participation. Those topics fit the lesson, but the interview’s full speech remains unverified.",
+              "sources": [
+                {
+                  "label": "Original publisher source",
+                  "url": "https://www.youtube.com/watch?v=WQrSiQe5m6U"
+                }
+              ]
+            }
           },
           {
             "label": "UNICEF Innocenti — UNICEF Guidance on AI and Children (3.0): Launch webinar",
@@ -4377,7 +4781,17 @@
             "durationSeconds": 327,
             "timingSource": "https://www.youtube.com/watch?v=_hBFH03HlsY",
             "assignment": "Watch the complete named video, 0:00–5:27. Optional introductory animation after the child-rights interview. Identify bias, hallucination, digital safety and the difference between a chatbot response and accountable human judgement. It uses an adolescent school example, not therapy or a recommendation to upload a child’s information.",
-            "optional": true
+            "optional": true,
+            "contentReview": {
+              "method": "teaching-material-reviewed",
+              "note": "UNICRI’s account of the animation describes Mia’s school task, bias, hallucinations and digital safety. It supports the optional literacy example; the spoken transcript remains unverified.",
+              "sources": [
+                {
+                  "label": "Publisher’s account of the animation",
+                  "url": "https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025"
+                }
+              ]
+            }
           }
         ],
         "readings": [

@@ -104,3 +104,11 @@ URL helper. Retain progressKey when reordering the same material; allocate unuse
 a short file-management demonstration. It remains only as a bounded binary/text
 encoding excerpt in M01. See _learning/README.txt for the authoring contract and
 _learning/resource-review-20261030.txt for audit coverage and limitations.
+
+Content evidence follow-up — release 20261030-6
+R01's complete university-hosted captions support the paper-reading method;
+R02's exact slides support planning (full speech remains unchecked); R03 uses
+MIT's timed captions to narrow the assigned section to 41:30–48:13. Evidence
+levels and stable source links appear on resource cards. Voice/Child source maps
+also include their per-assignment evidence notes.
+See _learning/video-content-review-20261030.json for per-assignment limits.

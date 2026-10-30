@@ -1169,7 +1169,17 @@
           "durationSeconds": 240,
           "timingSource": "https://vimeo.com/639588440?h=a28bc8a741",
           "assignment": "Watch the complete named video, 0:00–4:00. In this author interview, Timnit Gebru explains why dataset documentation should record provenance, collection, uses and limitations. Map those questions to the fictional speech manifest, rights record and speaker/session split; the interview is not a speech-annotation software tutorial.",
-          "accessNote": "Original ACM author interview hosted on Vimeo. Its public oEmbed metadata identifies CACM and a 4:00 running time. Playback is on the provider page; the assigned paper remains the detailed checklist."
+          "accessNote": "Original ACM author interview hosted on Vimeo. Its public oEmbed metadata identifies CACM and a 4:00 running time. Playback is on the provider page; the assigned paper remains the detailed checklist.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "ACM identifies this as the Datasheets author interview. Its full speech remains unverified; use the assigned paper for documentation questions and the native lesson for speech-data rights and splits.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://vimeo.com/639588440?h=a28bc8a741"
+              }
+            ]
+          }
         },
         {
           "label": "Edinburgh speech.zone — Script Design",
@@ -1347,7 +1357,17 @@
           "timingSource": "https://slideslive.com/39002706",
           "assignment": "Watch the complete named video, 0:00–5:18. Watch the authors’ concise Whisper presentation, then identify the training/task setup, encoder–decoder path and reported limitations in the paper. Historical results describe the paper’s checkpoints and test conditions, not every later Whisper release.",
           "accessNote": "Open this direct SlidesLive author-presentation page. The original conference page identifies the same recording; its embedded player may fail to load. The complete named presentation is 5:18, not the whole conference or an installation tutorial.",
-          "provenanceUrl": "https://icml.cc/virtual/2023/poster/24519"
+          "provenanceUrl": "https://icml.cc/virtual/2023/poster/24519",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "All ten displayed author slides were inspected: training data, encoder–decoder architecture, task tokens and selected robustness results. Detailed decoding and hallucination analysis remain in the paper and lesson; no spoken transcript was available.",
+            "sources": [
+              {
+                "label": "Original author presentation",
+                "url": "https://slideslive.com/39002706"
+              }
+            ]
+          }
         },
         {
           "label": "Carnegie Mellon University Deep Learning — 11785 Spring 22 Lecture 18: Attention Models",
@@ -1415,7 +1435,17 @@
           "timingSource": "https://slideslive.com/38937614",
           "assignment": "Watch the complete named video, 0:00–3:37. Trace the encoder, masking, contrastive targets and labelled adaptation in the authors’ wav2vec 2.0 explanation. Distinguish unlabelled pretraining from supervised fine-tuning. This original presentation does not establish multilingual performance or coverage; use the multilingual reading for that comparison.",
           "accessNote": "Open this direct SlidesLive author-presentation page. The original conference page identifies the same recording; its embedded player may fail to load. The complete named presentation is 3:37, not the whole conference or an installation tutorial.",
-          "provenanceUrl": "https://neurips.cc/virtual/2020/poster/18897"
+          "provenanceUrl": "https://neurips.cc/virtual/2020/poster/18897",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "All eight displayed author slides were inspected: masked representations, quantised targets, fine-tuning and LibriSpeech comparisons. This short presentation does not establish multilingual performance; no spoken transcript was available.",
+            "sources": [
+              {
+                "label": "Original author presentation",
+                "url": "https://slideslive.com/38937614"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1484,7 +1514,17 @@
               "label": "Test benchmarks and data selection"
             }
           ],
-          "assignment": "Watch only 5:58–8:09, 9:33–16:22. Work the WER examples, then examine how a benchmark and its data-selection policy change the meaning of a reported score. Apply this to the native subgroup/error table. These 2022 examples are not current product rankings or a complete fairness analysis."
+          "assignment": "Watch only 5:58–8:09, 9:33–16:22. Work the WER examples, then examine how a benchmark and its data-selection policy change the meaning of a reported score. Apply this to the native subgroup/error table. These 2022 examples are not current product rankings or a complete fairness analysis.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "Chapter labels identify WER, benchmarks and data selection. Their speech and precise cut points remain unverified; the worked lesson and reading supply the error-counting and fairness analysis.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://introtodeeplearning.com/2022/"
+              }
+            ]
+          }
         },
         {
           "label": "Carnegie Mellon University Deep Learning — 11785 Spring 22 Recitation 8: CTC Decoding and Beam Search",
@@ -1589,7 +1629,17 @@
           "watchMode": "full",
           "durationSeconds": 253,
           "timingSource": "https://www.youtube.com/watch?v=x36mm3_r9I8",
-          "assignment": "Watch the complete named video, 0:00–4:13. Explain how loudspeaker output re-enters a microphone and why muting the other side loses full-duplex conversation. Relate that example to the native playback/reference/user-speech diagram and the double-talk challenge. This is an engineering explainer, not a complete adaptive-filter derivation."
+          "assignment": "Watch the complete named video, 0:00–4:13. Explain how loudspeaker output re-enters a microphone and why muting the other side loses full-duplex conversation. Relate that example to the native playback/reference/user-speech diagram and the double-talk challenge. This is an engineering explainer, not a complete adaptive-filter derivation.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The uploader’s full transcript explains returned loudspeaker audio and the conversational cost of muting the other side. Use the lesson and readings for adaptive filtering and microphone-array mathematics.",
+            "sources": [
+              {
+                "label": "Uploader video and transcript",
+                "url": "https://www.youtube.com/watch?v=x36mm3_r9I8"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1859,7 +1909,17 @@
           "timingSource": "https://www.youtube.com/watch?v=zzUY5T9I730",
           "playbackUrl": "https://www.youtube.com/watch?v=zzUY5T9I730",
           "assignment": "Watch the complete named video, 0:00–4:02. Identify the language-understanding, explicit-logic and response components. Map them to the native proposal/state diagram before the flows example.",
-          "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination."
+          "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact video’s written lesson supports commands, dialogue management, flows and responses. It does not establish the studio’s approval/version invariants; the spoken transcript remains unverified.",
+            "sources": [
+              {
+                "label": "Exact Rasa video and written lesson",
+                "url": "https://learning.rasa.com/rasa-pro/architecture-of-an-assistant/"
+              }
+            ]
+          }
         },
         {
           "label": "Rasa — flows and explicit conversation logic",
@@ -1869,8 +1929,18 @@
           "durationSeconds": 612,
           "timingSource": "https://www.youtube.com/watch?v=v1l75qxo4b0",
           "playbackUrl": "https://www.youtube.com/watch?v=v1l75qxo4b0",
-          "assignment": "Watch the complete named video, 0:00–10:12. Study flow components, collected values and branching. Trace the supplied booking example on paper; explain why extracting a slot is not authorisation to commit a booking.",
-          "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination."
+          "assignment": "Watch the complete named video, 0:00–10:12. Study flow components, collected values and branching. Map the video’s financial-services flow to the native booking example on paper; explain why extracting a slot is not authorisation to commit a booking.",
+          "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact video’s written lesson uses a financial-services example with slots and branching. Map that example to the studio’s booking task; the spoken transcript remains unverified.",
+            "sources": [
+              {
+                "label": "Exact Rasa video and written lesson",
+                "url": "https://learning.rasa.com/rasa-pro/flows/"
+              }
+            ]
+          }
         },
         {
           "label": "Rasa — conversation repair and deviations from the happy path",
@@ -1888,7 +1958,17 @@
             }
           ],
           "assignment": "Watch only 0:00–5:38. Watch the introduction, repair patterns and advanced correction cases only. Distinguish a correction or clarification from confirmation of the current proposal version. Skip the later framework-customisation and handoff implementation.",
-          "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination."
+          "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact video’s written lesson explains corrections, digressions, cancellations and repair patterns. The chosen excerpt’s spoken boundaries remain unverified.",
+            "sources": [
+              {
+                "label": "Exact Rasa video and written lesson",
+                "url": "https://learning.rasa.com/rasa-pro/deviations-from-happypath/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1938,7 +2018,17 @@
           "watchMode": "full",
           "durationSeconds": 395,
           "timingSource": "https://www.youtube.com/watch?v=T-D1OfcDW1M",
-          "assignment": "Watch the complete named video, 0:00–6:35. Draw retrieval, evidence/context and generation separately. Identify where retrieved material can be stale, wrong or adversarial; retrieval does not automatically make an answer true or grant permission to act."
+          "assignment": "Watch the complete named video, 0:00–6:35. Draw retrieval, evidence/context and generation separately. Identify where retrieved material can be stale, wrong or adversarial; retrieval does not automatically make an answer true or grant permission to act.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "IBM’s outline supports retrieval, generation and citing evidence. The full speech remains unverified; use the native lesson to test stale/adversarial evidence and enforce tool permissions.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://www.youtube.com/watch?v=T-D1OfcDW1M"
+              }
+            ]
+          }
         },
         {
           "label": "Rasa — action types and custom tools",
@@ -1961,7 +2051,17 @@
             }
           ],
           "assignment": "Watch only 0:46–2:14, 7:03–9:53. Watch action types and the custom-action example only. Separate a model’s action request from the server-side validation, identity and permission checks required by the native tool contract. The video’s function execution example is not an authorisation design.",
-          "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination."
+          "accessNote": "These recordings use Rasa Pro / rasa-plus 3.7.8. Study the architectural ideas; no installation, licence, account or model call is required for this studio exercise. Product claims are not guarantees of security, correctness or freedom from hallucination.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact video’s written lesson explains response/default/custom actions and a funds-check example. Execution is distinct from authorisation; the chosen excerpt’s speech remains unverified.",
+            "sources": [
+              {
+                "label": "Exact Rasa video and written lesson",
+                "url": "https://learning.rasa.com/rasa-pro/custom-actions/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2022,7 +2122,17 @@
               "label": "Gather and task groups"
             }
           ],
-          "assignment": "Watch only 1:00–13:52, 25:40–34:00, 55:10–1:07:20. Study the event loop, awaitables/tasks, the corrected concurrency example and gather/task groups. Skip the long refactoring/network-demo section. Then trace session/generation/event/operation IDs and cancellation in the native offline fixture; task cancellation alone does not undo a committed side effect."
+          "assignment": "Watch only 1:00–13:52, 25:40–34:00, 55:10–1:07:20. Study the event loop, awaitables/tasks, the corrected concurrency example and gather/task groups. Skip the long refactoring/network-demo section. Then trace session/generation/event/operation IDs and cancellation in the native offline fixture; task cancellation alone does not undo a committed side effect.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "The author describes event-loop, coroutine and task teaching with worked animations. The selected sections’ full speech and cut points remain unverified; use the native fixture for stale events, queues and cancellation.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://www.youtube.com/watch?v=oAkLSJNr5zY"
+              }
+            ]
+          }
         },
         {
           "label": "EuroPython / Junya Fukuda — TaskGroup exceptions and cancellation",
@@ -2033,7 +2143,17 @@
           "timingSource": "https://www.youtube.com/watch?v=FvWXyAXyb4Q",
           "playbackUrl": "https://www.youtube.com/watch?v=FvWXyAXyb4Q",
           "assignment": "Watch the complete named video, 0:00–26:46. Optional deeper treatment of exception groups and TaskGroup cancellation after the selected primer. This is a Python 3.11-era talk; use the assigned Python 3.13 documentation for the exact target-version behaviour. View only; do not run provider or network examples.",
-          "optional": true
+          "optional": true,
+          "contentReview": {
+            "method": "description-only",
+            "note": "The conference outline describes Python 3.11 TaskGroup exception/cancellation behaviour. The full talk remains unverified; this optional source does not establish the current target-version semantics.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://pyvideo.org/europython-2023/asyncio-evolved-enhanced-exception-handling-with-taskgroup-in-python-311.html"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2078,7 +2198,17 @@
               "label": "Signaling, STUN/TURN and security"
             }
           ],
-          "timingSource": "https://www.youtube.com/watch?v=p2HzZkd2A40"
+          "timingSource": "https://www.youtube.com/watch?v=p2HzZkd2A40",
+          "contentReview": {
+            "method": "description-only",
+            "note": "Uploader chapters identify signaling, STUN/TURN and security in 16:31–23:21. The spoken excerpt remains unverified; use current transport references for implementation details.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://www.youtube.com/watch?v=p2HzZkd2A40"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2136,7 +2266,17 @@
           "timingSource": "https://www.youtube.com/watch?v=EYDrSSEP0h0",
           "playbackUrl": "https://www.youtube.com/watch?v=EYDrSSEP0h0",
           "assignment": "Watch the complete named video, 0:00–2:37. Contrast detecting speech activity with predicting a completed conversational turn. Apply the examples to the native pause, backchannel and interruption cases. This 2025 demonstration concerns the earlier text-based detector, not the newer audio-model implementation or a universal timing threshold.",
-          "accessNote": "The short publisher demonstration illustrates the concept. Read current documentation for the current audio/text model distinction and configuration; do not copy historical defaults or run inference for the exercise."
+          "accessNote": "The short publisher demonstration illustrates the concept. Read current documentation for the current audio/text model distinction and configuration; do not copy historical defaults or run inference for the exercise.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "The original source identifies the earlier turn-detector demonstration. The full speech remains unverified; the native lesson supplies the backchannel, interruption and uncertainty policies.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://docs.livekit.io/agents/logic/turns/turn-detector/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2182,7 +2322,17 @@
               "label": "Pipeline latency and trace measurement"
             }
           ],
-          "assignment": "Watch only 0:11–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees."
+          "assignment": "Watch only 0:11–4:09. Use the pipeline and measurement sections to identify latency endpoints and trace spans. Skip the tuning/product setup walkthrough. Compute the native critical path and queue waits with compatible clocks; the demo’s observed timings are not universal service guarantees.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The publisher’s written guide supports the pipeline and measurement topics in the named chapters. The exact spoken excerpt and its cut points remain unverified.",
+            "sources": [
+              {
+                "label": "Video’s accompanying latency guide",
+                "url": "https://livekit.com/blog/understand-and-improve-agent-latency"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2220,7 +2370,17 @@
           "watchMode": "full",
           "durationSeconds": 657,
           "timingSource": "https://www.youtube.com/watch?v=jrHRe9lSqqA",
-          "assignment": "Watch the complete named video, 0:00–10:57. Identify direct/indirect instruction injection and why untrusted content cannot become authority. Apply the idea to transcripts and retrieved voice-agent context. An audio voice match is not identity proof, and a prompt-only defence is not a server-side permission check."
+          "assignment": "Watch the complete named video, 0:00–10:57. Record the injection examples actually shown and classify them using the direct/indirect distinction in the required reading. Explain why untrusted content cannot become authority. Apply the idea to transcripts and retrieved voice-agent context. An audio voice match is not identity proof, and a prompt-only defence is not a server-side permission check.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "IBM identifies a prompt-injection overview. The spoken examples and defences remain unverified; classify only the examples actually shown and use the required reading for the direct/indirect distinction.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://www.youtube.com/watch?v=jrHRe9lSqqA"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2264,7 +2424,17 @@
           "watchMode": "full",
           "durationSeconds": 492,
           "timingSource": "https://www.youtube.com/watch?v=ztIIcXNzMN4",
-          "assignment": "Watch the complete named video, 0:00–8:12. Study reliability as an engineering responsibility, service objectives and reducing repetitive operational work. Apply the principles to the native success/failure indicators, bounded retry/reconciliation plan and fictional cost table. This general SRE overview does not provide current voice-provider pricing."
+          "assignment": "Watch the complete named video, 0:00–8:12. Study the reliability/performance role, collaboration and automation overview. Then define service objectives in the native lesson. Apply the principles to the native success/failure indicators, bounded retry/reconciliation plan and fictional cost table. This general SRE overview does not provide current voice-provider pricing.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "IBM’s outline describes reliability, performance, collaboration and automation. The full speech remains unverified; service objectives, voice costs and recovery rules are taught in the native lesson.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://www.youtube.com/watch?v=ztIIcXNzMN4"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2331,7 +2501,17 @@
           "watchMode": "full",
           "durationSeconds": 146,
           "timingSource": "https://www.youtube.com/watch?v=EU2oCVlzEZk",
-          "assignment": "Watch the complete named video, 0:00–2:26. Use the first-person example to identify an access barrier, user control and alternatives when speech recognition fails. This is a 2021 English-language research/product case, not proof of current availability or accuracy for every language, accent or disability. Complete the native multilingual task audit separately."
+          "assignment": "Watch the complete named video, 0:00–2:26. Use the first-person example to identify an access barrier, user control and alternatives when speech recognition fails. This is a 2021 English-language research/product case, not proof of current availability or accuracy for every language, accent or disability. Complete the native multilingual task audit separately.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "Google’s accompanying article supports the historical non-standard-speech accessibility case. The spoken transcript was not retrieved; the lesson’s complete multilingual task audit remains required.",
+            "sources": [
+              {
+                "label": "Google’s video and accompanying article",
+                "url": "https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2437,7 +2617,17 @@
           "watchMode": "full",
           "durationSeconds": 304,
           "timingSource": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
-          "assignment": "Watch the complete named video, 0:00–5:04. Use the paper-reading method to separate a speech paper’s question, contribution, comparison and limitations. Research formats differ; locate equivalent sections rather than insisting on biomedical headings. Work the native claim/evidence table and the assigned NeurIPS checklist. If you already studied this same video in Cyber R01, reuse your notes and apply them to the speech paper; a full replay is unnecessary."
+          "assignment": "Watch the complete named video, 0:00–5:04. Use the paper-reading method to separate a speech paper’s question, contribution, comparison and limitations. Research formats differ; locate equivalent sections rather than insisting on biomedical headings. Work the native claim/evidence table and the assigned NeurIPS checklist. If you already studied this same video in Cyber R01, reuse your notes and apply them to the speech paper; a full replay is unnecessary.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The university-hosted timed captions support the reading-order, claim/evidence and note-taking assignment. Adapt the article-section names to the security or speech paper.",
+            "sources": [
+              {
+                "label": "University video and captions",
+                "url": "https://mediaspace.umn.edu/media/t/1_rfb6wt56"
+              }
+            ]
+          }
         },
         {
           "label": "University of Edinburgh — Planning an Open Science Study",
@@ -2447,7 +2637,17 @@
           "durationSeconds": 363,
           "timingSource": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
           "assignment": "Watch the complete named video, 0:00–6:03. Study planning before results, testable questions, preregistration and a reproducibility checklist. The examples are from psychology; translate the planning principles to the supplied security/speech study. Write a plan only: this does not authorise model calls, new measurements or provider benchmarks. If you already studied this same video in Cyber R02, reuse your notes and apply them to the speech paper; a full replay is unnecessary.",
-          "accessNote": "Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions."
+          "accessNote": "Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact presentation slides and accompanying questions support preregistration and the reproducibility checklist. The spoken transcript has not been retrieved.",
+            "sources": [
+              {
+                "label": "Publisher lesson and slides",
+                "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2486,7 +2686,17 @@
           "durationSeconds": 422,
           "timingSource": "https://www.youtube.com/watch?v=X4LABvRgqik",
           "playbackUrl": "https://www.youtube.com/watch?v=X4LABvRgqik",
-          "assignment": "Watch the complete named video, 0:00–7:02. Study states, inputs and transitions as a model for behaviour. Translate the example to the native deterministic voice-agent contract; do not build a Java application or add a model provider."
+          "assignment": "Watch the complete named video, 0:00–7:02. Study states, inputs and transitions as a model for behaviour. Translate the example to the native deterministic voice-agent contract; do not build a Java application or add a model provider.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "TU Delft identifies this as the state-machine introduction in its testing course. The full speech remains unverified; use the native lesson to construct the voice-agent state and event contract.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://ocw.tudelft.nl/course-lectures/2-1-1-video-state-based-testing/"
+              }
+            ]
+          }
         },
         {
           "label": "TU Delft — state-based testing",
@@ -2496,7 +2706,17 @@
           "durationSeconds": 477,
           "timingSource": "https://www.youtube.com/watch?v=s06ncjp92WU",
           "playbackUrl": "https://www.youtube.com/watch?v=s06ncjp92WU",
-          "assignment": "Watch the complete named video, 0:00–7:57. Derive tests from state/transition behaviour, then use that method to organise the seven supplied fixtures and uncertain-outcome extension. The source uses software examples from a Java course; the reasoning is language-independent and does not implement this studio’s capstone for you."
+          "assignment": "Watch the complete named video, 0:00–7:57. Derive tests from state/transition behaviour, then use that method to organise the seven supplied fixtures and uncertain-outcome extension. The source uses software examples from a Java course; the reasoning is language-independent and does not implement this studio’s capstone for you.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "TU Delft identifies this state-based testing unit. Its complete speech remains unverified; the seven voice-agent fixtures and uncertain-outcome extension are supplied by the studio.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://ocw.tudelft.nl/course-lectures/2-2-1-video-state-based-testing/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2547,7 +2767,17 @@
           "durationSeconds": 202,
           "timingSource": "https://www.youtube.com/watch?v=VNbzuPt5QYA",
           "playbackUrl": "https://www.youtube.com/watch?v=VNbzuPt5QYA",
-          "assignment": "Watch the complete named video, 0:00–3:22. Identify title, research question, literature gap, method and references, then apply that structure to the voice research proposal. The video describes Leeds Business School’s application context; it does not establish requirements or acceptance at a computing programme."
+          "assignment": "Watch the complete named video, 0:00–3:22. Identify title, research question, literature gap, method and references, then apply that structure to the voice research proposal. The video describes Leeds Business School’s application context; it does not establish requirements or acceptance at a computing programme.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact Leeds video’s written guide covers title, introduction, literature, methods, references and proofreading. Its full speech remains unverified; the stated application conventions belong to Leeds Business School.",
+            "sources": [
+              {
+                "label": "Leeds video and six-step written guide",
+                "url": "https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal"
+              }
+            ]
+          }
         }
       ],
       "readings": [

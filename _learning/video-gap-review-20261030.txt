@@ -88,3 +88,11 @@ presentation and 5:18 player correctly, so V23/V24 link to their direct hosted
 presentations while retaining conference provenance. V42 allows learners who
 already watched the same research-skills video in Cyber to reuse notes.
 43 new assignments represent 41 distinct newly linked recordings across studios.
+
+Subsequent content review — release 20261030-6
+The earlier 41:30–53:06 MIT assignment above is historical. Timed transcript
+inspection narrows the current R03 range to 41:30–48:13 (6:43). The separate
+video-content-review-20261030.json/.txt records which new assignments have
+transcript evidence, exact-video teaching-material evidence or unresolved
+spoken-content checks. The original catalogue coverage counts are not a claim
+that every recording was verified end to end.
