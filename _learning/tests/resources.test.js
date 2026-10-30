@@ -99,6 +99,11 @@ test("actual card renderer displays ranges and escapes source/assignment markup"
     watchMode: "segments",
     assignment: "Compare <b>binary</b> with text.",
     segments: [{ start: 966, end: 2697, label: "Binary & encodings" }],
+    contentReview: {
+      method: "description-only",
+      note: "Check <script>alert(1)</script> & scope.",
+      sources: [{ label: "Evidence <img src=x>", url: "https://example.com/evidence?x=1&y=2" }],
+    },
   };
   const html = resourceCards([resource], "video", []);
   assert.match(html, /16:06–44:57/);
@@ -108,6 +113,10 @@ test("actual card renderer displays ranges and escapes source/assignment markup"
   assert.ok(!html.includes("<img"));
   assert.ok(html.includes("Compare &lt;b&gt;binary&lt;/b&gt;"));
   assert.match(assignmentSummary(resource), /16:06–44:57/);
+  assert.match(html, /Content check: Spoken content unverified/);
+  assert.match(html, /&lt;script&gt;/);
+  assert.doesNotMatch(html, /<script>/);
+  assert.match(html, /https:\/\/example.com\/evidence\?x=1&amp;y=2/);
 });
 
 test("reported high-impact source mismatches and unintended full replays stay corrected", () => {
@@ -158,4 +167,44 @@ test("formerly reading-led topics have timed, scoped core videos without losing 
     assert.ok(html.includes(r.segments ? "stop at" : "0:00–"), `${assignment.topic}: no visible viewing range`);
     if (!assignment.reused) assert.ok(Number(r.progressKey.split(":")[1]) >= 100);
   }
+});
+
+test("content evidence stays attached to the reviewed assignment and exposes unresolved speech checks", () => {
+  const review = JSON.parse(fs.readFileSync(new URL("../video-content-review-20261030.json", import.meta.url)));
+  const topics = Object.fromEntries(studios.flatMap((slug) => read(slug).map((m) => [`${slug}/${m.id}`, m])));
+  const counts = {};
+  const seen = new Set();
+  const labels = {
+    "transcript-reviewed": "Content check: Transcript reviewed",
+    "teaching-material-reviewed": "Content check: Teaching material reviewed · speech unverified",
+    "description-only": "Content check: Spoken content unverified",
+  };
+  for (const a of review.assignments) {
+    const key = `${a.studio}/${a.topic}/${a.progressKey}`;
+    assert.ok(!seen.has(key), "Duplicate content review: " + key);
+    seen.add(key);
+    const r = topics[`${a.studio}/${a.topic}`].videos.find((r) => r.progressKey === a.progressKey);
+    assert.deepEqual(
+      { url: r.url, assignment: r.assignment, durationSeconds: r.durationSeconds, segments: r.segments || [] },
+      a.reviewedAssignment,
+      key + ": assignment changed after content review"
+    );
+    assert.deepEqual(r.contentReview, { method: a.method, note: a.note, sources: a.sources }, key + ": evidence changed after review");
+    assert.ok(labels[a.method]);
+    assert.ok(a.sources.length && a.findings.length && a.limits.length, key + ": evidence scope missing");
+    for (const source of a.sources) assert.equal(new URL(source.url).protocol, "https:");
+    const html = resourceCards([r], "video", []);
+    assert.ok(html.includes(labels[a.method]), key + ": evidence level not visible");
+    assert.ok(assignmentSummary(r).includes(labels[a.method]), key + ": source-map evidence level missing");
+    assert.ok(html.includes(r.contentReview.note));
+    assert.ok(html.includes(a.sources[0].url));
+    counts[a.method] = (counts[a.method] || 0) + 1;
+  }
+  assert.equal(seen.size, 44);
+  assert.deepEqual(counts, review.statusCounts);
+  for (const [key, m] of Object.entries(topics))
+    for (const r of m.videos) if (r.contentReview) assert.ok(seen.has(`${key}/${r.progressKey}`), "Untracked content claim");
+  const defence = topics["cyber-studio/R03"].videos.find((r) => r.progressKey === "video:100");
+  assert.equal(defence.segments[0].start, 2490);
+  assert.equal(defence.segments[0].end, 2893);
 });

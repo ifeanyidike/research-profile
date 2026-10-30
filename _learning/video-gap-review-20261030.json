@@ -303,10 +303,10 @@
       "url": "https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/resources/how-to-speak-non-external/",
       "label": "MIT / Patrick Winston — presenting and defending your work",
       "durationSeconds": 3822,
-      "assignedSeconds": 696,
+      "assignedSeconds": 403,
       "optional": false,
-      "timingSource": "https://www.youtube.com/watch?v=Unzc731iCUY",
-      "basis": "Public source-hosted video metadata and chapter markers",
+      "timingSource": "https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/Unzc731iCUY_captions.webvtt",
+      "basis": "MIT timed English captions checked; narrowed in the content review.",
       "source": "https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/resources/how-to-speak-non-external/",
       "studio": "cyber-studio"
     },

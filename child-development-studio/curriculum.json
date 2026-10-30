@@ -174,7 +174,17 @@
           "timingSource": "https://www.youtube.com/watch?v=iI_whNYHKaM",
           "playbackUrl": "https://www.youtube.com/watch?v=iI_whNYHKaM",
           "assignment": "Watch the complete named video, 0:00–2:54. Study everyday learning, play, friendships, growing independence and variability at ages 6–8. Apply those observations to the fictional pupil case; do not use a general age description to diagnose an individual or extrapolate it to all ages 6–12.",
-          "accessNote": "The publisher page supplies the complete transcript. The public YouTube player was checked at 2:54; caption controls were unavailable in that check. The Hopkins reading covers the broader 6–12 band."
+          "accessNote": "The publisher page supplies the complete transcript. The public YouTube player was checked at 2:54; caption controls were unavailable in that check. The Hopkins reading covers the broader 6–12 band.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The publisher’s complete transcript matches play, friendships, family support and variable development at ages 6–8. It does not describe the entire 6–12 age range.",
+            "sources": [
+              {
+                "label": "Publisher video transcript",
+                "url": "https://raisingchildren.net.au/school-age/multimedia/development-6-8-years"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -313,7 +323,17 @@
           "durationSeconds": 135,
           "timingSource": "https://www.youtube.com/watch?v=0WAoliBvKFQ",
           "playbackUrl": "https://www.youtube.com/watch?v=0WAoliBvKFQ",
-          "assignment": "Watch the complete named video, 0:00–2:15. Distinguish safeguarding from responding to a protection concern. The animation uses sport: map its people/place/context questions onto the fictional care setting, then follow the assigned recognising/responding guidance and your local safeguarding route."
+          "assignment": "Watch the complete named video, 0:00–2:15. Distinguish safeguarding from responding to a protection concern. The animation uses sport: map its people/place/context questions onto the fictional care setting, then follow the assigned recognising/responding guidance and your local safeguarding route.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "NSPCC’s outline describes safeguarding beyond sports sessions, including travel and wider contexts. The animation’s spoken content remains unverified; local protection procedures remain a separate reading task.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://sport.nspcc.org.uk/help-and-advice/introduction-to-safeguarding/contextual-safeguarding/"
+              }
+            ]
+          }
         },
         {
           "label": "UNICEF — meaningful participation of children with disabilities",
@@ -323,7 +343,17 @@
           "durationSeconds": 736,
           "timingSource": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
           "playbackUrl": "https://www.youtube.com/watch?v=8aNB8k9VlMQ",
-          "assignment": "Watch the complete named video, 0:00–12:16. Listen for meaningful participation, barriers and being heard. Connect these to the native assent/consent distinction and how a child can decline or change their mind. This rights-based module does not replace local privacy law or safeguarding procedures."
+          "assignment": "Watch the complete named video, 0:00–12:16. Listen for meaningful participation, barriers and being heard. Connect these to the native assent/consent distinction and how a child can decline or change their mind. This rights-based module does not replace local privacy law or safeguarding procedures. Participation in services and policy decisions supports the theme of being heard; it is not itself a clinical consent/assent procedure.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The video’s facilitator guide describes meaningful participation, barriers and accessible involvement in decisions. This supports being heard; it is not a clinical consent or safeguarding protocol.",
+            "sources": [
+              {
+                "label": "UNICEF video and facilitator guide",
+                "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -510,7 +540,17 @@
           "durationSeconds": 629,
           "timingSource": "https://www.youtube.com/watch?v=kWrPBCKnfA4",
           "playbackUrl": "https://www.youtube.com/watch?v=kWrPBCKnfA4",
-          "assignment": "Watch the complete named video, 0:00–10:29. Hear young people describe disability as one part of identity and the barriers/misconceptions that restrict participation. Ask whose perspective and communication preferences are missing in the native goal critique; do not infer the same preferences for all disabled or neurodivergent people."
+          "assignment": "Watch the complete named video, 0:00–10:29. Hear young people describe disability as one part of identity and the barriers/misconceptions that restrict participation. Ask whose perspective and communication preferences are missing in the native goal critique; do not infer the same preferences for all disabled or neurodivergent people.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The video’s facilitator guide describes first-person disability, identity and exclusion. It supports listening to individuals; it does not represent every neurodivergent or multilingual experience.",
+            "sources": [
+              {
+                "label": "UNICEF video and facilitator guide",
+                "url": "https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -558,7 +598,17 @@
           "durationSeconds": 502,
           "timingSource": "https://www.youtube.com/watch?v=vPNCvZe6_48",
           "playbackUrl": "https://www.youtube.com/watch?v=vPNCvZe6_48",
-          "assignment": "Watch the complete named video, 0:00–8:22. Study age-appropriate sleep-support principles and everyday context, then compare them with the relevant Leeds NHS age band. General routines do not explain every sleep problem or justify diagnosis, medicines or an individual treatment plan."
+          "assignment": "Watch the complete named video, 0:00–8:22. Identify the general sleep suggestions and intended audience, then check each suggestion against the relevant Leeds NHS age band before applying it to the fictional case. General routines do not explain every sleep problem or justify diagnosis, medicines or an individual treatment plan.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "The NHS toolkit identifies this sleep video, but no complete script was obtained. Its individual recommendations and age suitability remain unchecked; use the assigned age-specific NHS reading.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://www.nhft.nhs.uk/idiscover-toolkit"
+              }
+            ]
+          }
         },
         {
           "label": "Bradford District Care NHS — paediatric eating and swallowing",
@@ -568,7 +618,17 @@
           "durationSeconds": 451,
           "timingSource": "https://www.youtube.com/watch?v=WTMMZ-Cr9EA",
           "playbackUrl": "https://www.youtube.com/watch?v=WTMMZ-Cr9EA",
-          "assignment": "Watch the complete named video, 0:00–7:31. Understand the role of paediatric eating/swallowing services and why concerns need appropriate professional assessment. Use the native referral exercise; do not try feeding techniques, textures or exercises on a child from a video."
+          "assignment": "Watch the complete named video, 0:00–7:31. Understand the role of paediatric eating/swallowing services and why concerns need appropriate professional assessment. Use the native referral exercise; do not try feeding techniques, textures or exercises on a child from a video.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "The NHS source identifies paediatric eating/swallowing services. The video’s complete speech remains unverified; do not infer assessment or feeding instructions from its title.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://www.clch.nhs.uk/services/speech-and-language-therapy-children"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -767,7 +827,17 @@
           "durationSeconds": 144,
           "timingSource": "https://www.youtube.com/watch?v=PIrD7PkeDdg",
           "playbackUrl": "https://www.youtube.com/watch?v=PIrD7PkeDdg",
-          "assignment": "Watch the complete named video, 0:00–2:24. Study how families can support both home and additional languages. Use the fictional language-history sheet; this early-years demonstration does not validate a translated test or mean an unfamiliar language is a disorder."
+          "assignment": "Watch the complete named video, 0:00–2:24. Study how families can support both home and additional languages. Use the fictional language-history sheet; this early-years demonstration does not validate a translated test or mean an unfamiliar language is a disorder.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "The NSW publisher describes bilingual language support before school. The spoken content remains unverified; this early-years example cannot validate a translated assessment or cover every age.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://www.healthtranslations.vic.gov.au/resources/helping-your-child-to-learn-two-languages-video"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1119,7 +1189,17 @@
           "durationSeconds": 435,
           "timingSource": "https://vimeo.com/526359322?h=58d9baef4e",
           "assignment": "Watch the complete named video, 0:00–7:15. Select only “Coordinated Service Planning & F-Words” on the source page. Identify how the young person’s/family’s priorities guide coordinated services and goals, then build the native meeting agenda and clarification request. The Ontario service example is not a universal school or referral procedure.",
-          "accessNote": "Watch the named 7:15 Vimeo video on CanChild’s original multi-video page; the rest of the collection is not assigned."
+          "accessNote": "Watch the named 7:15 Vimeo video on CanChild’s original multi-video page; the rest of the collection is not assigned.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "CanChild’s account of this exact family story supports coordinated planning around meaningful family goals. The spoken transcript could not be retrieved.",
+            "sources": [
+              {
+                "label": "Named video and family account",
+                "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1167,7 +1247,17 @@
           "durationSeconds": 241,
           "timingSource": "https://vimeo.com/939106459?h=b61d3c3634",
           "assignment": "Watch the complete named video, 0:00–4:01. Select only “F-words for Child Development: From the voice of a Parent”. Use its strengths/family-priority perspective to audit the fictional portfolio and make room for the child’s own preferences. It is a planning framework, not a worked solution to this studio’s capstone.",
-          "accessNote": "Watch only the named 4:01 family video on the original collection page. Use fictional material in your own portfolio."
+          "accessNote": "Watch only the named 4:01 family video on the original collection page. Use fictional material in your own portfolio.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Publisher-uploaded English captions support a strengths-based family story and the six F-words. The video provides a planning perspective; the portfolio requirements are taught in this lesson.",
+            "sources": [
+              {
+                "label": "Named video on CanChild",
+                "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1351,7 +1441,17 @@
           "durationSeconds": 709,
           "timingSource": "https://www.youtube.com/watch?v=saHMtIz7IgA",
           "playbackUrl": "https://www.youtube.com/watch?v=saHMtIz7IgA",
-          "assignment": "Watch the complete named video, 0:00–11:49. Compare dynamic assessment, standardised testing, observation and learning potential in the published examples. Apply the distinctions to the native assessment-quality critique and screening table. Observe only; do not administer a restricted test or infer a diagnosis."
+          "assignment": "Watch the complete named video, 0:00–11:49. Compare dynamic assessment, standardised testing, observation and learning potential in the published examples. Apply the distinctions to the native assessment-quality critique and screening table. Observe only; do not administer a restricted test or infer a diagnosis.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact ASHA slides compare dynamic assessment with static testing, observation and RTI. The video does not supply the lesson’s full reliability, validity or screening-statistics teaching.",
+            "sources": [
+              {
+                "label": "ASHA module and teaching slides",
+                "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1405,7 +1505,17 @@
           "durationSeconds": 569,
           "timingSource": "https://www.youtube.com/watch?v=N_pOZu3wYEQ",
           "playbackUrl": "https://www.youtube.com/watch?v=N_pOZu3wYEQ",
-          "assignment": "Watch the complete named video, 0:00–9:29. Identify intentionality, meaning and transfer in the published teaching examples. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child."
+          "assignment": "Watch the complete named video, 0:00–9:29. Identify intentionality, meaning, transcendence (transfer) and competence (planning for independence) in the published teaching examples. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact ASHA slides teach intentionality, meaning, transcendence and competence, with narrative examples. A spoken transcript remains unavailable.",
+            "sources": [
+              {
+                "label": "ASHA module and teaching slides",
+                "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/"
+              }
+            ]
+          }
         },
         {
           "label": "ASHA / Elizabeth Peña — observing modifiability",
@@ -1415,7 +1525,17 @@
           "durationSeconds": 621,
           "timingSource": "https://www.youtube.com/watch?v=Ig0a-9vJeCs",
           "playbackUrl": "https://www.youtube.com/watch?v=Ig0a-9vJeCs",
-          "assignment": "Watch the complete named video, 0:00–10:21. Distinguish the child’s response, examiner effort and change during supported learning. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child."
+          "assignment": "Watch the complete named video, 0:00–10:21. Distinguish the child’s response, examiner effort and change during supported learning. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Critique the published compliance ratings in light of C07/C11: refusal or distress is information about access and experience, not a reason to pursue compliance as the learning outcome.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact ASHA slides support responsiveness and examiner-effort comparisons. Critique the historical compliance ratings; do not equate compliance with meaningful benefit.",
+            "sources": [
+              {
+                "label": "ASHA module and teaching slides",
+                "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/"
+              }
+            ]
+          }
         },
         {
           "label": "ASHA / Elizabeth Peña — clinical decision making",
@@ -1425,7 +1545,17 @@
           "durationSeconds": 817,
           "timingSource": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
           "playbackUrl": "https://www.youtube.com/watch?v=ZgEWYqGrqB0",
-          "assignment": "Watch the complete named video, 0:00–13:37. Compare the published cases and explain what evidence supports or limits each interpretation. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child."
+          "assignment": "Watch the complete named video, 0:00–13:37. Compare the published cases and explain what evidence supports or limits each interpretation. Watch after P03/Module 1 and in the listed module order. Use the studio’s fictional hypothesis/evidence/missing-information table; observation of a published assessment example does not qualify you to administer it or diagnose a child. Do not apply a cognitive-score cut-off shown in these particular cases as a universal diagnostic threshold; keep language exposure, appropriate methods and professional judgement in the interpretation.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact ASHA slides compare pre/post narrative evidence and modifiability. The displayed case-specific cut-offs are not stand-alone diagnostic rules.",
+            "sources": [
+              {
+                "label": "ASHA module and teaching slides",
+                "url": "https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1479,7 +1609,17 @@
           "durationSeconds": 451,
           "timingSource": "https://vimeo.com/939110775?h=b0463c35dd",
           "assignment": "Watch the complete named video, 0:00–7:31. Select only “The ICF and F-words: Learning Through Family Stories”. Study participation, family priorities and meaningful outcomes, then connect them to language/literacy goals and the native trained-item-versus-transfer critique. This is outcome framing, not a language-treatment protocol.",
-          "accessNote": "Watch the named 7:31 learner video on the original CanChild page, not the full video collection. ASHA readings supply speech/language-specific intervention evidence."
+          "accessNote": "Watch the named 7:31 learner video on the original CanChild page, not the full video collection. ASHA readings supply speech/language-specific intervention evidence.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Publisher-uploaded English captions support participation, family priorities, context and collaborative goals. Language-treatment methods and trained-item transfer require the assigned lesson and readings.",
+            "sources": [
+              {
+                "label": "Named video on CanChild",
+                "url": "https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1833,7 +1973,17 @@
           "watchMode": "full",
           "durationSeconds": 1149,
           "timingSource": "https://www.youtube.com/watch?v=CYLeEW_VCbQ",
-          "assignment": "Watch the complete named video, 0:00–19:09. Compare repeated measurement, A–B change, experimental control and generalisability. Treat historical reversal/withdrawal examples as designs to critique, not procedures to try with a child. Apply current WWC 5.0 standards and the native participation/balancing-measure questions; lower visible distress alone does not establish benefit."
+          "assignment": "Watch the complete named video, 0:00–19:09. Compare repeated measurement, A–B change, experimental control and generalisability. If reversal/withdrawal examples are discussed, critique their design and ethical limits; do not try them with a child. Apply current WWC 5.0 standards and the native participation/balancing-measure questions; lower visible distress alone does not establish benefit.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "The university uploader describes repeated baseline/intervention measurement and differences in internal validity. The full explanation remains unverified; the current WWC reading supplies the standards for the exercise.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://www.youtube.com/watch?v=CYLeEW_VCbQ"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1950,7 +2100,21 @@
               "label": "What the standards say"
             }
           ],
-          "assignment": "Watch only 14:25–25:43. Watch the named standards section only, skipping the event introductions, platform context and later administration. Apply the regulator’s record-quality expectations to the fictional reported/observed/interpreted/next-step note. The webinar is UK/HCPC guidance, not a licence or a statement of every jurisdiction’s rules."
+          "assignment": "Watch only 14:25–25:43. Watch the named standards section only, skipping the event introductions, platform context and later administration. Apply the regulator’s record-quality expectations to the fictional reported/observed/interpreted/next-step note. The webinar is UK/HCPC guidance, not a licence or a statement of every jurisdiction’s rules.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The regulator’s webinar slides support accurate, timely and secure records. The chapter boundaries identify the standards section; its complete spoken transcript remains unverified.",
+            "sources": [
+              {
+                "label": "HCPC webinar",
+                "url": "https://www.hcpc-uk.org/standards/meeting-our-standards/record-keeping/webinar-keep-records-of-your-work/"
+              },
+              {
+                "label": "Exact webinar slides",
+                "url": "https://www.hcpc-uk.org/globalassets/news-and-events/events/myhcpcstandards/2025/ni-record-keeping/myhcpcstandards-21-august-2025---meeting-your-record-keeping-standards-in-northern-ireland-slides.pdf"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2009,7 +2173,17 @@
           "watchMode": "full",
           "durationSeconds": 195,
           "timingSource": "https://www.youtube.com/watch?v=WQrSiQe5m6U",
-          "assignment": "Watch the complete named video, 0:00–3:15. Listen for child rights, data protection, local languages, connectivity and children’s participation in design. Apply these governance questions to the fictional assistive-AI data-flow review. This 2026 UNICEF interview is not a clinical efficacy study, product endorsement or substitute for the full 3.0 guidance."
+          "assignment": "Watch the complete named video, 0:00–3:15. Listen for child rights, data protection, local languages, connectivity and children’s participation in design. Apply these governance questions to the fictional assistive-AI data-flow review. This 2026 UNICEF interview is not a clinical efficacy study, product endorsement or substitute for the full 3.0 guidance.",
+          "contentReview": {
+            "method": "description-only",
+            "note": "The ITU description lists child rights, data protection, local languages, connectivity and participation. Those topics fit the lesson, but the interview’s full speech remains unverified.",
+            "sources": [
+              {
+                "label": "Original publisher source",
+                "url": "https://www.youtube.com/watch?v=WQrSiQe5m6U"
+              }
+            ]
+          }
         },
         {
           "label": "UNICEF Innocenti — UNICEF Guidance on AI and Children (3.0): Launch webinar",
@@ -2029,7 +2203,17 @@
           "durationSeconds": 327,
           "timingSource": "https://www.youtube.com/watch?v=_hBFH03HlsY",
           "assignment": "Watch the complete named video, 0:00–5:27. Optional introductory animation after the child-rights interview. Identify bias, hallucination, digital safety and the difference between a chatbot response and accountable human judgement. It uses an adolescent school example, not therapy or a recommendation to upload a child’s information.",
-          "optional": true
+          "optional": true,
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "UNICRI’s account of the animation describes Mia’s school task, bias, hallucinations and digital safety. It supports the optional literacy example; the spoken transcript remains unverified.",
+            "sources": [
+              {
+                "label": "Publisher’s account of the animation",
+                "url": "https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025"
+              }
+            ]
+          }
         }
       ],
       "readings": [

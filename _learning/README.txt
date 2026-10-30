@@ -119,3 +119,25 @@ full collection is never implied. ASHA assessment Modules 2 and 3 precede Module
 in P04, following Module 1 in P03. Imported old checkboxes keep their old source
 identities. The follow-up changes no account or hosted-progress schema.
 See video-gap-review-20261030.txt for verification evidence and access limits.
+
+Video content follow-up — release 20261030-6
+------------------------------------------
+video-content-review-20261030.json audits the 43 additions and one narrowed
+existing recording, with an explicit per-assignment evidence level. Of these
+44 assignments, seven have complete publisher transcript/caption evidence,
+20 have exact-video slides, facilitator material or substantive publisher
+teaching accounts, and 17 retain only description/outline evidence. The latter
+two categories do not establish complete spoken-content or speech-level timing
+verification. Metadata advertising captions is not evidence that they were read.
+
+contentReview.method/note/sources appear on the Watch & read cards and in source
+maps. Keep this status attached to its URL, assignment and excerpt ranges;
+changing those requires revisiting the evidence and review manifest. Preserve
+existing progressKey identities. Never publish signed/expiring caption URLs,
+provider sessions or copied complete transcripts in the repository. Link to the
+stable original source; retain only original findings and limits in the manifest.
+
+MIT R03 now stops at 48:13, before recognition/fame advice, after a timed-caption
+check. ASHA examples need the existing C07/C11 inclusion/assent foundations via
+P03; their historical compliance ratings and case-specific cut-offs are for
+critical study, not universal diagnostic or treatment rules.

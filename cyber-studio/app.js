@@ -1,7 +1,7 @@
-import { introduction } from "./introduction.js?v=20261030-5";
-import { resourceCards, assignmentSummary } from "../learning-studio/resources.js?v=20261030-5";
-import { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } from "./model.js?v=20261030-5";
-import { Account } from "./account.js?v=20261030-5";
+import { introduction } from "./introduction.js?v=20261030-6";
+import { resourceCards, assignmentSummary } from "../learning-studio/resources.js?v=20261030-6";
+import { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } from "./model.js?v=20261030-6";
+import { Account } from "./account.js?v=20261030-6";
 const { createClient } = window.supabase;
 import { syncConfig } from "../algo-studio/sync-config.js";
 const $ = (s) => document.querySelector(s);
@@ -484,9 +484,9 @@ function refreshIfIdle() {
 async function init() {
   try {
     const responses = await Promise.all([
-      fetch("curriculum.json?v=20261030-5"),
-      fetch("lessons.json?v=20261030-5"),
-      fetch("credentials.json?v=20261030-5"),
+      fetch("curriculum.json?v=20261030-6"),
+      fetch("lessons.json?v=20261030-6"),
+      fetch("credentials.json?v=20261030-6"),
     ]);
     if (responses.some((r) => !r.ok)) throw Error("The curriculum files could not be loaded.");
     const [curriculum, content, certificateData] = await Promise.all(responses.map((r) => r.json()));

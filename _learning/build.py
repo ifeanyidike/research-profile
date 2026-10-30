@@ -37,6 +37,10 @@ def resource_lines(items):
         for segment in r.get('segments', []):
             lines.append('    Watch ' + clock(segment['start']) + '–' + clock(segment['end']) + ': ' + segment['label'])
         if r.get('accessNote'): lines.append('    Access: ' + r['accessNote'])
+        if r.get('contentReview'):
+            review = r['contentReview']
+            lines.append('    Content evidence (' + review['method'] + '): ' + review['note'])
+            lines += ['      ' + source['label'] + ': ' + source['url'] for source in review['sources']]
     return lines
 
 def build(check=False):

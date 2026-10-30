@@ -5107,7 +5107,17 @@
           "watchMode": "full",
           "durationSeconds": 304,
           "timingSource": "https://www.youtube.com/watch?v=t2K6mJkSWoA",
-          "assignment": "Watch the complete named video, 0:00–5:04. Identify the question, main claim, evidence and limits before detailed reading. Apply the method to KLEE: systems papers may use design/evaluation sections rather than the scientific article format shown here. Produce the claim/evidence table in the native exercise."
+          "assignment": "Watch the complete named video, 0:00–5:04. Identify the question, main claim, evidence and limits before detailed reading. Apply the method to KLEE: systems papers may use design/evaluation sections rather than the scientific article format shown here. Produce the claim/evidence table in the native exercise.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The university-hosted timed captions support the reading-order, claim/evidence and note-taking assignment. Adapt the article-section names to the security or speech paper.",
+            "sources": [
+              {
+                "label": "University video and captions",
+                "url": "https://mediaspace.umn.edu/media/t/1_rfb6wt56"
+              }
+            ]
+          }
         },
         {
           "label": "MIT OpenCourseWare — 10. Symbolic Execution",
@@ -5167,7 +5177,17 @@
           "durationSeconds": 363,
           "timingSource": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html",
           "assignment": "Watch the complete named video, 0:00–6:03. Study planning before results, testable questions, preregistration and a reproducibility checklist. The examples are from psychology; translate the planning principles to the supplied security/speech study. Write a plan only: this does not authorise model calls, new measurements or provider benchmarks.",
-          "accessNote": "Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions."
+          "accessNote": "Watch the single 6:03 video on the original university page. Public Kaltura entry metadata gives 363 seconds; the linked page supplies learning objectives and questions.",
+          "contentReview": {
+            "method": "teaching-material-reviewed",
+            "note": "The exact presentation slides and accompanying questions support preregistration and the reproducibility checklist. The spoken transcript has not been retrieved.",
+            "sources": [
+              {
+                "label": "Publisher lesson and slides",
+                "url": "https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html"
+              }
+            ]
+          }
         },
         {
           "label": "StatQuest with Josh Starmer — Hypothesis Testing and The Null Hypothesis, Clearly Explained!!!",
@@ -5238,16 +5258,30 @@
           "progressKey": "video:100",
           "watchMode": "segments",
           "durationSeconds": 3822,
-          "timingSource": "https://www.youtube.com/watch?v=Unzc731iCUY",
+          "timingSource": "https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/Unzc731iCUY_captions.webvtt",
           "playbackUrl": "https://www.youtube.com/watch?v=Unzc731iCUY",
           "segments": [
             {
               "start": 2490,
-              "end": 3186,
-              "label": "Persuading: oral exams and job talks"
+              "end": 2893,
+              "label": "Research context, rehearsal and technical-talk structure"
             }
           ],
-          "assignment": "Watch only 41:30–53:06. Use the oral-exam and job-talk section to organise a defensible argument: problem, contribution, evidence and limits. Apply it to your own security capstone. This teaches presentation/defence, not implementation of the supplied project."
+          "assignment": "Watch only 41:30–48:13 (6:43). Study how to place research in context, rehearse with people unfamiliar with the work, and present the problem, approach and contributions. Use that structure for the native security capstone, adding its evidence and limitations yourself. Stop before the later recognition/fame discussion; this excerpt does not teach project implementation.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "MIT’s timed transcript supports 41:30–48:13: research context, rehearsal and technical-talk structure. The later recognition/fame discussion is excluded.",
+            "sources": [
+              {
+                "label": "MIT lesson and transcript",
+                "url": "https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/resources/how-to-speak-non-external/"
+              },
+              {
+                "label": "Timed English captions",
+                "url": "https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/Unzc731iCUY_captions.webvtt"
+              }
+            ]
+          }
         },
         {
           "label": "Security Engineering — Security Engineering Lecture 2: Threat Models and Security Policies",
@@ -5299,7 +5333,7 @@
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Completion demonstrates the capabilities evidenced by the work. A PhD-level research contribution additionally requires original results and expert assessment; finishing these resources alone does not establish that.",
       "practice_links": [],
-      "study_focus": "Complete the supplied capstone first. Watch 41:30–53:06 of the MIT presentation lesson, then defend your threat model, evidence, trade-offs and unresolved limits.",
+      "study_focus": "Complete the native capstone artifact and evidence checks. Use only 41:30–48:13 of MIT’s presentation guidance for research context, rehearsal and technical-talk structure, then defend the project’s evidence and limitations.",
       "videoNote": "Core viewing is an 11:36 oral-defence section. The security refresher recordings remain optional; the capstone deliverables and independent defence remain your own work."
     },
     {

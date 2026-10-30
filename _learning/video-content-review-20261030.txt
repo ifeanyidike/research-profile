@@ -1,0 +1,478 @@
+Video content review — 30 October 2026
+Release 20261030-6
+
+What was checked
+This review covers the 43 newly added assignments and the one narrowed existing
+WebRTC recording from release 20261030-5: 44 assignments, 42 distinct recordings,
+across 33 topics in Cyber, Voice AI and Child Development. It is not a complete
+review of every older video in the studios.
+
+Evidence result
+7 assignments have complete publisher transcript/caption evidence (6 recordings).
+20 have exact-video slides, facilitator guides or substantive publisher teaching
+material (19 recordings). Their complete spoken content remains unverified.
+17 have only description/outline evidence (17 recordings). Their actual speech
+and assigned excerpt boundaries remain unverified. These counts describe the
+evidence obtained, not accuracy scores or universal source approval.
+
+Corrections
+- Cyber R03: MIT's timed captions show that technical-talk guidance ends around
+  48:12, followed by recognition/fame advice. The assignment now stops at 48:13,
+  preserving the end of the sentence: 41:30–48:13, 6:43 instead of 11:36.
+  The guide now specifies context, rehearsal and contributions; the native
+  capstone supplies evidence, limitations and implementation requirements.
+- ASHA P04: name all four mediated-learning components, including competence.
+  Explain that historical compliance ratings and case-specific cut-offs need
+  critique, not unqualified use as clinical rules. The existing P03 -> C11 -> C07
+  prerequisite chain supplies inclusion/assent foundations before these examples.
+- Voice V32: distinguish Rasa's financial-services example from the studio's
+  booking exercise. The written lesson embeds the exact assigned video.
+- Voice V38/V39 and Child C12/P12: avoid promising unverified details. Separate
+  the source's stated topic from the native reading/exercise, and use conditional
+  wording for examples that could not be checked against speech.
+- Resource cards, and live/downloadable Voice/Child source maps, now
+  state the evidence level and link to stable original evidence pages. Existing
+  completion keys and source identities remain intact; no account/storage change.
+
+Actual content findings
+Complete UMN captions support reading order, identifying claims/evidence and notes.
+MIT captions support the narrowed presentation assignment. LookingPoint supplies
+its full spoken AEC transcript in its own video description. CanChild's uploaded
+English captions support family strengths/ICF/participation components. Raising
+Children publishes the complete school-age transcript, limited to ages 6–8.
+
+All ten Whisper slides (title plus nine content slides) were visually inspected;
+they cover data/tasks, encoder–decoder architecture and selected historical
+robustness/scaling comparisons. All eight wav2vec slides were visually inspected;
+they show the masked/quantised contrastive architecture, supervised adaptation
+and English LibriSpeech/limited-label comparisons. Their speech remains unchecked.
+Neither short presentation supplies every paper detail or native exercise outcome.
+
+ASHA's four exact teaching decks were read in sequence, alongside their module
+pages and activities. UNICEF's exact video facilitator guides describe segments
+and timestamped examples. Rasa's four exact written lessons embed the same video
+IDs; Edinburgh and HCPC supply exact presentation slides; Leeds, Google, LiveKit,
+CanChild and UNICRI supply substantive accounts linked to the selected videos.
+This material supports the stated components, without being a verbatim transcript.
+
+Access limits
+YouTube advertised English caption tracks for many videos, but direct caption
+requests returned empty bodies. Normal browser ASR/ASHA transcript exports failed;
+the ASR transcript panel stayed in loading state. This does not mean captions are
+unavailable to all learners. No external transcription/model provider was called.
+The CanChild parent and ICF players supplied publisher-uploaded English VTT files.
+The ACM and coordinated-planning Vimeo player requests returned 401. Edinburgh's
+embedded captions displayed, but the complete file was not obtained; an anonymous
+caption-list request was forbidden and not bypassed. No CAPTCHA/access control
+was bypassed, no restricted assessment was administered, and no real-child data,
+linked labs, provider inference, evaluation/replay or training was executed.
+Captions may omit visual evidence and contain errors; this is not audiovisual,
+clinical, regulatory or professional-competence validation.
+
+How to read the ledger below
+Transcript reviewed: complete publisher transcript/captions compared with the
+assigned lesson component. Teaching material reviewed: exact-video materials
+checked, with speech still unverified. Spoken content unverified: provisional
+identity/outline match only. Every record names remaining teaching limitations.
+No claim of universal accuracy is made for the 37 assignments lacking full speech
+verification. The JSON manifest freezes the assignment URL/text/range reviewed;
+changes require renewed review instead of silently inheriting the old evidence.
+
+
+child-development-studio / C04 / video:100
+Raising Children Network — child development at 6–8 years
+Assigned viewing: 0:00–2:54
+Evidence level: transcript-reviewed
+The publisher’s complete transcript matches play, friendships, family support and variable development at ages 6–8. It does not describe the entire 6–12 age range.
+Finding: The complete published transcript includes everyday learning, movement, downtime, digital balance, school friendships, storytelling and seeking help for concerns.
+Limits: No individual diagnosis or explanation of the fictional pupil’s writing discomfort follows from this general video.
+Evidence: Publisher video transcript — https://raisingchildren.net.au/school-age/multimedia/development-6-8-years
+
+child-development-studio / C07 / video:100
+NSPCC — safeguarding and the child’s wider context
+Assigned viewing: 0:00–2:15
+Evidence level: description-only
+NSPCC’s outline describes safeguarding beyond sports sessions, including travel and wider contexts. The animation’s spoken content remains unverified; local protection procedures remain a separate reading task.
+Finding: The publisher explicitly distinguishes safeguarding from child protection and identifies the sport/travel/context example.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://sport.nspcc.org.uk/help-and-advice/introduction-to-safeguarding/contextual-safeguarding/
+
+child-development-studio / C07 / video:101
+UNICEF — meaningful participation of children with disabilities
+Assigned viewing: 0:00–12:16
+Evidence level: teaching-material-reviewed
+The video’s facilitator guide describes meaningful participation, barriers and accessible involvement in decisions. This supports being heard; it is not a clinical consent or safeguarding protocol.
+Finding: The exact guide has video-segment descriptions and timestamped discussion examples; these support the assigned inclusion/participation component.
+Limits: The guide is not a verbatim transcript; the entire spoken recording and caption accuracy remain unverified.
+Evidence: UNICEF video and facilitator guide — https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-participation
+
+child-development-studio / C11 / video:100
+UNICEF — disability, identity, barriers and inclusion
+Assigned viewing: 0:00–10:29
+Evidence level: teaching-material-reviewed
+The video’s facilitator guide describes first-person disability, identity and exclusion. It supports listening to individuals; it does not represent every neurodivergent or multilingual experience.
+Finding: The exact guide has video-segment descriptions and timestamped discussion examples; these support the assigned inclusion/participation component.
+Limits: The guide is not a verbatim transcript; the entire spoken recording and caption accuracy remain unverified.
+Evidence: UNICEF video and facilitator guide — https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are
+
+child-development-studio / C12 / video:100
+NHFT NHS — how to sleep well
+Assigned viewing: 0:00–8:22
+Evidence level: description-only
+The NHS toolkit identifies this sleep video, but no complete script was obtained. Its individual recommendations and age suitability remain unchecked; use the assigned age-specific NHS reading.
+Finding: The original toolkit and uploader identify the sleep unit, but the video description supplies no teaching detail.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://www.nhft.nhs.uk/idiscover-toolkit
+
+child-development-studio / C12 / video:101
+Bradford District Care NHS — paediatric eating and swallowing
+Assigned viewing: 0:00–7:31
+Evidence level: description-only
+The NHS source identifies paediatric eating/swallowing services. The video’s complete speech remains unverified; do not infer assessment or feeding instructions from its title.
+Finding: The uploader description is a service overview, not a transcript or evidence for individual techniques.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://www.clch.nhs.uk/services/speech-and-language-therapy-children
+
+child-development-studio / G04 / video:100
+South Eastern Sydney Local Health District — helping your child learn two languages
+Assigned viewing: 0:00–2:24
+Evidence level: description-only
+The NSW publisher describes bilingual language support before school. The spoken content remains unverified; this early-years example cannot validate a translated assessment or cover every age.
+Finding: The uploader explicitly limits the demonstration to bilingual children before school.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://www.healthtranslations.vic.gov.au/resources/helping-your-child-to-learn-two-languages-video
+
+child-development-studio / G11 / video:100
+CanChild — coordinated service planning and family priorities
+Assigned viewing: 0:00–7:15
+Evidence level: teaching-material-reviewed
+CanChild’s account of this exact family story supports coordinated planning around meaningful family goals. The spoken transcript could not be retrieved.
+Finding: The collection explains Helen’s family goals, coordinated service planning and co-creation of a single plan of care.
+Limits: The Ontario example is not a universal school/referral process; detailed dialogue remains unchecked.
+Evidence: Named video and family account — https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/
+
+child-development-studio / G12 / video:100
+CanChild — a parent’s strengths-based F-words story
+Assigned viewing: 0:00–4:01
+Evidence level: transcript-reviewed
+Publisher-uploaded English captions support a strengths-based family story and the six F-words. The video provides a planning perspective; the portfolio requirements are taught in this lesson.
+Finding: Complete captions cover Functioning, Family, Fitness, Fun, Friends and Future, family stories, strengths, support needs and goals.
+Limits: The video is not a completed portfolio, a treatment plan or a demonstration of every capstone requirement.
+Evidence: Named video on CanChild — https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/
+
+child-development-studio / P03 / video:100
+ASHA / Elizabeth Peña — what is dynamic assessment?
+Assigned viewing: 0:00–11:49
+Evidence level: teaching-material-reviewed
+The exact ASHA slides compare dynamic assessment with static testing, observation and RTI. The video does not supply the lesson’s full reliability, validity or screening-statistics teaching.
+Finding: Slides 3–8 compare test–teach–retest, active mediation, static assessment, observation and RTI; later slides classify published examples.
+Limits: Slides and module materials were read; the complete spoken transcript was not retrievable. Published assessment examples do not confer clinical competence.
+Evidence: ASHA module and teaching slides — https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/
+
+child-development-studio / P04 / video:100
+ASHA / Elizabeth Peña — mediated learning experience
+Assigned viewing: 0:00–9:29
+Evidence level: teaching-material-reviewed
+The exact ASHA slides teach intentionality, meaning, transcendence and competence, with narrative examples. A spoken transcript remains unavailable.
+Finding: Slides identify all four MLE components and classify narrative-teaching examples.
+Limits: Slides and module materials were read; the complete spoken transcript was not retrievable. Published assessment examples do not confer clinical competence.
+Evidence: ASHA module and teaching slides — https://www.asha.org/practice/multicultural/dynamic-assessment/module-2/
+
+child-development-studio / P04 / video:101
+ASHA / Elizabeth Peña — observing modifiability
+Assigned viewing: 0:00–10:21
+Evidence level: teaching-material-reviewed
+The exact ASHA slides support responsiveness and examiner-effort comparisons. Critique the historical compliance ratings; do not equate compliance with meaningful benefit.
+Finding: Slides relate child responsiveness to examiner effort and show social/emotional and cognitive rating tables, including compliance.
+Limits: Slides and module materials were read; the complete spoken transcript was not retrievable. Published assessment examples do not confer clinical competence.
+Evidence: ASHA module and teaching slides — https://www.asha.org/practice/multicultural/dynamic-assessment/module-3/
+
+child-development-studio / P04 / video:102
+ASHA / Elizabeth Peña — clinical decision making
+Assigned viewing: 0:00–13:37
+Evidence level: teaching-material-reviewed
+The exact ASHA slides compare pre/post narrative evidence and modifiability. The displayed case-specific cut-offs are not stand-alone diagnostic rules.
+Finding: Slides combine narrative change and modifiability in two bilingual cases and display a study/case-specific cognitive-score threshold.
+Limits: Slides and module materials were read; the complete spoken transcript was not retrievable. Published assessment examples do not confer clinical competence.
+Evidence: ASHA module and teaching slides — https://www.asha.org/practice/multicultural/dynamic-assessment/module-4/
+
+child-development-studio / P05 / video:100
+CanChild — ICF, family-centred planning and meaningful outcomes
+Assigned viewing: 0:00–7:31
+Evidence level: transcript-reviewed
+Publisher-uploaded English captions support participation, family priorities, context and collaborative goals. Language-treatment methods and trained-item transfer require the assigned lesson and readings.
+Finding: Complete captions distinguish activity and participation, describe contextual factors and connect ICF/F-words to family-centred collaborative planning.
+Limits: No language/literacy intervention protocol, dosage or evidence of trained-item generalisation is supplied.
+Evidence: Named video on CanChild — https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/
+
+child-development-studio / P12 / video:100
+Osmania University EMRC — types of single-subject research designs
+Assigned viewing: 0:00–19:09
+Evidence level: description-only
+The university uploader describes repeated baseline/intervention measurement and differences in internal validity. The full explanation remains unverified; the current WWC reading supplies the standards for the exercise.
+Finding: The description discusses phase/intervention/baseline differences and internal validity; it does not establish which examples occur at particular times.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://www.youtube.com/watch?v=CYLeEW_VCbQ
+
+child-development-studio / P14 / video:100
+HCPC — what the record-keeping standards require
+Assigned viewing: 14:25–25:43
+Evidence level: teaching-material-reviewed
+The regulator’s webinar slides support accurate, timely and secure records. The chapter boundaries identify the standards section; its complete spoken transcript remains unverified.
+Finding: Slides 15–20 cover standards, full/clear/accurate records, prompt completion, security and digital confidentiality; the uploader marks 14:25–25:43 as standards.
+Limits: Speech-level start/end accuracy is not transcript-checked. The source is UK/HCPC guidance; it does not teach the native four-part note structure verbatim.
+Evidence: HCPC webinar — https://www.hcpc-uk.org/standards/meeting-our-standards/record-keeping/webinar-keep-records-of-your-work/
+Evidence: Exact webinar slides — https://www.hcpc-uk.org/globalassets/news-and-events/events/myhcpcstandards/2025/ni-record-keeping/myhcpcstandards-21-august-2025---meeting-your-record-keeping-standards-in-northern-ireland-slides.pdf
+
+child-development-studio / P15 / video:101
+ITU AI for Good / UNICEF — putting children at the centre of AI
+Assigned viewing: 0:00–3:15
+Evidence level: description-only
+The ITU description lists child rights, data protection, local languages, connectivity and participation. Those topics fit the lesson, but the interview’s full speech remains unverified.
+Finding: The original uploader identifies these governance topics and the 2026 UNICEF interviewee; no transcript was retrieved.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://www.youtube.com/watch?v=WQrSiQe5m6U
+
+child-development-studio / P15 / video:102
+UNICRI — What to Be? A Journey Through AI (optional literacy example)
+Assigned viewing: 0:00–5:27
+Evidence level: teaching-material-reviewed
+UNICRI’s account of the animation describes Mia’s school task, bias, hallucinations and digital safety. It supports the optional literacy example; the spoken transcript remains unverified.
+Finding: The publisher identifies the character, school-presentation scenario and the specific AI-literacy concepts portrayed.
+Limits: This is the publisher’s narrative, not a complete transcript, a clinical intervention or child-data permission.
+Evidence: Publisher’s account of the animation — https://www.unicri.org/index.php/news-AI_Literacy-for-Children-Guide-Video-AI-forGood-Global-Summit-2025
+
+cyber-studio / R01 / video:100
+University of Minnesota Libraries — reading and comprehending scientific research articles
+Assigned viewing: 0:00–5:04
+Evidence level: transcript-reviewed
+The university-hosted timed captions support the reading-order, claim/evidence and note-taking assignment. Adapt the article-section names to the security or speech paper.
+Finding: Full captions explain skimming, abstract/discussion/introduction/results/methods, checking claims against data, and a standard note template.
+Limits: The example article format is not universal; it does not independently teach KLEE or speech-paper methods.
+Evidence: University video and captions — https://mediaspace.umn.edu/media/t/1_rfb6wt56
+
+cyber-studio / R02 / video:100
+University of Edinburgh — Planning an Open Science Study
+Assigned viewing: 0:00–6:03
+Evidence level: teaching-material-reviewed
+The exact presentation slides and accompanying questions support preregistration and the reproducibility checklist. The spoken transcript has not been retrieved.
+Finding: Six slides distinguish preregistration from registered reports and list questions, hypotheses, variables, sample size, missing-data handling and inference criteria.
+Limits: Embedded captions display normally, but a full transcript was not retrievable. No claim of complete speech review.
+Evidence: Publisher lesson and slides — https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html
+
+cyber-studio / R03 / video:100
+MIT / Patrick Winston — presenting and defending your work
+Assigned viewing: 41:30–48:13
+Evidence level: transcript-reviewed
+MIT’s timed transcript supports 41:30–48:13: research context, rehearsal and technical-talk structure. The later recognition/fame discussion is excluded.
+Finding: 41:30 begins persuasion/oral exams; 42:17 explains research context; 42:38–44:02 discusses rehearsal; 44:48–48:12 develops vision, contribution and a technical-talk structure.
+Limits: Evidence, uncertainty and security-project implementation must come from the native capstone. The speaker’s research example is illustrative, not a current scientific result to memorise.
+Evidence: MIT lesson and transcript — https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/resources/how-to-speak-non-external/
+Evidence: Timed English captions — https://ocw.mit.edu/courses/15-371-innovation-teams-fall-2024/Unzc731iCUY_captions.webvtt
+
+voice-ai-studio / V20 / video:100
+ACM / Timnit Gebru — Datasheets for Datasets
+Assigned viewing: 0:00–4:00
+Evidence level: description-only
+ACM identifies this as the Datasheets author interview. Its full speech remains unverified; use the assigned paper for documentation questions and the native lesson for speech-data rights and splits.
+Finding: The original CACM metadata identifies Timnit Gebru and the exact paper; the public embedded player returned 401.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://vimeo.com/639588440?h=a28bc8a741
+
+voice-ai-studio / V23 / video:100
+ICML 2023 / Whisper authors — Robust Speech Recognition via Large-Scale Weak Supervision
+Assigned viewing: 0:00–5:18
+Evidence level: teaching-material-reviewed
+All ten displayed author slides were inspected: training data, encoder–decoder architecture, task tokens and selected robustness results. Detailed decoding and hallucination analysis remain in the paper and lesson; no spoken transcript was available.
+Finding: Ten displayed slides (title plus nine content slides) cover weak supervision, data/tasks, encoder–decoder and historical robustness/scaling comparisons.
+Limits: Slide content was visually reviewed. The complete speech/caption track remains unchecked; paper results are historical and dataset-specific.
+Evidence: Original author presentation — https://slideslive.com/39002706
+
+voice-ai-studio / V24 / video:100
+NeurIPS 2020 / wav2vec 2.0 authors — self-supervised speech representations
+Assigned viewing: 0:00–3:37
+Evidence level: teaching-material-reviewed
+All eight displayed author slides were inspected: masked representations, quantised targets, fine-tuning and LibriSpeech comparisons. This short presentation does not establish multilingual performance; no spoken transcript was available.
+Finding: Eight displayed slides include an architecture overview and English LibriSpeech/low-labelled-data comparisons; the diagram supports masking, contrastive targets and supervised adaptation.
+Limits: Slide content was visually reviewed. The complete speech/caption track remains unchecked; paper results are historical and dataset-specific.
+Evidence: Original author presentation — https://slideslive.com/38937614
+
+voice-ai-studio / V25 / video:100
+MIT 6.S191 / Rev.AI — WER, benchmarks and data selection
+Assigned viewing: 5:58–8:09, 9:33–16:22
+Evidence level: description-only
+Chapter labels identify WER, benchmarks and data selection. Their speech and precise cut points remain unverified; the worked lesson and reading supply the error-counting and fairness analysis.
+Finding: The normal YouTube page labels WER at 5:58, benchmarks at 9:33 and data selection at 13:28. These are chapter metadata, not a read transcript.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://introtodeeplearning.com/2022/
+
+voice-ai-studio / V27 / video:100
+LookingPoint / Sean Barr — acoustic echo cancellation and the limits of gating
+Assigned viewing: 0:00–4:13
+Evidence level: transcript-reviewed
+The uploader’s full transcript explains returned loudspeaker audio and the conversational cost of muting the other side. Use the lesson and readings for adaptive filtering and microphone-array mathematics.
+Finding: Full spoken transcript is included in the uploader description; it covers the speaker/microphone echo loop, half-duplex muting, DSP-based cancellation and conference-room examples.
+Limits: Its later microphone-gating and impedance remarks are informal context, not a derivation or an echo-canceller design specification.
+Evidence: Uploader video and transcript — https://www.youtube.com/watch?v=x36mm3_r9I8
+
+voice-ai-studio / V32 / video:100
+Rasa — architecture of a conversational assistant
+Assigned viewing: 0:00–4:02
+Evidence level: teaching-material-reviewed
+The exact video’s written lesson supports commands, dialogue management, flows and responses. It does not establish the studio’s approval/version invariants; the spoken transcript remains unverified.
+Finding: The written teaching page embeds the exact assigned YouTube ID, not a replacement video. Its worked examples support the stated component.
+Limits: This is companion-material evidence, not a verbatim transcript or speech-level timing check. Historical Rasa syntax is not a current installation instruction.
+Evidence: Exact Rasa video and written lesson — https://learning.rasa.com/rasa-pro/architecture-of-an-assistant/
+
+voice-ai-studio / V32 / video:101
+Rasa — flows and explicit conversation logic
+Assigned viewing: 0:00–10:12
+Evidence level: teaching-material-reviewed
+The exact video’s written lesson uses a financial-services example with slots and branching. Map that example to the studio’s booking task; the spoken transcript remains unverified.
+Finding: The written teaching page embeds the exact assigned YouTube ID, not a replacement video. Its worked examples support the stated component.
+Limits: This is companion-material evidence, not a verbatim transcript or speech-level timing check. Historical Rasa syntax is not a current installation instruction.
+Evidence: Exact Rasa video and written lesson — https://learning.rasa.com/rasa-pro/flows/
+
+voice-ai-studio / V32 / video:102
+Rasa — conversation repair and deviations from the happy path
+Assigned viewing: 0:00–5:38
+Evidence level: teaching-material-reviewed
+The exact video’s written lesson explains corrections, digressions, cancellations and repair patterns. The chosen excerpt’s spoken boundaries remain unverified.
+Finding: The written teaching page embeds the exact assigned YouTube ID, not a replacement video. Its worked examples support the stated component.
+Limits: This is companion-material evidence, not a verbatim transcript or speech-level timing check. Historical Rasa syntax is not a current installation instruction.
+Evidence: Exact Rasa video and written lesson — https://learning.rasa.com/rasa-pro/deviations-from-happypath/
+
+voice-ai-studio / V33 / video:100
+IBM / Marina Danilevsky — retrieval-augmented generation
+Assigned viewing: 0:00–6:35
+Evidence level: description-only
+IBM’s outline supports retrieval, generation and citing evidence. The full speech remains unverified; use the native lesson to test stale/adversarial evidence and enforce tool permissions.
+Finding: IBM identifies Marina Danilevsky and the RAG framework; the brief outline is not a complete transcript.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://www.youtube.com/watch?v=T-D1OfcDW1M
+
+voice-ai-studio / V33 / video:101
+Rasa — action types and custom tools
+Assigned viewing: 0:46–2:14, 7:03–9:53
+Evidence level: teaching-material-reviewed
+The exact video’s written lesson explains response/default/custom actions and a funds-check example. Execution is distinct from authorisation; the chosen excerpt’s speech remains unverified.
+Finding: The written teaching page embeds the exact assigned YouTube ID, not a replacement video. Its worked examples support the stated component.
+Limits: This is companion-material evidence, not a verbatim transcript or speech-level timing check. Historical Rasa syntax is not a current installation instruction.
+Evidence: Exact Rasa video and written lesson — https://learning.rasa.com/rasa-pro/custom-actions/
+
+voice-ai-studio / V34 / video:100
+Corey Schafer — asyncio foundations, concurrent tasks and task groups
+Assigned viewing: 1:00–13:52, 25:40–34:00, 55:10–1:07:20
+Evidence level: description-only
+The author describes event-loop, coroutine and task teaching with worked animations. The selected sections’ full speech and cut points remain unverified; use the native fixture for stale events, queues and cancellation.
+Finding: Author description and chapter metadata support the broad asyncio concepts; the source does not verify the studio’s event/operation contract.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://www.youtube.com/watch?v=oAkLSJNr5zY
+
+voice-ai-studio / V34 / video:101
+EuroPython / Junya Fukuda — TaskGroup exceptions and cancellation
+Assigned viewing: 0:00–26:46
+Evidence level: description-only
+The conference outline describes Python 3.11 TaskGroup exception/cancellation behaviour. The full talk remains unverified; this optional source does not establish the current target-version semantics.
+Finding: The original EuroPython description explicitly contrasts gather with TaskGroup and identifies Exception Groups/PEP 654.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://pyvideo.org/europython-2023/asyncio-evolved-enhanced-exception-handling-with-taskgroup-in-python-311.html
+
+voice-ai-studio / V35 / video:0
+Google for Developers — signaling, STUN/TURN and transport security (historical concepts)
+Assigned viewing: 16:31–23:21
+Evidence level: description-only
+Uploader chapters identify signaling, STUN/TURN and security in 16:31–23:21. The spoken excerpt remains unverified; use current transport references for implementation details.
+Finding: The uploader supplies explicit starts: signaling 16:31, STUN/TURN 18:43, security 22:18, architectures 23:21. The source is historical.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://www.youtube.com/watch?v=p2HzZkd2A40
+
+voice-ai-studio / V36 / video:100
+LiveKit — turn detection versus speech activity
+Assigned viewing: 0:00–2:37
+Evidence level: description-only
+The original source identifies the earlier turn-detector demonstration. The full speech remains unverified; the native lesson supplies the backchannel, interruption and uncertainty policies.
+Finding: The short uploader description does not independently establish the demonstration’s detailed examples or thresholds.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://docs.livekit.io/agents/logic/turns/turn-detector/
+
+voice-ai-studio / V37 / video:100
+LiveKit — latency components and measuring a voice-agent trace
+Assigned viewing: 0:11–4:09
+Evidence level: teaching-material-reviewed
+The publisher’s written guide supports the pipeline and measurement topics in the named chapters. The exact spoken excerpt and its cut points remain unverified.
+Finding: The linked guide distinguishes latency components and measurement before optimisation; the uploader marks 0:11, 2:13 and 4:09 as the relevant boundaries.
+Limits: The native compatible-clock/critical-path arithmetic is additional teaching; no universal latency guarantee follows from the product demo.
+Evidence: Video’s accompanying latency guide — https://livekit.com/blog/understand-and-improve-agent-latency
+
+voice-ai-studio / V38 / video:100
+IBM / Jeff Crume — prompt-injection attacks and trust boundaries
+Assigned viewing: 0:00–10:57
+Evidence level: description-only
+IBM identifies a prompt-injection overview. The spoken examples and defences remain unverified; classify only the examples actually shown and use the required reading for the direct/indirect distinction.
+Finding: The publisher outline concerns exploiting LLM chatbots with prompt injection; it does not independently verify every security concept in the viewing guide.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://www.youtube.com/watch?v=jrHRe9lSqqA
+
+voice-ai-studio / V39 / video:100
+IBM / Bradley Knapp — site reliability engineering
+Assigned viewing: 0:00–8:12
+Evidence level: description-only
+IBM’s outline describes reliability, performance, collaboration and automation. The full speech remains unverified; service objectives, voice costs and recovery rules are taught in the native lesson.
+Finding: The uploader explains the SRE role and automation, but this does not establish the entire operational/cost exercise.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://www.youtube.com/watch?v=ztIIcXNzMN4
+
+voice-ai-studio / V40 / video:102
+Google — Project Relate and non-standard speech access
+Assigned viewing: 0:00–2:26
+Evidence level: teaching-material-reviewed
+Google’s accompanying article supports the historical non-standard-speech accessibility case. The spoken transcript was not retrieved; the lesson’s complete multilingual task audit remains required.
+Finding: The original article describes Listen/Repeat/Assistant and communication access; it identifies this exact video as its example.
+Limits: The article and video are a historical case, not proof of current availability or coverage of all accents/languages/disabilities.
+Evidence: Google’s video and accompanying article — https://blog.google/company-news/outreach-and-initiatives/accessibility/project-relate/
+
+voice-ai-studio / V42 / video:100
+University of Edinburgh — Planning an Open Science Study
+Assigned viewing: 0:00–6:03
+Evidence level: teaching-material-reviewed
+The exact presentation slides and accompanying questions support preregistration and the reproducibility checklist. The spoken transcript has not been retrieved.
+Finding: Six slides distinguish preregistration from registered reports and list questions, hypotheses, variables, sample size, missing-data handling and inference criteria.
+Limits: Embedded captions display normally, but a full transcript was not retrievable. No claim of complete speech review.
+Evidence: Publisher lesson and slides — https://www.rablabstudies.ppls.ed.ac.uk/PRS/OpenScience_02_Planning.html
+
+voice-ai-studio / V42 / video:101
+University of Minnesota Libraries — reading research papers critically
+Assigned viewing: 0:00–5:04
+Evidence level: transcript-reviewed
+The university-hosted timed captions support the reading-order, claim/evidence and note-taking assignment. Adapt the article-section names to the security or speech paper.
+Finding: Full captions explain skimming, abstract/discussion/introduction/results/methods, checking claims against data, and a standard note template.
+Limits: The example article format is not universal; it does not independently teach KLEE or speech-paper methods.
+Evidence: University video and captions — https://mediaspace.umn.edu/media/t/1_rfb6wt56
+
+voice-ai-studio / V43 / video:100
+TU Delft — introduction to state-machine models
+Assigned viewing: 0:00–7:02
+Evidence level: description-only
+TU Delft identifies this as the state-machine introduction in its testing course. The full speech remains unverified; use the native lesson to construct the voice-agent state and event contract.
+Finding: The exact course page embeds the assigned ID and says the module introduces state-machine models.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://ocw.tudelft.nl/course-lectures/2-1-1-video-state-based-testing/
+
+voice-ai-studio / V43 / video:101
+TU Delft — state-based testing
+Assigned viewing: 0:00–7:57
+Evidence level: description-only
+TU Delft identifies this state-based testing unit. Its complete speech remains unverified; the seven voice-agent fixtures and uncertain-outcome extension are supplied by the studio.
+Finding: The exact course page and original uploader identify the model/state-testing unit; no complete accessible transcript was obtained.
+Limits: No accessible complete transcript or sufficiently detailed exact-video teaching material was obtained. No content-accuracy verdict is claimed.
+Evidence: Original publisher source — https://ocw.tudelft.nl/course-lectures/2-2-1-video-state-based-testing/
+
+voice-ai-studio / V44 / video:100
+University of Leeds — structuring a research proposal
+Assigned viewing: 0:00–3:22
+Evidence level: teaching-material-reviewed
+The exact Leeds video’s written guide covers title, introduction, literature, methods, references and proofreading. Its full speech remains unverified; the stated application conventions belong to Leeds Business School.
+Finding: The page embeds the exact video and explains the same six steps, including research gap, contribution, justified methods, references and timeline.
+Limits: This is exact-video companion evidence, not a verbatim transcript. Word counts and admission conventions are specific to that school, not universal computing/voice research requirements.
+Evidence: Leeds video and six-step written guide — https://business.leeds.ac.uk/research-degrees-apply/doc/writing-research-proposal
