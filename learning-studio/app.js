@@ -1,6 +1,6 @@
-import { createModel } from "./model.js?v=20261030-1";
-import { Account } from "./account.js?v=20261030-1";
-import { videoEmbed } from "./video.js?v=20261030-1";
+import { createModel } from "./model.js?v=20261030-2";
+import { Account } from "./account.js?v=20261030-2";
+import { videoEmbed } from "./video.js?v=20261030-2";
 import { syncConfig } from "../algo-studio/sync-config.js";
 export function startStudio(config) {
   document.documentElement.dataset.studio = config.slug;
@@ -152,6 +152,9 @@ export function startStudio(config) {
         .join("") || '<div class="empty">No topics match. Try a broader search or another filter.</div>'
     }</div>`;
   }
+  function outcomes(m) {
+    return `<ul class="topic-outcomes">${m.outcomes.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>`;
+  }
   function quiz(check) {
     return `<form id="quiz" class="quiz"><fieldset><legend>${esc(check.question)}</legend>${check.choices.map((c, i) => `<label><input type="radio" name="answer" value="${i}" required /> ${esc(c)}</label>`).join("")}</fieldset><button class="button secondary" type="submit">Check my reasoning</button><p id="quiz-feedback" class="feedback" role="status"></p></form>`;
   }
@@ -164,12 +167,12 @@ export function startStudio(config) {
     const cards = (items, type) =>
       items
         .map((item, i) => {
-          const key = `${type}:${i}`,
+          const key = item.progressKey || `${type}:${i}`,
             id = type === "video" ? videoEmbed(item.url) : null;
           return `<article class="resource">${id ? `<button class="video-load" data-video="${esc(id)}" data-title="${esc(item.label)}"><span class="play-icon" aria-hidden="true">▶</span><strong>${esc(item.label)}</strong><small>Load video · connects to YouTube</small></button>` : ""}<div class="resource-info"><span class="eyebrow">${type === "video" ? "WATCH" : "READ"} ${i + 1}</span><h3>${link(item)}</h3><label class="resource-check"><input type="checkbox" data-resource="${key}" ${checked.includes(key) ? "checked" : ""} /> ${type === "video" ? "I watched and took notes" : "I read and took notes"}</label></div></article>`;
         })
         .join("");
-    return `<h2>Go deeper with the sources</h2><p>Follow these in the listed order. Pause to predict the next step, reproduce examples, and record questions. Completion checks are your own records, not verification of viewing.</p><h3>Videos</h3>${m.videos.length ? cards(m.videos, "video") : `<p class="scope-note">${esc(m.videoNote)}</p>`}<h3>Readings</h3>${cards(m.readings, "reading")}<div class="callout"><strong>Source and setup notes</strong><p>${esc(m.note)}</p><p>Source map researched on 30 October 2026. Providers control availability, sign-in, fees, captions, and embedding. If a video cannot play here, open its original source.</p></div>`;
+    return `<h2>Go deeper with the sources</h2><p>Follow these in the listed order. Pause to predict the next step, reproduce examples, and record questions. Completion checks are your own records, not verification of viewing.</p><div class="callout"><strong>Your study assignment</strong>${paragraphs(m.study_focus)}</div><h3>Videos</h3><p class="scope-note">${esc(m.videoNote)}</p>${m.videos.length ? cards(m.videos, "video") : ""}<h3>Readings</h3>${cards(m.readings, "reading")}<div class="callout"><strong>Source and setup notes</strong><p>${esc(m.note)}</p><p>Source map researched on 30 October 2026. Providers control availability, sign-in, fees, captions, and embedding. If a video cannot play here, open its original source.</p></div>`;
   }
   function paragraphs(text) {
     return text
@@ -193,20 +196,21 @@ export function startStudio(config) {
     const r = store.record(active, id).values,
       missing = m.prerequisites.filter((p) => !store.record(active, p).values.passedAt);
     const selected = selectedModules();
-    const sequence = selected.includes(m) ? selected : modules;
+    const sequence = selected.includes(m) ? selected : modules.filter((item) => item.tracks?.includes(m.tracks?.[0]));
+    const otherTrack = config.tracks?.find((t) => !selected.includes(m) && m.tracks.includes(t.id));
     const index = sequence.indexOf(m);
     let body = "";
     if (tab === "learn")
-      body = `<span class="eyebrow">A GUIDED EXPLANATION</span><h2>The idea, in plain language</h2><p>${esc(l.concept)}</p><h2>How it works</h2><p>${esc(l.mechanism)}</p>${workshop(l)}<p class="fine-print"><strong>Assigned references:</strong> ${m.readings.map(link).join(" · ")}. Read source scope and access notes in Watch & read.</p><div class="scope-note">${esc(config.scopeNote)}</div><div class="misconception"><strong>Keep this distinction clear</strong><p>${esc(l.pitfall)}</p></div><h2>Check your understanding</h2><p>Answer from memory before checking the explanation. This question is a starting check; the independent task in Assess tests the topic more fully.</p>${quiz(l.check)}<div class="lesson-bottom"><label><input type="checkbox" id="mark-read" ${r.read ? "checked" : ""} /> I can explain this introduction in my own words</label><a class="button" href="#lesson/${id}/resources">Watch & read ↗</a></div>`;
+      body = `<span class="eyebrow">A GUIDED EXPLANATION</span><div class="callout"><strong>What you should be able to demonstrate</strong>${outcomes(m)}</div><h2>The idea, in plain language</h2><p>${esc(l.concept)}</p><h2>How it works</h2><p>${esc(l.mechanism)}</p>${workshop(l)}<p class="fine-print"><strong>Assigned references:</strong> ${m.readings.map(link).join(" · ")}. Read source scope and access notes in Watch & read.</p><div class="scope-note">${esc(config.scopeNote)}</div><div class="misconception"><strong>Keep this distinction clear</strong><p>${esc(l.pitfall)}</p></div><h2>Check your understanding</h2><p>Answer from memory before checking the explanation. This question is a starting check; the independent task in Assess tests the topic more fully.</p>${quiz(l.check)}<div class="lesson-bottom"><label><input type="checkbox" id="mark-read" ${r.read ? "checked" : ""} /> I can explain this introduction in my own words</label><a class="button" href="#lesson/${id}/resources">Watch & read ↗</a></div>`;
     if (tab === "resources")
       body = resources(m) + `<div class="lesson-bottom"><a class="button" href="#lesson/${id}/practice">Put it into practice ↗</a></div>`;
     if (tab === "practice")
       body = `<span class="eyebrow">MOVE FROM RECOGNITION TO SKILL</span><h2>Your practical exercise</h2><p>Work through the supplied example in Learn, then use the complete workshop below. Linked provider labs offer additional practice.</p>${practiceWorkshop(l)}${m.practice_links.length ? `<h3>Open the exercise material</h3><ol>${m.practice_links.map((r) => `<li>${link(r)}</li>`).join("")}</ol>` : ""}<div class="callout"><strong>Before you begin</strong><p>${esc(config.practiceNote)}</p></div><label class="evidence"><strong>Your practice evidence</strong><span>Describe your method and results. Use fictional or synthetic material. Do not save personal recordings, child information, clinical records, passwords or confidential data.</span><textarea data-field="evidence" maxlength="20000" placeholder="Setup → prediction → observation → explanation…">${esc(r.evidence || "")}</textarea></label><p class="save-hint" role="status"></p><label><input type="checkbox" id="mark-practice" ${r.practice ? "checked" : ""}/> I completed the exercise and can explain the result</label><div class="lesson-bottom"><a class="button" href="#lesson/${id}/assess">Try the independent assessment ↗</a></div>`;
     if (tab === "assess")
-      body = `<span class="eyebrow">SHOW WHAT YOU CAN DO WITHOUT A WALKTHROUGH</span><h2>Independent assessment</h2><div class="callout"><strong>Independent task</strong>${paragraphs(l.guide.challenge)}</div><details class="solution"><summary>Review the expected reasoning after your attempt</summary>${paragraphs(l.guide.challenge_solution)}</details>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}<div class="callout"><strong>Pass criteria</strong><p>${esc(m.pass_criteria)}</p></div><h3>A quick retrieval check</h3>${quiz(l.check)}<label class="evidence"><strong>Your assessment evidence and explanation</strong><span>Record the independent result, how you checked it, and what remains uncertain. Aim for evidence another learner could review.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you build, solve, or demonstrate independently? How did you verify it?">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I reviewed every pass criterion and can defend my evidence</label><p class="fine-print">To record a pass: complete practice, assess the prerequisites, answer the retrieval check correctly in this session, review the criteria, and add at least 40 characters of assessment evidence. The hub records your judgement; it does not execute or grade external labs.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
+      body = `<span class="eyebrow">SHOW WHAT YOU CAN DO WITHOUT A WALKTHROUGH</span><h2>Independent assessment</h2><div class="callout"><strong>Independent task</strong>${paragraphs(l.guide.challenge)}</div><details class="solution"><summary>Review the expected reasoning after your attempt</summary>${paragraphs(l.guide.challenge_solution)}</details>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}<div class="callout"><strong>Topic-specific pass criteria</strong>${outcomes(m)}</div><h3>A quick retrieval check</h3>${quiz(l.check)}<label class="evidence"><strong>Your assessment evidence and explanation</strong><span>Record the independent result, how you checked it, and what remains uncertain. Aim for evidence another learner could review.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you build, solve, or demonstrate independently? How did you verify it?">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I reviewed every pass criterion and can defend my evidence</label><p class="fine-print">To record a pass: complete practice, assess the prerequisites, answer the retrieval check correctly in this session, review the criteria, and add at least 40 characters of assessment evidence. The hub records your judgement; it does not execute or grade external labs.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
     if (tab === "notes")
       body = `<h2>Make the lesson yours</h2><p>Explain the concept as if teaching another learner. Keep questions, diagrams in words, connections to earlier topics, and mistakes you corrected.</p><label class="evidence"><strong>Your lesson notebook</strong><textarea data-field="notes" maxlength="20000" placeholder="In my own words…\nA question I still have…\nA connection to another topic…">${esc(r.notes || "")}</textarea></label><p class="save-hint" role="status"></p>`;
-    return `<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">Topic ${index + 1} of ${sequence.length} · ${id}</span></div><div class="page-heading"><span class="pathway-label">${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "Self-paced")}</span><h1>${esc(m.title)}</h1><div class="lesson-meta">${m.skills.map((s) => `<span>${esc(s)}</span>`).join("")}</div></div><div class="prerequisites"><strong>Builds on</strong> ${m.prerequisites.length ? m.prerequisites.map((p) => lessonLink(p, `${p} · ${byId[p].title}`)).join(' <span aria-hidden="true">/</span> ') : "No earlier topic required."}${missing.length ? `<p>Review first: ${missing.map((p) => lessonLink(p)).join(", ")}. Exploration is open; assess these before recording this topic as passed.</p>` : ""}</div><nav class="tabs" aria-label="Lesson sections">${Object.entries(
+    return `${otherTrack ? `<div class="scope-note"><strong>This topic belongs to ${esc(otherTrack.label)}.</strong><p>You are exploring outside your selected path. The links below follow this topic's own path.</p><button class="button secondary" data-switch-track="${esc(otherTrack.id)}">Switch to this learning path</button></div>` : ""}<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">Topic ${index + 1} of ${sequence.length} · ${id}</span></div><div class="page-heading"><span class="pathway-label">${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "Self-paced")}</span><h1>${esc(m.title)}</h1><div class="lesson-meta">${m.skills.map((s) => `<span>${esc(s)}</span>`).join("")}</div></div><div class="prerequisites"><strong>Builds on</strong> ${m.prerequisites.length ? m.prerequisites.map((p) => lessonLink(p, `${p} · ${byId[p].title}`)).join(' <span aria-hidden="true">/</span> ') : "No earlier topic required."}${missing.length ? `<p>Review first: ${missing.map((p) => lessonLink(p)).join(", ")}. Exploration is open; assess these before recording this topic as passed.</p>` : ""}</div><nav class="tabs" aria-label="Lesson sections">${Object.entries(
       tabs
     )
       .map(
@@ -221,8 +225,9 @@ export function startStudio(config) {
     const s = state(),
       r = records();
     return `<div class="page-heading"><span class="eyebrow">MAKE LEARNING LAST</span><h1>Recall & review</h1><p>After a self-assessed pass, revisit the topic after 2 days, then 7 days after that review, then 30 days after the next. First recall the idea; then check the source and retry a changed example.</p></div>${s.due.length ? s.due.map((m) => `<section class="review-card"><span class="eyebrow">DUE ${date(r[m.id].reviewAt)} · REVIEW ${(r[m.id].reviewStage || 0) + 1}/3</span><h2>${lessonLink(m.id, m.title)}</h2><p>${esc(lessons[m.id].check.question)}</p><details><summary>Check the explanation after answering aloud</summary><p>${esc(lessons[m.id].check.explanation)}</p><p>${esc(lessons[m.id].pitfall)}</p></details><p>Reproduce a small example, then explain the result without the walkthrough.</p><button class="button secondary" data-review="${m.id}">I recalled, checked, and practised this</button></section>`).join("") : '<section class="empty"><h2>No reviews due today.</h2><p>Keep learning. Reviews appear here after your first self-assessed pass.</p><a class="button" href="#path">Explore your next topic ↗</a></section>'}<h2>Coming up</h2>${
-      modules
+      selectedModules()
         .filter((m) => r[m.id].reviewAt > Date.now())
+        .sort((a, b) => r[a.id].reviewAt - r[b.id].reviewAt)
         .slice(0, 8)
         .map((m) => `<p>${lessonLink(m.id, m.title)} <span class="muted">· ${date(r[m.id].reviewAt)}</span></p>`)
         .join("") || '<p class="muted">Your future reviews will appear here.</p>'
@@ -275,7 +280,7 @@ export function startStudio(config) {
     return `${trackPicker()}<article class="method source-map"><span class="eyebrow">RESEARCHED 30 OCTOBER 2026</span><h1>Your topic-by-topic source map</h1><p>${esc(config.sourcesNote)}</p><p><a href="curriculum.json" download>Download JSON ↓</a> · <a href="source-map.txt" download>Download readable source map ↓</a></p>${selectedModules()
       .map(
         (m) =>
-          `<details><summary>${esc(m.id)} · ${esc(m.title)}</summary><p>${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "All stages")}</p><p><strong>Prerequisites:</strong> ${m.prerequisites.length ? m.prerequisites.map((id) => lessonLink(id, byId[id].title)).join(" · ") : "None — start here"}</p><h3>Watch in order</h3>${m.videos.length ? `<ol>${m.videos.map((r) => `<li>${link(r)}</li>`).join("")}</ol>` : `<p>${esc(m.videoNote || "No directly matched public video was verified. Use the guided lesson and assigned reading.")}</p>`}<h3>Read in order</h3><ol>${m.readings.map((r) => `<li>${link(r)}</li>`).join("")}</ol><h3>Practical exercise</h3>${paragraphs(m.practice)}${m.practice_links.length ? "<h3>Additional practical materials</h3><ul>" + m.practice_links.map((r) => "<li>" + link(r) + "</li>").join("") + "</ul>" : ""}<h3>Independent assessment</h3>${paragraphs(m.assessment)}<p><strong>Pass criteria:</strong> ${esc(m.pass_criteria)}</p><p class="fine-print">${esc(m.note)}</p><p>${lessonLink(m.id, "Open full lesson ↗")}</p></details>`
+          `<details><summary>${esc(m.id)} · ${esc(m.title)}</summary><p>${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "All stages")}</p><p><strong>Prerequisites:</strong> ${m.prerequisites.length ? m.prerequisites.map((id) => lessonLink(id, byId[id].title)).join(" · ") : "None — start here"}</p><h3>Study assignment</h3>${paragraphs(m.study_focus)}<h3>Watch in order</h3><p>${esc(m.videoNote)}</p>${m.videos.length ? `<ol>${m.videos.map((r) => `<li>${link(r)}</li>`).join("")}</ol>` : ""}<h3>Read in order</h3><ol>${m.readings.map((r) => `<li>${link(r)}</li>`).join("")}</ol><h3>Practical exercise</h3>${paragraphs(m.practice)}${m.practice_links.length ? "<h3>Additional practical materials</h3><ul>" + m.practice_links.map((r) => "<li>" + link(r) + "</li>").join("") + "</ul>" : ""}<h3>Independent assessment</h3>${paragraphs(m.assessment)}<h3>Pass criteria</h3>${outcomes(m)}<p class="fine-print">${esc(m.note)}</p><p>${lessonLink(m.id, "Open full lesson ↗")}</p></details>`
       )
       .join("")}</article>`;
   }
@@ -284,7 +289,11 @@ export function startStudio(config) {
     quizPassed = null;
     const route = location.hash.slice(1).split("/"),
       view = route[0] || "home";
-    if (view === "path" && route[1] !== undefined && stages[Number(route[1])]) pathStage = stages[Number(route[1])];
+    if (view === "path" && route[1] !== undefined) {
+      const requested = stages[Number(route[1])];
+      pathStage = selectedStages().includes(requested) ? requested : "";
+    }
+    if (pathStage && !selectedStages().includes(pathStage)) pathStage = "";
     const titles = {
       home: "My learning",
       path: "Curriculum",
@@ -335,8 +344,17 @@ export function startStudio(config) {
       track = e.target.value;
       store.setSetting("track", track);
       pathStage = "";
+      if (route[0] === "path") history.replaceState(null, "", "#path");
       render();
     });
+    document.querySelectorAll("[data-switch-track]").forEach((el) =>
+      el.addEventListener("click", () => {
+        track = el.dataset.switchTrack;
+        store.setSetting("track", track);
+        pathStage = "";
+        render(true);
+      })
+    );
     const id = route[1];
     $("#path-search")?.addEventListener("input", (e) => {
       const pos = e.target.selectionStart;
@@ -671,13 +689,18 @@ export function startStudio(config) {
   });
   function searchResults() {
     const q = $("#search").value.trim().toLowerCase();
-    const found = modules.filter((m) => `${m.id} ${m.title} ${m.skills.join(" ")}`.toLowerCase().includes(q)).slice(0, 20);
+    const found = selectedModules()
+      .filter((m) => `${m.id} ${m.title} ${m.skills.join(" ")}`.toLowerCase().includes(q))
+      .slice(0, 20);
     $("#search-results").innerHTML =
-      found
+      (config.tracks
+        ? `<p class="fine-print">Searching ${esc(config.tracks.find((t) => t.id === track).label)}. Change paths in Curriculum to search the other path.</p>`
+        : "") +
+      (found
         .map(
           (m) => `<a class="search-result" href="#lesson/${m.id}/learn"><span>${m.id} · ${esc(m.stage)}</span><strong>${esc(m.title)}</strong></a>`
         )
-        .join("") || "<p>No topics found. Try a broader term.</p>";
+        .join("") || "<p>No topics found. Try a broader term.</p>");
   }
   function syncSidebar() {
     $("#sidebar").inert = window.matchMedia("(max-width:760px)").matches && !$("#sidebar").classList.contains("open");

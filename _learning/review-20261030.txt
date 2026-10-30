@@ -82,3 +82,101 @@ professional competence. No model inference, replay/evaluation harness, live
 telephone call, clinical intervention, email signup or sensitive child-data
 upload was used for validation. Hosted checks establish the storage contract
 and callback configuration; they do not establish a fresh end-to-end login.
+
+Second review — release 20261030-2
+=================================
+User requested a fresh review and fixes across teaching, prerequisites, videos,
+exercises and UI/UX. Review covered all 84 topic assignments and native checks;
+structural validation is not treated as subject-matter or clinical accreditation.
+
+Findings fixed
+---------------
+1. Every topic in a studio reused a generic pass rubric. Replaced with 252
+   observable criteria across 84 distinct rubrics, shown in Learn, Assess and
+   the source map. Independent-task answers stay in the revealable solution;
+   criteria request an artefact/calculation rather than giving its answer.
+2. Important conceptual bridges were too thin: expanded 19 Voice and 19 Child
+   lessons, adding 6001 original words across teaching/exercises. Voice now works
+   algebra/log rules, derivatives, spread, Fourier coefficients, log-mel/DCT,
+   logistic loss, unequal attention, Viterbi updates, CTC path sums, representation
+   learning, codecs, retrieval and networks. Child adds developmental domains,
+   language components, anatomy, statistics, screening denominators, professional
+   reasoning, behavioral definitions and single-case graph interpretation.
+3. Broad sources lacked a bounded assignment. All 84 topics now specify study
+   focus/sections; MIT calculus comes before optional CMU network material,
+   OpenStax anatomy and D2L chapters are directly assigned, and NICE's under-19
+   autistic population is explicit. Existing graph/path closure remains valid.
+4. Video coverage was sometimes only adjacent context. Added regression and
+   neural-codec teaching, a provider-linked audio-LM/Moshi keynote and Youth.gov
+   adolescent segments. Removed the C12 sensory workshop as health/swallowing
+   instruction. CMU index/YouTube numbering discrepancies are explicitly labelled,
+   not resolved by blindly trusting either title. NHS direct-player URLs that
+   reject external access now route to exact named clips on the host page.
+   An unavailable PyCon async clip was rejected. There are 59 topics with named
+   video assignments and 25 explicitly reading-led topics. Many clinical clips
+   are family introductions rather than full professional teaching.
+5. Caregiver stage -> professional path re-applied a hidden caregiver stage from
+   the hash, giving zero topics while the select displayed All stages. Baseline
+   reproduced twice. Path changes canonicalise the route and invalid stages are
+   cleared. Both switch directions now show the complete 24/28-topic paths.
+6. Global search crossed child paths, and professional deep links used the global
+   40-topic sequence. Search is path-scoped with a visible scope note. An outside-
+   path lesson has an explicit switch action and its own coherent pagination.
+   Upcoming reviews also follow the selected path and sort by due date.
+7. Index-based resource checklists could misattribute prior completion after a
+   new video was inserted/replaced. Resources now carry stable numeric keys;
+   unchanged material keeps its old key and new material gets a new one. The
+   consumer uses those keys. Backups, database validation and existing progress
+   schema stay compatible; no learner data is rewritten.
+8. Capstone expectations needed a concrete supplied contract. Added the offline
+   V43 initial state, event definitions, seven complete fixtures and uncertain-
+   outcome extension. Added wholly fictional age-specific caregiver cases and
+   caregiver/professional portfolio templates, with labelled self-review when an
+   adult partner is unavailable. No executable model or clinical runner is added.
+9. Authoring parser silently overwrote duplicate lesson IDs/fields. It now rejects
+   both; duplicate counterexamples were checked offline.
+
+Evidence ledger
+----------------
+Contract | sequence | observable owner/outcome | evidence | status
+Teaching/schema | authoring -> build -> JSON -> runtime | outcomes/study focus
+visible, all 84 x 5 sections render | packaging check + browser sweep | verified
+structurally; content inspected, not independent clinical validation.
+Source identity | old video:0, new video:100, reorder/reload | old checkbox remains
+on original decision-tree video, new regression remains unchecked | actual DOM
+keys and persisted checkbox UI; new-key-reuse mutation fails intended test |
+verified. Unit assertion covers metadata; browser covers consumer use.
+Path filters | #path/2 caregiver -> professional; reverse from professional-only
+stage | 28/24 topics, valid stage state and canonical #path | baseline/revision
+browser checks and screenshots | verified.
+Search/deep link | caregiver search P01; direct P01 then explicit path switch |
+no professional search result; labelled 13/28 page, switch persists | browser |
+verified. No production learner progress was modified.
+Media access | direct restricted NHS player -> publisher-hosted subtitled clip |
+player starts and reaches 00:25, then paused | Chrome NHS host sample | partial
+playback verified; complete playback/captions of all clips remains uncovered.
+Responsive | 375x812, dark assessment, menu/Escape; 900x600 settings | no document
+horizontal overflow, menu focus/inert restored, export reachable | browser DOM
+and visually inspected screenshots | verified in Chrome only.
+Sync/records | separate accounts/studios and two mocked devices | independent
+fields converge; wrong backup rejected | unchanged runtime source + offline
+suite | mocked behavior verified; fresh real login/two-device flow uncovered.
+Release | HTML/entry/config/shared imports | one data/runtime cache version |
+version contract test and production build | verified locally; check live after
+publishing. Database schema/policies unchanged; no migration needed.
+
+Executed: 29 offline tests; packaging/prerequisite/path checks; Docker production
+build; full Prettier check; 420 rendered lesson sections; 16 information and
+curriculum views; path/search/resource-identity/mobile flows; selected source
+metadata and host playback. Public-page audit covered 189 existing distinct
+reading/video URLs plus selected additions. 403/406/timeouts were not called 404s.
+
+All eight outside-view passes were considered: failure surfacing, deployed cache
+compatibility, authoring maintenance, completion identity integrity, fixture
+reachability/counterexamples, builder-to-DOM field consumption, unchanged hosted
+schema, and bounded claims. Existing hosted RLS evidence is from the initial
+release; this review did not rerun a DB migration or claim a fresh login test.
+Important limits remain real OAuth/email/recovery/two-device sign-in, complete
+external playback/captions and availability, supervised clinical competence and
+individual suitability. No replay/evaluation workload, provider inference,
+training, live telephone call, email signup or real child-data collection ran.

@@ -10,22 +10,31 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Overview 1 Of 5",
-          "url": "https://speech.zone/courses/speech-processing/module-7-speech-recognition-pattern-matching/videos/overview-1-of-5/"
+          "url": "https://speech.zone/courses/speech-processing/module-7-speech-recognition-pattern-matching/videos/overview-1-of-5/",
+          "progressKey": "video:0"
         }
       ],
       "readings": [
         {
           "label": "Stanford CS224S — scope, prerequisites and curriculum (recordings restricted)",
-          "url": "https://web.stanford.edu/class/cs224s/index.html"
+          "url": "https://web.stanford.edu/class/cs224s/index.html",
+          "progressKey": "reading:0"
         },
         {
           "label": "Hugging Face Audio Course — course scope and prerequisites",
-          "url": "https://huggingface.co/learn/audio-course/chapter0/introduction"
+          "url": "https://huggingface.co/learn/audio-course/chapter0/introduction",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Map capture, ASR, dialogue, tool, TTS and transport with inputs and failure points. 2. Remove write authority for the museum kiosk and explain two remaining failures. 3. Separate a paper design from evidence of accent coverage or product performance.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Map capture, ASR, dialogue, tool, TTS and transport with inputs and failure points.",
+        "Remove write authority for the museum kiosk and explain two remaining failures.",
+        "Separate a paper design from evidence of accent coverage or product performance."
+      ],
+      "study_focus": "Read the Stanford scope/prerequisites and HF course introduction. Watch the Edinburgh recognition overview as one component example, then draw the wider system boundary from this lesson.",
       "practice": "On paper, map a fictional library telephone assistant. It may read opening hours and propose a book reservation. Draw six boxes: capture, ASR, dialogue, reservation tool, TTS and transport. Give each box one input, one output and one possible failure. Mark the point where a user must approve a reservation. Use no accounts, recordings or provider calls.",
       "assessment": "Design the same map for a museum information kiosk that must never change bookings. Identify two components you can simplify, two failures that remain, and the evidence needed before claiming it works for visitors with different accents.",
       "practice_links": []
@@ -39,17 +48,19 @@
       "videos": [
         {
           "label": "Harvard CS50P — Week 0 lecture and notes",
-          "url": "https://cs50.harvard.edu/python/weeks/0/"
+          "url": "https://cs50.harvard.edu/python/weeks/0/",
+          "progressKey": "video:0"
         }
       ],
       "readings": [
         {
           "label": "CS50P — Week 0 notes",
-          "url": "https://cs50.harvard.edu/python/notes/0/"
+          "url": "https://cs50.harvard.edu/python/notes/0/",
+          "progressKey": "reading:0"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Calculate remaining duration for the supplied total/consumed counts and rate, showing the unit. 2. Reject a consumed count outside the total and reuse the duration function. 3. Explain return versus print and state the numeric-input limitation.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "practice_links": [
         {
@@ -57,6 +68,12 @@
           "url": "https://cs50.harvard.edu/python/psets/0/"
         }
       ],
+      "outcomes": [
+        "Calculate remaining duration for the supplied total/consumed counts and rate, showing the unit.",
+        "Reject a consumed count outside the total and reuse the duration function.",
+        "Explain return versus print and state the numeric-input limitation."
+      ],
+      "study_focus": "Study CS50P Week 0 functions, variables, strings, numeric values and return values; trace the supplied duration function before attempting the independent function.",
       "practice": "Predict both printed values before running the example. Add calls for 8,000 samples at 16,000 samples/second and 48,000 at 48,000. Write the expected result and unit for each. Then call the function with rate zero and explain the exception. Finally write milliseconds(samples, rate), reusing duration_seconds and multiplying by 1,000.",
       "assessment": "Without copying the function body, write remaining_seconds(total_samples, consumed_samples, rate). Reject consumed counts below zero or above the total. Demonstrate 32,000 total and 8,000 consumed at 16,000/second, plus one rejected case."
     },
@@ -69,25 +86,29 @@
       "videos": [
         {
           "label": "Harvard CS50P — Week 1 lecture and notes",
-          "url": "https://cs50.harvard.edu/python/weeks/1/"
+          "url": "https://cs50.harvard.edu/python/weeks/1/",
+          "progressKey": "video:0"
         },
         {
           "label": "Harvard CS50P — Week 2 lecture and notes",
-          "url": "https://cs50.harvard.edu/python/weeks/2/"
+          "url": "https://cs50.harvard.edu/python/weeks/2/",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "CS50P — Week 1 notes",
-          "url": "https://cs50.harvard.edu/python/notes/1/"
+          "url": "https://cs50.harvard.edu/python/notes/1/",
+          "progressKey": "reading:0"
         },
         {
           "label": "CS50P — Week 2 notes",
-          "url": "https://cs50.harvard.edu/python/notes/2/"
+          "url": "https://cs50.harvard.edu/python/notes/2/",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Return speech_ms, silence_ms and other_ms for every supplied event with independent expected totals. 2. Preserve total time when an unknown event kind occurs; handle an empty list. 3. Reject negative durations and show that the buckets sum to the total.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "practice_links": [
         {
@@ -95,6 +116,12 @@
           "url": "https://cs50.harvard.edu/python/psets/2/"
         }
       ],
+      "outcomes": [
+        "Return speech_ms, silence_ms and other_ms for every supplied event with independent expected totals.",
+        "Preserve total time when an unknown event kind occurs; handle an empty list.",
+        "Reject negative durations and show that the buckets sum to the total."
+      ],
+      "study_focus": "Study CS50P Week 1 conditionals and Week 2 loops, lists and dictionaries. Trace every supplied event, including unknown kinds and empty input.",
       "practice": "Make a table with event index, kind, duration and running speech total. Add a silence event lasting 300 milliseconds and predict both speech time and total timeline time. Then replace the first duration with -1 and explain where execution stops. Write a second function that totals all event durations.",
       "assessment": "Implement a summary returning a dictionary with speech_ms, silence_ms and other_ms. Treat unknown kinds as other rather than silently discarding their time. For speech 40, silence 20 and music 30, supply the expected dictionary and total-duration invariant."
     },
@@ -107,29 +134,34 @@
       "videos": [
         {
           "label": "Harvard CS50P — Week 3 lecture and notes",
-          "url": "https://cs50.harvard.edu/python/weeks/3/"
+          "url": "https://cs50.harvard.edu/python/weeks/3/",
+          "progressKey": "video:0"
         },
         {
           "label": "Harvard CS50P — Week 5 lecture and notes",
-          "url": "https://cs50.harvard.edu/python/weeks/5/"
+          "url": "https://cs50.harvard.edu/python/weeks/5/",
+          "progressKey": "video:1"
         },
         {
           "label": "Harvard CS50P — Week 6 lecture and notes",
-          "url": "https://cs50.harvard.edu/python/weeks/6/"
+          "url": "https://cs50.harvard.edu/python/weeks/6/",
+          "progressKey": "video:2"
         }
       ],
       "readings": [
         {
           "label": "CS50P — File I/O notes",
-          "url": "https://cs50.harvard.edu/python/notes/6/"
+          "url": "https://cs50.harvard.edu/python/notes/6/",
+          "progressKey": "reading:0"
         },
         {
           "label": "CS50P — Unit tests notes",
-          "url": "https://cs50.harvard.edu/python/notes/5/"
+          "url": "https://cs50.harvard.edu/python/notes/5/",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Accept the valid list and reject a top-level object, scalar item and missing key. 2. Separate decoding, structure validation and duration calculation. 3. Use independent expected results and keep file access outside the calculation.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "practice_links": [
         {
@@ -137,6 +169,12 @@
           "url": "https://cs50.harvard.edu/python/psets/5/"
         }
       ],
+      "outcomes": [
+        "Accept the valid list and reject a top-level object, scalar item and missing key.",
+        "Separate decoding, structure validation and duration calculation.",
+        "Use independent expected results and keep file access outside the calculation."
+      ],
+      "study_focus": "Study CS50P Weeks 3 exceptions, 5 unit tests and 6 file I/O. Focus on JSON decoding versus application validation; use only the local fictional fixtures.",
       "practice": "Save the example as checks.py and run it with Python 3. Predict what happens for duration_ms equal to 0, 2.5, true in JSON and a missing key. Add tests for all four cases. Write events.json containing the valid two-event array, then read it with a with open(..., encoding=\"utf-8\") block and json.load.",
       "assessment": "Extend validation to reject a top-level object, a non-object list item and a missing duration key with clear ValueError messages. Supply one valid and three invalid fixtures. Keep file access outside total_ms."
     },
@@ -149,26 +187,36 @@
       "videos": [
         {
           "label": "MIT Missing Semester — Course Overview and the Shell",
-          "url": "https://www.youtube.com/watch?v=Z56Jmr9Z34Q"
+          "url": "https://www.youtube.com/watch?v=Z56Jmr9Z34Q",
+          "progressKey": "video:0"
         },
         {
           "label": "MIT Missing Semester — Version Control (Git)",
-          "url": "https://www.youtube.com/watch?v=2sjqTHE0zok"
+          "url": "https://www.youtube.com/watch?v=2sjqTHE0zok",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "The Missing Semester — shell lecture and exercises",
-          "url": "https://missing.csail.mit.edu/2020/course-shell/"
+          "url": "https://missing.csail.mit.edu/2020/course-shell/",
+          "progressKey": "reading:0"
         },
         {
           "label": "The Missing Semester — version control",
-          "url": "https://missing.csail.mit.edu/2020/version-control/"
+          "url": "https://missing.csail.mit.edu/2020/version-control/",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Supply source, synthetic fixture, Python version, command and expected output. 2. Inspect the staged diff and exclude secrets, recordings and environments. 3. Explain how commit, input and run log connect a result to a reproducible setup.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Supply source, synthetic fixture, Python version, command and expected output.",
+        "Inspect the staged diff and exclude secrets, recordings and environments.",
+        "Explain how commit, input and run log connect a result to a reproducible setup."
+      ],
+      "study_focus": "Work through Missing Semester shell navigation, quoting and Git staging/diffs. Write a reproducibility README; package installation is unnecessary for the native exercises.",
       "practice": "Create a new directory and copy only V04's checks.py and a synthetic events.json into it. Add a README with the Python version, command, expected result and absence of network/model dependencies. Initialise Git and inspect exactly what is staged. Do not add a real API key, recording or environment file.",
       "assessment": "A colleague says the code worked but gives no commit, input file or command. Write a six-item reproducibility request, then explain how you would investigate two different results without rerunning a paid service.",
       "practice_links": []
@@ -182,22 +230,31 @@
       "videos": [
         {
           "label": "StatQuest — Logs (logarithms), clearly explained",
-          "url": "https://www.youtube.com/watch?v=VSi0Z04fWj0"
+          "url": "https://www.youtube.com/watch?v=VSi0Z04fWj0",
+          "progressKey": "video:0"
         },
         {
           "label": "Radians — trigonometry bridge selected by Edinburgh speech.zone",
-          "url": "https://youtu.be/cgPYLJ-s5II"
+          "url": "https://youtu.be/cgPYLJ-s5II",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "Edinburgh — mathematics tutorials: algebra and logarithms",
-          "url": "https://homepages.inf.ed.ac.uk/sgwater/math_tutorials.html"
+          "url": "https://homepages.inf.ed.ac.uk/sgwater/math_tutorials.html",
+          "progressKey": "reading:0"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Check the one-minute-under-1-MB claim with a complete PCM payload calculation. 2. Calculate the duration limit for 1000000 bytes under the stated format, showing your rearranged equation. 3. Show units and distinguish payload from headers, decimal MB and compression.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Check the one-minute-under-1-MB claim with a complete PCM payload calculation.",
+        "Calculate the duration limit for 1000000 bytes under the stated format, showing your rearranged equation.",
+        "Show units and distinguish payload from headers, decimal MB and compression."
+      ],
+      "study_focus": "Complete the Edinburgh algebra and logarithm tutorial questions. Practise rearranging equations, powers, unit conversions and log rules before interpreting dB or log probabilities.",
       "practice": "Calculate the payload for 0.5 seconds of stereo PCM at 48 kHz and 16 bits/sample. Show every conversion. Then find the duration of 24,000 mono samples at 16 kHz. Explain the difference between doubling amplitude and doubling power in the stated matching conditions.",
       "assessment": "A specification says “one minute, 16 kHz, 16-bit, mono, under 1 MB uncompressed”. Check the claim using decimal MB and show how long one million payload bytes can hold, excluding a header.",
       "practice_links": []
@@ -211,18 +268,26 @@
       "videos": [
         {
           "label": "MIT 18.06 — Lecture 1: The Geometry of Linear Equations",
-          "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-1-the-geometry-of-linear-equations/"
+          "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-1-the-geometry-of-linear-equations/",
+          "progressKey": "video:0"
         }
       ],
       "readings": [
         {
           "label": "MIT 18.06 — problem sets and solutions",
-          "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/assignments/"
+          "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/assignments/",
+          "progressKey": "reading:0"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Derive the weight/output shapes and parameter/bias counts for the supplied batch and linear layer. 2. Name batch, time and feature axes and explain a time/feature swap. 3. Demonstrate a matrix-vector calculation rather than only listing shapes.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Derive the weight/output shapes and parameter/bias counts for the supplied batch and linear layer.",
+        "Name batch, time and feature axes and explain a time/feature swap.",
+        "Demonstrate a matrix-vector calculation rather than only listing shapes."
+      ],
+      "study_focus": "Work MIT 18.06 Lecture 1 examples and the accompanying linear-equation material. Explain a dot product, matrix multiplication, orthogonality and axis meanings by hand.",
       "practice": "Recalculate the example for x = [1, 0]. Then write a matrix that turns [left, right] into [left + right, left - right]. Apply it to [3, 1]. Finally explain why a (3, 4) matrix cannot multiply a (5, 1) column vector.",
       "assessment": "A model receives (8, 50, 40) with batch/time/feature axes. It applies a 12-output linear layer independently at each time step. State the weight shape, output shape, number of weights and number of biases. Explain what would change if time and feature were accidentally swapped.",
       "practice_links": []
@@ -235,23 +300,42 @@
       "skills": ["calculus", "chain rule", "gradient descent"],
       "videos": [
         {
-          "label": "CMU 11-785 Spring 2022 — Lecture 4: Gradient Descent (after the calculus reading)",
-          "url": "https://www.youtube.com/watch?v=lYYkEx1Qx8s"
+          "label": "MIT 18.01SC — Session 1: Introduction to Derivatives, clips 2–5 and Definition of Derivative recitation",
+          "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-1-introduction-to-derivatives/",
+          "progressKey": "video:100"
+        },
+        {
+          "label": "MIT 18.01SC — Session 11: Chain Rule, lecture excerpts and worked examples",
+          "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-11-chain-rule/",
+          "progressKey": "video:101"
+        },
+        {
+          "label": "CMU 11-785 Spring 2022 — Lecture 4: empirical risk minimisation and gradient descent (YouTube title: Learning the Network — Backprop)",
+          "url": "https://www.youtube.com/watch?v=lYYkEx1Qx8s",
+          "progressKey": "video:0"
         }
       ],
       "readings": [
         {
-          "label": "MIT 18.01SC — derivatives, chain rule and optimisation units",
-          "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/"
+          "label": "MIT 18.01SC — Differentiation Part A: Sessions 1–3, 6–11 and Problem Set 1 with solutions",
+          "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/",
+          "progressKey": "reading:100"
         },
         {
           "label": "CMU — 11-785 Spring 2022 lecture/video source index",
-          "url": "https://deeplearning.cs.cmu.edu/S22/"
+          "url": "https://deeplearning.cs.cmu.edu/S22/",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "Start with the two MIT calculus assignments. The CMU lecture applies gradient descent to networks and is optional depth to revisit after V18; it assumes neural-network context rather than supplying a first calculus lesson.",
+      "pass_criteria": "1. Compute the gradient, simultaneous parameter update and old/new loss for the two-parameter challenge. 2. Use simultaneous old-parameter gradients with the stated learning rate. 3. Explain the local nature of a gradient and limits of a single successful update.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Compute the gradient, simultaneous parameter update and old/new loss for the two-parameter challenge.",
+        "Use simultaneous old-parameter gradients with the stated learning rate.",
+        "Explain the local nature of a gradient and limits of a single successful update."
+      ],
+      "study_focus": "Study MIT Sessions 1–3 and 6–11 in Differentiation Part A as needed, completing Problem Set 1 and checking its solutions. Follow the native scalar/partial-derivative examples before the optional CMU network application; revisit that clip after V18.",
       "practice": "Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate L(w) = (2w − 6)² using the chain rule.",
       "assessment": "For L(a,b) = (a − 1)² + 2(b + 2)², start at (0,0) with rate 0.1. Compute the gradient, one update and the old/new loss. State why one successful update is not a universal convergence argument.",
       "practice_links": []
@@ -265,22 +349,31 @@
       "videos": [
         {
           "label": "MIT 6.042J — Lecture 18: Probability Introduction",
-          "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/resources/lecture-18-probability-introduction/"
+          "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/resources/lecture-18-probability-introduction/",
+          "progressKey": "video:0"
         },
         {
           "label": "StatQuest — Estimating Mean, Variance and Standard Deviation",
-          "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+          "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "Harvard Stat 110 — probability book and lectures",
-          "url": "https://stat110.hsites.harvard.edu/"
+          "url": "https://stat110.hsites.harvard.edu/",
+          "progressKey": "reading:0"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Use the correct conditional denominators and calculate the changed-mixture expected error rate. 2. Distinguish mean, median, spread and speaker-level independence. 3. Explain why 1000 clips from two speakers do not establish broad speaker coverage.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Use the correct conditional denominators and calculate the changed-mixture expected error rate.",
+        "Distinguish mean, median, spread and speaker-level independence.",
+        "Explain why 1000 clips from two speakers do not establish broad speaker coverage."
+      ],
+      "study_focus": "Study the Harvard probability material on conditional probability, random variables, expectation and variance. Use the introductory MIT and StatQuest videos first if those terms are new.",
       "practice": "For a fictional deployment containing 50 noisy and 50 quiet clips, assume the conditional rates above remain unchanged. Calculate the expected number with errors and the overall expected rate. Then calculate the mean and median of the five supplied latencies. State two assumptions behind the error prediction.",
       "assessment": "One report counts 1,000 clips from two speakers; another counts 200 clips from 200 speakers. Explain why clip count alone cannot decide which better supports a claim about new speakers. Propose the missing sampling information and a sensible grouping for uncertainty analysis.",
       "practice_links": []
@@ -294,18 +387,26 @@
       "videos": [
         {
           "label": "StatQuest — Hypothesis Testing (supporting study-design foundation)",
-          "url": "https://www.youtube.com/watch?v=0oc49DyA3hU"
+          "url": "https://www.youtube.com/watch?v=0oc49DyA3hU",
+          "progressKey": "video:0"
         }
       ],
       "readings": [
         {
           "label": "scikit-learn — common pitfalls and data leakage",
-          "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+          "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+          "progressKey": "reading:0"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Identify the test-set threshold search as development on that set. 2. Propose untouched future comparison data with speaker/session and duplicate boundaries. 3. State preprocessing, selection and uncertainty rules before inspecting new results.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Identify the test-set threshold search as development on that set.",
+        "Propose untouched future comparison data with speaker/session and duplicate boundaries.",
+        "State preprocessing, selection and uncertainty rules before inspecting new results."
+      ],
+      "study_focus": "Read the assigned leakage and dataset guidance. Write split units, preprocessing boundaries, model-selection rules and an uncertainty plan before looking at any hypothetical result.",
       "practice": "Create a six-row fictional manifest with three speakers and two sessions per speaker. Assign each whole speaker to train, validation or test. Mark one intentional duplicate and keep it in its source group. Write the target claim, split unit and two limits. Do this on paper or in a local text file only.",
       "assessment": "A team reports improvement after selecting the best of 30 thresholds on its test set. Draft a corrected study plan, including what happens to that old test set, and explain why the published number cannot simply be relabelled independent evidence.",
       "practice_links": []
@@ -319,22 +420,31 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Periodic Signal",
-          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/"
+          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — Pitch",
-          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/pitch/"
+          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/pitch/",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "Edinburgh speech.zone — Periodic Signal",
-          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/"
+          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/",
+          "progressKey": "reading:0"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Explain why a 300-Hz peak need not be the fundamental of a 150/300/450-Hz signal. 2. Calculate a period and cycle count with explicit seconds/milliseconds. 3. Name calibration/gain and recording conditions needed for amplitude comparisons.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Explain why a 300-Hz peak need not be the fundamental of a 150/300/450-Hz signal.",
+        "Calculate a period and cycle count with explicit seconds/milliseconds.",
+        "Name calibration/gain and recording conditions needed for amplitude comparisons."
+      ],
+      "study_focus": "Watch periodic signal and pitch in order. Use the radians bridge and supplied sine examples to separate frequency, amplitude, phase, harmonics and perception.",
       "practice": "Calculate periods for 100 Hz, 250 Hz and 1 kHz. Count how many cycles each completes in 40 ms. Draw two cycles of a 250 Hz signal, labelling the time axis in milliseconds. Explain what changes if amplitude halves while frequency stays fixed.",
       "assessment": "A periodic signal has components at 150, 300 and 450 Hz. A plot shows the largest component at 300 Hz. Explain why concluding “the fundamental must be 300 Hz” is unjustified, and list two measurement-chain details needed before comparing amplitudes with another recording.",
       "practice_links": []
@@ -348,18 +458,26 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Digital Signal",
-          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/digital-signal/"
+          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/digital-signal/",
+          "progressKey": "video:0"
         }
       ],
       "readings": [
         {
           "label": "Hugging Face Audio Course — audio data: sampling rate, amplitude and channels",
-          "url": "https://huggingface.co/learn/audio-course/chapter1/audio_data"
+          "url": "https://huggingface.co/learn/audio-course/chapter1/audio_data",
+          "progressKey": "reading:0"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Predict playback duration after relabelling 48000 samples as 16 kHz without resampling. 2. Contrast proper resampling by giving output sample count, duration and the anti-alias filtering reason. 3. Distinguish codec decoding, channel mixing, resampling and PCM representation.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Predict playback duration after relabelling 48000 samples as 16 kHz without resampling.",
+        "Contrast proper resampling by giving output sample count, duration and the anti-alias filtering reason.",
+        "Distinguish codec decoding, channel mixing, resampling and PCM representation."
+      ],
+      "study_focus": "Study sampling, quantisation and representation in the assigned digital-signal material. Calculate counts/payloads before discussing decoding or resampling.",
       "practice": "For 48 kHz mono PCM, calculate the samples in 10, 20 and 30 ms. Calculate the payload bytes for each at 16 bits/sample. Then explain how the answer changes for stereo. Finally describe the steps required to turn a compressed stereo recording into mono 16 kHz PCM without merely relabelling it.",
       "assessment": "A one-second, 48 kHz file is labelled 16 kHz without changing its 48,000 samples. Predict playback duration. Contrast this with proper 48-to-16 kHz resampling, stating output count, duration and the reason for low-pass filtering.",
       "practice_links": []
@@ -373,26 +491,36 @@
       "videos": [
         {
           "label": "UBC eNunciate — Introduction to Articulatory Phonetics: Consonants",
-          "url": "https://www.youtube.com/watch?v=dfoRdKuPF9I"
+          "url": "https://www.youtube.com/watch?v=dfoRdKuPF9I",
+          "progressKey": "video:0"
         },
         {
           "label": "UBC eNunciate — Introduction to Articulatory Phonetics: Vowels",
-          "url": "https://www.youtube.com/watch?v=u7jQ8FELbIo"
+          "url": "https://www.youtube.com/watch?v=u7jQ8FELbIo",
+          "progressKey": "video:1"
         },
         {
           "label": "UBC eNunciate — Introduction to the International Phonetic Alphabet",
-          "url": "https://www.youtube.com/watch?v=g_SHfoUDj8A"
+          "url": "https://www.youtube.com/watch?v=g_SHfoUDj8A",
+          "progressKey": "video:2"
         }
       ],
       "readings": [
         {
           "label": "UBC eNunciate — interactive phonetics resources",
-          "url": "https://enunciate.arts.ubc.ca/"
+          "url": "https://enunciate.arts.ubc.ca/",
+          "progressKey": "reading:0"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Classify place, manner and conventional voicing for the assigned consonants. 2. Identify letter/sound mismatch, coarticulation and language/dialect dependence. 3. Specify a pronunciation contract and a correction path for unfamiliar names.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Classify place, manner and conventional voicing for the assigned consonants.",
+        "Identify letter/sound mismatch, coarticulation and language/dialect dependence.",
+        "Specify a pronunciation contract and a correction path for unfamiliar names."
+      ],
+      "study_focus": "Watch consonants, vowels and the IPA introduction, then inspect the UBC examples/chart. Describe place, manner and voicing with language/context limits.",
       "practice": "Use the linked UBC demonstrations and IPA chart to compare /t/, /d/, /s/ and /n/. Make columns for place, manner and conventional voicing. State which features distinguish the first two and which distinguish /s/ from /n/. Explain why this table does not describe exact acoustic timings.",
       "assessment": "A product specification says “convert each English letter into one fixed sound, then join them”. Identify three failures and propose a more defensible pronunciation contract, including how unfamiliar names should be handled.",
       "practice_links": []
@@ -406,26 +534,36 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Harmonics",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/harmonics/"
+          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/harmonics/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — Source Filter Model",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/"
+          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "Edinburgh speech.zone — Source Filter Model",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/"
+          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/",
+          "progressKey": "reading:0"
         },
         {
           "label": "Edinburgh speech.zone — Vocal Tract Resonance Formants",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/vocal-tract-resonance-formants/"
+          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/vocal-tract-resonance-formants/",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Separate F0/harmonic spacing from the filter envelope and formants. 2. Explain that doubling playback rate doubles resonances and halves duration. 3. State what evidence would support a pitch-only transformation claim.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Separate F0/harmonic spacing from the filter envelope and formants.",
+        "Explain that doubling playback rate doubles resonances and halves duration.",
+        "State what evidence would support a pitch-only transformation claim."
+      ],
+      "study_focus": "Watch harmonics then source–filter modelling; use the formant reading to separate harmonic spacing from resonance. Draw both harmonic grids before interpreting a peak.",
       "practice": "Draw a harmonic grid for F0 values 100 and 250 Hz up to 2 kHz. Overlay a broad resonant region at 700 Hz. Explain why the strongest nearby harmonic may appear at different locations. Then list two reasons real speech would depart from this stationary diagram.",
       "assessment": "A colleague doubles all frequencies in a recording and claims only pitch changed. Explain the expected effect on resonances and duration under simple sample-rate relabelling, and describe what evidence a pitch-only claim would need.",
       "practice_links": []
@@ -439,27 +577,42 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Short Term Analysis",
-          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/short-term-analysis/"
+          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/short-term-analysis/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — Fourier Analysis",
-          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/fourier-analysis/"
+          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/fourier-analysis/",
+          "progressKey": "video:1"
         },
         {
           "label": "Edinburgh speech.zone — Frequency Domain",
-          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/frequency-domain/"
+          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/frequency-domain/",
+          "progressKey": "video:2"
         }
       ],
       "readings": [
         {
+          "label": "Edinburgh — Fourier analysis transcript: basis functions, correlation and orthogonality",
+          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/fourier-analysis/",
+          "progressKey": "reading:100"
+        },
+        {
           "label": "Hugging Face Audio Course — pre-processing audio data",
-          "url": "https://huggingface.co/learn/audio-course/chapter1/preprocessing"
+          "url": "https://huggingface.co/learn/audio-course/chapter1/preprocessing",
+          "progressKey": "reading:0"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Calculate window duration, hop and bin spacing without confusing them. 2. Compute the supplied four-point Fourier coefficients and explain magnitude/phase. 3. Name missing plot settings and why a spectrogram alone cannot establish quality.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "practice": "Calculate duration and bin spacing for N = 256 and N = 512 at 16 kHz. Calculate the time between frame starts for a 128-sample hop. Explain which setting you would inspect for a rapid consonant transition and what frequency-detail trade-off you would report.",
+      "outcomes": [
+        "Calculate window duration, hop and bin spacing without confusing them.",
+        "Compute the supplied four-point Fourier coefficients and explain magnitude/phase.",
+        "Name missing plot settings and why a spectrogram alone cannot establish quality."
+      ],
+      "study_focus": "Watch short-term analysis, Fourier analysis and frequency domain in order. Reproduce the four-point transform; read the HF preprocessing section only as application context, not a Fourier proof.",
+      "practice": "Calculate duration and bin spacing for N = 256 and N = 512 at 16 kHz. Calculate the time between frame starts for a 128-sample hop. Explain which setting you would inspect for a rapid consonant transition and what frequency-detail trade-off you would report.\n\nBefore the plot critique, reproduce the four-point transform for [1,0,-1,0] and then [0,1,0,-1] using the supplied sine/cosine factors. Report real and imaginary parts and explain why equal magnitudes do not mean identical signals.",
       "assessment": "A report compares two spectrograms without providing sample rate, window length or dB reference and claims one model removes noise. Write a corrected reporting checklist and explain why the images alone cannot establish improved speech quality.",
       "practice_links": []
     },
@@ -472,23 +625,32 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Filter",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/filter/"
+          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/filter/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — Convolution",
-          "url": "https://speech.zone/courses/speech-processing/module-6-speech-synthesis-waveform-generation-and-connected-speech/videos/convolution/"
+          "url": "https://speech.zone/courses/speech-processing/module-6-speech-synthesis-waveform-generation-and-connected-speech/videos/convolution/",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "librosa — mel-spectrogram parameters (development documentation; check installed version)",
-          "url": "https://librosa.org/doc/main/api/generated/librosa.feature.melspectrogram.html"
+          "url": "https://librosa.org/doc/main/api/generated/librosa.feature.melspectrogram.html",
+          "progressKey": "reading:0"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Calculate causal filter outputs including the explicitly requested tail. 2. Describe framing, spectrum, mel bands, log floor and MFCC transform in order. 3. Check sample rate, timing and feature conventions before exchanging arrays.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "practice": "Apply the same causal filter to [0, 2, 2, 0] using zero initial history. Write four outputs and the full-convolution tail. Then list six parameters you would record when exporting log-mel features for another researcher.",
+      "outcomes": [
+        "Calculate causal filter outputs including the explicitly requested tail.",
+        "Describe framing, spectrum, mel bands, log floor and MFCC transform in order.",
+        "Check sample rate, timing and feature conventions before exchanging arrays."
+      ],
+      "study_focus": "Watch filtering and convolution, then study the assigned feature documentation. Follow the toy power bins through band weighting, logarithms and DCT before comparing real log-mel/MFCC interfaces.",
+      "practice": "Apply the same causal filter to [0, 2, 2, 0] using zero initial history. Write four outputs and the full-convolution tail. Then list six parameters you would record when exporting log-mel features for another researcher.\n\nRepeat with [0,2,2,2] and show the nonzero tail. Then compute the two-band energies, logs and two DCT coefficients in the toy feature frame from Step by step, naming its normalisation.",
       "assessment": "Two systems both export 80 features per frame, but one uses 16 kHz audio with 10 ms hops and the other 48 kHz with 20 ms hops. Explain why their arrays cannot simply be exchanged, and draft a compatibility check before any model is loaded.",
       "practice_links": []
     },
@@ -500,23 +662,42 @@
       "skills": ["loss", "generalisation", "regularisation"],
       "videos": [
         {
+          "label": "StatQuest — Linear Regression, Clearly Explained!!!",
+          "url": "https://www.youtube.com/watch?v=nk2CQITm_eo",
+          "progressKey": "video:100"
+        },
+        {
           "label": "Edinburgh speech.zone — Decision Tree",
-          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/decision-tree/"
+          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/decision-tree/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — Learning Decision Trees",
-          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/learning-decision-trees/"
+          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/learning-decision-trees/",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
-          "label": "Dive into Deep Learning — linear neural networks, regression and classification",
-          "url": "https://d2l.ai/chapter_linear-networks/index.html"
+          "label": "D2L 3.1 — Linear Regression: model, loss, optimisation and exercises",
+          "url": "https://d2l.ai/chapter_linear-regression/linear-regression.html",
+          "progressKey": "reading:100"
+        },
+        {
+          "label": "D2L 4.1 — Softmax Regression: probabilities, cross-entropy and exercises",
+          "url": "https://d2l.ai/chapter_linear-classification/softmax-regression.html",
+          "progressKey": "reading:101"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "Begin with linear regression. The two Edinburgh decision-tree clips are additional classification examples; they do not teach all the regression, logistic-loss or generalisation content in this topic.",
+      "pass_criteria": "1. Compute regression MSE and compare against the constant baseline. 2. Show why always predicting silence reaches 98% in the supplied class mix. 3. Request error types, timing and population evidence before an endpointing claim.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Compute regression MSE and compare against the constant baseline.",
+        "Show why always predicting silence reaches 98% in the supplied class mix.",
+        "Request error types, timing and population evidence before an endpointing claim."
+      ],
+      "study_focus": "Watch linear regression before the optional decision-tree examples. Read D2L 3.1 regression and 4.1 softmax regression, including losses; compare a baseline and a confusion table.",
       "practice": "For the same training pairs, calculate predictions and mean squared error for y_hat = x + 1. Compare all three candidate rules. Write one validation question about transfer and one about annotation quality. Identify which quantities were chosen before seeing the new pair.",
       "assessment": "A classifier is 98% accurate where 98% of examples are silence. Explain the trivial baseline, the missing error information and why accuracy alone cannot justify using it to decide when a user has stopped speaking.",
       "practice_links": []
@@ -530,33 +711,39 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — What Is A Neural Network",
-          "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos/what-is-a-neural-network/"
+          "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos/what-is-a-neural-network/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — Training A Neural Network",
-          "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos/training-a-neural-network/"
+          "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos/training-a-neural-network/",
+          "progressKey": "video:1"
         },
         {
           "label": "CMU 11-785 Spring 2022 — Lecture 5: Backpropagation, part 1",
-          "url": "https://www.youtube.com/watch?v=G_N3IS-nqYQ"
+          "url": "https://www.youtube.com/watch?v=G_N3IS-nqYQ",
+          "progressKey": "video:2"
         },
         {
           "label": "CMU 11-785 Spring 2022 — Lecture 5: Backpropagation, part 2",
-          "url": "https://www.youtube.com/watch?v=NLpc-tNfEt8"
+          "url": "https://www.youtube.com/watch?v=NLpc-tNfEt8",
+          "progressKey": "video:3"
         }
       ],
       "readings": [
         {
           "label": "Dive into Deep Learning — multilayer perceptrons",
-          "url": "https://d2l.ai/chapter_multilayer-perceptrons/index.html"
+          "url": "https://d2l.ai/chapter_multilayer-perceptrons/index.html",
+          "progressKey": "reading:0"
         },
         {
           "label": "CMU — 11-785 Spring 2022 lecture/video source index",
-          "url": "https://deeplearning.cs.cmu.edu/S22/"
+          "url": "https://deeplearning.cs.cmu.edu/S22/",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Compute the forward pass and gradients from the original parameters. 2. Give all three new parameters after the simultaneous update and recompute the loss independently. 3. Explain inactive ReLU and why one training example says nothing about transfer.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "practice_links": [
         {
@@ -564,6 +751,12 @@
           "url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html"
         }
       ],
+      "outcomes": [
+        "Compute the forward pass and gradients from the original parameters.",
+        "Give all three new parameters after the simultaneous update and recompute the loss independently.",
+        "Explain inactive ReLU and why one training example says nothing about transfer."
+      ],
+      "study_focus": "Watch the introductory neural-network clips before CMU backpropagation. Read the assigned computational-graph material; study PyTorch basics before optional HF training notebooks.",
       "practice": "Repeat the forward pass with w=-1, keeping the other supplied values fixed. Calculate prediction, loss and the gradients for w, b and v away from ReLU's zero point. Explain why this single example can leave the hidden unit inactive.",
       "assessment": "For the original positive case, perform one simultaneous gradient step with rate 0.01. State the new w,b,v and recompute the loss. Explain what this demonstrates and what it does not demonstrate."
     },
@@ -576,30 +769,41 @@
       "videos": [
         {
           "label": "CMU 11-785 Spring 2022 — Lecture 18: Seq2Seq and Attention",
-          "url": "https://www.youtube.com/watch?v=q3CmsZFlrnc"
+          "url": "https://www.youtube.com/watch?v=q3CmsZFlrnc",
+          "progressKey": "video:0"
         },
         {
           "label": "CMU 11-785 Spring 2022 — Lecture 19: Transformers and GNNs (transformer portion)",
-          "url": "https://www.youtube.com/watch?v=thwZ-G8Gk6I"
+          "url": "https://www.youtube.com/watch?v=thwZ-G8Gk6I",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "Vaswani et al. — Attention Is All You Need",
-          "url": "https://arxiv.org/abs/1706.03762"
+          "url": "https://arxiv.org/abs/1706.03762",
+          "progressKey": "reading:0"
         },
         {
           "label": "Hugging Face Audio Course — transformer refresher",
-          "url": "https://huggingface.co/learn/audio-course/chapter3/introduction"
+          "url": "https://huggingface.co/learn/audio-course/chapter3/introduction",
+          "progressKey": "reading:1"
         },
         {
           "label": "CMU — 11-785 Spring 2022 lecture/video source index",
-          "url": "https://deeplearning.cs.cmu.edu/S22/"
+          "url": "https://deeplearning.cs.cmu.edu/S22/",
+          "progressKey": "reading:2"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Compute a weighted attention output and distinguish padding from causal masks. 2. Specify batch/time/feature axes, lengths and permitted lookahead. 3. Give padding-change and future-change invariants for valid earlier outputs.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Compute a weighted attention output and distinguish padding from causal masks.",
+        "Specify batch/time/feature axes, lengths and permitted lookahead.",
+        "Give padding-change and future-change invariants for valid earlier outputs."
+      ],
+      "study_focus": "Study the attention/transformer lecture portions and paper equations. Work unequal scores, dimensions and masks by hand; treat GNN portions as optional beyond this topic.",
       "practice": "With equal scores and scalar values [1,4,7], calculate unmasked attention. Then calculate attention at the middle position under a causal mask. Explain the result if a fourth padded position is mistakenly included with value 100 and equal score.",
       "assessment": "Draft an input contract for batched speech attention containing clips of unequal lengths. Specify axis meanings, length information, padding and causal/lookahead policy. Identify one testable invariant for each mask.",
       "practice_links": []
@@ -613,26 +817,36 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Script Design",
-          "url": "https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/script-design/"
+          "url": "https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/script-design/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — Annotating The Database",
-          "url": "https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/annotating-the-database/"
+          "url": "https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/annotating-the-database/",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "Datasheets for Datasets",
-          "url": "https://arxiv.org/abs/1803.09010"
+          "url": "https://arxiv.org/abs/1803.09010",
+          "progressKey": "reading:0"
         },
         {
           "label": "Common Voice — dataset and licensing information",
-          "url": "https://commonvoice.mozilla.org/en/datasets"
+          "url": "https://commonvoice.mozilla.org/en/datasets",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Separate pretraining/adaptation/test manifests and keep speaker/session groups apart. 2. Record audio rights, provenance and annotation uncertainty separately from code licences. 3. Decline an unsupported audio-use assumption and name a permissioned alternative.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Separate pretraining/adaptation/test manifests and keep speaker/session groups apart.",
+        "Record audio rights, provenance and annotation uncertainty separately from code licences.",
+        "Decline an unsupported audio-use assumption and name a permissioned alternative."
+      ],
+      "study_focus": "Use the recording/annotation clips as a database example. Read rights, consent and documentation guidance separately, then produce a fictional manifest with uncertainty and split groups.",
       "practice": "Create four fictional rows representing two speakers and two sessions each. Include a language tag, sample rate, transcript-policy version and rights reference. Propose a split for unseen-speaker study and flag one row with uncertain transcription. Write two uses that would require a separate rights review.",
       "assessment": "A public recording has a permissive code repository beside it, but no stated audio licence or speaker permission. Write a decision record explaining whether to include it, the missing evidence and an alternative way to continue learning.",
       "practice_links": []
@@ -646,27 +860,37 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Overview 1 Of 3",
-          "url": "https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/videos/overview-1-of-3/"
+          "url": "https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/videos/overview-1-of-3/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — Overview 2 Of 3",
-          "url": "https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/videos/overview-2-of-3/"
+          "url": "https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/videos/overview-2-of-3/",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "Jurafsky & Martin, August 2026 draft — Appendix A: Hidden Markov Models (including Viterbi)",
-          "url": "https://web.stanford.edu/~jurafsky/slp3/A.pdf"
+          "url": "https://web.stanford.edu/~jurafsky/slp3/A.pdf",
+          "progressKey": "reading:0"
         },
         {
           "label": "Edinburgh speech.zone — Overview 3 Of 3",
-          "url": "https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/videos/overview-3-of-3/"
+          "url": "https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/videos/overview-3-of-3/",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Compute a two-state Viterbi step with competing incoming paths and backpointers. 2. Distinguish the best individual path from the transcript with the largest supplied summed score. 3. State the model and score assumptions needed before interpreting a real decoder.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "practice": "Change Path B's transition to 1.0 and recalculate its score. Then change its first likelihood to 0.6 as well. Determine when the preferred path switches. Draw a two-state, three-time-step trellis and label what information a dynamic-programming table would retain.",
+      "outcomes": [
+        "Compute a two-state Viterbi step with competing incoming paths and backpointers.",
+        "Distinguish the best individual path from the transcript with the largest supplied summed score.",
+        "State the model and score assumptions needed before interpreting a real decoder."
+      ],
+      "study_focus": "Read the HMM appendix sections on the model, Viterbi and forward computation. Work both incoming paths per state; watch Edinburgh's connected-speech HMM overview in order.",
+      "practice": "Change Path B's transition to 1.0 and recalculate its score. Then change its first likelihood to 0.6 as well. Determine when the preferred path switches. Draw a two-state, three-time-step trellis and label what information a dynamic-programming table would retain.\n\nFill in both time-two state scores and backpointers for the supplied numerical model in Step by step. Show both incoming candidates for each state before choosing; do not keep only one global state at time one.",
       "assessment": "Transcript X has two alignment paths scoring 0.12 and 0.11; transcript Y has one scoring 0.20. Identify the best single path and the transcript with the larger supplied summed score. Explain why these answers differ and what additional assumptions a real recogniser would need.",
       "practice_links": []
     },
@@ -679,30 +903,41 @@
       "videos": [
         {
           "label": "CMU 11-785 Spring 2022 — Lecture 17: CTC, part 1",
-          "url": "https://www.youtube.com/watch?v=jSoBgIzhh3I"
+          "url": "https://www.youtube.com/watch?v=jSoBgIzhh3I",
+          "progressKey": "video:0"
         },
         {
           "label": "CMU 11-785 Spring 2022 — Lecture 17: CTC, part 2",
-          "url": "https://www.youtube.com/watch?v=cEyt72kwoKo"
+          "url": "https://www.youtube.com/watch?v=cEyt72kwoKo",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "Hugging Face Audio Course — CTC architectures",
-          "url": "https://huggingface.co/learn/audio-course/chapter3/ctc"
+          "url": "https://huggingface.co/learn/audio-course/chapter3/ctc",
+          "progressKey": "reading:0"
         },
         {
           "label": "Graves et al. — Connectionist Temporal Classification, ICML 2006",
-          "url": "https://www.cs.toronto.edu/~graves/icml_2006.pdf"
+          "url": "https://www.cs.toronto.edu/~graves/icml_2006.pdf",
+          "progressKey": "reading:1"
         },
         {
           "label": "CMU — 11-785 Spring 2022 lecture/video source index",
-          "url": "https://deeplearning.cs.cmu.edu/S22/"
+          "url": "https://deeplearning.cs.cmu.edu/S22/",
+          "progressKey": "reading:2"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Merge adjacent repeats before removing blanks and recover repeated letters. 2. Calculate and explain the different best-path and summed-transcript decisions in the supplied challenge. 3. Separate CTC scoring from assistant timing, permissions and task correctness.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Merge adjacent repeats before removing blanks and recover repeated letters.",
+        "Calculate and explain the different best-path and summed-transcript decisions in the supplied challenge.",
+        "Separate CTC scoring from assistant timing, permissions and task correctness."
+      ],
+      "study_focus": "Watch CMU CTC parts 1 and 2 and read the CTC objective. Verify collapse order, repeated labels and the complete two-frame probability example before decoding comparisons.",
       "practice": "Collapse these paths by hand: a,a,_,a; _,c,c,_,a,t,t; l,l,e,e,t,t,_,t,e,r. Show both intermediate operations. Then construct one path that collapses to “see” and another that collapses to “se”.",
       "assessment": "Transcript A has valid alignment probabilities 0.15 and 0.14; B has one at 0.25. Explain why a best-path decoder could prefer B while a summed-transcript calculation prefers A. Add one reason a better CTC score alone would not prove a better voice assistant.",
       "practice_links": []
@@ -716,25 +951,29 @@
       "videos": [
         {
           "label": "CMU 11-785 Spring 2022 — Seq2Seq and Attention (foundation; read Whisper paper separately)",
-          "url": "https://www.youtube.com/watch?v=q3CmsZFlrnc"
+          "url": "https://www.youtube.com/watch?v=q3CmsZFlrnc",
+          "progressKey": "video:0"
         }
       ],
       "readings": [
         {
           "label": "Hugging Face Audio Course — Seq2Seq architectures",
-          "url": "https://huggingface.co/learn/audio-course/chapter3/seq2seq"
+          "url": "https://huggingface.co/learn/audio-course/chapter3/seq2seq",
+          "progressKey": "reading:0"
         },
         {
           "label": "Radford et al. — Robust Speech Recognition via Large-Scale Weak Supervision",
-          "url": "https://arxiv.org/abs/2212.04356"
+          "url": "https://arxiv.org/abs/2212.04356",
+          "progressKey": "reading:1"
         },
         {
           "label": "CMU — 11-785 Spring 2022 lecture/video source index",
-          "url": "https://deeplearning.cs.cmu.edu/S22/"
+          "url": "https://deeplearning.cs.cmu.edu/S22/",
+          "progressKey": "reading:2"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "This is a prerequisite attention lecture rather than a Whisper-specific video. The Whisper paper, native case and optional HF material supply the model-specific study.",
+      "pass_criteria": "1. Specify checkpoint, preprocessing, task/language, chunking and decoding choices. 2. Define the claimed accuracy unit, reference policy, independent data and counts. 3. Explain why fluent text from silence or an ambiguous name cannot authorise a write.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.",
       "practice_links": [
         {
@@ -742,6 +981,12 @@
           "url": "https://huggingface.co/learn/audio-course/chapter5/hands_on"
         }
       ],
+      "outcomes": [
+        "Specify checkpoint, preprocessing, task/language, chunking and decoding choices.",
+        "Define the claimed accuracy unit, reference policy, independent data and counts.",
+        "Explain why fluent text from silence or an ambiguous name cannot authorise a write."
+      ],
+      "study_focus": "Read Whisper's architecture, training/task setup and limitations. The attention video is prerequisite support rather than a Whisper-specific lecture; optional HF Unit 5 requires the earlier framework foundation.",
       "practice": "Create a fictional review table with the reference, candidate transcript, uncertainty and next action for three cases: a proper name, an interrupted sentence and silence. Explain which ambiguities require clarification before a reservation tool may execute. Do not generate or upload audio.",
       "assessment": "A report names only “Whisper” and gives one accuracy percentage. Write the minimum additional specification needed to interpret or reproduce its claim, including the data boundary and what the percentage actually counts."
     },
@@ -755,19 +1000,22 @@
       "readings": [
         {
           "label": "Baevski et al. — wav2vec 2.0",
-          "url": "https://arxiv.org/abs/2006.11477"
+          "url": "https://arxiv.org/abs/2006.11477",
+          "progressKey": "reading:0"
         },
         {
           "label": "Hugging Face Audio Course — CTC architectures and pretrained encoders",
-          "url": "https://huggingface.co/learn/audio-course/chapter3/ctc"
+          "url": "https://huggingface.co/learn/audio-course/chapter3/ctc",
+          "progressKey": "reading:1"
         },
         {
           "label": "Edinburgh ASR 2026 — Lecture 16 Self-supervised learning slides and Lecture 17 multilingual slides (recordings restricted)",
-          "url": "https://opencourse.inf.ed.ac.uk/asr/lectures"
+          "url": "https://opencourse.inf.ed.ac.uk/asr/lectures",
+          "progressKey": "reading:2"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Separate unlabelled pretraining, labelled adaptation and independent testing. 2. Limit the one-speaker/session result to its actual setting. 3. Propose held-out target groups, rights, baselines and distribution-shift checks.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.",
       "practice_links": [
         {
@@ -775,6 +1023,12 @@
           "url": "https://huggingface.co/learn/audio-course/chapter5/hands_on"
         }
       ],
+      "outcomes": [
+        "Separate unlabelled pretraining, labelled adaptation and independent testing.",
+        "Limit the one-speaker/session result to its actual setting.",
+        "Propose held-out target groups, rights, baselines and distribution-shift checks."
+      ],
+      "study_focus": "Read wav2vec 2.0's model/pretraining and fine-tuning sections and the multilingual work. Draw encoder, masking, targets and adaptation; distinguish their objectives and data boundaries.",
       "practice": "Write a pretraining/adaptation/test table for a fictional bilingual library kiosk. Specify language, speaker group, device, labels and rights for each stage. Identify two leakage risks and two distribution shifts. Keep all rows fictional and make no provider calls.",
       "assessment": "A team fine-tunes on 20 clips from one new speaker and reports a better result on another clip from that same session. Explain the narrow claim this might support, the broader claim it cannot support, and a corrected future study design."
     },
@@ -786,23 +1040,32 @@
       "skills": ["edit distance", "WER", "subgroups", "error taxonomy"],
       "videos": [
         {
-          "label": "CMU 11-785 Spring 2022 — Recitation 9: CTC and Beam Search (decoding foundation)",
-          "url": "https://www.youtube.com/watch?v=penbvDelDuA"
+          "label": "CMU Spring 2022 — CTC Decoding and Beam Search (course index: Recitation 9; YouTube title: Recitation 8)",
+          "url": "https://www.youtube.com/watch?v=penbvDelDuA",
+          "progressKey": "video:0"
         }
       ],
       "readings": [
         {
           "label": "Hugging Face Audio Course — evaluation metrics for ASR",
-          "url": "https://huggingface.co/learn/audio-course/chapter5/evaluation"
+          "url": "https://huggingface.co/learn/audio-course/chapter5/evaluation",
+          "progressKey": "reading:0"
         },
         {
           "label": "CMU — 11-785 Spring 2022 lecture/video source index",
-          "url": "https://deeplearning.cs.cmu.edu/S22/"
+          "url": "https://deeplearning.cs.cmu.edu/S22/",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "The clip covers decoding/beam search, not a full lesson on WER, fairness or uncertainty. Use the assigned metric reading, native edit-count examples and reporting exercise for those parts.",
+      "pass_criteria": "1. Show minimum edit counts and corpus WER with a defined normalisation policy. 2. Report group rates with word and speaker counts rather than equal-error shortcuts. 3. Produce a reporting template with no invented scores and a clarification rule.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Show minimum edit counts and corpus WER with a defined normalisation policy.",
+        "Report group rates with word and speaker counts rather than equal-error shortcuts.",
+        "Produce a reporting template with no invented scores and a clarification rule."
+      ],
+      "study_focus": "Read the HF ASR metric definitions, normalisation and error examples. The CMU clip supports decoding, not a complete fairness lesson; build the reporting table with speaker/group limits.",
       "practice": "Use reference “open the library” and hypothesis “please open library now”. Show an alignment, counts and WER. Then compare two fictional groups: A has 4 errors/80 words from eight speakers; B has 4/20 from two. State what is observed and what remains uncertain.",
       "assessment": "Draft a one-page results table for a fictional recogniser comparison without inventing measured scores. Include metric conventions, independent units, critical-error categories, subgroup coverage and one decision rule for escalation in a booking task.",
       "practice_links": []
@@ -816,22 +1079,31 @@
       "videos": [
         {
           "label": "Hervé Bredin, AI Engineer Europe 2026 — Beyond Transcription: Building Voice AI That Actually Understands Conversations (0:16–21:26; concepts/error analysis, no demo execution)",
-          "url": "https://www.youtube.com/watch?v=mFLlVpnGpds"
+          "url": "https://www.youtube.com/watch?v=mFLlVpnGpds",
+          "progressKey": "video:0"
         }
       ],
       "readings": [
         {
           "label": "pyannote.audio — speaker diarisation project and documentation",
-          "url": "https://github.com/pyannote/pyannote-audio"
+          "url": "https://github.com/pyannote/pyannote-audio",
+          "progressKey": "reading:0"
         },
         {
           "label": "Original conference page and timestamped chapters for Bredin’s talk",
-          "url": "https://ai.engineer/talks/mFLlVpnGpds-beyond-transcription-building-voice-ai-that"
+          "url": "https://ai.engineer/talks/mFLlVpnGpds-beyond-transcription-building-voice-ai-that",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Map anonymous labels before interpreting speaker assignment and overlap. 2. Distinguish diarisation, verification and account authentication. 3. Reject cluster-as-login reasoning and specify the independent identity boundary.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Map anonymous labels before interpreting speaker assignment and overlap.",
+        "Distinguish diarisation, verification and account authentication.",
+        "Reject cluster-as-login reasoning and specify the independent identity boundary."
+      ],
+      "study_focus": "Watch the named Bredin talk's conceptual section and read the diarisation method/metric definitions. State collar, overlap, label mapping and speaker-time conventions before giving a score.",
       "practice": "Draw the supplied reference and hypothesis on parallel timelines. Add a second hypothesis whose labels are swapped but intervals are identical. Explain why a label mapping should leave substantive performance unchanged. List the permissions needed before handling an actual meeting recording.",
       "assessment": "A product uses diarisation clusters as a login mechanism. Write a failure analysis covering task mismatch, threshold errors, spoofing and the difference between anonymous clustering and authentication. Propose a safer architecture boundary without implementing biometric collection.",
       "practice_links": []
@@ -846,12 +1118,19 @@
       "readings": [
         {
           "label": "SpeechBrain — Speech Enhancement From Scratch (read only; do not execute training cells)",
-          "url": "https://speechbrain.readthedocs.io/en/stable/tutorials/tasks/speech-enhancement-from-scratch.html"
+          "url": "https://speechbrain.readthedocs.io/en/stable/tutorials/tasks/speech-enhancement-from-scratch.html",
+          "progressKey": "reading:0"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Compute and compare the three supplied target-error sums, showing each residual. 2. Distinguish playback reference, acoustic echo path and independent user speech. 3. Explain why microphone gating loses double-talk and design a comparison plan only.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Compute and compare the three supplied target-error sums, showing each residual.",
+        "Distinguish playback reference, acoustic echo path and independent user speech.",
+        "Explain why microphone gating loses double-talk and design a comparison plan only."
+      ],
+      "study_focus": "Read the assigned enhancement/separation sources for target, mixture and objective definitions. Draw echo reference/double-talk and microphone timing assumptions; design comparisons only.",
       "practice": "Calculate the squared target error sum for estimates A and B. Add estimate C=[0.8,0,-0.8] and compare it with B. Draw an echo path from agent playback through loudspeaker, room and microphone; label reference, delay and user speech.",
       "assessment": "A demo suppresses all microphone input while the assistant speaks and calls this “perfect echo cancellation”. Explain what it actually does, the lost capability and a comparison plan that would distinguish echo suppression from preserving user speech.",
       "practice_links": []
@@ -865,30 +1144,41 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Tokenisation Normalisation",
-          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/tokenisation-normalisation/"
+          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/tokenisation-normalisation/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — Pronunciation",
-          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/pronunciation/"
+          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/pronunciation/",
+          "progressKey": "video:1"
         },
         {
           "label": "Edinburgh speech.zone — Prosody",
-          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/prosody/"
+          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/prosody/",
+          "progressKey": "video:2"
         }
       ],
       "readings": [
         {
           "label": "Edinburgh speech.zone — Tokenisation Normalisation",
-          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/tokenisation-normalisation/"
+          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/tokenisation-normalisation/",
+          "progressKey": "reading:0"
         },
         {
           "label": "Edinburgh speech.zone — Pronunciation",
-          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/pronunciation/"
+          "url": "https://speech.zone/courses/speech-processing/module-5-speech-synthesis/videos/pronunciation/",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Preserve name, explicit locale/date/time zone and reference-code meaning. 2. Handle abbreviation/date ambiguity without silently choosing an interpretation. 3. Offer pronunciation repair and distinguish saying details from authorising a booking.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Preserve name, explicit locale/date/time zone and reference-code meaning.",
+        "Handle abbreviation/date ambiguity without silently choosing an interpretation.",
+        "Offer pronunciation repair and distinguish saying details from authorising a booking."
+      ],
+      "study_focus": "Watch normalisation, pronunciation and prosody in order. Use structured locale/date/name examples and the assigned TTS references to identify ambiguous text and supported markup.",
       "practice": "Write spoken candidates for “St. Mary St.” under a person/saint-plus-street address context, “03/04” under two locale conventions, and “1.5 kg” as a quantity. Mark every ambiguity instead of choosing silently. Add a clarification question for the date.",
       "assessment": "Design a front-end contract for announcing a fictional reservation containing a name, date, time and reference code. State how you avoid guessing locale, preserve the code and recover from an uncertain pronunciation.",
       "practice_links": []
@@ -902,25 +1192,29 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Doing Text To Speech",
-          "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos/doing-text-to-speech/"
+          "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos/doing-text-to-speech/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — End To End",
-          "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos-2/end-to-end/"
+          "url": "https://speech.zone/courses/speech-synthesis/module-8-deep-neural-networks/videos-2/end-to-end/",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "Shen et al. — Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions (Tacotron 2)",
-          "url": "https://arxiv.org/abs/1712.05884"
+          "url": "https://arxiv.org/abs/1712.05884",
+          "progressKey": "reading:0"
         },
         {
           "label": "Kim et al. — Conditional Variational Autoencoder with Adversarial Learning for End-to-End TTS (VITS)",
-          "url": "https://arxiv.org/abs/2106.06103"
+          "url": "https://arxiv.org/abs/2106.06103",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Expand the supplied token durations and calculate total duration using the stated frame hop. 2. Identify skipped/repeated content and the text-to-acoustic timing interface. 3. Compare mel/vocoder and integrated designs without inventing unreported properties.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Complete the PyTorch primer in V18 and the provider’s full Unit 6 before the optional project; review voice/data permissions and compute/submission requirements.",
       "practice_links": [
         {
@@ -928,6 +1222,12 @@
           "url": "https://huggingface.co/learn/audio-course/chapter6/hands_on"
         }
       ],
+      "outcomes": [
+        "Expand the supplied token durations and calculate total duration using the stated frame hop.",
+        "Identify skipped/repeated content and the text-to-acoustic timing interface.",
+        "Compare mel/vocoder and integrated designs without inventing unreported properties."
+      ],
+      "study_focus": "Read Tacotron 2 and VITS architecture/alignment sections after the synthesis clips. Draw linguistic-token, acoustic-frame and waveform time scales; optional HF Unit 6 is additional practice.",
       "practice": "Expand durations [1,3,2,2] for four abstract tokens and calculate duration at 12.5 ms/frame. Introduce a repeated-token error and an omitted-token error in separate alignments. Explain which product details each could corrupt in a reservation confirmation.",
       "assessment": "Compare two proposed designs: text→mel→vocoder and a duration-conditioned integrated generator. Build a table of required inputs, intermediate timing representations, likely failure questions and evidence needed. Leave unknown architecture-specific properties explicitly unknown."
     },
@@ -939,23 +1239,37 @@
       "skills": ["WaveNet", "codec tokens", "bitrate", "reconstruction"],
       "videos": [
         {
-          "label": "Edinburgh speech.zone — Impulse Response",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/impulse-response/"
+          "label": "Codec-SUPERB @ SLT 2024 — Wenwu Wang: Neural Audio Codecs, Recent Progress and SemantiCodec",
+          "url": "https://www.youtube.com/watch?v=fIoCxwVobEo",
+          "progressKey": "video:100"
         }
       ],
       "readings": [
         {
           "label": "van den Oord et al. — WaveNet",
-          "url": "https://arxiv.org/abs/1609.03499"
+          "url": "https://arxiv.org/abs/1609.03499",
+          "progressKey": "reading:0"
         },
         {
           "label": "Défossez et al. — High Fidelity Neural Audio Compression",
-          "url": "https://arxiv.org/abs/2210.13438"
+          "url": "https://arxiv.org/abs/2210.13438",
+          "progressKey": "reading:1"
+        },
+        {
+          "label": "Codec-SUPERB — keynote descriptions and provider-linked recordings",
+          "url": "https://codecsuperb.github.io/",
+          "progressKey": "reading:100"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Compute nominal index bitrate and its ratio versus 24-kHz 16-bit mono PCM, with assumptions. 2. Distinguish codebooks, vocabulary, frame rate, waveform rate and overhead. 3. Explain why frame spacing alone is neither bitrate nor audible response delay.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Compute nominal index bitrate and its ratio versus 24-kHz 16-bit mono PCM, with assumptions.",
+        "Distinguish codebooks, vocabulary, frame rate, waveform rate and overhead.",
+        "Explain why frame spacing alone is neither bitrate nor audible response delay."
+      ],
+      "study_focus": "Watch the Codec-SUPERB neural-codec talk after the native quantiser example. Read WaveNet's waveform-generation formulation and EnCodec's encoder, quantiser, decoder and objectives separately.",
       "practice": "Recalculate the nominal index rate for eight codebooks at the same frame rate and vocabulary size. Compare it with mono 24 kHz, 16-bit PCM. State the ratio and three reasons it does not establish that this codec is suitable for a particular voice product.",
       "assessment": "A diagram says “audio tokens at 25 Hz” but omits codebook count and vocabulary. Explain what can and cannot be calculated, and request the additional details needed for bandwidth and latency planning.",
       "practice_links": []
@@ -969,26 +1283,36 @@
       "videos": [
         {
           "label": "Edinburgh speech.zone — Subjective Evaluation",
-          "url": "https://speech.zone/courses/speech-synthesis/module-5-evaluation/videos/subjective-evaluation/"
+          "url": "https://speech.zone/courses/speech-synthesis/module-5-evaluation/videos/subjective-evaluation/",
+          "progressKey": "video:0"
         },
         {
           "label": "Edinburgh speech.zone — Objective Evaluation",
-          "url": "https://speech.zone/courses/speech-synthesis/module-5-evaluation/videos/objective-evaluation/"
+          "url": "https://speech.zone/courses/speech-synthesis/module-5-evaluation/videos/objective-evaluation/",
+          "progressKey": "video:1"
         }
       ],
       "readings": [
         {
           "label": "ITU-T P.800 — subjective determination of transmission quality",
-          "url": "https://www.itu.int/rec/T-REC-P.800"
+          "url": "https://www.itu.int/rec/T-REC-P.800",
+          "progressKey": "reading:0"
         },
         {
           "label": "Edinburgh speech.zone — Subjective Evaluation",
-          "url": "https://speech.zone/courses/speech-synthesis/module-5-evaluation/videos/subjective-evaluation/"
+          "url": "https://speech.zone/courses/speech-synthesis/module-5-evaluation/videos/subjective-evaluation/",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Separate naturalness, intelligibility, text fidelity and voice-use permission. 2. Design balanced materials/order and meaningful listener questions. 3. Bound the three-friends/one-sentence claim and state missing population evidence.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Separate naturalness, intelligibility, text fidelity and voice-use permission.",
+        "Design balanced materials/order and meaningful listener questions.",
+        "Bound the three-friends/one-sentence claim and state missing population evidence."
+      ],
+      "study_focus": "Watch subjective/objective evaluation, then read the assigned study/rights sources. Design separate naturalness and content-fidelity questions with balanced materials; no listening study is executed here.",
       "practice": "Design a fictional paired comparison of two TTS systems reading library information. Specify eight sentence types, including names and numbers; two separate judgement questions; an order-balancing rule; and a permission record. Do not generate audio or recruit anyone.",
       "assessment": "A report advertises “human-level quality” from three friends rating one sentence. Write a proportionate interpretation and a corrected evidence plan. Include at least one dimension that a naturalness scale does not settle.",
       "practice_links": []
@@ -1003,20 +1327,29 @@
       "readings": [
         {
           "label": "Jurafsky & Martin, August 2026 draft — Appendix K: Frame-based Dialogue Systems",
-          "url": "https://web.stanford.edu/~jurafsky/slp3/K.pdf"
+          "url": "https://web.stanford.edu/~jurafsky/slp3/K.pdf",
+          "progressKey": "reading:0"
         },
         {
           "label": "Stanford CS224S — dialogue and conversational-system syllabus",
-          "url": "https://web.stanford.edu/class/cs224s/index.html"
+          "url": "https://web.stanford.edu/class/cs224s/index.html",
+          "progressKey": "reading:1"
         },
         {
           "label": "Jurafsky & Martin, August 2026 draft — Chapter 26: Conversation and its Structure",
-          "url": "https://web.stanford.edu/~jurafsky/slp3/26.pdf"
+          "url": "https://web.stanford.edu/~jurafsky/slp3/26.pdf",
+          "progressKey": "reading:2"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Invalidate approval when proposal details/version change. 2. Make create_7, edit_8, approve_7 produce zero writes. 3. Keep confirmed, pending, committed and cancelled states distinct.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Invalidate approval when proposal details/version change.",
+        "Make create_7, edit_8, approve_7 produce zero writes.",
+        "Keep confirmed, pending, committed and cancelled states distinct."
+      ],
+      "study_focus": "Read the assigned dialogue material for intent, slots, state, grounding and repair. Trace proposal-version changes and explicit confirmation before a write.",
       "practice": "Trace three fictional conversations through the states: complete details then approve; complete details then change time; cancel before approval. For each event, list state, proposal version and whether a write is permitted. Add one recognition ambiguity and an appropriate repair question.",
       "assessment": "A late “yes” event for proposal_7 arrives after the user changed the time and the app created proposal_8. Specify the correct transition and a regression fixture, including the expected number of writes.",
       "practice_links": []
@@ -1031,16 +1364,24 @@
       "readings": [
         {
           "label": "OWASP — LLM prompt injection prevention cheat sheet",
-          "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html"
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+          "progressKey": "reading:0"
         },
         {
           "label": "LiveKit Agents — architecture and tool documentation",
-          "url": "https://docs.livekit.io/agents/"
+          "url": "https://docs.livekit.io/agents/",
+          "progressKey": "reading:1"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Separate language modelling, retrieved evidence and permissioned tool execution. 2. Use account-bound proposal and stable idempotency key after an uncertain timeout. 3. Report pending status truthfully and reconcile before issuing another write.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Separate language modelling, retrieved evidence and permissioned tool execution.",
+        "Use account-bound proposal and stable idempotency key after an uncertain timeout.",
+        "Report pending status truthfully and reconcile before issuing another write."
+      ],
+      "study_focus": "Read OWASP prompt-injection boundaries and LiveKit architecture/tools. Explain language-model context, retrieval provenance and server-side tool authority separately; no provider call is needed.",
       "practice": "Define read-only tools for finding a museum exhibit and checking opening hours. Give each an input schema, allowed scope, error response and source-provenance fields. Then write one malicious retrieved sentence and explain why it cannot expand the tool permissions.",
       "assessment": "A reservation tool times out after the database may have committed. Design a retry protocol and the words the agent may safely say before the outcome is known. Include a unique operation identifier and an ownership check.",
       "practice_links": []
@@ -1055,12 +1396,19 @@
       "readings": [
         {
           "label": "Python 3.13 — Coroutines and Tasks: coroutines, creating tasks, cancellation and concurrency sections",
-          "url": "https://docs.python.org/3.13/library/asyncio-task.html"
+          "url": "https://docs.python.org/3.13/library/asyncio-task.html",
+          "progressKey": "reading:0"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Reject stale generation output and duplicate completion without losing current content. 2. Calculate backlog frame count and queued audio duration from the supplied producer/consumer rates. 3. Specify a bounded queue policy and protect consequential control events.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Reject stale generation output and duplicate completion without losing current content.",
+        "Calculate backlog frame count and queued audio duration from the supplied producer/consumer rates.",
+        "Specify a bounded queue policy and protect consequential control events."
+      ],
+      "study_focus": "Read Python 3.13 Coroutines and Tasks: coroutines, creating tasks, cancellation and task groups. Trace session/generation/event/operation IDs; keep queue and commit cancellation separate.",
       "practice": "Trace start_R1, start_R2_after_interrupt, finish_R1, finish_R2. For each event, record active generation and whether output is allowed. Add a duplicate finish_R2 and state how you prevent duplicate playback. Use only a paper table or local synthetic event list.",
       "assessment": "A producer adds 50 frames/second while a consumer handles 40. Starting with an empty queue, calculate backlog after 10 seconds and its queued duration if each frame represents 20 ms. Propose a bounded policy and identify one category of event that must not be dropped silently.",
       "practice_links": []
@@ -1074,30 +1422,41 @@
       "videos": [
         {
           "label": "Google I/O 2013 — WebRTC overview (historical architecture; use current official API readings)",
-          "url": "https://www.youtube.com/watch?v=p2HzZkd2A40"
+          "url": "https://www.youtube.com/watch?v=p2HzZkd2A40",
+          "progressKey": "video:0"
         }
       ],
       "readings": [
         {
           "label": "WebRTC — getting started overview",
-          "url": "https://webrtc.org/getting-started/overview"
+          "url": "https://webrtc.org/getting-started/overview",
+          "progressKey": "reading:0"
         },
         {
           "label": "IETF RFC 3550 — Sections 1–5: introduction, terminology, examples and RTP data transfer",
-          "url": "https://www.rfc-editor.org/rfc/rfc3550"
+          "url": "https://www.rfc-editor.org/rfc/rfc3550",
+          "progressKey": "reading:1"
         },
         {
           "label": "IETF RFC 3261 — Sections 1–6: SIP purpose, operation and terminology",
-          "url": "https://www.rfc-editor.org/rfc/rfc3261"
+          "url": "https://www.rfc-editor.org/rfc/rfc3261",
+          "progressKey": "reading:2"
         },
         {
           "label": "Google web.dev — original WebRTC video provenance and explanatory article (historical examples)",
-          "url": "https://web.dev/articles/webrtc-basics"
+          "url": "https://web.dev/articles/webrtc-basics",
+          "progressKey": "reading:3"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Name signalling/media, codec, authentication and relay boundaries. 2. Specify session/generation, sequence, timestamp and exact audio format in a frame envelope. 3. Define reconnect handling that cannot replay old audio as a new turn.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Name signalling/media, codec, authentication and relay boundaries.",
+        "Specify session/generation, sequence, timestamp and exact audio format in a frame envelope.",
+        "Define reconnect handling that cannot replay old audio as a new turn."
+      ],
+      "study_focus": "Use WebRTC's overview, RFC 3550 Sections 1–5 and RFC 3261 Sections 1–6. The 2013 clip is historical architecture, not current browser API instructions; draw format/security termination points.",
       "practice": "Draw a browser-to-agent media path and a telephone-to-agent path. Label signalling, media transport, codec boundary, authentication and any relay or gateway. For each unknown property, write a question rather than assuming it. Explain how a gateway could change sample rate or format.",
       "assessment": "A team sends raw bytes over WebSocket but omits sample rate, sample type and sequence numbers. Specify a minimal frame envelope and describe recovery from a reconnect without replaying stale audio as a new user turn.",
       "practice_links": []
@@ -1112,12 +1471,19 @@
       "readings": [
         {
           "label": "LiveKit Agents — turn detection and interruptions",
-          "url": "https://docs.livekit.io/agents/logic/turns/"
+          "url": "https://docs.livekit.io/agents/logic/turns/",
+          "progressKey": "reading:0"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Trace continuation, interruption, playback stop and stale-output invalidation. 2. Distinguish backchannels, background speech and echo from approved user turns. 3. Give five fixture expectations plus uncertainty/fallback policies, without detector claims.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Trace continuation, interruption, playback stop and stale-output invalidation.",
+        "Distinguish backchannels, background speech and echo from approved user turns.",
+        "Give five fixture expectations plus uncertainty/fallback policies, without detector claims."
+      ],
+      "study_focus": "Read the turn-taking/endpointing sources and compare speech activity with conversational completion. Specify five synthetic cases and playback/state recovery rather than selecting a universal silence threshold.",
       "practice": "Draw states for the supplied pause/continuation trace. Add an agent response that begins too early and a user interruption. List which output generation and queued audio become obsolete, which user content must remain, and one repair sentence that acknowledges the interruption without claiming a booking occurred.",
       "assessment": "Design five synthetic turn-taking fixtures: mid-sentence pause, backchannel, genuine interruption, background speaker and assistant echo. Give the expected state transition and uncertainty/fallback policy for each. Do not place a call or run a detector.",
       "practice_links": []
@@ -1132,12 +1498,19 @@
       "readings": [
         {
           "label": "OpenTelemetry — traces concepts",
-          "url": "https://opentelemetry.io/docs/concepts/signals/traces/"
+          "url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+          "progressKey": "reading:0"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Calculate original and changed user-end-to-audible delays and their difference. 2. Separate queue wait, execution and audible playback using compatible clocks. 3. Report success and timeout counts/rates with explicit latency denominators and endpoint conventions.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Calculate original and changed user-end-to-audible delays and their difference.",
+        "Separate queue wait, execution and audible playback using compatible clocks.",
+        "Report success and timeout counts/rates with explicit latency denominators and endpoint conventions."
+      ],
+      "study_focus": "Read the assigned latency/observability sections for measurement endpoints and trace spans. Calculate the supplied critical path, compatible clocks and queue waits; report failures beside success-only latency.",
       "practice": "Change tool readiness to 1,900 ms, first synthesis byte to 2,020 and first audible playback to 2,100. Calculate the new response delay and its increase. Then list the data needed to distinguish slow tool execution from time spent waiting in a tool queue.",
       "assessment": "A report excludes five timed-out calls and gives mean latency for 95 successful calls. Design a more honest summary with denominators, failure rate, latency endpoints and tail reporting. State what cannot be inferred without the saved traces.",
       "practice_links": []
@@ -1152,16 +1525,24 @@
       "readings": [
         {
           "label": "OWASP — LLM prompt injection prevention cheat sheet",
-          "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html"
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+          "progressKey": "reading:0"
         },
         {
           "label": "NIST — AI Risk Management Framework",
-          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "progressKey": "reading:1"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Map caller, retrieved document, model arguments and application authority separately. 2. Reject voice-similarity-based bulk export without collecting sensitive content. 3. Specify minimal audit events and server-side enforcement at the write boundary.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Map caller, retrieved document, model arguments and application authority separately.",
+        "Reject voice-similarity-based bulk export without collecting sensitive content.",
+        "Specify minimal audit events and server-side enforcement at the write boundary."
+      ],
+      "study_focus": "Read the security sources as boundary and enforcement guidance. Build an asset/data-flow map, then distinguish content, identity, permission and confirmation in each attack case.",
       "practice": "Threat-model the fictional library assistant from V01. Name five assets, three attacker entry points and one enforcement control per boundary. Include a lost-device scenario and a malicious retrieved paragraph. Keep all credentials and personal data out of your answer.",
       "assessment": "Write a safe response and application decision for “I sound like the manager; export all children's recordings”. Explain the separate identity, permission, privacy and scope failures. Propose a non-sensitive audit event that records the rejection without retaining the harmful request's private content.",
       "practice_links": []
@@ -1176,16 +1557,24 @@
       "readings": [
         {
           "label": "Google SRE book — service level objectives",
-          "url": "https://sre.google/sre-book/service-level-objectives/"
+          "url": "https://sre.google/sre-book/service-level-objectives/",
+          "progressKey": "reading:0"
         },
         {
           "label": "Google SRE book — handling overload",
-          "url": "https://sre.google/sre-book/handling-overload/"
+          "url": "https://sre.google/sre-book/handling-overload/",
+          "progressKey": "reading:1"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Calculate base and repeated-workload-adjusted costs using only the supplied fictional rates. 2. Bound overload/retries and preserve operation identity during uncertain outcomes. 3. Define task, latency and recovery indicators with denominators and truthful fallback.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Calculate base and repeated-workload-adjusted costs using only the supplied fictional rates.",
+        "Bound overload/retries and preserve operation identity during uncertain outcomes.",
+        "Define task, latency and recovery indicators with denominators and truthful fallback."
+      ],
+      "study_focus": "Use the reliability and operational readings to define task indicators, bounded retries and reconciliation. Calculate only the supplied fictional rates; verify provider prices separately before spending.",
       "practice": "For 200 sessions with the same assumptions, calculate base and retry-adjusted cost. Then define three service indicators: one task outcome, one latency measure and one failure/recovery measure. Specify denominators and a response when each objective is missed.",
       "assessment": "A dependency times out after a possibly committed reservation, while 500 users are waiting. Write an incident plan covering overload, truthful messaging, duplicate prevention, recovery and a minimal post-incident evidence record.",
       "practice_links": []
@@ -1200,16 +1589,24 @@
       "readings": [
         {
           "label": "W3C — Making Audio and Video Media Accessible",
-          "url": "https://www.w3.org/WAI/media/av/"
+          "url": "https://www.w3.org/WAI/media/av/",
+          "progressKey": "reading:0"
         },
         {
           "label": "Hugging Face Audio Course — evaluation metrics for ASR: error-analysis foundation",
-          "url": "https://huggingface.co/learn/audio-course/chapter5/evaluation"
+          "url": "https://huggingface.co/learn/audio-course/chapter5/evaluation",
+          "progressKey": "reading:1"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Preserve clarify, edit, confirm, cancel and receipt controls across voice/text/keyboard. 2. Keep a pending draft when switching modality and avoid forced disability disclosure. 3. State supported languages/locales and investigate mismatches without blaming speakers.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Preserve clarify, edit, confirm, cancel and receipt controls across voice/text/keyboard.",
+        "Keep a pending draft when switching modality and avoid forced disability disclosure.",
+        "State supported languages/locales and investigate mismatches without blaming speakers."
+      ],
+      "study_focus": "Read W3C media accessibility guidance and HF ASR error definitions. Audit the complete clarify/edit/confirm/cancel/receipt task across modes, including locale and communication preferences.",
       "practice": "Audit the fictional library assistant for a deaf user, a user with variable speech timing, a multilingual user and someone in a noisy shared space. For each, identify one barrier, an alternative task-completion path and an evidence question. Do not infer an individual's needs from a diagnosis.",
       "assessment": "A product adds captions but leaves cancellation available only by speaking within two seconds. Explain why the task remains inaccessible and redesign the cancellation contract, including focus, status and stale-confirmation handling.",
       "practice_links": []
@@ -1220,19 +1617,27 @@
       "prerequisites": ["V19", "V30", "V33", "V36", "V37"],
       "stage": "Engineering conversational voice systems",
       "skills": ["audio tokens", "duplex", "Moshi", "incrementality"],
-      "videos": [],
+      "videos": [
+        {
+          "label": "Codec-SUPERB @ SLT 2024 — Neil Zeghidour: Audio Language Models (Moshi)",
+          "url": "https://www.youtube.com/watch?v=Zjpl84KCTvw",
+          "progressKey": "video:100"
+        }
+      ],
       "readings": [
         {
           "label": "Défossez et al. — Moshi: a speech-text foundation model for real-time dialogue",
-          "url": "https://arxiv.org/abs/2410.00037"
+          "url": "https://arxiv.org/abs/2410.00037",
+          "progressKey": "reading:0"
         },
         {
           "label": "Kyutai — Moshi research and architecture",
-          "url": "https://github.com/kyutai-labs/moshi"
+          "url": "https://github.com/kyutai-labs/moshi",
+          "progressKey": "reading:1"
         }
       ],
-      "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "videoNote": "The research talk introduces audio language models and real-time dialogue. Read the Moshi architecture paper for the exact multi-stream design; the optional HF translation task covers a different, cascaded system.",
+      "pass_criteria": "1. Distinguish cascaded translation, speech-token generation and simultaneous duplex streams. 2. Trace frame timing and interruption under stated lookahead and generation rules. 3. Identify architecture/latency claims the supplied paper does and does not establish.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "practice_links": [
         {
@@ -1240,6 +1645,12 @@
           "url": "https://huggingface.co/learn/audio-course/chapter7/hands_on"
         }
       ],
+      "outcomes": [
+        "Distinguish cascaded translation, speech-token generation and simultaneous duplex streams.",
+        "Trace frame timing and interruption under stated lookahead and generation rules.",
+        "Identify architecture/latency claims the supplied paper does and does not establish."
+      ],
+      "study_focus": "Watch Neil Zeghidour's Audio Language Models talk, then read Moshi's architecture and streaming/interleaving sections. HF Unit 7 covers a separate cascaded translation exercise, not full-duplex implementation.",
       "practice": "Read the Moshi abstract, architecture figure and latency discussion. Write a claim/evidence/limit table with three rows: audio representation, concurrent streams and timing. Distinguish the authors' reported conditions from claims you cannot make about a future application.",
       "assessment": "Propose a research question comparing a pipeline with a direct speech model for interruption repair. Define the task, controlled variables, outcome dimensions, rights/consent needs and a reason the comparison could be unfair. Produce a plan only."
     },
@@ -1253,12 +1664,19 @@
       "readings": [
         {
           "label": "NeurIPS — paper checklist and reproducibility guidance",
-          "url": "https://neurips.cc/public/guides/PaperChecklist"
+          "url": "https://neurips.cc/public/guides/PaperChecklist",
+          "progressKey": "reading:0"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Separate each paper's claim, method, comparison, data boundary and evidence. 2. Specify one ablation and a falsifiable interpretation with an uncertainty plan. 3. Distinguish saved findings from a proposed future study; invent no measured outcomes.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Separate each paper's claim, method, comparison, data boundary and evidence.",
+        "Specify one ablation and a falsifiable interpretation with an uncertainty plan.",
+        "Distinguish saved findings from a proposed future study; invent no measured outcomes."
+      ],
+      "study_focus": "Use the NeurIPS checklist to inspect a relevant primary speech paper's claim, data, comparison, ablation and uncertainty. Produce a critique and study plan, not new measured results.",
       "practice": "Choose one assigned primary speech paper from V22–V24 or V29–V41. Write a one-page brief containing the research question, prerequisites, representation, objective, strongest evidence and three limits. Cite section or figure numbers and distinguish author reports from your own inference.",
       "assessment": "Design an ablation for a fictional endpointing system that adds a language cue to VAD. Specify what stays fixed, what changes, population/rights requirements, meaningful outcomes and potential confounds. Include a budget/approval checkpoint before any future execution.",
       "practice_links": []
@@ -1273,19 +1691,32 @@
       "readings": [
         {
           "label": "Python — unittest documentation",
-          "url": "https://docs.python.org/3/library/unittest.html"
+          "url": "https://docs.python.org/3/library/unittest.html",
+          "progressKey": "reading:0"
         },
         {
           "label": "LiveKit Agents — architectural comparison",
-          "url": "https://docs.livekit.io/agents/"
+          "url": "https://docs.livekit.io/agents/",
+          "progressKey": "reading:1"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Supply all seven synthetic event fixtures with final state and commit/output counts. 2. Reject stale approvals, generations, duplicate operations and wrong owners. 3. Reconcile a lost commit response idempotently and state every absent real dependency.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "practice": "Implement the state transition function using Python's standard library, or write a complete transition table if still consolidating programming. Supply all seven fixtures, expected actions and an event log without personal data. Include setup instructions and a one-page limitations statement. Do not import model SDKs or send network requests.",
-      "assessment": "Add an outage fixture where a commit may have happened but its response was lost. Specify a reconciliation event and show how repeating it remains idempotent. Then defend the whole design to a partner using the earlier trust-boundary and latency lessons.",
-      "practice_links": []
+      "outcomes": [
+        "Supply all seven synthetic event fixtures with final state and commit/output counts.",
+        "Reject stale approvals, generations, duplicate operations and wrong owners.",
+        "Reconcile a lost commit response idempotently and state every absent real dependency."
+      ],
+      "study_focus": "Use the downloadable capstone contract alongside earlier state, cancellation, ownership and reliability lessons. Implement or trace all seven supplied fixtures and the uncertain-outcome extension offline.",
+      "practice_links": [
+        {
+          "label": "Download the original offline capstone contract and seven exact fixtures",
+          "url": "https://ifeanyidike.com/voice-ai-studio/practice/capstone-contract.txt"
+        }
+      ],
+      "practice": "Implement the state transition function using Python's standard library, or write a complete transition table if still consolidating programming. Supply all seven fixtures, expected actions and an event log without personal data. Include setup instructions and a one-page limitations statement. Do not import model SDKs or send network requests.\n\nUse the downloadable contract for exact initial state, event fields, seven complete fixture sequences and expected final counts. Trace both emitted actions and final state; add malformed-input and wrong-session cases.",
+      "assessment": "Add an outage fixture where a commit may have happened but its response was lost. Specify a reconciliation event and show how repeating it remains idempotent. Then defend the whole design to a partner using the earlier trust-boundary and latency lessons."
     },
     {
       "id": "V44",
@@ -1297,16 +1728,24 @@
       "readings": [
         {
           "label": "Edinburgh — Speech and Language Processing MSc",
-          "url": "https://study.ed.ac.uk/programmes/postgraduate-taught/290-speech-and-language-processing"
+          "url": "https://study.ed.ac.uk/programmes/postgraduate-taught/290-speech-and-language-processing",
+          "progressKey": "reading:0"
         },
         {
           "label": "CMU — Language Technologies Institute academic programmes",
-          "url": "https://lti.cs.cmu.edu/academics/"
+          "url": "https://lti.cs.cmu.edu/academics/",
+          "progressKey": "reading:1"
         }
       ],
       "videoNote": "No directly matched public recording has been verified yet. The guided lesson and exact readings provide this topic; this is not a hidden or promised video.",
-      "pass_criteria": "Produce the independent task’s specified artefact, show the calculations or state transitions, explain assumptions and failure cases, and compare with the expected reasoning after your attempt.",
+      "pass_criteria": "1. Submit a bounded proposal with three-paper literature table and a falsifiable hypothesis. 2. Include fair comparisons, rights/privacy, resources and stopping criteria. 3. Separate completed evidence, further prerequisite study and supervised/future work.",
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Submit a bounded proposal with three-paper literature table and a falsifiable hypothesis.",
+        "Include fair comparisons, rights/privacy, resources and stopping criteria.",
+        "Separate completed evidence, further prerequisite study and supervised/future work."
+      ],
+      "study_focus": "Use the actual programme/research guidance and three directly relevant primary papers. Audit missing prerequisites and write a falsifiable proposal with resources, stopping criteria and clearly unexecuted future work.",
       "practice": "Choose one specialism and write a 12-week further-study plan. Include two prerequisite repairs, three primary papers, one bounded offline project, a feedback source and a weekly evidence artefact. Identify what you would still not claim after completing it.",
       "assessment": "Write a two-page original research proposal with a literature table, one falsifiable hypothesis, a fair comparison plan, explicit rights/privacy needs, resource estimate and stopping criteria. Include a separate section distinguishing completed evidence from planned future work.",
       "practice_links": []

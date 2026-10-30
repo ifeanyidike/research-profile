@@ -12,9 +12,13 @@ def parse(path):
     field = None
     for line in path.read_text().splitlines():
         if line.startswith('ID:: '):
-            current = {}; blocks[line[5:].strip()] = current; field = None
+            id = line[5:].strip()
+            assert id not in blocks, 'Duplicate authored lesson: ' + id
+            current = {}; blocks[id] = current; field = None
         elif ':: ' in line and line.split(':: ', 1)[0].isupper():
-            key, value = line.split(':: ', 1); field = key.lower(); current[field] = value
+            key, value = line.split(':: ', 1); field = key.lower()
+            assert field not in current, 'Duplicate field: ' + field
+            current[field] = value
         elif field:
             current[field] += '\n' + line
         elif line.strip():
@@ -28,12 +32,16 @@ def build(check=False):
         dest = ROOT / data['slug']
         authored = parse(SOURCE / (subject + '.txt'))
         modules = data['modules']
+        assert len({m['id'] for m in modules}) == len(modules), 'Duplicate module IDs'
+        assert len({m['pass_criteria'] for m in modules}) == len(modules), 'Topic-specific criteria required'
         assert set(authored) == {m['id'] for m in modules}, subject
         seen = set()
         lessons = {}
         for m in modules:
             assert all(p in seen for p in m['prerequisites']), m['id']
             seen.add(m['id'])
+            assert len(m['outcomes']) == 3 and all(isinstance(x, str) and x.strip() for x in m['outcomes']), m['id']
+            assert m['study_focus'].strip(), m['id']
             a = authored[m['id']]
             fields = ['bridge', 'concept', 'mechanism', 'teaching', 'example', 'explanation', 'pitfall', 'exercise', 'solution', 'challenge', 'challenge_solution', 'question', 'correct', 'wrong1', 'wrong2', 'feedback']
             assert all(a.get(f) for f in fields), m['id']
@@ -59,9 +67,9 @@ def build(check=False):
                 (dest/name).write_text(json.dumps(expected, ensure_ascii=False, indent=2)+'\n')
         lines=[data['name'], '='*len(data['name']), '', 'Source map reviewed 30 October 2026. Original lessons and fictional exercises; external providers own their materials.', '']
         for m in modules:
-            lines += [m['id']+' — '+m['title'], 'Prerequisites: '+(', '.join(m['prerequisites']) or 'None'), 'Path: '+m.get('audienceLabel','All learners'), 'Videos:']
+            lines += [m['id']+' — '+m['title'], 'Prerequisites: '+(', '.join(m['prerequisites']) or 'None'), 'Path: '+m.get('audienceLabel','All learners'), 'Study assignment: '+m['study_focus'], 'Video coverage/access: '+m['videoNote'], 'Videos:']
             lines += ['  '+r['label']+' — '+r['url'] for r in m['videos']]
-            if not m['videos']: lines += ['  '+m['videoNote']]
+            if not m['videos']: lines += ['  No video assigned; follow the coverage note above.']
             lines += ['Readings:']+['  '+r['label']+' — '+r['url'] for r in m['readings']]
             lines += ['Additional practical materials:']+['  '+r['label']+' — '+r['url'] for r in m['practice_links']] if m['practice_links'] else []
             lines += ['Practical: '+m['practice'], 'Independent assessment: '+m['assessment'], 'Pass criteria: '+m['pass_criteria'], 'Source notes: '+m['note'], '']

@@ -1,0 +1,87 @@
+V43 — Offline voice-agent control capstone
+=========================================
+Original learning material. No audio, microphone, network, provider SDK, model,
+training, benchmark or real reservation is involved. Implement a pure function
+transition(state, event) -> (new_state, actions), or supply a complete paper table.
+All names/accounts below are fictional. Begin each independent fixture fresh.
+
+State contract
+--------------
+owner: "A"; session: "S1"; proposal: null; response_generation: 0;
+phase: "collect"; mode: "voice"; operations: {}; consumed_output_ids: [];
+commit_count: 0; published_output_count: 0.
+A proposal has version, date, time and an approved flag initially false.
+Do not create actual dates from the system clock; use "2030-06-14" and "14:00".
+Each event includes session and account. Reject a wrong session or account before
+changing state or taking action. Unknown kinds are rejected with no side effect.
+
+Event and action contract
+-------------------------
+propose(version,date,time): replace pending details; invalidate old approval;
+  phase becomes confirm only when date/time are present, otherwise collect.
+approve(version,key): only the current complete proposal may be approved.
+  Bind key to owner and this exact proposal. Simulate one commit for a new key;
+  a repeated key with identical details returns the previous result. Reusing the
+  key for different details must be rejected, not silently treated as success.
+  phase becomes done only when an authoritative successful result is known.
+cancel: cancel an uncommitted proposal; never claim a completed write was undone.
+start_response(generation): start a newer response generation.
+interrupt: increment generation; emit stop_playback and flush_unplayed_audio.
+output(generation,event_id): publish only a current-generation event not consumed
+  before. Reject or ignore stale/duplicate output. Track output count separately
+  from commits, because speech and application writes are different effects.
+switch_mode(mode): select voice or text; preserve pending proposal and access to
+  review, edit, confirm and cancel. Do not interpret this as approval.
+
+Seven required independent fixtures
+-----------------------------------
+1. Missing detail:
+   propose(version=1,date=null,time="14:00")
+   Expect phase collect; ask_date action; commit_count=0.
+2. Valid owner confirmation:
+   propose(7,"2030-06-14","14:00"); approve(7,"K7")
+   Expect done; operation K7 bound to owner A/proposal 7; commit_count=1.
+3. Duplicate confirmation:
+   same as 2, then approve(7,"K7") again
+   Expect commit_count=1 and same stored operation result, not another write.
+4. Late approval:
+   propose(7,"2030-06-14","14:00"); propose(8,"2030-06-14","15:00");
+   approve(7,"K7")
+   Expect pending proposal 8; phase confirm; stale approval rejected;
+   commit_count=0; proposal 8 is not approved by the old event.
+5. Interrupted output:
+   start_response(4); interrupt; output(4,"O1"); output(5,"O2"); output(5,"O2")
+   Expect generation 5; stop/flush actions; published_output_count=1;
+   only O2 consumed; commit_count=0. An output must never imply tool success.
+6. Wrong owner:
+   owner A proposes 7; account B sends approve(7,"K7") for session S1
+   Expect denial; proposal remains unapproved; commit_count=0.
+7. Accessible continuation:
+   propose(7,"2030-06-14","14:00"); switch_mode("text")
+   Expect same pending details/version; mode text; phase confirm;
+   edit/confirm/cancel remain available; commit_count=0.
+
+For each event give old state, validated event, new state, emitted action and
+both counts. Add your own malformed-input and wrong-session counterexamples.
+Implementations must validate shapes/types before mutation; do not use Python
+assert as the production input validator. Use exceptions or explicit error values.
+
+Independent extension: uncertain outcome
+----------------------------------------
+Extend approve with a simulated lost response. The authoritative fake service
+may have committed K7, while the agent only knows "pending/unknown". Do not mark
+success or create K8 to retry. Define reconcile(key,owner,proposal,status), using
+only supplied authoritative fixture data. A committed status for the correct
+binding resolves K7; repeat reconciliation without increasing commit_count.
+A status for another owner/proposal must be rejected. Interrupted playback must
+not erase this pending operation or claim it was reversed.
+
+Submission and review
+----------------------
+Provide source or complete state tables, seven fixtures, the extension, independent
+expected results, local command/Python version if implemented, and limitations.
+Explain how every identifier differs: session, generation, output event, proposal
+version and operation key. Ask a partner to challenge a stale-event and an ownership
+case. Passing these fixtures verifies a small deterministic control contract only;
+it does not establish ASR, TTS, real media timing, authentication, provider behavior,
+accessibility with real users or production reliability.

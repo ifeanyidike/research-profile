@@ -22,7 +22,14 @@ new import versions in their consumers. Do not serve a new renderer with an
 old cached curriculum schema.
 python3 _learning/build.py packages authored teaching, validates prerequisite
 closure for each learning path and builds the public source maps. It has no
-network, model, training or evaluation dependencies. Do not run provider demos,
+network, model, training or evaluation dependencies.
+Each module also has three observable outcomes, a topic-specific study_focus and
+video coverage/access notes. These appear in the lesson and readable source map.
+Videos/readings have explicit stable progressKey values (video:N or reading:N).
+Preserve a key when moving the same assignment; give replacement/new material a
+new unused key. Never reuse a removed key: old backups retain those checks.
+The client and hosted validators accept these existing numeric checklist keys;
+no progress schema migration or learner-data rewrite is needed for this release. Do not run provider demos,
 training recipes, speech inference or evaluation harnesses to validate the site.
 
 Verification
