@@ -185,7 +185,16 @@ test("content evidence stays attached to the reviewed assignment and exposes unr
     seen.add(key);
     const r = topics[`${a.studio}/${a.topic}`].videos.find((r) => r.progressKey === a.progressKey);
     assert.deepEqual(
-      { url: r.url, assignment: r.assignment, durationSeconds: r.durationSeconds, segments: r.segments || [] },
+      {
+        label: r.label,
+        url: r.url,
+        playbackUrl: r.playbackUrl || r.url,
+        watchMode: r.watchMode,
+        timingSource: r.timingSource,
+        assignment: r.assignment,
+        durationSeconds: r.durationSeconds,
+        segments: r.segments || [],
+      },
       a.reviewedAssignment,
       key + ": assignment changed after content review"
     );

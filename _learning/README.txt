@@ -131,7 +131,8 @@ two categories do not establish complete spoken-content or speech-level timing
 verification. Metadata advertising captions is not evidence that they were read.
 
 contentReview.method/note/sources appear on the Watch & read cards and in source
-maps. Keep this status attached to its URL, assignment and excerpt ranges;
+maps. Keep this status attached to its named video, publisher/playback URLs, timing
+source, viewing mode, assignment and excerpt ranges;
 changing those requires revisiting the evidence and review manifest. Preserve
 existing progressKey identities. Never publish signed/expiring caption URLs,
 provider sessions or copied complete transcripts in the repository. Link to the

@@ -75,7 +75,8 @@ assigned lesson component. Teaching material reviewed: exact-video materials
 checked, with speech still unverified. Spoken content unverified: provisional
 identity/outline match only. Every record names remaining teaching limitations.
 No claim of universal accuracy is made for the 37 assignments lacking full speech
-verification. The JSON manifest freezes the assignment URL/text/range reviewed;
+verification. The JSON manifest freezes the named video, publisher/playback URLs, timing
+source, viewing mode, assignment text and range reviewed;
 changes require renewed review instead of silently inheriting the old evidence.
 
 
