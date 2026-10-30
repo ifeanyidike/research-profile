@@ -128,6 +128,8 @@ def build():
     p("<b>Voice &amp; AI:</b> Pipecat, Twilio, WebSockets, WebRTC, streaming STT/TTS, VAD, LLM tools, RAG, PyTorch, Hugging Face.")
 
     p("RESEARCH, OPEN SOURCE &amp; WRITING", "section")
+    p("<b>VoxCPM2 / vLLM-Omni:</b> Built a test harness for LoRA speech adapters, checked speech-recognition scoring against human recordings, and "
+      + link("https://github.com/vllm-project/vllm-omni/issues/6004#issuecomment-6526965322", "reported base, full-adapter and LM-only results upstream") + ".")
     p("<b>Voice-agent evaluation:</b> Sole-author preprints on "
       + link("https://doi.org/10.5281/zenodo.20548903", "ATR")
       + " and Full-Duplex-Bench reproduction, with "
