@@ -431,14 +431,15 @@ Source notes: Public source assignments are study references, not institutional 
 V20 — Speech datasets, annotation, consent and licensing
 Prerequisites: V05, V10, V13
 Path: All learners
-Study assignment: Watch the four-minute Datasheets author interview, then document the fictional dataset: provenance, audio rights, annotation uncertainty and speaker/session splits. Classical TTS clips are optional illustrations.
-Video coverage/access: Core viewing is the 4:00 dataset-documentation interview. Speech annotation, consent/licensing decisions and split construction are completed in the native exercise and paper; optional TTS clips do not replace those requirements.
+Study assignment: Watch the 4:55 datasheet example, then apply the original paper to a fictional speech manifest, rights record, annotation uncertainties and speaker/session split.
+Video coverage/access: Core viewing: 4:55 on datasheet documentation, with a readable transcript. The example is a web archive; audio annotation, consent/licensing and leakage-free splits remain native/paper tasks.
 Videos:
-  ACM / Timnit Gebru — Datasheets for Datasets — https://vimeo.com/639588440?h=a28bc8a741
-    Assignment: Watch the complete named video, 0:00–4:00. In this author interview, Timnit Gebru explains why dataset documentation should record provenance, collection, uses and limitations. Map those questions to the fictional speech manifest, rights record and speaker/session split; the interview is not a speech-annotation software tutorial.
-    Access: Original ACM author interview hosted on Vimeo. Its public oEmbed metadata identifies CACM and a 4:00 running time. Playback is on the provider page; the assigned paper remains the detailed checklist.
-    Content evidence (description-only): ACM identifies this as the Datasheets author interview. Its full speech remains unverified; use the assigned paper for documentation questions and the native lesson for speech-data rights and splits.
-      Original publisher source: https://vimeo.com/639588440?h=a28bc8a741
+  IIPC / British Library — describing collections with datasheets for datasets — https://digital.library.unt.edu/ark:/67531/metadc2337196/
+    Assignment: Watch the complete named video, 0:00–4:55. Identify motivation, composition, collection process and recommended uses, then map those fields to the fictional speech-data manifest. This web-archive case teaches dataset documentation, not speech annotation software. Use the Datasheets paper and Common Voice reading for audio rights, consent, licensing and speaker/session splits.
+    Access: Open the named 4:55 recording on the UNT page. Its English captions are automatic; use the transcript link to read them. No download or workshop execution is required.
+    Content evidence (transcript-reviewed): The complete university-hosted automatic captions describe the datasheet framework and a concrete web-archive documentation project. Names and acronyms have caption errors; the original Datasheets paper supplies the authoritative framework.
+      University-hosted video and transcript: https://digital.library.unt.edu/ark:/67531/metadc2337196/
+      Accessible English captions: https://digital.library.unt.edu/ark:/67531/metadc2337196/m1/1/captions-eng.vtt
   Optional: Edinburgh speech.zone — Script Design — https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/script-design/
     Assignment: Optional classical TTS database-design example after the native dataset/annotation introduction. Read Datasheets for Datasets and the dataset licence for consent, coverage and reuse requirements; these TTS clips do not teach all those requirements. Alignment details may be revisited after V21/V28.
   Optional: Edinburgh speech.zone — Annotating The Database — https://speech.zone/courses/speech-synthesis/module-4-the-database/videos/annotating-the-database/
@@ -744,13 +745,15 @@ Source notes: Public source assignments are study references, not institutional 
 V33 — LLMs, retrieval and permissioned tools for voice
 Prerequisites: V19, V32
 Path: All learners
-Study assignment: Watch the RAG explanation and selected action/tool examples. Draw content provenance, model proposals and server-owned authority separately, then work the permissioned booking contract.
-Video coverage/access: Core viewing is 10:53: IBM’s 6:35 RAG explanation plus 4:18 of Rasa action examples. The native lesson/OWASP reading supplies the security boundaries; product demos are viewed only, not executed.
+Study assignment: Watch only the 6:14 RAG pipeline passage. Keep retrieved evidence, generated answers and tool authority separate in the native operation/idempotency exercise.
+Video coverage/access: Core RAG viewing is 2:22–8:36 (6:14). Retrieval and generated context are illustrated; permissioned actions, safe retries and truthful pending states remain separate native/readings work.
 Videos:
-  IBM / Marina Danilevsky — retrieval-augmented generation — https://www.youtube.com/watch?v=T-D1OfcDW1M
-    Assignment: Watch the complete named video, 0:00–6:35. Draw retrieval, evidence/context and generation separately. Identify where retrieved material can be stale, wrong or adversarial; retrieval does not automatically make an answer true or grant permission to act.
-    Content evidence (description-only): IBM’s outline supports retrieval, generation and citing evidence. The full speech remains unverified; use the native lesson to test stale/adversarial evidence and enforce tool permissions.
-      Original publisher source: https://www.youtube.com/watch?v=T-D1OfcDW1M
+  Conf42 / Alejandro Duarte — retrieval, context and generation — https://www.conf42.com/Database_DevOps_2026_Alejandro_Duarte_llm_vectors_semantic
+    Assignment: Watch only 2:22–8:36. Trace product data → embeddings → retrieval → prompt context → generated answer. This is an architecture illustration; no Java, MariaDB installation or provider calls are needed. RAG can reduce some errors but does not guarantee truth, grant access to private data or authorise a tool write. Complete the native permission/idempotency exercise separately.
+    Watch 2:22–8:36: Context, ingestion, retrieval and the prompt
+    Content evidence (transcript-reviewed): The organiser’s timed automatic transcript matches the assigned RAG pipeline passage. The talk initially overstates hallucination prevention; retrieved context remains fallible and untrusted, and permissioned tool execution is a separate responsibility.
+      Organiser video and readable transcript: https://www.conf42.com/Database_DevOps_2026_Alejandro_Duarte_llm_vectors_semantic
+      Organiser timed transcript: https://github.com/conf42/src/blob/main/srt/dbd2026_Alejandro_Duarte.srt
   Rasa — action types and custom tools — https://info.rasa.com/building-conversational-ai-assistants-with-calm-video-tutorial-series
     Assignment: Watch only 0:46–2:14, 7:03–9:53. Watch action types and the custom-action example only. Separate a model’s action request from the server-side validation, identity and permission checks required by the native tool contract. The video’s function execution example is not an authorisation design.
     Watch 0:46–2:14: Types of actions
@@ -771,20 +774,19 @@ Source notes: Public source assignments are study references, not institutional 
 V34 — Streaming, asynchronous events and cancellation
 Prerequisites: V04, V05, V32
 Path: All learners
-Study assignment: Read the native async bridge, then watch the three listed primer excerpts. Trace scheduling, cancellation, queue/state ownership and uncertain commits using only the supplied fictional events.
-Video coverage/access: The 1:42:41 tutorial is reduced to three assigned sections totalling 33:22. The 26:46 EuroPython treatment is optional depth. Current Python 3.13 documentation and the native cancellation exercise remain core.
+Study assignment: Watch the 3:56 standalone coroutine/task example, read the Python 3.13 task/cancellation sections and trace the supplied stale, duplicate and bounded-backlog cases. Use the TaskGroup talk only for optional depth.
+Video coverage/access: Core viewing: 3:25–7:21 (3:56) of the standalone Python asyncio example. No Django setup is required. The optional 26:46 EuroPython TaskGroup talk now has a readable archived transcript; current Python docs and native event/queue reasoning remain required.
 Videos:
-  Corey Schafer — asyncio foundations, concurrent tasks and task groups — https://www.youtube.com/watch?v=oAkLSJNr5zY
-    Assignment: Watch only 1:00–13:52, 25:40–34:00, 55:10–1:07:20. Study the event loop, awaitables/tasks, the corrected concurrency example and gather/task groups. Skip the long refactoring/network-demo section. Then trace session/generation/event/operation IDs and cancellation in the native offline fixture; task cancellation alone does not undo a committed side effect.
-    Watch 1:00–13:52: Concurrency, coroutines and tasks
-    Watch 25:40–34:00: Correcting concurrent execution
-    Watch 55:10–1:07:20: Gather and task groups
-    Content evidence (description-only): The author describes event-loop, coroutine and task teaching with worked animations. The selected sections’ full speech and cut points remain unverified; use the native fixture for stale events, queues and cancellation.
-      Original publisher source: https://www.youtube.com/watch?v=oAkLSJNr5zY
+  DjangoCon US / Carlton Gibson — Python async, await and task lifetimes — https://www.djangotv.com/videos/djangocon-us/2022/async-django-the-practical-guide-youve-been-awaiting-for-with-carlton-gibson-dcus-2022/
+    Assignment: Watch only 3:25–7:21. Follow the standalone Python sleep/task example: calling a coroutine, awaiting it, scheduling tasks and waiting before the event loop exits. Stop before the Django background-job discussion. No Django knowledge or web-server setup is required. Apply these basics to the native generation, duplicate-event and bounded-queue traces.
+    Watch 3:25–7:21: Coroutines, task scheduling and waiting for completion
+    Content evidence (transcript-reviewed): The readable, time-linked community transcript of the official DjangoCon recording matches the standalone asyncio example. It is automatic and misspells API names; read async def, await, create_task, gather and asyncio.run in the assigned Python documentation.
+      Video and time-linked automatic transcript: https://www.djangotv.com/videos/djangocon-us/2022/async-django-the-practical-guide-youve-been-awaiting-for-with-carlton-gibson-dcus-2022/#transcript
   Optional: EuroPython / Junya Fukuda — TaskGroup exceptions and cancellation — https://pyvideo.org/europython-2023/asyncio-evolved-enhanced-exception-handling-with-taskgroup-in-python-311.html
     Assignment: Watch the complete named video, 0:00–26:46. Optional deeper treatment of exception groups and TaskGroup cancellation after the selected primer. This is a Python 3.11-era talk; use the assigned Python 3.13 documentation for the exact target-version behaviour. View only; do not run provider or network examples.
-    Content evidence (description-only): The conference outline describes Python 3.11 TaskGroup exception/cancellation behaviour. The full talk remains unverified; this optional source does not establish the current target-version semantics.
-      Original publisher source: https://pyvideo.org/europython-2023/asyncio-evolved-enhanced-exception-handling-with-taskgroup-in-python-311.html
+    Content evidence (transcript-reviewed): TIB’s complete automatic transcript of this EuroPython 2023 talk was read. It covers gather versus TaskGroup, exception groups and cancellation. Captions mistranscribe API names and PEP 654: use the Python 3.13 documentation. Successful TaskGroup exit waits for tasks; sibling cancellation follows failure/cancellation, not every normal exit.
+      Same conference recording with readable transcript: https://av.tib.eu/media/68642
+      Accessible archived English captions: https://av.tib.eu/api/v0/videos/68642/transcription/607607/vtt
 Readings:
   Python 3.13 — Coroutines and Tasks: coroutines, creating tasks, cancellation and concurrency sections — https://docs.python.org/3.13/library/asyncio-task.html
     Assignment: Read the named article or specified sections: Python 3.13 — Coroutines and Tasks: coroutines, creating tasks, cancellation and concurrency sections. Focus on event ordering, queues, session state and use the native worked example to check your interpretation.
@@ -796,14 +798,16 @@ Source notes: Public source assignments are study references, not institutional 
 V35 — WebRTC, WebSockets and telephony fundamentals
 Prerequisites: V12, V34
 Path: All learners
-Study assignment: Watch only the 6:50 signaling/STUN/TURN/security section, then use current WebRTC documentation and the assigned RTP/SIP sections to draw media, signaling, format and security termination points.
-Video coverage/access: A bounded historical concept section replaces the optional full replay. It is not current browser setup, WebSocket or SIP instruction; those parts remain in the native lesson and current readings.
+Study assignment: Watch the three listed WebRTC passages (6:49 total). Treat Django/Channels as examples of web/signalling servers. Use the readings to distinguish media, signalling, codec, authentication and relay responsibilities, then write the native frame and reconnect contract.
+Video coverage/access: Core viewing is three selected passages totalling 6:49: the media/signalling diagram, STUN and TURN. Django is an illustrative server stack, not a prerequisite. Use current references for SDP/codecs and the native reconnect/authority exercise for implementation.
 Videos:
-  Google for Developers — signaling, STUN/TURN and transport security (historical concepts) — https://www.youtube.com/watch?v=p2HzZkd2A40
-    Assignment: Watch only 16:31–23:21 (6:50): signaling, NAT traversal with STUN/TURN and transport-security concepts. This is a 2013 talk; browser/API availability, platform support and product claims are historical. Use the current WebRTC and RTP/SIP readings for the implementation/standards boundary.
-    Watch 16:31–23:21: Signaling, STUN/TURN and security
-    Content evidence (description-only): Uploader chapters identify signaling, STUN/TURN and security in 16:31–23:21. The spoken excerpt remains unverified; use current transport references for implementation details.
-      Original publisher source: https://www.youtube.com/watch?v=p2HzZkd2A40
+  DjangoCon US / Ken Whitesell — media, signalling, STUN and TURN — https://djangotv.com/videos/djangocon-us/2024/webrtc-with-django-channels-htmx-and-coturn-with-ken-whitesell/
+    Assignment: Watch only 4:11–6:29, 22:12–24:31, 26:12–27:44. Use the diagram to separate peer media from WebSocket signalling, then compare STUN address discovery with TURN relaying. Django/Channels are examples of web/signalling servers, not prerequisites or required tools. The depicted mesh is one topology, not every WebRTC deployment. Use current WebRTC/RFC readings for SDP, codecs and protocol details, and the native task for authentication, frame contracts and reconnect rules.
+    Watch 4:11–6:29: Peer media and WebSocket signalling
+    Watch 22:12–24:31: STUN and address discovery
+    Watch 26:12–27:44: TURN relaying, bandwidth and access control
+    Content evidence (transcript-reviewed): The three assigned passages have a readable, time-linked automatic transcript of the official conference video. Whole transcript paragraphs keep the media/signalling, STUN and TURN explanations together. The excerpts omit the broad HTTP-fallback and no-public-TURN claims elsewhere in the talk; mesh scaling and this demo’s authentication are not production recommendations.
+      Video and time-linked automatic transcript: https://djangotv.com/videos/djangocon-us/2024/webrtc-with-django-channels-htmx-and-coturn-with-ken-whitesell/#transcript
 Readings:
   WebRTC — getting started overview — https://webrtc.org/getting-started/overview
     Assignment: Read the named article or specified sections: WebRTC — getting started overview. Focus on packets, jitter, RTP and use the native worked example to check your interpretation.
@@ -821,14 +825,14 @@ Source notes: Public source assignments are study references, not institutional 
 V36 — VAD, endpointing, turn-taking and barge-in
 Prerequisites: V25, V32, V34, V35
 Path: All learners
-Study assignment: Watch the 2:37 turn-detection demonstration, then distinguish VAD, semantic completion, interruption and playback recovery in all five synthetic cases. Read current provider details as version-specific examples.
-Video coverage/access: The short LiveKit demonstration supplies an exact conversational example. It does not establish a universal endpoint threshold, current audio-model performance or safe tool-commit behaviour; the native task covers those limits.
+Study assignment: Watch the 1:23 geography/phone-number pause example. Distinguish speech activity from turn completion, then work all five native continuation, backchannel, interruption and stale-playback cases without running inference.
+Video coverage/access: Core viewing is the 1:23 pause/endpointing demonstration with a readable creator transcript. It illustrates unfinished turns, not current model rankings, backchannel accuracy, safe interruption or tool commits. The native five-case trace and current documentation supply those boundaries.
 Videos:
-  LiveKit — turn detection versus speech activity — https://docs.livekit.io/agents/logic/turns/turn-detector/
-    Assignment: Watch the complete named video, 0:00–2:37. Contrast detecting speech activity with predicting a completed conversational turn. Apply the examples to the native pause, backchannel and interruption cases. This 2025 demonstration concerns the earlier text-based detector, not the newer audio-model implementation or a universal timing threshold.
-    Access: The short publisher demonstration illustrates the concept. Read current documentation for the current audio/text model distinction and configuration; do not copy historical defaults or run inference for the exercise.
-    Content evidence (description-only): The original source identifies the earlier turn-detector demonstration. The full speech remains unverified; the native lesson supplies the backchannel, interruption and uncertainty policies.
-      Original publisher source: https://docs.livekit.io/agents/logic/turns/turn-detector/
+  Kwindla Hultman Kramer / Pipecat — pauses within an unfinished turn — https://www.linkedin.com/posts/kwkramer_betterfastercheaper-voice-ai-turn-detection-activity-7276742083007205378-JFGG
+    Assignment: Watch the complete named video, 0:00–1:23. Observe the pauses inside geography questions and a fictional phone-number response. A pause need not mean the speaker has finished. Compare these examples with the native continuation, backchannel, interruption and stale-playback cases. This December 2024 demonstration is not evidence of current Gemini superiority, cost or a universal endpoint threshold; no demo execution or phone call is required.
+    Access: Open the 1:23 video on the original post and select Transcript. The public page exposes the transcript; LinkedIn may still show a sign-in prompt in some browsers. The same spoken content is readable without running the demo.
+    Content evidence (transcript-reviewed): The creator’s public video transcript contains both the interrupted geography questions and the spaced-out phone-number reply. Its published duration is 1:23. The surrounding product-comparison claims were not independently established and are not assigned as facts.
+      Creator video and accessible transcript: https://www.linkedin.com/posts/kwkramer_betterfastercheaper-voice-ai-turn-detection-activity-7276742083007205378-JFGG
 Readings:
   LiveKit Agents — turn detection and interruptions — https://docs.livekit.io/agents/logic/turns/
     Assignment: Read the named article or specified sections: LiveKit Agents — turn detection and interruptions. Focus on VAD, endpointing, interruptions and use the native worked example to check your interpretation.
@@ -859,13 +863,16 @@ Source notes: Public source assignments are study references, not institutional 
 V38 — Voice privacy, prompt injection and abuse resistance
 Prerequisites: V20, V31, V33, V36
 Path: All learners
-Study assignment: Watch the 10:57 injection explanation, then map assets and enforcement in the four native voice-agent attack cases. Keep transcript content, speaker identity, permission and confirmation separate.
-Video coverage/access: The video teaches the prompt-injection component. Voice spoofing, audio privacy and permission enforcement remain native/OWASP reading requirements; no attack is executed against a live service.
+Study assignment: Watch the two short security passages (1:57 total). Map untrusted caller/retrieval content separately from model suggestions and application/tool authority, then complete the native protected-action and minimal-audit design.
+Video coverage/access: Core viewing is 7:53–8:55 and 18:43–19:38 (1:57 total) on indirect inputs and tool authorisation. Study privacy, least privilege and minimal logging in the native lesson and OWASP/NIST readings; the talk’s reported attack-test results are not assigned facts.
 Videos:
-  IBM / Jeff Crume — prompt-injection attacks and trust boundaries — https://www.youtube.com/watch?v=jrHRe9lSqqA
-    Assignment: Watch the complete named video, 0:00–10:57. Record the injection examples actually shown and classify them using the direct/indirect distinction in the required reading. Explain why untrusted content cannot become authority. Apply the idea to transcripts and retrieved voice-agent context. An audio voice match is not identity proof, and a prompt-only defence is not a server-side permission check.
-    Content evidence (description-only): IBM identifies a prompt-injection overview. The spoken examples and defences remain unverified; classify only the examples actually shown and use the required reading for the direct/indirect distinction.
-      Original publisher source: https://www.youtube.com/watch?v=jrHRe9lSqqA
+  Conf42 / Manvitha Potluri — indirect injection and tool authorisation — https://www.conf42.com/Prompt_Engineering_2026_Manvitha_Potluri_injection_guardrails_bedrock
+    Assignment: Watch only 7:53–8:55, 18:43–19:38. Identify why one-message input filters miss conversational trajectories and retrieved instructions. Then separate a model proposal from tool authorisation and human approval. Skip the reported attack-test percentages and vendor setup. Neither a semantic detector nor model confidence grants permission or guarantees safety. Apply the native server-side least-privilege and minimal-audit exercise.
+    Watch 7:53–8:55: Why the input boundary alone misses attacks
+    Watch 18:43–19:38: Agent actions require tool authorisation and approval
+    Content evidence (transcript-reviewed): The organiser’s timed automatic transcript matches the two assigned passages: multi-turn/indirect-input limits and the tool-authorisation boundary. The talk’s separate live-test claims are outside this assignment; no attack run or model call is required.
+      Organiser video and readable transcript: https://www.conf42.com/Prompt_Engineering_2026_Manvitha_Potluri_injection_guardrails_bedrock
+      Organiser timed transcript: https://github.com/conf42/src/blob/main/srt/prompt2026_Manvitha_Potluri.srt
 Readings:
   OWASP — LLM prompt injection prevention cheat sheet — https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html
     Assignment: Read the named article or specified sections: OWASP — LLM prompt injection prevention cheat sheet. Focus on privacy, trust boundaries, voice spoofing and use the native worked example to check your interpretation.
@@ -879,13 +886,17 @@ Source notes: Public source assignments are study references, not institutional 
 V39 — Deployment, reliability, observability and cost
 Prerequisites: V05, V10, V37, V38
 Path: All learners
-Study assignment: Watch the 8:12 SRE explanation. Define voice-task indicators, failure/fallback ownership and bounded retries, then use only the supplied fictional rates for cost calculations.
-Video coverage/access: The focused SRE video supplies operational foundations. Voice-specific observability, uncertain outcomes and cost arithmetic remain in the native exercise/current readings; no cloud signup or workload is required.
+Study assignment: Watch the 7:20 reliability selection, define a user-facing indicator with a valid denominator and time window, then calculate fictional repeated-work cost and specify bounded retries, load limits and truthful pending/fallback states.
+Video coverage/access: Core viewing is 3:11–5:20, 10:52–14:45 and 16:08–17:26 (7:20 total). These passages teach reliability indicators, measurement and targets. Native exercises/readings cover voice costs, overload, retries, operation identity and truthful fallback.
 Videos:
-  IBM / Bradley Knapp — site reliability engineering — https://www.youtube.com/watch?v=ztIIcXNzMN4
-    Assignment: Watch the complete named video, 0:00–8:12. Study the reliability/performance role, collaboration and automation overview. Then define service objectives in the native lesson. Apply the principles to the native success/failure indicators, bounded retry/reconciliation plan and fictional cost table. This general SRE overview does not provide current voice-provider pricing.
-    Content evidence (description-only): IBM’s outline describes reliability, performance, collaboration and automation. The full speech remains unverified; service objectives, voice costs and recovery rules are taught in the native lesson.
-      Original publisher source: https://www.youtube.com/watch?v=ztIIcXNzMN4
+  Conf42 / Google SRE — defining user-facing reliability indicators — https://www.conf42.com/forn_Site_Reliability_Engineering_2023_Ramon_Medrano_Llamas_reliability_production
+    Assignment: Watch only 3:11–5:20, 10:52–14:45, 16:08–17:26. Distinguish a critical user journey, SLI, SLO and SLA. Choose a user-visible indicator, its measurement location, valid-request denominator, target and time window for the fictional voice service. A successful HTTP status is only the talk’s example, not proof that a booking was correct. Use the native exercise and Google SRE readings for repeated-work cost, overload, retries and operation identity; do not deploy the cloud sandbox.
+    Watch 3:11–5:20: User journeys, indicators, objectives and agreements
+    Watch 10:52–14:45: Choose and measure a meaningful indicator
+    Watch 16:08–17:26: Targets and error budgets
+    Content evidence (transcript-reviewed): The organiser’s timed automatic transcript covers the selected terminology, SLI specification/instrumentation and SLO/error-budget passages. Caption terms such as “slice” mean SLI; the native lesson makes denominators and the measurement window explicit.
+      Organiser video and readable transcript: https://www.conf42.com/forn_Site_Reliability_Engineering_2023_Ramon_Medrano_Llamas_reliability_production
+      Organiser timed transcript: https://github.com/conf42/src/blob/main/assemblyai/IgVj74_bNKQ.srt
 Readings:
   Google SRE book — service level objectives — https://sre.google/sre-book/service-level-objectives/
     Assignment: Read the named article or specified sections: Google SRE book — service level objectives. Focus on reliability, cost models, fallbacks and use the native worked example to check your interpretation.
@@ -971,17 +982,21 @@ Source notes: Public source assignments are study references, not institutional 
 V43 — Capstone: a deterministic voice-agent simulator
 Prerequisites: V04, V32, V34, V36, V37, V38, V39, V40
 Path: All learners
-Study assignment: Watch the 7:02 state-model unit followed by the 7:57 testing unit. Map states, events and guards onto the supplied offline capstone contract, then justify each fixture and uncertain outcome.
-Video coverage/access: Two focused TU Delft units total 14:59. Only the model/testing concepts are assigned, not the whole Java course. The native contract and fixtures define the voice-agent capstone.
+Study assignment: Watch the 3:18 state-machine introduction and 4:32 testing passage. Translate their diagrams and specification/boundary tests into the native deterministic event simulator; no Java application, external service or mathematical proof course is required.
+Video coverage/access: Core viewing totals 7:50: MIT states/transitions at 1:13–4:31 and specification/boundary testing at 8:35–13:07. Stop before the remaining maths/testing lectures. The native capstone supplies the seven voice-event fixtures and commit/output assertions.
 Videos:
-  TU Delft — introduction to state-machine models — https://ocw.tudelft.nl/course-lectures/2-1-1-video-state-based-testing/
-    Assignment: Watch the complete named video, 0:00–7:02. Study states, inputs and transitions as a model for behaviour. Translate the example to the native deterministic voice-agent contract; do not build a Java application or add a model provider.
-    Content evidence (description-only): TU Delft identifies this as the state-machine introduction in its testing course. The full speech remains unverified; use the native lesson to construct the voice-agent state and event contract.
-      Original publisher source: https://ocw.tudelft.nl/course-lectures/2-1-1-video-state-based-testing/
-  TU Delft — state-based testing — https://ocw.tudelft.nl/course-lectures/2-2-1-video-state-based-testing/
-    Assignment: Watch the complete named video, 0:00–7:57. Derive tests from state/transition behaviour, then use that method to organise the seven supplied fixtures and uncertain-outcome extension. The source uses software examples from a Java course; the reasoning is language-independent and does not implement this studio’s capstone for you.
-    Content evidence (description-only): TU Delft identifies this state-based testing unit. Its complete speech remains unverified; the seven voice-agent fixtures and uncertain-outcome extension are supplied by the studio.
-      Original publisher source: https://ocw.tudelft.nl/course-lectures/2-2-1-video-state-based-testing/
+  MIT / Erik Demaine — states, start state and transitions — https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/resources/61200-sp24-lecture04-2024feb15_v4_mp4/
+    Assignment: Watch only 1:13–4:31. Translate the simple counter diagram into states, a start state and allowed transitions for the native voice simulator. Q means the possible states, q0 the starting state and an arrow an allowed transition. Stop before the formal set-builder discussion: the rest of the maths lecture and induction proofs are not required.
+    Watch 1:13–4:31: States, initial state, transition arrows and a counter
+    Content evidence (transcript-reviewed): MIT’s timed captions match the definitions and simple counter example at 1:13–4:31. This excerpt supplies state-machine vocabulary, not the capstone’s voice-specific event contract or a prerequisite course in mathematical proof.
+      MIT video and transcript: https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/resources/61200-sp24-lecture04-2024feb15_v4_mp4/
+      MIT timed English captions: https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/61200-sp24-lecture04-2024feb15_v4_captions.vtt
+  MIT / Ana Bell — test specifications, branches and boundaries — https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/resources/lecture-7-testing-debugging-exceptions-and-assertions/
+    Assignment: Watch only 8:35–13:07. Compare tests derived from a function’s specification with tests guided by its branches. Notice why branch/path coverage can still miss a boundary bug. Translate that principle to the seven synthetic voice-event fixtures, checking final state, commit count and output count. This is general testing guidance; it does not implement a voice agent or require a model provider.
+    Watch 8:35–13:07: Specification tests, branch tests and missed boundaries
+    Content evidence (transcript-reviewed): MIT’s timed transcript matches the black-box/glass-box definitions, square-root specification and boundary-error example at 8:35–13:07. The native lesson supplies the state/event-specific acceptance cases; general test coverage is not a proof of correctness.
+      MIT video and transcript: https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/resources/lecture-7-testing-debugging-exceptions-and-assertions/
+      MIT timed English captions: https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/6ee3c0a292f8549c97316557478ef6c6_9H6muyZjms0.vtt
 Readings:
   Python — unittest documentation — https://docs.python.org/3/library/unittest.html
     Assignment: Read the named article or specified sections: Python — unittest documentation. Focus on integration, state transitions, fault handling and use the native worked example to check your interpretation.

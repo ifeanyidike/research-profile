@@ -7,6 +7,11 @@ import { resourceCards, assignmentSummary, formatTime } from "../../learning-stu
 import { workspaceStores } from "../../cyber-studio/model.js";
 const read = (slug) => JSON.parse(fs.readFileSync(new URL(`../../${slug}/curriculum.json`, import.meta.url))).modules;
 const studios = ["cyber-studio", "voice-ai-studio", "child-development-studio"];
+const replacementReview = JSON.parse(fs.readFileSync(new URL("../video-transcript-replacements-20261030.json", import.meta.url)));
+const replacementFor = (studio, topic, progressKey) =>
+  replacementReview.replacements.find((a) => a.studio === studio && a.topic === topic && a.previousProgressKey === progressKey);
+const currentVideo = (studio, topic, progressKey, videos) =>
+  videos.find((r) => r.progressKey === (replacementFor(studio, topic, progressKey)?.replacementProgressKey || progressKey));
 
 test("bounded excerpts keep absolute start and end in both URL and explicit-range forms", () => {
   const original = "https://video.cs50.io/UuIEbpQms8o?start=966&end=2697";
@@ -57,9 +62,17 @@ test("all three authored curricula have explicit scope, stable keys, valid sourc
               assert.ok(s.start >= end && s.end > s.start && s.end <= r.durationSeconds, `${m.id}: range outside recording/order`);
               assert.ok(s.label?.trim());
               end = s.end;
-              const url = new URL(videoEmbed(r.playbackUrl || r.url, s));
-              assert.equal(url.searchParams.get("end"), String(s.end));
-              assert.equal(Number(url.searchParams.get("start") || 0), s.start);
+              const embed = videoEmbed(r.playbackUrl || r.url, s);
+              if (embed) {
+                const url = new URL(embed);
+                assert.equal(url.searchParams.get("end"), String(s.end));
+                assert.equal(Number(url.searchParams.get("start") || 0), s.start);
+              } else {
+                const html = resourceCards([r], "video", []);
+                assert.ok(html.includes("manually watch these time ranges"));
+                assert.ok(html.includes(`${formatTime(s.start)}–${formatTime(s.end)}`));
+                assert.ok(!html.includes("The embedded excerpt uses"));
+              }
             }
           }
         }
@@ -150,13 +163,24 @@ test("formerly reading-led topics have timed, scoped core videos without losing 
       );
       assert.doesNotMatch(topic.videoNote, /no closely matched public teaching video|Reading-led topic/i);
       for (const old of review.previousVideos[key]) {
-        const current = topic.videos.find((r) => r.progressKey === old.progressKey);
-        assert.equal(current?.url, old.url, `${id}: completion identity reassigned`);
+        const current = currentVideo(slug, id, old.progressKey, topic.videos);
+        const replacement = replacementFor(slug, id, old.progressKey);
+        assert.equal(replacement?.previousAssignment.url || current?.url, old.url, `${id}: completion identity reassigned`);
         if (old.optional && id !== "V35") assert.equal(current.optional, true, `${id}: an old refresher became required`);
       }
     }
   for (const assignment of review.assignments) {
-    const r = topics[`${assignment.studio}/${assignment.topic}`].videos.find((r) => r.progressKey === assignment.progressKey);
+    const videos = topics[`${assignment.studio}/${assignment.topic}`].videos;
+    const r = currentVideo(assignment.studio, assignment.topic, assignment.progressKey, videos);
+    const replacement = replacementFor(assignment.studio, assignment.topic, assignment.progressKey);
+    if (replacement) {
+      assert.equal(replacement.previousAssignment.url, assignment.url);
+      assert.equal(replacement.previousAssignment.label, assignment.label);
+      assert.equal(replacement.previousAssignment.durationSeconds, assignment.durationSeconds);
+      assert.equal(r?.url, replacement.replacementAssignment.url);
+      assert.ok(!videos.some((v) => v.progressKey === assignment.progressKey));
+      continue;
+    }
     assert.equal(r?.url, assignment.url);
     assert.equal(r.label, assignment.label);
     assert.equal(r.durationSeconds, assignment.durationSeconds);
@@ -170,7 +194,7 @@ test("formerly reading-led topics have timed, scoped core videos without losing 
 });
 
 test("content evidence stays attached to the reviewed assignment and exposes unresolved speech checks", () => {
-  const review = JSON.parse(fs.readFileSync(new URL("../video-content-review-20261030.json", import.meta.url)));
+  const review = JSON.parse(fs.readFileSync(new URL("../video-content-review-20261030-transcripts.json", import.meta.url)));
   const topics = Object.fromEntries(studios.flatMap((slug) => read(slug).map((m) => [`${slug}/${m.id}`, m])));
   const counts = {};
   const seen = new Set();
@@ -218,4 +242,71 @@ test("content evidence stays attached to the reviewed assignment and exposes unr
   assert.equal(defence.segments[0].end, 2893);
   assert.match(topics["cyber-studio/R03"].videoNote, /6:43/, "R03: obsolete core-viewing duration");
   assert.doesNotMatch(topics["cyber-studio/R03"].videoNote, /11:36/);
+});
+
+test("the description-only audit accounts for all seventeen sources without rewriting their history", () => {
+  const baseline = JSON.parse(fs.readFileSync(new URL("../video-content-review-20261030.json", import.meta.url)));
+  const descriptionOnly = baseline.assignments.filter((a) => a.method === "description-only");
+  const key = (a, progressKey = a.progressKey) => `${a.studio}/${a.topic}/${progressKey}`;
+  const targets = new Map(descriptionOnly.map((a) => [key(a), a]));
+  assert.equal(targets.size, 17);
+  assert.equal(replacementReview.replacements.length, 15);
+  const accounted = new Set();
+  for (const a of replacementReview.replacements) {
+    const id = key(a, a.previousProgressKey);
+    assert.ok(targets.has(id), id);
+    assert.ok(!accounted.has(id), id);
+    accounted.add(id);
+    assert.deepEqual(a.previousAssignment, targets.get(id).reviewedAssignment, "Historical source identity changed: " + id);
+    assert.notEqual(a.previousProgressKey, a.replacementProgressKey);
+    assert.ok(Number(a.replacementProgressKey.split(":")[1]) >= 200);
+  }
+  for (const a of [...replacementReview.verifiedExisting, ...replacementReview.unresolved]) {
+    assert.ok(targets.has(key(a)) && !accounted.has(key(a)));
+    accounted.add(key(a));
+  }
+  assert.equal(accounted.size, 17);
+  const pending = read("voice-ai-studio")
+    .find((m) => m.id === "V25")
+    .videos.find((r) => r.progressKey === "video:100");
+  assert.equal(pending.contentReview.method, "description-only");
+  assert.match(resourceCards([pending], "video", []), /Spoken content unverified/);
+});
+
+test("different recordings never inherit a learner's retired video checkmarks", () => {
+  const rows = new Map();
+  const db = { getItem: (k) => rows.get(k) ?? null, setItem: (k, v) => rows.set(k, v) };
+  const all = new Map(studios.flatMap((slug) => read(slug).map((m) => [`${slug}/${m.id}`, m])));
+  const stores = workspaceStores(db, new Set([...all.values()].map((m) => m.id)), () => 100);
+  const store = stores("guest");
+  for (const a of replacementReview.replacements) {
+    const m = all.get(`${a.studio}/${a.topic}`);
+    store.update("ifeanyi", m.id, { resources: JSON.stringify([a.previousProgressKey, "reading:0"]) });
+    const checked = JSON.parse(store.record("ifeanyi", m.id).values.resources);
+    const r = m.videos.find((r) => r.progressKey === a.replacementProgressKey);
+    assert.ok(!m.videos.some((v) => v.progressKey === a.previousProgressKey), "Retired key reused: " + m.id);
+    assert.ok(r, m.id);
+    assert.equal(r.url, a.replacementAssignment.url);
+    assert.equal(r.playbackUrl || r.url, a.replacementAssignment.playbackUrl);
+    const html = resourceCards(m.videos, "video", checked);
+    assert.ok(html.includes(`data-resource="${r.progressKey}"`));
+    assert.ok(!html.includes(`data-resource="${r.progressKey}" checked`), m.id + ": replacement completed from old source");
+    assert.ok(resourceCards(m.readings, "reading", checked).includes('data-resource="reading:0" checked'), "Unrelated reading progress lost");
+    assert.deepEqual(checked, [a.previousProgressKey, "reading:0"], "Review mutated stored progress");
+  }
+  const same = all.get("voice-ai-studio/V34").videos.find((r) => r.progressKey === "video:101");
+  assert.equal(same.optional, true);
+  assert.equal(same.durationSeconds, 1606);
+  assert.equal(same.contentReview.method, "transcript-reviewed");
+  assert.ok(resourceCards([same], "video", ["video:101"]).includes('data-resource="video:101" checked'));
+});
+
+test("provider-only excerpts give manual stop instructions instead of promising an embedded stop", () => {
+  const r = read("child-development-studio").find((m) => m.id === "P12").videos[0];
+  const html = resourceCards([r], "video", []);
+  assert.match(html, /7:17–13:49/);
+  assert.match(html, /manually watch these time ranges/);
+  assert.match(html, /This provider is not embedded here/);
+  assert.doesNotMatch(html, /The embedded excerpt uses|class="video-load"/);
+  assert.ok(assignmentSummary(r).includes("7:17–13:49"));
 });
