@@ -1,0 +1,245 @@
+/* Common studio layout: keep the active task prominent and supporting details nearby. */
+.sidebar .brand {
+  margin-bottom: 26px;
+}
+.sidebar-guides,
+.studio-links {
+  margin: 14px 0 0;
+}
+.sidebar-guides > summary,
+.studio-links > summary {
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  min-height: 44px;
+}
+.studio-links {
+  margin-bottom: auto;
+}
+.studio-links a {
+  display: block;
+  padding: 9px 12px;
+  font-size: 0.85rem;
+}
+.sidebar-bottom {
+  margin-top: 24px;
+}
+main.is-lesson {
+  max-width: calc(78ch + 84px);
+}
+.is-lesson .page-heading {
+  margin-bottom: 18px;
+}
+.is-lesson .page-heading h1 {
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1.18;
+  max-width: 30ch;
+}
+.is-lesson .lesson-top {
+  margin-bottom: 14px;
+}
+.is-lesson .lesson-layout {
+  display: block;
+}
+.is-lesson .lesson-body {
+  max-width: 100%;
+  margin: 0;
+}
+.lesson-details {
+  border-block: 1px solid var(--line);
+  margin: 16px 0 0;
+}
+.lesson-details > summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  min-height: 48px;
+  font-size: 0.88rem;
+  font-weight: 650;
+  list-style: none;
+}
+.lesson-details > summary::before {
+  content: "+";
+  color: var(--pine);
+  font-size: 1.15rem;
+}
+.lesson-details[open] > summary::before {
+  content: "−";
+}
+.lesson-details > summary::-webkit-details-marker {
+  display: none;
+}
+.details-caption {
+  margin-left: auto;
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: var(--muted);
+  text-align: right;
+}
+.lesson-details-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 32px;
+  padding: 8px 0 20px;
+}
+.lesson-details-body h2 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.lesson-details-body p,
+.lesson-details-body ul {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+.lesson-details-body ul {
+  padding-left: 20px;
+}
+.lesson-details-body li {
+  margin: 5px 0;
+}
+.lesson-details-body a {
+  overflow-wrap: anywhere;
+}
+.lesson-details-goals,
+.lesson-scope {
+  grid-column: 1/-1;
+}
+
+.is-lesson .tabs {
+  margin: 16px 0 26px;
+  gap: 24px;
+}
+.lesson-bridge {
+  margin-block: 25px;
+  padding-left: 18px;
+  border-left: 2px solid var(--line);
+}
+.lesson-bridge h3 {
+  font-size: 1rem;
+}
+.lesson-bridge p {
+  font-size: 0.92rem;
+}
+.source-intro {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.source-notes {
+  border-top: 1px solid var(--line);
+  padding: 15px 0;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.source-notes > summary {
+  color: var(--ink);
+  min-height: 34px;
+}
+.source-notes p {
+  margin-top: 12px;
+}
+.resource-timing {
+  font-size: 0.86rem;
+  font-weight: 650;
+  color: var(--pine);
+  margin-bottom: 10px;
+}
+.resource-status {
+  display: block;
+  color: var(--muted);
+  font-size: 0.76rem;
+  margin-bottom: 12px;
+}
+.resource-study {
+  margin: 8px 0;
+}
+.resource-study > summary {
+  font-weight: 650;
+  font-size: 0.88rem;
+  padding: 9px 0;
+  min-height: 44px;
+}
+.resource-study[open] > summary {
+  margin-bottom: 10px;
+}
+.resource-content-review {
+  margin-top: 18px;
+}
+.resource-content-review > summary {
+  min-height: 40px;
+}
+.resource-content-review p {
+  margin-top: 10px;
+}
+.home-heading {
+  margin-bottom: 25px;
+  max-width: 68ch;
+}
+.home-heading h1 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+.home-summary,
+.home-browse {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+.home-stages {
+  margin-top: 30px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.home-stages > summary {
+  min-height: 44px;
+  font-weight: 650;
+}
+.home-stages .stage-grid {
+  margin-top: 20px;
+}
+.home-scope {
+  max-width: 80ch;
+  margin-top: 26px;
+}
+.continue-card h2 {
+  font-size: 1.4rem;
+  margin: 6px 0 0;
+}
+@media (max-width: 760px) {
+  main.is-lesson {
+    padding-inline: 20px;
+  }
+  .is-lesson .page-heading h1 {
+    font-size: 1.8rem;
+  }
+  .is-lesson .tabs {
+    gap: 18px;
+  }
+  .is-lesson .tabs a {
+    padding-top: 12px;
+  }
+  .details-caption {
+    max-width: 18ch;
+  }
+}
+@media (max-width: 540px) {
+  .is-lesson .tabs {
+    gap: 8px 12px;
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+  .is-lesson .tabs a {
+    font-size: 0.85rem;
+  }
+  .lesson-details-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .continue-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .is-lesson .lesson-top {
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

@@ -1,5 +1,5 @@
 N01
-A network carries messages between systems. Layers separate responsibilities: an application message can travel inside a transport segment, an IP packet, and a link-layer frame. Encapsulation adds headers used by each layer. The receiving system interprets and removes those wrappers in reverse order. A packet capture reveals observations at a particular point, not every event everywhere.
+A network carries messages between systems. Different layers handle different parts of the journey. An application message can sit inside a transport segment, an IP packet and a link-layer frame, each with its own header. The receiver unwraps them in reverse order. A packet capture shows what was observed at one location, rather than everything that happened across the network.
 Latency measures delay; bandwidth measures a transfer rate. Throughput is the rate actually achieved under protocol and workload constraints. Packet loss, queueing, and repeated round trips can matter as much as link speed. Capture only your authorised lab traffic and identify the interface, time range, and capture filters in your notes.
 Fetch a page from your own local test server while capturing its traffic. Identify the link, network, transport, and application information visible in the capture. Compare a tiny request with a larger response. Estimate transfer time from size and rate, then identify the additional delays that the estimate omitted.
 An encrypted payload can still reveal metadata such as endpoint addresses, timing, and sizes.
@@ -10,7 +10,7 @@ Whether a connection is authenticated
 Bandwidth concerns rate. Latency concerns delay, and neither alone establishes security.
 
 N02
-IP addresses identify interfaces for packet delivery. A prefix specifies which leading bits define a network. Routing selects a next hop using destination prefixes; the most specific matching route normally wins. A subnet calculation is therefore a bit-boundary problem, not a guess based on how similar two dotted-decimal addresses look.
+An IP address identifies an interface for packet delivery. A network prefix specifies which leading bits identify the network. A router compares the destination with its routes and normally chooses the most specific match. To understand a subnet, work with those bit boundaries. Similar-looking dotted-decimal addresses alone do not establish that two interfaces are on the same subnet.
 NAT translates addresses and often ports between address realms. It changes reachability and state tracking but is not a complete security policy. IPv6 has a larger address space and different conventions; do not transfer every IPv4 assumption to it. Routing between administrative networks also involves control-plane trust, including the routes exchanged through BGP.
 For 192.0.2.0/24, mark the first 24 bits as the network prefix. Divide it into two /25 prefixes and identify which half contains 192.0.2.130. Draw the route from a private lab host through a NAT gateway to a service, recording the source address seen on each side.
 An address being private does not prove the host or traffic is trustworthy. Policy still needs explicit enforcement.
@@ -32,7 +32,7 @@ TLS
 ARP handles this local-link mapping. HTTP is an application protocol and TLS protects a transport channel.
 
 N04
-TCP provides an ordered byte stream with retransmission and congestion control. It does not preserve application message boundaries. UDP sends datagrams without TCP's delivery and ordering guarantees. An application chooses a protocol according to the behaviour it needs and implements any additional reliability, framing, or security itself.
+TCP delivers an ordered stream of bytes and handles retransmission and congestion control. It does not tell your app where one message ends and the next begins. UDP sends separate datagrams without TCP’s delivery and ordering guarantees. Choose the behaviour your application needs, then add any required message framing, reliability and security.
 A socket is an operating-system interface for network communication. TCP applications must define framing: a length, delimiter, or established message grammar tells the receiver when a message is complete. A single send call need not correspond to a single receive call. Timeouts and partial reads are ordinary conditions to handle, not impossible edge cases.
 Build a loopback-only client and server that exchange length-prefixed harmless messages. Deliberately split a message across writes and combine two messages in another write. The receiver should reconstruct both correctly. Compare this with a UDP example and document what happens when a datagram is absent rather than assuming arrival.
 TCP reliability does not authenticate the peer or encrypt the stream. Those are separate properties.
@@ -43,7 +43,7 @@ Treat every receive result as one complete message
 TCP exposes a byte stream. The application's framing rule determines message completeness.
 
 N05
-DNS maps names to records, such as address records used to locate a service. Resolvers may cache answers according to their time-to-live. Email delivery uses DNS records to locate mail servers and additional mechanisms to express sender-domain policies. A familiar-looking name is not the same thing as verified control of a service.
+DNS connects names with records, including addresses used to find a service. A resolver can keep an answer in a cache for its stated time-to-live. Email uses DNS to find mail servers and publish sender-domain policies. A familiar-looking name is only a starting clue; it does not prove who controls the service.
 Separate the question 'Which address was returned?' from 'Why should I trust this answer or peer?' DNSSEC can authenticate signed DNS data through a chain of trust, but it does not encrypt ordinary DNS queries or make the destination application trustworthy. Email authentication mechanisms also have specific scopes; no single record guarantees that a message is harmless.
 Trace a domain lookup using the course's examples and mark stub resolver, recursive resolver, authoritative server, and cache. Inspect a saved DNS response and identify the record type and TTL. Then draw mail delivery from sender to recipient, marking where name resolution and sender-policy checks occur.
 A correct DNS answer can point to a compromised server. Name-resolution integrity and application security are separate checks.
@@ -54,7 +54,7 @@ A guarantee that the website has no vulnerabilities
 DNSSEC validates signed DNS data. It neither encrypts ordinary DNS traffic nor audits the destination service.
 
 N06
-HTTP describes requests and responses. A request has a method, target, headers, and sometimes a body; a response has a status, headers, and possibly a body. HTTP is stateless in its basic request-response model. Cookies and server-side sessions let applications associate requests with continuing state.
+HTTP describes how a client requests something and how a server responds. A request includes a method, target and headers, and may have a body. A response includes a status and headers, and may also have a body. Each exchange is separate in the basic model. Cookies and server-side sessions help an app connect requests with ongoing state.
 Proxies forward messages and caches reuse responses according to rules. This creates several possible interpretations of a request, so understand the path before analysing behaviour. Cookie attributes influence when browsers send cookies and which scripts can access them. HTTPS protects the channel, but the application must still validate input and authorise actions.
 Use a local test application to record a GET and a form POST. Mark each method, path, status, content type, and cookie. Repeat after signing out and observe which state changes. Add a diagram showing browser, proxy if present, and server, so a later security finding can identify where a decision was made.
 A successful status code means the server reported success for that request; it does not prove the action was authorised correctly.
@@ -65,7 +65,7 @@ To make browser-side input validation sufficient
 A session identifier links otherwise separate requests to application state. Its protection and authorisation checks remain essential.
 
 B01
-HTML defines document structure, CSS controls presentation, and JavaScript can change behaviour. The DOM is the browser's object representation of a document. Browser scripts can read or modify permitted parts of that representation, respond to events, and make network requests. Treat user-supplied text as data rather than executable markup.
+HTML gives a page its structure, CSS controls its appearance and JavaScript can respond to events or change what the page does. The browser represents the document as the DOM, which scripts can inspect or change where permitted. Keep text supplied by users as data. Do not accidentally ask the browser to interpret it as executable markup.
 An origin consists of scheme, host, and port. Browser security rules use this boundary when deciding which scripts may access which resources. A site, an origin, and a full URL are different concepts. Form validation in the browser improves usability, but a client can send a request without running that validation, so the server must enforce its own requirements.
 Create a local page with a form and a text-only preview. Use textContent to show the submitted value. Enter text that resembles an HTML tag and confirm it remains visible text. Compare two local URLs with different ports and explain why they have different origins even though their hostnames match.
 Hiding a button or disabling a field in JavaScript does not prevent a user from constructing the corresponding request.
@@ -76,7 +76,7 @@ The path and query string alone
 The origin tuple excludes the path and query. Different ports or schemes can create different origins on the same host.
 
 B02
-A relational database stores rows in tables with declared columns and constraints. A primary key identifies a row; a foreign key relates it to another table. SQL expresses queries and updates. A join combines related rows according to an explicit relationship, so a mistaken join can multiply results or reveal unrelated records.
+A relational database stores rows in tables with defined columns and rules. A primary key identifies a row; a foreign key links it to another table. SQL lets you request or change data. A join combines related rows. If you choose the wrong relationship, you can duplicate results or include records that do not belong in the answer.
 A transaction groups operations into one logical unit. Atomicity means they commit together or not at all. Isolation controls what concurrent transactions may observe; different isolation levels provide different guarantees. Constraints such as unique keys and valid relationships can protect invariants closer to the data rather than relying on every caller to remember a rule.
 Create synthetic users and notes tables. Give each note an owner_id referencing a user. Join notes with owners and verify the row count. In a transaction, transfer a fixed quantity between two rows; introduce a failure between the updates and check rollback. Write down which invariant the transaction protects.
 An application checking uniqueness before insertion can still race. A database uniqueness constraint enforces the rule at the storage boundary.
@@ -87,7 +87,7 @@ Any logged-in user can read every row
 Atomicity concerns the all-or-nothing unit of change. It does not by itself establish performance or authorisation.
 
 B03
-A web server receives HTTP requests, routes them to application code, and returns responses. An API is a defined interface to application operations. JSON and XML are data formats, not permission systems. A session identifies continuing state, while object ownership determines whether a particular actor may perform a particular action.
+A web server receives an HTTP request, chooses the application code to handle it and sends a response. An API defines the operations another program can request. JSON and XML describe data; they do not decide permissions. A session helps the app recognise continuing activity, but it must still check whether this user may perform this action on this object.
 Draw the full boundary: request bytes, parsed values, validated input, authenticated actor, authorised operation, database change, response. Each step answers a different question. Keep server secrets out of browser code. Return controlled errors rather than exposing stack traces or internal credentials. Use a development server only under the scope and deployment guidance of the exercise.
 Build a small local notes API with synthetic users. On each read or update, obtain the current actor from trusted session state and check the note's owner on the server. Reject an invalid note identifier cleanly. Test the same request as the owner and as another test user, and compare results.
 A valid session does not grant access to every object's data. Authentication and object-level authorisation are separate steps.
@@ -98,7 +98,7 @@ Only in the API's prose documentation
 A caller can bypass the interface. The server must enforce the relationship between actor, object, and requested action.
 
 B04
-A virtual machine runs a guest operating system on virtual hardware. A container isolates a process environment while sharing the host kernel. A snapshot records a recoverable state under the platform's rules; it is not a substitute for a separate backup or for safe network configuration. These mechanisms provide different boundaries and failure modes.
+A virtual machine runs a guest operating system on virtual hardware. A container isolates a process environment while sharing the host kernel. They therefore provide different boundaries. A snapshot can help you return to a saved state under the platform’s rules. You still need a separate backup and a safe network configuration.
 Build labs deliberately: use synthetic data, host-only or isolated networks when required, explicit port exposure, and a known reset procedure. Sharing a host folder or mounting a privileged socket can cross the boundary you intended to create. Record the image version and configuration so that results can be reproduced rather than depending on an undocumented machine state.
 Create a harmless local lab, record its network mode, and verify which ports are reachable from the host. Save a known-good snapshot or reproducible container configuration. Change a test file and restore the baseline. Confirm what was restored and whether shared host files remained outside the snapshot's scope.
 A container is not an independent kernel. Do not treat an ordinary container as sufficient isolation for unknown malware.

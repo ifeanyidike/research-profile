@@ -1,5 +1,6 @@
 """Offline packaging only: no third-party imports, network or model calls."""
 import json
+import hashlib
 import sys
 from pathlib import Path
 
@@ -66,10 +67,9 @@ def build(check=False):
             guide = {f: a[f] for f in ['bridge', 'teaching', 'example', 'explanation', 'exercise', 'solution', 'challenge', 'challenge_solution']}
             guide['example_format'] = a.get('example_format', 'text')
             assert guide['example_format'] in ('math', 'text'), m['id']
-            # Rotate choices so correct answers have no positional pattern.
-            choices = [a['correct'], a['wrong1'], a['wrong2']]
-            rotate = len(lessons) % 3
-            choices = choices[rotate:] + choices[:rotate]
+            # Stable per-topic ordering avoids a course-wide answer-position cycle.
+            choices = sorted([a['correct'], a['wrong1'], a['wrong2']],
+                             key=lambda choice: hashlib.sha256((m['id'] + '\0' + choice).encode()).digest())
             lessons[m['id']] = {k: a[k] for k in ['concept', 'mechanism', 'example', 'pitfall']}
             lessons[m['id']].update(guide=guide, check={'question': a['question'], 'choices': choices, 'answer': choices.index(a['correct']), 'explanation': a['feedback']})
             m.update(practice=a['exercise'], assessment=a['challenge'], practice_links=m.get('practice_links', []))

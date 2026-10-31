@@ -157,7 +157,7 @@ test("a successful small setting write cannot hide an unsaved lesson", () => {
     (ok) => statuses.push(ok)
   );
   db.setItem = (k, v) => {
-    if (k.endsWith(":O01")) throw Error("full");
+    if (!k.includes(":settings:")) throw Error("full");
     original(k, v);
   };
   s.update("ifeanyi", "O01", { notes: "unsaved" });

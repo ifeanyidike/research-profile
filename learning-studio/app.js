@@ -1,13 +1,21 @@
-import { math } from "./math.js?v=20261031-3";
-import { createModel } from "./model.js?v=20261031-3";
-import { Account } from "./account.js?v=20261031-3";
-import { resourceCards, assignmentSummary } from "./resources.js?v=20261031-3";
-import { renderProse as paragraphs } from "./prose.js?v=20261031-3";
+import { createViewRefresh } from "./view-refresh.js?v=20261031-4";
+import { passCriteria } from "./lesson-sections.js?v=20261031-4";
+import { progressActions } from "./progress-actions.js?v=20261031-4";
+import { storageListener } from "./storage-events.js?v=20261031-4";
+import { lessonDetails, updateLessonDetails } from "./lesson-details.js?v=20261031-4";
+import { createTextFields, draftSummary } from "./text-fields.js?v=20261031-4";
+import { createAuthStorage } from "./auth-storage.js?v=20261031-4";
+import { math } from "./math.js?v=20261031-4";
+import { createModel } from "./model.js?v=20261031-4";
+import { Account } from "./account.js?v=20261031-4";
+import { resourceCards, assignmentSummary } from "./resources.js?v=20261031-4";
+import { renderProse as paragraphs } from "./prose.js?v=20261031-4";
 import { syncConfig } from "../algo-studio/sync-config.js";
 export function startStudio(config) {
   document.documentElement.dataset.studio = config.slug;
   const model = createModel(config.slug);
   const { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } = model;
+  const textFields = createTextFields();
   const $ = (s) => document.querySelector(s);
   const esc = (s = "") => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const link = (r) => `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.label)} ↗</a>`;
@@ -59,9 +67,26 @@ export function startStudio(config) {
   function records() {
     return Object.fromEntries(modules.map((m) => [m.id, store.record(active, m.id).values]));
   }
+  const progressAction = progressActions((message) => {
+    $("#save-status").classList.add("warning");
+    $("#save-status").textContent = `Progress was not changed: ${message}`;
+  });
   function patch(id, values) {
     store.update(active, id, values);
     account?.queue();
+    if ("read" in values || "practice" in values) refreshLessonContext(id);
+  }
+  function updateIdentity(next) {
+    if (user?.id !== next?.id) return;
+    user = next;
+    syncSidebar();
+    const field = $('#name-fields input[name="display"]');
+    if (field && document.activeElement !== field && field.value === field.defaultValue) {
+      field.value = currentName();
+      field.defaultValue = currentName();
+    }
+    const welcome = $(".home-heading h1");
+    if (welcome) welcome.textContent = `Welcome, ${currentName()}.`;
   }
   function currentName() {
     const name = user
@@ -122,11 +147,12 @@ export function startStudio(config) {
   function home() {
     const s = state(),
       next = s.next;
-    return `${trackPicker()}<section class="hero"><div><span class="eyebrow">${esc(config.name.toUpperCase())} · YOUR LEARNING SPACE</span><h1>${esc(config.heroTitle)}<br /><em>${esc(config.heroEmphasis)}</em></h1><p class="hero-copy">${esc(config.heroCopy)}</p><div class="button-row"><a class="button" href="#lesson/${next?.id || selectedModules().at(-1).id}/learn">${s.passed ? "Continue learning" : "Start your first lesson"} <span aria-hidden="true">↗</span></a><a class="button secondary" href="#path">Explore the curriculum</a></div><p class="hero-intro-link"><a href="#overview">Discover the field, learning paths & qualifications ↗</a></p></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-core">${esc(config.mark)}<span>↗</span></div><span class="art-label label-one">UNDERSTAND</span><span class="art-label label-two">BUILD</span><span class="art-label label-three">EXPLAIN</span><span class="art-dot dot-one"></span><span class="art-dot dot-two"></span></div></section>
- <div class="welcome-line"><h2>Make yourself at home, ${esc(currentName())}.</h2><span>${user ? "Your own learning account" : "Try the lessons as a guest, or sign in to keep your own workspace."}</span></div>
- <div class="stat-row"><div><strong>${s.passed}<span> / ${selectedModules().length}</span></strong><span>Topics self-assessed</span></div><div><strong>${s.practised}</strong><span>Topics practised</span></div><a href="#review"><strong>${s.due.length}</strong><span>Reviews ready for you ↗</span></a><div><strong>${new Set(selectedModules().map((m) => m.stage)).size}</strong><span>Connected learning stages</span></div></div>
- ${next ? `<section class="continue-card"><div><span class="eyebrow">YOUR NEXT STEP · ${esc(next.id)}</span><h3>${esc(next.title)}</h3><p>${esc(next.skills.join(" · "))}</p></div><a class="button" href="#lesson/${next.id}/learn">Open lesson ↗</a></section>` : `<section class="continue-card"><div><h3>Your selected learning path is complete.</h3><p>Return to review, discuss your portfolio, and follow the further-study guidance for your goals.</p></div><a class="button" href="#review">Review learning ↗</a></section>`}
- <div class="section-heading"><div><span class="eyebrow">THE PATH AHEAD</span><h2>Build understanding, layer by layer.</h2></div><a href="#method">How this works ↗</a></div><div class="stage-grid">${stageCards()}</div><p class="fine-print">${esc(config.scopeNote)} Readiness follows the source map's prerequisites. You can explore any topic; assess its prerequisites before claiming competence. This is an independent learning curriculum, not an accredited degree.</p>`;
+    return `${trackPicker()}<div class="page-heading home-heading"><span class="eyebrow">YOUR LEARNING SPACE</span><h1>Welcome, ${esc(currentName())}.</h1><p>${esc(config.heroCopy)}</p></div>
+    ${next ? `<section class="continue-card"><div><span class="eyebrow">YOUR NEXT TOPIC · ${esc(next.id)}</span><h2>${esc(next.title)}</h2></div><a class="button" href="#lesson/${next.id}/learn">${s.passed ? "Continue learning" : "Start learning"} ↗</a></section>` : `<section class="continue-card"><div><h2>Your learning path is complete.</h2><p>Return to recall or choose further study for your goals.</p></div><a class="button" href="#review">Review learning ↗</a></section>`}
+    <p class="home-summary">${s.passed} of ${selectedModules().length} topics self-assessed · <a href="#review">${s.due.length} recall reviews due</a></p>
+    <p class="home-browse"><a href="#path">Browse the curriculum ↗</a></p>
+    <details class="home-stages" data-state-key="home-stages"><summary>Explore all ${selectedStages().length} learning stages</summary><div class="stage-grid">${stageCards()}</div></details>
+    <p class="fine-print home-scope">${esc(config.scopeNote)}</p>`;
   }
   function path() {
     const s = state(),
@@ -167,11 +193,11 @@ export function startStudio(config) {
       checked = JSON.parse(r.resources || "[]");
     } catch {}
     const cards = (items, type) => resourceCards(items, type, checked);
-    return `<h2>Go deeper with the sources</h2><p>Follow the viewing and reading guides. Required excerpts are listed with start and stop times; optional further study is labelled separately. Pause to reproduce examples. Completion checks record your own study, not verified viewing.</p><div class="callout"><strong>Your study assignment</strong>${paragraphs(m.study_focus)}</div><h3>Videos</h3><p class="scope-note">${esc(m.videoNote)}</p>${m.videos.length ? cards(m.videos, "video") : ""}<h3>Readings</h3>${cards(m.readings, "reading")}<div class="callout"><strong>Source and setup notes</strong><p>${esc(m.note)}</p><p>Source assignments researched on 30–31 October 2026. Providers control availability, sign-in, fees, captions, and embedding. If a video cannot play here, open its original source.</p></div>`;
+    return `<h2>Go deeper with the sources</h2><p>Use the listed excerpts and reading sections. Optional materials are labelled; the checkboxes record your own study.</p><div class="callout"><strong>Your study assignment</strong>${paragraphs(m.study_focus)}</div><h3>Videos</h3><p class="source-intro">${esc(m.videoNote)}</p>${m.videos.length ? cards(m.videos, "video") : ""}<h3>Readings</h3>${cards(m.readings, "reading")}<details class="source-notes"><summary>Source, access & safety notes</summary><p>${esc(m.note)}</p><p>Source assignments researched on 30–31 October 2026. Providers control availability, sign-in, fees, captions, and embedding. If a video cannot play here, open its original source.</p></details>`;
   }
   function workshop(l) {
     const g = l.guide;
-    return `<div class="callout"><strong>Before this lesson</strong>${paragraphs(g.bridge)}</div><h2>Step by step</h2>${paragraphs(g.teaching)}<div class="worked-example"><span class="eyebrow">FOLLOW THE WHOLE EXAMPLE</span><h3>Worked example and supplied data</h3>${g.example_format === "math" ? `<div class="math-example" aria-label="Worked mathematical example">${paragraphs(g.example)}</div>` : `<pre class="lesson-code" tabindex="0" aria-label="Worked example"><code>${esc(g.example)}</code></pre>`}${paragraphs(g.explanation)}</div>`;
+    return `<section class="lesson-bridge"><h3>Before you begin</h3>${paragraphs(g.bridge)}</section><h2>Step by step</h2>${paragraphs(g.teaching)}<div class="worked-example"><span class="eyebrow">FOLLOW THE WHOLE EXAMPLE</span><h3>Worked example and supplied data</h3>${g.example_format === "math" ? `<div class="math-example" aria-label="Worked mathematical example">${paragraphs(g.example)}</div>` : `<pre class="lesson-code" tabindex="0" aria-label="Worked example"><code>${esc(g.example)}</code></pre>`}${paragraphs(g.explanation)}</div>`;
   }
   function practiceWorkshop(l) {
     return `<h3>Your complete workshop</h3>${paragraphs(l.guide.exercise)}<details class="solution"><summary>Reveal the worked solution after your attempt</summary>${paragraphs(l.guide.solution)}</details>`;
@@ -190,16 +216,16 @@ export function startStudio(config) {
     const index = sequence.indexOf(m);
     let body = "";
     if (tab === "learn")
-      body = `<span class="eyebrow">A GUIDED EXPLANATION</span><div class="callout"><strong>What you should be able to demonstrate</strong>${outcomes(m)}</div><h2>The idea, in plain language</h2><p>${esc(l.concept)}</p><h2>How it works</h2><p>${esc(l.mechanism)}</p>${workshop(l)}<p class="fine-print"><strong>Assigned references:</strong> ${m.readings.map(link).join(" · ")}. Read source scope and access notes in Watch & read.</p><div class="scope-note">${esc(config.scopeNote)}</div><div class="misconception"><strong>Keep this distinction clear</strong><p>${esc(l.pitfall)}</p></div><h2>Check your understanding</h2><p>Answer from memory before checking the explanation. This question is a starting check; the independent task in Assess tests the topic more fully.</p>${quiz(l.check)}<div class="lesson-bottom"><label><input type="checkbox" id="mark-read" ${r.read ? "checked" : ""} /> I can explain this introduction in my own words</label><a class="button" href="#lesson/${id}/resources">Watch & read ↗</a></div>`;
+      body = `<span class="eyebrow">A GUIDED EXPLANATION</span><h2>The idea, in plain language</h2><p>${esc(l.concept)}</p><h2>How it works</h2><p>${esc(l.mechanism)}</p>${workshop(l)}<div class="misconception"><strong>Keep this distinction clear</strong><p>${esc(l.pitfall)}</p></div><h2>Check your understanding</h2><p>Answer from memory before checking the explanation. This question is a starting check; the independent task in Assess tests the topic more fully.</p>${quiz(l.check)}<div class="lesson-bottom"><label><input type="checkbox" id="mark-read" ${r.read ? "checked" : ""} /> I can explain this introduction in my own words</label><a class="button" href="#lesson/${id}/resources">Watch & read ↗</a></div>`;
     if (tab === "resources")
       body = resources(m) + `<div class="lesson-bottom"><a class="button" href="#lesson/${id}/practice">Put it into practice ↗</a></div>`;
     if (tab === "practice")
       body = `<span class="eyebrow">MOVE FROM RECOGNITION TO SKILL</span><h2>Your practical exercise</h2><p>Work through the supplied example in Learn, then use the complete workshop below. Linked provider labs offer additional practice.</p>${practiceWorkshop(l)}${m.practice_links.length ? `<h3>Open the exercise material</h3><ol>${m.practice_links.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol>` : ""}<div class="callout"><strong>Before you begin</strong><p>${esc(config.practiceNote)}</p></div><label class="evidence"><strong>Your practice evidence</strong><span>Describe your method and results. Use fictional or synthetic material. Do not save personal recordings, child information, clinical records, passwords or confidential data.</span><textarea data-field="evidence" maxlength="20000" placeholder="Setup → prediction → observation → explanation…">${esc(r.evidence || "")}</textarea></label><p class="save-hint" role="status"></p><label><input type="checkbox" id="mark-practice" ${r.practice ? "checked" : ""}/> I completed the exercise and can explain the result</label><div class="lesson-bottom"><a class="button" href="#lesson/${id}/assess">Try the independent assessment ↗</a></div>`;
     if (tab === "assess")
-      body = `<span class="eyebrow">SHOW WHAT YOU CAN DO WITHOUT A WALKTHROUGH</span><h2>Independent assessment</h2><div class="callout"><strong>Independent task</strong>${paragraphs(l.guide.challenge)}</div><details class="solution"><summary>Review the expected reasoning after your attempt</summary>${paragraphs(l.guide.challenge_solution)}</details>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}<div class="callout"><strong>Topic-specific pass criteria</strong>${outcomes(m)}</div><h3>A quick retrieval check</h3>${quiz(l.check)}<label class="evidence"><strong>Your assessment evidence and explanation</strong><span>Record the independent result, how you checked it, and what remains uncertain. Aim for evidence another learner could review.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you build, solve, or demonstrate independently? How did you verify it?">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I reviewed every pass criterion and can defend my evidence</label><p class="fine-print">To record a pass: complete practice, assess the prerequisites, answer the retrieval check correctly in this session, review the criteria, and add at least 40 characters of assessment evidence. The hub records your judgement; it does not execute or grade external labs.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
+      body = `<span class="eyebrow">SHOW WHAT YOU CAN DO WITHOUT A WALKTHROUGH</span><h2>Independent assessment</h2><div class="callout"><strong>Independent task</strong>${paragraphs(l.guide.challenge)}</div><details class="solution"><summary>Review the expected reasoning after your attempt</summary>${paragraphs(l.guide.challenge_solution)}</details>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}${passCriteria(m)}<h3>A quick retrieval check</h3>${quiz(l.check)}<label class="evidence"><strong>Your assessment evidence and explanation</strong><span>Record the independent result, how you checked it, and what remains uncertain. Aim for evidence another learner could review.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you build, solve, or demonstrate independently? How did you verify it?">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I reviewed every pass criterion and can defend my evidence</label><p class="fine-print">To record a pass: complete practice, assess the prerequisites, answer the retrieval check correctly in this session, review the criteria, and add at least 40 characters of assessment evidence. The hub records your judgement; it does not execute or grade external labs.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
     if (tab === "notes")
       body = `<h2>Make the lesson yours</h2><p>Explain the concept as if teaching another learner. Keep questions, diagrams in words, connections to earlier topics, and mistakes you corrected.</p><label class="evidence"><strong>Your lesson notebook</strong><textarea data-field="notes" maxlength="20000" placeholder="In my own words…\nA question I still have…\nA connection to another topic…">${esc(r.notes || "")}</textarea></label><p class="save-hint" role="status"></p>`;
-    return `${otherTrack ? `<div class="scope-note"><strong>This topic belongs to ${esc(otherTrack.label)}.</strong><p>You are exploring outside your selected path. The links below follow this topic's own path.</p><button class="button secondary" data-switch-track="${esc(otherTrack.id)}">Switch to this learning path</button></div>` : ""}<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">Topic ${index + 1} of ${sequence.length} · ${id}</span></div><div class="page-heading"><span class="pathway-label">${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "Self-paced")}</span><h1>${esc(m.title)}</h1><div class="lesson-meta">${m.skills.map((s) => `<span>${esc(s)}</span>`).join("")}</div></div><div class="prerequisites"><strong>Builds on</strong> ${m.prerequisites.length ? m.prerequisites.map((p) => lessonLink(p, `${p} · ${byId[p].title}`)).join(' <span aria-hidden="true">/</span> ') : "No earlier topic required."}${missing.length ? `<p>Review first: ${missing.map((p) => lessonLink(p)).join(", ")}. Exploration is open; assess these before recording this topic as passed.</p>` : ""}</div><nav class="tabs" aria-label="Lesson sections">${Object.entries(
+    return `${otherTrack ? `<div class="scope-note"><strong>This topic belongs to ${esc(otherTrack.label)}.</strong><p>You are exploring outside your selected path. The links below follow this topic's own path.</p><button class="button secondary" data-switch-track="${esc(otherTrack.id)}">Switch to this learning path</button></div>` : ""}<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">Topic ${index + 1} of ${sequence.length} · ${id}</span></div><div class="page-heading"><span class="pathway-label">${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "Self-paced")}</span><h1>${esc(m.title)}</h1></div><p class="fine-print lesson-scope">${esc(config.scopeNote)}</p>${lessonDetails(m, r, missing, byId)}<nav class="tabs" aria-label="Lesson sections">${Object.entries(
       tabs
     )
       .map(
@@ -208,12 +234,12 @@ export function startStudio(config) {
       )
       .join(
         ""
-      )}</nav><p id="remote-progress-note" class="fine-print" role="status" hidden></p><div class="lesson-layout"><article class="lesson-body">${body}</article><aside class="lesson-aside"><span class="eyebrow">YOUR PROGRESS</span><h3>Understand. Apply. Explain.</h3><ul><li>${r.read ? "✓" : "○"} Introduction understood</li><li>${r.practice ? "✓" : "○"} Practice completed</li><li>${r.passedAt ? "✓" : "○"} Self-assessed pass</li></ul><p>${r.reviewAt ? `Next review: ${date(r.reviewAt)}` : r.passedAt ? "Review sequence complete. Revisit whenever useful." : "A pass schedules recall reviews after 2, then 7, then 30 days."}</p><a href="#lesson/${id}/notes">Open your notes ↗</a><hr/><p><strong>Learning loop</strong><br/>Read → watch → practise → explain → assess → revisit.</p></aside></div><div class="lesson-pagination">${index ? lessonLink(sequence[index - 1].id, "← Previous topic") : ""}${index < sequence.length - 1 ? lessonLink(sequence[index + 1].id, "Next topic →") : ""}</div>`;
+      )}</nav><p id="remote-progress-note" class="fine-print" role="status" hidden></p><div class="lesson-layout"><article class="lesson-body">${body}</article></div><div class="lesson-pagination">${index ? lessonLink(sequence[index - 1].id, "← Previous topic") : ""}${index < sequence.length - 1 ? lessonLink(sequence[index + 1].id, "Next topic →") : ""}</div>`;
   }
   function review() {
     const s = state(),
       r = records();
-    return `<div class="page-heading"><span class="eyebrow">MAKE LEARNING LAST</span><h1>Recall & review</h1><p>After a self-assessed pass, revisit the topic after 2 days, then 7 days after that review, then 30 days after the next. First recall the idea; then check the source and retry a changed example.</p></div>${s.due.length ? s.due.map((m) => `<section class="review-card"><span class="eyebrow">DUE ${date(r[m.id].reviewAt)} · REVIEW ${(r[m.id].reviewStage || 0) + 1}/3</span><h2>${lessonLink(m.id, m.title)}</h2><p>${esc(lessons[m.id].check.question)}</p><details><summary>Check the explanation after answering aloud</summary><p>${esc(lessons[m.id].check.explanation)}</p><p>${esc(lessons[m.id].pitfall)}</p></details><p>Reproduce a small example, then explain the result without the walkthrough.</p><button class="button secondary" data-review="${m.id}">I recalled, checked, and practised this</button></section>`).join("") : '<section class="empty"><h2>No reviews due today.</h2><p>Keep learning. Reviews appear here after your first self-assessed pass.</p><a class="button" href="#path">Explore your next topic ↗</a></section>'}<h2>Coming up</h2>${
+    return `<div class="page-heading"><span class="eyebrow">MAKE LEARNING LAST</span><h1>Recall & review</h1><p>After a self-assessed pass, revisit the topic after 2 days, then 7 days after that review, then 30 days after the next. First recall the idea; then check the source and retry a changed example.</p></div>${s.due.length ? s.due.map((m) => `<section class="review-card"><span class="eyebrow">DUE ${date(r[m.id].reviewAt)} · REVIEW ${(r[m.id].reviewStage || 0) + 1}/3</span><h2>${lessonLink(m.id, m.title)}</h2><p>${esc(lessons[m.id].check.question)}</p><details data-state-key="review:${m.id}"><summary>Check the explanation after answering aloud</summary><p>${esc(lessons[m.id].check.explanation)}</p><p>${esc(lessons[m.id].pitfall)}</p></details><p>Reproduce a small example, then explain the result without the walkthrough.</p><button class="button secondary" data-review="${m.id}">I recalled, checked, and practised this</button></section>`).join("") : '<section class="empty"><h2>No reviews due today.</h2><p>Keep learning. Reviews appear here after your first self-assessed pass.</p><a class="button" href="#path">Explore your next topic ↗</a></section>'}<h2>Coming up</h2>${
       selectedModules()
         .filter((m) => r[m.id].reviewAt > Date.now())
         .sort((a, b) => r[a.id].reviewAt - r[b.id].reviewAt)
@@ -224,8 +250,9 @@ export function startStudio(config) {
   }
   function notebook() {
     const r = records(),
-      items = modules.filter((m) => r[m.id].notes || r[m.id].evidence || r[m.id].assessment);
-    return `<div class="page-heading"><span class="eyebrow">YOUR THINKING, ALL TOGETHER</span><h1>${esc(currentName())}'s notebook</h1><p>Lesson notes, practice records, and assessment evidence belong to the active workspace. Use Account & backups to export a copy.</p></div>${
+      items = modules.filter((m) => r[m.id].notes || r[m.id].evidence || r[m.id].assessment),
+      drafts = textFields.locationsFor(`${user?.id || "guest"}:${active}`);
+    return `<div class="page-heading"><span class="eyebrow">YOUR THINKING, ALL TOGETHER</span><h1>${esc(currentName())}'s notebook</h1><p>Lesson notes, practice records, and assessment evidence belong to the active workspace. Use Account & backups to export a copy.</p></div>${draftSummary(drafts, byId)}${
       items
         .map(
           (m) =>
@@ -235,11 +262,16 @@ export function startStudio(config) {
               ["assessment", "Assessment evidence"],
             ]
               .filter(([f]) => r[m.id][f])
-              .map(([f, t]) => `<details><summary>${t}</summary><p class="preserve">${esc(r[m.id][f])}</p></details>`)
+              .map(
+                ([f, t]) =>
+                  `<details data-state-key="notebook:${m.id}:${f}"><summary>${t}</summary><p class="preserve">${esc(r[m.id][f])}</p></details>`
+              )
               .join("")}</section>`
         )
         .join("") ||
-      `<div class="empty"><h2>A place to think on paper.</h2><p>Open any lesson and add your first note, question, or practice result.</p><a href="#lesson/${modules[0].id}/notes">Write your first note ↗</a></div>`
+      (drafts.length
+        ? ""
+        : `<div class="empty"><h2>A place to think on paper.</h2><p>Open any lesson and add your first note, question, or practice result.</p><a href="#lesson/${modules[0].id}/notes">Write your first note ↗</a></div>`)
     }`;
   }
   function prosePage(page) {
@@ -269,12 +301,16 @@ export function startStudio(config) {
     return `${trackPicker()}<article class="method source-map"><span class="eyebrow">RESEARCHED 30 OCTOBER 2026</span><h1>Your topic-by-topic source map</h1><p>${esc(config.sourcesNote)}</p><p><a href="curriculum.json" download>Download JSON ↓</a> · <a href="source-map.txt" download>Download readable source map ↓</a></p>${selectedModules()
       .map(
         (m) =>
-          `<details><summary>${esc(m.id)} · ${esc(m.title)}</summary><p>${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "All stages")}</p><p><strong>Prerequisites:</strong> ${m.prerequisites.length ? m.prerequisites.map((id) => lessonLink(id, byId[id].title)).join(" · ") : "None — start here"}</p><h3>Study assignment</h3>${paragraphs(m.study_focus)}<h3>Watch in order</h3><p>${esc(m.videoNote)}</p>${m.videos.length ? `<ol>${m.videos.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p>${r.contentReview?.sources?.length ? `<p class="fine-print">${r.contentReview.sources.map(link).join(" · ")}</p>` : ""}</li>`).join("")}</ol>` : ""}<h3>Read in order</h3><ol>${m.readings.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol><h3>Practical exercise</h3>${paragraphs(m.practice)}${m.practice_links.length ? "<h3>Additional practical materials</h3><ul>" + m.practice_links.map((r) => "<li>" + link(r) + `<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("") + "</ul>" : ""}<h3>Independent assessment</h3>${paragraphs(m.assessment)}<h3>Pass criteria</h3>${outcomes(m)}<p class="fine-print">${esc(m.note)}</p><p>${lessonLink(m.id, "Open full lesson ↗")}</p></details>`
+          `<details data-state-key="source:${m.id}"><summary>${esc(m.id)} · ${esc(m.title)}</summary><p>${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "All stages")}</p><p><strong>Prerequisites:</strong> ${m.prerequisites.length ? m.prerequisites.map((id) => lessonLink(id, byId[id].title)).join(" · ") : "None — start here"}</p><h3>Study assignment</h3>${paragraphs(m.study_focus)}<h3>Watch in order</h3><p>${esc(m.videoNote)}</p>${m.videos.length ? `<ol>${m.videos.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p>${r.contentReview?.sources?.length ? `<p class="fine-print">${r.contentReview.sources.map(link).join(" · ")}</p>` : ""}</li>`).join("")}</ol>` : ""}<h3>Read in order</h3><ol>${m.readings.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol><h3>Practical exercise</h3>${paragraphs(m.practice)}${m.practice_links.length ? "<h3>Additional practical materials</h3><ul>" + m.practice_links.map((r) => "<li>" + link(r) + `<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("") + "</ul>" : ""}<h3>Independent assessment</h3>${paragraphs(m.assessment)}<h3>Pass criteria</h3>${outcomes(m)}<p class="fine-print">${esc(m.note)}</p><p>${lessonLink(m.id, "Open full lesson ↗")}</p></details>`
       )
       .join("")}</article>`;
   }
-  function render(focus = false) {
+  function render(focus = false, background = false) {
+    const disclosures = background
+      ? new Map([...$("#main").querySelectorAll("details[data-state-key]")].map((el) => [el.dataset.stateKey, el.open]))
+      : null;
     if (!store || !modules.length) return;
+    viewRefresh.reset();
     quizPassed = null;
     const route = location.hash.slice(1).split("/"),
       view = route[0] || "home";
@@ -296,6 +332,7 @@ export function startStudio(config) {
     };
     $("#page-name").textContent = titles[view] || "My learning";
     document.title = `${titles[view] || "My learning"} — ${config.name}`;
+    $("#main").classList.toggle("is-lesson", view === "lesson");
     math.clear($("#main"));
     $("#main").innerHTML =
       view === "sources"
@@ -320,11 +357,17 @@ export function startStudio(config) {
       if (a.dataset.nav === view) a.setAttribute("aria-current", "page");
       else a.removeAttribute("aria-current");
     });
-    $("#sidebar").classList.remove("open");
-    $("#menu").setAttribute("aria-expanded", "false");
+    const guideNav = $("#guide-navigation");
+    if (guideNav?.querySelector('[aria-current="page"]')) guideNav.open = true;
+    if (!background) $("#sidebar").classList.remove("open");
+    if (!background) $("#menu").setAttribute("aria-expanded", "false");
     syncSidebar();
+    if (disclosures)
+      for (const el of $("#main").querySelectorAll("details[data-state-key]")) {
+        if (disclosures.has(el.dataset.stateKey)) el.open = disclosures.get(el.dataset.stateKey);
+      }
     bindView(route);
-    const mathRoots = [...$("#main").querySelectorAll(".lesson-body, .source-map, .review-card")];
+    const mathRoots = [...$("#main").querySelectorAll(".lesson-body, .lesson-details, .source-map, .review-card")];
     math.typeset(mathRoots).catch((error) => {
       for (const root of mathRoots.filter((node) => node.isConnected)) {
         const notice = document.createElement("p");
@@ -373,17 +416,40 @@ export function startStudio(config) {
       pathState = e.target.value;
       render();
     });
-    document.querySelectorAll("[data-field]").forEach((el) =>
-      el.addEventListener("input", () => {
-        patch(id, { [el.dataset.field]: el.value });
+    if (user && account?.textConfirmed && document.querySelector("[data-field]")) account.sync({ reconfirm: true });
+    textFields.bind(document, {
+      scope: `${user?.id || "guest"}:${active}`,
+      topic: id,
+      read: (field) => {
+        const record = store.record(active, id);
+        return { value: record.values[field] || "", changed: record.changed[field] };
+      },
+      write: (field, value) => patch(id, { [field]: value }),
+      canSave: () => !user || account?.textConfirmed === true,
+      hint: (message) => {
         const hint = $(".save-hint");
-        if (hint) hint.textContent = storageOk ? "Saved on this device." : "Not saved to this browser. Export a backup before leaving.";
-      })
-    );
-    $("#mark-read")?.addEventListener("change", (e) => {
-      patch(id, { read: e.target.checked });
+        if (hint) {
+          const text = storageOk ? message : "Not saved to this browser. Keep this tab open and export saved work.";
+          if (hint.textContent !== text) hint.textContent = text;
+        }
+      },
     });
-    $("#mark-practice")?.addEventListener("change", (e) => patch(id, { practice: e.target.checked }));
+    $("#mark-read")?.addEventListener("change", (e) =>
+      progressAction(
+        () => patch(id, { read: e.target.checked }),
+        () => {
+          e.target.checked = !!store.record(active, id).values.read;
+        }
+      )
+    );
+    $("#mark-practice")?.addEventListener("change", (e) =>
+      progressAction(
+        () => patch(id, { practice: e.target.checked }),
+        () => {
+          e.target.checked = !!store.record(active, id).values.practice;
+        }
+      )
+    );
     $("#quiz")?.addEventListener("submit", (e) => {
       e.preventDefault();
       const check = lessons[id].check,
@@ -408,10 +474,12 @@ export function startStudio(config) {
         $("#pass-feedback").textContent = errors.join(" ");
         return;
       }
-      store.pass(active, id);
-      account?.queue();
-      render();
-      $("#pass-feedback").textContent = "Self-assessed pass recorded. Your first recall review is scheduled in 2 days.";
+      progressAction(() => {
+        store.pass(active, id);
+        account?.queue();
+        render();
+        $("#pass-feedback").textContent = "Self-assessed pass recorded. Your first recall review is scheduled in 2 days.";
+      });
     });
     document.querySelectorAll("[data-resource]").forEach((el) =>
       el.addEventListener("change", () => {
@@ -421,7 +489,12 @@ export function startStudio(config) {
         } catch {}
         const set = new Set(list);
         el.checked ? set.add(el.dataset.resource) : set.delete(el.dataset.resource);
-        patch(id, { resources: JSON.stringify([...set]) });
+        progressAction(
+          () => patch(id, { resources: JSON.stringify([...set]) }),
+          () => {
+            el.checked = list.includes(el.dataset.resource);
+          }
+        );
       })
     );
     document.querySelectorAll("[data-video]").forEach((el) =>
@@ -439,9 +512,11 @@ export function startStudio(config) {
     );
     document.querySelectorAll("[data-review]").forEach((el) =>
       el.addEventListener("click", () => {
-        store.review(active, el.dataset.review);
-        account?.queue();
-        render();
+        progressAction(() => {
+          store.review(active, el.dataset.review);
+          account?.queue();
+          render();
+        });
       })
     );
   }
@@ -449,7 +524,7 @@ export function startStudio(config) {
     $("#settings-heading").textContent = "Account & backups";
     $("#account-area").innerHTML = user
       ? `<p>Signed in as <strong>${esc(user.email || "your account")}</strong>. Your notes and progress belong to this account.</p><div class="button-row"><button class="button secondary" id="sync-now">Sync now</button><button class="text-button" id="sign-out">Sign out</button><button class="text-button" id="force-sign-out" hidden>Sign out on this device</button></div>`
-      : `<p>Sign in to your own workspace. Each account keeps separate progress and notes, available across devices. You can use your existing Algo Studio account.</p><button class="button secondary" id="google">Continue with Google</button><details class="email-signin"><summary>Use email instead</summary><form id="auth-form"><label>Email<input id="auth-email" type="email" autocomplete="email" required /></label><label>Password<input id="auth-password" type="password" autocomplete="current-password" minlength="6" required /></label><div class="button-row"><button class="button" type="submit">Sign in</button><button class="button secondary" type="submit" name="signup" value="yes">Create account</button></div></form><button class="text-button" id="reset-password">Email a password reset link</button></details><p class="fine-print">Guest work stays separate when you sign in. To bring it into your account, export the guest backup first, then import it while signed in.</p>`;
+      : `<p>Sign in to your own workspace. Each account keeps separate progress and notes, available across devices. You can use your existing Algo Studio account.</p>${syncConfig.googleEnabled ? '<button class="button secondary" id="google">Continue with Google</button>' : ""}<details class="email-signin"><summary>Use email instead</summary><form id="auth-form"><label>Email<input id="auth-email" type="email" autocomplete="email" required /></label><label>Password<input id="auth-password" type="password" autocomplete="current-password" minlength="6" required /></label><div class="button-row"><button class="button" type="submit">Sign in</button><button class="button secondary" type="submit" name="signup" value="yes">Create account</button></div></form><button class="button secondary" type="button" id="email-link">Email me a sign-in link</button><p class="fine-print">Already use Algo Studio with email links? Use this option; no password is needed. For a new account, choose Create account above.</p><button class="text-button" id="reset-password">Email a password reset link</button></details><p class="fine-print">Guest work stays separate when you sign in. To bring it into your account, export the guest backup first, then import it while signed in.</p>`;
     $("#name-fields").innerHTML = user
       ? `<label>Display name<input name="display" maxlength="60" value="${esc(currentName())}" required /></label>`
       : PROFILES.map(
@@ -489,6 +564,28 @@ export function startStudio(config) {
         button.disabled = false;
       }
     });
+    $("#email-link")?.addEventListener("click", async (event) => {
+      const email = $("#auth-email").value.trim();
+      if (!email || !$("#auth-email").checkValidity()) {
+        $("#settings-status").textContent = "Enter your email address first.";
+        return;
+      }
+      const button = event.currentTarget;
+      button.disabled = true;
+      try {
+        if (!account) throw Error("Sign-in is unavailable. Refresh to retry.");
+        const { error } = await account.client.auth.signInWithOtp({
+          email,
+          options: { emailRedirectTo: location.origin + location.pathname, shouldCreateUser: false },
+        });
+        if (error) throw error;
+        $("#settings-status").textContent = "If this existing account can receive a sign-in link, check its email and open the link on this device.";
+      } catch (error) {
+        $("#settings-status").textContent = error.message;
+      } finally {
+        button.disabled = false;
+      }
+    });
     $("#reset-password")?.addEventListener("click", async () => {
       const email = $("#auth-email").value.trim();
       if (!$("#auth-email").checkValidity() || !email) {
@@ -516,21 +613,36 @@ export function startStudio(config) {
         $("#settings-status").textContent = e.message;
       }
     });
-    $("#sync-now")?.addEventListener("click", () => account.sync());
+    $("#sync-now")?.addEventListener("click", () => account.sync({ announce: true }));
   }
+  function refreshLessonContext(id = location.hash.slice(1).split("/")[1]) {
+    const panel = $(".lesson-details"),
+      m = byId[id];
+    if (!panel || !m) return;
+    const record = store.record(active, id).values;
+    const missing = m.prerequisites.filter((p) => !store.record(active, p).values.passedAt);
+    updateLessonDetails(panel, record, missing);
+  }
+  const viewRefresh = createViewRefresh(
+    $("#main"),
+    () => render(false, true),
+    () => !!$("dialog[open]")
+  );
   function refreshIfIdle() {
     syncSidebar();
-    // Keep media nodes, retrieval answers and draft evidence intact during sync.
+    // Reconcile text in place; preserve media, retrieval answers and unresolved drafts.
     if (location.hash.startsWith("#lesson/")) {
+      refreshLessonContext();
+      textFields.refresh();
       const hint = $("#remote-progress-note");
       if (hint) {
         hint.hidden = false;
-        hint.textContent =
-          "Remote progress updated. Reopen this section when ready to view the merged progress and notes; your current activity is kept intact.";
+        hint.textContent = "Progress updated. Unedited text fields show the saved version; any draft conflict needs your choice below.";
       }
       return;
     }
-    if (!["TEXTAREA", "INPUT", "SELECT"].includes(document.activeElement?.tagName) && !$("dialog[open]")) render();
+    if (["sources", "method", "overview", "why-cybersecurity"].includes(location.hash.slice(1).split("/")[0])) return;
+    viewRefresh.request();
   }
   async function init() {
     try {
@@ -552,11 +664,42 @@ export function startStudio(config) {
       const theme = store.setting("theme", window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
       document.documentElement.dataset.theme = theme;
       if (!window.supabase) throw Error("The sign-in library could not load. Refresh to retry.");
-      const client = window.supabase.createClient(syncConfig.url, syncConfig.publishableKey, {
-        auth: { storageKey: `${config.slug}-auth`, persistSession: true, autoRefreshToken: true, detectSessionInUrl: true },
-      });
+      function createConnection() {
+        const authStorage = createAuthStorage(storage, config.slug);
+        const client = window.supabase.createClient(syncConfig.url, syncConfig.publishableKey, {
+          auth: { storage: authStorage, storageKey: `${config.slug}-auth`, persistSession: true, autoRefreshToken: true, detectSessionInUrl: true },
+        });
+        client.auth.onAuthStateChange((event) => {
+          if (event === "PASSWORD_RECOVERY")
+            setTimeout(() => {
+              if (account?.client !== client) return;
+              openSettings();
+              $("#account-area").innerHTML =
+                '<h3>Choose a new password</h3><form id="recovery-form"><label>New password<input type="password" id="new-password" minlength="6" autocomplete="new-password" required /></label><button class="button" type="submit">Save new password</button></form>';
+              $("#recovery-form").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                if (account?.client !== client) return;
+                const { error } = await client.auth.updateUser({ password: $("#new-password").value });
+                $("#settings-status").textContent = error ? error.message : "Password updated. You can continue learning.";
+                if (!error) settingsContent();
+              });
+            }, 100);
+        });
+        return { client, authStorage };
+      }
+      const { client, authStorage } = createConnection();
       account = new Account({
         client,
+        authStorage,
+        reload: () => location.reload(),
+        restartClient: createConnection,
+        confirmed: () => textFields.refresh(),
+        identity: updateIdentity,
+        canSignOut: () => {
+          if (textFields.hasDraftsFor(`${user?.id || "guest"}:${active}`))
+            throw Error("Open the unsaved drafts listed in My notebook, then copy or resolve them before signing out.");
+          return true;
+        },
         table: config.table,
         kind: `${config.slug}-progress`,
         model,
@@ -568,20 +711,6 @@ export function startStudio(config) {
           $("#account-status").textContent = s;
         },
         changed: refreshIfIdle,
-      });
-      client.auth.onAuthStateChange((event) => {
-        if (event === "PASSWORD_RECOVERY")
-          setTimeout(() => {
-            openSettings();
-            $("#account-area").innerHTML =
-              '<h3>Choose a new password</h3><form id="recovery-form"><label>New password<input type="password" id="new-password" minlength="6" autocomplete="new-password" required /></label><button class="button" type="submit">Save new password</button></form>';
-            $("#recovery-form").addEventListener("submit", async (e) => {
-              e.preventDefault();
-              const { error } = await client.auth.updateUser({ password: $("#new-password").value });
-              $("#settings-status").textContent = error ? error.message : "Password updated. You can continue learning.";
-              if (!error) settingsContent();
-            });
-          }, 100);
       });
       await account.start();
     } catch (error) {
@@ -656,7 +785,7 @@ export function startStudio(config) {
     if (!file) return;
     try {
       if (file.size > 32000000) throw Error("Choose a backup smaller than 32 MB.");
-      importData = parseBackup(await file.text(), ids);
+      importData = parseBackup(await file.text(), ids, { fromFile: true });
       const target = { user: user?.id || null, active };
       $("#import-preview").innerHTML =
         `<p>Merge ${Object.keys(importData.lessons).length} topic records from <strong>${esc(importData.profile.name)}</strong> into <strong>${esc(currentName())}</strong>? Newer field edits are kept. Other workspaces are unchanged.</p><button class="button" id="confirm-import">Merge into this workspace</button>`;
@@ -666,13 +795,42 @@ export function startStudio(config) {
           $("#settings-status").textContent = "The workspace changed. Choose the backup again.";
           return;
         }
-        const saved = store.importBackup(active, importData);
+        const result = store.importBackup(active, importData);
         account?.queue();
-        $("#settings-status").textContent = saved
-          ? "Backup merged."
+        $("#settings-status").textContent = result.saved
+          ? `Merged ${result.applied} field update(s); ${result.older.length} older differing value(s) were kept out.`
           : "Backup loaded in memory. Browser storage is unavailable: export before refreshing.";
+        if (result.held.length)
+          $("#settings-status").textContent +=
+            ` Text kept on this device, excluded from sync: ${result.held.map((item) => `${item.id}/${item.field}`).join(", ")}. Edit those fields to remove null or incomplete Unicode characters.`;
         importData = null;
-        $("#import-preview").hidden = true;
+        $("#import-preview").hidden = result.older.length === 0;
+        if (result.older.length) {
+          $("#import-preview").innerHTML =
+            `<p>Review older backup values below. Select only the fields you want to restore. This replaces their current values and syncs your choice as a new edit.</p>${result.older.map((item, i) => `<details><summary>${esc(item.id)} · ${esc(item.field)}</summary><p>Current value</p><pre>${esc(String(item.current))}</pre><p>Backup value</p><pre>${esc(String(item.value))}</pre><label><input type="checkbox" data-restore="${i}" /> Restore this backup value</label></details>`).join("")}<button class="button secondary" id="restore-selected">Restore selected values</button>`;
+          $("#restore-selected").addEventListener("click", () => {
+            if (target.user !== (user?.id || null) || target.active !== active) {
+              $("#settings-status").textContent = "The workspace changed. Choose the backup again.";
+              return;
+            }
+            const selected = [...document.querySelectorAll("[data-restore]:checked")].map((el) => result.older[Number(el.dataset.restore)]);
+            if (!selected.length) {
+              $("#settings-status").textContent = "Select a field to restore first.";
+              return;
+            }
+            try {
+              const saved = store.restoreFields(active, selected);
+              account?.queue();
+              $("#settings-status").textContent = saved
+                ? `Restored ${selected.length} chosen field(s) as new edits.`
+                : "Restored in memory. Keep this tab open and export before refreshing.";
+              $("#import-preview").hidden = true;
+              render();
+            } catch (error) {
+              $("#settings-status").textContent = error.message;
+            }
+          });
+        }
         render();
       });
     } catch (error) {
@@ -722,8 +880,8 @@ export function startStudio(config) {
   document.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", () => document.getElementById(b.dataset.close).close()));
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && $("#sidebar").classList.contains("open")) {
-      $("#sidebar").classList.remove("open");
-      $("#menu").setAttribute("aria-expanded", "false");
+      if (!background) $("#sidebar").classList.remove("open");
+      if (!background) $("#menu").setAttribute("aria-expanded", "false");
       syncSidebar();
       $("#menu").focus();
     }
@@ -732,14 +890,35 @@ export function startStudio(config) {
       if (!$("#search-dialog").open) openSearch();
     }
   });
+  window.addEventListener("beforeunload", (event) => {
+    if (textFields.hasDrafts) {
+      event.preventDefault();
+      event.returnValue = "";
+    }
+  });
   window.addEventListener("hashchange", () => render(true));
-  window.addEventListener("online", () => account?.sync());
-  window.addEventListener("focus", () => account?.sync());
-  window.addEventListener("storage", (e) => {
-    if (e.key?.startsWith(PREFIX)) {
+  window.addEventListener("online", () => account?.sync({ reconfirm: true }));
+  window.addEventListener("focus", () => account?.sync({ reconfirm: true }));
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) account?.sync({ reconfirm: true });
+  });
+  const progressStorageListener = storageListener(
+    () => `${PREFIX}${user ? `account:${user.id}` : "guest"}:${active}:`,
+    () => {
+      if (!store) return;
       refreshIfIdle();
       account?.queue();
     }
+  );
+  window.addEventListener("storage", (event) => {
+    if (event.key === account?.authStorage?.key && event.newValue === null) {
+      account.sessionRemoved(event).catch((error) => saveStatus(false, error.message));
+      return;
+    }
+    if (event.key === `${PREFIX}${user ? `account:${user.id}` : "guest"}:settings:theme` && store)
+      document.documentElement.dataset.theme = store.setting("theme", "light");
+    progressStorageListener(event);
   });
+
   init();
 }

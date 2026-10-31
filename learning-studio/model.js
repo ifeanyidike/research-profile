@@ -1,5 +1,5 @@
 export function createModel(slug) {
-  if (!["voice-ai-studio", "child-development-studio"].includes(slug)) throw Error("Unknown studio.");
+  if (!["cyber-studio", "voice-ai-studio", "child-development-studio"].includes(slug)) throw Error("Unknown studio.");
   const PREFIX = `${slug}:v1:`;
   const PROFILES = ["ifeanyi", "partner"];
   const DEFAULT_NAMES = { ifeanyi: "Ifeanyi", partner: "Fav" };
@@ -16,6 +16,10 @@ export function createModel(slug) {
   };
   const DAY = 86400000;
   const REVIEW_DAYS = [2, 7, 30];
+  const MAX_FILE_DATE = Date.UTC(9999, 11, 31, 23, 59, 59, 999);
+  // Recall transitions must remain one local write; unrelated edits stay separate.
+  const fieldGroup = (field) => (["passedAt", "reviewAt", "reviewStage"].includes(field) ? "recall" : field);
+  const groups = [...new Set(Object.keys(FIELDS).map(fieldGroup))];
   const own = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
   const plain = (o) => o !== null && typeof o === "object" && !Array.isArray(o) && Object.getPrototypeOf(o) === Object.prototype;
 
@@ -43,6 +47,28 @@ export function createModel(slug) {
         throw new Error("Invalid field date.");
     }
     return record;
+  }
+
+  function syncableText(text) {
+    for (const char of text) {
+      const point = char.codePointAt(0);
+      if (point === 0 || (point >= 0xd800 && point <= 0xdfff)) return false;
+    }
+    return true;
+  }
+  // Keep legacy text readable/exportable. Omission from an upload deletes nothing.
+  function syncableRecord(source) {
+    validateRecord(source);
+    const record = { values: {}, changed: {} },
+      held = [];
+    for (const [field, value] of Object.entries(source.values)) {
+      if (typeof value === "string" && !syncableText(value)) held.push(field);
+      else {
+        record.values[field] = value;
+        record.changed[field] = source.changed[field];
+      }
+    }
+    return { record, held };
   }
 
   // UTF-8 byte ordering gives every device and PostgreSQL the same tie-break.
@@ -84,7 +110,7 @@ export function createModel(slug) {
     };
   }
 
-  function parseBackup(input, ids) {
+  function parseBackup(input, ids, { fromFile = false } = {}) {
     if (typeof input !== "string" || input.length > 32000000) throw new Error("Choose a matching studio JSON backup smaller than 32 MB.");
     const data = JSON.parse(input);
     if (
@@ -101,6 +127,10 @@ export function createModel(slug) {
     for (const [id, record] of Object.entries(data.lessons)) {
       if (!ids.has(id)) throw new Error(`Unknown lesson: ${id}`);
       validateRecord(record);
+      if (fromFile)
+        for (const [field, stamp] of Object.entries(record.changed))
+          if (stamp >= MAX_FILE_DATE || (["passedAt", "reviewAt"].includes(field) && record.values[field] >= MAX_FILE_DATE))
+            throw Error(`${id}/${field}: this backup contains an unsupported far-future date. Check the source file before importing.`);
     }
     return data;
   }
@@ -130,20 +160,33 @@ export function createModel(slug) {
       try {
         storage.setItem(key, value);
         dirty.delete(key);
-        failed = false;
-        onStatus(dirty.size === 0);
       } catch {
         dirty.add(key);
         failed = true;
         onStatus(false);
+        return;
       }
+      try {
+        // Retry memory-only work after space returns. Merge first so a newer
+        // same-field value from another tab cannot be overwritten by a retry.
+        for (const pending of [...dirty]) {
+          let recovered = memory.get(pending);
+          if (pending.includes(":field:")) recovered = JSON.stringify(mergeRecords(decode(storage.getItem(pending)), decode(recovered)));
+          storage.setItem(pending, recovered);
+          memory.set(pending, recovered);
+          dirty.delete(pending);
+        }
+        failed = false;
+      } catch {
+        failed = true;
+      }
+      onStatus(!failed && dirty.size === 0);
     }
     function key(profile, id) {
       if (!PROFILES.includes(profile) || !ids.has(id)) throw new Error("Unknown learner or lesson.");
       return `${prefix}${profile}:${id}`;
     }
-    function record(profile, id) {
-      const raw = read(key(profile, id));
+    function decode(raw) {
       if (!raw) return empty();
       try {
         return validateRecord(JSON.parse(raw));
@@ -152,13 +195,47 @@ export function createModel(slug) {
         return empty();
       }
     }
-    function update(profile, id, patch) {
+    function record(profile, id) {
+      const base = key(profile, id);
+      // Read legacy aggregates, but never rewrite them. Independent field keys
+      // prevent one tab's note write from erasing another tab's practice edit.
+      let result = decode(read(base));
+      for (const group of groups) result = mergeRecords(result, decode(read(`${base}:field:${group}`)));
+      return result;
+    }
+    function saveFields(profile, id, current, next) {
+      const base = key(profile, id);
+      const changedGroups = new Set(
+        Object.keys(next.values)
+          .filter((field) => current.values[field] !== next.values[field] || current.changed[field] !== next.changed[field])
+          .map(fieldGroup)
+      );
+      for (const group of changedGroups) {
+        const entry = empty();
+        for (const field of Object.keys(next.values).filter((field) => fieldGroup(field) === group)) {
+          entry.values[field] = next.values[field];
+          entry.changed[field] = next.changed[field];
+        }
+        write(`${base}:field:${group}`, JSON.stringify(entry));
+      }
+    }
+    function prepareUpdate(profile, id, patch) {
       const current = record(profile, id);
+      for (const [field, value] of Object.entries(patch)) {
+        if (typeof value === "string" && !syncableText(value))
+          throw Error(`${id}/${field}: remove null characters or incomplete Unicode characters before saving. Your draft is kept here.`);
+        if (current.changed[field] === 8640000000000000)
+          throw Error(`${id}/${field}: its saved change date is at the supported limit. Export a backup before repairing that field’s date.`);
+      }
       const next = { values: { ...current.values, ...patch }, changed: { ...current.changed } };
-      const tick = Math.max(clock(), ...Object.values(current.changed).map((n) => n + 1));
+      const tick = Math.max(clock(), ...Object.keys(patch).map((field) => (current.changed[field] ?? -1) + 1));
       for (const field of Object.keys(patch)) next.changed[field] = tick;
       validateRecord(next);
-      write(key(profile, id), JSON.stringify(next));
+      return { current, next };
+    }
+    function update(profile, id, patch) {
+      const { current, next } = prepareUpdate(profile, id, patch);
+      saveFields(profile, id, current, next);
       return next.values;
     }
     function exportBackup(profile, name) {
@@ -169,14 +246,46 @@ export function createModel(slug) {
       }
       return { kind: `${slug}-progress`, version: 1, profile: { id: profile, name }, exportedAt: new Date(clock()).toISOString(), lessons };
     }
-    function importBackup(profile, data) {
-      // Validate the entire file before writing any record, including programmatic callers.
+    function backupPlan(profile, data) {
       const checked = parseBackup(JSON.stringify(data), ids);
+      let applied = 0;
+      const older = [];
       for (const [id, incoming] of Object.entries(checked.lessons)) {
         const current = record(profile, id),
           merged = mergeRecords(current, incoming);
-        if (!sameRecord(current, merged)) write(key(profile, id), JSON.stringify(merged));
+        for (const field of Object.keys(incoming.values)) {
+          if (!own(current.values, field) || merged.values[field] !== current.values[field] || merged.changed[field] !== current.changed[field])
+            applied++;
+          else if (incoming.values[field] !== current.values[field])
+            older.push({ id, field, value: incoming.values[field], current: current.values[field], changed: current.changed[field] });
+        }
       }
+      return { checked, applied, older };
+    }
+    function importBackup(profile, data) {
+      // Validate the whole file before writing, including programmatic callers.
+      const { checked, applied, older } = backupPlan(profile, data);
+      for (const [id, incoming] of Object.entries(checked.lessons)) {
+        const current = record(profile, id),
+          merged = mergeRecords(current, incoming);
+        if (!sameRecord(current, merged)) saveFields(profile, id, current, merged);
+      }
+      const held = Object.keys(checked.lessons).flatMap((id) => syncableRecord(record(profile, id)).held.map((field) => ({ id, field })));
+      return { saved: !failed && dirty.size === 0, applied, older, held };
+    }
+    function restoreFields(profile, selections) {
+      const patches = new Map();
+      // Refuse the whole selection if any preview is stale or invalid.
+      for (const item of selections) {
+        const current = record(profile, item.id);
+        if (current.values[item.field] !== item.current || current.changed[item.field] !== item.changed)
+          throw Error("Progress changed since this preview. Choose the backup again before restoring.");
+        const patch = { [item.field]: item.value };
+        validateRecord({ values: patch, changed: { [item.field]: 1 } });
+        patches.set(item.id, { ...patches.get(item.id), ...patch });
+      }
+      const prepared = [...patches].map(([id, patch]) => ({ id, ...prepareUpdate(profile, id, patch) }));
+      for (const { id, current, next } of prepared) saveFields(profile, id, current, next);
       return !failed && dirty.size === 0;
     }
     function review(profile, id) {
@@ -191,6 +300,8 @@ export function createModel(slug) {
       update,
       exportBackup,
       importBackup,
+      backupPlan,
+      restoreFields,
       review,
       pass(profile, id) {
         return update(profile, id, { passedAt: clock(), reviewAt: clock() + REVIEW_DAYS[0] * DAY, reviewStage: 0 });
@@ -226,6 +337,8 @@ export function createModel(slug) {
     DEFAULT_NAMES,
     REVIEW_DAYS,
     validateRecord,
+    syncableText,
+    syncableRecord,
     mergeRecords,
     sameRecord,
     sameLessons,
