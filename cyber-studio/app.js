@@ -1,7 +1,8 @@
-import { introduction } from "./introduction.js?v=20261030-9";
-import { resourceCards, assignmentSummary } from "../learning-studio/resources.js?v=20261030-9";
-import { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } from "./model.js?v=20261030-9";
-import { Account } from "./account.js?v=20261030-9";
+import { introduction } from "./introduction.js?v=20261031-1";
+import { resourceCards, assignmentSummary } from "../learning-studio/resources.js?v=20261031-1";
+import { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } from "./model.js?v=20261031-1";
+import { Account } from "./account.js?v=20261031-1";
+import { math } from "../learning-studio/math.js?v=20261031-1";
 const { createClient } = window.supabase;
 import { syncConfig } from "../algo-studio/sync-config.js";
 const $ = (s) => document.querySelector(s);
@@ -165,7 +166,7 @@ function resources(m) {
     checked = JSON.parse(r.resources || "[]");
   } catch {}
   const cards = (items, type) => resourceCards(items, type, checked);
-  return `<h2>Go deeper with the sources</h2><p>Follow the viewing and reading guides. Required excerpts are listed with start and stop times; optional further study is labelled separately. Pause to reproduce examples. Completion checks record your own study, not verified viewing.</p><div class="callout"><strong>Your study assignment</strong><p>${esc(m.study_focus)}</p></div><h3>Videos</h3><p class="scope-note">${esc(m.videoNote)}</p>${m.videos.length ? cards(m.videos, "video") : ""}<h3>Readings</h3>${cards(m.readings, "reading")}<div class="callout"><strong>Source and setup notes</strong><p>${esc(m.note)}</p><p>Viewing and reading assignments reviewed on 30 October 2026. Providers control availability, sign-in, fees, captions, and embedding. If a video cannot play here, open its original source.</p></div>`;
+  return `<h2>Go deeper with the sources</h2><p>Follow the viewing and reading guides. Required excerpts are listed with start and stop times; optional further study is labelled separately. Pause to reproduce examples. Completion checks record your own study, not verified viewing.</p><div class="callout"><strong>Your study assignment</strong><p>${esc(m.study_focus)}</p></div><h3>Videos</h3><p class="scope-note">${esc(m.videoNote)}</p>${m.videos.length ? cards(m.videos, "video") : ""}<h3>Readings</h3>${cards(m.readings, "reading")}<div class="callout"><strong>Source and setup notes</strong><p>${esc(m.note)}</p><p>Viewing and reading assignments reviewed on 30–31 October 2026. Providers control availability, sign-in, fees, captions, and embedding. If a video cannot play here, open its original source.</p></div>`;
 }
 function paragraphs(text) {
   return text
@@ -243,7 +244,7 @@ function notebook() {
   }`;
 }
 function method() {
-  return `<article class="method"><span class="eyebrow">DEPTH COMES FROM DOING</span><h1>A guide to learning well</h1><p class="lead">This hub connects ${modules.length} topics across ${stages.length} stages, from everyday computing to advanced security engineering and research preparation.</p><h2>One topic, six steps</h2><ol><li><strong>Learn:</strong> read the plain-language explanation and work through its example. Predict outcomes before looking.</li><li><strong>Watch & read:</strong> follow the exact videos and readings in order. Take notes in your own words.</li><li><strong>Practise:</strong> complete the scoped exercise and collect reproducible evidence.</li><li><strong>Assess:</strong> attempt the independent task without a walkthrough, meet all pass criteria, and explain your choices.</li><li><strong>Teach:</strong> ask your partner to challenge one assumption. Each person should do the practical work independently.</li><li><strong>Review:</strong> retrieve the idea after a delay, check it, and apply it to a changed example.</li></ol><h2>Prerequisites are part of the path</h2><p>The topic order follows explicit prerequisite links. A readiness label reflects your recorded passes, rather than inferred skill. You may explore any lesson, but recording a pass requires the earlier topics. If an example feels mysterious, follow its Builds on links and repair the specific gap.</p><h2>From breadth to depth</h2><p>The advanced stage introduces graduate-level ideas, including security definitions, symbolic execution, side channels, and formal models. Mobile and cyber-physical topics are surveys. Research-level competence requires deeper specialist study, suitable supervision where needed, and original work that survives critical review. This curriculum awards no accredited qualification.</p><h2>Sources and attribution</h2><p>The source map brings together university courses and primary technical material, including Harvard CS50, MIT OpenCourseWare, Stanford, Berkeley, CMU, PortSwigger Web Security Academy, SEED Labs, and official platform documentation where selected for each topic. Each lesson links its own exact sources; the hub's explanations, retrieval questions, exercises, and pass criteria are study guidance, not an endorsement by those institutions.</p><p>Older lectures remain useful for concepts; read the source notes before applying version-specific instructions. External providers control availability, pricing, accounts, transcripts, captions, and embedding. The viewing and reading assignments were reviewed on 30 October 2026. Report broken or changed links through the site's repository.</p><h2>Your workspace and privacy</h2><p>Sign in to keep your progress under your own account and sync it across devices. Cyber Studio uses separate progress records from Algo Studio. Guest profiles stay on this browser. Account records are cached here for offline work; sign out and use your own browser profile on shared computers. Never put credentials, confidential incident data, or third-party personal records in your notes.</p><p>Videos load from YouTube only when you press Load video. Source links open their providers. Export backups for an additional copy; clearing browser data removes unsynced work.</p><h2>Practise inside the exercise boundary</h2><p>Use provided training targets, synthetic evidence, and your own isolated systems. The hub supplies instructions and records your self-assessment; it does not run commands, test external systems, verify lab completion, or grade the capstone automatically.</p></article>`;
+  return `<article class="method"><span class="eyebrow">DEPTH COMES FROM DOING</span><h1>A guide to learning well</h1><p class="lead">This hub connects ${modules.length} topics across ${stages.length} stages, from everyday computing to advanced security engineering and research preparation.</p><h2>One topic, six steps</h2><ol><li><strong>Learn:</strong> read the plain-language explanation and work through its example. Predict outcomes before looking.</li><li><strong>Watch & read:</strong> follow the exact videos and readings in order. Take notes in your own words.</li><li><strong>Practise:</strong> complete the scoped exercise and collect reproducible evidence.</li><li><strong>Assess:</strong> attempt the independent task without a walkthrough, meet all pass criteria, and explain your choices.</li><li><strong>Teach:</strong> ask your partner to challenge one assumption. Each person should do the practical work independently.</li><li><strong>Review:</strong> retrieve the idea after a delay, check it, and apply it to a changed example.</li></ol><h2>Prerequisites are part of the path</h2><p>The topic order follows explicit prerequisite links. A readiness label reflects your recorded passes, rather than inferred skill. You may explore any lesson, but recording a pass requires the earlier topics. If an example feels mysterious, follow its Builds on links and repair the specific gap.</p><h2>From breadth to depth</h2><p>The advanced stage introduces graduate-level ideas, including security definitions, symbolic execution, side channels, and formal models. Mobile and cyber-physical topics are surveys. Research-level competence requires deeper specialist study, suitable supervision where needed, and original work that survives critical review. This curriculum awards no accredited qualification.</p><h2>Sources and attribution</h2><p>The source map brings together university courses and primary technical material, including Harvard CS50, MIT OpenCourseWare, Stanford, Berkeley, CMU, PortSwigger Web Security Academy, SEED Labs, and official platform documentation where selected for each topic. Each lesson links its own exact sources; the hub's explanations, retrieval questions, exercises, and pass criteria are study guidance, not an endorsement by those institutions.</p><p>Older lectures remain useful for concepts; read the source notes before applying version-specific instructions. External providers control availability, pricing, accounts, transcripts, captions, and embedding. The viewing and reading assignments were reviewed on 30–31 October 2026. Report broken or changed links through the site's repository.</p><h2>Your workspace and privacy</h2><p>Sign in to keep your progress under your own account and sync it across devices. Cyber Studio uses separate progress records from Algo Studio. Guest profiles stay on this browser. Account records are cached here for offline work; sign out and use your own browser profile on shared computers. Never put credentials, confidential incident data, or third-party personal records in your notes.</p><p>Videos load from YouTube only when you press Load video. Source links open their providers. Export backups for an additional copy; clearing browser data removes unsynced work.</p><h2>Practise inside the exercise boundary</h2><p>Use provided training targets, synthetic evidence, and your own isolated systems. The hub supplies instructions and records your self-assessment; it does not run commands, test external systems, verify lab completion, or grade the capstone automatically.</p></article>`;
 }
 function certifications() {
   const r = records();
@@ -274,6 +275,7 @@ function render(focus = false) {
   };
   $("#page-name").textContent = titles[view] || "My learning";
   document.title = `${titles[view] || "My learning"} — Cyber Studio`;
+  math.clear($("#main"));
   $("#main").innerHTML =
     view === "path"
       ? path()
@@ -299,6 +301,19 @@ function render(focus = false) {
   $("#menu").setAttribute("aria-expanded", "false");
   syncSidebar();
   bindView(route);
+  if (view !== "notebook" && route[2] !== "notes") {
+    const roots = [...$("#main").querySelectorAll(".lesson-body, .review-card")];
+    math.typeset(roots).catch((error) => {
+      for (const root of roots.filter((node) => node.isConnected)) {
+        const notice = document.createElement("p");
+        notice.className = "fine-print";
+        notice.setAttribute("role", "status");
+        notice.textContent = "Equation formatting is unavailable. The TeX is still readable; reload to try again.";
+        root.prepend(notice);
+      }
+      console.warn("Equation formatting unavailable:", error.message);
+    });
+  }
   if (focus) {
     $("#main").focus({ preventScroll: true });
     window.scrollTo(0, 0);
@@ -484,9 +499,9 @@ function refreshIfIdle() {
 async function init() {
   try {
     const responses = await Promise.all([
-      fetch("curriculum.json?v=20261030-9"),
-      fetch("lessons.json?v=20261030-9"),
-      fetch("credentials.json?v=20261030-9"),
+      fetch("curriculum.json?v=20261031-1"),
+      fetch("lessons.json?v=20261031-1"),
+      fetch("credentials.json?v=20261031-1"),
     ]);
     if (responses.some((r) => !r.ok)) throw Error("The curriculum files could not be loaded.");
     const [curriculum, content, certificateData] = await Promise.all(responses.map((r) => r.json()));

@@ -15,10 +15,32 @@
           "label": "CroydonHealth — Introduction to: Building Independence in Everyday Activities",
           "url": "https://www.youtube.com/watch?v=Dc05W-B2qDI",
           "progressKey": "video:100",
-          "assignment": "Watch the whole introductory OT clip for everyday participation context. It does not define every therapy profession or qualification; read the role/qualification material and native path guide.",
+          "assignment": "Watch only 1:57–3:32 (1:35 total). Useful occupation categories and task-demand questions at 1:57–3:32. The purported introduction also contains hands-on prompts, reward schedules and ignoring unwanted behaviour; these are outside C01/P08 and must not be assigned as blanket practice.",
           "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
           "durationSeconds": 436,
-          "watchMode": "full"
+          "watchMode": "segments",
+          "timingSource": "https://www.youtube.com/watch?v=Dc05W-B2qDI",
+          "segments": [
+            {
+              "start": 117,
+              "end": 212,
+              "label": "C01: selected teaching, part 1"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Useful occupation categories and task-demand questions at 1:57–3:32. The purported introduction also contains hands-on prompts, reward schedules and ignoring unwanted behaviour; these are outside C01/P08 and must not be assigned as blanket practice.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=Dc05W-B2qDI"
+              },
+              {
+                "label": "Publisher lesson page",
+                "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -64,7 +86,18 @@
           "progressKey": "video:0",
           "durationSeconds": 117,
           "watchMode": "full",
-          "assignment": "Watch the complete named unit: Experiences Build Brain Architecture - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "assignment": "Watch the complete named 1:57 unit. Brain architecture, use-dependent connections, pruning and interconnected skills match C02. This is a simplified historical analogy; early experience is not a fixed individual fate, and plasticity continues across life.",
+          "timingSource": "https://www.youtube.com/watch?v=VNNsN9IJkws",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Brain architecture, use-dependent connections, pruning and interconnected skills match C02. This is a simplified historical analogy; early experience is not a fixed individual fate, and plasticity continues across life.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=VNNsN9IJkws"
+              }
+            ]
+          }
         },
         {
           "label": "Center on the Developing Child at Harvard University — Serve & Return Interaction Shapes Brain Circuitry",
@@ -72,7 +105,18 @@
           "progressKey": "video:1",
           "durationSeconds": 102,
           "watchMode": "full",
-          "assignment": "Watch the complete named unit: Serve & Return Interaction Shapes Brain Circuitry - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "assignment": "Watch the complete named 1:42 unit. Short brain-architecture/serve-return analogy fits C02 as general background, not a deterministic individual brain measure or diagnosis.",
+          "timingSource": "https://www.youtube.com/watch?v=m_5u8-QSh6A",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Short brain-architecture/serve-return analogy fits C02 as general background, not a deterministic individual brain measure or diagnosis.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=m_5u8-QSh6A"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -118,14 +162,41 @@
           "progressKey": "video:0",
           "durationSeconds": 366,
           "watchMode": "full",
-          "assignment": "Watch the complete named unit: 5 Steps for Brain-Building Serve and Return - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "assignment": "Watch the complete named 6:06 unit. Five responsive-interaction steps: shared focus, encouragement, naming, turn-taking/waiting and respecting endings/beginnings. Fits C03/G01. No required eye contact or speech-only communication; use child's accessible signals and fictional exercise.",
+          "timingSource": "https://www.youtube.com/watch?v=KNrnZag17Ek",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Five responsive-interaction steps: shared focus, encouragement, naming, turn-taking/waiting and respecting endings/beginnings. Fits C03/G01. No required eye contact or speech-only communication; use child's accessible signals and fictional exercise.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=KNrnZag17Ek"
+              }
+            ]
+          }
         },
         {
-          "label": "Birmingham NHS — supporting language development through play (subtitles)",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1",
-          "assignment": "On the provider page choose only “supporting language development through play (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — How to support social communication",
+          "url": "https://player.vimeo.com/video/908624122?app_id=122963",
+          "progressKey": "video:300",
+          "durationSeconds": 388,
+          "timingSource": "https://player.vimeo.com/video/908624122?app_id=122963",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 6:28 unit. Desirable/meaningful activities, child interests, sensory/task/group access adjustments and predictability/visuals fit C03/G01. Keep complete 6:28; adapt adults/environment around child preferences, not insist on a particular play style or compliant behaviour. Not a developmental assessment, no eye-contact or forced turn-taking requirement.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Desirable/meaningful activities, child interests, sensory/task/group access adjustments and predictability/visuals fit C03/G01. Keep complete 6:28; adapt adults/environment around child preferences, not insist on a particular play style or compliant behaviour. Not a developmental assessment, no eye-contact or forced turn-taking requirement.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/908624122?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -225,12 +296,35 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "youth.gov — The Power of the Adolescent Brain: Segment 1",
-          "url": "https://www.youtube.com/watch?v=G6dTKM6ljas",
-          "progressKey": "video:100",
-          "durationSeconds": 265,
-          "watchMode": "full",
-          "assignment": "Watch the complete named unit: The Power of the Adolescent Brain: Segment 1 - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "label": "Knowable / Annual Reviews — BJ Casey: adolescent decisions, context and diversity",
+          "url": "https://www.youtube.com/watch?v=nMid-MkDHYs",
+          "progressKey": "video:300",
+          "durationSeconds": 3807,
+          "timingSource": "https://www.youtube.com/watch?v=nMid-MkDHYs",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 342,
+              "end": 487,
+              "label": "Knowable / Annual Reviews — BJ Casey: adolescent decisions, context and diversity"
+            },
+            {
+              "start": 698,
+              "end": 852,
+              "label": "Knowable / Annual Reviews — BJ Casey: adolescent decisions, context and diversity"
+            }
+          ],
+          "assignment": "Watch only 5:42–8:07, then 11:38–14:12 (4:59 total). Expert interview corrects defective-teen-brain stereotype, explains context-sensitive decisions, sampling diversity and individual environmental experience. Replaces overgeneralised Youth.gov Segment 1 in C05. Assign 5:42–8:07 and 11:38–14:12, 4:59 total; circuit metaphor describes group-level tendencies, not a capacity test or fixed maturity birthday. Rest of 63-minute panel unassigned.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Expert interview corrects defective-teen-brain stereotype, explains context-sensitive decisions, sampling diversity and individual environmental experience. Replaces overgeneralised Youth.gov Segment 1 in C05. Assign 5:42–8:07 and 11:38–14:12, 4:59 total; circuit metaphor describes group-level tendencies, not a capacity test or fixed maturity birthday. Rest of 63-minute panel unassigned.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=nMid-MkDHYs"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -271,11 +365,44 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "Birmingham NHS — Getting Started with Communication",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0",
-          "assignment": "On the provider page choose only “Getting Started with Communication” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — Understanding language: observation and accessible support",
+          "url": "https://player.vimeo.com/video/838719641?app_id=122963",
+          "progressKey": "video:300",
+          "durationSeconds": 749,
+          "timingSource": "https://player.vimeo.com/video/838719641?app_id=122963",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 104,
+              "end": 169,
+              "label": "NHS Bedfordshire and Luton — Understanding language: observation and accessible support"
+            },
+            {
+              "start": 488,
+              "end": 538,
+              "label": "NHS Bedfordshire and Luton — Understanding language: observation and accessible support"
+            },
+            {
+              "start": 601,
+              "end": 712,
+              "label": "NHS Bedfordshire and Luton — Understanding language: observation and accessible support"
+            }
+          ],
+          "assignment": "Watch only 1:44–2:49, then 8:08–8:58, then 10:01–11:52 (3:46 total). Receptive language, key words, grammar/questions/inference and practical access supports fit C06/C08/G07/G08 with separate scopes. Exclude early universal receptive-before-expressive claim; do not infer comprehension from speech or treat behaviours as diagnostic. General support options must fit language, sensory and communication access, not require vision/eye contact or obedience.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Receptive language, key words, grammar/questions/inference and practical access supports fit C06/C08/G07/G08 with separate scopes. Exclude early universal receptive-before-expressive claim; do not infer comprehension from speech or treat behaviours as diagnostic. General support options must fit language, sensory and communication access, not require vision/eye contact or obedience.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/838719641?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -406,18 +533,57 @@
       "audienceLabel": "Shared foundations",
       "videos": [
         {
-          "label": "Birmingham NHS — Getting Started with Communication",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0",
-          "assignment": "On the provider page choose only “Getting Started with Communication” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — Introduction to social communication",
+          "url": "https://player.vimeo.com/video/908624142?app_id=122963",
+          "progressKey": "video:300",
+          "durationSeconds": 378,
+          "timingSource": "https://player.vimeo.com/video/908624142?app_id=122963",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 6:18 unit. C08 pragmatic/social-communication component: forms/functions, differences in interaction and adult/environment adaptation. Keep complete 6:18. Descriptions are examples, not diagnostic criteria or rules for hiding neurodivergence; do not require gaze, particular gestures or speech. Other linguistic levels remain native/reading teaching.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "C08 pragmatic/social-communication component: forms/functions, differences in interaction and adult/environment adaptation. Keep complete 6:18. Descriptions are examples, not diagnostic criteria or rules for hiding neurodivergence; do not require gaze, particular gestures or speech. Other linguistic levels remain native/reading teaching.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/908624142?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         },
         {
-          "label": "Birmingham NHS — Language Needs in the Early Years",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1",
-          "assignment": "On the provider page choose only “Language Needs in the Early Years” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — Understanding language: words, grammar, questions and meaning",
+          "url": "https://player.vimeo.com/video/838719641?app_id=122963",
+          "progressKey": "video:301",
+          "durationSeconds": 749,
+          "timingSource": "https://player.vimeo.com/video/838719641?app_id=122963",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 169,
+              "end": 488,
+              "label": "NHS Bedfordshire and Luton — Understanding language: words, grammar, questions and meaning"
+            }
+          ],
+          "assignment": "Watch only 2:49–8:08 (5:19 total). Receptive language, key words, grammar/questions/inference and practical access supports fit C06/C08/G07/G08 with separate scopes. Exclude early universal receptive-before-expressive claim; do not infer comprehension from speech or treat behaviours as diagnostic. General support options must fit language, sensory and communication access, not require vision/eye contact or obedience.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Receptive language, key words, grammar/questions/inference and practical access supports fit C06/C08/G07/G08 with separate scopes. Exclude early universal receptive-before-expressive claim; do not infer comprehension from speech or treat behaviours as diagnostic. General support options must fit language, sensory and communication access, not require vision/eye contact or obedience.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/838719641?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -461,10 +627,37 @@
           "label": "CroydonHealth — Module 2 - Foundation Skills",
           "url": "https://www.youtube.com/watch?v=mVBv0TE3pq4",
           "progressKey": "video:100",
-          "assignment": "Watch the complete short foundation-skills module. Identify task/environment/access demands; do not turn the examples into a diagnosis or individual exercise prescription.",
+          "assignment": "Watch only 0:00–0:40, then 5:11–6:17 (1:46 total). The source moves from foundation terms to generic motor exercises, putty resistance, attention rewards and workstations. C09/P09 need task/access reasoning rather than a home exercise programme.",
           "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
           "durationSeconds": 412,
-          "watchMode": "full"
+          "watchMode": "segments",
+          "timingSource": "https://www.youtube.com/watch?v=mVBv0TE3pq4",
+          "segments": [
+            {
+              "start": 0,
+              "end": 40,
+              "label": "C09: selected teaching, part 1"
+            },
+            {
+              "start": 311,
+              "end": 377,
+              "label": "C09: selected teaching, part 2"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The source moves from foundation terms to generic motor exercises, putty resistance, attention rewards and workstations. C09/P09 need task/access reasoning rather than a home exercise programme.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=mVBv0TE3pq4"
+              },
+              {
+                "label": "Publisher lesson page",
+                "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -503,8 +696,26 @@
           "url": "https://www.youtube.com/watch?v=rVwFkcOZHJw",
           "progressKey": "video:0",
           "durationSeconds": 112,
-          "watchMode": "full",
-          "assignment": "Watch the complete named unit: Toxic Stress Derails Healthy Development - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "watchMode": "segments",
+          "assignment": "Watch only 0:08–0:55 (0:47 total). 0:08–0:55 explains stress activation, winding down with adult support and sustained activation under adverse conditions. Later permanently-on-high-alert wording is overly deterministic and should not be assigned as an individual prognosis.",
+          "timingSource": "https://www.youtube.com/watch?v=rVwFkcOZHJw",
+          "segments": [
+            {
+              "start": 8,
+              "end": 55,
+              "label": "C10: selected teaching, part 1"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "0:08–0:55 explains stress activation, winding down with adult support and sustained activation under adverse conditions. Later permanently-on-high-alert wording is overly deterministic and should not be assigned as an individual prognosis.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=rVwFkcOZHJw"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -687,21 +898,41 @@
           "progressKey": "video:0",
           "durationSeconds": 366,
           "watchMode": "full",
-          "assignment": "Watch the complete named unit: 5 Steps for Brain-Building Serve and Return - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "assignment": "Watch the complete named 6:06 unit. Five responsive-interaction steps: shared focus, encouragement, naming, turn-taking/waiting and respecting endings/beginnings. Fits C03/G01. No required eye contact or speech-only communication; use child's accessible signals and fictional exercise.",
+          "timingSource": "https://www.youtube.com/watch?v=KNrnZag17Ek",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Five responsive-interaction steps: shared focus, encouragement, naming, turn-taking/waiting and respecting endings/beginnings. Fits C03/G01. No required eye contact or speech-only communication; use child's accessible signals and fictional exercise.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=KNrnZag17Ek"
+              }
+            ]
+          }
         },
         {
-          "label": "Birmingham NHS — developing joint attention (subtitles)",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1",
-          "assignment": "On the provider page choose only “developing joint attention (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
-        },
-        {
-          "label": "Birmingham NHS — supporting language development through play (subtitles)",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:2",
-          "assignment": "On the provider page choose only “supporting language development through play (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — How to support social communication",
+          "url": "https://player.vimeo.com/video/908624122?app_id=122963",
+          "progressKey": "video:300",
+          "durationSeconds": 388,
+          "timingSource": "https://player.vimeo.com/video/908624122?app_id=122963",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 6:28 unit. Desirable/meaningful activities, child interests, sensory/task/group access adjustments and predictability/visuals fit C03/G01. Keep complete 6:28; adapt adults/environment around child preferences, not insist on a particular play style or compliant behaviour. Not a developmental assessment, no eye-contact or forced turn-taking requirement.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Desirable/meaningful activities, child interests, sensory/task/group access adjustments and predictability/visuals fit C03/G01. Keep complete 6:28; adapt adults/environment around child preferences, not insist on a particular play style or compliant behaviour. Not a developmental assessment, no eye-contact or forced turn-taking requirement.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/908624122?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -742,18 +973,65 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "Birmingham NHS — Speech Sound Difficulty",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0",
-          "assignment": "On the provider page choose only “Speech Sound Difficulty” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — Speech sounds within communication and hearing",
+          "url": "https://player.vimeo.com/video/838739136?app_id=122963",
+          "progressKey": "video:300",
+          "durationSeconds": 526,
+          "timingSource": "https://player.vimeo.com/video/838739136?app_id=122963",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 0,
+              "end": 186,
+              "label": "NHS Bedfordshire and Luton — Speech sounds within communication and hearing"
+            }
+          ],
+          "assignment": "Watch only 0:00–3:06 (3:06 total). G02/P06 introduction to speech within communication, listening/hearing and audiology questions fits 0:00–3:06 (3:06), before detailed production chain/exercises. Excludes incorrect later voiced=loud/voiceless=quiet statements and screening instructions. This spoken-language example is not the only communication route or a diagnostic test; native materials cover accessible communication, fluency/motor speech/swallowing boundaries.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "G02/P06 introduction to speech within communication, listening/hearing and audiology questions fits 0:00–3:06 (3:06), before detailed production chain/exercises. Excludes incorrect later voiced=loud/voiceless=quiet statements and screening instructions. This spoken-language example is not the only communication route or a diagnostic test; native materials cover accessible communication, fluency/motor speech/swallowing boundaries.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/838739136?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         },
         {
-          "label": "Birmingham NHS — Children Who Stammer",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1",
-          "assignment": "On the provider page choose only “Children Who Stammer” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "STAMMA — Talking to a child who stammers: preschool conversation support",
+          "url": "https://www.youtube.com/watch?v=R58tq57sCVM",
+          "progressKey": "video:301",
+          "durationSeconds": 639,
+          "timingSource": "https://www.youtube.com/watch?v=R58tq57sCVM",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 262,
+              "end": 458,
+              "label": "STAMMA — Talking to a child who stammers: preschool conversation support"
+            },
+            {
+              "start": 520,
+              "end": 621,
+              "label": "STAMMA — Talking to a child who stammers: preschool conversation support"
+            }
+          ],
+          "assignment": "Watch only 4:22–7:38, then 8:40–10:21 (4:57 total). Preschool conversation support, valuing message, child choice, comments and adult pacing match G02/P06. Families differ; reduce adult pressure rather than instruct child to slow down. No cure or independent therapy training. Assign 4:22–7:38 plus 8:40–10:21, 4:57 total, omitting long promotion of a second video.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Preschool conversation support, valuing message, child choice, comments and adult pacing match G02/P06. Families differ; reduce adult pressure rather than instruct child to slow down. No cure or independent therapy training. Assign 4:22–7:38 plus 8:40–10:21, 4:57 total, omitting long promotion of a second video.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=R58tq57sCVM"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -794,11 +1072,34 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "Birmingham NHS — using a communication board (subtitles)",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0",
-          "assignment": "On the provider page choose only “using a communication board (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — How to make a choice board",
+          "url": "https://player.vimeo.com/video/908624103?app_id=122963",
+          "progressKey": "video:300",
+          "durationSeconds": 447,
+          "timingSource": "https://player.vimeo.com/video/908624103?app_id=122963",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 0,
+              "end": 389,
+              "label": "NHS Bedfordshire and Luton — How to make a choice board"
+            }
+          ],
+          "assignment": "Watch only 0:00–6:29 (6:29 total). Choice-board forms, meaningful choices, modelling, no forced hand guidance or spoken imitation, and acceptance of different access methods fit G03/P07 practical AAC example. Assign 0:00–6:29 of 7:27, stopping before accidental-selection advice. Choice boards are one limited tool; broader functions, refusal/repair, robust vocabulary and individual access remain required native/ASHA content. Photo size/number is illustrative, not an access prescription.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Choice-board forms, meaningful choices, modelling, no forced hand guidance or spoken imitation, and acceptance of different access methods fit G03/P07 practical AAC example. Assign 0:00–6:29 of 7:27, stopping before accidental-selection advice. Choice boards are one limited tool; broader functions, refusal/repair, robust vocabulary and individual access remain required native/ASHA content. Photo size/number is illustrative, not an access prescription.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/908624103?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -888,10 +1189,42 @@
           "label": "CroydonHealth — Module 6 - Home Based Activities",
           "url": "https://www.youtube.com/watch?v=mpbnQMHEfH0",
           "progressKey": "video:100",
-          "assignment": "Watch the whole home-activity module as a set of examples, then choose one fictional routine for the task-demand map. No need to watch the handwriting/typing/scissor/bike modules for this lesson.",
+          "assignment": "Watch only 7:34–8:26, then 10:25–10:59, then 11:42–12:27 (2:11 total). The 19-minute home-activity module devotes most time to cutlery, intimate care, equipment, toileting and toothbrushing. These do not fit the fictional school-bag routine task. Selected dressing/low-pressure/adaptation passages illustrate visual sequencing, task demands, retaining chosen support and practising separately from time-pressured routines.",
           "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
           "durationSeconds": 1146,
-          "watchMode": "full"
+          "watchMode": "segments",
+          "timingSource": "https://www.youtube.com/watch?v=mpbnQMHEfH0",
+          "segments": [
+            {
+              "start": 454,
+              "end": 506,
+              "label": "G05: selected teaching, part 1"
+            },
+            {
+              "start": 625,
+              "end": 659,
+              "label": "G05: selected teaching, part 2"
+            },
+            {
+              "start": 702,
+              "end": 747,
+              "label": "G05: selected teaching, part 3"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The 19-minute home-activity module devotes most time to cutlery, intimate care, equipment, toileting and toothbrushing. These do not fit the fictional school-bag routine task. Selected dressing/low-pressure/adaptation passages illustrate visual sequencing, task demands, retaining chosen support and practising separately from time-pressured routines.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=mpbnQMHEfH0"
+              },
+              {
+                "label": "Publisher lesson page",
+                "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -929,19 +1262,68 @@
           "label": "CroydonHealth — Module 1: What is Sensory Processing?",
           "url": "https://www.youtube.com/watch?v=h1rPF4bd4xI",
           "progressKey": "video:100",
-          "assignment": "Watch the complete introductory terminology clip, then appraise its claims with the evidence reading. A workshop example does not justify a sensory protocol for a child.",
+          "assignment": "Watch only 0:00–0:42, then 2:18–4:11 (2:35 total). The vocabulary and senses sections fit G06/P10. General arousal/just-right-state and movement/meal claims at 4:11–5:12 are broader than the evidence task; frame difference and distress as access information, not inappropriate or negative behaviour. Interoception is misrecognised as interception in automatic captions.",
           "provenance": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10",
           "durationSeconds": 396,
-          "watchMode": "full"
+          "watchMode": "segments",
+          "timingSource": "https://www.youtube.com/watch?v=h1rPF4bd4xI",
+          "segments": [
+            {
+              "start": 0,
+              "end": 42,
+              "label": "G06: selected teaching, part 1"
+            },
+            {
+              "start": 138,
+              "end": 251,
+              "label": "G06: selected teaching, part 2"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The vocabulary and senses sections fit G06/P10. General arousal/just-right-state and movement/meal claims at 4:11–5:12 are broader than the evidence task; frame difference and distress as access information, not inappropriate or negative behaviour. Interoception is misrecognised as interception in automatic captions.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=h1rPF4bd4xI"
+              },
+              {
+                "label": "Publisher lesson page",
+                "url": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10"
+              }
+            ]
+          }
         },
         {
           "label": "CroydonHealth — Module 3 - Detective Work",
           "url": "https://www.youtube.com/watch?v=0L1EuzrlKZQ",
           "progressKey": "video:101",
-          "assignment": "Watch the short observation/context clip. Treat observations as questions, not proof of a sensory explanation. The remaining workshop modules are optional and may require specialist interpretation.",
+          "assignment": "Watch only 0:21–1:52 (1:31 total). Non-harmful self-regulation need not be stopped; observe context and the person’s experience. Later advice to complete real-child ABC charts and infer motivations exceeds the caregiver fictional context map.",
           "provenance": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10",
           "durationSeconds": 239,
-          "watchMode": "full"
+          "watchMode": "segments",
+          "timingSource": "https://www.youtube.com/watch?v=0L1EuzrlKZQ",
+          "segments": [
+            {
+              "start": 21,
+              "end": 112,
+              "label": "G06: selected teaching, part 1"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Non-harmful self-regulation need not be stopped; observe context and the person’s experience. Later advice to complete real-child ABC charts and infer motivations exceeds the caregiver fictional context map.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=0L1EuzrlKZQ"
+              },
+              {
+                "label": "Publisher lesson page",
+                "url": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -985,16 +1367,50 @@
           "label": "IRIS — Behavioral Principles: Challenge video, then Page 2 ABC Model",
           "url": "https://iris.peabody.vanderbilt.edu/module/bp/challenge/",
           "progressKey": "video:0",
-          "assignment": "Watch only the 0:59 Challenge introduction, then read the assigned Behavioral Principles pages, especially The ABC Model. This introductory movie does not teach a complete support or assessment procedure.",
+          "assignment": "Watch the complete named 0:59 unit. The 0:59 introduction frames variation across days and contexts and asks about behavioural principles. Fits G07/P11 only as orientation; it does not itself teach ABC or establish function. Read the assigned ABC material and native competing-hypothesis examples before the fictional task.",
           "durationSeconds": 59,
-          "watchMode": "sections"
+          "watchMode": "full",
+          "timingSource": "https://iris.peabody.vanderbilt.edu/module/bp/challenge/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The 0:59 introduction frames variation across days and contexts and asks about behavioural principles. Fits G07/P11 only as orientation; it does not itself teach ABC or establish function. Read the assigned ABC material and native competing-hypothesis examples before the fictional task.",
+            "sources": [
+              {
+                "label": "Publisher challenge video and transcript",
+                "url": "https://iris.peabody.vanderbilt.edu/module/bp/challenge/"
+              }
+            ]
+          }
         },
         {
-          "label": "Birmingham NHS — now and next (subtitles)",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1",
-          "assignment": "On the provider page choose only “now and next (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — Understanding language: visual support for routines",
+          "url": "https://player.vimeo.com/video/838719641?app_id=122963",
+          "progressKey": "video:300",
+          "durationSeconds": 749,
+          "timingSource": "https://player.vimeo.com/video/838719641?app_id=122963",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 488,
+              "end": 538,
+              "label": "NHS Bedfordshire and Luton — Understanding language: visual support for routines"
+            }
+          ],
+          "assignment": "Watch only 8:08–8:58 (0:50 total). Receptive language, key words, grammar/questions/inference and practical access supports fit C06/C08/G07/G08 with separate scopes. Exclude early universal receptive-before-expressive claim; do not infer comprehension from speech or treat behaviours as diagnostic. General support options must fit language, sensory and communication access, not require vision/eye contact or obedience.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Receptive language, key words, grammar/questions/inference and practical access supports fit C06/C08/G07/G08 with separate scopes. Exclude early universal receptive-before-expressive claim; do not infer comprehension from speech or treat behaviours as diagnostic. General support options must fit language, sensory and communication access, not require vision/eye contact or obedience.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/838719641?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1035,11 +1451,39 @@
       "audienceLabel": "Caregiver education",
       "videos": [
         {
-          "label": "Birmingham NHS — Language Needs at School Age",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0",
-          "assignment": "On the provider page choose only “Language Needs at School Age” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — Understanding language: school communication and understanding",
+          "url": "https://player.vimeo.com/video/838719641?app_id=122963",
+          "progressKey": "video:300",
+          "durationSeconds": 749,
+          "timingSource": "https://player.vimeo.com/video/838719641?app_id=122963",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 104,
+              "end": 169,
+              "label": "NHS Bedfordshire and Luton — Understanding language: school communication and understanding"
+            },
+            {
+              "start": 488,
+              "end": 712,
+              "label": "NHS Bedfordshire and Luton — Understanding language: school communication and understanding"
+            }
+          ],
+          "assignment": "Watch only 1:44–2:49, then 8:08–11:52 (4:49 total). Receptive language, key words, grammar/questions/inference and practical access supports fit C06/C08/G07/G08 with separate scopes. Exclude early universal receptive-before-expressive claim; do not infer comprehension from speech or treat behaviours as diagnostic. General support options must fit language, sensory and communication access, not require vision/eye contact or obedience.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Receptive language, key words, grammar/questions/inference and practical access supports fit C06/C08/G07/G08 with separate scopes. Exclude early universal receptive-before-expressive claim; do not infer comprehension from speech or treat behaviours as diagnostic. General support options must fit language, sensory and communication access, not require vision/eye contact or obedience.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/838719641?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1084,8 +1528,26 @@
           "url": "https://www.youtube.com/watch?v=Kj1n_lQG66o",
           "progressKey": "video:100",
           "durationSeconds": 247,
-          "watchMode": "full",
-          "assignment": "Watch the complete named unit: The Power of the Adolescent Brain: Segment 5 - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "watchMode": "segments",
+          "assignment": "Watch only 1:29–3:26 (1:57 total). The practical support passage matches G09: collaboratively think through consequences, stay engaged, discuss risks without lecturing, and support learning/identity. Introductory generalisations about teenage brain deficits and the dated platform list need context.",
+          "timingSource": "https://www.youtube.com/watch?v=Kj1n_lQG66o",
+          "segments": [
+            {
+              "start": 89,
+              "end": 206,
+              "label": "G09: selected teaching, part 1"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The practical support passage matches G09: collaboratively think through consequences, stay engaged, discuss risks without lecturing, and support learning/identity. Introductory generalisations about teenage brain deficits and the dated platform list need context.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=Kj1n_lQG66o"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1136,9 +1598,32 @@
           "url": "https://www.youtube.com/watch?v=t176yeEdVMM",
           "progressKey": "video:0",
           "optional": true,
-          "assignment": "Optional full NIMH discussion of childhood irritability. It is one focused mental-health example, not a comprehensive lesson on anxiety, bereavement or caregiver well-being. Start with the two Mental Health Minute clips and assigned family readings.",
-          "watchMode": "full",
-          "durationSeconds": 1799
+          "assignment": "Watch only 2:46–8:35, then 27:54–29:03 (6:58 total). Normative versus impairing irritability, phasic/tonic descriptions, cross-diagnostic and environmental context, clinician questions and school/family collaboration match P13 and the optional G10 case. The research treatment protocol is unnecessary for these learning objectives.",
+          "watchMode": "segments",
+          "durationSeconds": 1799,
+          "timingSource": "https://www.youtube.com/watch?v=t176yeEdVMM",
+          "segments": [
+            {
+              "start": 166,
+              "end": 515,
+              "label": "G10: selected teaching, part 1"
+            },
+            {
+              "start": 1674,
+              "end": 1743,
+              "label": "G10: selected teaching, part 2"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Normative versus impairing irritability, phasic/tonic descriptions, cross-diagnostic and environmental context, clinician questions and school/family collaboration match P13 and the optional G10 case. The research treatment protocol is unnecessary for these learning objectives.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=t176yeEdVMM"
+              }
+            ]
+          }
         },
         {
           "label": "National Institute of Mental Health (NIMH) — Mental Health Minute: Stress and Anxiety in Adolescents",
@@ -1146,7 +1631,18 @@
           "progressKey": "video:1",
           "durationSeconds": 88,
           "watchMode": "full",
-          "assignment": "Watch the complete named unit: Mental Health Minute: Stress and Anxiety in Adolescents - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "assignment": "Watch the complete named 1:28 unit. Adolescent stress/anxiety overview, everyday support and escalation to a trusted adult/health professional when symptoms persist or interfere. Generic app advice is not endorsement of a particular app; no diagnostic or personalised treatment conclusion.",
+          "timingSource": "https://www.youtube.com/watch?v=wr4N-SdekqY",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Adolescent stress/anxiety overview, everyday support and escalation to a trusted adult/health professional when symptoms persist or interfere. Generic app advice is not endorsement of a particular app; no diagnostic or personalised treatment conclusion.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=wr4N-SdekqY"
+              }
+            ]
+          }
         },
         {
           "label": "National Institute of Mental Health (NIMH) — Mental Health Minute: Attention-Deficit/Hyperactivity Disorder",
@@ -1154,7 +1650,18 @@
           "progressKey": "video:2",
           "durationSeconds": 66,
           "watchMode": "full",
-          "assignment": "Watch the complete named unit: Mental Health Minute: Attention-Deficit/Hyperactivity Disorder - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "assignment": "Watch the complete named 1:06 unit. Brief ADHD overview and professional help-seeking fits a bounded mental-health-literacy component. It is not a screening instrument or a comprehensive explanation of anxiety, trauma or caregiver well-being.",
+          "timingSource": "https://www.youtube.com/watch?v=-j2PqoFCzX0",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Brief ADHD overview and professional help-seeking fits a bounded mental-health-literacy component. It is not a screening instrument or a comprehensive explanation of anxiety, trauma or caregiver well-being.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=-j2PqoFCzX0"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1318,12 +1825,39 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "Ubc VISIBLE SPEECH — Introduction to Articulatory Phonetics (Consonants)",
-          "url": "https://www.youtube.com/watch?v=dfoRdKuPF9I",
-          "progressKey": "video:0",
-          "durationSeconds": 374,
-          "watchMode": "full",
-          "assignment": "Watch the complete named unit: Introduction to Articulatory Phonetics (Consonants) - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "label": "McMaster / Essentials of Linguistics — Classifying consonants: voicing, place and manner",
+          "url": "https://www.youtube.com/watch?v=DaIuIQwTP94",
+          "progressKey": "video:300",
+          "durationSeconds": 465,
+          "timingSource": "https://www.youtube.com/watch?v=DaIuIQwTP94",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 2,
+              "end": 266,
+              "label": "McMaster / Essentials of Linguistics — Classifying consonants: voicing, place and manner"
+            },
+            {
+              "start": 431,
+              "end": 465,
+              "label": "McMaster / Essentials of Linguistics — Classifying consonants: voicing, place and manner"
+            }
+          ],
+          "assignment": "Watch only 0:02–4:26, then 7:11–7:45 (4:58 total). More precise consonant classification than UBC: post-alveolar vs palatal, frication across articulators, central rhotic vs lateral l. Assign 0:02–4:26 and 7:11–7:45 (4:58). IPA chart/native notes supply affricates/taps and wider inventories; excludes later claim that German pf is bilabial. Canadian-English examples are not universal accent norms. Caption glyph errors [y]/[f] must be checked against correct written IPA script/chart.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "More precise consonant classification than UBC: post-alveolar vs palatal, frication across articulators, central rhotic vs lateral l. Assign 0:02–4:26 and 7:11–7:45 (4:58). IPA chart/native notes supply affricates/taps and wider inventories; excludes later claim that German pf is bilabial. Canadian-English examples are not universal accent norms. Caption glyph errors [y]/[f] must be checked against correct written IPA script/chart.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=DaIuIQwTP94"
+              },
+              {
+                "label": "Publisher transcript / video script",
+                "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/2-7-classifying-consonants/"
+              }
+            ]
+          }
         },
         {
           "label": "Ubc VISIBLE SPEECH — Introduction to Articulatory Phonetics (Vowels)",
@@ -1331,7 +1865,18 @@
           "progressKey": "video:1",
           "durationSeconds": 303,
           "watchMode": "full",
-          "assignment": "Watch the complete named unit: Introduction to Articulatory Phonetics (Vowels) - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "assignment": "Watch the complete named 5:03 unit. Height, backness, roundedness and monophthong/diphthong distinctions fit P01/V13. Published caption glyphs contain errors (e.g. [Ê]); use the IPA chart and spoken-language/North-American-English scope rather than infer all accents/languages or assess a child from the demonstration.",
+          "timingSource": "https://www.youtube.com/watch?v=u7jQ8FELbIo",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Height, backness, roundedness and monophthong/diphthong distinctions fit P01/V13. Published caption glyphs contain errors (e.g. [Ê]); use the IPA chart and spoken-language/North-American-English scope rather than infer all accents/languages or assess a child from the demonstration.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=u7jQ8FELbIo"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1391,11 +1936,39 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "ASHA — EBP Basics and Tools for Practicing Clinicians: seven-part video module; CE credit is a separate paid option",
-          "url": "https://www.asha.org/research/ebp/evidence-based-decision-making-micro-course-series/",
-          "progressKey": "video:0",
-          "watchMode": "sections",
-          "assignment": "Choose only EBP Basics and Tools for Practicing Clinicians and its seven parts (about 30 minutes in total). Do not complete every microcourse on the page. Use the linked activity/slides; CE credit/purchase is separate."
+          "label": "ASHA / Christine Dollaghan — Integrating evidence, expertise and informed preferences",
+          "url": "https://www.youtube.com/watch?v=CjYu7GgGS0A",
+          "progressKey": "video:300",
+          "durationSeconds": 2665,
+          "timingSource": "https://www.youtube.com/watch?v=CjYu7GgGS0A",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 41,
+              "end": 169,
+              "label": "ASHA / Christine Dollaghan — Integrating evidence, expertise and informed preferences"
+            },
+            {
+              "start": 225,
+              "end": 328,
+              "label": "ASHA / Christine Dollaghan — Integrating evidence, expertise and informed preferences"
+            }
+          ],
+          "assignment": "Watch only 0:41–2:49, then 3:45–5:28 (3:51 total). P02 EBP foundation: external scientific evidence, internal clinical evidence/expertise and informed patient preferences in uncertainty. Assign 0:41–2:49 and 3:45–5:28 (3:51). The rest is an unassigned 2013 decision-aids seminar; no current-treatment or effectiveness claims are imported. Native ASHA process/PICO/evidence-appraisal and fictional case remain required.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "P02 EBP foundation: external scientific evidence, internal clinical evidence/expertise and informed patient preferences in uncertainty. Assign 0:41–2:49 and 3:45–5:28 (3:51). The rest is an unassigned 2013 decision-aids seminar; no current-treatment or effectiveness claims are imported. Native ASHA process/PICO/evidence-appraisal and fictional case remain required.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=CjYu7GgGS0A"
+              },
+              {
+                "label": "Publisher transcript / video script",
+                "url": "https://tlr-hub.asha.org/archived/client-centered-communication-and-patient-decision-aids/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1690,18 +2263,65 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "Birmingham NHS — Speech Sound Difficulty",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0",
-          "assignment": "On the provider page choose only “Speech Sound Difficulty” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — Speech sounds within communication and hearing",
+          "url": "https://player.vimeo.com/video/838739136?app_id=122963",
+          "progressKey": "video:300",
+          "durationSeconds": 526,
+          "timingSource": "https://player.vimeo.com/video/838739136?app_id=122963",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 0,
+              "end": 186,
+              "label": "NHS Bedfordshire and Luton — Speech sounds within communication and hearing"
+            }
+          ],
+          "assignment": "Watch only 0:00–3:06 (3:06 total). G02/P06 introduction to speech within communication, listening/hearing and audiology questions fits 0:00–3:06 (3:06), before detailed production chain/exercises. Excludes incorrect later voiced=loud/voiceless=quiet statements and screening instructions. This spoken-language example is not the only communication route or a diagnostic test; native materials cover accessible communication, fluency/motor speech/swallowing boundaries.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "G02/P06 introduction to speech within communication, listening/hearing and audiology questions fits 0:00–3:06 (3:06), before detailed production chain/exercises. Excludes incorrect later voiced=loud/voiceless=quiet statements and screening instructions. This spoken-language example is not the only communication route or a diagnostic test; native materials cover accessible communication, fluency/motor speech/swallowing boundaries.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/838739136?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         },
         {
-          "label": "Birmingham NHS — Children Who Stammer",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:1",
-          "assignment": "On the provider page choose only “Children Who Stammer” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "STAMMA — Talking to a child who stammers: preschool conversation support",
+          "url": "https://www.youtube.com/watch?v=R58tq57sCVM",
+          "progressKey": "video:301",
+          "durationSeconds": 639,
+          "timingSource": "https://www.youtube.com/watch?v=R58tq57sCVM",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 262,
+              "end": 458,
+              "label": "STAMMA — Talking to a child who stammers: preschool conversation support"
+            },
+            {
+              "start": 520,
+              "end": 621,
+              "label": "STAMMA — Talking to a child who stammers: preschool conversation support"
+            }
+          ],
+          "assignment": "Watch only 4:22–7:38, then 8:40–10:21 (4:57 total). Preschool conversation support, valuing message, child choice, comments and adult pacing match G02/P06. Families differ; reduce adult pressure rather than instruct child to slow down. No cure or independent therapy training. Assign 4:22–7:38 plus 8:40–10:21, 4:57 total, omitting long promotion of a second video.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Preschool conversation support, valuing message, child choice, comments and adult pacing match G02/P06. Families differ; reduce adult pressure rather than instruct child to slow down. No cure or independent therapy training. Assign 4:22–7:38 plus 8:40–10:21, 4:57 total, omitting long promotion of a second video.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=R58tq57sCVM"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1760,11 +2380,34 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "Birmingham NHS — using a communication board (subtitles)",
-          "url": "https://www.bhamcommunity.nhs.uk/childrens-slt-videos",
-          "progressKey": "video:0",
-          "assignment": "On the provider page choose only “using a communication board (subtitles)” and watch that complete short clip. Other support/strategy videos are not required. Use the named subtitles version where supplied; these family examples do not replace individual professional assessment.",
-          "watchMode": "sections"
+          "label": "NHS Bedfordshire and Luton — How to make a choice board",
+          "url": "https://player.vimeo.com/video/908624103?app_id=122963",
+          "progressKey": "video:300",
+          "durationSeconds": 447,
+          "timingSource": "https://player.vimeo.com/video/908624103?app_id=122963",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 0,
+              "end": 389,
+              "label": "NHS Bedfordshire and Luton — How to make a choice board"
+            }
+          ],
+          "assignment": "Watch only 0:00–6:29 (6:29 total). Choice-board forms, meaningful choices, modelling, no forced hand guidance or spoken imitation, and acceptance of different access methods fit G03/P07 practical AAC example. Assign 0:00–6:29 of 7:27, stopping before accidental-selection advice. Choice boards are one limited tool; broader functions, refusal/repair, robust vocabulary and individual access remain required native/ASHA content. Photo size/number is illustrative, not an access prescription.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Choice-board forms, meaningful choices, modelling, no forced hand guidance or spoken imitation, and acceptance of different access methods fit G03/P07 practical AAC example. Assign 0:00–6:29 of 7:27, stopping before accidental-selection advice. Choice boards are one limited tool; broader functions, refusal/repair, robust vocabulary and individual access remain required native/ASHA content. Photo size/number is illustrative, not an access prescription.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://player.vimeo.com/video/908624103?app_id=122963"
+              },
+              {
+                "label": "NHS published video transcript (expand the named unit)",
+                "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1802,10 +2445,32 @@
           "label": "CroydonHealth — Introduction to: Building Independence in Everyday Activities",
           "url": "https://www.youtube.com/watch?v=Dc05W-B2qDI",
           "progressKey": "video:100",
-          "assignment": "Watch the introductory participation context. Occupational profiling and task/performance analysis are taught by the native example and AOTA reading; this clip is not a full professional assessment course.",
+          "assignment": "Watch only 1:57–3:32 (1:35 total). Useful occupation categories and task-demand questions at 1:57–3:32. The purported introduction also contains hands-on prompts, reward schedules and ignoring unwanted behaviour; these are outside C01/P08 and must not be assigned as blanket practice.",
           "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
           "durationSeconds": 436,
-          "watchMode": "full"
+          "watchMode": "segments",
+          "timingSource": "https://www.youtube.com/watch?v=Dc05W-B2qDI",
+          "segments": [
+            {
+              "start": 117,
+              "end": 212,
+              "label": "P08: selected teaching, part 1"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Useful occupation categories and task-demand questions at 1:57–3:32. The purported introduction also contains hands-on prompts, reward schedules and ignoring unwanted behaviour; these are outside C01/P08 and must not be assigned as blanket practice.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=Dc05W-B2qDI"
+              },
+              {
+                "label": "Publisher lesson page",
+                "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1843,19 +2508,68 @@
           "label": "CroydonHealth — Module 2 - Foundation Skills",
           "url": "https://www.youtube.com/watch?v=mVBv0TE3pq4",
           "progressKey": "video:100",
-          "assignment": "Watch the whole foundation-skills module, noting what is an example versus assessed individual need.",
+          "assignment": "Watch only 0:00–0:40, then 5:11–6:17 (1:46 total). The source moves from foundation terms to generic motor exercises, putty resistance, attention rewards and workstations. C09/P09 need task/access reasoning rather than a home exercise programme.",
           "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
           "durationSeconds": 412,
-          "watchMode": "full"
+          "watchMode": "segments",
+          "timingSource": "https://www.youtube.com/watch?v=mVBv0TE3pq4",
+          "segments": [
+            {
+              "start": 0,
+              "end": 40,
+              "label": "P09: selected teaching, part 1"
+            },
+            {
+              "start": 311,
+              "end": 377,
+              "label": "P09: selected teaching, part 2"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The source moves from foundation terms to generic motor exercises, putty resistance, attention rewards and workstations. C09/P09 need task/access reasoning rather than a home exercise programme.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=mVBv0TE3pq4"
+              },
+              {
+                "label": "Publisher lesson page",
+                "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+              }
+            ]
+          }
         },
         {
           "label": "CroydonHealth — Module 7 - Gross Motor Activities",
           "url": "https://www.youtube.com/watch?v=bz5wV6dFsX0",
           "progressKey": "video:101",
-          "assignment": "Watch the named short gross-motor module as activity examples. Critique access, preference, pain/fatigue and participation; do not administer a motor test or prescribe activities from the video.",
+          "assignment": "Watch only 2:16–3:41 (1:25 total). P09 can use the ball-skills progression as an observation example, not a required method, motor test, diagnosis or prescription. The source does not itself teach retention/transfer or prove participation benefit.",
           "provenance": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2",
           "durationSeconds": 537,
-          "watchMode": "full"
+          "watchMode": "segments",
+          "timingSource": "https://www.youtube.com/watch?v=bz5wV6dFsX0",
+          "segments": [
+            {
+              "start": 136,
+              "end": 221,
+              "label": "P09: selected teaching, part 1"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "P09 can use the ball-skills progression as an observation example, not a required method, motor test, diagnosis or prescription. The source does not itself teach retention/transfer or prove participation benefit.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=bz5wV6dFsX0"
+              },
+              {
+                "label": "Publisher lesson page",
+                "url": "https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1899,10 +2613,37 @@
           "label": "CroydonHealth — Module 1: What is Sensory Processing?",
           "url": "https://www.youtube.com/watch?v=h1rPF4bd4xI",
           "progressKey": "video:100",
-          "assignment": "Watch the short terminology introduction as context only. Compare any clinical claim against the specified approach, assessment, evidence and meaningful occupation in Practice Smart; the workshop is not efficacy evidence.",
+          "assignment": "Watch only 0:00–0:42, then 2:18–4:11 (2:35 total). The vocabulary and senses sections fit G06/P10. General arousal/just-right-state and movement/meal claims at 4:11–5:12 are broader than the evidence task; frame difference and distress as access information, not inappropriate or negative behaviour. Interoception is misrecognised as interception in automatic captions.",
           "provenance": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10",
           "durationSeconds": 396,
-          "watchMode": "full"
+          "watchMode": "segments",
+          "timingSource": "https://www.youtube.com/watch?v=h1rPF4bd4xI",
+          "segments": [
+            {
+              "start": 0,
+              "end": 42,
+              "label": "P10: selected teaching, part 1"
+            },
+            {
+              "start": 138,
+              "end": 251,
+              "label": "P10: selected teaching, part 2"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The vocabulary and senses sections fit G06/P10. General arousal/just-right-state and movement/meal claims at 4:11–5:12 are broader than the evidence task; frame difference and distress as access information, not inappropriate or negative behaviour. Interoception is misrecognised as interception in automatic captions.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=h1rPF4bd4xI"
+              },
+              {
+                "label": "Publisher lesson page",
+                "url": "https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -1946,17 +2687,39 @@
           "label": "IRIS — Behavioral Principles: Challenge video",
           "url": "https://iris.peabody.vanderbilt.edu/module/bp/challenge/",
           "progressKey": "video:0",
-          "assignment": "Watch only the 0:59 Challenge introduction, then read the assigned Behavioral Principles pages, especially The ABC Model. This introductory movie does not teach a complete support or assessment procedure.",
+          "assignment": "Watch the complete named 0:59 unit. The 0:59 introduction frames variation across days and contexts and asks about behavioural principles. Fits G07/P11 only as orientation; it does not itself teach ABC or establish function. Read the assigned ABC material and native competing-hypothesis examples before the fictional task.",
           "durationSeconds": 59,
-          "watchMode": "sections"
+          "watchMode": "full",
+          "timingSource": "https://iris.peabody.vanderbilt.edu/module/bp/challenge/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The 0:59 introduction frames variation across days and contexts and asks about behavioural principles. Fits G07/P11 only as orientation; it does not itself teach ABC or establish function. Read the assigned ABC material and native competing-hypothesis examples before the fictional task.",
+            "sources": [
+              {
+                "label": "Publisher challenge video and transcript",
+                "url": "https://iris.peabody.vanderbilt.edu/module/bp/challenge/"
+              }
+            ]
+          }
         },
         {
           "label": "IRIS — Functional Behavioral Assessment (Elementary): Challenge video",
           "url": "https://iris.peabody.vanderbilt.edu/module/fba-elem/challenge/",
           "progressKey": "video:1",
-          "assignment": "Watch the 3:00 Challenge case, then complete the named elementary-school FBA reading module. The case movie is not instruction to administer an FBA independently or to use the example teacher responses as recommended treatment.",
+          "assignment": "Watch the complete named 3:00 unit. Three-minute fictional DJ/Presley challenge depicts failed redirection, rewards and exclusion as problems for analysis, not endorsed interventions. Fits P11 observation-to-hypothesis work. Keep full; require form/function/resources and health, communication, sensory/context alternatives; observations do not establish function.",
           "durationSeconds": 180,
-          "watchMode": "sections"
+          "watchMode": "full",
+          "timingSource": "https://iris.peabody.vanderbilt.edu/module/fba-elem/challenge/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Three-minute fictional DJ/Presley challenge depicts failed redirection, rewards and exclusion as problems for analysis, not endorsed interventions. Fits P11 observation-to-hypothesis work. Keep full; require form/function/resources and health, communication, sensory/context alternatives; observations do not establish function.",
+            "sources": [
+              {
+                "label": "Publisher challenge video and transcript",
+                "url": "https://iris.peabody.vanderbilt.edu/module/fba-elem/challenge/"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2069,9 +2832,32 @@
           "label": "National Institute of Mental Health (NIMH) — Facebook Live: Childhood Irritability",
           "url": "https://www.youtube.com/watch?v=t176yeEdVMM",
           "progressKey": "video:0",
-          "assignment": "Watch the full NIMH irritability discussion as a bounded professional case example, then use the current reading for wider referral questions. It is not a trauma/diagnostic training course or an individual treatment plan.",
+          "assignment": "Watch only 2:46–8:35, then 27:54–29:03 (6:58 total). Normative versus impairing irritability, phasic/tonic descriptions, cross-diagnostic and environmental context, clinician questions and school/family collaboration match P13 and the optional G10 case. The research treatment protocol is unnecessary for these learning objectives.",
           "durationSeconds": 1799,
-          "watchMode": "full"
+          "watchMode": "segments",
+          "timingSource": "https://www.youtube.com/watch?v=t176yeEdVMM",
+          "segments": [
+            {
+              "start": 166,
+              "end": 515,
+              "label": "P13: selected teaching, part 1"
+            },
+            {
+              "start": 1674,
+              "end": 1743,
+              "label": "P13: selected teaching, part 2"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Normative versus impairing irritability, phasic/tonic descriptions, cross-diagnostic and environmental context, clinician questions and school/family collaboration match P13 and the optional G10 case. The research treatment protocol is unnecessary for these learning objectives.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=t176yeEdVMM"
+              }
+            ]
+          }
         },
         {
           "label": "National Institute of Mental Health (NIMH) — Mental Health Minute: Stress and Anxiety in Adolescents",
@@ -2079,7 +2865,18 @@
           "progressKey": "video:1",
           "durationSeconds": 88,
           "watchMode": "full",
-          "assignment": "Watch the complete named unit: Mental Health Minute: Stress and Anxiety in Adolescents - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "assignment": "Watch the complete named 1:28 unit. Adolescent stress/anxiety overview, everyday support and escalation to a trusted adult/health professional when symptoms persist or interfere. Generic app advice is not endorsement of a particular app; no diagnostic or personalised treatment conclusion.",
+          "timingSource": "https://www.youtube.com/watch?v=wr4N-SdekqY",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Adolescent stress/anxiety overview, everyday support and escalation to a trusted adult/health professional when symptoms persist or interfere. Generic app advice is not endorsement of a particular app; no diagnostic or personalised treatment conclusion.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=wr4N-SdekqY"
+              }
+            ]
+          }
         },
         {
           "label": "National Institute of Mental Health (NIMH) — Mental Health Minute: Attention-Deficit/Hyperactivity Disorder",
@@ -2087,7 +2884,18 @@
           "progressKey": "video:2",
           "durationSeconds": 66,
           "watchMode": "full",
-          "assignment": "Watch the complete named unit: Mental Health Minute: Attention-Deficit/Hyperactivity Disorder - YouTube. Focus on the concepts in its title, then use the native worked example and other references for the rest of this topic. Pause to work the examples; divide a long lecture across study sessions."
+          "assignment": "Watch the complete named 1:06 unit. Brief ADHD overview and professional help-seeking fits a bounded mental-health-literacy component. It is not a screening instrument or a comprehensive explanation of anxiety, trauma or caregiver well-being.",
+          "timingSource": "https://www.youtube.com/watch?v=-j2PqoFCzX0",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Brief ADHD overview and professional help-seeking fits a bounded mental-health-literacy component. It is not a screening instrument or a comprehensive explanation of anxiety, trauma or caregiver well-being.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=-j2PqoFCzX0"
+              }
+            ]
+          }
         }
       ],
       "readings": [
@@ -2190,12 +2998,26 @@
           "label": "W3C WAI — Text to Speech: an assistive-output example",
           "url": "https://www.w3.org/WAI/perspective-videos/speech/",
           "progressKey": "video:100",
-          "assignment": "Assigned viewing: 0:00–0:54. Watch the complete short demonstration to see an assistive-output use case. It is not an AI/child-therapy product demonstration or AAC assessment; study UNICEF and ASHA for those boundaries.",
+          "assignment": "Watch the complete named 0:54 unit. A complete short spoken-output/accessibility demonstration, including screen-reader use, reading support and a poorly coded page. Semantic structure and alternatives are required; generating speech alone does not provide all screen-reader navigation. This is an assistive-output example, not a child-therapy product trial, AAC assessment or proof that every person benefits equally. Multilingual and individual-access exercises remain separate.",
           "watchMode": "full",
           "playbackUrl": "https://www.youtube.com/watch?v=8Rn5pXCdZWU",
           "accessNote": "The original W3C page also offers a transcript, captions and an audio-described version.",
           "durationSeconds": 54,
-          "timingSource": "https://www.youtube.com/watch?v=8Rn5pXCdZWU"
+          "timingSource": "https://www.youtube.com/watch?v=8Rn5pXCdZWU",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "A complete short spoken-output/accessibility demonstration, including screen-reader use, reading support and a poorly coded page. Semantic structure and alternatives are required; generating speech alone does not provide all screen-reader navigation. This is an assistive-output example, not a child-therapy product trial, AAC assessment or proof that every person benefits equally. Multilingual and individual-access exercises remain separate.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=8Rn5pXCdZWU"
+              },
+              {
+                "label": "Publisher transcript / video script",
+                "url": "https://www.w3.org/WAI/perspective-videos/speech/"
+              }
+            ]
+          }
         },
         {
           "label": "UTS Human Technology Institute / CSIRO — procuring AI responsibly",
@@ -2217,15 +3039,6 @@
               }
             ]
           }
-        },
-        {
-          "label": "UNICEF Innocenti — UNICEF Guidance on AI and Children (3.0): Launch webinar",
-          "url": "https://www.youtube.com/watch?v=BwCVJCymmt8",
-          "progressKey": "video:0",
-          "optional": true,
-          "assignment": "Optional full UNICEF Guidance on AI and Children 3.0 launch webinar. The required task is the relevant guidance sections and a child-data/access/governance map; the whole launch event is not required.",
-          "watchMode": "full",
-          "durationSeconds": 3629
         },
         {
           "label": "UNICRI — What to Be? A Journey Through AI (optional literacy example)",
@@ -2263,7 +3076,7 @@
           "assignment": "Read the named article or specified sections: UNICEF — AI policy guidance for children. Focus on assistive technology, AI limits, privacy and use the native worked example to check your interpretation."
         }
       ],
-      "videoNote": "Core viewing totals 5:30: UTS Procuring AI (4:36) and W3C assistive output (0:54). The procurement example is organisational, not a clinical/child-rights validation. UNICEF 3.0, ASHA and the native child-data/rights case remain required; the animation and launch webinar remain optional.",
+      "videoNote": "Core viewing totals 5:30: UTS Procuring AI (4:36) and W3C assistive output (0:54). The procurement example is organisational, not a clinical/child-rights validation. UNICEF 3.0, ASHA and the native child-data/rights case remain required; the animation remains optional.",
       "pass_criteria": "1. Map purpose, intended user, data flow, generated output, oversight and exit/backup. 2. Give three concrete defer reasons for a child-facing AI deployment. 3. Require qualified governance/access review without a real-child trial or treating a checklist as approval.",
       "note": "Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.",
       "outcomes": [
@@ -2287,11 +3100,34 @@
       "audienceLabel": "Professional preparation — supervised application required",
       "videos": [
         {
-          "label": "ASHA — Troubleshooting Common Obstacles to External Scientific Evidence: named microcourse on this page; CE credit has separate terms",
-          "url": "https://www.asha.org/research/ebp/evidence-based-decision-making-micro-course-series/",
-          "progressKey": "video:0",
-          "watchMode": "sections",
-          "assignment": "Choose only Troubleshooting Common Obstacles to External Scientific Evidence and its six parts (about 30 minutes total). Do not complete every microcourse on the page. Use the linked activity/slides; CE credit/purchase is separate."
+          "label": "Cochrane — Review questions, eligibility, searching and extracting evidence",
+          "url": "https://www.youtube.com/watch?v=egJlW4vkb1Y",
+          "progressKey": "video:300",
+          "durationSeconds": 203,
+          "timingSource": "https://www.youtube.com/watch?v=egJlW4vkb1Y",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 7,
+              "end": 116,
+              "label": "Cochrane — Review questions, eligibility, searching and extracting evidence"
+            }
+          ],
+          "assignment": "Watch only 0:07–1:56 (1:49 total). Question, eligibility, searching, method/participant/funding/outcome extraction and appraisal fit P16 research synthesis preparation. Assign 0:07–1:56 (1:49), before overly simplified forest-plot/confidence claims. More studies do not automatically improve certainty, and not every review should pool studies; native current evidence appraisal, search log, bias and applicability work remains required.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "Question, eligibility, searching, method/participant/funding/outcome extraction and appraisal fit P16 research synthesis preparation. Assign 0:07–1:56 (1:49), before overly simplified forest-plot/confidence claims. More studies do not automatically improve certainty, and not every review should pool studies; native current evidence appraisal, search log, bias and applicability work remains required.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=egJlW4vkb1Y"
+              },
+              {
+                "label": "Publisher transcript / video script",
+                "url": "https://www.cochrane.org/evidence/what-are-systematic-reviews"
+              }
+            ]
+          }
         }
       ],
       "readings": [

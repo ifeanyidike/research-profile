@@ -1961,3 +1961,17 @@ input[type="radio"] {
     padding: 12px;
   }
 }
+
+/* Authored equations share the local renderer with the other studios. */
+.lesson-body mjx-container[display="true"],
+.review-card mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0.15rem;
+  color: inherit;
+}
+mjx-container:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

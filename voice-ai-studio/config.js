@@ -1,7 +1,7 @@
 export default {
   slug: "voice-ai-studio",
   name: "Voice AI Studio",
-  version: "20261030-9",
+  version: "20261031-1",
   table: "voice_ai_progress",
   mark: "v",
   heroTitle: "Understand the signal.",

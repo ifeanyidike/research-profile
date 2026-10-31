@@ -1,3 +1,3 @@
-import { startStudio } from "../learning-studio/app.js?v=20261030-9";
-import config from "./config.js?v=20261030-9";
+import { startStudio } from "../learning-studio/app.js?v=20261031-1";
+import config from "./config.js?v=20261031-1";
 startStudio(config);

@@ -1,0 +1,44 @@
+Full-library source-content review
+==================================
+Completed: 31 October 2026
+Release: 20261031-1
+Scope: 303 assignments outside the previous 44-assignment audit.
+
+301 scoped transcript-supported assignments; 2 retired; 0 pending.
+36 replacements use unused progress keys, preserving old completion records.
+Retained recordings keep their historical keys. Counts refer to assignments,
+not unique videos or full-recording reviews.
+
+Cyber: 192 reviewed. Voice AI: 66 reviewed. Child Development: 43 reviewed.
+Read each manifest entry for the exact assigned portions, source links,
+corrections, evidence method and limits. Descriptions and chapter headings
+alone were not accepted as speech verification. Poor automatic captions and
+unavailable transcripts prompted replacements or explicit retirement.
+
+Examples of corrections
+-----------------------
+- Replace mismatched OS and cryptography assignments; clarify where focused
+  introductory clips require native explanations and graduate readings.
+- Use actual named MIT cache clips with separate clocks, not the section opener.
+- Narrow long recordings to lesson components and preserve start/stop bounds.
+- Correct mathematical assumptions, pointer/object bounds, cloud responsibilities,
+  authentication/authorisation, detection limits and forensic inference.
+- Correct the medical-software assignment: connected-device case studies, not
+  a Therac-25 walkthrough; distinguish safety from stopping a system.
+- Keep historical platform/legal/clinical examples separate from current rules.
+- Preserve caregiver/professional scope and the limits of child case examples.
+- Maintain current ATT&CK-version guidance alongside historical mapping videos.
+
+Limits
+------
+Transcript support applies to the assigned passages. Automatic captions can
+contain errors; per-source notes state exclusions and corroboration. A few
+publisher sources supply narration scripts rather than spoken transcripts.
+This audit does not certify every statement in full recordings or external
+books, successful provider playback everywhere, clinical competence, graduate
+mastery or an accredited qualification. Required readings, native exercises and
+independent assessments remain part of each lesson. No full third-party
+transcripts are distributed in the site or this report.
+
+Verification results are recorded in the delivery report after the production
+build and browser checks; audit completion alone is not deployment evidence.

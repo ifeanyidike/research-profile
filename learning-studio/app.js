@@ -1,7 +1,7 @@
-import { math } from "./math.js?v=20261030-9";
-import { createModel } from "./model.js?v=20261030-9";
-import { Account } from "./account.js?v=20261030-9";
-import { resourceCards, assignmentSummary } from "./resources.js?v=20261030-9";
+import { math } from "./math.js?v=20261031-1";
+import { createModel } from "./model.js?v=20261031-1";
+import { Account } from "./account.js?v=20261031-1";
+import { resourceCards, assignmentSummary } from "./resources.js?v=20261031-1";
 import { syncConfig } from "../algo-studio/sync-config.js";
 export function startStudio(config) {
   document.documentElement.dataset.studio = config.slug;

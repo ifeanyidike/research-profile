@@ -1,7 +1,7 @@
 export default {
   slug: "child-development-studio",
   name: "Child Development & Therapy Studio",
-  version: "20261030-9",
+  version: "20261031-1",
   table: "child_development_progress",
   mark: "d",
   heroTitle: "Understand development.",
