@@ -19,7 +19,7 @@ Readings:
   WHO — Caregiver Skills Training introduction (programme scope: ages 2–9) — https://www.who.int/publications/i/item/9789240048836
     Assignment: Read the introduction’s audience, aims and programme structure. WHO CST here targets families of children aged 2–9 with developmental delays/disabilities; it does not supply a 0–18 therapy curriculum or professional qualification.
   HCPC — approved professional programmes — https://www.hcpc-uk.org/education/approved-programmes/
-    Assignment: Read the named article or specified sections: HCPC — approved professional programmes. Focus on roles, scope, caregiver education and use the native worked example to check your interpretation.
+    Assignment: Use the programme directory to look up the actual profession, programme and delivery route you might pursue. Record the listed approval status and confirm requirements with the provider; this directory does not teach caregiver techniques or confer registration.
 Practical: Make a learning-goal table for two fictional adults: a parent preparing for an appointment and a student exploring an OT career. Give each three appropriate goals, one boundary and an evidence artefact they could produce without involving a child. Select your own learning path in the interface.
 Independent assessment: A website promises “become a qualified speech, occupational and behavioral therapist in one weekend”. Write a careful appraisal covering training, assessment, supervised practice, regulation and the difference between education and a credential.
 Pass criteria: 1. Give distinct caregiver and professional learning goals with scope boundaries. 2. Challenge the weekend qualification claim using accreditation, supervised assessment and regulator questions. 3. Explain why an attendance certificate does not establish professional authority.
@@ -53,7 +53,7 @@ C03 — Preschool development, play and participation
 Prerequisites: C02
 Path: Shared foundations
 Study assignment: Read the preschool-age development material and watch the named play/serve-and-return examples. Map the art activity's demands, preferences and accessible stopping option.
-Video coverage/access: Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.
+Video coverage/access: Open the provider cards in the displayed order: Center on the Developing Child at Harvard University — 5 Steps for Brain-Building Serve and Return; NHS Bedfordshire and Luton — How to support social communication. Use each card’s assigned passage and viewing time. These introductions supply the stated context; the lesson and scoped readings carry the wider topic and professional boundaries.
 Videos:
   Center on the Developing Child at Harvard University — 5 Steps for Brain-Building Serve and Return — https://www.youtube.com/watch?v=KNrnZag17Ek
     Assignment: Watch the complete named 6:06 unit. Five responsive-interaction steps: shared focus, encouragement, naming, turn-taking/waiting and respecting endings/beginnings. Fits C03/G01. No required eye contact or speech-only communication; use child's accessible signals and fictional exercise.
@@ -68,7 +68,7 @@ Readings:
   CDC — Positive Parenting Tips: Preschoolers (3–5 years) — https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html
     Assignment: Read the preschool development and interaction sections. Use the stated 3–5 age range; do not infer an individual delay from one listed behaviour.
   RCOT — occupational therapy and play practice guideline — https://www.rcot.co.uk/explore-resources/children-young-people-families/play-practice-guideline
-    Assignment: Read the named article or specified sections: RCOT — occupational therapy and play practice guideline. Focus on play, communication, self-care and use the native worked example to check your interpretation.
+    Assignment: Read the guideline overview and recommendations on children’s participation in play. Record population and evidence limits. This is play guidance, not a complete motor-learning or coordination-disorder course.
 Practical: Analyse the art-table case using four headings: activity demand, observable information, unknowns and a low-risk access option to discuss. Include the child's choice and a stopping signal. Do not try an intervention with a child for this exercise.
 Independent assessment: A preschool report says “does not play properly” without examples. Rewrite it as a respectful request for information, then propose a participation-focused question for a caregiver-professional meeting.
 Pass criteria: 1. Analyse art-table instructions, materials, environment and child preference separately. 2. Include an accessible stopping signal and questions before proposing access options. 3. Rewrite the judgement about play as a participation question without imposing one play style.
@@ -78,7 +78,7 @@ C04 — School-age development and learning
 Prerequisites: C03
 Path: Shared foundations
 Study assignment: Watch the 2:54 development video for ages 6–8, then read the broader 6–12 source. Separate literacy, comprehension, handwriting, relationships and access demands in the fictional case.
-Video coverage/access: The short video now supplies a matched school-age example with a publisher transcript. It covers 6–8, not every stage of the 6–12 reading; developmental variability and referral limits remain explicit.
+Video coverage/access: The short video supplies a matched school-age example with a publisher transcript. It covers 6–8, not every stage of the 6–12 reading; developmental variability and referral limits remain explicit.
 Videos:
   Raising Children Network — child development at 6–8 years — https://raisingchildren.net.au/school-age/multimedia/development-6-8-years
     Assignment: Watch the complete named video, 0:00–2:54. Study everyday learning, play, friendships, growing independence and variability at ages 6–8. Apply those observations to the fictional pupil case; do not use a general age description to diagnose an individual or extrapolate it to all ages 6–12.
@@ -99,7 +99,7 @@ C05 — Adolescence, identity and growing autonomy
 Prerequisites: C04
 Path: Shared foundations
 Study assignment: Read NIMH's seven teen-brain points, then watch the assigned BJ Casey interview excerpts on adolescent decisions and context. Consult the Youth.gov discussion/transcript material as a reading. Relate population-level findings to autonomy without inferring an individual teenager's capacity.
-Video coverage/access: An introductory population-level adolescent-development talk, with provider transcripts and discussion guides. It is not an individual capacity test, clinical assessment or complete transition-services course.
+Video coverage/access: Watch only the listed BJ Casey panel excerpts from Knowable/Annual Reviews. They introduce population-level adolescent learning and control; the Youth.gov transcripts/discussion guides are separate readings. No video establishes an individual’s capacity or provides clinical assessment.
 Videos:
   Knowable / Annual Reviews — BJ Casey: adolescent decisions, context and diversity — https://www.youtube.com/watch?v=nMid-MkDHYs
     Assignment: Watch only 5:42–8:07, then 11:38–14:12 (4:59 total). Expert interview corrects defective-teen-brain stereotype, explains context-sensitive decisions, sampling diversity and individual environmental experience. Replaces overgeneralised Youth.gov Segment 1 in C05. Assign 5:42–8:07 and 11:38–14:12, 4:59 total; circuit metaphor describes group-level tendencies, not a capacity test or fixed maturity birthday. Rest of 63-minute panel unassigned.
@@ -109,9 +109,9 @@ Videos:
       Recording and English captions: https://www.youtube.com/watch?v=nMid-MkDHYs
 Readings:
   NIMH — The Teen Brain: 7 Things to Know — https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know
-    Assignment: Read the named article or specified sections: NIMH — The Teen Brain: 7 Things to Know. Focus on puberty, autonomy, executive skills and use the native worked example to check your interpretation.
+    Assignment: Read the seven introductory points about adolescence, ongoing development, adaptation, sleep and vulnerability. Use population-level descriptions to frame questions; do not use them to judge one teenager’s capacity.
   Youth.gov — TAG Talk segment transcripts and family/professional discussion guides — https://youth.gov/feature-article/power-adolescent-brain-tag-talk
-    Assignment: Read the named article or specified sections: Youth.gov — TAG Talk segment transcripts and family/professional discussion guides. Focus on puberty, autonomy, executive skills and use the native worked example to check your interpretation.
+    Assignment: Read the segment transcripts and choose the family or professional discussion guide relevant to your role. Use these for adolescent-development discussion; the separately assigned BJ Casey clips have their own viewing instructions.
 Practical: Create a fictional transition-planning page with five headings: young person's priorities, communication preferences, daily participation, people/services and unanswered safety/legal questions. Include one goal the teenager chose and one adult concern that needs discussion rather than automatic precedence.
 Independent assessment: A plan lists only “obey adults, make eye contact, stop using help”. Rewrite its aims around communication, dignity, participation and supported autonomy. Explain what additional information is needed before selecting any intervention.
 Pass criteria: 1. Include a teenager-chosen goal, communication preferences and supported decisions. 2. Explain privacy limits and locally verified safety/consent questions. 3. Replace obedience/eye-contact targets with meaningful participation and autonomy.
@@ -120,7 +120,7 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 C06 — Observation, hearing, concerns and referral
 Prerequisites: C02, C03, C04, C05
 Path: Shared foundations
-Study assignment: Read milestone/referral guidance within its age scope. The communication video is introductory support; use the native school-age case to distinguish observation, hearing/access questions and inference.
+Study assignment: Read milestone/referral guidance within its age scope. The communication video is introductory support; use the school-age case to distinguish observation, hearing/access questions and inference.
 Video coverage/access: Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.
 Videos:
   NHS Bedfordshire and Luton — Understanding language: observation and accessible support — https://player.vimeo.com/video/838719641?app_id=122963
@@ -145,7 +145,7 @@ C07 — Assent, privacy, safeguarding and respectful care
 Prerequisites: C01, C05
 Path: Shared foundations
 Study assignment: Watch the 1:00 privacy animation and 8:30 of UNICEF participation excerpts. Work fictional consent/assent/refusal/privacy distinctions and connect the safeguarding reading to your local route.
-Video coverage/access: Core viewing totals 9:30: the complete privacy animation and two participation excerpts. These support digital privacy, child voice and practical access; local safeguarding and clinical consent/assent require the native distinctions and appropriate guidance.
+Video coverage/access: Core viewing totals 9:30: the complete privacy animation and two participation excerpts. These support digital privacy, child voice and practical access; local safeguarding and clinical consent/assent require the distinctions and appropriate guidance.
 Videos:
   eSafety — sharenting and children’s digital privacy — https://www.esafety.gov.au/parents/issues-and-advice/privacy-child
     Assignment: Watch the complete named video, 0:00–1:00. Select only “Sharenting - a global trend putting kids at risk unintentionally”. Identify identifying details, audience/privacy settings and lower-exposure sharing choices. This short text animation supplies the privacy component. Complete the native assent/refusal example and the UNICEF/NSPCC readings for participation, safeguarding and local protection procedures; it does not teach clinical consent law.
@@ -160,9 +160,11 @@ Videos:
       Published English transcript — open Show transcript: https://www.youtube.com/watch?v=8aNB8k9VlMQ
 Readings:
   UNICEF — Convention on the Rights of the Child: child-friendly explanation — https://www.unicef.org/child-rights-convention/convention-text-childrens-version
-    Assignment: Read the named article or specified sections: UNICEF — Convention on the Rights of the Child: child-friendly explanation. Focus on assent, safeguarding, privacy and use the native worked example to check your interpretation.
+    Assignment: Read the child-friendly explanation, concentrating on voice/participation, expression, privacy, protection and disability inclusion. It introduces rights; it does not explain clinical consent capacity or settle local legal entitlements.
   NSPCC — recognising and responding to abuse — https://learning.nspcc.org.uk/child-abuse-and-neglect/recognising-and-responding-to-abuse
-    Assignment: Read the named article or specified sections: NSPCC — recognising and responding to abuse. Focus on assent, safeguarding, privacy and use the native worked example to check your interpretation.
+    Assignment: Read the recognising and responding guidance, particularly listening, recording/reporting and avoiding an independent investigation. Identify the appropriate local safeguarding route; UK service details are not universal.
+  NHS — consent to treatment and young people — https://www.nhs.uk/tests-and-treatments/consent-to-treatment/
+    Assignment: Read the meaning of informed and voluntary consent, withdrawal, and the linked children/young-people explanation. The legal examples concern England; check the applicable jurisdiction rather than exporting its age rules.
 Practical: Review a fictional proposed notebook entry containing a child's full name, school, video link and appointment letter. Replace it with a wholly invented learning case. Explain which information should never enter this studio and where authorised professionals should keep necessary records.
 Independent assessment: An adult says “The parent agreed, so continue even though the child is repeatedly signalling stop.” Write the questions a responsible professional must consider and a respectful default for a non-urgent educational activity.
 Pass criteria: 1. Replace the real-data notebook proposal with a wholly invented case. 2. Distinguish consent, assent/refusal, privacy and safeguarding responsibilities. 3. Pause a non-urgent educational activity when stop is signalled; identify qualified/local exceptions.
@@ -189,7 +191,7 @@ Readings:
   ASHA — developmental milestones (birth–5; conversation aid, not diagnosis) — https://www.asha.org/public/developmental-milestones/
     Assignment: Read only the relevant birth–5 age band and the advice about discussing concerns. Use observations to prepare questions, not a diagnosis; school-age/adolescent examples require the other sources.
   ASHA public information — Childhood Language Disorders (helpingyoucommunicate.org) — https://helpingyoucommunicate.org/article/childhood-language-disorders
-    Assignment: Read the named article or specified sections: ASHA public information — Childhood Language Disorders (helpingyoucommunicate.org). Focus on speech, language, interaction and use the native worked example to check your interpretation.
+    Assignment: Read the whole public overview of signs, language difficulties and seeking an SLP’s help. Use it to distinguish an observation from a diagnosis, not to choose a test or treatment.
 Practical: Make a fictional communication-access table for a classroom question, a playground choice and a medical appointment. For each, list possible modes, partner demands, an access barrier and a question to ask the child or team. Do not infer ability from whether speech is present.
 Independent assessment: Rewrite “He can talk, so he does not need communication support” into a more accurate explanation. Include understanding, context, complex messages, fatigue and the role of professional assessment.
 Pass criteria: 1. Distinguish speech, receptive/expressive language and communication modes. 2. Explain why fluent speech does not establish full comprehension/access. 3. Include context, fatigue, complex messages and suitable professional assessment.
@@ -210,10 +212,10 @@ Videos:
       Publisher lesson page: https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2
 Readings:
   Croydon NHS — Building Independence in Everyday Activities — https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2
-    Assignment: Read the named article or specified sections: Croydon NHS — Building Independence in Everyday Activities. Focus on occupations, movement, sensory needs and use the native worked example to check your interpretation.
+    Assignment: Read the workshop overview on independence in everyday activities and revisit the specifically assigned video units only. Frame activity/access questions; the workshop is not DCD evidence, individual motor assessment or a home treatment plan.
 Practical: Break the fictional dressing routine into six steps. For each, record what is known, what is unknown and one question for the child or team. Identify an ordinary environmental option to discuss and an action that should await professional advice.
 Independent assessment: Rewrite “poor fine motor skills; needs a sensory diet” into a careful participation-based note with a referral question. Explain why the proposed cause and treatment are not established by the supplied case.
-Pass criteria: 1. Break dressing into six demands without assuming a motor or sensory diagnosis. 2. Separate a comfort/access option from specialist equipment or handling. 3. Include pain, child preference and the professional questions needed for safe participation.
+Pass criteria: 1. Break dressing into six steps and identify their demands without assuming a motor or sensory diagnosis. 2. Separate a comfort/access option from specialist equipment or handling. 3. Include pain, child preference and the professional questions needed for safe participation.
 Source notes: Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.
 
 C10 — Behavior, emotions, stress and context
@@ -229,9 +231,11 @@ Videos:
       Recording and English captions: https://www.youtube.com/watch?v=rVwFkcOZHJw
 Readings:
   IRIS — Learning and Behavior — https://iris.peabody.vanderbilt.edu/module/bp/cresource/q1/p01/
-    Assignment: Read the named article or specified sections: IRIS — Learning and Behavior. Focus on distress, context, co-regulation and use the native worked example to check your interpretation.
+    Assignment: Read Page 1, Learning and Behavior. Explain the educational terms and compare them with the native fictional observation; do not infer a behaviour’s cause from one sequence.
   NICE CG170 — support and management; read the named section for this topic — https://www.nice.org.uk/guidance/cg170/chapter/Recommendations
     Assignment: Read 1.4 Factors that may contribute to behaviour that challenges. This NICE guidance concerns autistic children/young people under 19; do not generalise it to all children or use it as an individual treatment plan.
+  US Department of Education — restraint and seclusion principles — https://www.ed.gov/teaching-and-administration/safe-learning-environments/school-safety-and-security/school-climate-and-student-discipline/restraint-and-seclusion-resource-document
+    Assignment: Read the overview and prevention/emergency principles. This is US school guidance, not local legal advice or technique training; compare its safeguards with the local policy for your actual setting.
 Practical: Rewrite the case as a neutral note, then list three competing explanations and the information needed to distinguish them. Include a health question and the child's perspective. Suggest one low-risk environmental issue to discuss with the responsible team, without testing it on a child.
 Independent assessment: A proposed plan says “ignore all distress until compliance improves”. Appraise its missing information and risks, then rewrite the goal around communication, safety and meaningful participation.
 Pass criteria: 1. Write a neutral ABC description using only supplied facts. 2. Give at least three competing explanations and needed health/communication information. 3. Reject ignoring all distress and replace compliance-only aims with meaningful participation.
@@ -241,7 +245,7 @@ C11 — Inclusion, neurodiversity, culture and disability
 Prerequisites: C07, C08, C09, C10
 Path: Shared foundations
 Study assignment: Watch the 10:29 first-person inclusion module, then read the cultural/multilingual guidance. Critique the fictional goal for access, power, whose priorities it serves and how disagreement can be expressed.
-Video coverage/access: A focused UNICEF module now supplies first-person disability/inclusion teaching. Neurodiversity, cultural responsiveness and multilingual assessment still require the scoped native lesson/readings.
+Video coverage/access: A focused UNICEF module supplies first-person disability/inclusion teaching. Neurodiversity, cultural responsiveness and multilingual assessment still require the lesson and assigned readings.
 Videos:
   UNICEF — disability, identity, barriers and inclusion — https://www.unicef.org/documents/disability-inclusion-frontline-workers-training-who-we-are
     Assignment: Watch the complete named video, 0:00–10:29. Hear young people describe disability as one part of identity and the barriers/misconceptions that restrict participation. Ask whose perspective and communication preferences are missing in the native goal critique; do not infer the same preferences for all disabled or neurodivergent people.
@@ -249,7 +253,7 @@ Videos:
       Published English transcript — open Show transcript: https://www.youtube.com/watch?v=kWrPBCKnfA4
 Readings:
   ASHA — learning more than one language — https://www.asha.org/public/speech/development/learning-more-than-one-language/
-    Assignment: Read the named article or specified sections: ASHA — learning more than one language. Focus on inclusion, culture, neurodiversity and use the native worked example to check your interpretation.
+    Assignment: Read the public article on multilingual development and supporting home languages. Record why multilingualism alone is not evidence of disorder; it does not supply a multilingual diagnostic procedure.
   NICE CG170 — support and management; read the named section for this topic — https://www.nice.org.uk/guidance/cg170/chapter/Recommendations
     Assignment: Read 1.1 General principles of care and 1.3 Specific interventions for core features. This NICE guidance concerns autistic children/young people under 19; do not generalise it to all children or use it as an individual treatment plan.
 Practical: Review three fictional goals: make eye contact, ask for a break using a chosen mode, and finish a painful task without complaint. For each, identify the proposed benefit, possible harm, missing child perspective and a more meaningful participation question.
@@ -274,7 +278,7 @@ Videos:
       NHS video and complete transcript: https://www.leedsth.nhs.uk/services/childrens-speech-and-language-therapy/childrens-speech-and-language-therapy-slt-videofluroscopy/
 Readings:
   ASHA — Pediatric Feeding and Swallowing (professional reference; seek individual advice) — https://www.asha.org/practice-portal/clinical-topics/pediatric-feeding-and-swallowing/
-    Assignment: Read the named article or specified sections: ASHA — Pediatric Feeding and Swallowing (professional reference; seek individual advice). Focus on health needs, sleep, swallowing concerns and use the native worked example to check your interpretation.
+    Assignment: Read Overview, Signs and Symptoms, and Roles and Responsibilities. Identify referral questions and qualified scope. No textures, diet changes, feeding trials or swallowing manoeuvres are assigned.
   Leeds Community Healthcare NHS — sleep by age, babies to teenagers — https://leedscommunityhealthcare.nhs.uk/our-services-a-z/0-to-19-public-health-integrated-nursing-service-0-to-19-phins/sleep/
     Assignment: Read the section for the fictional child’s age: baby safe-sleep link, toddlers/preschoolers, school-age, or teenagers. Discuss persistent problems with an appropriate clinician; general routine guidance does not diagnose a medical cause.
 Practical: Prepare a fictional appointment summary with the change, timing, child's report, daily impact and unknowns. Add questions about which professional should assess the concern and what information they need. Explicitly exclude any home swallowing test or dietary experiment.
@@ -286,7 +290,7 @@ G01 — Responsive interaction, play and shared reading
 Prerequisites: C08, C07
 Path: Caregiver education
 Study assignment: Watch the named interaction/play examples on their original provider pages. Use the shared-reading source and adult role-play to practise noticing, responding, pausing and respecting refusal.
-Video coverage/access: Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.
+Video coverage/access: Open the provider cards in the displayed order: Center on the Developing Child at Harvard University — 5 Steps for Brain-Building Serve and Return; NHS Bedfordshire and Luton — How to support social communication. Use each card’s assigned passage and viewing time. These introductions supply the stated context; the lesson and scoped readings carry the wider topic and professional boundaries.
 Videos:
   Center on the Developing Child at Harvard University — 5 Steps for Brain-Building Serve and Return — https://www.youtube.com/watch?v=KNrnZag17Ek
     Assignment: Watch the complete named 6:06 unit. Five responsive-interaction steps: shared focus, encouragement, naming, turn-taking/waiting and respecting endings/beginnings. Fits C03/G01. No required eye contact or speech-only communication; use child's accessible signals and fictional exercise.
@@ -299,9 +303,9 @@ Videos:
       NHS published video transcript (expand the named unit): https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/
 Readings:
   NHS — help your baby learn to talk — https://www.nhs.uk/baby/babys-development/play-and-learning/help-your-baby-learn-to-talk/
-    Assignment: Read the named article or specified sections: NHS — help your baby learn to talk. Focus on responsive interaction, play, shared reading and use the native worked example to check your interpretation.
+    Assignment: Read the age-organised everyday interaction suggestions. Relate them to responsive communication and developmental variability; this is public family information, not diagnosis or a guaranteed language programme.
   Harvard — five steps for serve and return — https://developingchild.harvard.edu/resources/videos/how-to-5-steps-for-brain-building-serve-and-return/
-    Assignment: Read the named article or specified sections: Harvard — five steps for serve and return. Focus on responsive interaction, play, shared reading and use the native worked example to check your interpretation.
+    Assignment: Read the five-step explanation accompanying the assigned video. Explain following a child’s interest and responding; do not turn the illustration into required imitation or a developmental test.
 Practical: With another consenting adult, role-play three invented contributions: a gesture toward a toy, a two-word comment and a refusal. Write a responsive reply for each, including a pause and an accessible way to continue or stop. Then rewrite one quiz-heavy exchange as a conversation.
 Independent assessment: Design a fictional five-minute shared-book opportunity with three possible communication modes, two ways to follow the child's interest and a stopping option. Explain when a caregiver should seek individual advice instead of increasing practice demands.
 Pass criteria: 1. Provide responsive replies to a gesture, comment and refusal with space to respond. 2. Plan a five-minute fictional book opportunity with three modes and two child-led choices. 3. Include stopping and referral boundaries without withholding communication or demanding repetition.
@@ -311,7 +315,7 @@ G02 — Support speech sounds and stammering respectfully
 Prerequisites: C08, C07
 Path: Caregiver education
 Study assignment: Watch the named speech-sound and stammering introductions. Read the family guidance for listening/participation and the distinction between ordinary response and individual prescribed exercises.
-Video coverage/access: Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.
+Video coverage/access: Open the provider cards in the displayed order: NHS Bedfordshire and Luton — Speech sounds within communication and hearing; STAMMA — Talking to a child who stammers: preschool conversation support. Use each card’s assigned passage and viewing time. These introductions supply the stated context; the lesson and scoped readings carry the wider topic and professional boundaries.
 Videos:
   NHS Bedfordshire and Luton — Speech sounds within communication and hearing — https://player.vimeo.com/video/838739136?app_id=122963
     Assignment: Watch only 0:00–3:06 (3:06 total). G02/P06 introduction to speech within communication, listening/hearing and audiology questions fits 0:00–3:06 (3:06), before detailed production chain/exercises. Excludes incorrect later voiced=loud/voiceless=quiet statements and screening instructions. This spoken-language example is not the only communication route or a diagnostic test; native materials cover accessible communication, fluency/motor speech/swallowing boundaries.
@@ -327,9 +331,9 @@ Videos:
       Recording and English captions: https://www.youtube.com/watch?v=R58tq57sCVM
 Readings:
   ASHA — speech sound disorders — https://www.asha.org/public/speech/disorders/speech-sound-disorders/
-    Assignment: Read the named article or specified sections: ASHA — speech sound disorders. Focus on speech sounds, fluency, listening and use the native worked example to check your interpretation.
+    Assignment: Read the public overview of speech-sound differences, signs and seeking an SLP’s help. Distinguish noticing a concern from diagnosing its type or prescribing practice.
   ASHA — stuttering — https://www.asha.org/public/speech/disorders/stuttering/
-    Assignment: Read the named article or specified sections: ASHA — stuttering. Focus on speech sounds, fluency, listening and use the native worked example to check your interpretation.
+    Assignment: Read the public overview of stuttering and support/help-seeking. Focus on listening and communication participation, not fluency demands or diagnosing from a clip.
 Practical: Rewrite three fictional adult responses: “Slow down and stop doing that”, “I'll finish it for you” and “Say the sound ten times before you can play”. Produce alternatives that preserve communication and choice. List questions to ask a speech-language professional about the child's own experience and support preferences.
 Independent assessment: A video says one tongue exercise cures all unclear speech and stammering. Appraise the category error, missing assessment and evidence. Draft a caregiver question that seeks a suitable individual explanation without adopting the exercise.
 Pass criteria: 1. Rewrite all three adult responses to preserve time, meaning and speaker preference. 2. Distinguish natural conversational modelling from prescribed drills. 3. Critique the universal tongue-exercise claim and ask for an individual professional explanation.
@@ -349,17 +353,19 @@ Videos:
       NHS published video transcript (expand the named unit): https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/
 Readings:
   ASHA — AAC for families — https://www.asha.org/public/speech/disorders/aac/
-    Assignment: Read the named article or specified sections: ASHA — AAC for families. Focus on AAC, communication access, partner support and use the native worked example to check your interpretation.
-Practical: With an adult partner, create a fictional communication-access checklist for a club outing. Include availability, battery/backup, vocabulary beyond requesting, privacy, refusal and partner response time. Do not build or test a board for a real child as part of this assignment.
+    Assignment: Read the family overview of AAC forms, communication needs and professional collaboration. Explain why access is not earned through speech or worksheets; device/access selection needs individual assessment.
+  ASHA AAC Practice Portal — augmented input and partner modelling — https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication
+    Assignment: Read the Augmented Input discussion within Treatment. Focus on partners combining speech and AAC symbols; it is not a device-selection or independent-treatment protocol.
+Practical: With an adult partner, create a fictional communication-access checklist for a club outing. Include availability, battery/backup, vocabulary beyond requesting, privacy, refusal and partner response time. Do not build or test a board for a real child as part of this assignment. Add one partner-modelling opportunity (for example, modelling “help” in a fictional club task), how the established system stays reachable and how imitation/refusal are respected.
 Independent assessment: A school policy allows a communication device only after worksheets are finished. Appraise the communication-access problem and draft a collaborative request for a reliable access plan, without making unsupported claims about a particular jurisdiction's law.
-Pass criteria: 1. Include communication beyond requesting, refusal, privacy and reliable backup. 2. Keep the chosen system available without worksheets or speech as prerequisites. 3. Draft a collaborative access request without inventing local legal entitlements.
+Pass criteria: 1. Include partner aided-language modelling, communication beyond requesting, refusal, privacy and reliable backup. 2. Keep the chosen system available without worksheets or speech as prerequisites. 3. Draft a collaborative access request without inventing local legal entitlements.
 Source notes: Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.
 
 G04 — Multilingual homes and cultural responsiveness
 Prerequisites: C08, C11
 Path: Caregiver education
 Study assignment: Watch the 2:50 family stories, then prepare the fictional language history across people, settings and strengths. Use the ASHA reading to distinguish multilingual exposure from diagnosis and to plan interpreter or qualified-assessment questions.
-Video coverage/access: Core viewing: 2:50 of bilingual-family stories with a complete transcript. These Australian families illustrate home-language relationships and community context; ASHA and the native exercise supply multilingual assessment/interpreter boundaries.
+Video coverage/access: Core viewing: 2:50 of bilingual-family stories with a complete transcript. These Australian families illustrate home-language relationships and community context; ASHA and the exercise supply multilingual assessment/interpreter boundaries.
 Videos:
   Raising Children Network — bilingual-family parent stories — https://raisingchildren.net.au/toddlers/videos/bilingualism-video
     Assignment: Watch the complete named video, 0:00–2:50. Identify who uses each language, with whom and for which relationships or settings. Notice family-language comfort, emotions, books and community connections. These Australian parent stories are perspectives, not a requirement that every parent use English. Use ASHA and the native case for language history, interpreters and multilingual assessment; the video does not validate translated test norms.
@@ -368,7 +374,7 @@ Videos:
       Publisher video and complete transcript: https://raisingchildren.net.au/toddlers/videos/bilingualism-video
 Readings:
   ASHA — learning more than one language — https://www.asha.org/public/speech/development/learning-more-than-one-language/
-    Assignment: Read the named article or specified sections: ASHA — learning more than one language. Focus on multilingual development, language difference, family language and use the native worked example to check your interpretation.
+    Assignment: Read the public article on multilingual development and supporting home languages. Record why multilingualism alone is not evidence of disorder; it does not supply a multilingual diagnostic procedure.
 Practical: Prepare a fictional language-history sheet: people/settings, languages/modes, topics, strengths, concerns and changes. Add questions about interpreter access and how assessment will consider each relevant language. Use invented details rather than a real child's history.
 Independent assessment: A translated monolingual test produces a low score and is presented as a definitive diagnosis. Explain the validity problem and list additional information a responsible assessment should consider.
 Pass criteria: 1. Record language exposure/use by people, settings, topics and strengths. 2. Explain why informal translation does not preserve monolingual test norms. 3. Ask for appropriate multilingual/interpreter-informed assessment without diagnosing.
@@ -390,7 +396,7 @@ Videos:
       Publisher lesson page: https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2
 Readings:
   Croydon NHS — Building Independence in Everyday Activities — https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2
-    Assignment: Read the named article or specified sections: Croydon NHS — Building Independence in Everyday Activities. Focus on task analysis, dressing, self-care and use the native worked example to check your interpretation.
+    Assignment: Read the workshop overview on independence in everyday activities and revisit the specifically assigned video units only. Frame activity/access questions; the workshop is not DCD evidence, individual motor assessment or a home treatment plan.
 Practical: Build a fictional routine map for preparing a school bag. Include each step, information needed, physical/environmental demand, the child's preference and an unknown. Identify one ordinary organisational option to discuss and one health concern requiring professional advice.
 Independent assessment: A family plan removes all assistance to encourage independence, causing missed transport and distress. Rewrite the goal and review questions to balance meaningful participation, chosen support and safety.
 Pass criteria: 1. Map the routine's separate organisational, physical and comfort demands. 2. Retain chosen support and a meaningful participation goal rather than withdrawing all help. 3. Name pain/referral and review questions without prescribing handling or intimate-care procedures.
@@ -417,9 +423,11 @@ Videos:
       Publisher lesson page: https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10
 Readings:
   Croydon NHS — Sensory Processing and How It Impacts on Everyday Activities — https://www.croydonhealthservices.nhs.uk/?page=workshop-1---childrens-occupational-therapy---chs-website&ppvw=03a94f712f4253cf461cb86e7ce67e10
-    Assignment: Read the named article or specified sections: Croydon NHS — Sensory Processing and How It Impacts on Everyday Activities. Focus on sensory preferences, environment, comfort and use the native worked example to check your interpretation.
+    Assignment: Read the sensory workshop overview and the precisely listed video portions. Compare everyday access choices with specialist intervention questions; it does not authorise weighted products, exposure, brushing or restrictive practice.
   AOTA Practice Smart — recommendation 2 on sensory-based interventions — https://www.aota.org/practice/practice-essentials/evidencebased-practiceknowledge-translation/practice-smart
     Assignment: Read recommendation 2 and its rationale only. Use it to prepare questions for a qualified OT about assessment, meaningful goals and evidence; it is not a parent assessment procedure. Member-only handouts are optional.
+  US Department of Education — restraint and seclusion principles — https://www.ed.gov/teaching-and-administration/safe-learning-environments/school-safety-and-security/school-climate-and-student-discipline/restraint-and-seclusion-resource-document
+    Assignment: Read the overview and prevention/emergency principles. This is US school guidance, not local legal advice or technique training; compare its safeguards with the local policy for your actual setting.
 Practical: Create a fictional context map for the dining-hall case: activity, sound/crowding features, child's message, health questions, priorities and team discussion. Propose two ordinary access options to discuss and list three specialist actions you would not initiate independently.
 Independent assessment: An online shop says every child with sensory difficulties needs its weighted product. Appraise the evidence and conflict of interest, and write questions for a qualified professional before any purchase or use.
 Pass criteria: 1. Map dining-hall context, child's report and competing health/access questions. 2. Propose ordinary options for discussion and exclude independent specialist protocols. 3. Appraise the product claim's evidence, commercial interest and individual suitability.
@@ -429,7 +437,7 @@ G07 — Co-regulation and positive behavioral support
 Prerequisites: C10, C07, C12
 Path: Caregiver education
 Study assignment: Read IRIS Behavioral Principles through its ABC section before discussing the fictional transition. Watch now-and-next as one communication example, not a treatment plan for all distress.
-Video coverage/access: Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.
+Video coverage/access: Open the provider cards in the displayed order: IRIS — Behavioral Principles: Challenge video, then Page 2 ABC Model; NHS Bedfordshire and Luton — Understanding language: visual support for routines. Use each card’s assigned passage and viewing time. These introductions supply the stated context; the lesson and scoped readings carry the wider topic and professional boundaries.
 Videos:
   IRIS — Behavioral Principles: Challenge video, then Page 2 ABC Model — https://iris.peabody.vanderbilt.edu/module/bp/challenge/
     Assignment: Watch the complete named 0:59 unit. The 0:59 introduction frames variation across days and contexts and asks about behavioural principles. Fits G07/P11 only as orientation; it does not itself teach ABC or establish function. Read the assigned ABC material and native competing-hypothesis examples before the fictional task.
@@ -443,9 +451,11 @@ Videos:
       NHS published video transcript (expand the named unit): https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/
 Readings:
   IRIS — The ABC Model — https://iris.peabody.vanderbilt.edu/module/bp/cresource/q1/p02/
-    Assignment: Read the named article or specified sections: IRIS — The ABC Model. Focus on co-regulation, predictability, communication and use the native worked example to check your interpretation.
+    Assignment: Read Page 2, The ABC Model. Define antecedent, observable behaviour and consequence, and apply them to the fictional sequence without claiming a proven function.
   NICE CG170 — support and management; read the named section for this topic — https://www.nice.org.uk/guidance/cg170/chapter/Recommendations
     Assignment: Read 1.4 Interventions for behaviour that challenges. This NICE guidance concerns autistic children/young people under 19; do not generalise it to all children or use it as an individual treatment plan.
+  US Department of Education — restraint and seclusion principles — https://www.ed.gov/teaching-and-administration/safe-learning-environments/school-safety-and-security/school-climate-and-student-discipline/restraint-and-seclusion-resource-document
+    Assignment: Read the overview and prevention/emergency principles. This is US school guidance, not local legal advice or technique training; compare its safeguards with the local policy for your actual setting.
 Practical: Rewrite a fictional plan reading “Ignore crying, repeat the command and remove the communication board until compliance”. Identify three problems and draft questions for the responsible team about health, communication and a meaningful transition goal.
 Independent assessment: Design a fictional review sheet with four outcomes beyond simple compliance, a way to include the child's perspective and an escalation boundary for worsening distress. Explain why no single technique is selected from the brief case.
 Pass criteria: 1. Identify harms in ignoring distress and withholding communication. 2. Include child experience, comfort, communication and participation in review outcomes. 3. State escalation/referral boundaries and why a brief case cannot select a treatment.
@@ -468,7 +478,7 @@ Readings:
   ASHA — spoken language disorders Practice Portal — https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/
     Assignment: Read the family-accessible Overview, Signs and Symptoms, and school/learning implications; professional assessment/treatment detail is context only.
   Birmingham NHS — Language Needs at School Age (video and service guidance) — https://www.bhamcommunity.nhs.uk/childrens-slt-videos
-    Assignment: Read the named article or specified sections: Birmingham NHS — Language Needs at School Age (video and service guidance). Focus on school collaboration, literacy, peer access and use the native worked example to check your interpretation.
+    Assignment: Use the Language Needs at School Age information and only the exact video units listed on the cards. Connect school communication access with professional questions; no classroom intervention trial is required.
 Practical: Prepare a fictional caregiver-school meeting agenda with the child's priority, strengths, two task barriers, three questions, responsible people and a review question. Include how an established communication mode remains available throughout the activity.
 Independent assessment: A plan says “more effort in literacy” but gives no examples or support. Rewrite it into an information-gathering request and one meaningful participation goal, with a clear distinction between an accommodation and an assessed teaching/therapy programme.
 Pass criteria: 1. Separate curriculum access, response format and assessed skill teaching. 2. Write a meeting agenda with a child-chosen goal, responsibilities and review. 3. Replace effort-only language with concrete questions while preserving communication access.
@@ -487,11 +497,11 @@ Videos:
       Recording and English captions: https://www.youtube.com/watch?v=Kj1n_lQG66o
 Readings:
   NIMH — The Teen Brain — https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know
-    Assignment: Read the named article or specified sections: NIMH — The Teen Brain. Focus on autonomy, planning, puberty and use the native worked example to check your interpretation.
+    Assignment: Read the seven introductory points about adolescence, ongoing development, adaptation, sleep and vulnerability. Use population-level descriptions to frame questions; do not use them to judge one teenager’s capacity.
   CDC — Essentials for Parenting Teens — https://www.cdc.gov/parenting-teens/
-    Assignment: Read the named article or specified sections: CDC — Essentials for Parenting Teens. Focus on autonomy, planning, puberty and use the native worked example to check your interpretation.
+    Assignment: Read the introductory parenting-teen guidance and its communication/support topics. Compare with the fictional autonomy discussion; this is US public information, not clinical or local transition-service guidance.
   Youth.gov — TAG Talk segment transcripts and family/professional discussion guides — https://youth.gov/feature-article/power-adolescent-brain-tag-talk
-    Assignment: Read the named article or specified sections: Youth.gov — TAG Talk segment transcripts and family/professional discussion guides. Focus on autonomy, planning, puberty and use the native worked example to check your interpretation.
+    Assignment: Read the segment transcripts and choose the family or professional discussion guide relevant to your role. Use these for adolescent-development discussion; the separately assigned BJ Casey clips have their own viewing instructions.
 Practical: Create a fictional planning page with the teenager's goal, preferred mode, three task steps, chosen help and two unknowns. Add a review question about usefulness and dignity, not only completion. Mark any safety or legal question for qualified local advice.
 Independent assessment: An adult plan says “independence means no reminders, no AAC and no help after sixteen”. Appraise each assumption and rewrite the transition goal around supported autonomy and reliable communication.
 Pass criteria: 1. Record the adolescent's chosen routine, preferred support and privacy needs. 2. Reject age-based removal of reminders, AAC and assistance. 3. Rewrite the transition goal around directing reliable support and locally verified services.
@@ -500,7 +510,7 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 G10 — Mental health, loss and caregiver well-being
 Prerequisites: C10, C12, C07
 Path: Caregiver education
-Study assignment: Use NIMH's child/adolescent mental-health information and named short videos as introductory context. Practise accessible listening and referral boundaries; urgent safety concerns never wait for coursework.
+Study assignment: Use the NHS anxiety/bereavement information and NIMH five action steps and named short videos as introductory context. Practise accessible listening and referral boundaries; urgent safety concerns never wait for coursework.
 Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
 Videos:
   Optional: National Institute of Mental Health (NIMH) — Facebook Live: Childhood Irritability — https://www.youtube.com/watch?v=t176yeEdVMM
@@ -519,12 +529,14 @@ Videos:
       Recording and English captions: https://www.youtube.com/watch?v=-j2PqoFCzX0
 Readings:
   NHS — anxiety disorders in children — https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/anxiety-disorders-in-children/
-    Assignment: Read the named article or specified sections: NHS — anxiety disorders in children. Focus on anxiety, grief, support and use the native worked example to check your interpretation.
+    Assignment: Read the signs, effects on everyday life and when/how to seek help. This anxiety overview does not provide a suicide risk assessment or the separate immediate-safety response.
   NHS — children and bereavement — https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/children-and-bereavement/
-    Assignment: Read the named article or specified sections: NHS — children and bereavement. Focus on anxiety, grief, support and use the native worked example to check your interpretation.
-Practical: With an adult partner, role-play an invented supportive conversation about school worry. Include listening, an alternative communication mode, a boundary around confidentiality and a question about appropriate help. Write a separate caregiver-support question that avoids blame.
+    Assignment: Read the explanation of varied grief responses and supporting/obtaining help for children. Do not treat grief as following one fixed timetable or use this as crisis-assessment training.
+  NIMH — five action steps for suicide prevention — https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide
+    Assignment: Read Ask, Be There, Help Keep Them Safe, Help Them Connect and Follow Up. Learn the general support sequence; the US service contacts are not worldwide numbers. Identify official local emergency/crisis routes in advance, and never delay urgent help for coursework.
+Practical: With an adult partner, role-play an invented supportive conversation about school worry. Include listening, an alternative communication mode, a boundary around confidentiality and a question about appropriate help. Write a separate caregiver-support question that avoids blame. Separately write a fictional immediate-safety response: who contacts help, who stays with the young person, and what can be made safer without endangering anyone. Do not role-play a crisis with a child.
 Independent assessment: A fictional message suggests an adolescent may harm themselves soon. Explain why a workbook reflection is insufficient and outline the general priority: immediate safety and urgent qualified/local help. Do not attempt to derive an individual risk score or treatment plan.
-Pass criteria: 1. Use accessible listening, confidentiality limits and a non-blaming caregiver-support question. 2. Recognise possible imminent harm as requiring urgent qualified/local help. 3. Avoid diagnosing, promising secrecy, calculating a risk score or delaying for coursework.
+Pass criteria: 1. Use accessible listening, confidentiality limits and a non-blaming caregiver-support question. 2. Recognise possible imminent harm, state an immediate safety step and seek urgent qualified/local help. 3. Avoid diagnosing, promising secrecy, calculating a risk score or delaying for coursework.
 Source notes: Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.
 
 G11 — Work with schools and a multidisciplinary team
@@ -552,7 +564,7 @@ G12 — Caregiver capstone: a fictional support portfolio
 Prerequisites: G01, G02, G03, G04, G05, G06, G07, G08, G09, G10, G11
 Path: Caregiver education
 Study assignment: Watch the 4:01 family-perspective video, then use the supplied fictional portfolio contract to produce all eight sections, five team questions and an adult role-play. Revise after the required feedback or labelled self-review.
-Video coverage/access: The short CanChild family video supports priorities, strengths and participation. The native template defines the actual portfolio; watching a family story does not complete or clinically validate your capstone.
+Video coverage/access: The short CanChild family video supports priorities, strengths and participation. The template defines the actual portfolio; watching a family story does not complete or clinically validate your capstone.
 Videos:
   CanChild — a parent’s strengths-based F-words story — https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/
     Assignment: Watch the complete named video, 0:00–4:01. Select only “F-words for Child Development: From the voice of a Parent”. Use its strengths/family-priority perspective to audit the fictional portfolio and make room for the child’s own preferences. It is a planning framework, not a worked solution to this studio’s capstone.
@@ -563,7 +575,9 @@ Readings:
   WHO — Caregiver Skills Training introduction (programme scope: ages 2–9) — https://www.who.int/publications/i/item/9789240048836
     Assignment: Read the introduction’s audience, aims and programme structure. WHO CST here targets families of children aged 2–9 with developmental delays/disabilities; it does not supply a 0–18 therapy curriculum or professional qualification.
   UNICEF — child rights and participation — https://www.unicef.org/child-rights-convention/convention-text-childrens-version
-    Assignment: Read the named article or specified sections: UNICEF — child rights and participation. Focus on portfolio, family priorities, safe boundaries and use the native worked example to check your interpretation.
+    Assignment: Read the child-friendly explanation, concentrating on voice/participation, expression, privacy, protection and disability inclusion. It introduces rights; it does not explain clinical consent capacity or settle local legal entitlements.
+  ASHA — AAC for families — https://www.asha.org/public/speech/disorders/aac/
+    Assignment: Read this family overview to explain communication modes, access and professional collaboration in the invented portfolio. Do not use it to prescribe an app or access method.
 Additional practical materials:
   Download fictional cases, portfolio sections and review prompts — https://ifeanyidike.com/child-development-studio/practice/fictional-portfolio.txt
     Assignment: Use only this named practical material for the scoped lesson task: Download fictional cases, portfolio sections and review prompts. Read its setup and authorisation boundary before doing anything.
@@ -577,7 +591,7 @@ Source notes: Educational study, not diagnosis or an individual treatment plan. 
 P01 — Anatomy, physiology and neurodevelopment bridge
 Prerequisites: C06, C08, C09, C12
 Path: Professional preparation — supervised application required
-Study assignment: Study OpenStax 22.1 respiratory structures, 12.1 nervous-system organisation and 14.1's hearing subsection, plus UBC articulation. Draw the three native concept maps; broader graduate science courses remain necessary.
+Study assignment: Study OpenStax 22.1 respiratory structures, 12.1 nervous-system organisation and 14.1's hearing subsection, plus UBC articulation. Draw the three concept maps; broader graduate science courses remain necessary.
 Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
 Videos:
   McMaster / Essentials of Linguistics — Classifying consonants: voicing, place and manner — https://www.youtube.com/watch?v=DaIuIQwTP94
@@ -593,25 +607,29 @@ Videos:
       Recording and English captions: https://www.youtube.com/watch?v=u7jQ8FELbIo
 Readings:
   UBC eNunciate — speech production demonstrations — https://enunciate.arts.ubc.ca/
-    Assignment: Read the named article or specified sections: UBC eNunciate — speech production demonstrations. Focus on anatomy, hearing, motor systems and use the native worked example to check your interpretation.
+    Assignment: Choose the articulation demonstrations linked from the site and inspect tongue/lip/airflow relationships for your speech-production map. These are educational models, not oral-motor examination or treatment instructions.
     Access: The publisher may show browser verification. The separately linked official UBC demonstration videos provide the assigned articulation examples.
   ASHA — Early Identification of Speech, Language, Swallowing and Hearing Disorders — https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders
     Assignment: Read the hearing/communication signs and seeking-help sections. This is broader early-identification guidance, not a hearing test or proof of cause.
   OpenStax A&P 2e 22.1 — respiratory structures, especially pharynx/larynx — https://openstax.org/books/anatomy-and-physiology-2e/pages/22-1-organs-and-structures-of-the-respiratory-system
-    Assignment: Read the named article or specified sections: OpenStax A&P 2e 22.1 — respiratory structures, especially pharynx/larynx. Focus on anatomy, hearing, motor systems and use the native worked example to check your interpretation.
+    Assignment: Read section 22.1, concentrating on the pharynx, larynx, airflow and respiratory structures. Label your original map; the section is general anatomy rather than a paediatric examination protocol.
   OpenStax A&P 2e 12.1 — basic nervous-system structure and function — https://openstax.org/books/anatomy-and-physiology-2e/pages/12-1-basic-structure-and-function-of-the-nervous-system
-    Assignment: Read the named article or specified sections: OpenStax A&P 2e 12.1 — basic nervous-system structure and function. Focus on anatomy, hearing, motor systems and use the native worked example to check your interpretation.
+    Assignment: Read section 12.1 on nervous-system organisation and structure/function. Distinguish levels of explanation in your map; this adult anatomy section does not by itself teach neurodevelopment.
   OpenStax A&P 2e 14.1 — read the Hearing subsection — https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception
-    Assignment: Read the named article or specified sections: OpenStax A&P 2e 14.1 — read the Hearing subsection. Focus on anatomy, hearing, motor systems and use the native worked example to check your interpretation.
-Practical: Create three original concept maps: speech-production systems, hearing/access and movement-to-participation. Link each structure/process to an everyday function and a relevant unknown. Use textbook diagrams as references but draw and explain your own; do not copy clinical assessment procedures.
+    Assignment: Read only the Hearing subsection of 14.1. Map mechanical transmission and transduction, and distinguish hearing access from language interpretation; no hearing test is assigned.
+  NIMH — The Teen Brain: 7 Things to Know — https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know
+    Assignment: Read the seven population-level points, especially continuing development and learning/adaptation. Add a developmental layer to your map; do not infer an individual’s capacity from an age or diagram.
+  Harvard — brain architecture overview — https://developingchild.harvard.edu/key-concept/brain-architecture/
+    Assignment: Read the overview of early experience and developing brain architecture alongside the native developmental bridge. This broad explanation is not a diagnostic timetable or proof of a specific therapy’s effect.
+Practical: Create three original concept maps: speech-production systems, hearing/access and movement-to-participation. Link each structure/process to an everyday function and a relevant unknown. Use textbook diagrams as references but draw and explain your own; do not copy clinical assessment procedures. Add a developmental layer to one map: show experience-dependent plasticity and continuing maturation, then explain why improvement over time alone does not prove a treatment caused it.
 Independent assessment: Write a prerequisite audit for entering a graduate speech-language or OT programme. Identify at least five scientific areas, how you will study and assess understanding, and which hands-on competencies require formal supervision rather than self-study.
-Pass criteria: 1. Label respiration/phonation/articulation, hearing pathways and movement-to-activity relationships. 2. Distinguish anatomical mechanism from an inferred diagnosis. 3. Audit five scientific prerequisites and identify clinical competencies needing formal supervision.
+Pass criteria: 1. Map speech/hearing/movement and add continuing maturation and experience-dependent plasticity without diagnosing. 2. Distinguish anatomical mechanism from an inferred diagnosis. 3. Audit five scientific prerequisites and identify clinical competencies needing formal supervision.
 Source notes: Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.
 
 P02 — Research methods, statistics and evidence quality
 Prerequisites: C01, C07
 Path: Professional preparation — supervised application required
-Study assignment: Use OpenIntro chapters on data, descriptive statistics, probability and inference; work the native denominator/change/missingness examples first. Then study ASHA EBP and Cochrane Modules 1–4 for critical appraisal.
+Study assignment: Use OpenIntro chapters on data, descriptive statistics, probability and inference; work the denominator/change/missingness examples first. Then study ASHA EBP and Cochrane Modules 1–4 for critical appraisal.
 Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
 Videos:
   ASHA / Christine Dollaghan — Integrating evidence, expertise and informed preferences — https://www.youtube.com/watch?v=CjYu7GgGS0A
@@ -623,11 +641,11 @@ Videos:
       Publisher transcript / video script: https://tlr-hub.asha.org/archived/client-centered-communication-and-patient-decision-aids/
 Readings:
   ASHA — evidence-based practice and decision-making tools — https://www.asha.org/Research/EBP/
-    Assignment: Read the named article or specified sections: ASHA — evidence-based practice and decision-making tools. Focus on PICO, study design, effect size and use the native worked example to check your interpretation.
+    Assignment: Read the evidence-based practice overview and its research-evidence, clinical-expertise and client-perspective components. Apply this decision framework to a fictional question; the page is not direct evidence for a particular intervention’s effect.
   Cochrane — understanding evidence — https://www.cochrane.org/evidence
-    Assignment: Read the named article or specified sections: Cochrane — understanding evidence. Focus on PICO, study design, effect size and use the native worked example to check your interpretation.
+    Assignment: Use the evidence overview to understand systematic reviews and find a review relevant to your fictional question. Read its plain-language summary and population/outcome limits; no entire evidence library is assigned.
   Cochrane Evidence Essentials — Modules 1–4, evidence, trials and reviews (free account required) — https://www.cochrane.org/learn/courses-and-resources/evidence-essentials
-    Assignment: Read the named article or specified sections: Cochrane Evidence Essentials — Modules 1–4, evidence, trials and reviews (free account required). Focus on PICO, study design, effect size and use the native worked example to check your interpretation.
+    Assignment: Complete Modules 1–4 on evidence, trials, using evidence and systematic reviews. A free account may be needed. Keep the modules’ appraisal concepts distinct from the native numeric examples.
   OpenIntro Statistics — data, descriptive statistics, probability and inference chapters, with published exercises (free PDF option) — https://www.openintro.org/book/os/
     Assignment: Use only the named chapters, sections, units or exercises in this assignment: OpenIntro Statistics — data, descriptive statistics, probability and inference chapters, with published exercises (free PDF option). Do not read the entire book/course before proceeding. Record assumptions and work the relevant examples independently.
 Practical: Turn “Does this help children?” into two focused questions: one about a meaningful outcome and one about acceptability or experience. List suitable evidence types, major bias questions and the person's/family's role. Calculate the supplied means independently.
@@ -639,7 +657,7 @@ P03 — Assessment principles, measurement and cultural validity
 Prerequisites: P01, P02, C11
 Path: Professional preparation — supervised application required
 Study assignment: Watch ASHA Module 1 (11:49), then compare reliability, validity and culturally appropriate methods. Work the supplied screening denominators and critique altered/translated normed-score claims.
-Video coverage/access: The focused ASHA video provides assessment/cultural-validity foundations. Measurement calculations remain in the native worked example and statistics reading; the micro-course’s surrounding activities are not extra required video time.
+Video coverage/access: The focused ASHA video provides assessment/cultural-validity foundations. Measurement calculations remain in the worked example and statistics reading; the micro-course’s surrounding activities are not extra required video time.
 Videos:
   ASHA / Elizabeth Peña — what is dynamic assessment? — https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/
     Assignment: Watch the complete named video, 0:00–11:49. Compare dynamic assessment, standardised testing, observation and learning potential in the published examples. Apply the distinctions to the native assessment-quality critique and screening table. Observe only; do not administer a restricted test or infer a diagnosis.
@@ -648,14 +666,14 @@ Videos:
       ASHA module and companion teaching material: https://www.asha.org/practice/multicultural/dynamic-assessment/module-1/
 Readings:
   ASHA — assessment tools, techniques and data sources — https://www.asha.org/practice-portal/resources/assessment-tools-techniques-and-data-sources/
-    Assignment: Read the named article or specified sections: ASHA — assessment tools, techniques and data sources. Focus on reliability, validity, functional assessment and use the native worked example to check your interpretation.
+    Assignment: Read the assessment-method descriptions, including interviews, observations, language samples and Dynamic Assessment. Compare purposes and limits with the native screening table; no restricted test administration is assigned.
   OpenIntro Statistics — probability and conditional probability; work the native screening table first — https://www.openintro.org/book/os/
     Assignment: Use only the named chapters, sections, units or exercises in this assignment: OpenIntro Statistics — probability and conditional probability; work the native screening table first. Do not read the entire book/course before proceeding. Record assumptions and work the relevant examples independently.
   ASHA — Multilingual Service Delivery: assessment validity — https://www.asha.org/practice-portal/professional-issues/multilingual-service-delivery/
     Assignment: Read assessment and cultural/linguistic considerations, especially when a standard score is not valid and how interpreters/context affect evidence. Do not translate or administer a restricted test.
 Practical: Compare three fictional methods for understanding a school participation concern: caregiver interview, classroom observation and standardised task. For each, state purpose, strength, limitation, access issue and who should interpret it. Include an example of a reliable but invalid inference.
 
-Using the supplied fictional 100-case screening table, write true positives, false negatives, false positives and true negatives. Calculate sensitivity, specificity and positive predictive value with their distinct denominators. Explain why no individual diagnosis follows.
+Using the supplied fictional 100-case screening table, write true positives, false negatives, false positives and true negatives. Calculate sensitivity, specificity and positive predictive value with their distinct denominators. Explain why no individual diagnosis follows. After ASHA Module 1, explain how dynamic assessment differs from the fixed screening-count table: what extra information could supported learning provide, and what can neither method diagnose alone?
 Independent assessment: A translated test with altered instructions is reported with an original normed score and no caveat. Write an assessment-quality critique and a corrected reporting plan without assigning a diagnosis.
 Pass criteria: 1. Distinguish reliability, validity, sensitivity, specificity and decision purpose. 2. Compare interview, observation and standardised task with access/interpretation limits. 3. Correct the altered/translated normed-score report without assigning a diagnosis.
 Source notes: Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.
@@ -685,19 +703,19 @@ Readings:
   ASHA — spoken language disorders Practice Portal — https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/
     Assignment: Read Assessment and Treatment, including differential reasoning, language/literacy relationships, culturally responsive practice and outcome/participation limits. No individual dosage or test administration is authorised.
   ASHA — multilingual service delivery — https://www.asha.org/practice-portal/professional-issues/multilingual-service-delivery/
-    Assignment: Read the named article or specified sections: ASHA — multilingual service delivery. Focus on language samples, differential reasoning, hearing and use the native worked example to check your interpretation.
+    Assignment: Read the Assessment considerations, including language history, interpreters, language samples and dynamic assessment. Explain limits of translated normed scores; do not administer or informally translate a restricted test.
   ASHA — Early Intervention (birth–3): professional process and family-centred scope — https://www.asha.org/practice-portal/professional-issues/early-intervention/
     Assignment: Read family-centred assessment/team process within the stated birth–3 early-intervention scope. It is not school-age or adolescent service guidance.
-Practical: Build a four-column hypothesis table for the case: possible factor, supplied evidence, missing information and appropriate professional method/referral. Include hearing, language exposure, instruction demands and the child's perspective. Do not administer or reproduce a test.
+Practical: Build a four-column hypothesis table for the case: possible factor, supplied evidence, missing information and appropriate professional method/referral. Include hearing, language exposure, instruction demands and the child's perspective. Do not administer or reproduce a test. Add a second four-column table for the fictional two-year-old variant: family routine priority, communication strengths, hearing/development unknowns and appropriate early-intervention questions. Explain how to include nonverbal preference/refusal. Add a dynamic-assessment question for a suitably qualified SLP: what might a documented test–teach–retest interaction reveal about the support needed for learning, and what would it still leave unknown? Propose a question on paper; do not administer an assessment.
 Independent assessment: Write a fictional assessment-summary opening that separates facts, hypotheses, limits and recommended next information. Explain why a definitive diagnostic conclusion would exceed the supplied evidence.
-Pass criteria: 1. Build a four-column hypothesis table including hearing, language exposure, demands and child account. 2. Keep facts, hypotheses, missing information and professional methods separate. 3. Write an assessment-plan opening rather than a definitive unsupported diagnostic conclusion.
+Pass criteria: 1. Build school-age and age-two hypothesis tables, including hearing, exposure, access and dynamic-assessment/early-intervention questions. 2. Keep facts, hypotheses, missing information and professional methods separate. 3. Write an assessment-plan opening rather than a definitive unsupported diagnostic conclusion.
 Source notes: Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson. The ASHA Spoken Language Disorders professional portal focuses on ages 3–21 using oral communication; it is not a complete infant assessment or AAC protocol.
 
 P05 — Language, literacy and communication intervention planning
 Prerequisites: P04, P02, C11
 Path: Professional preparation — supervised application required
 Study assignment: Watch the 7:31 ICF/family-stories video for participation and outcome framing, then read the language/literacy intervention sections. Distinguish an assessed target, trained-item accuracy, retention and everyday transfer.
-Video coverage/access: The CanChild unit supports meaningful participation goals and outcomes. It does not teach all language/literacy interventions or derive dosage; the ASHA sources and native critique remain essential.
+Video coverage/access: The CanChild unit supports meaningful participation goals and outcomes. It does not teach all language/literacy interventions or derive dosage; the ASHA sources and lesson critique remain essential.
 Videos:
   CanChild — ICF, family-centred planning and meaningful outcomes — https://canchild.ca/research-in-practice/f-words-in-childhood-disability/f-words-videos/
     Assignment: Watch the complete named video, 0:00–7:31. Select only “The ICF and F-words: Learning Through Family Stories”. Study participation, family priorities and meaningful outcomes, then connect them to language/literacy goals and the native trained-item-versus-transfer critique. This is outcome framing, not a language-treatment protocol.
@@ -708,7 +726,7 @@ Readings:
   ASHA — spoken language disorders Practice Portal — https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/
     Assignment: Read Assessment and Treatment, including differential reasoning, language/literacy relationships, culturally responsive practice and outcome/participation limits. No individual dosage or test administration is authorised.
   ASHA — written language disorders — https://www.asha.org/practice-portal/clinical-topics/written-language-disorders/
-    Assignment: Read the named article or specified sections: ASHA — written language disorders. Focus on goals, language, literacy and use the native worked example to check your interpretation.
+    Assignment: Read the Assessment and Treatment discussions concerning literacy and spoken/written language relationships. Identify outcome and transfer questions; do not infer an individual dosage or programme.
 Practical: Write a fictional planning matrix with assessed need, participation goal, candidate evidence source, access considerations, outcome and review/stop question. Include one trained-item measure and one meaningful transfer measure. Keep method/intensity as questions for a qualified professional.
 Independent assessment: A programme reports 90% success on repeated items but no information about everyday communication. Draft a critical appraisal and the additional evidence needed before claiming functional benefit for the book-club goal.
 Pass criteria: 1. Separate participation goal, assessed target, trained-item result and transfer. 2. Appraise 90% repeated-item accuracy with baseline, prompts, retention and experience questions. 3. Specify meaningful everyday outcomes without deriving treatment intensity from the case.
@@ -718,7 +736,7 @@ P06 — Speech sound, motor speech, fluency and swallowing boundaries
 Prerequisites: P04, P01, C12
 Path: Professional preparation — supervised application required
 Study assignment: Read the separate professional sources for speech sounds, motor speech, fluency, voice and feeding/swallowing. Family introduction videos supply context and do not replace specialist differential-assessment training.
-Video coverage/access: Open the NHS SLT Videos page and choose each exact title listed here; the page has support and SALT Strategy sections, including subtitled versions. Direct Vimeo-player links can be restricted. These are family introductions, not individual advice or complete professional training.
+Video coverage/access: Open the provider cards in the displayed order: NHS Bedfordshire and Luton — Speech sounds within communication and hearing; STAMMA — Talking to a child who stammers: preschool conversation support. Use each card’s assigned passage and viewing time. These introductions supply the stated context; the lesson and scoped readings carry the wider topic and professional boundaries.
 Videos:
   NHS Bedfordshire and Luton — Speech sounds within communication and hearing — https://player.vimeo.com/video/838739136?app_id=122963
     Assignment: Watch only 0:00–3:06 (3:06 total). G02/P06 introduction to speech within communication, listening/hearing and audiology questions fits 0:00–3:06 (3:06), before detailed production chain/exercises. Excludes incorrect later voiced=loud/voiceless=quiet statements and screening instructions. This spoken-language example is not the only communication route or a diagnostic test; native materials cover accessible communication, fluency/motor speech/swallowing boundaries.
@@ -734,11 +752,11 @@ Videos:
       Recording and English captions: https://www.youtube.com/watch?v=R58tq57sCVM
 Readings:
   ASHA — speech sound disorders: articulation and phonology — https://www.asha.org/practice-portal/clinical-topics/articulation-and-phonology/
-    Assignment: Read the named article or specified sections: ASHA — speech sound disorders: articulation and phonology. Focus on speech disorders, fluency, motor speech and use the native worked example to check your interpretation.
+    Assignment: Read Overview, Assessment and Treatment to distinguish articulation/phonology questions and professional scope. This source does not cover the whole fluency or motor-speech field; use their separate readings.
   ASHA — childhood apraxia of speech — https://www.asha.org/practice-portal/clinical-topics/childhood-apraxia-of-speech/
-    Assignment: Read the named article or specified sections: ASHA — childhood apraxia of speech. Focus on speech disorders, fluency, motor speech and use the native worked example to check your interpretation.
+    Assignment: Read Overview, Signs and Symptoms, Assessment and Treatment, noting differential-assessment limitations. A list of signs is not a self-diagnostic checklist or therapy prescription.
   ASHA — stuttering, cluttering and fluency — https://www.asha.org/practice-portal/clinical-topics/fluency-disorders/
-    Assignment: Read the named article or specified sections: ASHA — stuttering, cluttering and fluency. Focus on speech disorders, fluency, motor speech and use the native worked example to check your interpretation.
+    Assignment: Read Overview, Assessment and Treatment for stuttering/cluttering, including impact and participation. Compare with the separate speech-sound and motor-speech readings; no fluency technique trial is assigned.
   ASHA — Voice Disorders: overview and professional assessment boundaries — https://www.asha.org/practice-portal/clinical-topics/voice-disorders/
     Assignment: Read Overview, Roles and Responsibilities and Assessment to distinguish voice quality from speech-sound/fluency/motor problems. Individual diagnosis and treatment require relevant professional competence.
   ASHA — Pediatric Feeding and Swallowing: scope and referral boundaries — https://www.asha.org/practice-portal/clinical-topics/pediatric-feeding-and-swallowing/
@@ -762,7 +780,7 @@ Videos:
       NHS published video transcript (expand the named unit): https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/
 Readings:
   ASHA — AAC Practice Portal: access, assessment and partners — https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication
-    Assignment: Read the named article or specified sections: ASHA — AAC Practice Portal: access, assessment and partners. Focus on AAC, feature matching, access and use the native worked example to check your interpretation.
+    Assignment: Read Assessment and Treatment discussions on access, feature matching, communication functions, augmented input and partner support. Add backup, authorship and privacy questions to the fictional case; do not select a device from this general source.
 Practical: Use the fictional 14-year-old’s goals to build a feature matrix. Compare abstract system A: ten fixed prerecorded messages, offline operation, no novel text; and system B: novel typed messages, selectable stored phrases, cloud sync enabled by default. Both have unspecified physical access, fatigue demands, battery life, backup and privacy controls. For each goal state a possible feature benefit, missing specification and assessment question. Include refusal, private communication, partner support and authorship. Do not select a real device or trial either with a child.
 Independent assessment: A team chooses the most expensive AAC app solely from a diagnosis and excludes the young person from discussion. Write a corrected assessment and decision process, including evidence, participation and review.
 Pass criteria: 1. Build a feature-matching matrix including access, language functions, authorship and backup. 2. Explain why price/diagnosis alone cannot select an AAC system. 3. Describe qualified assessment and accessible user involvement, with missing specifications left open.
@@ -782,7 +800,7 @@ Videos:
       Publisher lesson page: https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2
 Readings:
   AOTA — occupational profile template — https://www.aota.org/practice/practice-essentials/documentation/occupational-profile
-    Assignment: Read the named article or specified sections: AOTA — occupational profile template. Focus on occupational profile, activity analysis, participation and use the native worked example to check your interpretation.
+    Assignment: Read the occupational-profile template and its instructions. Extract occupational history, priorities, contexts and desired outcomes for the invented case. Do not confuse the profile with an individual performance assessment.
 Practical: Write a fictional occupational profile and activity-demand table for the club case. Include meaning, strengths, routines, contexts, child priorities and unanswered questions. Identify which questions need OT assessment and which involve other professional roles.
 Independent assessment: A referral says “improve fine motor score” without describing a valued activity. Draft a participation-focused clarification request and propose how a qualified OT could connect relevant assessment to an agreed occupation.
 Pass criteria: 1. Write the occupational profile around meaning, strengths, routines and priorities. 2. Separate task, environment, body/movement, communication and safety demands. 3. Connect a score to a valued occupation through qualified assessment rather than prescribing from a table.
@@ -809,9 +827,11 @@ Videos:
       Publisher lesson page: https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2
 Readings:
   RCOT — occupational therapy and play practice guideline — https://www.rcot.co.uk/explore-resources/children-young-people-families/play-practice-guideline
-    Assignment: Read the named article or specified sections: RCOT — occupational therapy and play practice guideline. Focus on motor learning, coordination, adaptation and use the native worked example to check your interpretation.
+    Assignment: Read the guideline overview and recommendations on children’s participation in play. Record population and evidence limits. This is play guidance, not a complete motor-learning or coordination-disorder course.
   Croydon NHS — Building Independence in Everyday Activities — https://www.croydonhealthservices.nhs.uk/childrens-occupational-therapy---workshop-2
-    Assignment: Read the named article or specified sections: Croydon NHS — Building Independence in Everyday Activities. Focus on motor learning, coordination, adaptation and use the native worked example to check your interpretation.
+    Assignment: Read the workshop overview on independence in everyday activities and revisit the specifically assigned video units only. Frame activity/access questions; the workshop is not DCD evidence, individual motor assessment or a home treatment plan.
+  EACD international DCD recommendations — intervention evidence (2019) — https://onlinelibrary.wiley.com/doi/full/10.1111/dmcn.14132
+    Assignment: Read section 5.2, especially 5.2.2, Recommendation 22 and 5.2.4. Compare activity/participation-oriented and body-function approaches and evidence about transfer. This guidance concerns DCD; do not diagnose the fictional case or generalise it to all children.
 Practical: Make a fictional matrix separating task performance, retention, transfer and participation outcomes. For the club case, give one possible observation at each level and identify access/safety questions. Do not conduct a motor test or activity trial with a child.
 Independent assessment: A programme improves a timed peg task but reports no change in the child's chosen activities. Write a critical interpretation and a revised outcome plan that a qualified professional could consider.
 Pass criteria: 1. Distinguish performance, retention, transfer and participation with support conditions. 2. Interpret improved peg speed without claiming unmeasured everyday benefit. 3. Propose relevant outcome/access questions without increasing drills or conducting a motor test.
@@ -834,7 +854,7 @@ Readings:
   AOTA — Practice Smart recommendations — https://www.aota.org/practice/practice-essentials/evidencebased-practiceknowledge-translation/practice-smart
     Assignment: Read recommendations 1, 2 and 6 and their cited rationales: meaningful occupation, documented sensory assessment and collaborative occupational profiling. Member-only implementation handouts are not required.
   ASHA — evidence-based practice and decision-making tools — https://www.asha.org/Research/EBP/
-    Assignment: Read the named article or specified sections: ASHA — evidence-based practice and decision-making tools. Focus on sensory assessment, evidence limits, participation and use the native worked example to check your interpretation.
+    Assignment: Read the evidence-based practice overview and its research-evidence, clinical-expertise and client-perspective components. Apply this decision framework to a fictional question; the page is not direct evidence for a particular intervention’s effect.
 Practical: Create an appraisal checklist for a fictional sensory-support proposal: definition, assessment rationale, evidence, training, consent, risks, meaningful outcomes, burden and review/stop rules. Compare a quieter-room accommodation with a specialist protocol without treating them as equivalent interventions.
 Independent assessment: A report claims reduced classroom disruption after an unspecified sensory programme. Draft a request for the missing method and outcome information, including whether the child experienced better participation or simply became less visibly expressive.
 Pass criteria: 1. Define the proposed sensory approach, population, provider training and outcome. 2. Distinguish an environmental accommodation from a specialist intervention. 3. Request method, comparison, reliability, adverse-effect and child-experience evidence.
@@ -856,9 +876,11 @@ Videos:
       Publisher challenge video and transcript: https://iris.peabody.vanderbilt.edu/module/fba-elem/challenge/
 Readings:
   IRIS — Behavioral Principles: complete this module before FBA — https://iris.peabody.vanderbilt.edu/module/bp/
-    Assignment: Read the named article or specified sections: IRIS — Behavioral Principles: complete this module before FBA. Focus on ABC observations, functional hypotheses, measurement and use the native worked example to check your interpretation.
+    Assignment: Complete the Behavioral Principles module in its displayed order: Challenge, Initial Thoughts, Perspectives and Resources, Wrap Up and Assessment. Use the definitions and ABC examples for fictional analysis only; do not run a child behaviour experiment.
   IRIS — Functional Behavioral Assessment (Elementary) — https://iris.peabody.vanderbilt.edu/module/fba-elem/
-    Assignment: Read the named article or specified sections: IRIS — Functional Behavioral Assessment (Elementary). Focus on ABC observations, functional hypotheses, measurement and use the native worked example to check your interpretation.
+    Assignment: After Behavioral Principles, complete the Elementary FBA module in its displayed order. Track observation versus functional hypothesis, data limits and team roles. Its school/elementary context is not universal clinical or adolescent training.
+  US Department of Education — restraint and seclusion principles — https://www.ed.gov/teaching-and-administration/safe-learning-environments/school-safety-and-security/school-climate-and-student-discipline/restraint-and-seclusion-resource-document
+    Assignment: Read the overview and prevention/emergency principles. This is US school guidance, not local legal advice or technique training; compare its safeguards with the local policy for your actual setting.
 Practical: Write a neutral operational description for a fictional transition action and an ABC table using only the supplied facts. Add competing hypotheses, missing health/communication information and professional safeguards. Explain why no function can yet be concluded.
 Independent assessment: A plan proposes testing “escape behaviour” by increasing demands until distress occurs. Write a professional boundary critique addressing risk, assessment competence, assent, health, goal legitimacy and safer information-gathering routes.
 Pass criteria: 1. Use an operational description and ABC table with observable facts. 2. Distinguish reinforcement terms from a proved behavioral function. 3. Critique deliberate distress provocation using competence, health, assent and legitimate goals.
@@ -868,7 +890,7 @@ P12 — Support plans, single-case designs and meaningful outcomes
 Prerequisites: P11, P02, C11
 Path: Professional preparation — supervised application required
 Study assignment: Watch the 6:32 single-case graph/design passage, critique its withdrawal and narrow behaviour-outcome framing, then annotate the supplied fictional trend/denominator problem. Propose no treatment experiment or withdrawal of support.
-Video coverage/access: Core viewing: only 7:17–13:49 (6:32) of the university-hosted research talk. Manually stop the original player at 13:49. Treat its withdrawal illustration as an ethical design critique; native work/current WWC readings supply meaningful outcomes and appraisal standards.
+Video coverage/access: Core viewing: only 7:17–13:49 (6:32) of the university-hosted research talk. Manually stop the original player at 13:49. Treat its withdrawal illustration as an ethical design critique; the exercises and current WWC readings supply meaningful outcomes and appraisal standards.
 Videos:
   University-hosted research talk — single-case graphs and visual-analysis limits — https://digital.library.unt.edu/ark:/67531/metadc1858618/
     Assignment: Watch only 7:17–13:49. Read the axes, baseline/treatment phases, repeated demonstrations, autocorrelation, level, trend and variability. Critique the historical ABAB/withdrawal illustration on paper only: never withdraw communication, care or necessary support. Reduced adult-disliked behaviour alone is not a meaningful outcome. Apply current WWC standards, participation/comfort measures and the native fictional graph; the later Bayesian analysis is not assigned.
@@ -909,9 +931,11 @@ Videos:
       Recording and English captions: https://www.youtube.com/watch?v=-j2PqoFCzX0
 Readings:
   NIMH — child and adolescent mental health — https://www.nimh.nih.gov/health/topics/child-and-adolescent-mental-health
-    Assignment: Read the named article or specified sections: NIMH — child and adolescent mental health. Focus on mental health, trauma awareness, scope and use the native worked example to check your interpretation.
+    Assignment: Read the introductory child/teen mental-health information and help-seeking/referral material. Recognise changes needing qualified advice without diagnosing or constructing a crisis risk score.
   NICE — ADHD diagnosis and management — https://www.nice.org.uk/guidance/ng87/chapter/Recommendations
     Assignment: Read recognition/referral and diagnosis sections concerning children/young people, noting who is qualified to diagnose. Do not treat this ADHD-specific guidance as all-purpose mental-health/trauma guidance.
+  NIMH — five action steps for suicide prevention — https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide
+    Assignment: Read Ask, Be There, Help Keep Them Safe, Help Them Connect and Follow Up. Learn the general support sequence; the US service contacts are not worldwide numbers. Identify official local emergency/crisis routes in advance, and never delay urgent help for coursework.
 Practical: Build a fictional referral-network map showing relevant health, mental-health, communication, school and safeguarding roles. Include accessible communication, consent/confidentiality questions and the difference between routine consultation and urgent safety response. Do not enter real contact or child details.
 Independent assessment: A service attributes every new difficulty to an existing autism diagnosis and declines further inquiry. Draft a balanced professional response addressing alternative explanations, the young person's account, scope and appropriate referral.
 Pass criteria: 1. Describe a new change without attributing everything to an existing diagnosis. 2. Include accessible child account, safety, alternative explanations and scope. 3. Map routine referral versus urgent response without inventing trauma, diagnosis or treatment.
@@ -921,7 +945,7 @@ P14 — Documentation, supervision and professional accountability
 Prerequisites: P03, C07, C11
 Path: Professional preparation — supervised application required
 Study assignment: Watch the first SCIE care-recording film, 0:00–8:44. Rewrite the fictional four-part note and state supervision/scope limits. Read current regulator and qualification requirements for your actual jurisdiction.
-Video coverage/access: Core viewing: 8:44, first SCIE film only, with a full publisher transcript. The adult England case illustrates harms from inaccurate records; current professional standards and the native child-context note exercise remain required.
+Video coverage/access: Core viewing: 8:44, first SCIE film only, with a full publisher transcript. The adult England case illustrates harms from inaccurate records; current professional standards and the child-context note exercise remain required.
 Videos:
   SCIE — the importance of care recording: a service user’s perspective — https://www.scie.org.uk/providing-care/recording/
     Assignment: Watch only the complete first film, “Service user’s perspective – the importance of care recording”, 0:00–8:44. Follow how ignored evidence and inaccurate recording affected the speaker’s support and agency. Rewrite the native fictional reported/observed/interpreted/next-step note and check the current regulator’s standards. The adult England funding case does not establish child assessment or local eligibility rules.
@@ -930,9 +954,9 @@ Videos:
       Publisher full transcript — first film only: https://www.scie.org.uk/providing-care/recording/
 Readings:
   HCPC — standards of conduct, performance and ethics — https://www.hcpc-uk.org/standards/standards-of-conduct-performance-and-ethics/
-    Assignment: Read the named article or specified sections: HCPC — standards of conduct, performance and ethics. Focus on documentation, supervision, ethics and use the native worked example to check your interpretation.
+    Assignment: Read standards on scope, communication, consent, confidentiality, managing risk, reporting concerns and records, plus the glossary. These govern HCPC registrants; compare with the regulator applicable to your actual profession/country.
   ASHA — SLP certification standards (check current effective version) — https://www.asha.org/certification/2020-slp-certification-standards/
-    Assignment: Read the named article or specified sections: ASHA — SLP certification standards (check current effective version). Focus on documentation, supervision, ethics and use the native worked example to check your interpretation.
+    Assignment: Read the qualification, supervised clinical experience and Clinical Fellowship requirements, checking the effective version and any forthcoming changes. These are ASHA credential requirements, not automatic registration or a hub certificate.
 Practical: Rewrite a fictional note saying “lazy child, definitely a language disorder, parent not trying” into respectful reported/observed/interpreted/next-step sections. Add three questions for a supervisor and one explicit competence boundary.
 Independent assessment: A learner is asked to administer an unfamiliar restricted assessment alone and sign as qualified. Write a professional response and a plan to resolve the request without misrepresenting competence.
 Pass criteria: 1. Separate reported, observed, interpreted and next-step sections respectfully. 2. State actual learner role and refuse to sign as qualified for an unfamiliar restricted test. 3. Resolve the request through appropriate supervision, scope clarification and authorised records.
@@ -942,7 +966,7 @@ P15 — Assistive technology, AI and child-data ethics
 Prerequisites: P02, P07, P14
 Path: Professional preparation — supervised application required
 Study assignment: Watch only UTS Procuring AI (4:36) and the short W3C assistive-output example. Apply the relevant UNICEF 3.0 child-rights guidance and ASHA access/authorship principles to purpose, child participation, data flows, oversight and non-AI backup; submit no child data.
-Video coverage/access: Core viewing totals 5:30: UTS Procuring AI (4:36) and W3C assistive output (0:54). The procurement example is organisational, not a clinical/child-rights validation. UNICEF 3.0, ASHA and the native child-data/rights case remain required; the animation remains optional.
+Video coverage/access: Core viewing totals 5:30: UTS Procuring AI (4:36) and W3C assistive output (0:54). The procurement example is organisational, not a clinical/child-rights validation. UNICEF 3.0, ASHA and the child-data/rights case remain required; the animation remains optional.
 Videos:
   W3C WAI — Text to Speech: an assistive-output example — https://www.w3.org/WAI/perspective-videos/speech/
     Assignment: Watch the complete named 0:54 unit. A complete short spoken-output/accessibility demonstration, including screen-reader use, reading support and a poorly coded page. Semantic structure and alternatives are required; generating speech alone does not provide all screen-reader navigation. This is an assistive-output example, not a child-therapy product trial, AAC assessment or proof that every person benefits equally. Multilingual and individual-access exercises remain separate.
@@ -961,9 +985,9 @@ Videos:
       Published English transcript — open Show transcript: https://www.youtube.com/watch?v=_hBFH03HlsY
 Readings:
   ASHA — AAC Practice Portal: access, assessment and partners — https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication
-    Assignment: Read the named article or specified sections: ASHA — AAC Practice Portal: access, assessment and partners. Focus on assistive technology, AI limits, privacy and use the native worked example to check your interpretation.
+    Assignment: Read Assessment and Treatment discussions on access, feature matching, communication functions, augmented input and partner support. Add backup, authorship and privacy questions to the fictional case; do not select a device from this general source.
   UNICEF — AI policy guidance for children — https://www.unicef.org/innocenti/reports/policy-guidance-ai-children
-    Assignment: Read the named article or specified sections: UNICEF — AI policy guidance for children. Focus on assistive technology, AI limits, privacy and use the native worked example to check your interpretation.
+    Assignment: Choose Guidance on AI and Children Version 3.0 and its requirements/checklist. Focus on safety, data/privacy, inclusion, transparency and child participation. Audit a fictional data flow; do not upload child information or infer product approval.
 Practical: Create a fictional technology review with purpose, user/task, access, evidence, data flow, oversight, failure, cost and exit/backup sections. Compare an offline picture board with a cloud AI communication assistant without assuming either is universally best.
 Independent assessment: Draft a go/no-go evidence checklist for a service considering a child-facing AI tool. Include three reasons to defer deployment and a plan for qualified review. Do not execute a trial or submit data.
 Pass criteria: 1. Map purpose, intended user, data flow, generated output, oversight and exit/backup. 2. Give three concrete defer reasons for a child-facing AI deployment. 3. Require qualified governance/access review without a real-child trial or treating a checklist as approval.
@@ -983,9 +1007,9 @@ Videos:
       Publisher transcript / video script: https://www.cochrane.org/evidence/what-are-systematic-reviews
 Readings:
   ASHA — evidence-based practice and decision-making tools — https://www.asha.org/Research/EBP/
-    Assignment: Read the named article or specified sections: ASHA — evidence-based practice and decision-making tools. Focus on interprofessional reasoning, portfolio, research proposal and use the native worked example to check your interpretation.
+    Assignment: Read the evidence-based practice overview and its research-evidence, clinical-expertise and client-perspective components. Apply this decision framework to a fictional question; the page is not direct evidence for a particular intervention’s effect.
   HCPC — approved professional programmes — https://www.hcpc-uk.org/education/approved-programmes/
-    Assignment: Read the named article or specified sections: HCPC — approved professional programmes. Focus on interprofessional reasoning, portfolio, research proposal and use the native worked example to check your interpretation.
+    Assignment: Use the programme directory to look up the actual profession, programme and delivery route you might pursue. Record the listed approval status and confirm requirements with the provider; this directory does not teach caregiver techniques or confer registration.
 Additional practical materials:
   Download fictional cases, portfolio sections and review prompts — https://ifeanyidike.com/child-development-studio/practice/fictional-portfolio.txt
     Assignment: Use only this named practical material for the scoped lesson task: Download fictional cases, portfolio sections and review prompts. Read its setup and authorisation boundary before doing anything.

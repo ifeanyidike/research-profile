@@ -10,9 +10,9 @@ pass criteria. The original source inventory was researched on 29 Oct 2026.
 Content maintenance
 -------------------
 cyber-studio/curriculum.json: topic order, prerequisite IDs, source attribution,
-exercise briefs and assessment criteria. Keep URLs on their original providers.
+assessment criteria and derived exercise briefs. Keep URLs on their original providers.
 _cyber/content/*.txt: authored teaching. Each blank-line-separated block has ten
-lines: ID, concept, mechanism, worked example, pitfall, question, correct answer,
+lines: ID, concept, mechanism, optional brief application example, pitfall, question, correct answer,
 two distractors, feedback. Avoid blank lines inside a block.
 _cyber/guides/ID.json: authored prerequisite bridge, step-by-step teaching,
 complete worked example, explanation, exercise, worked solution, independent
@@ -22,11 +22,12 @@ cyber-studio/credentials.json: dated external certification routes, requirements
 official links and suggested study bridges. Hub progress is never exam credit.
 
 After editing teaching, run python3 _cyber/build-lessons.py and format
-cyber-studio/lessons.json with the repository's Prettier. This packaging script
+cyber-studio/lessons.json and curriculum.json with the repository's Prettier. This packaging script
 has no network or model dependencies. Both JSON files are shipped with Jekyll.
 
 Verification
 ------------
+python3 _cyber/build-lessons.py --check
 node --test _cyber/tests/*.test.js
 node --check cyber-studio/app.js
 node --check cyber-studio/model.js
@@ -147,3 +148,25 @@ transcript; required primary readings and verified alternatives remain.
 Cyber now uses the same local MathJax scheduler for authored lesson and recall
 content; notebook text and code blocks are not typeset. No account schema,
 progress data, callback or hosted permissions change is needed.
+
+Writing clearly for learners
+----------------------------
+Use familiar words and direct sentences. Explain the problem and why a step
+matters before naming the technical concept. Keep necessary technical terms,
+but explain them when introduced and connect them to a concrete example.
+
+Address the learner as "you" where useful. First-person questions and clearly
+fictional dialogue can show a way to think; do not invent personal experience
+or imply that a learner performed an experiment or clinical assessment.
+Explain cause and effect explicitly. Break a long paragraph when it moves to
+a new question, step, example or limitation. Put commands in code blocks.
+
+Keep technical conditions, uncertainty, safety boundaries, units, mathematical
+notation and worked answers precise. Simplifying language must not turn a
+conditional claim into a guarantee. Use learner-facing wording such as "this
+lesson" rather than authoring terms such as "native". Historical editorial
+hashes describe their recorded version; recheck later changes independently.
+
+Canonical exercise copies
+-------------------------
+The guide JSON exercise/challenge fields are canonical. The offline build-lessons.py packager derives module.practice and module.assessment in curriculum.json from those guides, preserving the downloadable map without a second manual edit. The Learn tab exposes the short content-file example as an optional practice idea; the worked walkthrough remains in the guide. Assess displays each module’s actual pass criteria.

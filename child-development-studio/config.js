@@ -1,14 +1,15 @@
 export default {
   slug: "child-development-studio",
   name: "Child Development & Therapy Studio",
-  version: "20261031-3",
+  version: "20261031-4",
   table: "child_development_progress",
   mark: "d",
   heroTitle: "Understand development.",
   heroEmphasis: "Support participation.",
   heroCopy:
     "Study development from infancy through adolescence. Choose caregiver education or professional preparation, with clear explanations, evidence and fictional case workshops.",
-  scopeNote: "This is adult education. Caregiver learning and professional preparation are distinct; neither path grants clinical authority.",
+  scopeNote:
+    "This is adult education. Caregiver learning and professional preparation are distinct; neither path grants clinical authority. Use fictional cases only; these lessons do not diagnose or prescribe treatment.",
   practiceNote:
     "Use only the fictional case and supplied information. Practise reasoning or adult role-play; do not diagnose, trial an intervention, administer a test or collect information about a real child. Record uncertainty and who could answer it.",
   sourcesNote:

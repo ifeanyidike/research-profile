@@ -1,10 +1,10 @@
 {
   "date": "2026-10-30",
   "status": "complete",
-  "scope": "303 assignments outside the historical 44-assignment audit; every baseline identity is accounted for as reviewed, deliberately retired or pending.",
+  "scope": "303 assignments outside the historical 44-assignment audit; every baseline identity is accounted for as reviewed, deliberately retired or pending. On31 October2026, two additional independently keyed clips were separated from the former three-recording A04 card; original baseline identities remain accounted for.",
   "baseline": "video-library-baseline-20261030.json",
   "statusCounts": {
-    "transcript-reviewed": 301,
+    "transcript-reviewed": 303,
     "retired": 2,
     "pending": 0
   },
@@ -12744,48 +12744,6 @@
     {
       "studio": "cyber-studio",
       "topic": "D03",
-      "progressKey": "video:0",
-      "label": "John Savill's Technical Training — SC-900 Microsoft Security, Compliance, and Identity Fundamentals Study Cram V2",
-      "reviewedAssignment": {
-        "label": "John Savill's Technical Training — SC-900 Microsoft Security, Compliance, and Identity Fundamentals Study Cram V2",
-        "url": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154",
-        "watchMode": "segments",
-        "assignment": "Watch only 2:34–4:40, then 6:05–7:35 (3:36 total). The shared-responsibility component fits. The lecturer corrects the PaaS OS boundary mid-explanation; assign the correction alongside the introduction. Skip treating every managed Kubernetes service as complete platform outsourcing or every on-premises task as physically performed by the customer. Data handling, identities, configuration and contract-specific responsibilities remain.",
-        "durationSeconds": 7170,
-        "timingSource": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154",
-        "playbackUrl": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154",
-        "segments": [
-          {
-            "start": 154,
-            "end": 280,
-            "label": "Responsibilities move across cloud service boundaries"
-          },
-          {
-            "start": 365,
-            "end": 455,
-            "label": "SaaS still leaves customer responsibilities"
-          }
-        ]
-      },
-      "method": "transcript-reviewed",
-      "note": "The shared-responsibility component fits. The lecturer corrects the PaaS OS boundary mid-explanation; assign the correction alongside the introduction. Skip treating every managed Kubernetes service as complete platform outsourcing or every on-premises task as physically performed by the customer. Data handling, identities, configuration and contract-specific responsibilities remain.",
-      "sources": [
-        {
-          "label": "Recording and English captions",
-          "url": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154"
-        }
-      ],
-      "findings": [
-        "The shared-responsibility component fits. The lecturer corrects the PaaS OS boundary mid-explanation; assign the correction alongside the introduction. Skip treating every managed Kubernetes service as complete platform outsourcing or every on-premises task as physically performed by the customer. Data handling, identities, configuration and contract-specific responsibilities remain."
-      ],
-      "limits": [
-        "The check covers assigned passages and their lesson component, not every external claim or professional competence.",
-        "Read 2:30–9:00, 27:00–41:00 and 82:00–88:00."
-      ]
-    },
-    {
-      "studio": "cyber-studio",
-      "topic": "D03",
       "progressKey": "video:1",
       "label": "John Savill's Technical Training — SC-900 Microsoft Security, Compliance, and Identity Fundamentals Study Cram V2",
       "reviewedAssignment": {
@@ -12898,41 +12856,6 @@
         "The check covers assigned passages and their lesson component, not every external claim or professional competence.",
         "Read 27:00–41:00; only 34:00–34:55 assigned."
       ]
-    },
-    {
-      "studio": "cyber-studio",
-      "topic": "A04",
-      "progressKey": "video:0",
-      "label": "MIT 6.004 — locality and cache foundations (14.2.5–14.2.7)",
-      "reviewedAssignment": {
-        "label": "MIT 6.004 — locality and cache foundations (14.2.5–14.2.7)",
-        "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/",
-        "watchMode": "sections",
-        "assignment": "Watch these named parts in order, using each clip’s own clock (12:38 total): 14.2.5 The Locality Principle, 0:00–5:40; 14.2.6 Caches, 0:00–3:20; 14.2.7 Direct-mapped Caches, 0:00–1:08, then 2:00–4:30. Verified the actual three named clips rather than the unrelated four-minute section opening. Locality, cache hit/miss latency and direct mapping fill the hardware prerequisites. These are simplified cache models, not a promise that all programs exhibit locality or that a cache timing difference proves secret leakage. Skip the DMA cache-flush simplification and historical benchmark rate.",
-        "timingSource": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/",
-        "playbackUrl": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/",
-        "segments": []
-      },
-      "method": "transcript-reviewed",
-      "note": "Verified the actual three named clips rather than the unrelated four-minute section opening. Locality, cache hit/miss latency and direct mapping fill the hardware prerequisites. These are simplified cache models, not a promise that all programs exhibit locality or that a cache timing difference proves secret leakage. Skip the DMA cache-flush simplification and historical benchmark rate.",
-      "sources": [
-        {
-          "label": "14.2.5 — publisher video and English captions",
-          "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v5/"
-        },
-        {
-          "label": "14.2.6 — publisher video and English captions",
-          "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v6/"
-        },
-        {
-          "label": "14.2.7 — publisher video and English captions",
-          "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v7/"
-        }
-      ],
-      "findings": [
-        "Verified the actual three named clips rather than the unrelated four-minute section opening. Locality, cache hit/miss latency and direct mapping fill the hardware prerequisites. These are simplified cache models, not a promise that all programs exhibit locality or that a cache timing difference proves secret leakage. Skip the DMA cache-flush simplification and historical benchmark rate."
-      ],
-      "limits": ["Read caption text through 7:00 for each clip (all assigned passages); no claim of reviewing unassigned content."]
     },
     {
       "studio": "cyber-studio",
@@ -13305,6 +13228,176 @@
       "limits": [
         "The check covers assigned passages and their lesson component, not every external claim or professional competence.",
         "Read the complete 1:14 transcript; original automatic captions were incorrectly recognised as Spanish and did not support verification."
+      ]
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D03",
+      "progressKey": "video:400",
+      "label": "John Savill's Technical Training — SC-900 Microsoft Security, Compliance, and Identity Fundamentals Study Cram V2",
+      "reviewedAssignment": {
+        "label": "John Savill's Technical Training — SC-900 Microsoft Security, Compliance, and Identity Fundamentals Study Cram V2",
+        "url": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154",
+        "watchMode": "segments",
+        "assignment": "Compare on-premises, IaaS, PaaS and SaaS responsibilities in order. Include the lecturer’s correction: the PaaS operating system belongs on the provider side. A managed Kubernetes product does not transfer every cluster or workload duty. Use the lesson’s service-specific responsibility table; the provider contract and actual configuration still matter.",
+        "timingSource": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154",
+        "durationSeconds": 7170,
+        "segments": [
+          {
+            "start": 154,
+            "end": 290,
+            "label": "On-premises and IaaS responsibility boundaries, including the provider role"
+          },
+          {
+            "start": 291,
+            "end": 455,
+            "label": "PaaS explanation, corrected operating-system boundary and SaaS duties"
+          }
+        ],
+        "playbackUrl": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154"
+      },
+      "method": "transcript-reviewed",
+      "note": "Timed captions cover the complete IaaS provider explanation, PaaS discussion and its explicit operating-system correction, followed by SaaS customer duties. Service labels are simplified; the managed-Kubernetes example is not a universal responsibility rule. The new assignment includes previously skipped PaaS material and therefore uses a fresh completion key.",
+      "sources": [
+        {
+          "label": "Recording and English captions",
+          "url": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154"
+        }
+      ],
+      "findings": [
+        "Cyber media review: include the previously skipped PaaS explanation with its correction, and finish the IaaS sentence. The expanded scope needs a fresh key rather than inheriting a completed shorter assignment."
+      ],
+      "limits": [
+        "Timed English captions were read at the assigned intervals and nearby boundaries; offsets are accurate to approximately1–2 seconds.",
+        "Recording fit and toy-model limits do not establish real-world security or task performance."
+      ]
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A04",
+      "progressKey": "video:400",
+      "label": "MIT6.004 — 14.2.5 The Locality Principle",
+      "reviewedAssignment": {
+        "label": "MIT6.004 — 14.2.5 The Locality Principle",
+        "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v5/",
+        "watchMode": "segments",
+        "assignment": "Explain why repeated or nearby accesses may benefit from a cache, and distinguish a hit from a miss. Stop after the multi-level-cache explanation. Locality is a useful workload property, not a guarantee about every program.",
+        "timingSource": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v5/",
+        "durationSeconds": 432,
+        "segments": [
+          {
+            "start": 0,
+            "end": 345,
+            "label": "Locality, working sets, cache hits/misses and hierarchy"
+          }
+        ],
+        "playbackUrl": "https://www.youtube.com/watch?v=M-ZgVhzvh24"
+      },
+      "method": "transcript-reviewed",
+      "note": "The publisher page identifies this exact recording and its duration. Timed English captions match the assigned locality/cache explanation. Bounds finish the selected sentences. This is a simplified hardware model; side-channel exploitability needs additional evidence.",
+      "sources": [
+        {
+          "label": "MIT publisher page and recording duration",
+          "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v5/"
+        },
+        {
+          "label": "Assigned recording and English captions",
+          "url": "https://www.youtube.com/watch?v=M-ZgVhzvh24"
+        }
+      ],
+      "findings": [
+        "Cyber media review: replace the section-index card with three directly linked, playable recordings. The original section key is retired; each separate recording has a fresh completion key. Caption checks also finish the locality, AMAT and valid-bit sentences and avoid the old direct-mapping cutoff."
+      ],
+      "limits": [
+        "Timed English captions were read at the assigned intervals and nearby boundaries; offsets are accurate to approximately1–2 seconds.",
+        "Recording fit and toy-model limits do not establish real-world security or task performance."
+      ]
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A04",
+      "progressKey": "video:401",
+      "label": "MIT6.004 — 14.2.6 Caches",
+      "reviewedAssignment": {
+        "label": "MIT6.004 — 14.2.6 Caches",
+        "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v6/",
+        "watchMode": "segments",
+        "assignment": "Trace the cache-hit and cache-miss paths, then reproduce the average-access-time examples. Keep the stated cycle costs and hit ratios attached to these toy calculations; they are not current hardware benchmarks.",
+        "timingSource": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v6/",
+        "durationSeconds": 354,
+        "segments": [
+          {
+            "start": 0,
+            "end": 205,
+            "label": "Hit time, miss penalty and average memory access time"
+          }
+        ],
+        "playbackUrl": "https://www.youtube.com/watch?v=TV6AtNbmLBE"
+      },
+      "method": "transcript-reviewed",
+      "note": "The publisher page identifies this exact recording and its duration. Timed English captions match the assigned locality/cache explanation. Bounds finish the selected sentences. This is a simplified hardware model; side-channel exploitability needs additional evidence.",
+      "sources": [
+        {
+          "label": "MIT publisher page and recording duration",
+          "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v6/"
+        },
+        {
+          "label": "Assigned recording and English captions",
+          "url": "https://www.youtube.com/watch?v=TV6AtNbmLBE"
+        }
+      ],
+      "findings": [
+        "Cyber media review: replace the section-index card with three directly linked, playable recordings. The original section key is retired; each separate recording has a fresh completion key. Caption checks also finish the locality, AMAT and valid-bit sentences and avoid the old direct-mapping cutoff."
+      ],
+      "limits": [
+        "Timed English captions were read at the assigned intervals and nearby boundaries; offsets are accurate to approximately1–2 seconds.",
+        "Recording fit and toy-model limits do not establish real-world security or task performance."
+      ]
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A04",
+      "progressKey": "video:402",
+      "label": "MIT6.004 — 14.2.7 Direct-mapped Caches",
+      "reviewedAssignment": {
+        "label": "MIT6.004 — 14.2.7 Direct-mapped Caches",
+        "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v7/",
+        "watchMode": "segments",
+        "assignment": "Explain how an address selects a line, how a tag and valid bit determine a hit, and why an index alone is insufficient. Skip the intervening DMA/cache-flush simplification. The supplied cache model is background for reasoning about timing, not proof of secret leakage.",
+        "timingSource": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v7/",
+        "durationSeconds": 429,
+        "segments": [
+          {
+            "start": 0,
+            "end": 75,
+            "label": "Cache-line mapping, tags and valid bits"
+          },
+          {
+            "start": 120,
+            "end": 268,
+            "label": "Address offset/index/tag example and simple hardware"
+          }
+        ],
+        "playbackUrl": "https://www.youtube.com/watch?v=p2DReFbW35c"
+      },
+      "method": "transcript-reviewed",
+      "note": "The publisher page identifies this exact recording and its duration. Timed English captions match the assigned locality/cache explanation. Bounds finish the selected sentences. This is a simplified hardware model; side-channel exploitability needs additional evidence.",
+      "sources": [
+        {
+          "label": "MIT publisher page and recording duration",
+          "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v7/"
+        },
+        {
+          "label": "Assigned recording and English captions",
+          "url": "https://www.youtube.com/watch?v=p2DReFbW35c"
+        }
+      ],
+      "findings": [
+        "Cyber media review: replace the section-index card with three directly linked, playable recordings. The original section key is retired; each separate recording has a fresh completion key. Caption checks also finish the locality, AMAT and valid-bit sentences and avoid the old direct-mapping cutoff."
+      ],
+      "limits": [
+        "Timed English captions were read at the assigned intervals and nearby boundaries; offsets are accurate to approximately1–2 seconds.",
+        "Recording fit and toy-model limits do not establish real-world security or task performance."
       ]
     }
   ],
@@ -14557,6 +14650,80 @@
         ]
       },
       "reason": "Replace the unusable original automatic transcript with this verified short conceptual distinction. This is a 45-second orientation, not a full treatment of one-way functions or an RSA security proof. Hard means infeasible for the specified efficient adversary with high probability under the assumption, not impossible to invert. A trapdoor is an additional property; an ordinary one-way function need not have one, and its existence alone does not establish public-key encryption. Use the native formal definition and MIT Lecture 6 reading for the mathematical work."
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D03",
+      "previousProgressKey": "video:0",
+      "previousAssignment": {
+        "label": "John Savill's Technical Training — SC-900 Microsoft Security, Compliance, and Identity Fundamentals Study Cram V2",
+        "url": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154",
+        "progressKey": "video:0",
+        "segments": [
+          {
+            "start": 154,
+            "end": 459,
+            "label": "Shared responsibility"
+          }
+        ],
+        "assignment": "Watch only shared responsibility. The remainder of this two-hour certification cram is not assigned here.",
+        "watchMode": "segments",
+        "timingSource": "https://www.youtube.com/watch?v=-FJqb60wPSY",
+        "durationSeconds": 7170
+      },
+      "replacementProgressKey": "video:400",
+      "replacementAssignment": {
+        "label": "John Savill's Technical Training — SC-900 Microsoft Security, Compliance, and Identity Fundamentals Study Cram V2",
+        "url": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154",
+        "watchMode": "segments",
+        "assignment": "Compare on-premises, IaaS, PaaS and SaaS responsibilities in order. Include the lecturer’s correction: the PaaS operating system belongs on the provider side. A managed Kubernetes product does not transfer every cluster or workload duty. Use the lesson’s service-specific responsibility table; the provider contract and actual configuration still matter.",
+        "timingSource": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154",
+        "durationSeconds": 7170,
+        "segments": [
+          {
+            "start": 154,
+            "end": 290,
+            "label": "On-premises and IaaS responsibility boundaries, including the provider role"
+          },
+          {
+            "start": 291,
+            "end": 455,
+            "label": "PaaS explanation, corrected operating-system boundary and SaaS duties"
+          }
+        ],
+        "playbackUrl": "https://www.youtube.com/watch?v=-FJqb60wPSY&t=154"
+      },
+      "reason": "Cyber media review: include the previously skipped PaaS explanation with its correction, and finish the IaaS sentence. The expanded scope needs a fresh key rather than inheriting a completed shorter assignment. Any additional separated clips also have fresh keys; no former completion marks them watched."
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A04",
+      "previousProgressKey": "video:0",
+      "previousAssignment": {
+        "label": "MIT 6.004 — locality and cache foundations (14.2.5–14.2.7)",
+        "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/",
+        "progressKey": "video:0",
+        "assignment": "Use the topic-video navigation to watch only 14.2.5 The Locality Principle, 14.2.6 Caches and 14.2.7 Direct-mapped Caches. The memory-technology opening and other cache-design modules are optional for this side-channel prerequisite.",
+        "watchMode": "sections"
+      },
+      "replacementProgressKey": "video:400",
+      "replacementAssignment": {
+        "label": "MIT6.004 — 14.2.5 The Locality Principle",
+        "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v5/",
+        "watchMode": "segments",
+        "assignment": "Explain why repeated or nearby accesses may benefit from a cache, and distinguish a hit from a miss. Stop after the multi-level-cache explanation. Locality is a useful workload property, not a guarantee about every program.",
+        "timingSource": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c14/c14s2/c14s2v5/",
+        "durationSeconds": 432,
+        "segments": [
+          {
+            "start": 0,
+            "end": 345,
+            "label": "Locality, working sets, cache hits/misses and hierarchy"
+          }
+        ],
+        "playbackUrl": "https://www.youtube.com/watch?v=M-ZgVhzvh24"
+      },
+      "reason": "Cyber media review: replace the section-index card with three directly linked, playable recordings. The original section key is retired; each separate recording has a fresh completion key. Caption checks also finish the locality, AMAT and valid-bit sentences and avoid the old direct-mapping cutoff. Any additional separated clips also have fresh keys; no former completion marks them watched."
     }
   ],
   "retirements": [

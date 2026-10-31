@@ -1,4 +1,4 @@
-import { videoEmbed, videoLink } from "./video.js?v=20261031-3";
+import { videoEmbed, videoLink } from "./video.js?v=20261031-4";
 
 const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const reviewLabels = {
@@ -18,6 +18,7 @@ export function assignmentSummary(item) {
   return [item.optional ? "Optional further study." : "", ranges, item.assignment, evidence].filter(Boolean).join(" ");
 }
 export function resourceCards(items, type, checked) {
+  const firstRequired = items.findIndex((item) => !item.optional);
   return items
     .map((item, i) => {
       const key = item.progressKey || `${type}:${i}`;
@@ -41,9 +42,17 @@ export function resourceCards(items, type, checked) {
       const review = item.contentReview;
       const reviewLabel = reviewLabels[review?.method];
       const evidence = reviewLabel
-        ? `<div class="resource-content-review fine-print"><strong>Content check: ${esc(reviewLabel)}.</strong><p>${esc(review.note)}</p><p>${review.sources.map((source) => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.label)} ↗</a>`).join(" · ")}</p></div>`
+        ? `<details class="resource-content-review fine-print"><summary>How this source was checked</summary>${review.note !== item.assignment ? `<p>${esc(review.note)}</p>` : ""}<p>${review.sources.map((source) => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.label)} ↗</a>`).join(" · ")}</p></details>`
         : "";
-      return `<article class="resource"><div class="resource-info"><span class="eyebrow">${item.optional ? "OPTIONAL · " : ""}${isVideo ? "WATCH" : "READ"} ${i + 1}</span><h3><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${esc(item.label)} ↗</a></h3><div class="resource-assignment"><strong>${isVideo ? "Viewing guide" : "Reading guide"}</strong><p>${esc(item.assignment || "Follow the topic study assignment.")}</p>${item.segments?.length ? `<ol>${item.segments.map((s) => `<li><strong>${formatTime(s.start)}–${formatTime(s.end)}</strong> · ${esc(s.label)}</li>`).join("")}</ol><p class="fine-print">${rangeAdvice}</p>` : ""}${duration ? `<p class="fine-print">${duration}${item.segments?.length ? " Only the listed excerpts are assigned." : ""}</p>` : ""}${item.accessNote ? `<p class="fine-print">${esc(item.accessNote)}</p>` : ""}</div>${evidence}${players}<label class="resource-check"><input type="checkbox" data-resource="${esc(key)}" ${checked.includes(key) ? "checked" : ""} /> ${isVideo ? "I watched the assigned material and took notes" : "I read the assigned sections and took notes"}</label></div></article>`;
+      const assignedSeconds = item.segments?.reduce((sum, segment) => sum + segment.end - segment.start, 0);
+      const timing = !isVideo
+        ? ""
+        : item.segments?.length
+          ? `Watch ${formatTime(assignedSeconds)} total · ${item.segments.map((segment) => `${formatTime(segment.start)}–${formatTime(segment.end)}`).join(" · ")}`
+          : item.watchMode === "full" && item.durationSeconds
+            ? `Watch full recording · 0:00–${formatTime(item.durationSeconds)}`
+            : "Watch the named sections in the guide";
+      return `<article class="resource"><div class="resource-info"><span class="eyebrow">${item.optional ? "OPTIONAL · " : ""}${isVideo ? "WATCH" : "READ"} ${i + 1}</span><h3><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${esc(item.label)} ↗</a></h3>${timing ? `<p class="resource-timing">${esc(timing)}</p>` : ""}${reviewLabel ? `<span class="resource-status">Content check: ${esc(reviewLabel)}.</span>` : ""}<details class="resource-study"${i === firstRequired ? " open" : ""}><summary>${isVideo ? "Viewing guide & player" : "Reading guide"}</summary><div class="resource-assignment"><p>${esc(item.assignment || "Follow the topic study assignment.")}</p>${item.segments?.length ? `<ol>${item.segments.map((s) => `<li><strong>${formatTime(s.start)}–${formatTime(s.end)}</strong> · ${esc(s.label)}</li>`).join("")}</ol><p class="fine-print">${rangeAdvice}</p>` : ""}${duration ? `<p class="fine-print">${duration}${item.segments?.length ? " Only the listed excerpts are assigned." : ""}</p>` : ""}${item.accessNote ? `<p class="fine-print">${esc(item.accessNote)}</p>` : ""}</div>${players}${evidence}</details><label class="resource-check"><input type="checkbox" data-resource="${esc(key)}" ${checked.includes(key) ? "checked" : ""} /> ${isVideo ? "I watched the assigned material and took notes" : "I read the assigned sections and took notes"}</label></div></article>`;
     })
     .join("");
 }

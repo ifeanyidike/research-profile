@@ -85,3 +85,35 @@ version and operation key. Ask a partner to challenge a stale-event and an owner
 case. Passing these fixtures verifies a small deterministic control contract only;
 it does not establish ASR, TTS, real media timing, authentication, provider behavior,
 accessibility with real users or production reliability.
+
+Python implementation bridge (scaffold, not completed event rules)
+-----------------------------------------------------------------
+A tuple is an ordered pair such as (new_state, actions). The assignment below
+unpacks the pair into two variables. deepcopy copies nested mutable dictionaries
+and lists, so an output state can change without mutating its input.
+
+from copy import deepcopy
+
+def initial_state():
+    return {"owner": "A", "session": "S1", "proposal": None,
+            "response_generation": 0, "phase": "collect", "mode": "voice",
+            "operations": {}, "consumed_output_ids": [],
+            "commit_count": 0, "published_output_count": 0}
+
+def transition(state, event):
+    # Scaffold only: replace this rejection with the validated event rules above.
+    new_state = deepcopy(state)
+    actions = [{"kind": "reject", "reason": "not implemented"}]
+    return new_state, actions
+
+state = initial_state()  # call again for EACH independent fixture
+event = {"session": "S1", "account": "A", "kind": "unknown"}
+new_state, actions = transition(state, event)
+assert state["operations"] == {}
+assert new_state is not state
+
+Write fixtures in a loop that calls initial_state() inside the loop. Do not keep
+a shared nested dictionary as the default argument or reset only the counters.
+After implementing the contract, fixture 2 then a fresh fixture 4 must finish
+with commit counts 1 and 0 respectively. Rejected events must leave input state
+unchanged. Assertions here are offline tests, never production input validation.

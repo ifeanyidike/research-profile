@@ -203,3 +203,28 @@ text and renders complete fences as focusable pre/code; it does not execute code
 or implement general Markdown/HTML. Put literal code in those blocks so Python
 indentation and file fixtures survive rendering. TeX remains in prose/math
 examples; code and learner notes are not typeset. Use the existing maths rules.
+
+Writing clearly for learners
+----------------------------
+Use familiar words and direct sentences. Explain the problem and why a step
+matters before naming the technical concept. Keep necessary technical terms,
+but explain them when introduced and connect them to a concrete example.
+
+Address the learner as "you" where useful. First-person questions and clearly
+fictional dialogue can show a way to think; do not invent personal experience
+or imply that a learner performed an experiment or clinical assessment.
+Explain cause and effect explicitly. Break a long paragraph when it moves to
+a new question, step, example or limitation. Put commands in code blocks.
+
+Keep technical conditions, uncertainty, safety boundaries, units, mathematical
+notation and worked answers precise. Simplifying language must not turn a
+conditional claim into a guarantee. Use learner-facing wording such as "this
+lesson" rather than authoring terms such as "native". Historical editorial
+hashes describe their recorded version; recheck later changes independently.
+
+Local progress deployment/rollback contract
+-----------------------------------------
+Current readers merge legacy aggregate records and the newer field keys. New writes keep notes, checklists and other independent fields separate; pass/recall fields share one local write. Do not delete legacy records while an older tab may still write them.
+Any rollback after field-key writers are deployed MUST retain this shared model reader and Cyber wrapper, including their imports, even when rolling back the UI. An aggregate-only historical build cannot read recent guest edits and is not an acceptable rollback artifact. The prepared release is not yet deployed; validate the rollback reader before publishing. Backups and server records keep their existing format.
+
+Signed-in text editing waits for an account read after opening a lesson, returning to the tab or reconnecting. Text entered before that check stays as a labelled draft in memory. A changed saved field requires an explicit choice; an unchanged field can save after the check. Copy pending drafts before closing: exports contain stored records, not unsaved editor drafts. Guest text saves locally. Existing records still use timestamp-based field merging; this is not a collaborative text editor. Device-only logout retires the old SDK adapter and starts a fresh client; other tabs clear the removed account on the auth-key removal event.

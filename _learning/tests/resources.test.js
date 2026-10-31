@@ -11,6 +11,15 @@ const replacementReview = JSON.parse(fs.readFileSync(new URL("../video-transcrip
 const followupReview = JSON.parse(fs.readFileSync(new URL("../video-transcript-followup-20261030.json", import.meta.url)));
 const libraryReview = JSON.parse(fs.readFileSync(new URL("../video-library-review-20261030.json", import.meta.url)));
 const libraryBaseline = JSON.parse(fs.readFileSync(new URL("../video-library-baseline-20261030.json", import.meta.url)));
+// Preserve historical evidence snapshots; later scope corrections are explicit amendments.
+const amendments = JSON.parse(fs.readFileSync(new URL("../resource-amendments-20261031.json", import.meta.url))).amendments;
+function originalEvidence(studio, topic, resource) {
+  const amendment = amendments.find((a) => a.studio === studio && a.topic === topic && a.progressKey === resource.progressKey);
+  if (!amendment) return resource;
+  assert.deepEqual(resource, amendment.after, `${studio}/${topic}: amendment is stale`);
+  assert.ok(amendment.reason);
+  return amendment.before;
+}
 const allReplacements = [...replacementReview.replacements, ...followupReview.replacements, ...libraryReview.replacements];
 const retirementFor = (studio, topic, key) =>
   libraryReview.retirements.find((a) => a.studio === studio && a.topic === topic && a.previousProgressKey === key);
@@ -107,7 +116,7 @@ test("Cyber replacement cannot inherit completion from Scratch and original sour
   const accounts = cards.find((card) => card.includes("kUovJpWqEMk"));
   const privacy = cards.find((card) => card.includes("6IeqJtudKnk"));
   assert.match(accounts, /data-resource="video:0" checked/);
-  assert.doesNotMatch(privacy, / checked/);
+  assert.doesNotMatch(privacy, /<input\b[^>]*\bchecked(?:\s|>|=)/);
   assert.doesNotMatch(html, /data-resource="video:2" checked/);
 });
 
@@ -235,7 +244,8 @@ test("content evidence stays attached to the reviewed assignment and exposes unr
     const key = `${a.studio}/${a.topic}/${a.progressKey}`;
     assert.ok(!seen.has(key), "Duplicate content review: " + key);
     seen.add(key);
-    const r = topics[`${a.studio}/${a.topic}`].videos.find((r) => r.progressKey === a.progressKey);
+    const current = topics[`${a.studio}/${a.topic}`].videos.find((r) => r.progressKey === a.progressKey);
+    const r = originalEvidence(a.studio, a.topic, current);
     assert.deepEqual(
       {
         label: r.label,
@@ -267,7 +277,8 @@ test("content evidence stays attached to the reviewed assignment and exposes unr
     const key = `${a.studio}/${a.topic}/${a.progressKey}`;
     assert.ok(!seen.has(key), "Library audit overlaps the historical 44: " + key);
     seen.add(key);
-    const r = topics[`${a.studio}/${a.topic}`].videos.find((r) => r.progressKey === a.progressKey);
+    const current = topics[`${a.studio}/${a.topic}`].videos.find((r) => r.progressKey === a.progressKey);
+    const r = originalEvidence(a.studio, a.topic, current);
     assert.ok(r, key);
     const snapshot = {
       label: r.label,
@@ -327,6 +338,22 @@ test("the full-library audit accounts for all 303 baseline assignments without c
         b.previousAssignment,
         id + ": pending source changed without a content review"
       );
+    } else {
+      const current = videos.find((r) => r.progressKey === b.previousProgressKey);
+      const clarification = libraryReview.locatorClarifications.find((a) => key(a, a.previousProgressKey) === id);
+      if (clarification) {
+        assert.deepEqual(clarification.previousAssignment, b.previousAssignment);
+        assert.equal(current.url, clarification.currentUrl, id + ": undocumented locator change");
+        assert.equal(new URL(clarification.recordingUrl).protocol, "https:");
+        assert.ok(clarification.reason.length > 80);
+      } else {
+        assert.equal(current.url, b.previousAssignment.url, id + ": retained source URL changed");
+        assert.equal(
+          current.playbackUrl || current.url,
+          b.previousAssignment.playbackUrl || b.previousAssignment.url,
+          id + ": retained playback changed"
+        );
+      }
     }
   }
   assert.equal(accounted.size, 303);

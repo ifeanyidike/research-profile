@@ -15,9 +15,10 @@ permalink: /voice-ai-studio/
     <meta name="description" content="Speech, audio and conversational AI, from programming and maths to speech systems and research preparation." />
     <title>Voice AI Studio</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="../learning-studio/styles.css?v=20261031-3" />
+    <link rel="stylesheet" href="../learning-studio/styles.css?v=20261031-4" />
+    <link rel="stylesheet" href="../learning-studio/workspace.css?v=20261031-4" />
     <script defer src="../algo-studio/runtime/supabase-2.118.0.js"></script>
-    <script type="module" src="app.js?v=20261031-3"></script>
+    <script type="module" src="app.js?v=20261031-4"></script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -29,22 +30,24 @@ permalink: /voice-ai-studio/
       <p class="nav-label">YOUR LEARNING SPACE</p>
       <nav aria-label="Main navigation">
         <a href="#home" data-nav="home"><span aria-hidden="true">⌂</span>My learning</a>
-        <a href="#overview" data-nav="overview"><span aria-hidden="true">◎</span>About this field</a>
         <a href="#path" data-nav="path"><span aria-hidden="true">≋</span>Curriculum</a>
-        <a href="#sources" data-nav="sources"><span aria-hidden="true">↗</span>Source map</a>
         <a href="#review" data-nav="review"><span aria-hidden="true">↺</span>Recall & review</a>
         <a href="#notebook" data-nav="notebook"><span aria-hidden="true">▤</span>My notebook</a>
-        <a href="#certifications" data-nav="certifications"><span aria-hidden="true">✓</span>Qualifications</a>
-        <a href="#method" data-nav="method"><span aria-hidden="true">◇</span>How to learn</a>
       </nav>
-      <div class="sidebar-note">
-        <span class="eyebrow">A LITTLE CLEARER, EVERY DAY</span>
-        <p>Build a foundation.<br />Follow the evidence.<br />Explain what you learn.</p>
-        <a href="../child-development-studio/">Child Development Studio ↗</a><br /><a href="../cyber-studio/">Cyber Studio ↗</a><br /><a
-          href="../algo-studio/"
-          >Algo Studio ↗</a
-        >
-      </div>
+      <details class="sidebar-guides" id="guide-navigation">
+        <summary>Guides &amp; sources</summary>
+        <nav aria-label="Learning guides">
+          <a href="#overview" data-nav="overview"><span aria-hidden="true">◎</span>About this field</a>
+          <a href="#sources" data-nav="sources"><span aria-hidden="true">↗</span>Source map</a>
+          <a href="#certifications" data-nav="certifications"><span aria-hidden="true">✓</span>Qualifications</a>
+          <a href="#method" data-nav="method"><span aria-hidden="true">◇</span>How to learn</a>
+        </nav>
+      </details>
+      <details class="studio-links">
+        <summary>Other studios</summary>
+        <a href="../cyber-studio/">Cyber Studio ↗</a><a href="../child-development-studio/">Child Development Studio ↗</a
+        ><a href="../algo-studio/">Algo Studio ↗</a>
+      </details>
       <div class="sidebar-bottom">
         <label for="learner">LEARNING AS</label
         ><select id="learner" aria-label="Active learner"></select
