@@ -1,7 +1,8 @@
-import { math } from "./math.js?v=20261031-1";
-import { createModel } from "./model.js?v=20261031-1";
-import { Account } from "./account.js?v=20261031-1";
-import { resourceCards, assignmentSummary } from "./resources.js?v=20261031-1";
+import { math } from "./math.js?v=20261031-2";
+import { createModel } from "./model.js?v=20261031-2";
+import { Account } from "./account.js?v=20261031-2";
+import { resourceCards, assignmentSummary } from "./resources.js?v=20261031-2";
+import { renderProse as paragraphs } from "./prose.js?v=20261031-2";
 import { syncConfig } from "../algo-studio/sync-config.js";
 export function startStudio(config) {
   document.documentElement.dataset.studio = config.slug;
@@ -166,13 +167,7 @@ export function startStudio(config) {
       checked = JSON.parse(r.resources || "[]");
     } catch {}
     const cards = (items, type) => resourceCards(items, type, checked);
-    return `<h2>Go deeper with the sources</h2><p>Follow the viewing and reading guides. Required excerpts are listed with start and stop times; optional further study is labelled separately. Pause to reproduce examples. Completion checks record your own study, not verified viewing.</p><div class="callout"><strong>Your study assignment</strong>${paragraphs(m.study_focus)}</div><h3>Videos</h3><p class="scope-note">${esc(m.videoNote)}</p>${m.videos.length ? cards(m.videos, "video") : ""}<h3>Readings</h3>${cards(m.readings, "reading")}<div class="callout"><strong>Source and setup notes</strong><p>${esc(m.note)}</p><p>Source map researched on 30 October 2026. Providers control availability, sign-in, fees, captions, and embedding. If a video cannot play here, open its original source.</p></div>`;
-  }
-  function paragraphs(text) {
-    return text
-      .split("\n\n")
-      .map((p) => `<p>${esc(p)}</p>`)
-      .join("");
+    return `<h2>Go deeper with the sources</h2><p>Follow the viewing and reading guides. Required excerpts are listed with start and stop times; optional further study is labelled separately. Pause to reproduce examples. Completion checks record your own study, not verified viewing.</p><div class="callout"><strong>Your study assignment</strong>${paragraphs(m.study_focus)}</div><h3>Videos</h3><p class="scope-note">${esc(m.videoNote)}</p>${m.videos.length ? cards(m.videos, "video") : ""}<h3>Readings</h3>${cards(m.readings, "reading")}<div class="callout"><strong>Source and setup notes</strong><p>${esc(m.note)}</p><p>Source assignments researched on 30–31 October 2026. Providers control availability, sign-in, fees, captions, and embedding. If a video cannot play here, open its original source.</p></div>`;
   }
   function workshop(l) {
     const g = l.guide;

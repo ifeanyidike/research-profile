@@ -79,13 +79,13 @@ def build(check=False):
                 for m in modules:
                     if track in m['tracks']:
                         assert all(track in lookup[p]['tracks'] for p in m['prerequisites']), (track,m['id'])
-        curriculum = {'reviewed':'30 October 2026', 'modules':modules}
+        curriculum = {'reviewed':'31 October 2026', 'modules':modules}
         for name, expected in [('curriculum.json', curriculum), ('lessons.json', lessons)]:
             if check:
                 assert json.loads((dest/name).read_text()) == expected, name + ' is stale; run python3 _learning/build.py'
             else:
                 (dest/name).write_text(json.dumps(expected, ensure_ascii=False, indent=2)+'\n')
-        lines=[data['name'], '='*len(data['name']), '', 'Source map reviewed 30 October 2026. Original lessons and fictional exercises; external providers own their materials.', '']
+        lines=[data['name'], '='*len(data['name']), '', 'Source assignments reviewed 30–31 October 2026; native clarity review 31 October 2026. Original lessons and fictional exercises; external providers own their materials.', '']
         for m in modules:
             lines += [m['id']+' — '+m['title'], 'Prerequisites: '+(', '.join(m['prerequisites']) or 'None'), 'Path: '+m.get('audienceLabel','All learners'), 'Study assignment: '+m['study_focus'], 'Video coverage/access: '+m['videoNote'], 'Videos:']
             lines += resource_lines(m['videos'])

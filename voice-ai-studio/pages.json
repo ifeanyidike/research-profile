@@ -59,14 +59,40 @@
     "lead": "Build an explanation you can defend, then practise, assess and revisit it.",
     "sections": [
       {
-        "title": "The learning loop",
-        "text": "Read the native explanation and prerequisite bridge. Work through the supplied example before revealing its explanation. Follow the exact readings/videos in order. Complete the practical task, attempt the independent assessment without the solution, and record evidence in your own words. Teach the idea to a partner and invite a challenge.",
+        "title": "Work through one idea at a time",
+        "text": "Start with the prerequisite bridge. Explain the problem in everyday words, then define the new terms. Trace the worked example one step at a time: predict the next result and say why it follows. If a step is mysterious, revisit the named prerequisite or short primer before moving on.\n\nAttempt the supplied exercise before revealing its solution. Compare your reasoning, correct the specific misunderstanding, then try the independent variant without the walkthrough. Explain the idea in your own words and return to it after a delay. A partner can challenge it; if studying alone, label your own counterargument as self-review.",
         "links": []
       },
       {
-        "title": "Use the complete learning loop",
-        "text": "Read the guided explanation and its bridge first. In Watch & read, follow the topic-specific study assignment: it names the relevant sections and explains what each video covers. Complete the native worked exercise, compare your method with the solution, then attempt the independent task before opening its expected reasoning. Check every topic-specific criterion before recording a pass. A quiz answer or a short video alone is not a completed topic. Advanced source courses can take weeks; split a topic across sessions when needed.",
+        "title": "Use the sources and take the time the topic needs",
+        "text": "In Watch & read, follow the topic-specific sections and viewing times. Connect each source to the native example rather than treating viewing as the whole task. Check every pass criterion before recording your judgement. A short clip or one correct quiz answer is not a complete topic. Advanced readings and projects may need several sessions or weeks.",
         "links": []
+      },
+      {
+        "title": "Why the lessons use worked examples and practice",
+        "text": "The teaching review draws on CMU’s guidance about prior knowledge, explicit expert steps and aligned practice, the IES guide on worked examples and explanatory questions, and AERO’s examples of explicit teaching. We apply those ideas through concrete introductions, vocabulary, intermediate steps, practice and feedback.\n\nThese sources have different evidence scopes and strengths. AERO’s classroom examples inform presentation; they are not a learner trial of this adult studio. Completing an editorial review does not establish that every beginner will need no additional help.",
+        "links": [
+          {
+            "label": "Carnegie Mellon Eberly Center — Learning principles",
+            "url": "https://www.cmu.edu/teaching/principles/learning.html",
+            "assignment": "Activate prerequisite skills, connect ideas and align targeted practice with feedback."
+          },
+          {
+            "label": "Carnegie Mellon Eberly Center — Teaching principles",
+            "url": "https://www.cmu.edu/teaching/principles/teaching.html",
+            "assignment": "Expose expert steps and align objectives, instruction and assessment."
+          },
+          {
+            "label": "IES What Works Clearinghouse — Organizing Instruction and Study to Improve Student Learning",
+            "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/1",
+            "assignment": "Alternate worked examples and practice, connect concrete and abstract forms and ask explanatory questions; recommendations have differing evidence levels."
+          },
+          {
+            "label": "AERO — Teach explicitly, classroom examples and transcript",
+            "url": "https://www.edresearch.edu.au/guides-resources/videos/teach-explicitly-primary-and-secondary",
+            "assignment": "Model thinking, define vocabulary, chunk explanations and reduce guidance gradually. These school examples inform presentation; they are not direct evidence for outcomes in this adult hub."
+          }
+        ]
       },
       {
         "title": "Prerequisites and honest passes",

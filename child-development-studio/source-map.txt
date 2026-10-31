@@ -1,7 +1,7 @@
 Child Development & Therapy Studio
 ==================================
 
-Source map reviewed 30 October 2026. Original lessons and fictional exercises; external providers own their materials.
+Source assignments reviewed 30–31 October 2026; native clarity review 31 October 2026. Original lessons and fictional exercises; external providers own their materials.
 
 C01 — Choose your role, goals and learning path
 Prerequisites: None
@@ -763,7 +763,7 @@ Videos:
 Readings:
   ASHA — AAC Practice Portal: access, assessment and partners — https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication
     Assignment: Read the named article or specified sections: ASHA — AAC Practice Portal: access, assessment and partners. Focus on AAC, feature matching, access and use the native worked example to check your interpretation.
-Practical: Produce a fictional feature-matching matrix with goals, access questions, language functions, partner needs, privacy and backup. Compare two abstract systems using stated features only. Mark every missing specification and assessment question.
+Practical: Use the fictional 14-year-old’s goals to build a feature matrix. Compare abstract system A: ten fixed prerecorded messages, offline operation, no novel text; and system B: novel typed messages, selectable stored phrases, cloud sync enabled by default. Both have unspecified physical access, fatigue demands, battery life, backup and privacy controls. For each goal state a possible feature benefit, missing specification and assessment question. Include refusal, private communication, partner support and authorship. Do not select a real device or trial either with a child.
 Independent assessment: A team chooses the most expensive AAC app solely from a diagnosis and excludes the young person from discussion. Write a corrected assessment and decision process, including evidence, participation and review.
 Pass criteria: 1. Build a feature-matching matrix including access, language functions, authorship and backup. 2. Explain why price/diagnosis alone cannot select an AAC system. 3. Describe qualified assessment and accessible user involvement, with missing specifications left open.
 Source notes: Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.

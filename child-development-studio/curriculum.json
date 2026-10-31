@@ -1,5 +1,5 @@
 {
-  "reviewed": "30 October 2026",
+  "reviewed": "31 October 2026",
   "modules": [
     {
       "id": "C01",
@@ -2427,7 +2427,7 @@
         "Describe qualified assessment and accessible user involvement, with missing specifications left open."
       ],
       "study_focus": "Read ASHA AAC sections on assessment/feature matching, access, communication functions, partners and backup. The NHS board clip is a family introduction, not the full professional access-assessment curriculum.",
-      "practice": "Produce a fictional feature-matching matrix with goals, access questions, language functions, partner needs, privacy and backup. Compare two abstract systems using stated features only. Mark every missing specification and assessment question.",
+      "practice": "Use the fictional 14-year-old’s goals to build a feature matrix. Compare abstract system A: ten fixed prerecorded messages, offline operation, no novel text; and system B: novel typed messages, selectable stored phrases, cloud sync enabled by default. Both have unspecified physical access, fatigue demands, battery life, backup and privacy controls. For each goal state a possible feature benefit, missing specification and assessment question. Include refusal, private communication, partner support and authorship. Do not select a real device or trial either with a child.",
       "assessment": "A team chooses the most expensive AAC app solely from a diagnosis and excludes the young person from discussion. Write a corrected assessment and decision process, including evidence, participation and review.",
       "practice_links": []
     },

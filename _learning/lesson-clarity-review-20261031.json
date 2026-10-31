@@ -1,0 +1,2246 @@
+{
+  "date": "2026-10-31",
+  "status": "complete",
+  "scope": "Read and review all 177 native lessons, worked examples, exercises, solutions and prerequisite links for beginner clarity while preserving technical meaning. Counts are editorial review, not learner-tested mastery.",
+  "sources": [
+    {
+      "title": "Carnegie Mellon Eberly Center — Learning principles",
+      "url": "https://www.cmu.edu/teaching/principles/learning.html",
+      "application": "Activate prerequisite skills, connect ideas and align targeted practice with feedback."
+    },
+    {
+      "title": "Carnegie Mellon Eberly Center — Teaching principles",
+      "url": "https://www.cmu.edu/teaching/principles/teaching.html",
+      "application": "Expose expert steps and align objectives, instruction and assessment."
+    },
+    {
+      "title": "IES What Works Clearinghouse — Organizing Instruction and Study to Improve Student Learning",
+      "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/1",
+      "application": "Alternate worked examples and practice, connect concrete and abstract forms and ask explanatory questions; recommendations have differing evidence levels."
+    },
+    {
+      "title": "AERO — Teach explicitly, classroom examples and transcript",
+      "url": "https://www.edresearch.edu.au/guides-resources/videos/teach-explicitly-primary-and-secondary",
+      "application": "Model thinking, define vocabulary, chunk explanations and reduce guidance gradually. These school examples inform presentation; they are not direct evidence for outcomes in this adult hub."
+    }
+  ],
+  "criteria": [
+    "Explain the problem before specialist terms; define essential vocabulary at first use.",
+    "State what earlier skill is needed and provide a concrete readiness check or short primer.",
+    "Show a complete small example and why each step follows.",
+    "Make the first exercise attemptable with supplied inputs, instructions and a way to check it.",
+    "Keep solutions explanatory and independent tasks aligned with what was taught.",
+    "Retain correct technical distinctions, TeX notation and clear clinical/authorisation boundaries."
+  ],
+  "lessons": [
+    {
+      "studio": "cyber-studio",
+      "topic": "O01",
+      "title": "Computer files browsers and a learning workspace",
+      "status": "reviewed",
+      "findings": [
+        "The file-copy exercise is complete and beginner-accessible; introductory prose used interpreter and provenance before defining them."
+      ],
+      "changedFields": ["core.concept", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "1ad5ebf8c9782ea3fabdb4e583fc3aceac6c149802f1b36fa4b542d615641d88"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "O02",
+      "title": "Security goals ethics and authorised practice",
+      "status": "reviewed",
+      "findings": [
+        "CIA definitions and scope cases were correct; asset/control and scope vocabulary needed a concrete entry before the formal terms."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "b3a06266e1afc7cf6f1cf8da868b686a9b0923fb6f578dda00bb8e1a16a8c65a"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "O03",
+      "title": "Accounts devices backups and personal privacy",
+      "status": "reviewed",
+      "findings": [
+        "Account inventory and restore task fit beginners, but capabilities, factors, endpoints and recovery chains were compressed into specialist language."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "e5e5cd6bd334cfc48f5e7b7390609bda9312fd8b07fb538f319e72dd6f2f5760"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "M01",
+      "title": "Arithmetic algebra binary and encodings",
+      "status": "reviewed",
+      "findings": [
+        "Number conversions were correct but powers, place values, log notation and byte/code-point distinctions were introduced too quickly."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "90fffdbd2a9544685e89b9aa5d64b2d5594ebeaa259d231faa0208981f3726b5"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "P01",
+      "title": "Python variables functions and input",
+      "status": "reviewed",
+      "findings": [
+        "Running a terminal was an untaught prerequisite; first-run setup, syntax, types, and input/output distinction need an explicit beginner route."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.exercise", "guide.solution", "curriculum.readings: added first-run official setup"],
+      "sourceReferences": ["https://docs.python.org/3/library/idle.html", "https://docs.python.org/3/tutorial/introduction.html"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "740a4d098ce7fa31838f53468e7e6a3542e9f4d54ff5d6c44a66cd764b893d31"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "P02",
+      "title": "Conditions loops and algorithm tracing",
+      "status": "reviewed",
+      "findings": [
+        "The loop trace and boundary tests are sound; list/iteration/accumulator vocabulary and first table row needed an explicit bridge."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "d41a3b5b1363129ec6c0c911f7566588bceaa919b173586b0f5a9197169c728b"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "P03",
+      "title": "Collections exceptions and data modelling",
+      "status": "reviewed",
+      "findings": [
+        "Collections and exceptions were compressed; the code uses append, enumerate and sum without first explaining their purpose. The exercise asks for rejection reasons but old code records only indices."
+      ],
+      "changedFields": ["guide.teaching", "guide.exercise", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "da5ba7b2a597d722f7562ff02803f5812dddd43b3fd7488ac8e135149cf6e976"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "P04",
+      "title": "Modules files CSV JSON and time",
+      "status": "reviewed",
+      "findings": [
+        "The CSV/JSON task is appropriate but assumes knowledge of current directory, file modes and helper calls; its solution described code instead of showing the full missing steps."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.exercise", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "af07c4d78f3682df35bfa7453e9c0aa01c4d1fa7fc095336112c10cdf4d6c28e"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "P05",
+      "title": "Tests debugging and regular expressions",
+      "status": "reviewed",
+      "findings": [
+        "The exercise is reproducible but the explanation jumps into regex notation and test-framework scaffolding without a small expected/observed decision."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.exercise"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "eae3051497f646e9821d5f4374b565cc7b18b171e8b3350c71e2e403b94de79a"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "L01",
+      "title": "Linux shell paths documentation and files",
+      "status": "reviewed",
+      "findings": [
+        "The file operations are suitably bounded but the terminal/shell distinction, prompt and first command options need a beginner setup and vocabulary path."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.exercise"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "c2e4984bf87b0dc87af702acc54b6de9eb6ddf85697b6e179f1b96c18e96352c"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "L02",
+      "title": "Permissions processes pipes environment and shell scripting",
+      "status": "reviewed",
+      "findings": [
+        "Permissions digits, command substitution and environment inheritance lacked worked explanations. Editing the fixture then rerunning the script would silently replace the edit."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.exercise", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "86d071233221f3f5cfec79440715766f9b901eb0e8550e31c3d30327ece5d423"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "P06",
+      "title": "Objects dependency environments and reproducible Python",
+      "status": "reviewed",
+      "findings": [
+        "The object example isolates instance state correctly; class, object, method and constructor need one concrete mapping before dependency caveats."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "35a70621a5ec26885606c689425f1c5afe18a4f217c4a2c44046e2759736240f"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "L03",
+      "title": "Git version history and a reproducible lab notebook",
+      "status": "reviewed",
+      "findings": ["Staging concepts are sound but Git installation/author setup and the independent conflict task lacked runnable starting steps."],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.challenge", "guide.challenge_solution"],
+      "sourceReferences": ["https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "81b78e69d87d2545b5efcb64eb0806f1a0454bf06a206db376eeb294b54a5490"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "M02",
+      "title": "Logic sets functions proofs graphs and state machines",
+      "status": "reviewed",
+      "findings": [
+        "Implication and relation notation needed concrete translations; the door authorisation condition is a rule on transitions and should not be confused with a persistent-state invariant. The proof task needed a modelled base/preservation argument."
+      ],
+      "changedFields": ["guide.teaching", "guide.explanation", "guide.challenge", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "566c8a6adb254fd6dc1765b98567127718b6cefbacdefbeb9d7531de1c28d8c5"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "M03",
+      "title": "Modular arithmetic number theory and counting",
+      "status": "reviewed",
+      "findings": [
+        "Modular calculations and counts are correct; divisor, gcd and inverse notation needed a concrete “undo multiplication” entry, especially why a negative remainder representative becomes positive."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "c88f21fecf416b0ef9c97c238759389c5a114fca306e186b739fa3e0413f7622"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "M04",
+      "title": "Probability independence entropy and the base rate",
+      "status": "reviewed",
+      "findings": [
+        "Retrieval answer and feedback contradicted the current worked table: 8% versus 47.6%. Probability notation, TP/FP/FN and denominators needed count-first explanation before Bayes and entropy."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.explanation", "guide.solution", "core.correct", "core.feedback"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "9738778e049bd8b5f54b28d6f6fac280fc62f60e5793883acfdb1023c2138412"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "M05",
+      "title": "Statistics sampling uncertainty and experimental design",
+      "status": "reviewed",
+      "findings": [
+        "The statistical definitions were packed together before the small worked calculation; terms variance, deviation, standard error and held-out data needed explicit links to their different questions."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "bcb12e4a2103e89385de069f592b69babf44ba31c638b4ea7c14e3c2d57d5ee2"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "C01",
+      "title": "C compilation types and machine representation",
+      "status": "reviewed",
+      "findings": [
+        "C syntax and numeric guarantees are carefully qualified, but source/compiler/executable and the initial command needed a small Python-to-C bridge and an exact command decoder."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "80113f7371ef188c884b009bcea5ff78b4319e7e39acc400dc309b8b65de6c8e"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "C02",
+      "title": "Arrays strings encodings and bounds",
+      "status": "reviewed",
+      "findings": [
+        "Capacity, length and terminator are sound, but first-use buffer, pointer shorthand and checking the rejection exit status needed explicit small steps."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.exercise", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "b959edc6cdd57ddc15e152c335a815c7f39a747b35026f561cb222e7156e7710"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "C03",
+      "title": "Algorithms data structures recursion and complexity",
+      "status": "reviewed",
+      "findings": [
+        "Half-open search intervals and insertion-versus-membership results were unexplained notation. Stack/queue/tree terms and recursion needed concrete traces before asymptotic bounds."
+      ],
+      "changedFields": ["guide.teaching", "guide.explanation", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "aa368e482e8c21d7d74bc6361e23429b10139560a4ee88bfa369c0838389d006"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "C04",
+      "title": "Pointers allocation stack heap linked structures and debugging",
+      "status": "reviewed",
+      "findings": [
+        "Pointer lifetime caveats are accurate but precede a concrete picture of address versus value; malloc/free and sizeof *p needed an explanation tied to each statement."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "81ab2842cf05c8c4419776dc5a8184462b6af8ce8a6d7aab5f7b1c856490dffc"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "C05",
+      "title": "Assembly calling conventions executables and debuggers",
+      "status": "reviewed",
+      "findings": [
+        "Compiler inspection alone does not teach a novice how to read an unfamiliar architecture. Added two tiny complete instruction traces and operand-order explanations before asking for real output annotation."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.exercise"],
+      "sourceReferences": ["https://raw.githubusercontent.com/ARM-software/abi-aa/main/aapcs64/aapcs64.rst"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "e18d9deb63a0ce0f208e5d9ee6fba6b80d719993f073120911396cecf840e2ed"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "C06",
+      "title": "Operating systems privilege virtual memory and filesystems",
+      "status": "reviewed",
+      "findings": [
+        "The first sentence used multiplexing and mediation before explaining the OS role; the private-file exercise needed actual observation commands and labels for evidence versus inferred enforcement."
+      ],
+      "changedFields": ["guide.teaching", "guide.exercise", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "51f7f2aa8c9259439c5e31b35d632d9b843a0b948c6d4f312f5a8eed9014c02e"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "C07",
+      "title": "Threads concurrency locks races and deadlocks",
+      "status": "reviewed",
+      "findings": [
+        "The lost-update schedule is clear and exercises cover success and failure orders. The deadlock challenge incorrectly implied that lock ordering itself proves a shared-data invariant."
+      ],
+      "changedFields": ["guide.bridge", "guide.challenge", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "7148a7f5b57e2757b1ec277a1b958c861c646ef77a95fbe49e3c9bc903371eea"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "N01",
+      "title": "Networks layers packets and performance",
+      "status": "reviewed",
+      "findings": [
+        "Protocol, layer, header, payload, endpoint and hop were used before a plain-language model. Timing exercises were correct but needed unit-by-unit worked reasoning."
+      ],
+      "changedFields": ["guide.teaching", "guide.explanation", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "6d5f51e86418173cecbd37fbd6b0e3bc3783990f3ea495f0c2e47744922f371e"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "N02",
+      "title": "IP addressing subnetting routing NAT and IPv6",
+      "status": "reviewed",
+      "findings": [
+        "Subnetting assumed dotted-decimal and mask notation. Added the actual /26 bit split and expanded IPv6 example so the exercise follows taught steps."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "0b16a1f5f18a8c50f48b7058032157078949b1e9968aa8d7034540612483cc75"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "N03",
+      "title": "Ethernet ARP DHCP and wireless security foundations",
+      "status": "reviewed",
+      "findings": [
+        "Link-address terminology and DHCP initials needed definitions. The old solution did not explain all four messages requested by the exercise."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "2ea41adc3346998e59724c142ce9bffe3513e643ae60a5a1568c217026bda113"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "N04",
+      "title": "TCP UDP reliable delivery and socket programming",
+      "status": "reviewed",
+      "findings": [
+        "The first socket program assumes byte literals and two-terminal setup; the client used one recv despite teaching framing, and accepted connections could wait without a timeout. Replaced both sides with bounded, delimiter-aware reads."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.example", "guide.explanation", "guide.exercise"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "4df541d9adaf579be39b7d320ee24e1ac09fd0dc6996a952ba6e6430b469e299"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "N05",
+      "title": "DNS email and name-resolution trust",
+      "status": "reviewed",
+      "findings": [
+        "DNS hierarchy, record columns and domain-authentication acronyms were introduced without a lookup narrative; DNSSEC needed a limited preview because cryptographic signatures are taught later."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "4b4bf9ea0b81f0b146e88cb5dbeafe5ce86d5a78455db30d69de0efff3c7f14d"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "N06",
+      "title": "HTTP requests responses cookies caches and proxies",
+      "status": "reviewed",
+      "findings": [
+        "HTTP terminology and the stateless/session distinction needed a concrete browser exchange before cookie/cache caveats. The transcript is appropriate and the exercise remains scoped to reading it."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "3c81999dc81a52fdf6e5a197e8d5d692fe7d24a7658d33cb5338d7ef164b812d"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "B01",
+      "title": "HTML JavaScript DOM forms and origins",
+      "status": "reviewed",
+      "findings": [
+        "DOM and origin boundaries were sound; JavaScript syntax and a complete reset implementation were missing from the first exercise."
+      ],
+      "changedFields": ["guide.bridge", "guide.teaching", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "b696ced4ee0aa775821e38dd35dd8581986a94afc595266e71ddc11d2eecf7c6"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "B02",
+      "title": "Relational databases SQL schemas and transactions",
+      "status": "reviewed",
+      "findings": ["SQL lacked a line-by-line syntax primer; independent stock task ambiguously mixed a lost update with a negative-stock result."],
+      "changedFields": ["guide.teaching", "guide.solution", "guide.challenge", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "4f183f1623c62f8c8b797e0680fc61183c3c474bae46d9cbba2c17540cf222e2"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "B03",
+      "title": "Web servers APIs sessions and structured data",
+      "status": "reviewed",
+      "findings": [
+        "Request-boundary reasoning was correct; contract and route jargon preceded the concrete request; solution did not enumerate all requested cases."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "9f344a435c61201c6bb392898644f9d26b75545f6e5670b14299125687d14bb9"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "B04",
+      "title": "Virtual machines containers snapshots and lab isolation",
+      "status": "reviewed",
+      "findings": [
+        "Lab boundaries and optional runtime path were clear; hypervisor and resource terms needed a plain initial model and concrete planning values."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "71d512ad2846cbd150e9b3e418f4a7b383d57a8263e6ad7b6cb9f809c0a85a6d"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "S01",
+      "title": "Threat modelling secure design and security principles",
+      "status": "reviewed",
+      "findings": ["Threat model worked example was clear; ranking exercise needed a supplied rubric so a beginner could complete and check it."],
+      "changedFields": ["guide.challenge", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "beaf742f7343ddf31a0e5323e381460894abafb2c0fe100960ff2e67c324e421"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "S02",
+      "title": "Symmetric encryption randomness and authenticated encryption",
+      "status": "reviewed",
+      "findings": ["AEAD rules were accurate; XOR and nonce units needed an explicit primer and negative tests needed complete code."],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": ["https://cryptography.io/en/latest/hazmat/primitives/aead/"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "182b501d4b786e336bd0d7d1458060d678927369bdc2e068cfeb0b545ed0b8a7"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "S03",
+      "title": "Hashes MACs password storage and key derivation",
+      "status": "reviewed",
+      "findings": ["Hash/MAC/password distinctions were sound; the second exercise gave API names but no complete first-run reference."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": ["https://argon2-cffi.readthedocs.io/en/stable/howto.html"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "a583070c5be349f589e96f6f6fd930e2d9e7de152c8ddb2abc35d945ba80b331"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "S04",
+      "title": "Public keys key exchange signatures and certificates",
+      "status": "reviewed",
+      "findings": [
+        "Key roles were distinguished correctly; group exponent notation arrived without a concrete modular bridge and the answer key omitted direct role assignments."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "708d17fced2a4e6a16a92b7808dd7a23ac3c1ef1f5bf5a456e481a36956bb3e9"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "S05",
+      "title": "TLS HTTPS and secure network protocols",
+      "status": "reviewed",
+      "findings": ["TLS boundary and historical-version caveats were sound; handshake and traffic-key vocabulary needed a concrete first pass."],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "6e0cf99c244ff4c4acc0297e8a0cc6e46c2d56fde0c2005d5986d202fabcdb63"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "S06",
+      "title": "Authentication authorisation sessions and least privilege",
+      "status": "reviewed",
+      "findings": [
+        "Policy exercise and answers were aligned; ACL, capability and mandatory-integrity terminology needed a small explanatory bridge."
+      ],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "66e0811d2212d736701c994c978a5193cd47b702ecb3216012b6e3e9f7cb8cb7"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W01",
+      "title": "Browser developer tools and intercepting HTTP",
+      "status": "reviewed",
+      "findings": [
+        "The local B01 greeting page sends no API request, so it could not supply the requested HTTP host/path fixture. A deterministic paper alternative was needed."
+      ],
+      "changedFields": ["guide.bridge", "guide.exercise", "guide.solution", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "0810d3a88324e6d621e9e6818f828b2b1b5e0e7353df9497682f1be689d92c73"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W02",
+      "title": "SQL injection and parameterised queries",
+      "status": "reviewed",
+      "findings": ["Parameterised fixture was complete; sort challenge answer only sketched a map instead of showing the safe query construction."],
+      "changedFields": ["guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "dc421141cd380a20b5ea0b17e9c8a7ff48889f0b462d9e785d608870d507d114"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W03",
+      "title": "Reflected stored and DOM based cross site scripting",
+      "status": "reviewed",
+      "findings": ["Safe marker exercise was appropriate, but saving/restoring data and inspecting child count were unexplained prerequisite steps."],
+      "changedFields": ["guide.exercise", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "d14fe7bef7a748e5cf383432a78c43014da9570870dde50531c961bb27519e15"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W04",
+      "title": "Cross site request forgery and session boundaries",
+      "status": "reviewed",
+      "findings": [
+        "Paper cases, correct token checks and sending-versus-reading distinction were complete; defined automatically attached credentials more plainly."
+      ],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "ec3810c1f8823bed29fccd3e861c92a64d1dfe9f711f542d2dcf2e3c0dc11873"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W05",
+      "title": "Same origin policy CORS and cross origin access",
+      "status": "reviewed",
+      "findings": [
+        "Retained: exact-origin table has all inputs, header abbreviations are defined, all twelve decisions match credentials-mode rules, and sending/read/authorisation boundaries are explicit."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "2b6fce1ffbf29359705bbcdb02bb83bc463cdab19c80e7f21c1e443f68a1a6f2"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W06",
+      "title": "Path traversal and filesystem boundaries",
+      "status": "reviewed",
+      "findings": ["Containment exercise was sound; namespace, parent components, symlinks and opaque IDs needed plain first-use definitions."],
+      "changedFields": ["guide.teaching", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "143b644cce75b92ef11a5322b6ecf31cc859ddd7abe7d492c0be667855fe184f"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W07",
+      "title": "OS command injection and process invocation",
+      "status": "reviewed",
+      "findings": ["Direct file API example was complete; independent conversion-mode task lacked actual mode/argument inputs."],
+      "changedFields": ["guide.challenge", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "25de2c72f4ead0c96a722d8c781986f5dee198a9d03a026f262d3f074da093bb"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W08",
+      "title": "File upload validation storage and execution boundaries",
+      "status": "reviewed",
+      "findings": ["Upload lifecycle was clear; the answer key omitted explicit decisions and a stated empty-file policy."],
+      "changedFields": ["guide.solution", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "9fd3415200c1659f9ce8948f9d0816c801439dd29ac28a84f512bce2eac3769a"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W09",
+      "title": "XML parsers external entities and safe data handling",
+      "status": "reviewed",
+      "findings": ["XML primer was present; forward reference in readiness text and incomplete test harness created avoidable setup gaps."],
+      "changedFields": ["guide.bridge", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "1f8c2f9c573884814ae9c101390ef2a2be0588cfd5107c609f20c608edbee9ce"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W10",
+      "title": "Server side request forgery and outbound trust",
+      "status": "reviewed",
+      "findings": ["URL cases matched the policy; advanced egress/redirect vocabulary and open-ended challenge needed a concrete reference design."],
+      "changedFields": ["guide.teaching", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "6f4291dc2bb0a0dad81f0d42c1ac2a411a2cdf42a6860a55074bfb1a89b2e4d4"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W11",
+      "title": "API documentation object access and parameter validation",
+      "status": "reviewed",
+      "findings": ["Object/property distinction and fixture were sound; answer key should classify every case and show response/update projections."],
+      "changedFields": ["guide.solution", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "f26d2aa0aa0227ba89f910d1e78765b0e32f073705f2b3498e428dfca9a5069e"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W12",
+      "title": "Authentication failures enumeration and recovery",
+      "status": "reviewed",
+      "findings": ["Recovery trace was correct and explicitly synthetic; state-machine term and challenge transitions were not fully explained."],
+      "changedFields": ["guide.teaching", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "85ee0b4155917f8bbee607cb2a7a2984c6985ef71580f66d7cdca18c7ca2be88"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W13",
+      "title": "Access control business rules and ownership",
+      "status": "reviewed",
+      "findings": ["State-dependent permission example was clear; exercise needed explicit concurrent ordering and a concrete bulk-policy answer."],
+      "changedFields": ["guide.solution", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "8eec19a7097054b93934041116cd76d9de41de05c7d152a65e4715418a0011fc"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W14",
+      "title": "JWT formats signatures and token validation",
+      "status": "reviewed",
+      "findings": [
+        "Token acceptance cases were complete; issuer/audience/expiry and conjunction terms needed plain definitions before the policy table."
+      ],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "b0f71ab543199210aa6ae86397a56dc451c3c91a6ad28f4d95f832066ea06d58"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W15",
+      "title": "OAuth federation redirects and delegated access",
+      "status": "reviewed",
+      "findings": ["OAuth safeguards were correct; four roles and browser/back-channel distinction needed a concrete introduction."],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "e917c958bac6c36e3d3e7b63a0d1402f097394e8963bb7caa943528855f12c64"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W16",
+      "title": "Web race conditions and transactional invariants",
+      "status": "reviewed",
+      "findings": [
+        "Retained: voucher schedule supplies all inputs, contrasts serial/concurrent and crash outcomes, defines the invariant, and aligns retry challenge with principal-scoped idempotency."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "2caaed1de7a93d0dc18a836371ef6a4db847554709acd22621e0fec7e89ca0af"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W17",
+      "title": "HTTP parsing disagreements and request smuggling",
+      "status": "reviewed",
+      "findings": [
+        "Abstract framing example was accessible and non-deployable; needed explicit inclusive-range explanation and limits of a matching-boundary result."
+      ],
+      "changedFields": ["guide.explanation", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "e027c7be2793e82e41e6ea1dd9c88724f1ab864b91d0cae285da7685ed97674f"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "W18",
+      "title": "Application security integration assessment",
+      "status": "reviewed",
+      "findings": [
+        "Integration packet was sufficient for three findings but its reference answer omitted full evidence, limits and verification entries."
+      ],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "708e3fe931dd3d5208cf629750caa2a62f6444cc6184a69ac0e01c50f6e5ad83"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "F01",
+      "title": "Memory corruption and exploit reasoning",
+      "status": "reviewed",
+      "findings": ["Bounds arithmetic and exploitability limits were sound; compressed sizes and the terminating zero needed plain clarification."],
+      "changedFields": ["guide.teaching", "guide.explanation", "guide.solution", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "dda971aa59deecb0a4b361e6a28508712571863e4d664005ee0143b4201c63e9"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "F02",
+      "title": "Memory safety mitigations and their limits",
+      "status": "reviewed",
+      "findings": [
+        "Exercise said four controls despite listing five; answer key did not cover the memory-safe container or a concrete verification plan."
+      ],
+      "changedFields": ["guide.exercise", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "bb8f1d4a4ca34956da466cc554599980b7aff2d65d6a24f38580eace3fcc3c1f"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "F03",
+      "title": "Privilege separation capabilities and sandboxing",
+      "status": "reviewed",
+      "findings": [
+        "Sandbox concepts and broker example were sound; ambient authority and descriptors needed beginner definitions and the five denials needed a full key."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "dd065219de4079bd8f8cf8a04614706380660f8cccfd5167755b4e2a5cf7b565"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "F04",
+      "title": "Host hardening network controls and intrusion detection",
+      "status": "reviewed",
+      "findings": ["Hardening explanation was complete; requested desired-state/owner/rollback table lacked a fully worked reference."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "281b046fd6da279bd2f1926333ebcf35524d628afba16f1e7136015f46b1dad9"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "F05",
+      "title": "Secure development dependencies secrets and supply chains",
+      "status": "reviewed",
+      "findings": ["Supply-chain triage was sound; transitive dependency, SBOM and artifact/provenance terms needed concrete definitions."],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "3712f3cdf307c9c72bac0696409220c179de2cbfd39c0d05a7ec658263d0198e"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D01",
+      "title": "Windows administration PowerShell and endpoint evidence",
+      "status": "reviewed",
+      "findings": ["Synthetic PowerShell fixture was appropriate; syntax and solution commands were assumed rather than taught."],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "a5f53505b6632e29eb926d1a640151f8893f3f7320780609e7415773aebfe2cd"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D02",
+      "title": "Active Directory Kerberos NTLM and enterprise identity",
+      "status": "reviewed",
+      "findings": ["Identity flow and permission cases were complete; undefined KDC/realm and a misleading next-module pointer needed correction."],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "ad025e91d95f8b75ecd24844139a23b87b6768e4e871899ebe3e4e6100730b5b"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D03",
+      "title": "Cloud fundamentals shared responsibility IAM and keys",
+      "status": "reviewed",
+      "findings": [
+        "IAM decisions were determinate, but the responsibility exercise required an unspecified external service contract. Added a complete declared paper model."
+      ],
+      "changedFields": ["guide.exercise", "guide.solution", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "d075f1204f33bf4abec25d0b08414af999737486d3129a239c9fdc186f0bcb33"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D04",
+      "title": "Container security workload identity and deployment boundaries",
+      "status": "reviewed",
+      "findings": [
+        "Deployment fixture was strong; repeated VM material obscured runtime-specific controls and solution needed one-to-one consequence/repair links."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "c7888b8017d8f9094702321ea5b5e5e3561f7a3dadaa1f8d4e876c6867f47e6e"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D05",
+      "title": "Security logs time normalisation and SIEM queries",
+      "status": "reviewed",
+      "findings": [
+        "Timeline inputs were complete; CSV header instructions and Python reference solution did not align exactly with P04’s different fixture."
+      ],
+      "changedFields": ["guide.exercise", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "e96a742c33eeb668e7c134a4fae2ca82eb4e6140abad32f34a851630dc5f77e1"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D06",
+      "title": "Threat intelligence ATTACK and evidence mapping",
+      "status": "reviewed",
+      "findings": [
+        "Native exercise relied on an external handout for a meaningful mapping and repeated several definitions; supplied a complete cautious mapping alongside the weak-evidence case."
+      ],
+      "changedFields": ["guide.teaching", "guide.exercise", "guide.solution"],
+      "sourceReferences": [
+        "https://attack.mitre.org/techniques/T1016/",
+        "https://attack.mitre.org/tactics/enterprise/",
+        "https://attack.mitre.org/resources/updates/updates-october-2025/"
+      ],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "fff3651c0e5b215467ccae269a33f97323c6759cb87b6ff9e738e9e778da748e"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D07",
+      "title": "Detection engineering hunting and coverage",
+      "status": "reviewed",
+      "findings": [
+        "Synthetic metrics exercise was correct; TP/FP/FN/TN assumptions should be reactivated before the long optional Windows case-study detail."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "ed9e231455cb68dce6e7c397711877e49756bdc85d4b4cebb88045aaa53324bf"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D08",
+      "title": "Incident response containment recovery and communication",
+      "status": "reviewed",
+      "findings": [
+        "Incident stages were explained; recovery answer omitted the requested complete four-sentence stakeholder example and forward reference could be clearer."
+      ],
+      "changedFields": ["guide.bridge", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "d8a619c13458dfdb0644ca06a6b2f5db36a1ae5a1ea8472ab9d36920d6fb906c"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D09",
+      "title": "Disk network and endpoint forensics",
+      "status": "reviewed",
+      "findings": ["Forensic packet and integrity limits were sound; hashing/copying mechanics needed a complete beginner reference."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "7fff2f3090faeb945790482919d65c9a8650214cc57c8b40097bfc24d2b62980"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "D10",
+      "title": "Memory forensics reverse engineering and malware triage",
+      "status": "reviewed",
+      "findings": ["Triage snapshot was suitably safe; the answer needed separate evidence and alternatives for each process."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "38ede73643c270295391144b4da10ba80a4f39444856eb659ced6c01cbab1c1e"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "G01",
+      "title": "Risk economics governance and security priorities",
+      "status": "reviewed",
+      "findings": ["Risk calculations were correct and caveated; missing simplified sensitivity steps and register example."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "19c6c29e2740bc041d663c6fc7865b27627f92d5dbbd432146b02b91be9453f4"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "G02",
+      "title": "Human factors privacy rights and regulation",
+      "status": "reviewed",
+      "findings": [
+        "Privacy exercise was well scoped but official-regulator lookup and inventory needed an accessible worked reference without inventing retention duties."
+      ],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [
+        "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/"
+      ],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "2958ee1ba3331516611e0a74e843d0e40c8bcd50aacdc781333c3f6d7c796587"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A01",
+      "title": "Distributed failures protocol state and secure retries",
+      "status": "reviewed",
+      "findings": [
+        "Retry example and formal-state primer were complete; answer key needed separate failure states and explicit late-retry consequence."
+      ],
+      "changedFields": ["guide.solution", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "2f1c9849aac4d99aed0603227d4a1a791499cb9e456c9c8fd06b4f15092595b6"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A02",
+      "title": "Security definitions reductions and cryptographic proofs",
+      "status": "reviewed",
+      "findings": [
+        "Formal one-wayness and pad examples were complete and technically careful; oracle/advantage/simulator vocabulary needed explicit definitions."
+      ],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "67fad98349d5890b158128a3aec807c1c5070181942ebd2069423b64690bfd73"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A03",
+      "title": "Fuzzing static analysis symbolic execution and testing limits",
+      "status": "reviewed",
+      "findings": ["Parser repair was complete but rendered as collapsed prose; added code fencing and clarified symbolic-input/path constraints."],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "fdadc1bd814f9e07218adae5ae275ceae7b1ed98abb0895b2f901a88654ba9f6"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A04",
+      "title": "Hardware trust physical attacks and side channels",
+      "status": "reviewed",
+      "findings": ["Timing and cache examples were correct; exercise needed the actual mean calculations and an attemptable paper protocol."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "6c1de5db671793cf0bbd592b5f91340e702f6de5fa3e4395909589482bc053da"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A05",
+      "title": "Formal specification invariants and model checking",
+      "status": "reviewed",
+      "findings": [
+        "Small model and counterexample were complete; separate model/config text and explicit integer arithmetic improve reproducibility of the negative-stock variant."
+      ],
+      "changedFields": ["guide.example", "guide.teaching"],
+      "sourceReferences": [
+        "https://raw.githubusercontent.com/tlaplus/tlaplus/master/tlatools/org.lamport.tlatools/src/tla2sany/StandardModules/Integers.tla",
+        "https://raw.githubusercontent.com/tlaplus/tlaplus/master/tlatools/org.lamport.tlatools/src/tlc2/module/Naturals.java"
+      ],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "a45a8b410f3aea157e8fd8c1ca487fb69f3fccb8a0bf18c993ebf996e8f112e5"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A06",
+      "title": "Mobile security platform permissions and ecosystem trust",
+      "status": "reviewed",
+      "findings": [
+        "Survey boundaries were clear; foreground/background/exported-interface vocabulary and photo-feature answer needed concrete explanations."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": ["https://developer.android.com/training/data-storage/shared/photopicker"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "da31de925c20d299a849d1ef9b62c4dac1a132db22c86d897fcde97f61e12800"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "A07",
+      "title": "Cyber physical systems safety telecoms and resilience",
+      "status": "reviewed",
+      "findings": [
+        "Survey correctly avoided live control testing; worked answer needed concrete hazard/observation/response entries under stated assumptions."
+      ],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "2e864411737a85b11ab453e5c2d4bdf0c701b4fc762fbeec1abb865fcfc0b691"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "R01",
+      "title": "Reading security papers and evaluating claims",
+      "status": "reviewed",
+      "findings": [
+        "Paper-review scaffold was complete; reference solution omitted the requested calculations and a fully bounded independent-validation plan."
+      ],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "a6cf7673b7fdd565888e7822e98b08d61f92bc3635419a1c5a178d6f8bcc6cff"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "R02",
+      "title": "Reproducible experiments artifacts and responsible research",
+      "status": "reviewed",
+      "findings": ["Reproduction exercise had inputs but no complete script or manifest example."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "e0db0f44e465c18bebd4faad27c3716ce28d1a29bdfb880d78ee98acad843f9c"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "R03",
+      "title": "Integrated capstone and defended specialisation",
+      "status": "reviewed",
+      "findings": ["Capstone scope was appropriate; rubric scores lacked concrete anchors, preventing consistent self/peer assessment."],
+      "changedFields": ["guide.exercise", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "11d09309f67b71008088fe2b91b50398d0c601ca741c4e1496c2939b6b4eb768"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "I01",
+      "title": "AI and language-model systems: a security bridge",
+      "status": "reviewed",
+      "findings": [
+        "Teaching pipeline was useful but the concept/mechanism cards reused generic AI-security text rather than introducing this topic."
+      ],
+      "changedFields": ["core.concept", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "97840cd2c55b35cd97b0d0d86b505ab9b2ee8592191562443f9b944d2a71ef97"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "I02",
+      "title": "Direct and indirect prompt injection",
+      "status": "reviewed",
+      "findings": ["Prompt-injection fixture was complete; generic concept cards obscured the actual attack boundary."],
+      "changedFields": ["core.concept", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "6e74dbd1c9656d75e6968d1f6ffc6bce98f95a7cf63cbc1d78d29338401f0186"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "I03",
+      "title": "RAG, embeddings and tenant-safe retrieval",
+      "status": "reviewed",
+      "findings": ["Generic concept cards and an ownership-versus-revocation ambiguity weakened an otherwise complete retrieval exercise."],
+      "changedFields": ["guide.exercise", "guide.solution", "core.concept", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "6b9010d64b7f5107fb33f9e88dcb120142153dd12befdedd17f53befd6815eaf"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "I04",
+      "title": "Tools, agents and independent action authorisation",
+      "status": "reviewed",
+      "findings": [
+        "Generic overview cards did not explain agent authority; fixture answer was sound but approval checks benefit from a clear three-case key."
+      ],
+      "changedFields": ["guide.solution", "core.concept", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "747d5195991dfc4d75232c16aae5988e8b9e072a3831ff1a62f546a8355957b0"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "I05",
+      "title": "Model, data and AI software supply chains",
+      "status": "reviewed",
+      "findings": [
+        "Generic cards and an editorial video-replacement note distracted from component provenance; terms and rollback needed a topic-specific introduction."
+      ],
+      "changedFields": ["guide.teaching", "core.concept", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "231276bc5f92f626d6e410aebd8719beea3d0bb261e85421f34c02eb0b2cfd54"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "I06",
+      "title": "AI privacy, retention and sensitive-data boundaries",
+      "status": "reviewed",
+      "findings": ["Privacy teaching was accurate but generic cards and incomplete inventory answer hid the concrete minimisation decision."],
+      "changedFields": ["guide.solution", "core.concept", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "b247437c6fc9c9ccdc95c7cb806bc0af19a181f6c0120082b0cb2593dc954862"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "I07",
+      "title": "AI security assurance and resource limits",
+      "status": "reviewed",
+      "findings": ["Generic concept cards did not state assurance’s central evidence distinction; budget exercise lacked example numeric caps."],
+      "changedFields": ["guide.solution", "core.concept", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "4ab53f85e1ffc928e342dd0f85fd293d18a7d13a0fab466e1bba8e38855c425e"
+    },
+    {
+      "studio": "cyber-studio",
+      "topic": "I08",
+      "title": "AI incident response and security-case capstone",
+      "status": "reviewed",
+      "findings": ["Generic capstone cards and terse memo answer did not model a complete bounded incident write-up."],
+      "changedFields": ["guide.solution", "core.concept", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "41d4f082cf87074e7cef36fcb3333a8ec7bc64b79e867f5a300bbff13e1a8862"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V01",
+      "title": "What a voice system actually does",
+      "status": "reviewed",
+      "findings": [
+        "Retained: no prior knowledge assumed; concrete booking trace separates speech quality from authority; complete paper input/output/failure exercise and independent read-only variant."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "9754ab58b258bd59dcc895328ffd734e2f1c4d3cd438ffdbd8aca3f928d81c1f"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V02",
+      "title": "Python: values, functions and clear inputs",
+      "status": "reviewed",
+      "findings": [
+        "First Python exercise preceded terminal setup and assumed an editor/run workflow; supplied an explicit first-run route and complete reusable functions."
+      ],
+      "changedFields": ["guide.bridge", "guide.solution", "guide.challenge_solution", "curriculum.readings"],
+      "sourceReferences": ["https://docs.python.org/3/library/idle.html", "https://www.python.org/downloads/"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "9416cc9107751120cd9de9050971e8f253279f78db3ae161234ee96aa2f658d1"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V03",
+      "title": "Python: decisions, loops and collections",
+      "status": "reviewed",
+      "findings": ["Loop trace was sound; exercise and challenge solutions described algorithms without complete first-reference functions."],
+      "changedFields": ["guide.solution", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "fe93a20d35739eed4b5e2d4379531505bcbcaa7298561aaa9e985eb89ccb7126"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V04",
+      "title": "Files, modules, errors and offline tests",
+      "status": "reviewed",
+      "findings": ["Schema progression was good; file-reading and guarded validation answer needed runnable code rather than only a verbal outline."],
+      "changedFields": ["guide.solution", "guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "b9ac8664103fa60237b1eb85398e4766c52ec22b04f0288b21d0d20354e6a8e6"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V05",
+      "title": "Terminal, environments, Git and reproducibility",
+      "status": "reviewed",
+      "findings": ["Shell/Git conceptual distinction was clear, but first-open steps, local Git identity and environment commands were missing."],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "ec80b05ec7c653d1922bb210562404e1a09030e126bc818b9ea385ac9d9e17d6"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V06",
+      "title": "Maths bridge: algebra, units, powers and logs",
+      "status": "reviewed",
+      "findings": ["Unit bridge and worked derivation were complete; independent size answer needed the same rendered TeX treatment."],
+      "changedFields": ["guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "11234f4eeea57e934028e7ac629c0cc4deeea5dfedba929bfdc0c920e671de22"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V07",
+      "title": "Vectors, matrices and tensor shapes",
+      "status": "reviewed",
+      "findings": [
+        "Retained: dot products, norm/zero-vector caveat, axis meanings, full matrix example, independent linear-layer shape/parameter counts all follow the prerequisites and calculate correctly."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "23ddabb5ea87a547c4ffc72bee3ad776a70f09baa369dbcd22c8e11eea42ba03"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V08",
+      "title": "Derivatives, gradients and optimisation",
+      "status": "reviewed",
+      "findings": ["Calculus bridge and intermediate steps were complete; central update notation in overview should render consistently."],
+      "changedFields": ["core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "fa72efa663403cd9a006feb437483a64f84658b067d0eb0e78c86947ed5016e0"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V09",
+      "title": "Probability, statistics and uncertainty",
+      "status": "reviewed",
+      "findings": [
+        "Retained: conditional denominators, means/median/variance, sampling-unit limitations, complete table and both answer keys calculate correctly and introduce needed statistics."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "9f2867a293ba0cd10d16f3621cae0f4108db661af01cc9bd453b2cadbb45e3da"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V10",
+      "title": "Experimental design and data leakage",
+      "status": "reviewed",
+      "findings": [
+        "Retained: train/validation/test roles, preprocessing leakage, duplicate grouping and untouched-set limits are concrete; exercises use complete fictional records and require no execution."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "53f19afda934c220e4b00a750b309e33bc26e66ecbcf3b4fc20e84c29a934927"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V11",
+      "title": "Sound waves, frequency, amplitude and phase",
+      "status": "reviewed",
+      "findings": ["Wave bridge and exercises were complete; overview combined plain text and partial TeX in the same expression."],
+      "changedFields": ["core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "0121b95c5c46234ee25d61d98fada4305d02e7ddb59fab04656f35254296b084"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V12",
+      "title": "Sampling, quantisation, channels and codecs",
+      "status": "reviewed",
+      "findings": [
+        "Sampling and codec boundaries were clear; quantisation and little-endian representation were named without a first small decoding model."
+      ],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "8dcebe50c6f68666a50d50f897a75e6389020c054e290741018c174b767caad6"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V13",
+      "title": "Speech production, phonetics and the IPA",
+      "status": "reviewed",
+      "findings": [
+        "IPA examples and variation caveats were correct; place/manner/voicing labels needed physical definitions before the consonant comparison."
+      ],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "2f34633800ba19d35bfa420162ddbea6861037708d947de59eac501d65499908"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V14",
+      "title": "Source–filter models, pitch and formants",
+      "status": "reviewed",
+      "findings": [
+        "Retained: harmonic-grid worked example distinguishes source repetition from resonance; exercise inputs, limitations and rate-relabel challenge match prior sampling lessons. Convolution is introduced qualitatively and taught computationally in V16."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "08c08eab955199ef8c9ab015faccec780014529a461ac7da456568479e241792"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V15",
+      "title": "Fourier transforms, windows and spectrograms",
+      "status": "reviewed",
+      "findings": [
+        "Retained: complex-number/sine-cosine bridge, both complete four-point transforms, frame/bin/hop arithmetic and independent reporting critique are correct and locally supported."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "d5777478927e62dbc8146e1b95d3d8bd4681c64ba3d16bf1bdf4fe62277338f3"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V16",
+      "title": "Filters, convolution, mel features and MFCCs",
+      "status": "reviewed",
+      "findings": [
+        "Retained: causal/full boundary conventions, all sample outputs and tail, toy filter-bank/log/DCT frame and compatibility challenge are fully worked and correct under the stated convention."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "a0e4f8ff86ad375eeaa437970f64f8bbf001fbe04095284d131ca0b6f8ec567e"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V17",
+      "title": "Machine learning: regression and classification",
+      "status": "reviewed",
+      "findings": ["Worked MSE/classification explanations were complete; overview equation needed consistent TeX."],
+      "changedFields": ["core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "133148f6c0d98ad34dea287d867c79077873186b5d958e5a36c1d78956bde8cc"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V18",
+      "title": "Neural networks and backpropagation",
+      "status": "reviewed",
+      "findings": [
+        "Scalar and matrix backpropagation calculations were correct; overview mixed unformatted equations and optional real-vector notation needed a definition."
+      ],
+      "changedFields": ["guide.teaching", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "2ed90ab43cfb3bf48ddebfe29ce2922810df6127c8da7080fcb9898c8b67b723"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V19",
+      "title": "Sequences, attention and transformers",
+      "status": "reviewed",
+      "findings": [
+        "Retained: softmax/shape/mask primer and equal/unequal examples are complete and calculate correctly; recurrent-versus-transformer caveats and independent mask invariants are explicit."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "fef708931810340c7c6fb108b58f0d5ddb0a9f2992c7490eaf76d4882c95600c"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V20",
+      "title": "Speech datasets, annotation, consent and licensing",
+      "status": "reviewed",
+      "findings": ["Rights and sampling distinctions were clear; first manifest-writing task lacked a complete four-row reference."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "1dc9226623b72930a5153ea2ac26536f261a1bc7843d16f0fc781ad688a2529c"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V21",
+      "title": "Classical ASR: alignment, HMMs and decoding",
+      "status": "reviewed",
+      "findings": [
+        "Retained: path factors, two-state Viterbi update/backpointers and best-path-versus-sum assessment are complete and numerically correct; log/density/independence primers precede formal use."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "1a258a42d59f56287fa4eeda3e6a581b065415eec9195c1738fb7ed462c9c87a"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V22",
+      "title": "CTC: learning without frame labels",
+      "status": "reviewed",
+      "findings": [
+        "Retained: exact collapse order, repeated-label examples, two-frame enumeration, loss and forward recurrence agree; exercise/assessment answers are correct and require no model execution."
+      ],
+      "changedFields": [],
+      "sourceReferences": ["https://www.cs.toronto.edu/~graves/icml_2006.pdf"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "ea80a0e977b0b6f65d4a4d2005f4f87e7c19f8eb14238ef706deac776feccb12"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V23",
+      "title": "Encoder–decoder ASR and Whisper",
+      "status": "reviewed",
+      "findings": ["Architecture boundary was clear; review-table task needed complete example rows rather than just generic clarification advice."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "a7b4d98f1b0dfbbd485232dae318663da524fe7efbc7061d1c544a888a4aaa90"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V24",
+      "title": "Self-supervised and multilingual speech learning",
+      "status": "reviewed",
+      "findings": ["Self-supervised objective distinction was sound; bilingual manifest answer needed a fully specified fictional stage example."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "d962b1e589cd6f04a3473dc185a055eebac994c4e18ea1e05db749885d4b0c78"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V25",
+      "title": "ASR error analysis, fairness and uncertainty",
+      "status": "reviewed",
+      "findings": [
+        "Metric examples and critical-error limits were sound; overview formula needed TeX and exercise alignment needed visible word-by-word structure."
+      ],
+      "changedFields": ["guide.solution", "core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "ecbb593be0c11dbb667eebc00c0f69558d133485d764216055cb77ac946fe1f6"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V26",
+      "title": "Who spoke when? Diarisation and speaker identity",
+      "status": "reviewed",
+      "findings": [
+        "Diarisation calculation and overlap conventions were correct; stale explanation referred to unspecified scoring despite the example now specifying it."
+      ],
+      "changedFields": ["guide.explanation"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "07ffcab0cb826846ff09c2b7abad0439029812f316539d8d2d19ec641f475c90"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V27",
+      "title": "Noise, separation, echo and microphone arrays",
+      "status": "reviewed",
+      "findings": ["Signal-error example and double-talk exercise were complete; overview mixture equation needed consistent rendered notation."],
+      "changedFields": ["core.mechanism"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "974f89ebcfbf9029ca29196d2bb221e1d05be13509ceac4af3de19e0f2d4c017"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V28",
+      "title": "TTS front ends: text, pronunciation and prosody",
+      "status": "reviewed",
+      "findings": [
+        "Retained: explicit text-role examples, locale ambiguity, name correction and consequential-confirmation boundary are complete; answer keys match all supplied cases."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "90ca2e85781be192374fc94f5e19e1ff18f69b29d72136cd3ac7244c28686a6a"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V29",
+      "title": "Neural TTS: acoustic models and alignment",
+      "status": "reviewed",
+      "findings": ["Duration example was complete; answer key did not show the requested expanded four-token alignment or actual error variants."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "e3fc058b952275d994b0a82f3d93445d520908e05010c256f5cca969a1d79ae8"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V30",
+      "title": "Vocoders, neural codecs and audio tokens",
+      "status": "reviewed",
+      "findings": [
+        "Retained: vocoder/codec/quantiser distinctions, residual-quantisation toy example, nominal index-rate arithmetic, compression ratio and unknown-latency assessment are correct and sufficiently explained."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "fd145cab2894d63d61bb6cfb6c75abfda59d3d9d38d20683302b6d8b85198ea8"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V31",
+      "title": "Speech quality, listener studies and voice consent",
+      "status": "reviewed",
+      "findings": [
+        "Retained: scale/question and rating arithmetic are explicit; study task supplies sentence categories and paired-order answer, while fidelity, dependent ratings and voice rights remain separate."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "159d3456b4c7c552ea1da6a70b92a85c68f2d5ecab131fee34c92b996c113b81"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V32",
+      "title": "Meaning, dialogue state and conversation repair",
+      "status": "reviewed",
+      "findings": ["State diagram and scoped approval were sound; answer key needed an explicit trace of each assigned conversation."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "efaca6c290035dbac2a1a9aa577285a2a884a5ab50f15280daaa130ff7066241"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V33",
+      "title": "LLMs, retrieval and permissioned tools for voice",
+      "status": "reviewed",
+      "findings": ["Permission boundary was sound; tool-design exercise needed two complete concrete contracts."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "98ed9ef0cbc8a420995d0d7ec0b675127a41ff6689bba8ad39bfdf455ca03822"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V34",
+      "title": "Streaming, asynchronous events and cancellation",
+      "status": "reviewed",
+      "findings": [
+        "Asynchronous ownership and queue arithmetic were complete; a reference to V04 incorrectly implied it recommended broad catch-all handling."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "c5c4064f0fb556e7084e4a2c211002e1d2d69c775185cd40fdb7de59d5193b18"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V35",
+      "title": "WebRTC, WebSockets and telephony fundamentals",
+      "status": "reviewed",
+      "findings": ["Protocol primer and framing task were complete; NAT and playout deadlines needed explicit beginner definitions."],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "58b41b685c728be72e08d6d0ee234c5890bc051aa51b7153ad3a4b07f70ec96e"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V36",
+      "title": "VAD, endpointing, turn-taking and barge-in",
+      "status": "reviewed",
+      "findings": ["Pause trace was clear; five-fixture challenge answer needed actual distinct events and expected decisions."],
+      "changedFields": ["guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "018800e8c632ebfbef8a4c865061a3d02c29be014f3988e13f548e7012933267"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V37",
+      "title": "Latency budgets, buffers and traces",
+      "status": "reviewed",
+      "findings": ["Trace arithmetic was complete; critical-path vocabulary needed a small parallel-versus-sequential example."],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "89c8b374be19e45b8bbea4ab352fb6aff732243187a19bbb6a8afb03d05f9ba1"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V38",
+      "title": "Voice privacy, prompt injection and abuse resistance",
+      "status": "reviewed",
+      "findings": [
+        "Retained: assets and entry points connect to enforcement, privacy-minimisation and session controls; fictional abuse challenge distinguishes identity, permission and data scope without live testing."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "9bd3cfa60ef6e8a2a82d696b34f31a65cc1aa50c1c405db5edd19bb381872b9d"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V39",
+      "title": "Deployment, reliability, observability and cost",
+      "status": "reviewed",
+      "findings": [
+        "Fictional cost and reliability examples were correct; admission control and circuit-breaker terms needed plain operational definitions."
+      ],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "fc7bf01885af7cc4feb0663b0b286c92e568b39bbaae2c149f26ef999fae0137"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V40",
+      "title": "Accessible and multilingual voice products",
+      "status": "reviewed",
+      "findings": [
+        "Retained: equivalent complete task paths, modality switching, timing and locale examples are concrete; independent cancellation challenge aligns with scoped approval and commit/reversal semantics."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "e6a211334bac9bcee2572a5e2cd484065201f0b20450511274994dbe59523647"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V41",
+      "title": "Speech-to-speech and full-duplex systems",
+      "status": "reviewed",
+      "findings": [
+        "Retained: cascade versus direct-stream comparison defines architecture, timing boundaries and evidence limits; paper-reading exercise and future comparison remain explicitly unexecuted rather than fabricated performance."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "e8122c71c61217f943dad504d1810862ec3af73d4541e4df6e69ee013bc877cb"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V42",
+      "title": "Read research and design defensible studies",
+      "status": "reviewed",
+      "findings": ["Research-reading task had a rubric but no model brief; added a short primary-paper example with locateable evidence."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": ["https://www.cs.toronto.edu/~graves/icml_2006.pdf"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "0ae4a0df64426f4036305449322f202c279d0d4d7e5abe221f16e6baf08c984c"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V43",
+      "title": "Capstone: a deterministic voice-agent simulator",
+      "status": "reviewed",
+      "findings": [
+        "Downloadable contract supplies complete fixtures; native answer needed all seven final-state/count references and an explicit event trace."
+      ],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "28d4a05fd5b6ebd40162e8f4083fefdd0e9321b212a02bf09d5620b74b6ce6c4"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "topic": "V44",
+      "title": "Graduate study and an original research proposal",
+      "status": "reviewed",
+      "findings": ["Graduate boundaries were honest; further-study exercise needed an actual 12-week plan as a worked reference."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "8ad0b24edad34e8a9b3200347625c499a01931bc0ad9738a49f84fe39ebd4680"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C01",
+      "title": "Choose your role, goals and learning path",
+      "status": "reviewed",
+      "findings": [
+        "Role boundaries and fictional task were clear; occupational therapy acronym and everyday meaning needed explicit first-use definitions."
+      ],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": ["https://www.aota.org/about/what-is-ot"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "f81b057dbbefee8083939a56bb4187281a2f9854f2ed8c2043d90b2512860951"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C02",
+      "title": "Development in infancy and toddlerhood",
+      "status": "reviewed",
+      "findings": [
+        "Retained: domain interactions and multiple communication forms are explained; fictional observations distinguish interpretation, milestone guidance from diagnosis, and loss-of-skills/hearing concerns from course assessment."
+      ],
+      "changedFields": [],
+      "sourceReferences": ["https://www.asha.org/public/developmental-milestones/"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "6d76805a2a44c46fe1d64101b897ba9717e43e78288db06298a31035d5c43756"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C03",
+      "title": "Preschool development, play and participation",
+      "status": "reviewed",
+      "findings": ["Participation-focused case was sound; sensory and task-demand vocabulary should be plain before later specialist topics."],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "54666d1f1593eab1e7568d797a610d573fe0f9826d079e85d22a1b597e0fc36b"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C04",
+      "title": "School-age development and learning",
+      "status": "reviewed",
+      "findings": [
+        "Retained: knowledge versus response access, decoding/comprehension/output distinctions, pupil perspective and professional-referral limits are explicit; meeting exercise and observation rewrite are complete and aligned."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "6751b4f64007b4e35c36c06d7fd4b3196217b2e575a320d6ce2c64ca8af15293"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C05",
+      "title": "Adolescence, identity and growing autonomy",
+      "status": "reviewed",
+      "findings": [
+        "Retained: supported autonomy, privacy limits and local transition questions are clear; fictional planning task includes adolescent preference and avoids inferring capacity from age or diagnosis."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "b8286da6bc60b60e3d500fc2df226004b018cafae2ed7d036b4cfa6471fa4dd5"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C06",
+      "title": "Observation, hearing, concerns and referral",
+      "status": "reviewed",
+      "findings": ["Observation/referral distinction was sound; answer key needed the five actual neutral appointment questions."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": ["https://www.cdc.gov/act-early/families/concerned.html", "https://www.asha.org/public/developmental-milestones/"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "404b412b20d23d2f37a4ee53e924f50ca2729e6240aa47e033b26edae2e4b787"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C07",
+      "title": "Assent, privacy, safeguarding and respectful care",
+      "status": "reviewed",
+      "findings": [
+        "Retained: assent/consent/privacy distinctions, refusal handling and non-investigative local safeguarding route are explicit; both exercises remain fictional and do not require child data."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "d000cfb90d7421e27a81fd7ca71fa222a8f862edff06f54e25f74df9523d815b"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C08",
+      "title": "How communication and language work",
+      "status": "reviewed",
+      "findings": ["Language components and access case were complete; AAC acronym appeared before its expansion."],
+      "changedFields": ["guide.solution", "core.concept"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "f42bf8f45b56669fc7c9f3603efc456f1a1333e112cb4634d0755ac11dadbd4f"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C09",
+      "title": "Movement, sensory differences and everyday participation",
+      "status": "reviewed",
+      "findings": [
+        "Retained: task-demand decomposition, sensory-versus-health alternatives and dressing example are concrete; low-risk planning and specialist-intervention boundaries are explicit."
+      ],
+      "changedFields": [],
+      "sourceReferences": ["https://www.aota.org/about/what-is-ot"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "e487e6cee5f9ef4f550dcbaa7353cfb218c6711e37628341fdbcbfce9d5565af"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C10",
+      "title": "Behavior, emotions, stress and context",
+      "status": "reviewed",
+      "findings": [
+        "Context and non-causal observation distinctions were clear; ABC expansion and the ordinary meaning of consequence needed explicit definitions."
+      ],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "2d302edf875b5ac177fc2c0d44039b9f843d7a1b6923b2a1adb5ecfac9285a2f"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C11",
+      "title": "Inclusion, neurodiversity, culture and disability",
+      "status": "reviewed",
+      "findings": [
+        "Retained: inclusion does not deny health/support needs; goals, home-language context and individual preference are separated from assumptions based on a diagnostic label."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "00f43d9ad59e3a613f3bf5c537dfa006c4c69c94fe2d768513022be1f0e8efd2"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "C12",
+      "title": "Health, sleep, feeding and when to seek help",
+      "status": "reviewed",
+      "findings": [
+        "Health and feeding boundaries were appropriate; supplied concern needed an actual complete appointment-summary answer rather than only an appraisal rubric."
+      ],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [
+        "https://helpingyoucommunicate.org/article/feeding-and-swallowing-disorders-in-children",
+        "https://www.nice.org.uk/guidance/cg170/chapter/recommendations"
+      ],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "5c67f98f5a213b914d6ed36bbee8b0966a1a6a6ffb4430436291bcff7c298412"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G01",
+      "title": "Responsive interaction, play and shared reading",
+      "status": "reviewed",
+      "findings": ["Responsive-interaction explanation was detailed; exercise key needed actual dialogue for gesture, comment and refusal."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "d7ef2a6dfaea3ddf40b7c97afdba23b915d5b739453bca08b40642057310acd6"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G02",
+      "title": "Support speech sounds and stammering respectfully",
+      "status": "reviewed",
+      "findings": [
+        "Everyday support was appropriately distinguished from targeted therapy; response-rewrite task needed concrete respectful alternatives."
+      ],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": ["https://www.asha.org/public/speech/disorders/stuttering/"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "39afbbb27d7d640707e469ca1979fa26ef21d874271a260fda3442246ed2a909"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G03",
+      "title": "Support communication with AAC",
+      "status": "reviewed",
+      "findings": [
+        "Retained: modes, no assumed readiness barrier, independent agency, availability and backups are explained with a complete club checklist task; no device prescription or child trial required."
+      ],
+      "changedFields": [],
+      "sourceReferences": ["https://helpingyoucommunicate.org/article/augmentative-and-alternative-communication-aac"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "57de1d6b563ba80f0cfb1631092bd6459955092eda2abaf1bd8d20d3cf942456"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G04",
+      "title": "Multilingual homes and cultural responsiveness",
+      "status": "reviewed",
+      "findings": [
+        "Retained: home-language use, contextual strengths, translation/norm validity and interpreter role are concrete; history sheet and independent score critique are aligned with professional boundaries."
+      ],
+      "changedFields": [],
+      "sourceReferences": ["https://www.asha.org/public/speech/development/learning-more-than-one-language/"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "7aac36dc10231c8497b8f21efa4b0b91b794c34fb072752829de41b1adf2fe42"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G05",
+      "title": "Everyday routines and independence",
+      "status": "reviewed",
+      "findings": [
+        "Retained: six-step routine separates memory, access and painful fastening; exercise includes preference, unknowns and an ordinary organisational option without prescribing treatment."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "650a7126f45bd3d6cd1cc7581abf07b7d2fc33450a9a0b63f87d86d5a9bbc44a"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G06",
+      "title": "Understand sensory needs and adapt environments",
+      "status": "reviewed",
+      "findings": [
+        "Retained: sensory-context map preserves health/feeding alternatives and user priorities; product appraisal asks for individual evidence, risks and stop criteria rather than recommending equipment."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "526f2191f31fe07a8b0f6d2fda225b68def0031f0df5e47ef6035d8ebdcb39d6"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G07",
+      "title": "Co-regulation and positive behavioral support",
+      "status": "reviewed",
+      "findings": [
+        "Retained: supportive relationship, real choice, communication availability and adult feasibility are defined; fictional plan critique and four-outcome review sheet are complete and role-appropriate."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "dccfda6ff9bce282c81378492b9ea4e02a1c8cbc0d0f39c5e19ec088d155eb1c"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G08",
+      "title": "School communication, literacy and friendships",
+      "status": "reviewed",
+      "findings": ["School meeting structure was clear; a filled agenda would better model the requested responsible people and follow-up."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "629b8dc3fe6e9173d42d9569e8be19d1411e1648333bbf621b6c0d10e980b5cc"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G09",
+      "title": "Support adolescent autonomy and daily planning",
+      "status": "reviewed",
+      "findings": [
+        "Retained: executive demands are contextual, teen preference and privacy guide the planning page, and independent age-based withdrawal critique follows the autonomy prerequisites."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "b2ccbb4ecbe2c5adc0d9c73298b811d337f152bdf1bd08ce9b5cabc8b8953f37"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G10",
+      "title": "Mental health, loss and caregiver well-being",
+      "status": "reviewed",
+      "findings": [
+        "Retained: accessible listening, professional assessment and immediate real-world safety escalation are distinguished; role-play and crisis-priority question require no child disclosure, risk score or treatment trial."
+      ],
+      "changedFields": [],
+      "sourceReferences": ["https://www.nimh.nih.gov/health/publications/children-and-mental-health"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "ace6aff895ef5c476a233e3216b7893d3231cb2fbe355d73a987c07545b8996c"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G11",
+      "title": "Work with schools and a multidisciplinary team",
+      "status": "reviewed",
+      "findings": [
+        "Coordination principles were complete; provided a concrete clarification request for conflicting activities rather than only review criteria."
+      ],
+      "changedFields": ["guide.challenge_solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "86afeb55110f7cda79025006441927b4fcc69c9e6632664ff5386027345e4f41"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "G12",
+      "title": "Caregiver capstone: a fictional support portfolio",
+      "status": "reviewed",
+      "findings": [
+        "Portfolio handout supplies all cases; native solution needed a filled eight-section example and age/scope-aware resource choices."
+      ],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [
+        "https://helpingyoucommunicate.org/article/augmentative-and-alternative-communication-aac",
+        "https://www.aota.org/about/what-is-ot",
+        "https://www.asha.org/njc/communication-bill-of-rights/"
+      ],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "c925bc738701f470077d050647910383b6988e7d6495e64cbf5e6fc0e4654ab6"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P01",
+      "title": "Anatomy, physiology and neurodevelopment bridge",
+      "status": "reviewed",
+      "findings": ["Scientific bridge correctly requires further anatomy study; first-use structure/process labels needed plain definitions."],
+      "changedFields": ["guide.teaching"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "414a779ab31c2c9694735e2afbc65e4b3bf619144b5d5ab5e92670631d5c0ed5"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P02",
+      "title": "Research methods, statistics and evidence quality",
+      "status": "reviewed",
+      "findings": ["Evidence/statistics bridge was complete; focused-question exercise needed actual questions and independently shown means."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "b4f973d7560bca3aaca6aa670241e00b38a8c28efc604f87cb696b5f71cc1bb4"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P03",
+      "title": "Assessment principles, measurement and cultural validity",
+      "status": "reviewed",
+      "findings": [
+        "Retained: reliability/use-validity distinctions, access/norm modification limits and all TP/FN/FP/TN denominators are explicit and correct; native arithmetic is not a clinical screen."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "5b28a98cc61f89493cc48148823323bd2c912e622ae7b23de6cd62cf94567ae9"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P04",
+      "title": "Speech-language assessment and differential reasoning",
+      "status": "reviewed",
+      "findings": ["Differential framework was clear; answer key should supply a complete four-factor evidence/method example."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "cb43ec5816ad2fc1cb2d5e2a4584196688c4dae2b2054b0e5e375c4dd84c6a8f"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P05",
+      "title": "Language, literacy and communication intervention planning",
+      "status": "reviewed",
+      "findings": [
+        "Goal-to-measure reasoning was detailed; planning-matrix answer lacked a filled row and operational meaning of the measured construct."
+      ],
+      "changedFields": ["guide.teaching", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "f36287c07959349413277f36890aa0d60c0e0cb045a5aabded921cc9d61b1bc1"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P06",
+      "title": "Speech sound, motor speech, fluency and swallowing boundaries",
+      "status": "reviewed",
+      "findings": ["Differentiation glossary was useful; five-domain table answer needed concrete domain-specific questions and role boundaries."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [
+        "https://helpingyoucommunicate.org/article/feeding-and-swallowing-disorders-in-children",
+        "https://helpingyoucommunicate.org/article/stuttering-and-cluttering"
+      ],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "b7331b60aa4af7b0e6a6ca1c302a8158209ce878ac1e08c87326616c391f7adb"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P07",
+      "title": "AAC assessment, access and communication partnerships",
+      "status": "reviewed",
+      "findings": ["Feature-matching task requested comparison of two systems without supplying their features."],
+      "changedFields": ["guide.exercise", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "d48960053e69bcd0e3bf1a1381cf5cb3bcd6baac8cbd9254b3a0e95a1773d999"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P08",
+      "title": "OT occupational profiles and activity analysis",
+      "status": "reviewed",
+      "findings": ["Occupational-profile lenses were clear; reference answer needed a concrete profile and demand/referral split."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "d63ac5cdd6e5d945c1f9710ad2339c870000782cc1c5ee949e83cf84951cb408"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P09",
+      "title": "Motor skills, coordination and accessible participation",
+      "status": "reviewed",
+      "findings": ["Learning-stage distinctions were sound; requested level-specific observations needed actual worked examples."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "75892edc1bfd17e956c4903ccc6746579b3289299a539ccd708d60a75d1243b8"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P10",
+      "title": "Sensory evidence and occupation-centred reasoning",
+      "status": "reviewed",
+      "findings": [
+        "Retained: method-specific evidence transfer is clearly separated from a sensory label; accommodation/protocol contrast and appraisal checklist include population, delivery, outcomes, safety and training."
+      ],
+      "changedFields": [],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "651985d366a44e764d60c8d3bc17858164c1169bf67c3e336b0403ff7ff74e3f"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P11",
+      "title": "Behavioral principles and functional assessment",
+      "status": "reviewed",
+      "findings": [
+        "ABC exercise asked for facts absent from its vague observation set; supplied explicit six-row before/action/after fixture with remaining uncertainty."
+      ],
+      "changedFields": ["guide.example", "guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "bc570ebb400584bdfbcef163b8f668b9eb5c42be75ef32c7d403968c2b2b73d2"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P12",
+      "title": "Support plans, single-case designs and meaningful outcomes",
+      "status": "reviewed",
+      "findings": ["Single-case cautions were complete; plotting exercise and interpretation needed explicit axes/phase/measurement reference."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "c364d0ece4dc5e74e755a82ab8c3386505cd924db00438d200db410c4f62a0d6"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P13",
+      "title": "Mental health, trauma awareness and referral networks",
+      "status": "reviewed",
+      "findings": [
+        "Referral-network boundaries were correct; a filled role/function map makes the exercise attemptable without guessing local services."
+      ],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": ["https://www.nimh.nih.gov/health/publications/children-and-mental-health"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "964b34015ba231fcba0301500bda80abbd86a6587d853421109c9b6cd2c60e80"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P14",
+      "title": "Documentation, supervision and professional accountability",
+      "status": "reviewed",
+      "findings": ["Documentation principles were strong; original exercise gives no factual observations, so a rewrite must not fabricate them."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "416254b461271a7815716d3eb3590f48ee98d3607d993cab6effa819f8771a28"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P15",
+      "title": "Assistive technology, AI and child-data ethics",
+      "status": "reviewed",
+      "findings": ["Technology appraisal was balanced; comparison needed concrete named assumptions and a full data/exit example."],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": [],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "3b4a4ee0ae776e6add302dceb8dc1192ac747c77ef93dd9201aaa3020d385b6e"
+    },
+    {
+      "studio": "child-development-studio",
+      "topic": "P16",
+      "title": "Professional capstone and graduate research proposal",
+      "status": "reviewed",
+      "findings": [
+        "Capstone handout was complete; model answer needed an example evidence-applicability row and a precise boundary between supplied facts and future findings."
+      ],
+      "changedFields": ["guide.solution"],
+      "sourceReferences": ["https://www.aota.org/about/what-is-ot"],
+      "scope": "Complete native explanation, example, exercise, solutions and immediate prerequisite links read; editorial review, not a learner trial.",
+      "authoredHash": "52f858888bce0646ff7e814f42794835d5f85b88debd2f3012628b4f24d4ca79"
+    }
+  ],
+  "counts": {
+    "reviewed": 177,
+    "pending": 0
+  },
+  "baselineCommit": "4f61f6bb8c24efbabf12dada51f6f35790ff4fd0",
+  "release": "20261031-2",
+  "limitations": [
+    "Editorial review of the original native lessons, not a beginner learner trial, accreditation or guarantee of mastery.",
+    "Assigned external source-video scopes and historical audit manifests are preserved; unassigned third-party speech and every textbook claim were not re-audited.",
+    "No clinical assessment, child-data collection, provider inference, replay, model scoring or new live evaluation was run."
+  ],
+  "validation": {
+    "authoredHashes": "Recomputed from canonical native source after the final editorial polish.",
+    "pythonFencesParsed": 16,
+    "method": "Python AST parsing only; example imports are not executed by this syntax check.",
+    "offlineUnitTests": 49,
+    "localEquationRender": {
+      "topics": 177,
+      "equations": 406,
+      "errors": 0
+    },
+    "csvRoundTrip": "Inspected P04 standard-library solution passed in a disposable directory.",
+    "baselineRegression": "M04 assertion fails on published baseline for the expected precision-answer mismatch.",
+    "sourceIdentity": "All videos, original readings, topic IDs and prerequisite graphs match published baseline; four new Python setup reading assignments use new keys."
+  }
+}

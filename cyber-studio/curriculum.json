@@ -414,9 +414,21 @@
           "url": "https://cs50.harvard.edu/python/notes/0/",
           "progressKey": "reading:0",
           "assignment": "Read the corresponding sections for Running Python, functions, variables and returned values; Formatted strings and string methods; Numbers, arithmetic and numeric conversion; Division, defining functions, scope and return. Unassigned demonstrations and the rest of the course are optional."
+        },
+        {
+          "progressKey": "reading:400",
+          "label": "Python — IDLE editor: Shell, New File and Run Module",
+          "url": "https://docs.python.org/3/library/idle.html",
+          "assignment": "Use the overview, Shell/Editor distinction, File → New File and Run → Run Module instructions to run lesson.py. Other IDLE features are optional; no terminal or third-party package is required."
+        },
+        {
+          "progressKey": "reading:401",
+          "label": "Python.org — supported Python 3 downloads",
+          "url": "https://www.python.org/downloads/",
+          "assignment": "Use the official download and operating-system installation instructions if Python 3 is not already available. Choose a supported stable Python 3 release; the lesson does not require a preview version."
         }
       ],
-      "practice": "Create lesson.py exactly as shown and run it. Add calls for (50,0.1), (80,0) and (0,0.2). Predict all outputs on paper first. Then explain what happens if you write print(add_tax) instead of print(add_tax(50,0.1)).",
+      "practice": "In IDLE or your configured Python 3 editor, save and run lesson.py exactly as shown. Before running, predict the displayed result. Then add three separate lines: print(add_tax(50, 0.1)), print(add_tax(80, 0)), and print(add_tax(0, 0.2)). Predict and check them. Write the values of price, rate, tax and total for the first extra call. Finally run print(add_tax) and explain why displaying a function is different from calling it. Record the filename and how you ran it; a terminal command is not required.",
       "assessment": "Without copying the function body, write apply_discount(price, fraction) that returns price minus price×fraction. Test (200,0.25), (75,0), (40,1). Explain one input restriction a real application should enforce.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The lecture page links Problem Set 0 and setup guidance. A hosted coding account may be required for official grading; local practice remains possible.",
@@ -657,7 +669,7 @@
           "assignment": "Read the corresponding sections for Exceptions, try/except and valid input. Unassigned demonstrations and the rest of the course are optional."
         }
       ],
-      "practice": "Use the exact three records above. Add {\"name\":\"d\",\"count\":\"0\"} and {\"name\":\"e\",\"count\":\"-1\"}. Change validation to reject negative counts with a recorded reason. Report accepted sum and rejected indices.",
+      "practice": "Use the exact three supplied records, then add {\"name\":\"d\",\"count\":\"0\"} and {\"name\":\"e\",\"count\":\"-1\"}. Before running, mark which counts should be accepted when the rule is “a non-negative integer”. Keep the original list unchanged. First record a reason for missing count or invalid integer text. After successful conversion, use if count < 0 to reject a negative value. For each rejection save a pair (index, reason); for each acceptance append the count. Report the accepted list, sum and rejection pairs.",
       "assessment": "For records [{\"count\":\"3\"},{\"count\":\"3\"},{\"count\":\"x\"}], return both the total and a frequency dictionary of accepted counts. Explain why repeated keys in a dictionary cannot represent two independent records by themselves.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -813,7 +825,7 @@
           "assignment": "Read the named article or specified sections: Python datetime documentation — aware and naive objects. Focus on imports standard library, file I O and paths, CSV JSON serialization and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Create the supplied CSV and run the conversion. Add a third row 2026-01-01T08:45:00+00:00,4. Sort parsed events by UTC time, write events.json with UTF-8 and reload it. Report ordered counts and total.",
+      "practice": "Create events.csv as a plain UTF-8 file in a fresh practice folder with exactly this header and three rows (the fence markers are not file content):\n\n```csv\ntime,count\n2026-01-01T10:00:00+01:00,2\n2026-01-01T09:30:00+00:00,3\n2026-01-01T08:45:00+00:00,4\n```\n\nSave it beside convert_events.py. First run the supplied conversion. Then define event_time(row) to return datetime.fromisoformat(row[\"time\"]) and pass it to rows.sort(key=event_time). Write rows with json.dump to events.json, reopen with json.load, and use an ordinary loop to collect counts and add them. Predict the order before running. Record the three UTC times, ordered counts, total and reloaded structure.",
       "assessment": "Process two supplied timestamps: 2026-02-01T12:00:00+02:00 and 2026-02-01T09:30:00+00:00. Which comes first? Explain how you would handle a third value 2026-02-01T10:00:00 with no timezone.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "JSON is a data format, not executable code. The exercises use synthetic records created by the learner.",
@@ -964,7 +976,7 @@
           "assignment": "Read the corresponding sections for re patterns, anchors, character classes and flags; Capturing groups; Extraction and substitution. Unassigned demonstrations and the rest of the course are optional."
         }
       ],
-      "practice": "Run the supplied tests. Temporarily replace fullmatch with search in your disposable file and record the failing case. Restore the implementation and add cases for uppercase input, a space and an empty string.",
+      "practice": "Save the example as ids_test.py and run it as a module in IDLE, or with the Python command for your environment. It should report OK. In this disposable copy only, replace fullmatch with search and run again: which expected rejection now passes the validator? Restore fullmatch. Add \"ABC\", \"a b\", \"\" and \"abc\\n\" to the list that should be rejected; the last contains a newline escape. Predict all four results first. Check that each test’s expected answer comes from the stated identifier rule, not from copying the function’s current result.",
       "assessment": "Define valid_port(text) accepting only decimal text whose numeric value is 1 through 65535, with no spaces or sign. Supply tests for \"0\",\"1\",\"65535\",\"65536\",\"-1\",\" 80\" and \"x\".",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -1036,7 +1048,7 @@
           "assignment": "Read the named article or specified sections: Linux Luminarium — Hello Hackers Pondering Paths and Comprehending Commands. Focus on shell commands paths, manual pages, file operations and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Run the commands inside a fresh learning directory. Enter copies, print pwd, display ../\"first note.txt\", then return to its parent with cd .. (two dots). Explain what the parent component means and how the working directory changes.",
+      "practice": "In your fresh learning folder, run the example one command per line. Predict which command creates a directory, which writes a file and which makes an independent copy. Then run cd copies, pwd, and cat ../\"first note.txt\". Finally run cd .. and pwd again. Write the two different directory paths and both displayed file contents. If cd fails, use pwd and ls to check where you are; do not add administrator privileges to fix a path mistake.",
       "assessment": "Without the example, create a folder named second lab containing a text file and a copies subfolder. Copy the file, access it using a relative path from copies, and explain which command changes future relative-path resolution.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -1186,7 +1198,7 @@
           "assignment": "Read the named article or specified sections: Linux Luminarium — Practicing Piping Shell Variables Processes and Jobs Untangling Users Perceiving Permissions. Focus on users groups permissions, processes environment PATH, pipes redirection and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Run the script with the exact three event lines. Add a line okay and confirm ^ok$ does not count it. Explain the difference between NAME=value and export NAME=value, then inspect a harmless exported variable in a child shell.",
+      "practice": "Save and run the example as count.sh with sh count.sh from your practice folder. It reports 2. To add okay, change the script’s printf format to 'ok\\nfail\\nok\\nokay\\n' and rerun it. Do not only edit events.txt: this script deliberately replaces that fixture on every run. Predict whether the count changes. Next, in the terminal run DEMO_LABEL=practice, then sh -c 'printf \"value=%s\\n\" \"$DEMO_LABEL\"'. Export DEMO_LABEL and repeat the same child-shell command. Use only this harmless value.",
       "assessment": "A practice directory has mode 700 and a contained file mode 644. Explain whether an unrelated unprivileged user can reach the file through that directory. Propose an owner-only mode for a new private file and describe a verification step.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -1393,7 +1405,7 @@
         }
       ],
       "practice": "Perform the shown local history. Stage the second version, inspect the staged diff and commit it. Use git log --oneline and git show to find the two versions. Record each commit's purpose in a separate nonsecret lab log.",
-      "assessment": "In the disposable repo, create two branches from the same commit and make different edits to the same line. Merge them, resolve the conflict to a deliberate final sentence and record both parent commits. Explain how you verified the final content.",
+      "assessment": "In the disposable repository, first run git status and finish or save any uncommitted practice edits. Create a branch with git switch -c left, replace the note’s single line with left, then add and commit note.txt. Create another branch from the previous commit with git switch -c right HEAD~1, replace that same line with right, then add and commit it. While on right, run git merge left. Inspect the conflict, choose a deliberate final sentence, remove the marker lines, stage note.txt and commit. Explain why Git could not choose the sentence for you. This exercise stays local.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [],
@@ -1541,7 +1553,7 @@
         }
       ],
       "practice": "Build the truth table for NOT(P AND Q) and compare it with (NOT P) OR (NOT Q). Then add a maintenance transition to the door that requires admin=true. State a corrected authorisation invariant covering both routes.",
-      "assessment": "An account starts balance=0. Deposit adds a nonnegative integer; withdraw subtracts an integer only when 0<=amount<=balance. Prove balance>=0 is invariant, then identify a guard removal that invalidates the proof.",
+      "assessment": "A stock counter starts at 0 and must remain between 0 and 3 inclusive. A receive action adds an integer amount only when 0 <= amount <= 3-stock. A take action subtracts an integer amount only when 0 <= amount <= stock. Without copying the balance proof, explain why both bounds remain true after every action. Then remove the receive upper-bound check and give a sequence that breaks the invariant.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The 2010 MIT notes omit their state-machine chapter. Learn TLA supplies that bridge; do not assign the missing chapter.",
       "practice_links": [],
@@ -2259,7 +2271,7 @@
           "assignment": "Read the corresponding sections for Types, arrays, strings and their lengths. Unassigned demonstrations and the rest of the course are optional."
         }
       ],
-      "practice": "Run with src=\"cat\", then src=\"cats\", then src=\"\". Predict output and exit status before each run. Draw all occupied indices for each accepted input.",
+      "practice": "Save the example as strings.c. Compile with cc -std=c11 -Wall -Wextra strings.c -o strings, then run ./strings. On the next terminal line, run printf 'status=%s\\n' \"$?\" to display that run’s exit status; run no other command between them. Repeat after changing src to \"cats\", then to \"\", recompiling each time. Predict the displayed text and status first. Draw the occupied indices for accepted inputs, including the terminator. The rejected case prints no text; the status is how it reports refusal.",
       "assessment": "A destination has capacity 6 bytes. Decide whether ASCII inputs \"hello\", \"planet\" and \"\" fit as terminated strings. Explain why a five-character Unicode string may still fail this byte-capacity check.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -2593,7 +2605,7 @@
           "assignment": "Read the named article or specified sections: pwn.college Computing 101 — Your First Program Computer Memory The Stack Software Introspection and Debugging Refresher. Focus on x86 registers instructions calling conventions, stack frames ELF executables, GDB inspection and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Compile the function to assembly and annotate where its two inputs and result appear for your platform. Change + to - and compare the resulting arithmetic operation. Keep both source and assembly files.",
+      "practice": "First annotate the supplied illustrative three-step x86 trace or two-step AArch64 trace on paper: inputs, arithmetic result and control return. Then save add.c and run cc -S -O0 add.c -o add.s in your configured compiler environment. -S emits assembly text; it does not run the function. Record your CPU/compiler and find the arithmetic operation. Change + to -, save as subtract.c and generate a second .s file. Compare the operation with the predicted 3-4=-1. If argument locations differ from the illustrations, use the assigned platform material and record the difference rather than forcing a match. A zero-argument executable is not needed to inspect these function bodies.",
       "assessment": "Explain the difference among an instruction-set register, a source variable, a return address and a return value. Predict add(8,-2) and state why compiler optimisation may change the instruction listing without changing that defined result.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Use the Linux x86 training environment supplied by pwn.college when your own machine has a different CPU. Hardware emulation and installation are not assumed.",
@@ -2677,7 +2689,7 @@
           "assignment": "Read the complete named chapter/paper: File System Implementation. Follow its definitions and worked examples, then state which assumptions apply to the native exercise."
         }
       ],
-      "practice": "Create a harmless private file inside a practice directory. Record its owner and mode, the directory mode, and the process identity used to read it. Draw the request path through the kernel and state which observations are evidence versus assumptions.",
+      "practice": "Use a fresh os-lab directory under your learning folder. Run each line below individually and inspect failures before continuing. If os-lab already exists, choose a different unused practice name throughout.\n\n```sh\nmkdir os-lab\nchmod 700 os-lab\nprintf 'fictional practice note\\n' > os-lab/note.txt\nchmod 600 os-lab/note.txt\nid\nls -ld os-lab\nls -l os-lab/note.txt\ncat os-lab/note.txt\n```\n\nRecord what id reports about your current identity, what the directory and file mode listings show, and the text read back. Draw program → open request → kernel checks → open descriptor → read. Label the command outputs as observations; the internal request path is an explanation based on the OS model, not something those commands directly traced. Do not infer that a privileged administrator could not read the note.",
       "assessment": "Two processes each print an identical virtual pointer value. Is that sufficient to prove shared memory? Explain what mapping evidence would be required. Separately explain why a library call and a system call are different concepts.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -2814,7 +2826,7 @@
         }
       ],
       "practice": "Draw an interleaving that correctly ends at 2 without a lock and the failing schedule above. Then draw both possible serial lock-protected orders. Explain why seeing2 in a test does not establish race freedom.",
-      "assessment": "A task acquires lock X then Y; another acquires Y then X. Show a deadlock schedule and repair the acquisition policy. State which invariant the policy protects and one limitation of holding locks across slow I/O.",
+      "assessment": "Task A acquires lock X then Y; task B acquires Y then X. Draw the point at which each holds one lock while waiting for the other, so neither can continue. Change both to acquire X before Y and explain which circular-wait pattern this prevents. Does that ordering alone guarantee correct account balances, fair scheduling or recovery after a crash? Explain one problem with holding a lock during slow input/output.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [],
@@ -3603,7 +3615,7 @@
           "assignment": "Read the named article or specified sections: Wireshark TCP v9 and UDP v9 labs. Focus on ports TCP UDP, reliability flow congestion, socket programming timeouts and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Run the supplied local pair. Restart the server and send b\"bye\\n\" to observe rejection. On paper, split hello\\n into he and llo\\n and trace data after each read. Do not bind the server to an external interface.",
+      "practice": "Save the two separate files in your practice folder. In terminal 1 run python3 server.py using the Python command for your setup; within a minute, run python3 client.py in terminal 2. If your command is python, use it for both. If the port is already occupied, choose another unused local port in both files. Record the reply. Change the client payload to b\"bye\\n\", restart the server and run the client again. Then trace on paper the two reads b\"he\" and b\"llo\\n\" and show how data grows. A split into two actual send calls does not force the network to create two recv results; the paper trace makes that case reproducible.",
       "assessment": "Design a length-prefixed teaching protocol with a maximum 16-byte payload. State what happens for announced lengths 0,5,17 and a five-byte payload delivered in two reads. Compare with a UDP datagram of length 5.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -4060,7 +4072,7 @@
         }
       ],
       "practice": "Run the in-memory fixture. Query owner b and owner missing. Add a third row owned by a and predict the result set. Explain the roles of a primary key and the ownership predicate.",
-      "assessment": "A stock row begins quantity1. Two transactions both read1 and each subtract1. Draw the unsafe schedule and propose a conditional atomic update that prevents negative stock.",
+      "assessment": "Paper stock model: quantity starts at 1. Client A reads 1, client B reads 1, and each records a sale and writes its precomputed value 0. Explain why this oversells despite never storing -1. Then consider two unconditional quantity=quantity-1 updates. Write a single conditional update and state the success check that should gate each sale. No concurrent runtime test is required.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [],
@@ -4343,7 +4355,7 @@
         }
       ],
       "practice": "For a fictional backup download endpoint, identify asset, caller, data flow, trust boundary, one confidentiality threat, a server-side control and two verification cases. Use accounts A/B and backups A1/B1.",
-      "assessment": "Extend the model with integrity and availability threats. Rank them using a stated impact/likelihood rubric and identify one control that would reduce consequences without preventing the initiating event.",
+      "assessment": "Extend the fictional note-service model with unauthorised overwrite (integrity) and exhausted storage (availability). Use impact 1=minor/reversible, 2=temporary loss of service, 3=loss of private or irreplaceable data; likelihood 1=requires unusual access, 2=plausible misuse, 3=easy through an exposed function. Multiply the two scores as a practice priority aid, justify your assumptions and choose one consequence-reducing control. This ordinal exercise is not a calibrated financial-risk model.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [],
@@ -5197,7 +5209,7 @@
           "assignment": "Read the named article or specified sections: OWASP WSTG 4.2 — introduction and testing framework. Focus on HTTP interception replay, proxy and certificate setup, request comparison and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Use browser developer tools on your local B01 page or a designated provider lab. Record one harmless request without secrets. Annotate its method, host, path and response type. On paper, apply the supplied one-variable ownership change.",
+      "practice": "Optional observed route: open this studio’s public page, open browser developer tools (often F12 or the browser’s More tools menu), select Network, then reload the page. Choose the public document request, not an account request. Record method, host, path, response status and Content-Type; omit cookies, authorisation headers and personal query values. If tools are unavailable, use the supplied paper fixture: GET https://notes.example/api/notes/1; response 200; Content-Type application/json; identity A; note1 owned by A. Label it hypothetical. Then change only the target to note2 owned by B and predict the decision.",
       "assessment": "Write a minimal evidence template for an authorised request test, including scope, baseline, one change, expected decision, actual decision and redaction. Explain why a redirect to an out-of-scope host is a stop-and-review event.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -5360,7 +5372,7 @@
           "assignment": "Read the named article or specified sections: PortSwigger XSS — reflected stored DOM contexts and prevention. Focus on XSS source sink contexts, output encoding safe DOM APIs, content security policy limits and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Use your local greeting page. Display the exact marker with textContent, inspect the node and record its child-element count. Repeat after saving/restoring the string as local practice data. Explain reflected versus stored handling.",
+      "practice": "Open your local B01 greeting file, enter <b>practice</b> and click Greet. Right-click the output and choose Inspect (or the browser’s equivalent); the result paragraph should contain text and no nested b element. If comfortable using the developer-tools Console on this file, type document.querySelector(\"#result\").childElementCount and expect 0. For a persistence demonstration with no database setup, save the exact marker in a separate plain-text practice-note.txt file, close it, reopen it, paste its contents back into the input and greet again. This models stored data being rendered later; it does not implement a real reflected or stored web endpoint. Explain which step persisted data and which step decided how it was displayed.",
       "assessment": "An app safely renders a note in its main view but builds an inline script from the same note in an export preview. Explain why the first repair does not prove the preview safe and propose a design avoiding the script context.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -5620,7 +5632,7 @@
         }
       ],
       "practice": "Run the example with greeting and an unknown key. On paper compare subprocess.run([\"fixed-tool\", user_value], shell=False) with constructing one shell command string. Identify a remaining argument/option risk in the first design.",
-      "assessment": "An API accepts a requested image conversion mode. Define a two-value allowlist and fixed argument mapping rather than accepting raw flags. Include ordinary, unsupported and option-shaped test values.",
+      "assessment": "Paper design only: an image-conversion endpoint supports mode thumbnail or grayscale. Map thumbnail to the fixed argument list [\"--size\", \"128x128\"] and grayscale to [\"--grayscale\"] for a fictional fixed executable. Evaluate thumbnail, grayscale, unknown and --delete-all. Show why the caller’s raw mode string never becomes a shell command or raw tool flag. Do not run the fictional tool.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
       "practice_links": [
@@ -6551,7 +6563,7 @@
           "assignment": "Read the named article or specified sections: Buffer Overflow Exploits and Defenses (PDF). Focus on ASLR NX canaries CFI, safe languages and sanitizers, defence in depth and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Create a table for the four controls above: prevention/detection/hardening role, assumption and one remaining risk. Add a verification step that checks actual build/runtime behaviour for a selected mitigation without attempting an exploit.",
+      "practice": "Create a table for all five example controls: bounds checking, NX, ASLR, canary and a memory-safe container. For each give its prevention/detection/hardening role, assumption and one remaining risk. For one selected mitigation describe how the supported lab would inspect actual build/runtime evidence, without attempting an exploit. Paper plans must be labelled unperformed.",
       "assessment": "A reviewer says “ASLR is enabled, so the overflow is fixed.” Write a precise response and propose both a source repair and a boundary regression test.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -7200,7 +7212,7 @@
           "assignment": "Read the named article or specified sections: AWS overview Security and compliance. Focus on IaaS PaaS SaaS shared responsibility, cloud IAM roles policies, network storage key management logging and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Evaluate the three supplied requests and W deleting public/intro.txt. Create a responsibility table for customer data access, host patching and backups under an explicitly selected managed-service model. Label provider-dependent duties.",
+      "practice": "Evaluate the three supplied requests plus W deleting public/intro.txt. Then use this invented managed-database contract, not a real provider claim: provider patches physical hosts, host OS and database engine; customer manages users, data permissions and application code; provider performs scheduled backups only when customer enables/configures them; customer chooses retention and tests restore. Assign responsibility for data access, engine patching, backup configuration, backup execution and restore testing. No account or paid service is required.",
       "assessment": "Design a least-privilege identity for a read-only report worker. State allowed resources/actions, credential lifetime, revocation/recovery and a negative permission test. Explain how you would verify the deployed binding.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "The author retired the original SC900 cram; this map uses its linked v2 replacement. Required work here is offline and does not require opening a paid cloud account.",
@@ -7410,7 +7422,7 @@
           "assignment": "Read the named article or specified sections: Microsoft Kusto Query Language tutorial — filters aggregations joins. Focus on log schemas event time provenance, query filters aggregations joins, SIEM ingestion and retention and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Save the supplied CSV without its explanatory suffix. Convert to UTC with Python, select all A failures and count failures per user. Write the equivalent KQL concept: where result==\"Fail\", then summarise count() by user. Record missing telemetry assumptions.",
+      "practice": "Save the ten data rows in events.csv with the exact first line id,time,user,result (omit the parenthetical “synthetic” label). Convert time to UTC, select A failures and count failures by user using Python. Check the exact ids before relying on totals. On paper write the query operations: keep result=\"Fail\", then count by user. KQL means Kusto Query Language; a real deployment requires its actual table and column schema. No SIEM account is needed.",
       "assessment": "Reconstruct the complete ten-event UTC timeline without the walkthrough. Remove the user field from event 9 and explain which per-user claim becomes uncertain and how total failure count changes.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -7578,7 +7590,7 @@
           "assignment": "Read the named article or specified sections: MITRE CTI Training — module slides and exercises 1 and 2. Focus on ATTACK tactics techniques procedures, narrative and raw evidence mapping, intelligence uncertainty and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Create three columns: observed, inferred and unknown for the supplied note. Then complete the provider's guided narrative exercise from its linked handout before looking at answers. Record the version used and cite the exact supporting sentences.",
+      "practice": "For E1 in the supplied note, fill observed/inferred/unknown columns. Then use the complete E2 case taught above: ipconfig /all on host H at 09:01 UTC. Write a mapping with evidence id, behaviour, technique id/name, definition source/date and one benign alternative. Use https://attack.mitre.org/techniques/T1016/ as the definition reference. The provider handout is optional additional practice; no command execution is needed.",
       "assessment": "For a fresh fictional report “X ran on host H; a log confirms an outbound connection, but no content capture exists,” state what is observed and what would be needed to assert data exfiltration. Propose a cautious mapping workflow.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "MITRE states that these exercises use ATTACK v8. Use its linked v8 snapshot to compare answers, then explicitly review differences against the current ATTACK version.",
@@ -9777,7 +9789,7 @@
           "assignment": "Read the named article or specified sections: NIST incident response guidance. Focus on secure system design implementation review, incident investigation and reporting, specialisation evidence and oral defence and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Complete the supplied project. Use a rubric with five areas scored0/1/2: correctness, reproducibility, threat/telemetry assumptions, fair comparison and communication. Require at least1 in each area; have the other learner identify one weakness before revision.",
+      "practice": "Complete the supplied synthetic detection project with hand calculations or an inspected local script, not a new live evaluation. Score each area 0=missing/wrong, 1=mostly correct with an identified repairable gap, 2=complete and supported: correctness (all matrices/metrics); reproducibility (exact data/rules/steps); threat/telemetry assumptions (fields, missingness and claim limits); fair comparison (same complete cases and declared costs); communication (clear decision and limitations). Require at least 1 in every area and explain each score with evidence. Ask the other learner to identify one weakness, or conduct a separate self-review before revision.",
       "assessment": "Defend the project without the walkthrough. Add a missing signal field to row 2, explain uncertainty, compare both rules under an explicit cost preference and propose a genuinely new question that would require additional data. Separate self-study completion, external certification and research degree routes.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Completion demonstrates the capabilities evidenced by the work. A PhD-level research contribution additionally requires original results and expert assessment; finishing these resources alone does not establish that.",
@@ -9984,7 +9996,7 @@
           "assignment": "Read the named article or specified sections: OWASP 2025 LLM risks — vector/embedding weaknesses and sensitive disclosure. Focus on pre-context access control, retrieval provenance, cache isolation and use the native worked example to check your interpretation."
         }
       ],
-      "practice": "Rank the permitted documents for A and B. Then revoke A's access to D1 and state which index/cache/memory decisions must change. Identify one way a citation could be present while the generated statement is unsupported.",
+      "practice": "Rank permitted documents for A and B under own+public. Then add an explicit policy rule: archived documents are unavailable to ordinary retrieval, including their owner, and D1 is now archived. State which retrieval/index/cache decisions must change for A. Explain one way a citation can exist while a generated claim is unsupported.",
       "assessment": "Design a tenant-aware retrieval cache key and a negative test where A/B ask the same question. Include document-policy version changes and explain why caching only by query text is unsafe.",
       "pass_criteria": "Complete the independent task using supplied evidence; justify decisions and state limits. Do not claim mock data demonstrate live model behaviour.",
       "practice_links": [],

@@ -186,3 +186,20 @@ transcript; required primary readings and verified alternatives remain.
 Cyber now uses the same local MathJax scheduler for authored lesson and recall
 content; notebook text and code blocks are not typeset. No account schema,
 progress data, callback or hosted permissions change is needed.
+
+Native teaching clarity — release 20261031-2
+--------------------------------------------
+lesson-clarity-review-20261031.json records all 177 native editorial reviews,
+including retained explanations, findings and canonical authored hashes. The
+companion .txt states evidence and limits. This is not a learner outcome trial.
+Introduce the problem/vocabulary before compact technical notation; show a small
+complete example and intermediate reasons; supply exercise inputs and checks;
+align the independent variant to taught skills. Keep child roles and real-world
+professional boundaries explicit without replacing teaching with caveats alone.
+
+Authored prose fields can contain fenced reference code (three backticks, optional
+language label, body, closing fence on its own line). Shared prose.js escapes all
+text and renders complete fences as focusable pre/code; it does not execute code
+or implement general Markdown/HTML. Put literal code in those blocks so Python
+indentation and file fixtures survive rendering. TeX remains in prose/math
+examples; code and learner notes are not typeset. Use the existing maths rules.
