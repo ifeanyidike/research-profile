@@ -1,7 +1,7 @@
 Voice AI Studio
 ===============
 
-Source map reviewed 30 October 2026. Original lessons and fictional exercises; external providers own their materials.
+Source assignments reviewed 30–31 October 2026; native clarity review 31 October 2026. Original lessons and fictional exercises; external providers own their materials.
 
 V01 — What a voice system actually does
 Prerequisites: None
@@ -50,6 +50,10 @@ Videos:
 Readings:
   CS50P — Week 0 notes — https://cs50.harvard.edu/python/notes/0/
     Assignment: Read the named article or specified sections: CS50P — Week 0 notes. Focus on Python, variables, functions and use the native worked example to check your interpretation.
+  Python — IDLE editor and first-run instructions — https://docs.python.org/3/library/idle.html
+    Assignment: Use the Shell and Editor windows sections to open a new file, save it and Run Module. IDLE is optional; use your distributor’s documented route if it is not included.
+  Python — official downloads and platform installers — https://www.python.org/downloads/
+    Assignment: Choose a supported stable Python 3 installation for your platform and follow its official setup instructions. No third-party package or model service is needed.
 Additional practical materials:
   Harvard CS50P — optional problem set 0 — https://cs50.harvard.edu/python/psets/0/
     Assignment: Optional additional provider practice. Harvard CS50P — optional problem set 0. Follow the source’s preparation, account and compute notes; the studio’s native exercise remains the core task.

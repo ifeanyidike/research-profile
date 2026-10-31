@@ -1,5 +1,5 @@
 {
-  "reviewed": "30 October 2026",
+  "reviewed": "31 October 2026",
   "modules": [
     {
       "id": "V01",
@@ -152,6 +152,18 @@
           "url": "https://cs50.harvard.edu/python/notes/0/",
           "progressKey": "reading:0",
           "assignment": "Read the named article or specified sections: CS50P — Week 0 notes. Focus on Python, variables, functions and use the native worked example to check your interpretation."
+        },
+        {
+          "progressKey": "reading:400",
+          "label": "Python — IDLE editor and first-run instructions",
+          "url": "https://docs.python.org/3/library/idle.html",
+          "assignment": "Use the Shell and Editor windows sections to open a new file, save it and Run Module. IDLE is optional; use your distributor’s documented route if it is not included."
+        },
+        {
+          "progressKey": "reading:401",
+          "label": "Python — official downloads and platform installers",
+          "url": "https://www.python.org/downloads/",
+          "assignment": "Choose a supported stable Python 3 installation for your platform and follow its official setup instructions. No third-party package or model service is needed."
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",

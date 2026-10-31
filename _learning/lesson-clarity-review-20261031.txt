@@ -1,0 +1,139 @@
+Native lesson clarity review — 31 October 2026
+=============================================
+Release: 20261031-2
+Baseline: published commit 4f61f6bb8c24efbabf12dada51f6f35790ff4fd0
+
+Scope and result
+----------------
+Read all 177 original lessons, their worked examples, practice instructions,
+solutions, independent tasks, retrieval checks and immediate prerequisite links.
+The JSON ledger records a finding/retention reason and canonical authored hash
+for each topic. This is an editorial review, not a beginner learner trial.
+
+                         Reviewed   Revised   Retained
+Cyber Studio                 93        91          2
+Voice AI Studio              44        28         16
+Child Development Studio     40        25         15
+Total                       177       144         33
+
+Revisions are substantive teaching/answer changes, not a requirement to rewrite
+material that already works. Stable topic IDs, original resource identities and
+prior video audit manifests are preserved. New Python setup readings have new
+unused reading:400/401 keys within their own topics. No account/progress schema,
+user record, callback or hosted permission is changed.
+
+Teaching approach and primary sources
+--------------------------------------
+CMU Eberly Center — Learning principles
+https://www.cmu.edu/teaching/principles/learning.html
+CMU Eberly Center — Teaching principles
+https://www.cmu.edu/teaching/principles/teaching.html
+IES WWC — Organizing Instruction and Study to Improve Student Learning
+https://ies.ed.gov/ncee/wwc/PracticeGuide/1
+AERO — Teach explicitly: primary and secondary examples/transcript
+https://www.edresearch.edu.au/guides-resources/videos/teach-explicitly-primary-and-secondary
+
+Applied through concrete problems before terminology, explicit vocabulary and
+readiness bridges, small complete traces, explanations of intermediate steps,
+worked practice followed by a changed independent task, and explanatory feedback.
+The How to learn pages link these sources. IES recommendations differ in evidence
+strength; AERO school examples inform presentation, not evidence that this adult
+hub has demonstrated improved outcomes. New teaching/examples are original prose.
+
+Important corrections
+-----------------------
+- Cyber M04: quiz incorrectly said about 8%; its table implies 90/(90+99), about
+  47.6%. Answer and explanation now agree. Recall remains a different 90% measure.
+- Python first-run exercises preceded terminal setup. Cyber P01 and Voice V02 now
+  provide an explicit editor/IDLE route, with official setup readings; terminal
+  and environment lessons introduce their commands separately.
+- Cyber P04: an exact CSV fixture and full read/convert/sort/write/read-back
+  solution replace compressed or incomplete instructions.
+- Cyber N04: both socket endpoints now loop for the stated message framing;
+  timeouts and loopback scope are explicit. No one-recv completeness assumption.
+- Cyber W01: the local greeting page performs no API request. The workshop now
+  offers a public page-load observation or a fully specified paper HTTP fixture.
+- SQL lost-update and negative-stock scenarios are separated. Lock ordering is
+  not presented as proving balance correctness. Five memory controls no longer
+  appear in an exercise calling them four.
+- Cyber AI topic cards explain each actual topic rather than repeating generic
+  security prose. RAG revocation includes an explicit archived-policy rule.
+- Voice coding solutions preserve indentation in code fences. Duration, event
+  totals, guarded JSON validation and reproducibility include complete references.
+- Voice metric/alignment/codec explanations preserve assumptions and denominators;
+  a stale diarisation explanation now matches the fully specified overlap case.
+- Child tasks keep caregiver education and professional preparation distinct.
+  AAC/OT and assessment vocabulary is introduced plainly. Worked meeting notes,
+  feature comparisons, portfolios and evidence tables expose missing information.
+  P11 now supplies concrete ABC rows; P14 does not invent observations missing
+  from its flawed source note. All cases remain fictional/adult learning.
+
+Technical/professional corroboration
+-------------------------------------
+Per-topic sourceReferences in the ledger identify official Python/Git/library,
+Arm ABI, TLA+, Android, MITRE, primary CTC research and professional sources used
+for relevant checks. ASHA/CHSA, AOTA, NJC, CDC, NIMH and NICE guidance was consulted
+for communication access, roles, referral, feeding/health and evidence limits.
+Some old ASHA public links redirect to helpingyoucommunicate.org. NICE's direct
+page returned 403, but its official indexed recommendation 1.3.2 was accessible;
+no third-party summary was substituted as the authority. No jurisdiction-specific
+licensing or legal eligibility determination is made by this teaching review.
+
+Rendering and verification
+---------------------------
+A small shared escaped-prose renderer preserves fenced reference code as
+keyboard-focusable pre/code blocks. It does not execute examples or accept raw
+HTML. Existing MathJax excludes code and learner notebooks from typesetting.
+All three entry points and imports use release 20261031-2 coherently.
+
+Executed checks:
+- 49 offline Node unit tests pass, including the new code escaping/indentation
+  checks and the M04 precision regression. Supabase I/O is mocked in account tests.
+- The exact M04 regression assertion fails against the published baseline data
+  for the expected wrong-answer defect, rather than a setup/import error.
+- Both offline content packagers succeed; generated-data check succeeds.
+- 16 fenced Python references parse via AST without executing their imports.
+- The inspected Cyber P04 standard-library solution runs in a disposable directory:
+  ordered counts [4,2,3], total 9, correctly ordered UTC timestamps and JSON reload.
+- Docker JEKYLL_ENV=production build succeeds. Existing IPython lexer fallback
+  warning from notebook conversion is nonfatal and unrelated to studio teaching.
+- Real local MathJax/prose modules render the authored content from all 177 lessons:
+  406 equation containers, zero MathJax error nodes, no console warnings/errors.
+  This rendering-only page was private ignored build output, not shipped content.
+- Browser checks cover Cyber CSV answer reveal/line breaks, the corrected M04 quiz
+  and its explanation, Voice V04 reference code, mobile V08 maths, child caregiver
+  24-topic / professional 28-topic switching and P07's supplied comparison.
+  Source/code blocks retain line breaks, indentation, focus and local overflow.
+
+Outside-view review ledger (Allen review)
+------------------------------------------
+1 Failure modes: malformed/unclosed fences stay escaped text; unit checks cover
+  HTML-shaped inputs and unfinished fences. Existing equation-loader failure
+  notice remains. No new execution or hidden saving behaviour is introduced.
+2 Deployment: cache versions advance together; builds include prose.js and the
+  generated data. No added recording, provider call or personal-data default.
+3 Operator/author: canonical source files/builders remain the edit route; code
+  fences and TeX are documented. Existing unrelated source identity is preserved.
+4 Integrity: generated practice/assessment fields equal canonical guide fields;
+  all topic IDs and child path prerequisite closures pass structural checks.
+5 Realism: M04 regression fails baseline; actual prose/MathJax dependency renders
+  all authored equations. This is separate from mocked account and unit checks.
+6 Boundary trace: canonical guide -> generated JSON -> actual practice/assess
+  panels -> escaped prose/pre/code verified in the browser. No source key reuse.
+7 System state: no migration, bulk learner update or hosted write is involved.
+  Real signed-in sync was not newly tested or claimed by this release.
+8 Claims: 177 reviewed/144 revised/33 retained are ledger counts; 406 is rendered
+  equations, not concepts mastered; 49 is offline tests, not clinical validation.
+
+Limits
+--------
+Editorial coverage cannot guarantee every beginner will find every explanation
+clear. Full university prerequisites and specialist clinical training remain
+required where stated. No learner outcomes, clinical competence, external exam
+readiness or research novelty are established. A qualified subject specialist
+and real learner feedback can reveal further improvements.
+
+No live model inference, transcription, token-count probe, replay, scoring matrix,
+child assessment, clinical trial, recording upload or new provider evaluation was
+run. Earlier video audits retain their exact scopes; this pass did not reverify
+all unassigned speech or every assertion in external textbooks.

@@ -171,3 +171,15 @@ test("malformed imported resource checklists cannot crash a lesson view", () => 
   s.update("ifeanyi", "O01", { resources: '["video:0","reading:1"]' });
   assert.equal(s.record("ifeanyi", "O01").values.resources, '["video:0","reading:1"]');
 });
+
+test("M04 retrieval answer agrees with the worked alert counts rather than recall", () => {
+  const lesson = lessons.M04;
+  const match = lesson.guide.example.match(/incident\s+(\d+)\s+(\d+)\nbenign\s+(\d+)\s+(\d+)/);
+  assert.ok(match, "Worked confusion table is present");
+  const [, tp, fn, fp] = match.map(Number);
+  const precisionPercent = Math.round((tp / (tp + fp)) * 1000) / 10;
+  const recallPercent = (tp / (tp + fn)) * 100;
+  assert.notEqual(precisionPercent, recallPercent, "The example distinguishes precision from recall");
+  assert.ok(lesson.check.choices[lesson.check.answer].includes(String(precisionPercent)));
+  assert.ok(lesson.check.explanation.includes("90") && lesson.check.explanation.includes("99"));
+});
