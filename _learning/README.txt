@@ -1,7 +1,7 @@
 Voice AI Studio and Child Development & Therapy Studio
 ====================================================
 
-Two independent apps use the learning-studio browser runtime. Algo Studio is unchanged; Cyber shares the scoped-resource renderer. Public routes are /voice-ai-studio/ and
+Two independent apps use the learning-studio browser runtime. Algo Studio is unchanged; Cyber shares the scoped-resource renderer and parameterised account-sync runtime. Public routes are /voice-ai-studio/ and
 /child-development-studio/. Each has its own auth session, local storage prefix,
 backup kind and hosted progress table. A backup from one cannot enter another.
 

@@ -11,7 +11,8 @@ begin
   for field,value in select * from jsonb_each(doc->'values') loop
     if field not in ('read','practice','passedAt','reviewAt','reviewStage','notes','evidence','assessment','resources') then return false; end if;
     if field in ('read','practice') and jsonb_typeof(value) <> 'boolean' then return false; end if;
-    if field in ('notes','evidence','assessment','resources') and (jsonb_typeof(value) <> 'string' or length(value #>> '{}') > 20000) then return false; end if;
+    -- Match JavaScript String.length / HTML maxlength: supplementary characters use two UTF-16 units.
+    if field in ('notes','evidence','assessment','resources') and (jsonb_typeof(value) <> 'string' or length(value #>> '{}') + length(regexp_replace(value #>> '{}', U&'[^\+010000-\+10FFFF]', '', 'g')) > 20000) then return false; end if;
     if field in ('passedAt','reviewAt','reviewStage') then
       if jsonb_typeof(value) <> 'number' then return false; end if;
       if trunc((value::text)::numeric) <> (value::text)::numeric or (value::text)::numeric < 0 or (value::text)::numeric > 8640000000000000 then return false; end if;
@@ -81,7 +82,8 @@ begin
   for field,value in select * from jsonb_each(doc->'values') loop
     if field not in ('read','practice','passedAt','reviewAt','reviewStage','notes','evidence','assessment','resources') then return false; end if;
     if field in ('read','practice') and jsonb_typeof(value) <> 'boolean' then return false; end if;
-    if field in ('notes','evidence','assessment','resources') and (jsonb_typeof(value) <> 'string' or length(value #>> '{}') > 20000) then return false; end if;
+    -- Match JavaScript String.length / HTML maxlength: supplementary characters use two UTF-16 units.
+    if field in ('notes','evidence','assessment','resources') and (jsonb_typeof(value) <> 'string' or length(value #>> '{}') + length(regexp_replace(value #>> '{}', U&'[^\+010000-\+10FFFF]', '', 'g')) > 20000) then return false; end if;
     if field in ('passedAt','reviewAt','reviewStage') then
       if jsonb_typeof(value) <> 'number' then return false; end if;
       if trunc((value::text)::numeric) <> (value::text)::numeric or (value::text)::numeric < 0 or (value::text)::numeric > 8640000000000000 then return false; end if;

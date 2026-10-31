@@ -174,3 +174,31 @@ test("a changed remote field notifies once, then unchanged sync stays quiet", as
   assert.equal(calls, 1);
   assert.equal(x.store().record("ifeanyi", "O01").values.notes, "remote");
 });
+
+// The Account instance owns one periodic timer for the lifetime of its page.
+// Clearing it on sign-out without restarting it would break later sign-ins.
+test("periodic remote refresh survives signing out and back in on the same page", async (t) => {
+  const server = new Map(),
+    x = setup(server, "a");
+  let tick,
+    intervalActive = false;
+  const timer = {};
+  t.mock.method(globalThis, "setInterval", (callback, ms) => {
+    assert.equal(ms, 30000);
+    intervalActive = true;
+    tick = () => (intervalActive ? callback() : undefined);
+    return timer;
+  });
+  t.mock.method(globalThis, "clearInterval", (id) => {
+    if (id === timer) intervalActive = false;
+  });
+  x.a.client.auth.onAuthStateChange = () => {};
+  x.a.client.auth.getSession = async () => ({ data: { session: null }, error: null });
+  await x.a.start();
+  await x.a.select({ id: "a" });
+  await x.a.signOut();
+  await x.a.select({ id: "a" });
+  server.set("a", new Map([["O01", { values: { notes: "Remote edit after returning" }, changed: { notes: 500 } }]]));
+  await tick();
+  assert.equal(x.store().record("ifeanyi", "O01").values.notes, "Remote edit after returning");
+});

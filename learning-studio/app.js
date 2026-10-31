@@ -1,8 +1,8 @@
-import { math } from "./math.js?v=20261031-2";
-import { createModel } from "./model.js?v=20261031-2";
-import { Account } from "./account.js?v=20261031-2";
-import { resourceCards, assignmentSummary } from "./resources.js?v=20261031-2";
-import { renderProse as paragraphs } from "./prose.js?v=20261031-2";
+import { math } from "./math.js?v=20261031-3";
+import { createModel } from "./model.js?v=20261031-3";
+import { Account } from "./account.js?v=20261031-3";
+import { resourceCards, assignmentSummary } from "./resources.js?v=20261031-3";
+import { renderProse as paragraphs } from "./prose.js?v=20261031-3";
 import { syncConfig } from "../algo-studio/sync-config.js";
 export function startStudio(config) {
   document.documentElement.dataset.studio = config.slug;
@@ -115,7 +115,7 @@ export function startStudio(config) {
         const items = selectedModules().filter((m) => m.stage === stage),
           done = items.filter((m) => r[m.id]?.passedAt).length;
         if (!items.length) return "";
-        return `<a class="stage-card" href="#path/${i}"><div class="card-top"><span class="stage-number">${String(selectedStages().indexOf(stage) + 1).padStart(2, "0")}</span><span>${items.length} topics</span></div><h3>${esc(stage)}</h3><p>${stageDescriptions[i]}</p><div class="card-bottom"><span>${done} / ${items.length} assessed</span><span aria-hidden="true">↗</span></div><div class="meter"><span style="width:${(done / items.length) * 100}%"></span></div></a>`;
+        return `<a class="stage-card" href="#path/${i}"><div class="card-top"><span class="stage-number">${String(selectedStages().indexOf(stage) + 1).padStart(2, "0")}</span><span>${items.length} topics</span></div><h3>${esc(stage)}</h3><p>${esc(stageDescriptions[i])}</p><div class="card-bottom"><span>${done} / ${items.length} assessed</span><span aria-hidden="true">↗</span></div><div class="meter"><span style="width:${(done / items.length) * 100}%"></span></div></a>`;
       })
       .join("");
   }
@@ -148,7 +148,7 @@ export function startStudio(config) {
         .map((stage, i) => {
           const items = filtered.filter((m) => m.stage === stage);
           return items.length
-            ? `<section class="stage-section"><div class="stage-heading"><span class="stage-number">${String(selectedStages().indexOf(stage) + 1).padStart(2, "0")}</span><div><h2>${esc(stage)}</h2><p>${stageDescriptions[i]}</p></div></div>${items.map((m) => row(m, s, r)).join("")}</section>`
+            ? `<section class="stage-section"><div class="stage-heading"><span class="stage-number">${String(selectedStages().indexOf(stage) + 1).padStart(2, "0")}</span><div><h2>${esc(stage)}</h2><p>${esc(stageDescriptions[i])}</p></div></div>${items.map((m) => row(m, s, r)).join("")}</section>`
             : "";
         })
         .join("") || '<div class="empty">No topics match. Try a broader search or another filter.</div>'
