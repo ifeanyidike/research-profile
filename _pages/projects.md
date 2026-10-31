@@ -5,7 +5,7 @@ permalink: /projects/
 description: Production AI systems, research projects, and open-source work.
 nav: true
 nav_order: 3
-display_categories: [Research, Open Source]
+display_categories: [Research, Open Source, Financial Engineering]
 horizontal: false
 ---
 
