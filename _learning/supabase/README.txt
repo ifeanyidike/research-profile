@@ -37,3 +37,16 @@ RLS enabled, three own-account policies per table, anonymous reads/account
 deletes denied and zero rows in both new tables. Both exact production callbacks
 were saved; the three existing callbacks and Site URL were preserved.
 Fresh OAuth/email/recovery and actual two-device sign-in remain untested.
+
+Record validation upgrade — 31 October 2026
+-------------------------------------------
+For existing installations with all three studio tables, review and run
+20261031-record-validation.sql. It changes only the three validation functions
+and reports counts of pre-existing invalid records. It never rewrites learner
+rows or clears checklists. Investigate any nonzero count before claiming sync
+recovery; repairs require a separate review. Fresh installs use each setup.sql.
+The validators match browser UTF-16 note limits, including supplementary Unicode,
+and accept only bounded JSON arrays of resource keys. In a disposable local
+PostgreSQL database, run record-contract.sql after both setup scripts to check
+93 server boundary cases without inserting users or progress. Never run
+local-bootstrap.sql in Supabase.

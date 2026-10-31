@@ -176,7 +176,17 @@ test("M04 retrieval answer agrees with the worked alert counts rather than recal
   const lesson = lessons.M04;
   const match = lesson.guide.example.match(/incident\s+(\d+)\s+(\d+)\nbenign\s+(\d+)\s+(\d+)/);
   assert.ok(match, "Worked confusion table is present");
-  const [, tp, fn, fp] = match.map(Number);
+  const [, tp, fn, fp, tn] = match.map(Number);
+  const nativeIncidents = Number(lesson.example.match(/suppose (\d+) are malicious/)[1]);
+  const nativeCaught = Number(lesson.example.match(/catches (\d+)/)[1]);
+  const [, rateText, benignText] = lesson.example.match(/flags (\d+)% of ([\d,]+) benign events/);
+  const nativeBenign = Number(benignText.replaceAll(",", ""));
+  const nativeFalseAlerts = (Number(rateText) * nativeBenign) / 100;
+  assert.deepEqual(
+    [nativeCaught, nativeIncidents - nativeCaught, nativeFalseAlerts, nativeBenign - nativeFalseAlerts],
+    [tp, fn, fp, tn],
+    "Native example and displayed guide describe the same population and detector"
+  );
   const precisionPercent = Math.round((tp / (tp + fp)) * 1000) / 10;
   const recallPercent = (tp / (tp + fn)) * 100;
   assert.notEqual(precisionPercent, recallPercent, "The example distinguishes precision from recall");

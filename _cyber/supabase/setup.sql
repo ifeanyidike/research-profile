@@ -2,7 +2,7 @@ begin;
 -- Dedicated data: never modifies Algo Studio's learning_progress table.
 create or replace function public.valid_cyber_record(doc jsonb) returns boolean
 language plpgsql immutable set search_path = '' as $$
-declare field text; value jsonb; stamp jsonb;
+declare field text; value jsonb; stamp jsonb; checks jsonb;
 begin
   if jsonb_typeof(doc) <> 'object' or jsonb_typeof(doc->'values') is distinct from 'object'
     or jsonb_typeof(doc->'changed') is distinct from 'object' or octet_length(doc::text) > 500000
@@ -10,7 +10,13 @@ begin
   for field,value in select * from jsonb_each(doc->'values') loop
     if field not in ('read','practice','passedAt','reviewAt','reviewStage','notes','evidence','assessment','resources') then return false; end if;
     if field in ('read','practice') and jsonb_typeof(value) <> 'boolean' then return false; end if;
-    if field in ('notes','evidence','assessment','resources') and (jsonb_typeof(value) <> 'string' or length(value #>> '{}') > 20000) then return false; end if;
+    -- Match JavaScript String.length / HTML maxlength: supplementary characters use two UTF-16 units.
+    if field in ('notes','evidence','assessment','resources') and (jsonb_typeof(value) <> 'string' or length(value #>> '{}') + length(regexp_replace(value #>> '{}', U&'[^\+010000-\+10FFFF]', '', 'g')) > 20000) then return false; end if;
+    if field = 'resources' then
+      checks := (value #>> '{}')::jsonb;
+      if jsonb_typeof(checks) <> 'array' or jsonb_array_length(checks) > 200 then return false; end if;
+      if exists(select from jsonb_array_elements(checks) item where jsonb_typeof(item) <> 'string' or (item #>> '{}') !~ '^(video|reading):[0-9]{1,3}$') then return false; end if;
+    end if;
     if field in ('passedAt','reviewAt','reviewStage') then
       if jsonb_typeof(value) <> 'number' then return false; end if;
       if trunc((value::text)::numeric) <> (value::text)::numeric or (value::text)::numeric < 0 or (value::text)::numeric > 8640000000000000 then return false; end if;
