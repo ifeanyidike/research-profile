@@ -158,3 +158,31 @@ of the same recording keep their existing identities. Read the per-source limits
 automatic caption errors, historical claims, independent paper explanations,
 commercial affiliation and professional/jurisdictional scope remain explicit.
 This is not an audit of every video in the full three curricula.
+
+
+Full-library transcript audit — release 20261031-1
+-------------------------------------------------
+video-library-baseline-20261030.json freezes the 303 assignments outside the
+historical 44-assignment audit. video-library-review-20261030.json accounts for
+all 303: 301 scoped transcript-supported assignments, two deliberately retired
+assignments and zero pending. The review completed on 31 October 2026.
+There are 36 replacements; new assignments use unused 300+ progress keys.
+Retained recordings keep their existing keys and historical audit files remain
+unchanged. Counts are assignments, not unique recordings or full-video reviews.
+Per-assignment limits identify exactly which passages were read. Some evidence
+is publisher narration scripts rather than timed captions; named clips keep
+their own clocks. This does not certify unassigned speech, every textbook
+claim, professional competence or continued provider availability.
+
+The active evidence is split between video-content-review-20261030-complete.json
+(the earlier 44) and video-library-review-20261030.json (this 303). Original
+findings are in video-library-source-findings-20261030.json. Full third-party
+transcripts and browser/session data must never be committed or shipped.
+
+The completed review includes 192 Cyber, 66 Voice AI and 43 Child Development
+assignments. The retired child assignments were an unverified duplicate
+joint-attention video and an optional UNICEF launch event without an accessible
+transcript; required primary readings and verified alternatives remain.
+Cyber now uses the same local MathJax scheduler for authored lesson and recall
+content; notebook text and code blocks are not typeset. No account schema,
+progress data, callback or hosted permissions change is needed.

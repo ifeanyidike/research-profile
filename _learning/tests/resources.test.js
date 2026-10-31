@@ -9,7 +9,13 @@ const read = (slug) => JSON.parse(fs.readFileSync(new URL(`../../${slug}/curricu
 const studios = ["cyber-studio", "voice-ai-studio", "child-development-studio"];
 const replacementReview = JSON.parse(fs.readFileSync(new URL("../video-transcript-replacements-20261030.json", import.meta.url)));
 const followupReview = JSON.parse(fs.readFileSync(new URL("../video-transcript-followup-20261030.json", import.meta.url)));
-const allReplacements = [...replacementReview.replacements, ...followupReview.replacements];
+const libraryReview = JSON.parse(fs.readFileSync(new URL("../video-library-review-20261030.json", import.meta.url)));
+const libraryBaseline = JSON.parse(fs.readFileSync(new URL("../video-library-baseline-20261030.json", import.meta.url)));
+const allReplacements = [...replacementReview.replacements, ...followupReview.replacements, ...libraryReview.replacements];
+const retirementFor = (studio, topic, key) =>
+  libraryReview.retirements.find((a) => a.studio === studio && a.topic === topic && a.previousProgressKey === key);
+const locatorFor = (studio, topic, key) =>
+  libraryReview.locatorClarifications.find((a) => a.studio === studio && a.topic === topic && a.previousProgressKey === key);
 const replacementFor = (studio, topic, progressKey) =>
   allReplacements.find((a) => a.studio === studio && a.topic === topic && a.previousProgressKey === progressKey);
 const currentVideo = (studio, topic, progressKey, videos) =>
@@ -144,11 +150,12 @@ test("reported high-impact source mismatches and unintended full replays stay co
   assert.ok(!JSON.stringify(c.D07.videos).includes("OiWJ6VLJRz8"));
   assert.ok(d.C04.readings[0].url.includes("schoolage-6-to-12"));
   assert.ok(d.C12.readings[1].url.includes("leedscommunityhealthcare"));
-  assert.equal(c.D05.videos[1].segments[0].end, 5097);
+  assert.ok(c.D05.videos[1].segments[0].end <= 5097, "D05 stops before the unassigned Copilot and billing discussion");
   assert.ok(v.V08.videos.find((r) => r.url.includes("lYYkEx1Qx8s")).optional);
   assert.ok(v.V19.videos.find((r) => r.url.includes("thwZ-G8Gk6I")).optional);
   assert.ok(v.V23.videos.find((r) => r.url.includes("q3CmsZFlrnc")).optional);
-  assert.ok(d.P15.videos.find((r) => r.url.includes("BwCVJCymmt8")).optional);
+  assert.ok(!d.P15.videos.some((r) => r.url.includes("BwCVJCymmt8")));
+  assert.equal(retirementFor("child-development-studio", "P15", "video:0").previousAssignment.optional, true);
 });
 
 test("formerly reading-led topics have timed, scoped core videos without losing existing source identities", () => {
@@ -165,9 +172,20 @@ test("formerly reading-led topics have timed, scoped core videos without losing 
       );
       assert.doesNotMatch(topic.videoNote, /no closely matched public teaching video|Reading-led topic/i);
       for (const old of review.previousVideos[key]) {
+        const retired = retirementFor(slug, id, old.progressKey);
+        if (retired) {
+          assert.equal(retired.previousAssignment.url, old.url);
+          assert.ok(!topic.videos.some((r) => r.progressKey === old.progressKey));
+          continue;
+        }
         const current = currentVideo(slug, id, old.progressKey, topic.videos);
         const replacement = replacementFor(slug, id, old.progressKey);
-        assert.equal(replacement?.previousAssignment.url || current?.url, old.url, `${id}: completion identity reassigned`);
+        const locator = locatorFor(slug, id, old.progressKey);
+        assert.equal(
+          replacement?.previousAssignment.url || locator?.previousAssignment.url || current?.url,
+          old.url,
+          `${id}: completion identity reassigned`
+        );
         if (old.optional && id !== "V35") assert.equal(current.optional, true, `${id}: an old refresher became required`);
       }
     }
@@ -245,6 +263,30 @@ test("content evidence stays attached to the reviewed assignment and exposes unr
   }
   assert.equal(seen.size, 44);
   assert.deepEqual(counts, review.statusCounts);
+  for (const a of libraryReview.assignments) {
+    const key = `${a.studio}/${a.topic}/${a.progressKey}`;
+    assert.ok(!seen.has(key), "Library audit overlaps the historical 44: " + key);
+    seen.add(key);
+    const r = topics[`${a.studio}/${a.topic}`].videos.find((r) => r.progressKey === a.progressKey);
+    assert.ok(r, key);
+    const snapshot = {
+      label: r.label,
+      url: r.url,
+      playbackUrl: r.playbackUrl || r.url,
+      watchMode: r.watchMode,
+      timingSource: r.timingSource,
+      assignment: r.assignment,
+      segments: r.segments || [],
+    };
+    if (r.durationSeconds !== undefined) snapshot.durationSeconds = r.durationSeconds;
+    assert.deepEqual(snapshot, a.reviewedAssignment, key + ": assignment changed after library review");
+    assert.equal(a.method, "transcript-reviewed");
+    assert.deepEqual(r.contentReview, { method: a.method, note: a.note, sources: a.sources });
+    assert.ok(a.sources.length && a.findings.length && a.limits.length);
+    for (const source of a.sources) assert.equal(new URL(source.url).protocol, "https:");
+    assert.ok(resourceCards([r], "video", []).includes(labels[a.method]));
+    assert.ok(assignmentSummary(r).includes(labels[a.method]));
+  }
   for (const [key, m] of Object.entries(topics))
     for (const r of m.videos) if (r.contentReview) assert.ok(seen.has(`${key}/${r.progressKey}`), "Untracked content claim");
   const defence = topics["cyber-studio/R03"].videos.find((r) => r.progressKey === "video:100");
@@ -252,6 +294,48 @@ test("content evidence stays attached to the reviewed assignment and exposes unr
   assert.equal(defence.segments[0].end, 2893);
   assert.match(topics["cyber-studio/R03"].videoNote, /6:43/, "R03: obsolete core-viewing duration");
   assert.doesNotMatch(topics["cyber-studio/R03"].videoNote, /11:36/);
+});
+
+test("the full-library audit accounts for all 303 baseline assignments without certifying pending speech", () => {
+  const key = (a, k = a.progressKey) => `${a.studio}/${a.topic}/${k}`;
+  assert.equal(libraryBaseline.assignments.length, 303);
+  assert.equal(new Set(libraryBaseline.assignments.map((a) => key(a, a.previousProgressKey))).size, 303);
+  const topics = new Map(studios.flatMap((slug) => read(slug).map((m) => [`${slug}/${m.id}`, m])));
+  const accounted = new Set();
+  for (const b of libraryBaseline.assignments) {
+    const id = key(b, b.previousProgressKey);
+    const replacement = libraryReview.replacements.find((a) => key(a, a.previousProgressKey) === id);
+    const retired = libraryReview.retirements.find((a) => key(a, a.previousProgressKey) === id);
+    const pending = libraryReview.pending.find((a) => key(a) === id);
+    const reviewed = libraryReview.assignments.find((a) => key(a) === key(b, replacement?.replacementProgressKey || b.previousProgressKey));
+    assert.equal([retired, pending, reviewed].filter(Boolean).length, 1, id + ": disposition missing or duplicated");
+    assert.ok(!accounted.has(id));
+    accounted.add(id);
+    const videos = topics.get(`${b.studio}/${b.topic}`).videos;
+    if (replacement) {
+      assert.deepEqual(replacement.previousAssignment, b.previousAssignment);
+      assert.notEqual(replacement.previousProgressKey, replacement.replacementProgressKey);
+      assert.ok(Number(replacement.replacementProgressKey.split(":")[1]) >= 300);
+      assert.ok(reviewed);
+    } else if (retired) {
+      assert.deepEqual(retired.previousAssignment, b.previousAssignment);
+      assert.ok(retired.reason.length > 80);
+      assert.ok(!videos.some((r) => r.progressKey === b.previousProgressKey));
+    } else if (pending) {
+      assert.deepEqual(
+        videos.find((r) => r.progressKey === b.previousProgressKey),
+        b.previousAssignment,
+        id + ": pending source changed without a content review"
+      );
+    }
+  }
+  assert.equal(accounted.size, 303);
+  assert.deepEqual(libraryReview.statusCounts, {
+    "transcript-reviewed": libraryReview.assignments.length,
+    retired: libraryReview.retirements.length,
+    pending: libraryReview.pending.length,
+  });
+  assert.equal(libraryReview.status, libraryReview.pending.length ? "in-progress" : "complete");
 });
 
 test("the description-only audit accounts for all seventeen sources without rewriting their history", () => {
@@ -291,7 +375,8 @@ test("different recordings never inherit a learner's retired video checkmarks", 
   const store = stores("guest");
   for (const a of allReplacements) {
     const m = all.get(`${a.studio}/${a.topic}`);
-    store.update("ifeanyi", m.id, { resources: JSON.stringify([a.previousProgressKey, "reading:0"]) });
+    const readingKey = m.readings[0].progressKey;
+    store.update("ifeanyi", m.id, { resources: JSON.stringify([a.previousProgressKey, readingKey]) });
     const checked = JSON.parse(store.record("ifeanyi", m.id).values.resources);
     const r = m.videos.find((r) => r.progressKey === a.replacementProgressKey);
     assert.ok(!m.videos.some((v) => v.progressKey === a.previousProgressKey), "Retired key reused: " + m.id);
@@ -301,8 +386,8 @@ test("different recordings never inherit a learner's retired video checkmarks", 
     const html = resourceCards(m.videos, "video", checked);
     assert.ok(html.includes(`data-resource="${r.progressKey}"`));
     assert.ok(!html.includes(`data-resource="${r.progressKey}" checked`), m.id + ": replacement completed from old source");
-    assert.ok(resourceCards(m.readings, "reading", checked).includes('data-resource="reading:0" checked'), "Unrelated reading progress lost");
-    assert.deepEqual(checked, [a.previousProgressKey, "reading:0"], "Review mutated stored progress");
+    assert.ok(resourceCards(m.readings, "reading", checked).includes(`data-resource="${readingKey}" checked`), "Unrelated reading progress lost");
+    assert.deepEqual(checked, [a.previousProgressKey, readingKey], "Review mutated stored progress");
   }
   const same = all.get("voice-ai-studio/V34").videos.find((r) => r.progressKey === "video:101");
   assert.equal(same.optional, true);
