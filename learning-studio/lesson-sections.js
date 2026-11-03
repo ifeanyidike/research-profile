@@ -1,4 +1,4 @@
-import { renderProse } from "./prose.js?v=20261031-4";
+import { renderProse } from "./prose.js?v=20261103-2";
 const esc = (text) => String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 export function passCriteria(module) {
   const body = module.outcomes?.length

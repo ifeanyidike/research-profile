@@ -2077,3 +2077,183 @@ mjx-container:focus-visible {
     padding: 12px;
   }
 }
+
+/* Authored teaching steps are headings, rather than another dense paragraph. */
+.lesson-body .prose-heading {
+  margin-top: 1.65rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+.lesson-body > p {
+  max-width: 66ch;
+}
+.lesson-body > ol li,
+.lesson-body > ul li {
+  margin-bottom: 0.65rem;
+}
+
+.studio-code-editor {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.2rem 0;
+  background: var(--surface);
+  --code-keyword: #773ba2;
+  --code-string: #216b42;
+  --code-number: #a43f23;
+  --code-comment: #63736c;
+  --code-function: #1d5895;
+}
+:root[data-theme="dark"] .studio-code-editor {
+  --code-keyword: #d1b0ff;
+  --code-string: #b1dfae;
+  --code-number: #ffc29a;
+  --code-comment: #a6b5c9;
+  --code-function: #93caff;
+}
+.code-editor-toolbar,
+.code-edit-actions {
+  padding: 0.65rem 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--soft);
+  align-items: center;
+  font-size: 0.85rem;
+}
+.code-editor-toolbar strong span {
+  margin-left: 0.6rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+.code-editor-toolbar > div {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.studio-code-editor button {
+  padding: 0.35rem 0.6rem;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+.code-edit-actions {
+  justify-content: flex-start;
+}
+.code-editor-body {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+}
+.studio-code-editor pre,
+.studio-code-editor textarea,
+.studio-code-editor code {
+  font:
+    14px/25px ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+  tab-size: 4;
+  letter-spacing: normal;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.studio-code-editor .code-gutter {
+  overflow: hidden;
+  padding: 16px 0.65rem;
+  text-align: right;
+  color: var(--muted);
+  background: var(--soft);
+}
+.code-gutter span {
+  display: block;
+}
+.code-editor-surface {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+.studio-code-editor .code-preview {
+  padding: 16px;
+  height: 100%;
+  overflow: auto;
+  color: var(--ink);
+}
+.studio-code-editor code {
+  padding: 0;
+}
+.studio-code-editor .code-input {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  padding: 16px;
+  resize: none;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  caret-color: var(--ink);
+  overflow: auto;
+}
+.studio-code-editor .code-input::selection {
+  background: #829eaf55;
+}
+.is-editing .code-preview {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: max-content;
+  min-width: 100%;
+  height: auto;
+  overflow: visible;
+  pointer-events: none;
+}
+.studio-code-editor .py-keyword,
+.studio-code-editor .py-constant {
+  color: var(--code-keyword);
+}
+.studio-code-editor .py-string {
+  color: var(--code-string);
+}
+.studio-code-editor .py-number {
+  color: var(--code-number);
+}
+.studio-code-editor .py-comment {
+  color: var(--code-comment);
+}
+.studio-code-editor .py-function,
+.studio-code-editor .py-builtin {
+  color: var(--code-function);
+}
+.studio-code-editor .code-editor-help,
+.studio-code-editor .code-editor-status {
+  padding: 0.5rem 0.8rem;
+  margin: 0;
+  font-size: 0.8rem;
+}
+.code-editor-status:empty {
+  display: none;
+}
+.studio-code-editor [hidden] {
+  display: none;
+}
+@media (forced-colors: active) {
+  .is-editing .code-preview {
+    visibility: hidden;
+  }
+  .studio-code-editor .code-input {
+    color: CanvasText;
+    -webkit-text-fill-color: CanvasText;
+  }
+}
+.studio-code-editor .code-gutter,
+.code-editor-surface {
+  min-height: 0;
+  height: 100%;
+}

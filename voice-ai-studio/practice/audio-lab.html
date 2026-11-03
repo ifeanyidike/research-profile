@@ -1,0 +1,120 @@
+---
+layout: null
+permalink: /voice-ai-studio/practice/audio-lab.html
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Local audio lab · Voice AI Studio</title>
+    <link rel="stylesheet" href="projects.css?v=20261103-2" />
+  </head>
+  <body>
+    <main>
+      <p><a href="../#path">← Voice AI curriculum</a></p>
+      <h1>Work with actual audio files</h1>
+      <p>
+        You will create eight small WAV files, inspect their samples and compare what changes when you alter frequency, amplitude, channels and
+        filtering. The sounds are known tones, not speech. No microphone, model, account or extra Python package is needed.
+      </p>
+      <nav aria-label="Lab sections"><a href="#setup">Setup</a><a href="#tasks">Lesson tasks</a><a href="#answers">Check your results</a></nav>
+      <section id="setup">
+        <h2>Set up once</h2>
+        <p>
+          If Python or terminal work is unfamiliar, review the optional V02–V05 refreshers first. Otherwise, start here. Create a practice folder,
+          then <a href="audio_lab.py" download>download audio_lab.py</a> into it. If your browser displays the code, use Save As and keep the .py
+          extension. Open the terminal in that folder.
+        </p>
+        <pre><code>python3 audio_lab.py</code></pre>
+        <p>
+          On Windows, use <code>py -3 audio_lab.py</code> if that is how your Python installation runs. The program creates a new
+          <code>voice-lab-output</code> folder. Open its <code>report.html</code> in a browser. It includes audio controls, 20 ms waveform plots and
+          file measurements. No server is needed.
+        </p>
+        <p>If the output folder already exists, your work is preserved. Choose a new name:</p>
+        <pre><code>python3 audio_lab.py --output voice-lab-second-attempt</code></pre>
+        <p>
+          Start playback at a comfortable low volume. You can complete the comparisons using plots and measurements if you cannot or prefer not to
+          listen.
+        </p>
+        <h3>What the program does</h3>
+        <p>
+          It calculates sine waves, quantises them to signed 16-bit PCM and writes WAV headers. The DFT inspects only the first 400 samples of the
+          left channel. The program reads its own fixtures, creates no speech and makes no network requests.
+        </p>
+      </section>
+      <section id="tasks">
+        <h2>Return to this lab as you learn</h2>
+        <h3>V06 · Predict duration and size</h3>
+        <p>
+          For tone-200, predict duration and PCM payload from 16,000 frames, one channel and two bytes per sample. Repeat for stereo. Compare the
+          payload with the file size. Write the unit at every step.
+        </p>
+        <h3>V11 · Separate frequency and amplitude</h3>
+        <p>
+          Before inspecting the report, predict how tone-200, tone-400 and tone-200-quiet differ. Count the cycles in each 20 ms plot. Compare the
+          quiet and original signals using the same vertical axis. Inspect cancelled: it adds each sample to its exact negative.
+        </p>
+        <h3>V12 · Inspect the format</h3>
+        <p>
+          Write down rate, frame count, channel count, sample width and duration for mono and stereo. Open the metadata function in the source. Find
+          the calls that read the WAV header. Explain the difference between one audio frame and one scalar channel sample.
+        </p>
+        <h3>V15 · Connect a spectrum to a known signal</h3>
+        <p>
+          Predict bin spacing for 400 samples at 16 kHz. Which bins should contain 200 Hz and 400 Hz? Check the reported peak. Read dft and locate the
+          real and imaginary sums. Change WINDOW from 400 to 800 in a copy of the script and generate a new folder. The report updates the analysis
+          length and bin spacing. Predict the new bin numbers first. Our default report gives a spectrum summary, not a spectrogram; a full
+          changing-speech spectrogram belongs in your later ASR notebook.
+        </p>
+        <h3>V16 · Trace a filter</h3>
+        <p>
+          Inspect moving_average. Calculate its first four outputs for [2,4,0,2] by hand. Compare with a call to the function. Explain the zero
+          initial history and omitted tail. Compare filtered with tone-200; a mild low-frequency change does not mean the filter does nothing to other
+          frequencies.
+        </p>
+        <h3>V27 · Identify distortion</h3>
+        <p>
+          Compare clipped with tone-200 using the fixed-scale plots. Explain why the clipped waveform flattens near the digital limits. Compare
+          silence and cancelled: they sound alike here, but one was constructed directly and one by exact addition. Explain why this does not
+          demonstrate real-room echo cancellation.
+        </p>
+      </section>
+      <section id="answers">
+        <h2>Check the reasoning</h2>
+        <details>
+          <summary>Open after predicting and inspecting</summary>
+          <ul>
+            <li>
+              One second of mono PCM uses 32,000 payload bytes; stereo uses 64,000. These fixtures add a 44-byte WAV header. Both last one second.
+            </li>
+            <li>
+              At 200 Hz there are four cycles in 20 ms; at 400 Hz there are eight. The quiet tone has half the amplitude, the same frequency and the
+              same duration.
+            </li>
+            <li>
+              With N = 400, bin spacing is 40 Hz; the tone peaks are bins 5 and 10. With N = 800, spacing is 20 Hz and peaks are bins 10 and 20.
+            </li>
+            <li>The causal moving average gives [1,3,2,1] for [2,4,0,2]; full convolution would add a final 1.</li>
+            <li>
+              Clamping a 1.2-amplitude wave to the chosen full-scale range changes its shape. The cancelled file has zero samples because its inputs
+              are constructed exact opposites. Real microphone echo is delayed, filtered and mixed with other sound.
+            </li>
+          </ul>
+        </details>
+        <h3>Save evidence you can explain</h3>
+        <p>
+          Keep your predictions, measurements, one corrected mistake and your edited source file. In the studio notebook, save a short explanation
+          rather than audio. These fixtures teach audio representation; they do not demonstrate recognition, synthesis or real-world audio quality.
+        </p>
+        <p>
+          API reference: <a href="https://docs.python.org/3/library/wave.html">Python's wave module</a>. The lab uses long-established PCM methods and
+          does not require the newest Python-only floating-point WAV features.
+        </p>
+        <p><a href="portfolio.html#start">Next: build your portfolio alongside the lessons →</a></p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+---
+layout: null
+permalink: /voice-ai-studio/practice/portfolio.html
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Build toward expertise · Voice AI Studio</title>
+    <link rel="stylesheet" href="projects.css?v=20261103-2" />
+  </head>
+  <body>
+    <main>
+      <p><a href="../#home">← Voice AI Studio</a></p>
+      <h1>Build toward expertise</h1>
+      <p id="start">
+        Work through the lessons and build these projects alongside them. For each stage, explain the theory, produce something that works,
+        investigate a failure and get feedback. Watching videos and passing a short quiz are useful beginnings; expertise also needs substantial
+        independent work.
+      </p>
+      <nav aria-label="Project milestones">
+        <a href="#python">1 · Python</a><a href="audio-lab.html">2 · Audio</a><a href="#data">3 · Data</a><a href="#model-tools">Model tools</a
+        ><a href="#asr">4 · Recognition</a><a href="#tts">5 · Speech generation</a><a href="#integration">6 · Voice application</a
+        ><a href="#specialist">7 · Specialist depth</a>
+      </nav>
+      <p class="note">
+        The lesson order was revised on 3 November 2026. Existing notes and passes remain saved under their original topic IDs. These portfolio
+        projects need separate evidence: an older lesson pass does not mark a new project complete. Keep a local project folder and record a short
+        summary in My notebook. The studio does not run models or grade your external projects.
+      </p>
+      <section id="python">
+        <h2>1 · Write a small program you understand</h2>
+        <p>
+          If you already use Python comfortably, treat this as an optional readiness check and continue to the audio lab. Otherwise, use the optional
+          V02–V05 lessons and build a command-line program that reads a JSON event file, validates durations and reports speech, silence, other and
+          total milliseconds. Use the functions you wrote in the lessons.
+        </p>
+        <ol>
+          <li>Create a folder with events.json, your Python file and a README explaining the command.</li>
+          <li>Start with speech 120 ms, silence 50 ms and speech 80 ms. Predict the results before running.</li>
+          <li>
+            Add an empty list, one event, an unknown kind, a missing duration and a negative duration. Decide and document whether unknown kinds go
+            into other or are rejected.
+          </li>
+          <li>Separate file reading from calculation so you can test the function using supplied lists.</li>
+          <li>Save your work in Git, then follow the README from a new practice folder.</li>
+        </ol>
+        <p>
+          Check: speech 200 ms, silence 50 ms, total 250 ms, other 0 for the first fixture. Invalid durations produce a clear error. Keep the program,
+          fixtures and expected-output notes. Explain why these supplied labels do not make the program a speech detector.
+        </p>
+        <h3>2 · Inspect and change actual audio</h3>
+        <p>
+          After V06 and V11–V16 in curriculum order, complete the <a href="audio-lab.html">local audio lab</a>. Keep the report, your predictions and
+          a modified version. Explain frequency, level, channels, sample rate, filter boundaries and spectral window choices without relying on the
+          labels in the answer sheet.
+        </p>
+      </section>
+      <section id="data">
+        <h2>3 · Prepare data before choosing a model</h2>
+        <p>
+          Start with V10, then complete V20 before using a speech dataset. Create a manifest validator and a one-page data card for your intended
+          task.
+        </p>
+        <ol>
+          <li>Define the task: for example, transcribing short public-information questions in one language.</li>
+          <li>
+            Choose a dataset whose audio and annotations permit your intended use. Read its dataset card, licence, access restrictions and speaker
+            information. Keep the rights reference; an accessible download is insufficient by itself.
+          </li>
+          <li>
+            Record clip ID, local path, language, speaker/session groups where available, format, transcript policy, rights reference and split.
+          </li>
+          <li>
+            Check missing fields, duplicate content and your grouping rule. If the dataset does not identify speakers, state that limitation rather
+            than claiming an unseen-speaker split.
+          </li>
+          <li>
+            Make a small development selection and keep a separate final selection. Choose settings using development material. Preserve original
+            references and document any text normalisation.
+          </li>
+        </ol>
+        <p>
+          Your validator should reject the deliberately malformed rows from V20 and flag a speaker crossing a split when your design requires unseen
+          speakers. A data card should explain what the material covers, what it excludes and what claims remain unsupported. Keep private recordings
+          and transcripts outside the studio notebook.
+        </p>
+      </section>
+      <section id="model-tools">
+        <h2>Bridge · Learn the tools before the speech notebooks</h2>
+        <p>
+          After V17–V19, learn NumPy arrays and PyTorch tensors. A tensor library performs the same kinds of operations you traced by hand, with more
+          dimensions and automatic differentiation. Do not skip this bridge if the model examples are hard to read.
+        </p>
+        <ol>
+          <li>
+            Use <a href="https://numpy.org/doc/stable/user/absolute_beginners.html">NumPy's beginner guide</a> for array creation, shape, indexing,
+            slicing, axes and basic operations. Recreate V07's matrix calculation and explain the difference between elementwise multiplication and
+            matrix multiplication.
+          </li>
+          <li>
+            Follow <a href="https://docs.pytorch.org/tutorials/beginner/basics/intro.html">PyTorch Learn the Basics</a> through tensors,
+            datasets/loaders, model construction, automatic differentiation, optimisation and saving/loading. Work through the tutorial exercises in
+            your own environment before adapting a speech model.
+          </li>
+          <li>
+            Recreate V18's positive scalar case with tensors and automatic differentiation. Compare the gradients with your hand calculation. Explain
+            which values are parameters and when gradients are cleared.
+          </li>
+          <li>
+            In a project-specific virtual environment, follow the official installation instructions for your actual operating system and device.
+            Learn CPU versus accelerator placement and integer versus floating-point types.
+          </li>
+          <li>
+            Save Python and package versions, hardware, the exact model identifier/revision and the data revision. Follow the
+            <a href="https://huggingface.co/docs/datasets/audio_load">current audio-loading documentation</a> if an older course's decoding example
+            differs from the installed library.
+          </li>
+        </ol>
+        <p>
+          Read a notebook before running all its cells. Local pretrained models download weights and need disk space and compute. Hosted notebooks or
+          services may transmit data and charge for resources. Choose the environment and budget deliberately; the studio does not start those jobs.
+          No particular hardware purchase is required by this guide.
+        </p>
+      </section>
+      <section id="asr">
+        <h2>4 · Build a recogniser and explain its mistakes</h2>
+        <p>
+          Begin after V20 and V23 plus the model-tools bridge. Finish V25 before interpreting the results. Use the
+          <a href="https://huggingface.co/learn/audio-course/en/chapter2/asr_pipeline">official introductory ASR walkthrough</a> to understand the
+          data-to-transcript path, with the <a href="https://huggingface.co/docs/transformers/tasks/asr">current ASR documentation</a> for supported
+          APIs. Course examples may use older package behaviour; preserve your working setup rather than silently mixing versions.
+        </p>
+        <ol>
+          <li>
+            Use a small, permissioned development selection from your manifest. Ten short clips are enough for this first debugging exercise; they are
+            not enough to establish broad accuracy.
+          </li>
+          <li>
+            Choose an explicit model checkpoint and revision appropriate to the language. Read its model card and hardware/input requirements. Do not
+            rely on a changing default model.
+          </li>
+          <li>
+            Inspect one decoded waveform and make a labelled waveform plot and spectrogram using documented audio/plotting tools. Confirm sample rate,
+            channel handling, duration and feature settings. Explain the plot's axes before inference.
+          </li>
+          <li>
+            Run one example using the official recipe in your chosen environment. Save the actual raw output and settings. Distinguish download/setup
+            time from inference time.
+          </li>
+          <li>
+            Process your development clips and align the outputs with references using V25's text rules. Keep substitutions, deletions, insertions and
+            reference-word counts. Inspect names, numbers, negations and unsupported completions separately.
+          </li>
+          <li>
+            Freeze your chosen configuration before inspecting the final selection. Save its outputs without tuning on them. Report the small sample
+            and any speaker/session limits.
+          </li>
+          <li>
+            Write a short diagnosis of at least two actual failures. If no failure appears in this small set, say so and explain what remains
+            untested; do not invent results.
+          </li>
+        </ol>
+        <p>
+          Keep: a runnable notebook/script, environment record, rights-aware manifest, plots, saved raw transcripts, alignment table and limitations.
+          A reviewer should be able to inspect a wrong word against the audio and follow your counts. For advanced work, continue the
+          speech-recognition units and model-training material after the relevant maths and tool prerequisites; a pipeline call alone does not
+          demonstrate modelling expertise.
+        </p>
+      </section>
+      <section id="tts">
+        <h2>5 · Generate speech and check what it says</h2>
+        <p>
+          After V28–V31, use the
+          <a href="https://huggingface.co/learn/audio-course/en/chapter6/pre-trained_models">official pretrained TTS walkthrough</a> to implement a
+          documented model in a separate project environment. Use a voice whose permitted use covers this task. Do not assume a model or speaker
+          embedding licence grants unrestricted imitation rights.
+        </p>
+        <ol>
+          <li>
+            Create your own eight non-sensitive test sentences: ordinary information, a name, a date, a time, an abbreviation, an identifier with
+            leading zeros, a question and a longer sentence.
+          </li>
+          <li>
+            Write the intended spoken form before generating. Fix the language and locale, and use structured fields for ambiguous dates and
+            identifiers.
+          </li>
+          <li>
+            Record the checkpoint/revision, text processing, voice source/permission, generation settings, sample rate and any vocoder. Check feature
+            compatibility, not just feature dimensions.
+          </li>
+          <li>
+            Generate the outputs using the official recipe. Save input text and actual output files locally. Listen or obtain appropriate
+            transcription feedback; a spectrum alone cannot establish that the words are correct.
+          </li>
+          <li>
+            For each output, separately record content omissions/repetitions, pronunciation issues, intelligibility and naturalness impressions. Do
+            not turn one personal impression into a population MOS result.
+          </li>
+          <li>Fix one clearly identified issue and repeat that case, preserving both versions. Document exactly what changed.</li>
+        </ol>
+        <p>
+          Keep: the working implementation, sentence list, authorised voice record, actual output files and a review table. Explain the model's
+          alignment and waveform path. A larger listener study or voice adaptation project needs its own appropriate permissions, protocol and
+          resources.
+        </p>
+      </section>
+      <section id="integration">
+        <h2>6 · Build a complete, useful voice application</h2>
+        <p>
+          After V32–V40 and the controller workshop in V43, connect your recogniser and synthesiser to a read-only information assistant. A sensible
+          first version answers opening-hour questions from a small versioned local document. Use the
+          <a href="https://huggingface.co/learn/audio-course/en/chapter7/introduction">official integration examples</a> for architecture ideas, then
+          implement a deliberately small task you can explain.
+        </p>
+        <ol>
+          <li>
+            Complete the <a href="capstone-contract.txt">controller contract</a> with synthetic events. Preserve its stale-generation,
+            current-proposal and duplicate-operation checks.
+          </li>
+          <li>
+            Connect recorded input and real ASR output. Show the transcript, reply text and actual spoken output. Start with push-to-talk or an
+            explicit done control before adding automatic endpointing.
+          </li>
+          <li>
+            Use a fixed source and a simple local response rule first. Add retrieval or a chosen language model only when it helps the task, while
+            keeping source provenance and tool validation in application code.
+          </li>
+          <li>
+            Add live microphone capture in your local application with an explicit permission step. Display recording status and a persistent stop
+            control. Keep text entry and visible replies available.
+          </li>
+          <li>
+            Make cancellation stop queued playback and reject late results. Test pause/continuation, repeated clicks, interruption, missing source
+            information, a service failure and switching to text.
+          </li>
+          <li>
+            Record the last input sample, endpoint decision, recognition completion, tool completion and first audible output in appropriate clock
+            domains. Explain overlap, queueing and any timing you cannot observe reliably.
+          </li>
+          <li>
+            Write an operating note covering secrets, data retention, resource limits, supported language, failure messages and how to disable the
+            service.
+          </li>
+        </ol>
+        <p>
+          Keep: working source and setup instructions, a demonstration using non-sensitive material, event traces, a keyboard walkthrough and an
+          honest failure log. Distinguish this real audio integration from the simulated controller. Begin with read-only work; reservation writes
+          need separate persistent authentication, authorisation, transaction and idempotency implementation. A speaking demo is not evidence those
+          write protections exist.
+        </p>
+      </section>
+      <section id="specialist">
+        <h2>7 · Develop specialist depth</h2>
+        <p>
+          After V42–V44 and the earlier projects, choose a specialism. Plan substantial work over months, with the time depending on your background,
+          available study hours and feedback. There is no fixed number of daily lessons that guarantees expertise.
+        </p>
+        <h3>What you should be able to demonstrate</h3>
+        <ul>
+          <li>
+            <strong>Explain:</strong> derive important calculations, state assumptions and connect the equations to samples, features or events.
+          </li>
+          <li><strong>Implement:</strong> build a small important component yourself and use a full model or system correctly.</li>
+          <li><strong>Investigate:</strong> identify why an actual failure occurred and support the diagnosis with saved evidence.</li>
+          <li><strong>Compare:</strong> choose meaningful baselines, independent data and appropriate outcome measures.</li>
+          <li><strong>Defend and revise:</strong> get informed criticism and improve the implementation and claims.</li>
+        </ul>
+        <h3>Choose a project with real technical depth</h3>
+        <ul>
+          <li>
+            <strong>Recognition:</strong> implement a small CTC path/forward calculation, then adapt a documented recogniser to a bounded,
+            permissioned task. Compare with a frozen baseline and analyse real errors.
+          </li>
+          <li>
+            <strong>Synthesis/codecs:</strong> implement duration expansion or toy residual quantisation, then study a documented speech model or
+            codec with actual audio and separately justified fidelity/quality measures.
+          </li>
+          <li>
+            <strong>Signal processing:</strong> implement framing, STFT and a simple filter, then study enhancement or array processing with known
+            targets and appropriate real-speech evidence.
+          </li>
+          <li>
+            <strong>Interaction/systems:</strong> build a streaming assistant, inspect interruptions and overload, and compare a clearly specified
+            policy change without silently changing other conditions.
+          </li>
+        </ul>
+        <p>
+          Use the full problem sets and project work linked in the curriculum to repair mathematical gaps.
+          <a href="https://web.stanford.edu/class/cs224s/">Stanford CS224S</a> illustrates university-level speech work and prerequisites; its course
+          recordings may require enrolment. The
+          <a href="https://huggingface.co/learn/audio-course/en/chapter0/introduction">Hugging Face Audio Course</a> provides practical speech-model
+          study and expects prior deep-learning preparation. Neither public resource makes this studio an accredited programme.
+        </p>
+        <h3>Get an independent review</h3>
+        <p>
+          Ask an experienced speech engineer, researcher or suitable mentor to review the question, code, mathematical explanation, data boundaries,
+          actual outputs and failure analysis. Record what they challenged and how you responded. If that feedback is still missing, mark it as
+          missing. A course progress bar cannot supply it.
+        </p>
+        <p>
+          Finish with an original proposal that distinguishes prior work, your completed evidence and the next unresolved question. Broad
+          understanding plus repeated, well-reviewed specialist projects is a credible direction toward expertise; completing 44 introductions alone
+          is not a master's degree, a PhD or proof of expert competence.
+        </p>
+      </section>
+      <p><a href="../#path">Return to your curriculum →</a></p>
+    </main>
+  </body>
+</html>

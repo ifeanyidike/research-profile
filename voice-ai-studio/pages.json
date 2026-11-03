@@ -56,7 +56,7 @@
   },
   "method": {
     "title": "How to learn here",
-    "lead": "Build an explanation you can defend, then practise, assess and revisit it.",
+    "lead": "Study the theory and build useful systems together. Use the project milestones to turn lesson knowledge into evidence of skill.",
     "sections": [
       {
         "title": "Work through one idea at a time",
@@ -64,8 +64,24 @@
         "links": []
       },
       {
+        "title": "Build toward expertise alongside the lessons",
+        "text": "The main route has 40 topics. V02–V05 are four optional Python and tooling refreshers. If you already use functions, loops, JSON, imports, exceptions and a terminal comfortably, skip them. Review any unfamiliar skill when a later task needs it. Your saved notes and passes remain attached to their original IDs.\n\nAlongside the main lessons, complete the actual-audio lab, dataset checks, recogniser, speech generator, integrated application and specialist work. The Python project is useful for beginners or as a quick readiness check. Portfolio milestones need their own evidence.",
+        "links": [
+          {
+            "label": "Portfolio projects and expertise milestones",
+            "url": "practice/portfolio.html",
+            "assignment": "Start with the first project and return as you reach its named prerequisites."
+          },
+          {
+            "label": "Local audio lab",
+            "url": "practice/audio-lab.html",
+            "assignment": "Create and inspect eight known WAV fixtures with Python, without a model or audio upload."
+          }
+        ]
+      },
+      {
         "title": "Use the sources and take the time the topic needs",
-        "text": "In Watch & read, follow the topic-specific sections and viewing times. Connect each source to the native example rather than treating viewing as the whole task. Check every pass criterion before recording your judgement. A short clip or one correct quiz answer is not a complete topic. Advanced readings and projects may need several sessions or weeks.",
+        "text": "In Watch & read, follow the topic-specific sections and viewing times. Connect each source to the worked example rather than treating viewing as the whole task. Check every pass criterion before recording your judgement. A short clip or one correct quiz answer is not a complete topic. Advanced readings and projects may need several sessions or weeks.",
         "links": []
       },
       {
@@ -106,12 +122,12 @@
       },
       {
         "title": "Depth and limits",
-        "text": "The final stages introduce graduate-level concepts and research preparation. Short native lessons do not replace full courses in calculus, linear algebra, probability, signal processing and machine learning. Follow the linked depth material and complete substantial projects with appropriate feedback.",
+        "text": "Keep theory and implementation together. The course includes gradients, probability, Fourier analysis, alignment, attention, speech architectures and system design. Where the bridge is too short for you, use the full linked course and its problem sets.\n\nFor expertise, you also need substantial real speech projects, debugging and criticism from people who understand the field. Choose a specialism and demonstrate depth there while retaining working knowledge of the rest.",
         "links": []
       },
       {
         "title": "How long the route takes",
-        "text": "There are 44 topics. At one fully completed topic per day, the sequence is 44 study days. Watching a short clip is not a complete topic: readings, exercises and assessment can require several sessions, especially in maths and advanced work. Delayed review and deeper projects add time; the calendar count is not a mastery promise.",
+        "text": "There are 40 main topics plus four optional Python refreshers. One main topic per day gives 40 study days for a first pass. Some topics need several sessions for readings, exercises and independent reasoning. Speech-model projects, the integrated app, specialist problem sets and feedback add substantial time. This calendar count does not promise expertise in 40 days.",
         "links": []
       },
       {
