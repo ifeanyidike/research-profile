@@ -7,11 +7,13 @@ export function createTextEditor({
   error: initialError = "",
   canSave = () => true,
   waiting: initialWaiting = false,
+  retained: initialRetained = false,
 }) {
   let snapshot = { ...base },
     value = draft ?? base.value,
     error = initialError,
-    waiting = initialWaiting;
+    waiting = initialWaiting,
+    retained = initialRetained;
   const moved = () => {
     const saved = read();
     return saved.changed !== snapshot.changed || saved.value !== snapshot.value;
@@ -32,6 +34,9 @@ export function createTextEditor({
     get waiting() {
       return waiting;
     },
+    get retained() {
+      return retained;
+    },
     input(next) {
       value = next;
       error = "";
@@ -41,7 +46,10 @@ export function createTextEditor({
         return false;
       }
       waiting = false;
-      if (moved()) return false;
+      if (moved()) {
+        retained = true;
+        return false;
+      }
       try {
         write(next);
       } catch (failure) {
@@ -49,6 +57,7 @@ export function createTextEditor({
         throw failure;
       }
       snapshot = { ...read() };
+      retained = false;
       return true;
     },
     refresh(displayed = value) {
@@ -65,6 +74,10 @@ export function createTextEditor({
         if (moved()) return false;
         return this.input(value);
       }
+      if (retained && moved()) {
+        value = displayed;
+        return false;
+      }
       if (displayed !== snapshot.value) {
         value = displayed;
         return !moved();
@@ -78,6 +91,7 @@ export function createTextEditor({
       value = snapshot.value;
       error = "";
       waiting = false;
+      retained = false;
     },
     keepDraft() {
       snapshot = { ...read() };
@@ -99,7 +113,7 @@ export function createTextFields() {
       el.removeAttribute("aria-invalid");
       return;
     }
-    drafts.set(key, { draft: editor.value, base: editor.base, error, waiting: editor.waiting });
+    drafts.set(key, { draft: editor.value, base: editor.base, error, waiting: editor.waiting, retained: editor.retained });
     el.setAttribute("aria-invalid", "true");
     if (!binding.notice) {
       const doc = el.ownerDocument,
@@ -123,6 +137,7 @@ export function createTextFields() {
       use.addEventListener("click", () => {
         editor.useSaved();
         el.value = editor.value;
+        binding.updated?.(el);
         paint(binding);
         writeHint("Saved text loaded.");
         el.focus();
@@ -140,7 +155,7 @@ export function createTextFields() {
       box.append(message, details, use, keep);
       binding.notice = box;
       binding.parts = { message, saved, keep };
-      el.insertAdjacentElement("afterend", box);
+      (binding.anchor || el).insertAdjacentElement("afterend", box);
     }
     const message = error
       ? `Your draft has not been saved: ${error}${/[.!?]$/.test(error) ? "" : "."} Correct it here, or use the saved text.`
@@ -165,17 +180,33 @@ export function createTextFields() {
         .filter(([owner]) => owner === scope)
         .map(([, topic, field]) => ({ topic, field }));
     },
-    bind(root, { scope, topic, read, write, hint = () => {}, canSave = () => true }) {
+    bind(
+      root,
+      {
+        scope,
+        topic,
+        read,
+        write,
+        hint = () => {},
+        canSave = () => true,
+        selector = "[data-field]",
+        dataKey = "field",
+        updated = () => {},
+        anchor = (el) => el,
+        protectFocused = false,
+      }
+    ) {
       bindings = [];
-      for (const el of root.querySelectorAll("[data-field]")) {
-        const field = el.dataset.field,
+      for (const el of root.querySelectorAll(selector)) {
+        const field = el.dataset[dataKey],
           key = JSON.stringify([scope, topic, field]);
         const prior = drafts.get(key);
         const editor = createTextEditor({ read: () => read(field), write: (value) => write(field, value), canSave, ...prior });
-        const binding = { el, editor, key, writeHint: hint };
+        const binding = { el, editor, key, writeHint: hint, updated, anchor: anchor(el), protectFocused };
         bindings.push(binding);
         // Set the DOM value directly; HTML parsing substitutes null characters.
         el.value = editor.value;
+        updated(el);
         if (prior) {
           try {
             paint(binding, !editor.refresh(el.value));
@@ -201,8 +232,13 @@ export function createTextFields() {
           start = b.el.selectionStart,
           end = b.el.selectionEnd;
         try {
-          if (b.editor.refresh(b.el.value)) {
+          const base = b.editor.base,
+            saved = b.editor.saved;
+          const moved = saved.changed !== base.changed || saved.value !== base.value;
+          const ok = focused && b.protectFocused && moved && b.el.value !== saved.value ? b.editor.input(b.el.value) : b.editor.refresh(b.el.value);
+          if (ok) {
             b.el.value = b.editor.value;
+            b.updated?.(b.el);
             paint(b);
             if (focused) b.el.setSelectionRange(Math.min(start, b.el.value.length), Math.min(end, b.el.value.length));
           } else paint(b, true);

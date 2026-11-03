@@ -56,3 +56,19 @@ test("many background updates wait for one focus exit without multiplying listen
   queue.shift()();
   assert.equal(renders, 3);
 });
+
+test("programmatic focus on the main container does not hide an incoming notebook update", () => {
+  const listeners = {};
+  let renders = 0;
+  const root = {
+    ownerDocument: { addEventListener() {} },
+    addEventListener: (name, fn) => {
+      listeners[name] = fn;
+    },
+    contains: (node) => node === root,
+  };
+  root.ownerDocument.activeElement = root;
+  const refresh = createViewRefresh(root, () => renders++);
+  refresh.request();
+  assert.equal(renders, 1);
+});

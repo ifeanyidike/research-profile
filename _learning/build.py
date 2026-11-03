@@ -1,5 +1,6 @@
 """Offline packaging only: no third-party imports, network or model calls."""
 import json
+import re
 import hashlib
 import sys
 from pathlib import Path
@@ -80,6 +81,27 @@ def build(check=False):
                 for m in modules:
                     if track in m['tracks']:
                         assert all(track in lookup[p]['tracks'] for p in m['prerequisites']), (track,m['id'])
+        if subject == 'voice':
+            workspaces = {}
+            for topic, lesson in lessons.items():
+                g = lesson['guide']
+                if g['example_format'] == 'python':
+                    workspaces[topic+':example'] = {'lesson':topic, 'editor':'example', 'tab':'learn', 'label':'Worked example', 'code':g['example']}
+                for field, tab in [('teaching','learn'),('solution','practice'),('challenge_solution','assess')]:
+                    for match in re.finditer(r'^```python(?: id=([a-z][a-z0-9-]{0,47}))?\n([\s\S]*?)^```[ \t]*$', g[field], re.M):
+                        assert match[1], topic+' needs a stable Python editor ID'
+                        key = topic+':'+match[1]
+                        assert key not in workspaces, 'Duplicate Python editor: '+key
+                        workspaces[key] = {'lesson':topic, 'editor':match[1], 'tab':tab, 'label':match[1].replace('-',' '), 'code':match[2].rstrip('\n')}
+            for m in modules:
+                key = m['id']+':practice'
+                workspaces[key] = {'lesson':m['id'], 'editor':'practice', 'tab':'practice', 'label':'Your practice code', 'code':'# '+m['id']+' practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n'}
+            expected = {'editors':workspaces, 'files':{'V04':{'events.json':'[{"duration_ms":20},{"duration_ms":35}]'}}}
+            path = dest/'python-workspaces.json'
+            if check:
+                assert json.loads(path.read_text()) == expected, 'Python workspace map is stale'
+            else:
+                path.write_text(json.dumps(expected, ensure_ascii=False, indent=2)+'\n')
         curriculum = {'reviewed':data.get('clarity_reviewed', '31 October 2026'), 'modules':modules}
         for name, expected in [('curriculum.json', curriculum), ('lessons.json', lessons)]:
             if check:

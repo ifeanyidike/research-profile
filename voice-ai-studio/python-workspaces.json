@@ -1,0 +1,380 @@
+{
+  "editors": {
+    "V02:example": {
+      "lesson": "V02",
+      "editor": "example",
+      "tab": "learn",
+      "label": "Worked example",
+      "code": "# Run here, or save as duration.py for Python 3.\ndef duration_seconds(samples, rate):\n    if samples < 0 or rate <= 0:\n        raise ValueError(\n            \"Expected non-negative samples and positive rate\"\n        )\n    return samples / rate\n\nseconds = duration_seconds(32000, 16000)\nprint(seconds)                 # 2.0\nprint(duration_seconds(0, 16000))  # 0.0"
+    },
+    "V02:milliseconds": {
+      "lesson": "V02",
+      "editor": "milliseconds",
+      "tab": "practice",
+      "label": "milliseconds",
+      "code": "def milliseconds(samples, rate):\n    return duration_seconds(samples, rate) * 1000\n\nprint(milliseconds(8000, 16000))  # 500.0"
+    },
+    "V02:remaining-seconds": {
+      "lesson": "V02",
+      "editor": "remaining-seconds",
+      "tab": "assess",
+      "label": "remaining seconds",
+      "code": "def remaining_seconds(total_samples, consumed_samples, rate):\n    if consumed_samples < 0 or consumed_samples > total_samples:\n        raise ValueError(\"consumed count is outside the total\")\n    return duration_seconds(total_samples - consumed_samples, rate)\n\nprint(remaining_seconds(32000, 8000, 16000))  # 1.5\n# Run separately as a rejected case:\n# remaining_seconds(32000, 40000, 16000)"
+    },
+    "V03:example": {
+      "lesson": "V03",
+      "editor": "example",
+      "tab": "learn",
+      "label": "Worked example",
+      "code": "def speech_ms(events):\n    total = 0\n    for event in events:\n        duration = event[\"duration_ms\"]\n        if duration < 0:\n            raise ValueError(\"Negative duration\")\n        if event[\"kind\"] == \"speech\":\n            total += duration\n    return total\n\nevents = [\n    {\"kind\": \"speech\", \"duration_ms\": 120},\n    {\"kind\": \"silence\", \"duration_ms\": 50},\n    {\"kind\": \"speech\", \"duration_ms\": 80},\n]\nprint(speech_ms(events))  # 200"
+    },
+    "V03:total-duration": {
+      "lesson": "V03",
+      "editor": "total-duration",
+      "tab": "practice",
+      "label": "total duration",
+      "code": "def total_ms(events):\n    total = 0\n    for event in events:\n        duration = event[\"duration_ms\"]\n        if duration < 0:\n            raise ValueError(\"Negative duration\")\n        total += duration\n    return total"
+    },
+    "V03:event-summary": {
+      "lesson": "V03",
+      "editor": "event-summary",
+      "tab": "assess",
+      "label": "event summary",
+      "code": "def summary(events):\n    totals = {\"speech_ms\": 0, \"silence_ms\": 0, \"other_ms\": 0}\n    for event in events:\n        duration = event[\"duration_ms\"]\n        if duration < 0:\n            raise ValueError(\"Negative duration\")\n        if event[\"kind\"] == \"speech\":\n            key = \"speech_ms\"\n        elif event[\"kind\"] == \"silence\":\n            key = \"silence_ms\"\n        else:\n            key = \"other_ms\"\n        totals[key] += duration\n    return totals"
+    },
+    "V04:example": {
+      "lesson": "V04",
+      "editor": "example",
+      "tab": "learn",
+      "label": "Worked example",
+      "code": "import json\n\ndef total_ms(events):\n    result = 0\n    for event in events:\n        value = event[\"duration_ms\"]\n        if type(value) is not int or value < 0:\n            raise ValueError(\n                \"duration_ms must be a non-negative integer\"\n            )\n        result += value\n    return result\n\ndata = json.loads('[{\"duration_ms\": 20}, {\"duration_ms\": 35}]')\nassert total_ms(data) == 55\nassert total_ms([]) == 0\nassert total_ms([{\"duration_ms\": 20}, {\"duration_ms\": 35}]) == 55\ntry:\n    total_ms([{\"duration_ms\": -1}])\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError(\"Negative duration was accepted\")"
+    },
+    "V04:read-json": {
+      "lesson": "V04",
+      "editor": "read-json",
+      "tab": "practice",
+      "label": "read json",
+      "code": "with open(\"events.json\", encoding=\"utf-8\") as f:\n    saved = json.load(f)\nassert total_ms(saved) == 55"
+    },
+    "V04:validate-events": {
+      "lesson": "V04",
+      "editor": "validate-events",
+      "tab": "assess",
+      "label": "validate events",
+      "code": "def total_ms(events):\n    if not isinstance(events, list):\n        raise ValueError(\"events must be a list\")\n    result = 0\n    for event in events:\n        if not isinstance(event, dict) or \"duration_ms\" not in event:\n            raise ValueError(\"event needs duration_ms\")\n        value = event[\"duration_ms\"]\n        if type(value) is not int or value < 0:\n            raise ValueError(\n                \"duration_ms must be a non-negative integer\"\n            )\n        result += value\n    return result\n\nassert total_ms([]) == 0\nassert total_ms([{\"duration_ms\": 20}, {\"duration_ms\": 35}]) == 55\nfor invalid in [{}, [7], [{}]]:\n    try:\n        total_ms(invalid)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(\"Invalid event shape was accepted\")"
+    },
+    "V01:practice": {
+      "lesson": "V01",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V01 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V02:practice": {
+      "lesson": "V02",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V02 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V03:practice": {
+      "lesson": "V03",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V03 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V04:practice": {
+      "lesson": "V04",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V04 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V05:practice": {
+      "lesson": "V05",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V05 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V06:practice": {
+      "lesson": "V06",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V06 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V11:practice": {
+      "lesson": "V11",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V11 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V12:practice": {
+      "lesson": "V12",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V12 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V13:practice": {
+      "lesson": "V13",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V13 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V14:practice": {
+      "lesson": "V14",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V14 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V07:practice": {
+      "lesson": "V07",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V07 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V15:practice": {
+      "lesson": "V15",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V15 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V16:practice": {
+      "lesson": "V16",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V16 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V08:practice": {
+      "lesson": "V08",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V08 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V09:practice": {
+      "lesson": "V09",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V09 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V10:practice": {
+      "lesson": "V10",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V10 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V17:practice": {
+      "lesson": "V17",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V17 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V18:practice": {
+      "lesson": "V18",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V18 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V19:practice": {
+      "lesson": "V19",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V19 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V20:practice": {
+      "lesson": "V20",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V20 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V21:practice": {
+      "lesson": "V21",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V21 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V22:practice": {
+      "lesson": "V22",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V22 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V23:practice": {
+      "lesson": "V23",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V23 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V24:practice": {
+      "lesson": "V24",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V24 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V25:practice": {
+      "lesson": "V25",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V25 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V26:practice": {
+      "lesson": "V26",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V26 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V27:practice": {
+      "lesson": "V27",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V27 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V28:practice": {
+      "lesson": "V28",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V28 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V29:practice": {
+      "lesson": "V29",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V29 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V30:practice": {
+      "lesson": "V30",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V30 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V31:practice": {
+      "lesson": "V31",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V31 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V32:practice": {
+      "lesson": "V32",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V32 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V33:practice": {
+      "lesson": "V33",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V33 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V34:practice": {
+      "lesson": "V34",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V34 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V35:practice": {
+      "lesson": "V35",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V35 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V36:practice": {
+      "lesson": "V36",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V36 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V37:practice": {
+      "lesson": "V37",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V37 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V38:practice": {
+      "lesson": "V38",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V38 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V39:practice": {
+      "lesson": "V39",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V39 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V40:practice": {
+      "lesson": "V40",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V40 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V41:practice": {
+      "lesson": "V41",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V41 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V42:practice": {
+      "lesson": "V42",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V42 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V43:practice": {
+      "lesson": "V43",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V43 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V44:practice": {
+      "lesson": "V44",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V44 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    }
+  },
+  "files": {
+    "V04": {
+      "events.json": "[{\"duration_ms\":20},{\"duration_ms\":35}]"
+    }
+  }
+}

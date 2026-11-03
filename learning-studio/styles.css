@@ -2257,3 +2257,73 @@ mjx-container:focus-visible {
   min-height: 0;
   height: 100%;
 }
+.code-execution {
+  padding: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+.code-run-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0.7rem 0;
+}
+.code-run-bar span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.code-run-bar [data-code-action="run"] {
+  background: var(--pine);
+  color: var(--surface);
+  font-weight: 650;
+}
+.studio-code-editor .code-run-output,
+.studio-code-editor .code-setup-output pre,
+.studio-code-editor .code-recovery pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 20rem;
+  overflow: auto;
+  padding: 0.8rem;
+  background: var(--soft);
+}
+.studio-code-editor .run-error {
+  border-left: 3px solid var(--orange);
+}
+.studio-code-editor .code-save-status {
+  padding: 0.5rem 0.8rem;
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.code-stdin summary,
+.code-setup-output summary,
+.code-recovery summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.studio-code-editor .code-stdin-value {
+  white-space: pre-wrap;
+  resize: vertical;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  width: 100%;
+  min-height: 5rem;
+  padding: 0.5rem;
+}
+.code-recovery {
+  padding: 0.7rem;
+  border-top: 1px solid var(--line);
+}
+.code-save-status:empty {
+  display: none;
+}
+.python-practice-workspace {
+  margin: 1.4rem 0;
+}
+.python-practice-workspace > summary {
+  cursor: pointer;
+  font-weight: 650;
+  padding: 0.8rem 0;
+}

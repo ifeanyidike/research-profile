@@ -1,19 +1,23 @@
-export function createModel(slug) {
+export function createModel(slug, { codeOnly = false } = {}) {
   if (!["cyber-studio", "voice-ai-studio", "child-development-studio"].includes(slug)) throw Error("Unknown studio.");
-  const PREFIX = `${slug}:v1:`;
+  if (codeOnly && slug !== "voice-ai-studio") throw Error("Code storage is only configured for Voice AI.");
+  const PREFIX = codeOnly ? `${slug}:code:v1:` : `${slug}:v1:`;
+  const KIND = codeOnly ? `${slug}-python-code` : `${slug}-progress`;
   const PROFILES = ["ifeanyi", "partner"];
   const DEFAULT_NAMES = { ifeanyi: "Ifeanyi", partner: "Fav" };
-  const FIELDS = {
-    read: "boolean",
-    practice: "boolean",
-    passedAt: "number",
-    reviewAt: "number",
-    reviewStage: "number",
-    notes: "string",
-    evidence: "string",
-    assessment: "string",
-    resources: "string",
-  };
+  const FIELDS = codeOnly
+    ? { code: "string" }
+    : {
+        read: "boolean",
+        practice: "boolean",
+        passedAt: "number",
+        reviewAt: "number",
+        reviewStage: "number",
+        notes: "string",
+        evidence: "string",
+        assessment: "string",
+        resources: "string",
+      };
   const DAY = 86400000;
   const REVIEW_DAYS = [2, 7, 30];
   const MAX_FILE_DATE = Date.UTC(9999, 11, 31, 23, 59, 59, 999);
@@ -115,7 +119,7 @@ export function createModel(slug) {
     const data = JSON.parse(input);
     if (
       !plain(data) ||
-      data.kind !== `${slug}-progress` ||
+      data.kind !== KIND ||
       data.version !== 1 ||
       !plain(data.profile) ||
       !PROFILES.includes(data.profile.id) ||
@@ -244,7 +248,7 @@ export function createModel(slug) {
         const r = record(profile, id);
         if (Object.keys(r.values).length) lessons[id] = r;
       }
-      return { kind: `${slug}-progress`, version: 1, profile: { id: profile, name }, exportedAt: new Date(clock()).toISOString(), lessons };
+      return { kind: KIND, version: 1, profile: { id: profile, name }, exportedAt: new Date(clock()).toISOString(), lessons };
     }
     function backupPlan(profile, data) {
       const checked = parseBackup(JSON.stringify(data), ids);

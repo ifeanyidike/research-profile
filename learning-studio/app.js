@@ -1,17 +1,18 @@
-import { mainTopics, refresherTopics } from "./learning-path.js?v=20261103-2";
-import { renderCode, bindCodeEditors } from "./code-editor.js?v=20261103-2";
-import { createViewRefresh } from "./view-refresh.js?v=20261103-2";
-import { passCriteria } from "./lesson-sections.js?v=20261103-2";
-import { progressActions } from "./progress-actions.js?v=20261103-2";
-import { storageListener } from "./storage-events.js?v=20261103-2";
-import { lessonDetails, updateLessonDetails } from "./lesson-details.js?v=20261103-2";
-import { createTextFields, draftSummary } from "./text-fields.js?v=20261103-2";
-import { createAuthStorage } from "./auth-storage.js?v=20261103-2";
-import { math } from "./math.js?v=20261103-2";
-import { createModel } from "./model.js?v=20261103-2";
-import { Account } from "./account.js?v=20261103-2";
-import { resourceCards, assignmentSummary } from "./resources.js?v=20261103-2";
-import { renderProse as paragraphs } from "./prose.js?v=20261103-2";
+import { createCodeWorkspace } from "./code-workspace.js?v=20261103-3";
+import { mainTopics, refresherTopics } from "./learning-path.js?v=20261103-3";
+import { renderCode, bindCodeEditors } from "./code-editor.js?v=20261103-3";
+import { createViewRefresh } from "./view-refresh.js?v=20261103-3";
+import { passCriteria } from "./lesson-sections.js?v=20261103-3";
+import { progressActions } from "./progress-actions.js?v=20261103-3";
+import { storageListener } from "./storage-events.js?v=20261103-3";
+import { lessonDetails, updateLessonDetails } from "./lesson-details.js?v=20261103-3";
+import { createTextFields, draftSummary } from "./text-fields.js?v=20261103-3";
+import { createAuthStorage } from "./auth-storage.js?v=20261103-3";
+import { math } from "./math.js?v=20261103-3";
+import { createModel } from "./model.js?v=20261103-3";
+import { Account } from "./account.js?v=20261103-3";
+import { resourceCards, assignmentSummary } from "./resources.js?v=20261103-3";
+import { renderProse as paragraphs } from "./prose.js?v=20261103-3";
 import { syncConfig } from "../algo-studio/sync-config.js";
 export function startStudio(config) {
   document.documentElement.dataset.studio = config.slug;
@@ -39,6 +40,7 @@ export function startStudio(config) {
   let getWorkspace,
     store,
     account,
+    codeWorkspace,
     user = null,
     active = "ifeanyi",
     names = { ...DEFAULT_NAMES },
@@ -227,7 +229,7 @@ export function startStudio(config) {
     if (tab === "resources")
       body = resources(m) + `<div class="lesson-bottom"><a class="button" href="#lesson/${id}/practice">Put it into practice ↗</a></div>`;
     if (tab === "practice")
-      body = `<span class="eyebrow">MOVE FROM RECOGNITION TO SKILL</span><h2>Your practical exercise</h2><p>Work through the supplied example in Learn, then use the complete workshop below. Linked provider labs offer additional practice.</p>${practiceWorkshop(l)}${m.practice_links.length ? `<h3>Open the exercise material</h3><ol>${m.practice_links.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol>` : ""}<div class="callout"><strong>Before you begin</strong><p>${esc(config.practiceNote)}</p></div><label class="evidence"><strong>Your practice evidence</strong><span>Describe your method and results. Use fictional or synthetic material. Do not save personal recordings, child information, clinical records, passwords or confidential data.</span><textarea data-field="evidence" maxlength="20000" placeholder="Setup → prediction → observation → explanation…">${esc(r.evidence || "")}</textarea></label><p class="save-hint" role="status"></p><label><input type="checkbox" id="mark-practice" ${r.practice ? "checked" : ""}/> I completed the exercise and can explain the result</label><div class="lesson-bottom"><a class="button" href="#lesson/${id}/assess">Try the independent assessment ↗</a></div>`;
+      body = `<span class="eyebrow">MOVE FROM RECOGNITION TO SKILL</span><h2>Your practical exercise</h2><p>Work through the supplied example in Learn, then use the complete workshop below. Linked provider labs offer additional practice.</p>${practiceWorkshop(l)}${codeWorkspace?.practiceMarkup(id) || ""}${m.practice_links.length ? `<h3>Open the exercise material</h3><ol>${m.practice_links.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol>` : ""}<div class="callout"><strong>Before you begin</strong><p>${esc(config.practiceNote)}</p></div><label class="evidence"><strong>Your practice evidence</strong><span>Describe your method and results. Use fictional or synthetic material. Do not save personal recordings, child information, clinical records, passwords or confidential data.</span><textarea data-field="evidence" maxlength="20000" placeholder="Setup → prediction → observation → explanation…">${esc(r.evidence || "")}</textarea></label><p class="save-hint" role="status"></p><label><input type="checkbox" id="mark-practice" ${r.practice ? "checked" : ""}/> I completed the exercise and can explain the result</label><div class="lesson-bottom"><a class="button" href="#lesson/${id}/assess">Try the independent assessment ↗</a></div>`;
     if (tab === "assess")
       body = `<span class="eyebrow">SHOW WHAT YOU CAN DO WITHOUT A WALKTHROUGH</span><h2>Independent assessment</h2><div class="callout"><strong>Independent task</strong>${paragraphs(l.guide.challenge)}</div><details class="solution"><summary>Review the expected reasoning after your attempt</summary>${paragraphs(l.guide.challenge_solution)}</details>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}${passCriteria(m)}<h3>A quick retrieval check</h3>${quiz(l.check)}<label class="evidence"><strong>Your assessment evidence and explanation</strong><span>Record the independent result, how you checked it, and what remains uncertain. Aim for evidence another learner could review.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you build, solve, or demonstrate independently? How did you verify it?">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I reviewed every pass criterion and can defend my evidence</label><p class="fine-print">To record a pass: complete practice, assess the prerequisites, answer the retrieval check correctly in this session, review the criteria, and add at least 40 characters of assessment evidence. The hub records your judgement; it does not execute or grade external labs.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
     if (tab === "notes")
@@ -331,6 +333,8 @@ export function startStudio(config) {
       ? new Map([...$("#main").querySelectorAll("details[data-state-key]")].map((el) => [el.dataset.stateKey, el.open]))
       : null;
     if (!store || !modules.length) return;
+    codeWorkspace?.stop();
+    codeWorkspace?.select(user, active);
     viewRefresh.reset();
     quizPassed = null;
     const route = location.hash.slice(1).split("/"),
@@ -365,7 +369,7 @@ export function startStudio(config) {
             : view === "review"
               ? review()
               : view === "notebook"
-                ? notebook()
+                ? notebook() + (codeWorkspace?.notebook() || "")
                 : view === "method"
                   ? method()
                   : view === "certifications"
@@ -388,7 +392,9 @@ export function startStudio(config) {
         if (disclosures.has(el.dataset.stateKey)) el.open = disclosures.get(el.dataset.stateKey);
       }
     bindView(route);
-    bindCodeEditors($("#main"));
+    bindCodeEditors($("#main"), { runner: codeWorkspace?.runner, payload: codeWorkspace?.payload });
+    codeWorkspace?.bind($("#main"), route[1]);
+    codeWorkspace?.bindNotebook($("#main"), currentName());
     const mathRoots = [...$("#main").querySelectorAll(".lesson-body, .lesson-details, .source-map, .review-card")];
     math.typeset(mathRoots).catch((error) => {
       for (const root of mathRoots.filter((node) => node.isConnected)) {
@@ -403,6 +409,14 @@ export function startStudio(config) {
     if (focus) {
       $("#main").focus({ preventScroll: true });
       window.scrollTo(0, 0);
+    }
+    if (route[3]) {
+      const panel = [...$("#main").querySelectorAll("[data-code-id]")].find((el) => el.dataset.codeId === route[3]);
+      if (panel) {
+        for (let parent = panel.parentElement; parent && parent !== $("#main"); parent = parent.parentElement)
+          if (parent.tagName === "DETAILS") parent.open = true;
+        panel.scrollIntoView({ block: "center" });
+      }
     }
   }
   function bindView(route) {
@@ -619,6 +633,7 @@ export function startStudio(config) {
     });
     $("#sign-out")?.addEventListener("click", async () => {
       try {
+        await codeWorkspace?.flush();
         await account.signOut();
         $("#settings-status").textContent = "Signed out. The guest workspace is open.";
       } catch (e) {
@@ -656,6 +671,7 @@ export function startStudio(config) {
     if (location.hash.startsWith("#lesson/")) {
       refreshLessonContext();
       textFields.refresh();
+      codeWorkspace?.refresh();
       const hint = $("#remote-progress-note");
       if (hint) {
         hint.hidden = false;
@@ -672,9 +688,10 @@ export function startStudio(config) {
         fetch(`curriculum.json?v=${config.version}`),
         fetch(`lessons.json?v=${config.version}`),
         fetch(`pages.json?v=${config.version}`),
+        ...(config.pythonEnabled ? [fetch(`python-workspaces.json?v=${config.version}`)] : []),
       ]);
       if (responses.some((r) => !r.ok)) throw Error("The curriculum files could not be loaded.");
-      const [curriculum, content, certificateData] = await Promise.all(responses.map((r) => r.json()));
+      const [curriculum, content, certificateData, pythonData] = await Promise.all(responses.map((r) => r.json()));
       modules = curriculum.modules;
       lessons = content;
       pages = certificateData;
@@ -682,6 +699,8 @@ export function startStudio(config) {
       byId = Object.fromEntries(modules.map((m) => [m.id, m]));
       stages = [...new Set(modules.map((m) => m.stage))];
       getWorkspace = workspaceStores(storage, ids, Date.now, saveStatus);
+      if (config.pythonEnabled)
+        codeWorkspace = createCodeWorkspace({ storage, definitions: pythonData, parentAccount: () => account, changed: refreshIfIdle });
       selectUser(null);
       const theme = store.setting("theme", window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
       document.documentElement.dataset.theme = theme;
@@ -715,9 +734,14 @@ export function startStudio(config) {
         authStorage,
         reload: () => location.reload(),
         restartClient: createConnection,
-        confirmed: () => textFields.refresh(),
+        confirmed: () => {
+          textFields.refresh();
+          codeWorkspace?.reconfirm();
+        },
         identity: updateIdentity,
         canSignOut: () => {
+          if (codeWorkspace && !codeWorkspace.canSignOut())
+            throw Error("Copy or resolve unsaved Python drafts in their lessons before signing out. Python backups are in My notebook.");
           if (textFields.hasDraftsFor(`${user?.id || "guest"}:${active}`))
             throw Error("Open the unsaved drafts listed in My notebook, then copy or resolve them before signing out.");
           return true;
@@ -913,7 +937,7 @@ export function startStudio(config) {
     }
   });
   window.addEventListener("beforeunload", (event) => {
-    if (textFields.hasDrafts) {
+    if (textFields.hasDrafts || codeWorkspace?.hasUnsaved()) {
       event.preventDefault();
       event.returnValue = "";
     }
@@ -939,6 +963,7 @@ export function startStudio(config) {
     }
     if (event.key === `${PREFIX}${user ? `account:${user.id}` : "guest"}:settings:theme` && store)
       document.documentElement.dataset.theme = store.setting("theme", "light");
+    codeWorkspace?.storageEvent(event);
     progressStorageListener(event);
   });
 

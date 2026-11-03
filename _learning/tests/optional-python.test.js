@@ -40,7 +40,8 @@ test("Python editor escapes code and retains an exact editable source including 
   assert.ok(html.includes('class="py-keyword"'));
   assert.ok(html.includes('class="py-string"'));
   assert.ok(!html.includes("<script>bad</script>"));
-  assert.equal((html.match(/<textarea/g) || []).length, 1);
+  assert.equal((html.match(/<textarea/g) || []).length, 2); // Code plus optional standard input.
+  assert.equal((html.match(/class="code-input"/g) || []).length, 1);
   assert.ok(html.includes("    print(&quot;&lt;/textarea&gt;&lt;script&gt;bad&lt;/script&gt;&quot;)"));
   assert.ok(!renderCode(source, "text").includes("code-input"));
 });

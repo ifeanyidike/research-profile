@@ -35,7 +35,9 @@ WRONG2:: The TTS component, because it can announce the change.
 FEEDBACK:: Recognising or saying an instruction does not authorise it. The component that changes state must validate permission and the intended action.
 
 ID:: V02
-BRIDGE:: V01 introduced the parts of a voice system. Now write your first small function. Install a supported stable Python 3 from python.org/downloads using its instructions. If it includes IDLE:
+BRIDGE:: V01 introduced the parts of a voice system. You can run this example directly below: choose Edit code to change it, then Run Python to see the output. Your changes save automatically for the active learner.
+
+If you prefer to work on your own computer, install a supported Python 3 from python.org/downloads. If it includes IDLE:
 
 1. Open IDLE and choose File → New File.
 2. Paste the worked example into the editor without any >>> prompt symbols.
@@ -60,7 +62,7 @@ The if line checks two invalid cases: a negative count or a rate of zero or less
 return sends the calculated duration back to the caller. print displays it. Keeping those jobs separate lets another function multiply seconds by 1,000 to get milliseconds.
 
 In samples = 32000, = assigns a value; == compares values. 16000 is a number, while "16000" is text. This first function expects ordinary numeric inputs. We will add stricter input checks and tests as our programs grow.
-EXAMPLE:: # Save as duration.py and run with Python 3.
+EXAMPLE:: # Run here, or save as duration.py for Python 3.
 def duration_seconds(samples, rate):
     if samples < 0 or rate <= 0:
         raise ValueError(
@@ -76,7 +78,7 @@ PITFALL:: Variable names do not enforce units or types. A variable called rate c
 EXERCISE:: Predict both printed values before running the example. Add calls for 8,000 samples at 16,000 samples/second and 48,000 at 48,000. Write the expected result and unit for each. Then call the function with rate zero and explain the exception. Finally write milliseconds(samples, rate), reusing duration_seconds and multiplying by 1,000.
 SOLUTION:: The original prints are 2.0 and 0.0 seconds; the added durations are 0.5 and 1.0 seconds. Define the reusable conversion after duration_seconds:
 
-```python
+```python id=milliseconds
 def milliseconds(samples, rate):
     return duration_seconds(samples, rate) * 1000
 
@@ -87,7 +89,7 @@ A rate of zero raises ValueError before division. Run that invalid call last or 
 CHALLENGE:: Without copying the function body, write remaining_seconds(total_samples, consumed_samples, rate). Reject consumed counts below zero or above the total. Demonstrate 32,000 total and 8,000 consumed at 16,000/second, plus one rejected case.
 CHALLENGE_SOLUTION:: Add the following below duration_seconds. The supplied contract is ordinary numeric counts/rate; it does not accept text or establish a complete type schema.
 
-```python
+```python id=remaining-seconds
 def remaining_seconds(total_samples, consumed_samples, rate):
     if consumed_samples < 0 or consumed_samples > total_samples:
         raise ValueError("consumed count is outside the total")
@@ -154,7 +156,7 @@ EXERCISE:: Make a table with event index, kind, duration and running speech tota
 Write and run your bucket function. Keep the supplied event data in a separate variable. Add an empty-list case, an all-silence case and a negative-duration case. Predict the output before running each case.
 SOLUTION:: The extra silence leaves speech time at 200 ms and raises total timeline time from 250 to 550 ms. A negative first duration raises before any later event. This total-duration function retains the same numeric contract:
 
-```python
+```python id=total-duration
 def total_ms(events):
     total = 0
     for event in events:
@@ -173,7 +175,7 @@ The empty list totals zero in every bucket. All-silence data leaves speech_ms at
 CHALLENGE:: Implement a summary returning a dictionary with speech_ms, silence_ms and other_ms. Treat unknown kinds as other rather than silently discarding their time. For speech 40, silence 20 and music 30, supply the expected dictionary and total-duration invariant.
 CHALLENGE_SOLUTION:: A complete reference using the supplied valid event shape is:
 
-```python
+```python id=event-summary
 def summary(events):
     totals = {"speech_ms": 0, "silence_ms": 0, "other_ms": 0}
     for event in events:
@@ -245,17 +247,17 @@ PITFALL:: A program passing three tests is not proven correct for every input. A
 EXERCISE:: Save the example as checks.py and run it with Python 3. Predict what happens for duration_ms equal to 0, 2.5, true in JSON and a missing key. Add tests for all four cases. Write events.json containing the valid two-event array, then read it with a with open(..., encoding="utf-8") block and json.load.
 SOLUTION:: Zero is accepted; 2.5 and JSON true (Python True) raise ValueError. A missing key raises KeyError in the introductory version. Save the exact text [{"duration_ms":20},{"duration_ms":35}] in events.json, then add:
 
-```python
+```python id=read-json
 with open("events.json", encoding="utf-8") as f:
     saved = json.load(f)
 assert total_ms(saved) == 55
 ```
 
-The file must be in the working folder chosen by your editor/run environment. A missing file is a file-access failure; malformed JSON is a decoding failure; a bad duration is an application-contract failure. Assertions passing normally produce no output.
+Inside the studio, a fresh events.json fixture with durations 20 and 35 is supplied for each run. In your own editor, put the file in your working folder. A missing file is a file-access failure; malformed JSON is a decoding failure; a bad duration is an application-contract failure. Assertions passing normally produce no output.
 CHALLENGE:: Extend validation to reject a top-level object, a non-object list item and a missing duration key with clear ValueError messages. Supply one valid and three invalid fixtures. Keep file access outside total_ms.
 CHALLENGE_SOLUTION:: Keep file access outside the function. One complete stricter version and its supplied checks are:
 
-```python
+```python id=validate-events
 def total_ms(events):
     if not isinstance(events, list):
         raise ValueError("events must be a list")
