@@ -55,9 +55,14 @@ for (const [slug, count, table] of [
       assert.ok(m.videos.length || m.videoNote.length > 80, m.id);
       assert.ok(m.readings.length, m.id);
       for (const source of [...m.videos, ...m.readings, ...m.practice_links]) {
-        assert.equal(new URL(source.url).protocol, "https:");
+        const u = new URL(source.url, `https://ifeanyidike.com/${slug}/`);
+        assert.equal(u.protocol, "https:");
+        if (!source.url.startsWith("https://")) {
+          assert.ok(m.practice_links.includes(source), "Only authored practical materials use local relative links");
+          assert.match(source.url, /^practice\/[a-z-]+\.html(?:#[a-z-]+)?$/);
+          assert.equal(u.origin, "https://ifeanyidike.com");
+        }
         assert.ok(source.label.length > 8);
-        const u = new URL(source.url);
         if (u.hostname === "ifeanyidike.com") assert.ok(fs.existsSync(new URL(`../../${u.pathname.slice(1)}`, import.meta.url)), source.url);
       }
       assert.ok(m.pass_criteria.length > 80);

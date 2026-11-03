@@ -1,5 +1,5 @@
 {
-  "reviewed": "31 October 2026",
+  "reviewed": "3 November 2026",
   "modules": [
     {
       "id": "V01",
@@ -82,9 +82,15 @@
         "Separate a paper design from evidence of accent coverage or product performance."
       ],
       "study_focus": "Watch the two short W3C input/output demonstrations, read the HF course introduction and Stanford scope, then map capture, ASR, dialogue, permissioned actions, TTS and transport. These demonstrations illustrate components, not a complete agent.",
-      "practice": "On paper, map a fictional library telephone assistant. It may read opening hours and propose a book reservation. Draw six boxes: capture, ASR, dialogue, reservation tool, TTS and transport. Give each box one input, one output and one possible failure. Mark the point where a user must approve a reservation. Use no accounts, recordings or provider calls.",
-      "assessment": "Design the same map for a museum information kiosk that must never change bookings. Identify two components you can simplify, two failures that remain, and the evidence needed before claiming it works for visitors with different accents.",
-      "practice_links": []
+      "practice_links": [
+        {
+          "label": "Portfolio project guide — start",
+          "url": "practice/portfolio.html#start",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        }
+      ],
+      "practice": "On paper, map a fictional library telephone assistant. It may read opening hours and propose a book reservation. Draw six boxes: capture, ASR, dialogue, reservation tool, TTS and transport. Give each box one input, one output and one possible failure. Mark the point where a user must approve a reservation. Use fictional details for this first design.",
+      "assessment": "Design the same map for a museum information kiosk that must never change bookings. Identify two components you can simplify, two failures that remain, and the evidence needed before claiming it works for visitors with different accents."
     },
     {
       "id": "V02",
@@ -182,6 +188,8 @@
         "Explain return versus print and state the numeric-input limitation."
       ],
       "study_focus": "Study CS50P Week 0 functions, variables, strings, numeric values and return values; trace the supplied duration function before attempting the independent function.",
+      "optional": true,
+      "audienceLabel": "Optional Python refresher",
       "practice": "Predict both printed values before running the example. Add calls for 8,000 samples at 16,000 samples/second and 48,000 at 48,000. Write the expected result and unit for each. Then call the function with rate zero and explain the exception. Finally write milliseconds(samples, rate), reusing duration_seconds and multiplying by 1,000.",
       "assessment": "Without copying the function body, write remaining_seconds(total_samples, consumed_samples, rate). Reject consumed counts below zero or above the total. Demonstrate 32,000 total and 8,000 consumed at 16,000/second, plus one rejected case."
     },
@@ -317,7 +325,9 @@
         "Reject negative durations and show that the buckets sum to the total."
       ],
       "study_focus": "Study CS50P Week 1 conditionals and Week 2 loops, lists and dictionaries. Trace every supplied event, including unknown kinds and empty input.",
-      "practice": "Make a table with event index, kind, duration and running speech total. Add a silence event lasting 300 milliseconds and predict both speech time and total timeline time. Then replace the first duration with -1 and explain where execution stops. Write a second function that totals all event durations.",
+      "optional": true,
+      "audienceLabel": "Optional Python refresher",
+      "practice": "Make a table with event index, kind, duration and running speech total. Add a silence event lasting 300 milliseconds and predict both speech time and total timeline time. Then replace the first duration with -1 and explain where execution stops. Write a second function that totals all event durations.\n\n### Build or inspect it\n\nWrite and run your bucket function. Keep the supplied event data in a separate variable. Add an empty-list case, an all-silence case and a negative-duration case. Predict the output before running each case.",
       "assessment": "Implement a summary returning a dictionary with speech_ms, silence_ms and other_ms. Treat unknown kinds as other rather than silently discarding their time. For speech 40, silence 20 and music 30, supply the expected dictionary and total-duration invariant."
     },
     {
@@ -543,6 +553,8 @@
         "Use independent expected results and keep file access outside the calculation."
       ],
       "study_focus": "Study CS50P Weeks 3, 4, 6 and 5 in card order: exceptions, libraries and JSON, file I/O, then tests. Focus on JSON decoding versus application validation; use only the local fictional fixtures.",
+      "optional": true,
+      "audienceLabel": "Optional Python refresher",
       "practice": "Save the example as checks.py and run it with Python 3. Predict what happens for duration_ms equal to 0, 2.5, true in JSON and a missing key. Add tests for all four cases. Write events.json containing the valid two-event array, then read it with a with open(..., encoding=\"utf-8\") block and json.load.",
       "assessment": "Extend validation to reject a top-level object, a non-object list item and a missing duration key with clear ValueError messages. Supply one valid and three invalid fixtures. Keep file access outside total_ms."
     },
@@ -662,15 +674,23 @@
         "Explain how commit, input and run log connect a result to a reproducible setup."
       ],
       "study_focus": "Work through Missing Semester shell navigation, quoting and Git staging/diffs. Write a reproducibility README; package installation is unnecessary for the exercises.",
+      "practice_links": [
+        {
+          "label": "Portfolio project guide — python",
+          "url": "practice/portfolio.html#python",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        }
+      ],
+      "optional": true,
+      "audienceLabel": "Optional Python refresher",
       "practice": "Create a new directory and copy only V04's checks.py and a synthetic events.json into it. Add a README with the Python version, command, expected result and absence of network/model dependencies. Initialise Git and inspect exactly what is staged. Do not add a real API key, recording or environment file.",
-      "assessment": "A colleague says the code worked but gives no commit, input file or command. Write a six-item reproducibility request, then explain how you would investigate two different results without rerunning a paid service.",
-      "practice_links": []
+      "assessment": "A colleague says the code worked but gives no commit, input file or command. Write a six-item reproducibility request, then explain how you would investigate two different results without rerunning a paid service."
     },
     {
       "id": "V06",
       "title": "Maths bridge: algebra, units, powers and logs",
-      "prerequisites": ["V02"],
-      "stage": "Maths and scientific thinking",
+      "prerequisites": ["V01"],
+      "stage": "Sound and speech",
       "skills": ["algebra", "units", "logarithms", "decibels"],
       "videos": [
         {
@@ -746,15 +766,341 @@
         "Show units and distinguish payload from headers, decimal MB and compression."
       ],
       "study_focus": "Complete the Edinburgh algebra and logarithm tutorial questions. Practise rearranging equations, powers, unit conversions and log rules before interpreting dB or log probabilities.",
-      "practice": "Calculate the payload for 0.5 seconds of stereo PCM at 48 kHz and 16 bits/sample. Show every conversion. Then find the duration of 24,000 mono samples at 16 kHz. Explain the difference between doubling amplitude and doubling power in the stated matching conditions.",
-      "assessment": "A specification says “one minute, 16 kHz, 16-bit, mono, under 1 MB uncompressed”. Check the claim using decimal MB and show how long one million payload bytes can hold, excluding a header.",
+      "practice_links": [
+        {
+          "label": "Local audio lab — setup, tasks and reference results",
+          "url": "practice/audio-lab.html",
+          "assignment": "Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V06. No model, microphone, network or paid service is used."
+        }
+      ],
+      "recommended_prerequisites": ["V02"],
+      "practice": "Calculate the payload for 0.5 seconds of stereo PCM at 48 kHz and 16 bits/sample. Show every conversion. Then find the duration of 24,000 mono samples at 16 kHz. Explain the difference between doubling amplitude and doubling power in the stated matching conditions.\n\n### Build or inspect it\n\nUse the local audio lab linked below. Its mono 200 Hz file contains one second at 16,000 frames/second and two bytes per sample. Predict the payload and compare it with the report. Explain why the whole WAV file is larger.",
+      "assessment": "A specification says “one minute, 16 kHz, 16-bit, mono, under 1 MB uncompressed”. Check the claim using decimal MB and show how long one million payload bytes can hold, excluding a header."
+    },
+    {
+      "id": "V11",
+      "title": "Sound waves, frequency, amplitude and phase",
+      "prerequisites": ["V06"],
+      "stage": "Sound and speech",
+      "skills": ["acoustics", "frequency", "phase"],
+      "videos": [
+        {
+          "label": "Edinburgh speech.zone — Periodic Signal",
+          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/",
+          "progressKey": "video:0",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 6:05 unit. V11 periodic/aperiodic signals, period versus fundamental frequency, Hz/kHz worked examples and harmonic/prosody connection fit. Real voiced speech is often quasi-periodic; deterministic/stochastic are modelling choices, and perceived pitch is distinguished in the next clip.",
+          "durationSeconds": 365,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Edinburgh speech.zone — Pitch",
+          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/pitch/",
+          "progressKey": "video:1",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 4:27 unit. Pitch versus F0, octaves from frequency ratios, Praat estimation errors and prosody all fit V11.",
+          "durationSeconds": 267,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/pitch/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/pitch/"
+              }
+            ]
+          }
+        }
+      ],
+      "readings": [
+        {
+          "label": "Edinburgh speech.zone — Periodic Signal",
+          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/",
+          "progressKey": "reading:0",
+          "assignment": "Optional text alternative to the assigned 6:05 Periodic Signal video. Read its transcript if you prefer text or need a reference; it covers the same material, so a second pass is optional.",
+          "accessNote": "The publisher supplies transcripts alongside the named clips. Access may be intermittent; an HTTP block is not evidence the clip was removed. Older synthesis/tool examples are conceptual.",
+          "optional": true
+        }
+      ],
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Explain why a 300-Hz peak need not be the fundamental of a 150/300/450-Hz signal. 2. Calculate a period and cycle count with explicit seconds/milliseconds. 3. Name calibration/gain and recording conditions needed for amplitude comparisons.",
+      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Explain why a 300-Hz peak need not be the fundamental of a 150/300/450-Hz signal.",
+        "Calculate a period and cycle count with explicit seconds/milliseconds.",
+        "Name calibration/gain and recording conditions needed for amplitude comparisons."
+      ],
+      "study_focus": "Watch periodic signal and pitch in order. Use the radians bridge and supplied sine examples to separate frequency, amplitude, phase, harmonics and perception.",
+      "practice_links": [
+        {
+          "label": "Local audio lab — setup, tasks and reference results",
+          "url": "practice/audio-lab.html",
+          "assignment": "Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V11. No model, microphone, network or paid service is used."
+        }
+      ],
+      "practice": "Calculate periods for 100 Hz, 250 Hz and 1 kHz. Count how many cycles each completes in 40 ms. Draw two cycles of a 250 Hz signal, labelling the time axis in milliseconds. Explain what changes if amplitude halves while frequency stays fixed.\n\n### Build or inspect it\n\nRun the local audio lab and open its report. Compare tone-200, tone-400 and tone-200-quiet. Count cycles over the plotted 20 ms and compare amplitude. Listen at a comfortable low volume if useful; the plots and numeric results support a non-listening route.",
+      "assessment": "A periodic signal has components at 150, 300 and 450 Hz. A plot shows the largest component at 300 Hz. Explain why concluding “the fundamental must be 300 Hz” is unjustified, and list two measurement-chain details needed before comparing amplitudes with another recording."
+    },
+    {
+      "id": "V12",
+      "title": "Sampling, quantisation, channels and codecs",
+      "prerequisites": ["V11"],
+      "stage": "Sound and speech",
+      "skills": ["sample rate", "PCM", "aliasing", "bitrate"],
+      "videos": [
+        {
+          "label": "Edinburgh speech.zone — Digital Signal",
+          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/digital-signal/",
+          "progressKey": "video:0",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 9:11 unit. Sampling, aliasing, quantisation and signed 16-bit levels fit V12. Explicit correction: anti-alias filtering removes frequencies ABOVE the new Nyquist limit, not below as one transcript sentence says. Use a strict band limit below fs/2 for robust reconstruction; 16 kHz/16-bit are course choices, not universal modern requirements.",
+          "durationSeconds": 551,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/digital-signal/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/digital-signal/"
+              }
+            ]
+          }
+        }
+      ],
+      "readings": [
+        {
+          "label": "Hugging Face Audio Course — audio data: sampling rate, amplitude and channels",
+          "url": "https://huggingface.co/learn/audio-course/chapter1/audio_data",
+          "progressKey": "reading:0",
+          "assignment": "Read Hugging Face Audio Course — audio data: sampling rate, amplitude and channels. Focus on sample rate, PCM, aliasing; then work through this lesson’s example to check your understanding."
+        }
+      ],
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Predict playback duration after relabelling 48000 samples as 16 kHz without resampling. 2. Contrast proper resampling by giving output sample count, duration and the anti-alias filtering reason. 3. Distinguish codec decoding, channel mixing, resampling and PCM representation.",
+      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Predict playback duration after relabelling 48000 samples as 16 kHz without resampling.",
+        "Contrast proper resampling by giving output sample count, duration and the anti-alias filtering reason.",
+        "Distinguish codec decoding, channel mixing, resampling and PCM representation."
+      ],
+      "study_focus": "Study sampling, quantisation and representation in the assigned digital-signal material. Calculate counts/payloads before discussing decoding or resampling.",
+      "practice_links": [
+        {
+          "label": "Local audio lab — setup, tasks and reference results",
+          "url": "practice/audio-lab.html",
+          "assignment": "Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V12. No model, microphone, network or paid service is used."
+        }
+      ],
+      "recommended_prerequisites": ["V04"],
+      "practice": "For 48 kHz mono PCM, calculate the samples in 10, 20 and 30 ms. Calculate the payload bytes for each at 16 bits/sample. Then explain how the answer changes for stereo. Finally describe the steps required to turn a compressed stereo recording into mono 16 kHz PCM without merely relabelling it.\n\n### Build or inspect it\n\nInspect the local lab report for tone-200 and stereo. Record sample rate, audio-frame count, channel count, PCM payload and duration. Explain why stereo doubles the scalar sample count without doubling duration.",
+      "assessment": "A one-second, 48 kHz file is labelled 16 kHz without changing its 48,000 samples. Predict playback duration. Contrast this with proper 48-to-16 kHz resampling, stating output count, duration and the reason for low-pass filtering."
+    },
+    {
+      "id": "V13",
+      "title": "Speech production, phonetics and the IPA",
+      "prerequisites": ["V11"],
+      "stage": "Sound and speech",
+      "skills": ["articulation", "phonemes", "IPA", "coarticulation"],
+      "videos": [
+        {
+          "label": "McMaster / Essentials of Linguistics — Classifying consonants: voicing, place and manner",
+          "url": "https://www.youtube.com/watch?v=DaIuIQwTP94",
+          "progressKey": "video:300",
+          "durationSeconds": 465,
+          "timingSource": "https://www.youtube.com/watch?v=DaIuIQwTP94",
+          "watchMode": "segments",
+          "segments": [
+            {
+              "start": 2,
+              "end": 266,
+              "label": "McMaster / Essentials of Linguistics — Classifying consonants: voicing, place and manner"
+            },
+            {
+              "start": 431,
+              "end": 465,
+              "label": "McMaster / Essentials of Linguistics — Classifying consonants: voicing, place and manner"
+            }
+          ],
+          "assignment": "Watch only 0:02–4:26, then 7:11–7:45 (4:58 total). More precise consonant classification than UBC: post-alveolar vs palatal, frication across articulators, central rhotic vs lateral l. Watch 0:02–4:26 and 7:11–7:45 (4:58). Use the IPA chart and the affricate/tap definitions in this lesson to extend these examples. Stop at the listed boundaries, before the later classification of German pf as bilabial. Canadian-English examples are not universal accent norms. Caption glyph errors [y]/[f] must be checked against correct written IPA script/chart.",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=DaIuIQwTP94"
+              },
+              {
+                "label": "Publisher transcript / video script",
+                "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/2-7-classifying-consonants/"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Ubc VISIBLE SPEECH — Introduction to Articulatory Phonetics (Vowels)",
+          "url": "https://www.youtube.com/watch?v=u7jQ8FELbIo",
+          "progressKey": "video:1",
+          "durationSeconds": 303,
+          "watchMode": "full",
+          "assignment": "Watch the complete named 5:03 unit. Study height, backness, roundedness and the distinction between monophthongs and diphthongs. Published caption glyphs contain errors (e.g. [Ê]); use the IPA chart and spoken-language/North-American-English scope rather than infer all accents/languages or assess a child from the demonstration.",
+          "timingSource": "https://www.youtube.com/watch?v=u7jQ8FELbIo",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=u7jQ8FELbIo"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Ubc VISIBLE SPEECH — Introduction to the International Phonetic Alphabet",
+          "url": "https://www.youtube.com/watch?v=g_SHfoUDj8A",
+          "progressKey": "video:2",
+          "durationSeconds": 289,
+          "watchMode": "segments",
+          "assignment": "Watch only 1:01–2:02, then 2:32–2:58, then 3:07–3:55 (2:15 total). After the assigned consonant and vowel videos: spelling versus phonetic symbols; IPA chart place/manner/voicing; vowel height/backness/rounding; and English diphthong notation. Skip the inaccurate claim that every blank white IPA cell means no language uses that sound: some combinations use diacritics rather than a dedicated symbol. IPA transcription is an analysis at a chosen level of detail, not a promise of identical acoustics across all speakers. The English examples are not the full multilingual inventory.",
+          "timingSource": "https://www.youtube.com/watch?v=g_SHfoUDj8A",
+          "segments": [
+            {
+              "start": 61,
+              "end": 122,
+              "label": "V13: selected teaching, part 1"
+            },
+            {
+              "start": 152,
+              "end": 178,
+              "label": "V13: selected teaching, part 2"
+            },
+            {
+              "start": 187,
+              "end": 235,
+              "label": "V13: selected teaching, part 3"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=g_SHfoUDj8A"
+              }
+            ]
+          }
+        }
+      ],
+      "readings": [
+        {
+          "label": "UBC eNunciate — interactive phonetics resources",
+          "url": "https://enunciate.arts.ubc.ca/",
+          "progressKey": "reading:0",
+          "assignment": "Read UBC eNunciate — interactive phonetics resources. Focus on articulation, phonemes, IPA; then work through this lesson’s example to check your understanding.",
+          "accessNote": "The publisher may show browser verification. The separately linked official UBC demonstration videos provide the assigned articulation examples."
+        }
+      ],
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Classify place, manner and conventional voicing for the assigned consonants. 2. Identify letter/sound mismatch, coarticulation and language/dialect dependence. 3. Specify a pronunciation contract and a correction path for unfamiliar names.",
+      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Classify place, manner and conventional voicing for the assigned consonants.",
+        "Identify letter/sound mismatch, coarticulation and language/dialect dependence.",
+        "Specify a pronunciation contract and a correction path for unfamiliar names."
+      ],
+      "study_focus": "Watch consonants, vowels and the IPA introduction, then inspect the UBC examples/chart. Describe place, manner and voicing with language/context limits.",
+      "practice": "Use the assigned consonant and vowel demonstrations and IPA chart to compare /t/, /d/, /s/ and /n/. Make columns for place, manner and conventional voicing. State which features distinguish the first two and which distinguish /s/ from /n/. Explain why this table does not describe exact acoustic timings.",
+      "assessment": "A product specification says “convert each English letter into one fixed sound, then join them”. Identify three failures and propose a more defensible pronunciation contract, including how unfamiliar names should be handled.",
+      "practice_links": []
+    },
+    {
+      "id": "V14",
+      "title": "Source–filter models, pitch and formants",
+      "prerequisites": ["V11", "V13"],
+      "stage": "Sound and speech",
+      "skills": ["voicing", "pitch", "resonance", "formants"],
+      "videos": [
+        {
+          "label": "Edinburgh speech.zone — Harmonics",
+          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/harmonics/",
+          "progressKey": "video:0",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 2:35 unit. Harmonic spacing in voiced speech fits V14. This uses ideal periodic signals; real voiced speech is quasi-periodic, magnitude is not the full complex spectrum.",
+          "durationSeconds": 155,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/harmonics/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/harmonics/"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Edinburgh speech.zone — Vocal tract resonance & formants",
+          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/vocal-tract-resonance-formants/",
+          "progressKey": "video:100",
+          "assignment": "Watch the complete named 6:24 unit. Study vocal-tract resonances, formants and how they differ from fundamental frequency. Read “Before you begin” first. The tube is a simplified model; vocal-tract resonances are not generally harmonics of the fundamental frequency.",
+          "watchMode": "full",
+          "durationSeconds": 384,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/vocal-tract-resonance-formants/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/vocal-tract-resonance-formants/"
+              }
+            ]
+          }
+        }
+      ],
+      "readings": [
+        {
+          "label": "Edinburgh speech.zone — Source Filter Model",
+          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/",
+          "progressKey": "reading:0",
+          "optional": true,
+          "assignment": "Optional detailed source–filter equation/transcript after V16. For this introduction use the resonance/formants clip and the physical explanation; the full filter derivation assumes later filter knowledge.",
+          "accessNote": "The publisher supplies transcripts alongside the named clips. Access may be intermittent; an HTTP block is not evidence the clip was removed. Older synthesis/tool examples are conceptual."
+        }
+      ],
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Separate F0/harmonic spacing from the filter envelope and formants. 2. Explain that doubling playback rate doubles resonances and halves duration. 3. State what evidence would support a pitch-only transformation claim.",
+      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Separate F0/harmonic spacing from the filter envelope and formants.",
+        "Explain that doubling playback rate doubles resonances and halves duration.",
+        "State what evidence would support a pitch-only transformation claim."
+      ],
+      "study_focus": "Watch harmonics, then the resonance/formants clip. Read the physical explanation in this lesson and draw both harmonic grids before interpreting a peak. The optional source–filter derivation comes after V16.",
+      "practice": "Draw a harmonic grid for F0 values 100 and 250 Hz up to 2 kHz. Overlay a broad resonant region at 700 Hz. Explain why the strongest nearby harmonic may appear at different locations. Then list two reasons real speech would depart from this stationary diagram.",
+      "assessment": "A colleague doubles all frequencies in a recording and claims only pitch changed. Explain the expected effect on resonances and duration under simple sample-rate relabelling, and describe what evidence a pitch-only claim would need.",
       "practice_links": []
     },
     {
       "id": "V07",
       "title": "Vectors, matrices and tensor shapes",
       "prerequisites": ["V06"],
-      "stage": "Maths and scientific thinking",
+      "stage": "Signal processing tools",
       "skills": ["linear algebra", "dot products", "shapes"],
       "videos": [
         {
@@ -802,15 +1148,199 @@
         "Demonstrate a matrix-vector calculation rather than only listing shapes."
       ],
       "study_focus": "Work MIT 18.06 Lecture 1 examples and the accompanying linear-equation material. Explain a dot product, matrix multiplication, orthogonality and axis meanings by hand.",
-      "practice": "Recalculate the example for x = [1, 0]. Then write a matrix that turns [left, right] into [left + right, left - right]. Apply it to [3, 1]. Finally explain why a (3, 4) matrix cannot multiply a (5, 1) column vector.",
+      "practice": "Recalculate the example for x = [1, 0]. Then write a matrix that turns [left, right] into [left + right, left - right]. Apply it to [3, 1]. Finally explain why a (3, 4) matrix cannot multiply a (5, 1) column vector.\n\n### Build or inspect it\n\nImplement dot(a,b) with a loop and reject unequal lengths. Check [1,2] with [3,4], and [1,1] with [1,-1]. Do the same arithmetic by hand, then explain what each coordinate represents in your own two-feature example.",
       "assessment": "A model receives \\((8,50,40)\\) with batch/time/feature axes. It applies a 12-output linear layer independently at each time step. State the weight shape, output shape, number of weights and number of biases. Explain what would change if time and feature were accidentally swapped.",
       "practice_links": []
+    },
+    {
+      "id": "V15",
+      "title": "Fourier transforms, windows and spectrograms",
+      "prerequisites": ["V07", "V12", "V14"],
+      "stage": "Signal processing tools",
+      "skills": ["DFT", "STFT", "windows", "time-frequency tradeoffs"],
+      "videos": [
+        {
+          "label": "Edinburgh speech.zone — Short Term Analysis",
+          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/short-term-analysis/",
+          "progressKey": "video:0",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 5:03 unit. Framing, tapered windows, 25 ms duration versus 10 ms hop and near-stationarity fit V15. Utterance-level features are also possible; the claim that no property except duration can be analysed globally is too broad.",
+          "durationSeconds": 303,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/short-term-analysis/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/short-term-analysis/"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Edinburgh speech.zone — Fourier Analysis",
+          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/fourier-analysis/",
+          "progressKey": "video:1",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 7:52 unit. Weighted basis expansion, correlation, frequency bins and orthogonality fit V15. Keep 7:52 with correction: a general DFT needs DC and sine/cosine or complex coefficients including phase; magnitude-only spectra are not uniquely invertible and energy is proportional to squared magnitude. This is a visual sketch, not the full DFT formula.",
+          "durationSeconds": 472,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/fourier-analysis/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/fourier-analysis/"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Edinburgh speech.zone — Frequency Domain",
+          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/frequency-domain/",
+          "progressKey": "video:2",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 8:02 unit. V15 phase example explicitly completes the earlier sine-only sketch; different waveforms can share magnitude. note: auditory phase sensitivity depends on signal/task, phase matters for reconstruction; include DC, magnitude is not energy, window duration and zero padding affect resolution differently.",
+          "durationSeconds": 482,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/frequency-domain/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/frequency-domain/"
+              }
+            ]
+          }
+        }
+      ],
+      "readings": [
+        {
+          "label": "Hugging Face Audio Course — pre-processing audio data",
+          "url": "https://huggingface.co/learn/audio-course/chapter1/preprocessing",
+          "progressKey": "reading:0",
+          "assignment": "Read Hugging Face Audio Course — pre-processing audio data. Focus on DFT, STFT, windows; then work through this lesson’s example to check your understanding."
+        }
+      ],
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Calculate window duration, hop and bin spacing without confusing them. 2. Compute the supplied four-point Fourier coefficients and explain magnitude/phase. 3. Name missing plot settings and why a spectrogram alone cannot establish quality.",
+      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Calculate window duration, hop and bin spacing without confusing them.",
+        "Compute the supplied four-point Fourier coefficients and explain magnitude/phase.",
+        "Name missing plot settings and why a spectrogram alone cannot establish quality."
+      ],
+      "study_focus": "Watch short-term analysis, Fourier analysis and frequency domain in order. Reproduce the four-point transform; read the HF preprocessing section only as application context, not a Fourier proof.",
+      "practice_links": [
+        {
+          "label": "Local audio lab — setup, tasks and reference results",
+          "url": "practice/audio-lab.html",
+          "assignment": "Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V15. No model, microphone, network or paid service is used."
+        }
+      ],
+      "practice": "Calculate duration and bin spacing for N = 256 and N = 512 at 16 kHz. Calculate the time between frame starts for a 128-sample hop. Explain which setting you would inspect for a rapid consonant transition and what frequency-detail trade-off you would report.\n\nBefore the plot critique, reproduce the four-point transform for \\([1,0,-1,0]\\) and then \\([0,1,0,-1]\\) using the supplied sine/cosine factors. Report real and imaginary parts and explain why equal magnitudes do not mean identical signals.\n\n### Build or inspect it\n\nIn the local lab, predict the peak frequency bin for tone-200 and tone-400 with N=400 and fs=16,000. Compare your prediction with the report. Open audio_lab.py and identify where the DFT sums real and imaginary parts.",
+      "assessment": "Using the forward convention and sine/cosine factors in Learn, compute the four-point DFT of the new input \\([1,1,-1,-1]\\). Show real and imaginary parts and the nonzero magnitudes. Then a report compares two spectrograms without sample rate, window length or dB reference and claims noise removal: write a corrected reporting checklist and explain why the images alone do not establish improved speech quality."
+    },
+    {
+      "id": "V16",
+      "title": "Filters, convolution, mel features and MFCCs",
+      "prerequisites": ["V15"],
+      "stage": "Signal processing tools",
+      "skills": ["convolution", "filter banks", "features"],
+      "videos": [
+        {
+          "label": "Edinburgh speech.zone — Filter",
+          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/filter/",
+          "progressKey": "video:0",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 9:58 unit. V16 FIR feed-forward and IIR feedback recurrences, resonances and coefficient-controlled response fit the filter exercise. Specify zero initial conditions and stable filter coefficients when simulating feedback; pole count is an upper bound, not every order-four filter necessarily has two audible resonances.",
+          "durationSeconds": 598,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/filter/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/filter/"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Edinburgh speech.zone — Convolution",
+          "url": "https://speech.zone/courses/speech-processing/module-6-speech-synthesis-waveform-generation-and-connected-speech/videos/convolution/",
+          "progressKey": "video:1",
+          "watchMode": "full",
+          "assignment": "Watch the complete named 7:50 unit. V16 convolution as shifted scaled impulse responses and log-magnitude addition fit the numerical convolution exercise. Full complex spectra multiply, magnitudes multiply and log magnitudes add where nonzero; phase information is still needed for inversion, and source/filter separation is approximate/nonunique.",
+          "durationSeconds": 470,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-6-speech-synthesis-waveform-generation-and-connected-speech/videos/convolution/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-6-speech-synthesis-waveform-generation-and-connected-speech/videos/convolution/"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Edinburgh speech.zone — Source Filter Model",
+          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/",
+          "progressKey": "video:100",
+          "assignment": "Watch the complete named 13:44 unit. V16 linear source-filter model, excitation, independent F0/envelope changes, noise excitation and fitted filter fit the stated synthesis exercise. The model is approximate and a single pitch-period fragment is not generally exactly the isolated impulse response because neighbouring responses can overlap.",
+          "watchMode": "full",
+          "durationSeconds": 824,
+          "timingSource": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Publisher transcript beside the named video",
+                "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/"
+              }
+            ]
+          }
+        }
+      ],
+      "readings": [
+        {
+          "label": "librosa — mel-spectrogram parameters (development documentation; check installed version)",
+          "url": "https://librosa.org/doc/main/api/generated/librosa.feature.melspectrogram.html",
+          "progressKey": "reading:0",
+          "assignment": "Read librosa — mel-spectrogram parameters (development documentation; check installed version). Focus on convolution, filter banks, features; then work through this lesson’s example to check your understanding."
+        }
+      ],
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Calculate causal filter outputs including the explicitly requested tail. 2. Describe framing, spectrum, mel bands, log floor and MFCC transform in order. 3. Check sample rate, timing and feature conventions before exchanging arrays.",
+      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Calculate causal filter outputs including the explicitly requested tail.",
+        "Describe framing, spectrum, mel bands, log floor and MFCC transform in order.",
+        "Check sample rate, timing and feature conventions before exchanging arrays."
+      ],
+      "study_focus": "Watch filtering and convolution, then study the assigned feature documentation. Follow the toy power bins through band weighting, logarithms and DCT before comparing real log-mel/MFCC interfaces.",
+      "practice_links": [
+        {
+          "label": "Local audio lab — setup, tasks and reference results",
+          "url": "practice/audio-lab.html",
+          "assignment": "Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V16. No model, microphone, network or paid service is used."
+        }
+      ],
+      "practice": "Apply the same causal filter to [0, 2, 2, 0] using zero initial history. Write four outputs and the full-convolution tail. Then list six parameters you would record when exporting log-mel features for another researcher.\n\nRepeat with [0,2,2,2] and show the nonzero tail. Then compute the two-band energies, logs and two DCT coefficients in the toy feature frame from Step by step, naming its normalisation.\n\n### Build or inspect it\n\nUse the local lab to compare the original and two-sample-averaged 200 Hz tone. Read its moving_average function. Predict the first output under zero initial history, and explain why output length remains unchanged in this causal version.",
+      "assessment": "Two systems both export 80 features per frame, but one uses 16 kHz audio with 10 ms hops and the other 48 kHz with 20 ms hops. Explain why their arrays cannot simply be exchanged, and draft a compatibility check before any model is loaded."
     },
     {
       "id": "V08",
       "title": "Derivatives, gradients and optimisation",
       "prerequisites": ["V06", "V07"],
-      "stage": "Maths and scientific thinking",
+      "stage": "Learning speech models",
       "skills": ["calculus", "chain rule", "gradient descent"],
       "videos": [
         {
@@ -944,7 +1474,7 @@
         "Explain the local nature of a gradient and limits of a single successful update."
       ],
       "study_focus": "Study MIT Sessions 1–3 and 6–11 in Differentiation Part A as needed, completing Problem Set 1 and checking its solutions. Follow the scalar/partial-derivative examples before the optional CMU network application; revisit that clip after V18.",
-      "practice": "Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate \\(L(w)=(2w-6)^2\\) using the chain rule.",
+      "practice": "Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate \\(L(w)=(2w-6)^2\\) using the chain rule.\n\n### Build or inspect it\n\nWrite a loop that starts w at zero and performs five updates for \\(L(w)=(w-3)^2\\) with learning rate 0.1. Print step, w and loss after each update. Explain why using the new w to report the old loss would make the log confusing.",
       "assessment": "For \\(L(a,b)=(a-1)^2+2(b+2)^2\\), start at (3,−1) with rate 0.1. Compute the gradient, one update and the old/new loss. State why one successful update is not a universal convergence argument.",
       "practice_links": []
     },
@@ -952,7 +1482,7 @@
       "id": "V09",
       "title": "Probability, statistics and uncertainty",
       "prerequisites": ["V06"],
-      "stage": "Maths and scientific thinking",
+      "stage": "Learning speech models",
       "skills": ["conditional probability", "mean", "variance", "sampling"],
       "videos": [
         {
@@ -1031,15 +1561,15 @@
         "Explain why 1000 clips from two speakers do not establish broad speaker coverage."
       ],
       "study_focus": "Study the Harvard probability material on conditional probability, random variables, expectation and variance. Use the introductory MIT and StatQuest videos first if those terms are new.",
-      "practice": "For a fictional deployment containing 50 noisy and 50 quiet clips, assume the conditional rates above remain unchanged. Calculate the expected number with errors and the overall expected rate. Then calculate the mean and median of the five supplied latencies. State two assumptions behind the error prediction.",
+      "practice": "For a fictional deployment containing 50 noisy and 50 quiet clips, assume the conditional rates above remain unchanged. Calculate the expected number with errors and the overall expected rate. Then calculate the mean and median of the five supplied latencies. State two assumptions behind the error prediction.\n\n### Build or inspect it\n\nWrite a small function for the mean and compare it with the middle value after sorting [100,100,100,100,600]. Change 600 to 6000 and explain which summary moves more.",
       "assessment": "One report counts 1,000 clips from two speakers; another counts 200 clips from 200 speakers. Explain why clip count alone cannot decide which better supports a claim about new speakers. Propose the missing sampling information and a sensible grouping for uncertainty analysis.",
       "practice_links": []
     },
     {
       "id": "V10",
       "title": "Experimental design and data leakage",
-      "prerequisites": ["V04", "V09"],
-      "stage": "Maths and scientific thinking",
+      "prerequisites": ["V09"],
+      "stage": "Learning speech models",
       "skills": ["splits", "confounding", "baselines", "uncertainty"],
       "videos": [
         {
@@ -1086,493 +1616,22 @@
         "State preprocessing, selection and uncertainty rules before inspecting new results."
       ],
       "study_focus": "Read the assigned leakage and dataset guidance. Write split units, preprocessing boundaries, model-selection rules and an uncertainty plan before looking at any hypothetical result.",
-      "practice": "Create a six-row fictional manifest with three speakers and two sessions per speaker. Assign each whole speaker to train, validation or test. Mark one intentional duplicate and keep it in its source group. Write the target claim, split unit and two limits. Do this on paper or in a local text file only.",
-      "assessment": "A team reports improvement after selecting the best of 30 thresholds on its test set. Draft a corrected study plan, including what happens to that old test set, and explain why the published number cannot simply be relabelled independent evidence.",
-      "practice_links": []
-    },
-    {
-      "id": "V11",
-      "title": "Sound waves, frequency, amplitude and phase",
-      "prerequisites": ["V06"],
-      "stage": "Speech and audio foundations",
-      "skills": ["acoustics", "frequency", "phase"],
-      "videos": [
+      "practice_links": [
         {
-          "label": "Edinburgh speech.zone — Periodic Signal",
-          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/",
-          "progressKey": "video:0",
-          "watchMode": "full",
-          "assignment": "Watch the complete named 6:05 unit. V11 periodic/aperiodic signals, period versus fundamental frequency, Hz/kHz worked examples and harmonic/prosody connection fit. Real voiced speech is often quasi-periodic; deterministic/stochastic are modelling choices, and perceived pitch is distinguished in the next clip.",
-          "durationSeconds": 365,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/"
-              }
-            ]
-          }
-        },
-        {
-          "label": "Edinburgh speech.zone — Pitch",
-          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/pitch/",
-          "progressKey": "video:1",
-          "watchMode": "full",
-          "assignment": "Watch the complete named 4:27 unit. Pitch versus F0, octaves from frequency ratios, Praat estimation errors and prosody all fit V11.",
-          "durationSeconds": 267,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/pitch/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/pitch/"
-              }
-            ]
-          }
+          "label": "Portfolio project guide — data",
+          "url": "practice/portfolio.html#data",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
         }
       ],
-      "readings": [
-        {
-          "label": "Edinburgh speech.zone — Periodic Signal",
-          "url": "https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/",
-          "progressKey": "reading:0",
-          "assignment": "Optional text alternative to the assigned 6:05 Periodic Signal video. Read its transcript if you prefer text or need a reference; it covers the same material, so a second pass is optional.",
-          "accessNote": "The publisher supplies transcripts alongside the named clips. Access may be intermittent; an HTTP block is not evidence the clip was removed. Older synthesis/tool examples are conceptual.",
-          "optional": true
-        }
-      ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
-      "pass_criteria": "1. Explain why a 300-Hz peak need not be the fundamental of a 150/300/450-Hz signal. 2. Calculate a period and cycle count with explicit seconds/milliseconds. 3. Name calibration/gain and recording conditions needed for amplitude comparisons.",
-      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "outcomes": [
-        "Explain why a 300-Hz peak need not be the fundamental of a 150/300/450-Hz signal.",
-        "Calculate a period and cycle count with explicit seconds/milliseconds.",
-        "Name calibration/gain and recording conditions needed for amplitude comparisons."
-      ],
-      "study_focus": "Watch periodic signal and pitch in order. Use the radians bridge and supplied sine examples to separate frequency, amplitude, phase, harmonics and perception.",
-      "practice": "Calculate periods for 100 Hz, 250 Hz and 1 kHz. Count how many cycles each completes in 40 ms. Draw two cycles of a 250 Hz signal, labelling the time axis in milliseconds. Explain what changes if amplitude halves while frequency stays fixed.",
-      "assessment": "A periodic signal has components at 150, 300 and 450 Hz. A plot shows the largest component at 300 Hz. Explain why concluding “the fundamental must be 300 Hz” is unjustified, and list two measurement-chain details needed before comparing amplitudes with another recording.",
-      "practice_links": []
-    },
-    {
-      "id": "V12",
-      "title": "Sampling, quantisation, channels and codecs",
-      "prerequisites": ["V04", "V11"],
-      "stage": "Speech and audio foundations",
-      "skills": ["sample rate", "PCM", "aliasing", "bitrate"],
-      "videos": [
-        {
-          "label": "Edinburgh speech.zone — Digital Signal",
-          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/digital-signal/",
-          "progressKey": "video:0",
-          "watchMode": "full",
-          "assignment": "Watch the complete named 9:11 unit. Sampling, aliasing, quantisation and signed 16-bit levels fit V12. Explicit correction: anti-alias filtering removes frequencies ABOVE the new Nyquist limit, not below as one transcript sentence says. Use a strict band limit below fs/2 for robust reconstruction; 16 kHz/16-bit are course choices, not universal modern requirements.",
-          "durationSeconds": 551,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/digital-signal/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/digital-signal/"
-              }
-            ]
-          }
-        }
-      ],
-      "readings": [
-        {
-          "label": "Hugging Face Audio Course — audio data: sampling rate, amplitude and channels",
-          "url": "https://huggingface.co/learn/audio-course/chapter1/audio_data",
-          "progressKey": "reading:0",
-          "assignment": "Read Hugging Face Audio Course — audio data: sampling rate, amplitude and channels. Focus on sample rate, PCM, aliasing; then work through this lesson’s example to check your understanding."
-        }
-      ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
-      "pass_criteria": "1. Predict playback duration after relabelling 48000 samples as 16 kHz without resampling. 2. Contrast proper resampling by giving output sample count, duration and the anti-alias filtering reason. 3. Distinguish codec decoding, channel mixing, resampling and PCM representation.",
-      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "outcomes": [
-        "Predict playback duration after relabelling 48000 samples as 16 kHz without resampling.",
-        "Contrast proper resampling by giving output sample count, duration and the anti-alias filtering reason.",
-        "Distinguish codec decoding, channel mixing, resampling and PCM representation."
-      ],
-      "study_focus": "Study sampling, quantisation and representation in the assigned digital-signal material. Calculate counts/payloads before discussing decoding or resampling.",
-      "practice": "For 48 kHz mono PCM, calculate the samples in 10, 20 and 30 ms. Calculate the payload bytes for each at 16 bits/sample. Then explain how the answer changes for stereo. Finally describe the steps required to turn a compressed stereo recording into mono 16 kHz PCM without merely relabelling it.",
-      "assessment": "A one-second, 48 kHz file is labelled 16 kHz without changing its 48,000 samples. Predict playback duration. Contrast this with proper 48-to-16 kHz resampling, stating output count, duration and the reason for low-pass filtering.",
-      "practice_links": []
-    },
-    {
-      "id": "V13",
-      "title": "Speech production, phonetics and the IPA",
-      "prerequisites": ["V11"],
-      "stage": "Speech and audio foundations",
-      "skills": ["articulation", "phonemes", "IPA", "coarticulation"],
-      "videos": [
-        {
-          "label": "McMaster / Essentials of Linguistics — Classifying consonants: voicing, place and manner",
-          "url": "https://www.youtube.com/watch?v=DaIuIQwTP94",
-          "progressKey": "video:300",
-          "durationSeconds": 465,
-          "timingSource": "https://www.youtube.com/watch?v=DaIuIQwTP94",
-          "watchMode": "segments",
-          "segments": [
-            {
-              "start": 2,
-              "end": 266,
-              "label": "McMaster / Essentials of Linguistics — Classifying consonants: voicing, place and manner"
-            },
-            {
-              "start": 431,
-              "end": 465,
-              "label": "McMaster / Essentials of Linguistics — Classifying consonants: voicing, place and manner"
-            }
-          ],
-          "assignment": "Watch only 0:02–4:26, then 7:11–7:45 (4:58 total). More precise consonant classification than UBC: post-alveolar vs palatal, frication across articulators, central rhotic vs lateral l. Watch 0:02–4:26 and 7:11–7:45 (4:58). Use the IPA chart and the affricate/tap definitions in this lesson to extend these examples. Stop at the listed boundaries, before the later classification of German pf as bilabial. Canadian-English examples are not universal accent norms. Caption glyph errors [y]/[f] must be checked against correct written IPA script/chart.",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Recording and English captions",
-                "url": "https://www.youtube.com/watch?v=DaIuIQwTP94"
-              },
-              {
-                "label": "Publisher transcript / video script",
-                "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/2-7-classifying-consonants/"
-              }
-            ]
-          }
-        },
-        {
-          "label": "Ubc VISIBLE SPEECH — Introduction to Articulatory Phonetics (Vowels)",
-          "url": "https://www.youtube.com/watch?v=u7jQ8FELbIo",
-          "progressKey": "video:1",
-          "durationSeconds": 303,
-          "watchMode": "full",
-          "assignment": "Watch the complete named 5:03 unit. Study height, backness, roundedness and the distinction between monophthongs and diphthongs. Published caption glyphs contain errors (e.g. [Ê]); use the IPA chart and spoken-language/North-American-English scope rather than infer all accents/languages or assess a child from the demonstration.",
-          "timingSource": "https://www.youtube.com/watch?v=u7jQ8FELbIo",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Recording and English captions",
-                "url": "https://www.youtube.com/watch?v=u7jQ8FELbIo"
-              }
-            ]
-          }
-        },
-        {
-          "label": "Ubc VISIBLE SPEECH — Introduction to the International Phonetic Alphabet",
-          "url": "https://www.youtube.com/watch?v=g_SHfoUDj8A",
-          "progressKey": "video:2",
-          "durationSeconds": 289,
-          "watchMode": "segments",
-          "assignment": "Watch only 1:01–2:02, then 2:32–2:58, then 3:07–3:55 (2:15 total). After the assigned consonant and vowel videos: spelling versus phonetic symbols; IPA chart place/manner/voicing; vowel height/backness/rounding; and English diphthong notation. Skip the inaccurate claim that every blank white IPA cell means no language uses that sound: some combinations use diacritics rather than a dedicated symbol. IPA transcription is an analysis at a chosen level of detail, not a promise of identical acoustics across all speakers. The English examples are not the full multilingual inventory.",
-          "timingSource": "https://www.youtube.com/watch?v=g_SHfoUDj8A",
-          "segments": [
-            {
-              "start": 61,
-              "end": 122,
-              "label": "V13: selected teaching, part 1"
-            },
-            {
-              "start": 152,
-              "end": 178,
-              "label": "V13: selected teaching, part 2"
-            },
-            {
-              "start": 187,
-              "end": 235,
-              "label": "V13: selected teaching, part 3"
-            }
-          ],
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Recording and English captions",
-                "url": "https://www.youtube.com/watch?v=g_SHfoUDj8A"
-              }
-            ]
-          }
-        }
-      ],
-      "readings": [
-        {
-          "label": "UBC eNunciate — interactive phonetics resources",
-          "url": "https://enunciate.arts.ubc.ca/",
-          "progressKey": "reading:0",
-          "assignment": "Read UBC eNunciate — interactive phonetics resources. Focus on articulation, phonemes, IPA; then work through this lesson’s example to check your understanding.",
-          "accessNote": "The publisher may show browser verification. The separately linked official UBC demonstration videos provide the assigned articulation examples."
-        }
-      ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
-      "pass_criteria": "1. Classify place, manner and conventional voicing for the assigned consonants. 2. Identify letter/sound mismatch, coarticulation and language/dialect dependence. 3. Specify a pronunciation contract and a correction path for unfamiliar names.",
-      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "outcomes": [
-        "Classify place, manner and conventional voicing for the assigned consonants.",
-        "Identify letter/sound mismatch, coarticulation and language/dialect dependence.",
-        "Specify a pronunciation contract and a correction path for unfamiliar names."
-      ],
-      "study_focus": "Watch consonants, vowels and the IPA introduction, then inspect the UBC examples/chart. Describe place, manner and voicing with language/context limits.",
-      "practice": "Use the assigned consonant and vowel demonstrations and IPA chart to compare /t/, /d/, /s/ and /n/. Make columns for place, manner and conventional voicing. State which features distinguish the first two and which distinguish /s/ from /n/. Explain why this table does not describe exact acoustic timings.",
-      "assessment": "A product specification says “convert each English letter into one fixed sound, then join them”. Identify three failures and propose a more defensible pronunciation contract, including how unfamiliar names should be handled.",
-      "practice_links": []
-    },
-    {
-      "id": "V14",
-      "title": "Source–filter models, pitch and formants",
-      "prerequisites": ["V11", "V13"],
-      "stage": "Speech and audio foundations",
-      "skills": ["voicing", "pitch", "resonance", "formants"],
-      "videos": [
-        {
-          "label": "Edinburgh speech.zone — Harmonics",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/harmonics/",
-          "progressKey": "video:0",
-          "watchMode": "full",
-          "assignment": "Watch the complete named 2:35 unit. Harmonic spacing in voiced speech fits V14. This uses ideal periodic signals; real voiced speech is quasi-periodic, magnitude is not the full complex spectrum.",
-          "durationSeconds": 155,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/harmonics/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/harmonics/"
-              }
-            ]
-          }
-        },
-        {
-          "label": "Edinburgh speech.zone — Vocal tract resonance & formants",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/vocal-tract-resonance-formants/",
-          "progressKey": "video:100",
-          "assignment": "Watch the complete named 6:24 unit. Study vocal-tract resonances, formants and how they differ from fundamental frequency. Read “Before you begin” first. The tube is a simplified model; vocal-tract resonances are not generally harmonics of the fundamental frequency.",
-          "watchMode": "full",
-          "durationSeconds": 384,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/vocal-tract-resonance-formants/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/vocal-tract-resonance-formants/"
-              }
-            ]
-          }
-        }
-      ],
-      "readings": [
-        {
-          "label": "Edinburgh speech.zone — Source Filter Model",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/",
-          "progressKey": "reading:0",
-          "optional": true,
-          "assignment": "Optional detailed source–filter equation/transcript after V16. For this introduction use the resonance/formants clip and the physical explanation; the full filter derivation assumes later filter knowledge.",
-          "accessNote": "The publisher supplies transcripts alongside the named clips. Access may be intermittent; an HTTP block is not evidence the clip was removed. Older synthesis/tool examples are conceptual."
-        }
-      ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
-      "pass_criteria": "1. Separate F0/harmonic spacing from the filter envelope and formants. 2. Explain that doubling playback rate doubles resonances and halves duration. 3. State what evidence would support a pitch-only transformation claim.",
-      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "outcomes": [
-        "Separate F0/harmonic spacing from the filter envelope and formants.",
-        "Explain that doubling playback rate doubles resonances and halves duration.",
-        "State what evidence would support a pitch-only transformation claim."
-      ],
-      "study_focus": "Watch harmonics, then the resonance/formants clip. Read the physical explanation in this lesson and draw both harmonic grids before interpreting a peak. The optional source–filter derivation comes after V16.",
-      "practice": "Draw a harmonic grid for F0 values 100 and 250 Hz up to 2 kHz. Overlay a broad resonant region at 700 Hz. Explain why the strongest nearby harmonic may appear at different locations. Then list two reasons real speech would depart from this stationary diagram.",
-      "assessment": "A colleague doubles all frequencies in a recording and claims only pitch changed. Explain the expected effect on resonances and duration under simple sample-rate relabelling, and describe what evidence a pitch-only claim would need.",
-      "practice_links": []
-    },
-    {
-      "id": "V15",
-      "title": "Fourier transforms, windows and spectrograms",
-      "prerequisites": ["V07", "V12", "V14"],
-      "stage": "Speech and audio foundations",
-      "skills": ["DFT", "STFT", "windows", "time-frequency tradeoffs"],
-      "videos": [
-        {
-          "label": "Edinburgh speech.zone — Short Term Analysis",
-          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/short-term-analysis/",
-          "progressKey": "video:0",
-          "watchMode": "full",
-          "assignment": "Watch the complete named 5:03 unit. Framing, tapered windows, 25 ms duration versus 10 ms hop and near-stationarity fit V15. Utterance-level features are also possible; the claim that no property except duration can be analysed globally is too broad.",
-          "durationSeconds": 303,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/short-term-analysis/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/short-term-analysis/"
-              }
-            ]
-          }
-        },
-        {
-          "label": "Edinburgh speech.zone — Fourier Analysis",
-          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/fourier-analysis/",
-          "progressKey": "video:1",
-          "watchMode": "full",
-          "assignment": "Watch the complete named 7:52 unit. Weighted basis expansion, correlation, frequency bins and orthogonality fit V15. Keep 7:52 with correction: a general DFT needs DC and sine/cosine or complex coefficients including phase; magnitude-only spectra are not uniquely invertible and energy is proportional to squared magnitude. This is a visual sketch, not the full DFT formula.",
-          "durationSeconds": 472,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/fourier-analysis/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/fourier-analysis/"
-              }
-            ]
-          }
-        },
-        {
-          "label": "Edinburgh speech.zone — Frequency Domain",
-          "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/frequency-domain/",
-          "progressKey": "video:2",
-          "watchMode": "full",
-          "assignment": "Watch the complete named 8:02 unit. V15 phase example explicitly completes the earlier sine-only sketch; different waveforms can share magnitude. note: auditory phase sensitivity depends on signal/task, phase matters for reconstruction; include DC, magnitude is not energy, window duration and zero padding affect resolution differently.",
-          "durationSeconds": 482,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/frequency-domain/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-3-digital-speech-signals/videos-2/frequency-domain/"
-              }
-            ]
-          }
-        }
-      ],
-      "readings": [
-        {
-          "label": "Hugging Face Audio Course — pre-processing audio data",
-          "url": "https://huggingface.co/learn/audio-course/chapter1/preprocessing",
-          "progressKey": "reading:0",
-          "assignment": "Read Hugging Face Audio Course — pre-processing audio data. Focus on DFT, STFT, windows; then work through this lesson’s example to check your understanding."
-        }
-      ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
-      "pass_criteria": "1. Calculate window duration, hop and bin spacing without confusing them. 2. Compute the supplied four-point Fourier coefficients and explain magnitude/phase. 3. Name missing plot settings and why a spectrogram alone cannot establish quality.",
-      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "outcomes": [
-        "Calculate window duration, hop and bin spacing without confusing them.",
-        "Compute the supplied four-point Fourier coefficients and explain magnitude/phase.",
-        "Name missing plot settings and why a spectrogram alone cannot establish quality."
-      ],
-      "study_focus": "Watch short-term analysis, Fourier analysis and frequency domain in order. Reproduce the four-point transform; read the HF preprocessing section only as application context, not a Fourier proof.",
-      "practice": "Calculate duration and bin spacing for N = 256 and N = 512 at 16 kHz. Calculate the time between frame starts for a 128-sample hop. Explain which setting you would inspect for a rapid consonant transition and what frequency-detail trade-off you would report.\n\nBefore the plot critique, reproduce the four-point transform for \\([1,0,-1,0]\\) and then \\([0,1,0,-1]\\) using the supplied sine/cosine factors. Report real and imaginary parts and explain why equal magnitudes do not mean identical signals.",
-      "assessment": "Using the forward convention and sine/cosine factors in Learn, compute the four-point DFT of the new input \\([1,1,-1,-1]\\). Show real and imaginary parts and the nonzero magnitudes. Then a report compares two spectrograms without sample rate, window length or dB reference and claims noise removal: write a corrected reporting checklist and explain why the images alone do not establish improved speech quality.",
-      "practice_links": []
-    },
-    {
-      "id": "V16",
-      "title": "Filters, convolution, mel features and MFCCs",
-      "prerequisites": ["V15"],
-      "stage": "Speech and audio foundations",
-      "skills": ["convolution", "filter banks", "features"],
-      "videos": [
-        {
-          "label": "Edinburgh speech.zone — Filter",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/filter/",
-          "progressKey": "video:0",
-          "watchMode": "full",
-          "assignment": "Watch the complete named 9:58 unit. V16 FIR feed-forward and IIR feedback recurrences, resonances and coefficient-controlled response fit the filter exercise. Specify zero initial conditions and stable filter coefficients when simulating feedback; pole count is an upper bound, not every order-four filter necessarily has two audible resonances.",
-          "durationSeconds": 598,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/filter/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/filter/"
-              }
-            ]
-          }
-        },
-        {
-          "label": "Edinburgh speech.zone — Convolution",
-          "url": "https://speech.zone/courses/speech-processing/module-6-speech-synthesis-waveform-generation-and-connected-speech/videos/convolution/",
-          "progressKey": "video:1",
-          "watchMode": "full",
-          "assignment": "Watch the complete named 7:50 unit. V16 convolution as shifted scaled impulse responses and log-magnitude addition fit the numerical convolution exercise. Full complex spectra multiply, magnitudes multiply and log magnitudes add where nonzero; phase information is still needed for inversion, and source/filter separation is approximate/nonunique.",
-          "durationSeconds": 470,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-6-speech-synthesis-waveform-generation-and-connected-speech/videos/convolution/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-6-speech-synthesis-waveform-generation-and-connected-speech/videos/convolution/"
-              }
-            ]
-          }
-        },
-        {
-          "label": "Edinburgh speech.zone — Source Filter Model",
-          "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/",
-          "progressKey": "video:100",
-          "assignment": "Watch the complete named 13:44 unit. V16 linear source-filter model, excitation, independent F0/envelope changes, noise excitation and fitted filter fit the stated synthesis exercise. The model is approximate and a single pitch-period fragment is not generally exactly the isolated impulse response because neighbouring responses can overlap.",
-          "watchMode": "full",
-          "durationSeconds": 824,
-          "timingSource": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Publisher transcript beside the named video",
-                "url": "https://speech.zone/courses/speech-processing/module-4-the-source-filter-model/videos-3/source-filter-model/"
-              }
-            ]
-          }
-        }
-      ],
-      "readings": [
-        {
-          "label": "librosa — mel-spectrogram parameters (development documentation; check installed version)",
-          "url": "https://librosa.org/doc/main/api/generated/librosa.feature.melspectrogram.html",
-          "progressKey": "reading:0",
-          "assignment": "Read librosa — mel-spectrogram parameters (development documentation; check installed version). Focus on convolution, filter banks, features; then work through this lesson’s example to check your understanding."
-        }
-      ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
-      "pass_criteria": "1. Calculate causal filter outputs including the explicitly requested tail. 2. Describe framing, spectrum, mel bands, log floor and MFCC transform in order. 3. Check sample rate, timing and feature conventions before exchanging arrays.",
-      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "outcomes": [
-        "Calculate causal filter outputs including the explicitly requested tail.",
-        "Describe framing, spectrum, mel bands, log floor and MFCC transform in order.",
-        "Check sample rate, timing and feature conventions before exchanging arrays."
-      ],
-      "study_focus": "Watch filtering and convolution, then study the assigned feature documentation. Follow the toy power bins through band weighting, logarithms and DCT before comparing real log-mel/MFCC interfaces.",
-      "practice": "Apply the same causal filter to [0, 2, 2, 0] using zero initial history. Write four outputs and the full-convolution tail. Then list six parameters you would record when exporting log-mel features for another researcher.\n\nRepeat with [0,2,2,2] and show the nonzero tail. Then compute the two-band energies, logs and two DCT coefficients in the toy feature frame from Step by step, naming its normalisation.",
-      "assessment": "Two systems both export 80 features per frame, but one uses 16 kHz audio with 10 ms hops and the other 48 kHz with 20 ms hops. Explain why their arrays cannot simply be exchanged, and draft a compatibility check before any model is loaded.",
-      "practice_links": []
+      "recommended_prerequisites": ["V04"],
+      "practice": "Create a six-row fictional manifest with three speakers and two sessions per speaker. Assign each whole speaker to train, validation or test. Mark one intentional duplicate and keep it in its source group. Write the target claim, split unit and two limits. Do this on paper or in a local text file only.\n\n### Build or inspect it\n\nCreate a JSON manifest for the supplied rows and a Python check that reports any speaker appearing in more than one partition. Deliberately move A2 into test and confirm that the check reports speaker A.",
+      "assessment": "A team reports improvement after selecting the best of 30 thresholds on its test set. Draft a corrected study plan, including what happens to that old test set, and explain why the published number cannot simply be relabelled independent evidence."
     },
     {
       "id": "V17",
       "title": "Machine learning: regression and classification",
       "prerequisites": ["V07", "V08", "V09", "V10"],
-      "stage": "Machine learning foundations",
+      "stage": "Learning speech models",
       "skills": ["loss", "generalisation", "regularisation"],
       "videos": [
         {
@@ -1665,7 +1724,7 @@
         "Request error types, timing and population evidence before an endpointing claim."
       ],
       "study_focus": "Watch linear regression before the optional decision-tree examples. Read D2L 3.1 regression and 4.1 softmax regression, including losses; compare a baseline and a confusion table.",
-      "practice": "For the same training pairs, calculate predictions and mean squared error for y_hat = x + 1. Compare all three candidate rules. Write one validation question about transfer and one about annotation quality. Identify which quantities were chosen before seeing the new pair.",
+      "practice": "For the same training pairs, calculate predictions and mean squared error for y_hat = x + 1. Compare all three candidate rules. Write one validation question about transfer and one about annotation quality. Identify which quantities were chosen before seeing the new pair.\n\n### Build or inspect it\n\nImplement the three candidate prediction rules and MSE using lists and loops. Assert the three training losses from the worked calculation. Keep the new pair out of any rule selection, then calculate its error once the rule is chosen.",
       "assessment": "A classifier is 98% accurate where 98% of examples are silence. Explain the trivial baseline, the missing error information and why accuracy alone cannot justify using it to decide when a user has stopped speaking.",
       "practice_links": []
     },
@@ -1673,7 +1732,7 @@
       "id": "V18",
       "title": "Neural networks and backpropagation",
       "prerequisites": ["V17"],
-      "stage": "Machine learning foundations",
+      "stage": "Learning speech models",
       "skills": ["layers", "activations", "gradients", "batching"],
       "videos": [
         {
@@ -1857,14 +1916,14 @@
         "Explain inactive ReLU and why one training example says nothing about transfer."
       ],
       "study_focus": "Work the one-weight forward/backward example, then watch the three focused network/backpropagation chapters. Use D2L for formal notation and the optional CMU lectures for additional graduate depth; frameworks/model training are not required.",
-      "practice": "Repeat the forward pass with w=-1, keeping the other supplied values fixed. Calculate prediction, loss and the gradients for w, b and v away from ReLU's zero point. Explain why this single example can leave the hidden unit inactive.",
+      "practice": "Repeat the forward pass with w=-1, keeping the other supplied values fixed. Calculate prediction, loss and the gradients for w, b and v away from ReLU's zero point. Explain why this single example can leave the hidden unit inactive.\n\n### Build or inspect it\n\nTurn the scalar forward pass into a Python function returning the loss. Compare the analytic w gradient with (L(w+h)−L(w−h))/(2h), using h=0.00001 and the positive worked case. Do not cross the ReLU corner.",
       "assessment": "For the original positive case, perform one simultaneous gradient step with rate 0.01. State the new w,b,v and recompute the loss. Explain what this demonstrates and what it does not demonstrate."
     },
     {
       "id": "V19",
       "title": "Sequences, attention and transformers",
       "prerequisites": ["V18", "V16"],
-      "stage": "Machine learning foundations",
+      "stage": "Learning speech models",
       "skills": ["attention", "masking", "positions", "sequence models"],
       "videos": [
         {
@@ -2026,15 +2085,15 @@
         "Give padding-change and future-change invariants for valid earlier outputs."
       ],
       "study_focus": "Work unequal attention scores, dimensions and masks by hand. Use the selected CMU passages only for deeper explanation, then reconcile the complete Transformer block with paper §§3.1–3.5.",
-      "practice": "With equal scores and scalar values [1,4,7], calculate unmasked attention. Then calculate attention at the middle position under a causal mask. Explain the result if a fourth padded position is mistakenly included with value 100 and equal score.",
+      "practice": "With equal scores and scalar values [1,4,7], calculate unmasked attention. Then calculate attention at the middle position under a causal mask. Explain the result if a fourth padded position is mistakenly included with value 100 and equal score.\n\n### Build or inspect it\n\nImplement stable softmax for the two scores [0, ln(2)]: subtract the largest score before exponentiating, then divide by the sum. Apply it to values [3,9]. Test the single-allowed-key mask separately.",
       "assessment": "Draft an input contract for batched speech attention containing clips of unequal lengths. Specify axis meanings, length information, padding and causal/lookahead policy. Identify one testable invariant for each mask. For a separate numeric check, take \\(d_k=1\\), query \\(q=1\\), keys \\(k_1=0,k_2=\\ln2\\) and scalar values 3 and 9. Compute scaled scores, softmax weights and the output, then mask the second key.",
       "practice_links": []
     },
     {
       "id": "V20",
       "title": "Speech datasets, annotation, consent and licensing",
-      "prerequisites": ["V05", "V10", "V13"],
-      "stage": "Machine learning foundations",
+      "prerequisites": ["V10", "V13"],
+      "stage": "Learning speech models",
       "skills": ["manifests", "annotation", "rights", "speaker splits"],
       "videos": [
         {
@@ -2139,9 +2198,16 @@
         "Decline an unsupported audio-use assumption and name a permissioned alternative."
       ],
       "study_focus": "Watch the 4:55 datasheet example, then apply the original paper to a fictional speech manifest, rights record, annotation uncertainties and speaker/session split.",
-      "practice": "Create four fictional rows representing two speakers and two sessions each. Include a language tag, sample rate, transcript-policy version and rights reference. Propose a split for unseen-speaker study and flag one row with uncertain transcription. Write two uses that would require a separate rights review.",
-      "assessment": "A public recording has a permissive code repository beside it, but no stated audio licence or speaker permission. Write a decision record explaining whether to include it, the missing evidence and an alternative way to continue learning.",
-      "practice_links": []
+      "practice_links": [
+        {
+          "label": "Portfolio project guide — data",
+          "url": "practice/portfolio.html#data",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        }
+      ],
+      "recommended_prerequisites": ["V05"],
+      "practice": "Create four fictional rows representing two speakers and two sessions each. Include a language tag, sample rate, transcript-policy version and rights reference. Propose a split for unseen-speaker study and flag one row with uncertain transcription. Write two uses that would require a separate rights review.\n\n### Build or inspect it\n\nSave your four rows as JSON and write checks for missing rights_reference, invalid sample rate and a speaker split across partitions. Add one deliberately bad row of each kind, then remove it after the checks report the issue.",
+      "assessment": "A public recording has a permissive code repository beside it, but no stated audio licence or speaker permission. Write a decision record explaining whether to include it, the missing evidence and an alternative way to continue learning."
     },
     {
       "id": "V21",
@@ -2240,7 +2306,7 @@
         "State the model and score assumptions needed before interpreting a real decoder."
       ],
       "study_focus": "Start with the discrete-state example and Stanford Appendix A, then the three introductory HMM video parts. Continue to connected speech and forward probabilities. Treat Baum–Welch/legacy training tools as additional depth.",
-      "practice": "Change Path B's transition to 1.0 and recalculate its score. Then change its first likelihood to 0.6 as well. Determine when the preferred path switches. Draw a two-state, three-time-step trellis and label what information a dynamic-programming table would retain.\n\nFill in both time-two state scores and backpointers for the supplied numerical model in Step by step. Show both incoming candidates for each state before choosing; do not keep only one global state at time one.",
+      "practice": "Change Path B's transition to 1.0 and recalculate its score. Then change its first likelihood to 0.6 as well. Determine when the preferred path switches. Draw a two-state, three-time-step trellis and label what information a dynamic-programming table would retain.\n\nFill in both time-two state scores and backpointers for the supplied numerical model in Step by step. Show both incoming candidates for each state before choosing; do not keep only one global state at time one.\n\n### Build or inspect it\n\nImplement the two-state, two-time Viterbi table with lists and loops. Store both winning scores and predecessor indices. Confirm the supplied Learn example before attempting the independent numbers in Assess.",
       "assessment": "Use the same transition table as Learn, but new start probabilities A:0.3, B:0.7. Observation-one emissions are A:0.5, B:0.4; observation-two emissions are A:0.6, B:0.3. Compute both time-one scores, both incoming candidates per time-two state, winning scores and backpointers, then recover the best path. Separately, transcript X has paths 0.12 and 0.11 while Y has one path 0.20. Compare best single path and supplied transcript sums.",
       "practice_links": []
     },
@@ -2357,7 +2423,7 @@
         "Separate CTC scoring from assistant timing, permissions and task correctness."
       ],
       "study_focus": "Watch CMU CTC part 1 and read the CTC objective in the Graves paper; part 2 is optional further study. Verify collapse order, repeated labels and the complete two-frame probability example before decoding comparisons.",
-      "practice": "Collapse these paths by hand: a,a,_,a; _,c,c,_,a,t,t; l,l,e,e,t,t,_,t,e,r. Show both intermediate operations. Then construct one path that collapses to “see” and another that collapses to “se”.",
+      "practice": "Collapse these paths by hand: a,a,_,a; _,c,c,_,a,t,t; l,l,e,e,t,t,_,t,e,r. Show both intermediate operations. Then construct one path that collapses to “see” and another that collapses to “se”.\n\n### Build or inspect it\n\nWrite a CTC collapse function for supplied label lists. Keep the previous raw label while merging repeats, then remove blanks. Add tests for an empty path, consecutive blanks, a,a and a,blank,a.",
       "assessment": "Transcript A has valid alignment probabilities 0.15 and 0.14; B has one at 0.25. Explain why a best-path decoder could prefer B while a summed-transcript calculation prefers A. Add one reason a better CTC score alone would not prove a better voice assistant.",
       "practice_links": []
     },
@@ -2469,6 +2535,11 @@
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.",
       "practice_links": [
         {
+          "label": "Portfolio project guide — asr",
+          "url": "practice/portfolio.html#asr",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        },
+        {
           "label": "Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements)",
           "url": "https://huggingface.co/learn/audio-course/chapter5/hands_on",
           "assignment": "Optional additional provider practice. Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements). Follow the source’s preparation, account and compute notes; the studio’s exercise remains the core task."
@@ -2480,7 +2551,7 @@
         "Explain why fluent text from silence or an ambiguous name cannot authorise a write."
       ],
       "study_focus": "Watch the 6:29 paper-walkthrough excerpts, then read Whisper §2/Figure 1 and limitations. Specify checkpoint, preprocessing, task tokens, decoding and the data boundary in the fictional report.",
-      "practice": "Create a fictional review table with the reference, candidate transcript, uncertainty and next action for three cases: a proper name, an interrupted sentence and silence. Explain which ambiguities require clarification before a reservation tool may execute. Do not generate or upload audio.",
+      "practice": "Create a fictional review table with the reference, candidate transcript, uncertainty and next action for three cases: a proper name, an interrupted sentence and silence. Explain which ambiguities require clarification before a reservation tool may execute. Keep this introductory table fictional; use the separate ASR milestone for actual audio work.\n\n### Continue into the portfolio\n\nOpen the portfolio project guide below and complete its ASR milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.",
       "assessment": "A report names only “Whisper” and gives one accuracy percentage. Write the minimum additional specification needed to interpret or reproduce its claim, including the data boundary and what the percentage actually counts."
     },
     {
@@ -2564,6 +2635,11 @@
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.",
       "practice_links": [
         {
+          "label": "Portfolio project guide — specialist",
+          "url": "practice/portfolio.html#specialist",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        },
+        {
           "label": "Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements)",
           "url": "https://huggingface.co/learn/audio-course/chapter5/hands_on",
           "assignment": "Optional additional provider practice. Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements). Follow the source’s preparation, account and compute notes; the studio’s exercise remains the core task."
@@ -2575,7 +2651,7 @@
         "Propose held-out target groups, rights, baselines and distribution-shift checks."
       ],
       "study_focus": "Watch the four excerpts totalling 7:50, then draw masked-context and unmasked-target branches plus labelled CTC adaptation. Read the assigned multilingual lecture slides before making transfer or language-coverage claims.",
-      "practice": "Write a pretraining/adaptation/test table for a fictional bilingual library kiosk. Specify language, speaker group, device, labels and rights for each stage. Identify two leakage risks and two distribution shifts. Keep all rows fictional and make no provider calls.",
+      "practice": "Write a pretraining/adaptation/test table for a fictional bilingual library kiosk. Specify language, speaker group, device, labels and rights for each stage. Identify two leakage risks and two distribution shifts. Keep the design rows fictional; later specialist work needs actual permissioned data and a documented compute setup.\n\n### Continue into the portfolio\n\nOpen the portfolio project guide below and complete its specialist depth milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.",
       "assessment": "A team fine-tunes on 20 clips from one new speaker and reports a better result on another clip from that same session. Explain the narrow claim this might support, the broader claim it cannot support, and a corrected future study design."
     },
     {
@@ -2675,9 +2751,15 @@
         "Produce a reporting template with no invented scores and a clarification rule."
       ],
       "study_focus": "Watch the 2:04 WER/reference-quality excerpts. Calculate the supplied minimum edit counts and corpus WER, declare reference/normalisation rules and report subgroup denominators and uncertainty without inferring fairness from an aggregate score.",
-      "practice": "Use reference “open the library” and hypothesis “please open library now”. Show an alignment, counts and WER. Then compare two fictional groups: A has 4 errors/80 words from eight speakers; B has 4/20 from two. State what is observed and what remains uncertain.",
-      "assessment": "Draft a one-page results table for a fictional recogniser comparison without inventing measured scores. Include metric conventions, independent units, critical-error categories, subgroup coverage and one decision rule for escalation in a booking task.",
-      "practice_links": []
+      "practice_links": [
+        {
+          "label": "Portfolio project guide — asr",
+          "url": "practice/portfolio.html#asr",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        }
+      ],
+      "practice": "Use reference “open the library” and hypothesis “please open library now”. Show an alignment, counts and WER. Then compare two fictional groups: A has 4 errors/80 words from eight speakers; B has 4/20 from two. State what is observed and what remains uncertain.\n\n### Build or inspect it\n\nImplement a minimum-edit-distance table for supplied text only. Initialise an empty-reference row with insertion counts and an empty-hypothesis column with deletion counts. At each cell choose match/substitute, delete or insert. Store backpointers to recover an alignment.\n\n### Continue into the portfolio\n\nOpen the portfolio project guide below and complete its ASR milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.",
+      "assessment": "Draft a one-page results table for a fictional recogniser comparison without inventing measured scores. Include metric conventions, independent units, critical-error categories, subgroup coverage and one decision rule for escalation in a booking task."
     },
     {
       "id": "V26",
@@ -2799,9 +2881,15 @@
         "Explain why microphone gating loses double-talk and design a comparison plan only."
       ],
       "study_focus": "Watch the 4:13 echo-cancellation explainer, then label reference, acoustic path, microphone and independent user speech in the supplied exercise. Read enhancement/separation definitions and microphone timing assumptions before the design critique.",
+      "practice_links": [
+        {
+          "label": "Local audio lab — setup, tasks and reference results",
+          "url": "practice/audio-lab.html",
+          "assignment": "Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V27. No model, microphone, network or paid service is used."
+        }
+      ],
       "practice": "Calculate the squared target error sum for estimates A and B. Add estimate C=[0.8,0,-0.8] and compare it with B. Draw an echo path from agent playback through loudspeaker, room and microphone; label reference, delay and user speech. Independently average [2,0,−2] with an already aligned [2,0,−2], then with a misaligned [0,2,0]. Describe the damage from the incorrect delay.",
-      "assessment": "A demo suppresses all microphone input while the assistant speaks and calls this “perfect echo cancellation”. Explain what it actually does, the lost capability and a comparison plan that would distinguish echo suppression from preserving user speech.",
-      "practice_links": []
+      "assessment": "A demo suppresses all microphone input while the assistant speaks and calls this “perfect echo cancellation”. Explain what it actually does, the lost capability and a comparison plan that would distinguish echo suppression from preserving user speech."
     },
     {
       "id": "V28",
@@ -2887,7 +2975,7 @@
         "Offer pronunciation repair and distinguish saying details from authorising a booking."
       ],
       "study_focus": "Watch normalisation and prosody, then use the assigned Pronunciation reading. The broader pronunciation video is optional. Work through the locale/date/name examples and TTS references to identify ambiguity and supported markup.",
-      "practice": "Write spoken candidates for “St. Mary St.” under a person/saint-plus-street address context, “03/04” under two locale conventions, and “1.5 kg” as a quantity. Mark every ambiguity instead of choosing silently. Add a clarification question for the date.",
+      "practice": "Write spoken candidates for “St. Mary St.” under a person/saint-plus-street address context, “03/04” under two locale conventions, and “1.5 kg” as a quantity. Mark every ambiguity instead of choosing silently. Add a clarification question for the date.\n\n### Build or inspect it\n\nImplement a small renderer for typed fields rather than arbitrary prose: role=identifier preserves each digit in 0012; role=quantity reads 12 as a quantity. Reject an ambiguous date until its month/day convention is provided.",
       "assessment": "Design a front-end contract for announcing a fictional reservation containing a name, date, time and reference code. State how you avoid guessing locale, preserve the code and recover from an uncertain pronunciation.",
       "practice_links": []
     },
@@ -2968,6 +3056,11 @@
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Complete the PyTorch primer in V18 and the provider’s full Unit 6 before the optional project; review voice/data permissions and compute/submission requirements.",
       "practice_links": [
         {
+          "label": "Portfolio project guide — tts",
+          "url": "practice/portfolio.html#tts",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        },
+        {
           "label": "Optional deeper project — Hugging Face Unit 6 SpeechT5 fine-tuning assignment (complete Unit 6 preparation; compute/account requirements)",
           "url": "https://huggingface.co/learn/audio-course/chapter6/hands_on",
           "assignment": "Optional additional provider practice. Optional deeper project — Hugging Face Unit 6 SpeechT5 fine-tuning assignment (complete Unit 6 preparation; compute/account requirements). Follow the source’s preparation, account and compute notes; the studio’s exercise remains the core task."
@@ -2979,7 +3072,7 @@
         "Compare mel/vocoder and integrated designs without inventing unreported properties."
       ],
       "study_focus": "Read Tacotron 2 and VITS architecture/alignment sections after the synthesis clips. Draw linguistic-token, acoustic-frame and waveform time scales; optional HF Unit 6 is additional practice.",
-      "practice": "Expand durations [1,3,2,2] for four abstract tokens and calculate duration at 12.5 ms/frame. Introduce a repeated-token error and an omitted-token error in separate alignments. Explain which product details each could corrupt in a reservation confirmation.",
+      "practice": "Expand durations [1,3,2,2] for four abstract tokens and calculate duration at 12.5 ms/frame. Introduce a repeated-token error and an omitted-token error in separate alignments. Explain which product details each could corrupt in a reservation confirmation.\n\n### Build or inspect it\n\nWrite expand(tokens,durations), rejecting unequal lengths or negative/non-integer durations. Check the supplied four-token case and a zero-duration token. Return both the expanded list and its duration using the stated frame hop.\n\n### Continue into the portfolio\n\nOpen the portfolio project guide below and complete its TTS milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.",
       "assessment": "Compare two proposed designs: text→mel→vocoder and a duration-conditioned integrated generator. Build a table of required inputs, intermediate timing representations, likely failure questions and evidence needed. Leave unknown architecture-specific properties explicitly unknown."
     },
     {
@@ -3074,7 +3167,7 @@
         "Explain why frame spacing alone is neither bitrate nor audible response delay."
       ],
       "study_focus": "Watch the Codec-SUPERB neural-codec talk after the quantiser example. Read WaveNet's waveform-generation formulation and EnCodec's encoder, quantiser, decoder and objectives separately.",
-      "practice": "Recalculate the nominal index rate for eight codebooks at the same frame rate and vocabulary size. Compare it with mono 24 kHz, 16-bit PCM. State the ratio and three reasons it does not establish that this codec is suitable for a particular voice product.",
+      "practice": "Recalculate the nominal index rate for eight codebooks at the same frame rate and vocabulary size. Compare it with mono 24 kHz, 16-bit PCM. State the ratio and three reasons it does not establish that this codec is suitable for a particular voice product.\n\n### Build or inspect it\n\nImplement the scalar residual-codebook example from Learn. Choose the nearest entry, subtract it, then repeat with the next codebook. Return the indices, reconstruction and residual.",
       "assessment": "A diagram says “audio tokens at 25 Hz” but omits codebook count and vocabulary. Explain what can and cannot be calculated, and request the additional details needed for bandwidth and latency planning.",
       "practice_links": []
     },
@@ -3177,14 +3270,20 @@
         "Bound the three-friends/one-sentence claim and state missing population evidence."
       ],
       "study_focus": "Watch subjective/objective evaluation, then read the assigned study/rights sources. Design separate naturalness and content-fidelity questions with balanced materials; no listening study is executed here.",
-      "practice": "Design a fictional paired comparison of two TTS systems reading library information. Specify eight sentence types, including names and numbers; two separate judgement questions; an order-balancing rule; and a permission record. Do not generate audio or recruit anyone.",
-      "assessment": "A report advertises “human-level quality” from three friends rating one sentence. Write a proportionate interpretation and a corrected evidence plan. Include at least one dimension that a naturalness scale does not settle.",
-      "practice_links": []
+      "practice_links": [
+        {
+          "label": "Portfolio project guide — tts",
+          "url": "practice/portfolio.html#tts",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        }
+      ],
+      "practice": "Design a fictional paired comparison of two TTS systems reading library information. Specify eight sentence types, including names and numbers; two separate judgement questions; an order-balancing rule; and a permission record. Keep this first deliverable a study plan. Any later study with people needs appropriate consent and review.\n\n### Continue into the portfolio\n\nOpen the portfolio project guide below and complete its TTS milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.",
+      "assessment": "A report advertises “human-level quality” from three friends rating one sentence. Write a proportionate interpretation and a corrected evidence plan. Include at least one dimension that a naturalness scale does not settle."
     },
     {
       "id": "V32",
       "title": "Meaning, dialogue state and conversation repair",
-      "prerequisites": ["V03", "V13", "V25"],
+      "prerequisites": ["V13", "V25"],
       "stage": "Engineering conversational voice systems",
       "skills": ["intent", "state machines", "repair", "confirmation"],
       "videos": [
@@ -3288,7 +3387,8 @@
         "Keep confirmed, pending, committed and cancelled states distinct."
       ],
       "study_focus": "Read the state/confirmation explanation, then watch the architecture, flows and repair assignments. Trace slot corrections and invalidate old confirmations before considering a write.",
-      "practice": "Trace three fictional conversations through the states: complete details then approve; complete details then change time; cancel before approval. For each event, list state, proposal version and whether a write is permitted. Add one recognition ambiguity and an appropriate repair question.",
+      "recommended_prerequisites": ["V03"],
+      "practice": "Trace three fictional conversations through the states: complete details then approve; complete details then change time; cancel before approval. For each event, list state, proposal version and whether a write is permitted. Add one recognition ambiguity and an appropriate repair question.\n\n### Build or inspect it\n\nImplement a local transition function for the three supplied conversations. Assert final state and write count after each sequence, including a stale proposal approval. Use fake write records, with no database connection.",
       "assessment": "A late “yes” event for proposal_7 arrives after the user changed the time and the app created proposal_8. Specify the correct transition and a regression fixture, including the expected number of writes.",
       "practice_links": []
     },
@@ -3387,14 +3487,14 @@
         "Report pending status truthfully and reconcile before issuing another write."
       ],
       "study_focus": "Watch the 6:14 RAG passage and the two action excerpts totalling 4:19. Keep retrieved evidence, generated answers and tool authority separate in the operation/idempotency exercise.",
-      "practice": "Define read-only tools for finding a museum exhibit and checking opening hours. Give each an input schema, allowed scope, error response and source-provenance fields. Then write one malicious retrieved sentence and explain why it cannot expand the tool permissions.",
+      "practice": "Define read-only tools for finding a museum exhibit and checking opening hours. Give each an input schema, allowed scope, error response and source-provenance fields. Then write one malicious retrieved sentence and explain why it cannot expand the tool permissions.\n\n### Build or inspect it\n\nImplement the two tool validators as ordinary Python functions over dictionaries. Test an allowed public ID, an unsupported ID, unknown fields and the malicious retrieved sentence. Return a defined error rather than execute arbitrary text.",
       "assessment": "A reservation tool times out after the database may have committed. Design a retry protocol and the words the agent may safely say before the outcome is known. Include a unique operation identifier and an ownership check.",
       "practice_links": []
     },
     {
       "id": "V34",
       "title": "Streaming, asynchronous events and cancellation",
-      "prerequisites": ["V04", "V05", "V32"],
+      "prerequisites": ["V32"],
       "stage": "Engineering conversational voice systems",
       "skills": ["event ordering", "queues", "session state", "cancellation"],
       "videos": [
@@ -3468,7 +3568,8 @@
         "Specify a bounded queue policy and protect consequential control events."
       ],
       "study_focus": "Watch the 3:56 standalone coroutine/task example, read the Python 3.13 task/cancellation sections and trace the supplied stale, duplicate and bounded-backlog cases. Use the TaskGroup talk only for optional depth.",
-      "practice": "Trace start_R1, start_R2_after_interrupt, finish_R1, finish_R2. For each event, record active generation and whether output is allowed. Add a duplicate finish_R2 and state how you prevent duplicate playback. Use only a paper table or local synthetic event list.",
+      "recommended_prerequisites": ["V04", "V05"],
+      "practice": "Trace start_R1, start_R2_after_interrupt, finish_R1, finish_R2. For each event, record active generation and whether output is allowed. Add a duplicate finish_R2 and state how you prevent duplicate playback. Use only a paper table or local synthetic event list.\n\n### Build or inspect it\n\nImplement the supplied event sequence as a local list. Track current_generation and a set of published event IDs. Assert that only the first current finish_R2 appears in output.",
       "assessment": "A producer adds 50 frames/second while a consumer handles 40. Starting with an empty queue, calculate backlog after 10 seconds and its queued duration if each frame represents 20 ms. Propose a bounded policy and identify one category of event that must not be dropped silently.",
       "practice_links": []
     },
@@ -3552,7 +3653,7 @@
         "Define reconnect handling that cannot replay old audio as a new turn."
       ],
       "study_focus": "Watch the three listed WebRTC passages (6:09 total). Treat Django/Channels as examples of web/signalling servers. Use the readings to distinguish media, signalling, codec, authentication and relay responsibilities, then write the frame and reconnect contract.",
-      "practice": "Draw a browser-to-agent media path and a telephone-to-agent path. Label signalling, media transport, codec boundary, authentication and any relay or gateway. For each unknown property, write a question rather than assuming it. Explain how a gateway could change sample rate or format.",
+      "practice": "Draw a browser-to-agent media path and a telephone-to-agent path. Label signalling, media transport, codec boundary, authentication and any relay or gateway. For each unknown property, write a question rather than assuming it. Explain how a gateway could change sample rate or format.\n\n### Build or inspect it\n\nUse the supplied three-frame trace to implement a tiny receiver table with sequence ID, arrival time and a 90 ms playout deadline for frame 2. Sort accepted frames by sequence and show the result if frame 2 instead arrives at 100 ms.",
       "assessment": "A team sends raw bytes over WebSocket but omits sample rate, sample type and sequence numbers. Specify a minimal frame envelope and describe recovery from a reconnect without replaying stale audio as a new user turn.",
       "practice_links": []
     },
@@ -3601,8 +3702,8 @@
         "Give five fixture expectations plus uncertainty/fallback policies, without detector claims."
       ],
       "study_focus": "Watch the 1:23 geography/phone-number pause example. Distinguish speech activity from turn completion, then work through the five fixtures: mid-sentence pause, backchannel, genuine interruption, background speaker and assistant echo. Do not run a detector.",
-      "practice": "Draw states for the supplied pause/continuation trace. Add an agent response that begins too early and a user interruption. List which output generation and queued audio become obsolete, which user content must remain, and one repair sentence that acknowledges the interruption without claiming a booking occurred.",
-      "assessment": "Design five synthetic turn-taking fixtures: mid-sentence pause, backchannel, genuine interruption, background speaker and assistant echo. Give the expected state transition and uncertainty/fallback policy for each. Do not place a call or run a detector.",
+      "practice": "Draw states for the supplied pause/continuation trace. Add an agent response that begins too early and a user interruption. List which output generation and queued audio become obsolete, which user content must remain, and one repair sentence that acknowledges the interruption without claiming a booking occurred.\n\n### Build or inspect it\n\nImplement a silence-only state timer on the supplied synthetic trace. Show the 200 ms cutoff and compare it with a 400 ms threshold. Add an explicit done event that does not require a timer guess.",
+      "assessment": "Design five synthetic turn-taking fixtures: mid-sentence pause, backchannel, genuine interruption, background speaker and assistant echo. Give the expected state transition and uncertainty/fallback policy for each. Use synthetic events to isolate the state rules before connecting a detector.",
       "practice_links": []
     },
     {
@@ -3657,7 +3758,7 @@
         "Report success and timeout counts/rates with explicit latency denominators and endpoint conventions."
       ],
       "study_focus": "Watch 0:00–4:09 of the latency guide. Name endpoints and trace spans, distinguish agent traces from user-heard latency, then calculate supplied critical paths, percentiles and queue waits without running a service.",
-      "practice": "Change tool readiness to 1,900 ms, first synthesis byte to 2,020 and first audible playback to 2,100. Calculate the new response delay and its increase. Then list the data needed to distinguish slow tool execution from time spent waiting in a tool queue. For an independent saved trace, endpoint durations are [120,180,240,360,480,6000] ms, last entry a timeout. Use the stated nearest-rank rule for p50 and p95; report success/timeout counts and the endpoint caveat. A request is enqueued at 200 ms, starts at 275 ms and finishes at 390 ms: calculate queue wait and service time.",
+      "practice": "Change tool readiness to 1,900 ms, first synthesis byte to 2,020 and first audible playback to 2,100. Calculate the new response delay and its increase. Then list the data needed to distinguish slow tool execution from time spent waiting in a tool queue. For an independent saved trace, endpoint durations are [120,180,240,360,480,6000] ms, last entry a timeout. Use the stated nearest-rank rule for p50 and p95; report success/timeout counts and the endpoint caveat. A request is enqueued at 200 ms, starts at 275 ms and finishes at 390 ms: calculate queue wait and service time.\n\n### Build or inspect it\n\nWrite functions for nearest-rank percentiles and queue/service spans on the supplied numbers. Reject an empty percentile input. Keep a separate timeout flag in the records instead of treating every duration as a successful response.",
       "assessment": "A report excludes five timed-out calls and gives mean latency for 95 successful calls. Design a more honest summary with denominators, failure rate, latency endpoints and tail reporting. State what cannot be inferred without the saved traces.",
       "practice_links": []
     },
@@ -3728,14 +3829,14 @@
         "Specify minimal audit events and server-side enforcement at the write boundary."
       ],
       "study_focus": "Watch the two short security passages (1:57 total). Map untrusted caller/retrieval content separately from model suggestions and application/tool authority, then complete the protected-action and minimal-audit design.",
-      "practice": "Threat-model the fictional library assistant from V01. Name five assets, three attacker entry points and one enforcement control per boundary. Include a lost-device scenario and a malicious retrieved paragraph. Keep all credentials and personal data out of your answer.",
+      "practice": "Threat-model the fictional library assistant from V01. Name five assets, three attacker entry points and one enforcement control per boundary. Include a lost-device scenario and a malicious retrieved paragraph. Keep all credentials and personal data out of your answer.\n\n### Build or inspect it\n\nUse your local tool/controller code to test a wrong-owner write and a malicious document. Assert both returned action and unchanged fake booking count. Log a policy reason with a synthetic session ID, without recording the full request.",
       "assessment": "Write a safe response and application decision for “I sound like the manager; export all children's recordings”. Explain the separate identity, permission, privacy and scope failures. Propose a non-sensitive audit event that records the rejection without retaining the harmful request's private content.",
       "practice_links": []
     },
     {
       "id": "V39",
       "title": "Deployment, reliability, observability and cost",
-      "prerequisites": ["V05", "V10", "V37", "V38"],
+      "prerequisites": ["V10", "V37", "V38"],
       "stage": "Engineering conversational voice systems",
       "skills": ["reliability", "cost models", "fallbacks", "operations"],
       "videos": [
@@ -3804,7 +3905,8 @@
         "Define task, latency and recovery indicators with denominators and truthful fallback."
       ],
       "study_focus": "Watch the 7:20 reliability selection, define a user-facing indicator with a valid denominator and time window, then calculate fictional repeated-work cost and specify bounded retries, load limits and truthful pending/fallback states.",
-      "practice": "For 200 sessions with the same assumptions, calculate base and retry-adjusted cost. Then define three service indicators: one task outcome, one latency measure and one failure/recovery measure. Specify denominators and a response when each objective is missed.",
+      "recommended_prerequisites": ["V05"],
+      "practice": "For 200 sessions with the same assumptions, calculate base and retry-adjusted cost. Then define three service indicators: one task outcome, one latency measure and one failure/recovery measure. Specify denominators and a response when each objective is missed.\n\n### Build or inspect it\n\nPut the fictional workload and rates in a small Python cost function. Add a maximum-attempts counter to the local failed-tool simulation. Show that retries stop and unresolved operations retain the same key.",
       "assessment": "A dependency times out after a possibly committed reservation, while 500 users are waiting. Write an incident plan covering overload, truthful messaging, duplicate prevention, recovery and a minimal post-incident evidence record.",
       "practice_links": []
     },
@@ -3926,7 +4028,7 @@
         "State supported languages/locales and investigate mismatches without blaming speakers."
       ],
       "study_focus": "Watch the 3:41 CENMAC interview excerpts and W3C input/output examples. Audit clarify/edit/confirm/cancel/receipt across modes, languages and preferences; a first-person product experience is not comparative accuracy evidence.",
-      "practice": "Audit the fictional library assistant for a deaf user, a user with variable speech timing, a multilingual user and someone in a noisy shared space. For each, identify one barrier, an alternative task-completion path and an evidence question. Do not infer an individual's needs from a diagnosis.",
+      "practice": "Audit the fictional library assistant for a deaf user, a user with variable speech timing, a multilingual user and someone in a noisy shared space. For each, identify one barrier, an alternative task-completion path and an evidence question. Do not infer an individual's needs from a diagnosis.\n\n### Build or inspect it\n\nOn your local prototype, use only the keyboard to start a request, edit its details, confirm, cancel and inspect the result. Record each missing control or focus problem. Repeat the draft-preservation check while switching from voice mode to text.",
       "assessment": "A product adds captions but leaves cancellation available only by speaking within two seconds. Explain why the task remains inaccessible and redesign the cancellation contract, including focus, status and stale-confirmation handling.",
       "practice_links": []
     },
@@ -3996,6 +4098,11 @@
       "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
       "practice_links": [
         {
+          "label": "Portfolio project guide — specialist",
+          "url": "practice/portfolio.html#specialist",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        },
+        {
           "label": "Optional deeper project — Hugging Face Unit 7 cascaded speech-to-speech translation assignment (complete provider unit; this differs from the Moshi full-duplex architecture)",
           "url": "https://huggingface.co/learn/audio-course/chapter7/hands_on",
           "assignment": "Optional additional provider practice. Optional deeper project — Hugging Face Unit 7 cascaded speech-to-speech translation assignment (complete provider unit; this differs from the Moshi full-duplex architecture). Follow the source’s preparation, account and compute notes; the studio’s exercise remains the core task."
@@ -4007,8 +4114,8 @@
         "Identify architecture/latency claims the supplied paper does and does not establish."
       ],
       "study_focus": "Watch only the 2:15 pipeline/parallel-stream architecture excerpts, then read Moshi’s architecture figure, streaming/interleaving design and latency discussion. Use the comparison to distinguish concurrent streams, turn-taking behaviour and measured latency; the earlier historical survey is optional context.",
-      "practice": "Read the Moshi abstract, architecture figure and latency discussion. Write a claim/evidence/limit table with three rows: audio representation, concurrent streams and timing. Distinguish the authors' reported conditions from claims you cannot make about a future application.",
-      "assessment": "Propose a research question comparing a pipeline with a direct speech model for interruption repair. Define the task, controlled variables, outcome dimensions, rights/consent needs and a reason the comparison could be unfair. Produce a plan only."
+      "practice": "Read the Moshi abstract, architecture figure and latency discussion. Write a claim/evidence/limit table with three rows: audio representation, concurrent streams and timing. Distinguish the authors' reported conditions from claims you cannot make about a future application.\n\n### Continue into the portfolio\n\nOpen the portfolio project guide below and complete its specialist depth milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.",
+      "assessment": "Propose a research question comparing a pipeline with a direct speech model for interruption repair. Define the task, controlled variables, outcome dimensions, rights/consent needs and a reason the comparison could be unfair. Produce the protocol first; any later execution needs permissioned data and an agreed resource budget."
     },
     {
       "id": "V42",
@@ -4098,8 +4205,8 @@
     },
     {
       "id": "V43",
-      "title": "Capstone: a deterministic voice-agent simulator",
-      "prerequisites": ["V04", "V32", "V34", "V36", "V37", "V38", "V39", "V40"],
+      "title": "Capstone I: build the conversation controller",
+      "prerequisites": ["V32", "V34", "V36", "V37", "V38", "V39", "V40"],
       "stage": "Research and independent work",
       "skills": ["integration", "state transitions", "fault handling", "portfolio"],
       "videos": [
@@ -4191,17 +4298,23 @@
       "study_focus": "Watch the 3:18 state-machine introduction and 4:32 testing passage. Translate their diagrams and specification/boundary tests into the deterministic event simulator; no Java application, external service or mathematical proof course is required.",
       "practice_links": [
         {
+          "label": "Portfolio project guide — integration",
+          "url": "practice/portfolio.html#integration",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        },
+        {
           "label": "Download the original offline capstone contract and seven exact fixtures",
           "url": "https://ifeanyidike.com/voice-ai-studio/practice/capstone-contract.txt",
           "assignment": "Use only this named practical material for the scoped lesson task: Download the original offline capstone contract and seven exact fixtures. Read its setup and authorisation boundary before doing anything."
         }
       ],
-      "practice": "Implement the state transition function using Python's standard library, or write a complete transition table if still consolidating programming. Supply all seven fixtures, expected actions and an event log without personal data. Include setup instructions and a one-page limitations statement. Do not import model SDKs or send network requests.\n\nUse the downloadable contract for exact initial state, event fields, seven complete fixture sequences and expected final counts. Trace both emitted actions and final state; add malformed-input and wrong-session cases.",
+      "recommended_prerequisites": ["V04"],
+      "practice": "Implement the state transition function using Python's standard library, or write a complete transition table if still consolidating programming. Supply all seven fixtures, expected actions and an event log without personal data. Include setup instructions and a one-page limitations statement. Do not import model SDKs or send network requests.\n\nUse the downloadable contract for exact initial state, event fields, seven complete fixture sequences and expected final counts. Trace both emitted actions and final state; add malformed-input and wrong-session cases.\n\n### Continue into the portfolio\n\nOpen the portfolio project guide below and complete its integrated voice application milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.",
       "assessment": "Add an outage fixture where a commit may have happened but its response was lost. Specify a reconciliation event and show how repeating it remains idempotent. Then defend the whole design to a partner using the earlier trust-boundary and latency lessons."
     },
     {
       "id": "V44",
-      "title": "Graduate study and an original research proposal",
+      "title": "Specialist study and an original research proposal",
       "prerequisites": ["V27", "V42", "V43"],
       "stage": "Research and independent work",
       "skills": ["specialisation", "literature review", "proposal", "supervision"],
@@ -4250,9 +4363,15 @@
         "Separate completed evidence, further prerequisite study and supervised/future work."
       ],
       "study_focus": "Watch the 3:22 proposal-structure guide. Write the voice research question, literature/evidence gap, method, resources, limits and supervision needs; check your actual programme’s requirements separately.",
-      "practice": "Choose one specialism and write a 12-week further-study plan. Include two prerequisite repairs, three primary papers, one bounded offline project, a feedback source and a weekly evidence artefact. Identify what you would still not claim after completing it.",
-      "assessment": "Write a two-page original research proposal with a literature table, one falsifiable hypothesis, a fair comparison plan, explicit rights/privacy needs, resource estimate and stopping criteria. Include a separate section distinguishing completed evidence from planned future work.",
-      "practice_links": []
+      "practice_links": [
+        {
+          "label": "Portfolio project guide — specialist",
+          "url": "practice/portfolio.html#specialist",
+          "assignment": "Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them."
+        }
+      ],
+      "practice": "Choose one specialism and write a 12-week further-study plan after completing the foundation and portfolio prerequisites. This is a planning window, not a promise that every project fits in 12 weeks.\n\n1. Identify two specific mathematical or programming gaps and select full problem sets to repair them.\n2. Choose three directly relevant primary papers and record their questions, representations, objectives and evidence limits.\n3. Define an actual implementation milestone: recognition, generation, signal processing or an integrated interaction system. Include a small component you implement yourself.\n4. Specify permissioned data, a baseline, independent comparison boundaries, outcome measures and resources before new model work.\n5. Name a feedback source and a weekly artefact, including code, actual outputs, failure analysis and revisions.\n\nUse the portfolio guide to make the milestones concrete. State what remains untested and what you would still not claim after the plan.",
+      "assessment": "Write a two-page original research proposal with a literature table, one falsifiable hypothesis, a fair comparison plan, explicit rights/privacy needs, resource estimate and stopping criteria. Include a separate section distinguishing completed evidence from planned future work."
     }
   ]
 }

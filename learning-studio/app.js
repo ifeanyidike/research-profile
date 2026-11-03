@@ -1,15 +1,17 @@
-import { createViewRefresh } from "./view-refresh.js?v=20261031-4";
-import { passCriteria } from "./lesson-sections.js?v=20261031-4";
-import { progressActions } from "./progress-actions.js?v=20261031-4";
-import { storageListener } from "./storage-events.js?v=20261031-4";
-import { lessonDetails, updateLessonDetails } from "./lesson-details.js?v=20261031-4";
-import { createTextFields, draftSummary } from "./text-fields.js?v=20261031-4";
-import { createAuthStorage } from "./auth-storage.js?v=20261031-4";
-import { math } from "./math.js?v=20261031-4";
-import { createModel } from "./model.js?v=20261031-4";
-import { Account } from "./account.js?v=20261031-4";
-import { resourceCards, assignmentSummary } from "./resources.js?v=20261031-4";
-import { renderProse as paragraphs } from "./prose.js?v=20261031-4";
+import { mainTopics, refresherTopics } from "./learning-path.js?v=20261103-2";
+import { renderCode, bindCodeEditors } from "./code-editor.js?v=20261103-2";
+import { createViewRefresh } from "./view-refresh.js?v=20261103-2";
+import { passCriteria } from "./lesson-sections.js?v=20261103-2";
+import { progressActions } from "./progress-actions.js?v=20261103-2";
+import { storageListener } from "./storage-events.js?v=20261103-2";
+import { lessonDetails, updateLessonDetails } from "./lesson-details.js?v=20261103-2";
+import { createTextFields, draftSummary } from "./text-fields.js?v=20261103-2";
+import { createAuthStorage } from "./auth-storage.js?v=20261103-2";
+import { math } from "./math.js?v=20261103-2";
+import { createModel } from "./model.js?v=20261103-2";
+import { Account } from "./account.js?v=20261103-2";
+import { resourceCards, assignmentSummary } from "./resources.js?v=20261103-2";
+import { renderProse as paragraphs } from "./prose.js?v=20261103-2";
 import { syncConfig } from "../algo-studio/sync-config.js";
 export function startStudio(config) {
   document.documentElement.dataset.studio = config.slug;
@@ -95,7 +97,8 @@ export function startStudio(config) {
     return typeof name === "string" ? name.slice(0, 60) : "Learner";
   }
   function state() {
-    return learningState(selectedModules(), records());
+    const current = learningState(selectedModules(), records());
+    return { ...current, due: [...current.due, ...learningState(refresherTopics(modules), records()).due] };
   }
   function selectUser(next) {
     user = next;
@@ -150,9 +153,9 @@ export function startStudio(config) {
     return `${trackPicker()}<div class="page-heading home-heading"><span class="eyebrow">YOUR LEARNING SPACE</span><h1>Welcome, ${esc(currentName())}.</h1><p>${esc(config.heroCopy)}</p></div>
     ${next ? `<section class="continue-card"><div><span class="eyebrow">YOUR NEXT TOPIC · ${esc(next.id)}</span><h2>${esc(next.title)}</h2></div><a class="button" href="#lesson/${next.id}/learn">${s.passed ? "Continue learning" : "Start learning"} ↗</a></section>` : `<section class="continue-card"><div><h2>Your learning path is complete.</h2><p>Return to recall or choose further study for your goals.</p></div><a class="button" href="#review">Review learning ↗</a></section>`}
     <p class="home-summary">${s.passed} of ${selectedModules().length} topics self-assessed · <a href="#review">${s.due.length} recall reviews due</a></p>
-    <p class="home-browse"><a href="#path">Browse the curriculum ↗</a></p>
+    <p class="home-browse"><a href="#path">Browse the curriculum ↗</a>${config.portfolio ? ` · <a href="${esc(config.portfolio.url)}">${esc(config.portfolio.label)} ↗</a>` : ""}</p>
     <details class="home-stages" data-state-key="home-stages"><summary>Explore all ${selectedStages().length} learning stages</summary><div class="stage-grid">${stageCards()}</div></details>
-    <p class="fine-print home-scope">${esc(config.scopeNote)}</p>`;
+    ${optionalRefreshers()}<p class="fine-print home-scope">${esc(config.scopeNote)}</p>`;
   }
   function path() {
     const s = state(),
@@ -164,7 +167,7 @@ export function startStudio(config) {
         (!pathState ||
           (pathState === "passed" ? r[m.id]?.passedAt : pathState === "ready" ? !r[m.id]?.passedAt && s.ready(m) : !r[m.id]?.passedAt && !s.ready(m)))
     );
-    return `${trackPicker()}<div class="page-heading"><span class="eyebrow">${selectedModules().length} TOPICS · YOUR SELECTED PATH</span><h1>Your curriculum</h1><p>Start at the beginning or revisit a foundation. Each topic connects explanations, exact source material, practice, and evidence of understanding.</p><p><a href="#sources">Open the full topic-by-topic source map ↗</a></p></div><div class="filters"><label><span class="sr-only">Search curriculum</span><input id="path-search" type="search" placeholder="Search topics or skills…" value="${esc(pathQuery)}" /></label><label><span class="sr-only">Learning stage</span><select id="path-stage"><option value="">All stages</option>${stages
+    return `${trackPicker()}<div class="page-heading"><span class="eyebrow">${selectedModules().length} TOPICS · YOUR SELECTED PATH</span><h1>Your curriculum</h1><p>Start at the beginning or revisit a foundation. Each topic connects explanations, exact source material, practice, and evidence of understanding.</p>${refresherTopics(modules).length ? `<p class="fine-print">${selectedModules().length} main topics · ${refresherTopics(modules).length} optional Python refreshers below.</p>` : ""}<p><a href="#sources">Open the full topic-by-topic source map ↗</a></p></div><div class="filters"><label><span class="sr-only">Search curriculum</span><input id="path-search" type="search" placeholder="Search topics or skills…" value="${esc(pathQuery)}" /></label><label><span class="sr-only">Learning stage</span><select id="path-stage"><option value="">All stages</option>${stages
       .filter((st) => selectedModules().some((m) => m.stage === st))
       .map((st) => `<option ${st === pathStage ? "selected" : ""}>${esc(st)}</option>`)
       .join(
@@ -178,7 +181,7 @@ export function startStudio(config) {
             : "";
         })
         .join("") || '<div class="empty">No topics match. Try a broader search or another filter.</div>'
-    }</div>`;
+    }</div>${optionalRefreshers(true)}`;
   }
   function outcomes(m) {
     return `<ul class="topic-outcomes">${m.outcomes.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>`;
@@ -197,7 +200,7 @@ export function startStudio(config) {
   }
   function workshop(l) {
     const g = l.guide;
-    return `<section class="lesson-bridge"><h3>Before you begin</h3>${paragraphs(g.bridge)}</section><h2>Step by step</h2>${paragraphs(g.teaching)}<div class="worked-example"><span class="eyebrow">FOLLOW THE WHOLE EXAMPLE</span><h3>Worked example and supplied data</h3>${g.example_format === "math" ? `<div class="math-example" aria-label="Worked mathematical example">${paragraphs(g.example)}</div>` : `<pre class="lesson-code" tabindex="0" aria-label="Worked example"><code>${esc(g.example)}</code></pre>`}${paragraphs(g.explanation)}</div>`;
+    return `<h2>Step by step</h2>${paragraphs(g.teaching)}<h2>Put the steps together</h2><p>${esc(l.mechanism)}</p><div class="worked-example"><span class="eyebrow">FOLLOW THE WHOLE EXAMPLE</span><h3>Worked example and supplied data</h3>${g.example_format === "math" ? `<div class="math-example" aria-label="Worked mathematical example">${paragraphs(g.example)}</div>` : renderCode(g.example, g.example_format)}${paragraphs(g.explanation)}</div>`;
   }
   function practiceWorkshop(l) {
     return `<h3>Your complete workshop</h3>${paragraphs(l.guide.exercise)}<details class="solution"><summary>Reveal the worked solution after your attempt</summary>${paragraphs(l.guide.solution)}</details>`;
@@ -211,12 +214,16 @@ export function startStudio(config) {
     const r = store.record(active, id).values,
       missing = m.prerequisites.filter((p) => !store.record(active, p).values.passedAt);
     const selected = selectedModules();
-    const sequence = selected.includes(m) ? selected : modules.filter((item) => item.tracks?.includes(m.tracks?.[0]));
+    const sequence = m.optional
+      ? refresherTopics(modules)
+      : selected.includes(m)
+        ? selected
+        : modules.filter((item) => item.tracks?.includes(m.tracks?.[0]));
     const otherTrack = config.tracks?.find((t) => !selected.includes(m) && m.tracks.includes(t.id));
     const index = sequence.indexOf(m);
     let body = "";
     if (tab === "learn")
-      body = `<span class="eyebrow">A GUIDED EXPLANATION</span><h2>The idea, in plain language</h2><p>${esc(l.concept)}</p><h2>How it works</h2><p>${esc(l.mechanism)}</p>${workshop(l)}<div class="misconception"><strong>Keep this distinction clear</strong><p>${esc(l.pitfall)}</p></div><h2>Check your understanding</h2><p>Answer from memory before checking the explanation. This question is a starting check; the independent task in Assess tests the topic more fully.</p>${quiz(l.check)}<div class="lesson-bottom"><label><input type="checkbox" id="mark-read" ${r.read ? "checked" : ""} /> I can explain this introduction in my own words</label><a class="button" href="#lesson/${id}/resources">Watch & read ↗</a></div>`;
+      body = `<section class="lesson-bridge"><h2>Before you begin</h2>${paragraphs(l.guide.bridge)}</section><span class="eyebrow">A GUIDED EXPLANATION</span><h2>The idea, in plain language</h2><p>${esc(l.concept)}</p>${workshop(l)}<div class="misconception"><strong>Keep this distinction clear</strong><p>${esc(l.pitfall)}</p></div><h2>Check your understanding</h2><p>Answer from memory before checking the explanation. This question is a starting check; the independent task in Assess tests the topic more fully.</p>${quiz(l.check)}<div class="lesson-bottom"><label><input type="checkbox" id="mark-read" ${r.read ? "checked" : ""} /> I can explain this introduction in my own words</label><a class="button" href="#lesson/${id}/resources">Watch & read ↗</a></div>`;
     if (tab === "resources")
       body = resources(m) + `<div class="lesson-bottom"><a class="button" href="#lesson/${id}/practice">Put it into practice ↗</a></div>`;
     if (tab === "practice")
@@ -225,7 +232,7 @@ export function startStudio(config) {
       body = `<span class="eyebrow">SHOW WHAT YOU CAN DO WITHOUT A WALKTHROUGH</span><h2>Independent assessment</h2><div class="callout"><strong>Independent task</strong>${paragraphs(l.guide.challenge)}</div><details class="solution"><summary>Review the expected reasoning after your attempt</summary>${paragraphs(l.guide.challenge_solution)}</details>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}${passCriteria(m)}<h3>A quick retrieval check</h3>${quiz(l.check)}<label class="evidence"><strong>Your assessment evidence and explanation</strong><span>Record the independent result, how you checked it, and what remains uncertain. Aim for evidence another learner could review.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you build, solve, or demonstrate independently? How did you verify it?">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I reviewed every pass criterion and can defend my evidence</label><p class="fine-print">To record a pass: complete practice, assess the prerequisites, answer the retrieval check correctly in this session, review the criteria, and add at least 40 characters of assessment evidence. The hub records your judgement; it does not execute or grade external labs.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
     if (tab === "notes")
       body = `<h2>Make the lesson yours</h2><p>Explain the concept as if teaching another learner. Keep questions, diagrams in words, connections to earlier topics, and mistakes you corrected.</p><label class="evidence"><strong>Your lesson notebook</strong><textarea data-field="notes" maxlength="20000" placeholder="In my own words…\nA question I still have…\nA connection to another topic…">${esc(r.notes || "")}</textarea></label><p class="save-hint" role="status"></p>`;
-    return `${otherTrack ? `<div class="scope-note"><strong>This topic belongs to ${esc(otherTrack.label)}.</strong><p>You are exploring outside your selected path. The links below follow this topic's own path.</p><button class="button secondary" data-switch-track="${esc(otherTrack.id)}">Switch to this learning path</button></div>` : ""}<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">Topic ${index + 1} of ${sequence.length} · ${id}</span></div><div class="page-heading"><span class="pathway-label">${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "Self-paced")}</span><h1>${esc(m.title)}</h1></div><p class="fine-print lesson-scope">${esc(config.scopeNote)}</p>${lessonDetails(m, r, missing, byId)}<nav class="tabs" aria-label="Lesson sections">${Object.entries(
+    return `${otherTrack ? `<div class="scope-note"><strong>This topic belongs to ${esc(otherTrack.label)}.</strong><p>You are exploring outside your selected path. The links below follow this topic's own path.</p><button class="button secondary" data-switch-track="${esc(otherTrack.id)}">Switch to this learning path</button></div>` : ""}<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">${m.optional ? "Optional refresher" : `Topic ${index + 1} of ${sequence.length}`} · ${id}</span></div><div class="page-heading"><span class="pathway-label">${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "Self-paced")}</span><h1>${esc(m.title)}</h1></div><p class="fine-print lesson-scope">${esc(config.scopeNote)}</p>${lessonDetails(m, r, missing, byId)}<nav class="tabs" aria-label="Lesson sections">${Object.entries(
       tabs
     )
       .map(
@@ -234,13 +241,13 @@ export function startStudio(config) {
       )
       .join(
         ""
-      )}</nav><p id="remote-progress-note" class="fine-print" role="status" hidden></p><div class="lesson-layout"><article class="lesson-body">${body}</article></div><div class="lesson-pagination">${index ? lessonLink(sequence[index - 1].id, "← Previous topic") : ""}${index < sequence.length - 1 ? lessonLink(sequence[index + 1].id, "Next topic →") : ""}</div>`;
+      )}</nav><p id="remote-progress-note" class="fine-print" role="status" hidden></p><div class="lesson-layout"><article class="lesson-body">${body}</article></div><div class="lesson-pagination">${index ? lessonLink(sequence[index - 1].id, "← Previous topic") : ""}${index < sequence.length - 1 ? lessonLink(sequence[index + 1].id, "Next topic →") : m.optional ? lessonLink(mainTopics(modules).find((item) => item.id !== "V01").id, "Continue with voice foundations →") : ""}</div>`;
   }
   function review() {
     const s = state(),
       r = records();
     return `<div class="page-heading"><span class="eyebrow">MAKE LEARNING LAST</span><h1>Recall & review</h1><p>After a self-assessed pass, revisit the topic after 2 days, then 7 days after that review, then 30 days after the next. First recall the idea; then check the source and retry a changed example.</p></div>${s.due.length ? s.due.map((m) => `<section class="review-card"><span class="eyebrow">DUE ${date(r[m.id].reviewAt)} · REVIEW ${(r[m.id].reviewStage || 0) + 1}/3</span><h2>${lessonLink(m.id, m.title)}</h2><p>${esc(lessons[m.id].check.question)}</p><details data-state-key="review:${m.id}"><summary>Check the explanation after answering aloud</summary><p>${esc(lessons[m.id].check.explanation)}</p><p>${esc(lessons[m.id].pitfall)}</p></details><p>Reproduce a small example, then explain the result without the walkthrough.</p><button class="button secondary" data-review="${m.id}">I recalled, checked, and practised this</button></section>`).join("") : '<section class="empty"><h2>No reviews due today.</h2><p>Keep learning. Reviews appear here after your first self-assessed pass.</p><a class="button" href="#path">Explore your next topic ↗</a></section>'}<h2>Coming up</h2>${
-      selectedModules()
+      [...selectedModules(), ...refresherTopics(modules)]
         .filter((m) => r[m.id].reviewAt > Date.now())
         .sort((a, b) => r[a.id].reviewAt - r[b.id].reviewAt)
         .slice(0, 8)
@@ -290,7 +297,16 @@ export function startStudio(config) {
     return stages.filter((stage) => selectedModules().some((m) => m.stage === stage));
   }
   function selectedModules() {
-    return modules.filter((m) => !config.tracks || m.tracks.includes(track));
+    return mainTopics(modules.filter((m) => !config.tracks || m.tracks.includes(track)));
+  }
+  function optionalRefreshers(filtered = false) {
+    const items = refresherTopics(modules).filter(
+      (m) =>
+        (!filtered || !pathQuery || `${m.id} ${m.title} ${m.skills.join(" ")}`.toLowerCase().includes(pathQuery.toLowerCase())) &&
+        (!filtered || !pathStage || m.stage === pathStage)
+    );
+    if (!items.length) return "";
+    return `<details class="home-stages optional-refreshers" data-state-key="optional-refreshers"><summary>Optional Python refresher · ${items.length} topics</summary><p>Already comfortable with functions, loops, JSON, imports, exceptions and a terminal? Continue with the main voice lessons. These refreshers do not block your progress or count towards the ${mainTopics(modules).length}-topic main path.</p>${items.map((m) => row(m)).join("")}</details>`;
   }
   function trackPicker() {
     return config.tracks
@@ -298,10 +314,15 @@ export function startStudio(config) {
       : "";
   }
   function sourceMap() {
-    return `${trackPicker()}<article class="method source-map"><span class="eyebrow">RESEARCHED 30 OCTOBER 2026</span><h1>Your topic-by-topic source map</h1><p>${esc(config.sourcesNote)}</p><p><a href="curriculum.json" download>Download JSON ↓</a> · <a href="source-map.txt" download>Download readable source map ↓</a></p>${selectedModules()
+    return `${trackPicker()}<article class="method source-map"><span class="eyebrow">RESEARCHED 30 OCTOBER 2026</span><h1>Your topic-by-topic source map</h1><p>${esc(config.sourcesNote)}</p><p><a href="curriculum.json" download>Download JSON ↓</a> · <a href="source-map.txt" download>Download readable source map ↓</a></p>${(refresherTopics(
+      modules
+    ).length
+      ? modules
+      : selectedModules()
+    )
       .map(
         (m) =>
-          `<details data-state-key="source:${m.id}"><summary>${esc(m.id)} · ${esc(m.title)}</summary><p>${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "All stages")}</p><p><strong>Prerequisites:</strong> ${m.prerequisites.length ? m.prerequisites.map((id) => lessonLink(id, byId[id].title)).join(" · ") : "None — start here"}</p><h3>Study assignment</h3>${paragraphs(m.study_focus)}<h3>Watch in order</h3><p>${esc(m.videoNote)}</p>${m.videos.length ? `<ol>${m.videos.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p>${r.contentReview?.sources?.length ? `<p class="fine-print">${r.contentReview.sources.map(link).join(" · ")}</p>` : ""}</li>`).join("")}</ol>` : ""}<h3>Read in order</h3><ol>${m.readings.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol><h3>Practical exercise</h3>${paragraphs(m.practice)}${m.practice_links.length ? "<h3>Additional practical materials</h3><ul>" + m.practice_links.map((r) => "<li>" + link(r) + `<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("") + "</ul>" : ""}<h3>Independent assessment</h3>${paragraphs(m.assessment)}<h3>Pass criteria</h3>${outcomes(m)}<p class="fine-print">${esc(m.note)}</p><p>${lessonLink(m.id, "Open full lesson ↗")}</p></details>`
+          `<details data-state-key="source:${m.id}"><summary>${esc(m.id)} · ${esc(m.title)}</summary><p>${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "All stages")}</p><p><strong>Prerequisites:</strong> ${m.prerequisites.length ? m.prerequisites.map((id) => lessonLink(id, byId[id].title)).join(" · ") : "None — start here"}</p>${m.recommended_prerequisites?.length ? `<p><strong>Optional Python refreshers:</strong> ${m.recommended_prerequisites.map((id) => lessonLink(id)).join(" · ")}. Review if needed; these do not block the main path.</p>` : ""}<h3>Study assignment</h3>${paragraphs(m.study_focus)}<h3>Watch in order</h3><p>${esc(m.videoNote)}</p>${m.videos.length ? `<ol>${m.videos.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p>${r.contentReview?.sources?.length ? `<p class="fine-print">${r.contentReview.sources.map(link).join(" · ")}</p>` : ""}</li>`).join("")}</ol>` : ""}<h3>Read in order</h3><ol>${m.readings.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol><h3>Practical exercise</h3>${paragraphs(m.practice)}${m.practice_links.length ? "<h3>Additional practical materials</h3><ul>" + m.practice_links.map((r) => "<li>" + link(r) + `<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("") + "</ul>" : ""}<h3>Independent assessment</h3>${paragraphs(m.assessment)}<h3>Pass criteria</h3>${outcomes(m)}<p class="fine-print">${esc(m.note)}</p><p>${lessonLink(m.id, "Open full lesson ↗")}</p></details>`
       )
       .join("")}</article>`;
   }
@@ -367,6 +388,7 @@ export function startStudio(config) {
         if (disclosures.has(el.dataset.stateKey)) el.open = disclosures.get(el.dataset.stateKey);
       }
     bindView(route);
+    bindCodeEditors($("#main"));
     const mathRoots = [...$("#main").querySelectorAll(".lesson-body, .lesson-details, .source-map, .review-card")];
     math.typeset(mathRoots).catch((error) => {
       for (const root of mathRoots.filter((node) => node.isConnected)) {
@@ -849,7 +871,7 @@ export function startStudio(config) {
   });
   function searchResults() {
     const q = $("#search").value.trim().toLowerCase();
-    const found = selectedModules()
+    const found = (refresherTopics(modules).length ? modules : selectedModules())
       .filter((m) => `${m.id} ${m.title} ${m.skills.join(" ")}`.toLowerCase().includes(q))
       .slice(0, 20);
     $("#search-results").innerHTML =

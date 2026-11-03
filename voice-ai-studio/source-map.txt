@@ -1,7 +1,7 @@
 Voice AI Studio
 ===============
 
-Source assignments reviewed 30–31 October 2026; native clarity review 31 October 2026. Original lessons and fictional exercises; external providers own their materials.
+Source assignments reviewed 30–31 October 2026; native clarity review 3 November 2026. Original lessons and fictional exercises; external providers own their materials.
 
 V01 — What a voice system actually does
 Prerequisites: None
@@ -26,14 +26,18 @@ Readings:
     Assignment: Read Stanford CS224S — scope, prerequisites and curriculum (recordings restricted). Focus on system boundaries, tasks, learning plan; then work through this lesson’s example to check your understanding.
   Hugging Face Audio Course — course scope and prerequisites — https://huggingface.co/learn/audio-course/chapter0/introduction
     Assignment: Read Hugging Face Audio Course — course scope and prerequisites. Focus on system boundaries, tasks, learning plan; then work through this lesson’s example to check your understanding.
-Practical: On paper, map a fictional library telephone assistant. It may read opening hours and propose a book reservation. Draw six boxes: capture, ASR, dialogue, reservation tool, TTS and transport. Give each box one input, one output and one possible failure. Mark the point where a user must approve a reservation. Use no accounts, recordings or provider calls.
+Additional practical materials:
+  Portfolio project guide — start — practice/portfolio.html#start
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
+Practical: On paper, map a fictional library telephone assistant. It may read opening hours and propose a book reservation. Draw six boxes: capture, ASR, dialogue, reservation tool, TTS and transport. Give each box one input, one output and one possible failure. Mark the point where a user must approve a reservation. Use fictional details for this first design.
 Independent assessment: Design the same map for a museum information kiosk that must never change bookings. Identify two components you can simplify, two failures that remain, and the evidence needed before claiming it works for visitors with different accents.
 Pass criteria: 1. Map capture, ASR, dialogue, tool, TTS and transport with inputs and failure points. 2. Remove write authority for the museum kiosk and explain two remaining failures. 3. Separate a paper design from evidence of accent coverage or product performance.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
 V02 — Python: values, functions and clear inputs
 Prerequisites: V01
-Path: All learners
+Optional refresher: Yes
+Path: Optional Python refresher
 Study assignment: Study CS50P Week 0 functions, variables, strings, numeric values and return values; trace the supplied duration function before attempting the independent function.
 Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
 Videos:
@@ -64,7 +68,8 @@ Source notes: Public source assignments are study references, not institutional 
 
 V03 — Python: decisions, loops and collections
 Prerequisites: V02
-Path: All learners
+Optional refresher: Yes
+Path: Optional Python refresher
 Study assignment: Study CS50P Week 1 conditionals and Week 2 loops, lists and dictionaries. Trace every supplied event, including unknown kinds and empty input.
 Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
 Videos:
@@ -95,13 +100,18 @@ Additional practical materials:
   Harvard CS50P — optional problem set 2 — https://cs50.harvard.edu/python/psets/2/
     Assignment: Optional additional provider practice. Harvard CS50P — optional problem set 2. Follow the source’s preparation, account and compute notes; the studio’s exercise remains the core task.
 Practical: Make a table with event index, kind, duration and running speech total. Add a silence event lasting 300 milliseconds and predict both speech time and total timeline time. Then replace the first duration with -1 and explain where execution stops. Write a second function that totals all event durations.
+
+### Build or inspect it
+
+Write and run your bucket function. Keep the supplied event data in a separate variable. Add an empty-list case, an all-silence case and a negative-duration case. Predict the output before running each case.
 Independent assessment: Implement a summary returning a dictionary with speech_ms, silence_ms and other_ms. Treat unknown kinds as other rather than silently discarding their time. For speech 40, silence 20 and music 30, supply the expected dictionary and total-duration invariant.
 Pass criteria: 1. Return speech_ms, silence_ms and other_ms for every supplied event with independent expected totals. 2. Preserve total time when an unknown event kind occurs; handle an empty list. 3. Reject negative durations and show that the buckets sum to the total.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
 V04 — Files, modules, errors and offline tests
 Prerequisites: V03
-Path: All learners
+Optional refresher: Yes
+Path: Optional Python refresher
 Study assignment: Study CS50P Weeks 3, 4, 6 and 5 in card order: exceptions, libraries and JSON, file I/O, then tests. Focus on JSON decoding versus application validation; use only the local fictional fixtures.
 Video coverage/access: Study in order: exceptions; modules and JSON; text files; tests. Use the chapter bounds on each card, and split this foundation topic across study sessions if needed. The historical web-request demonstration is observation only; all required practice uses local fictional fixtures.
 Videos:
@@ -157,7 +167,8 @@ Source notes: Public source assignments are study references, not institutional 
 
 V05 — Terminal, environments, Git and reproducibility
 Prerequisites: V04
-Path: All learners
+Optional refresher: Yes
+Path: Optional Python refresher
 Study assignment: Work through Missing Semester shell navigation, quoting and Git staging/diffs. Write a reproducibility README; package installation is unnecessary for the exercises.
 Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
 Videos:
@@ -183,13 +194,17 @@ Readings:
     Assignment: Read The Missing Semester — shell lecture and exercises. Focus on shell, environments, version control; then work through this lesson’s example to check your understanding.
   The Missing Semester — version control — https://missing.csail.mit.edu/2020/version-control/
     Assignment: Read The Missing Semester — version control. Focus on shell, environments, version control; then work through this lesson’s example to check your understanding.
+Additional practical materials:
+  Portfolio project guide — python — practice/portfolio.html#python
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
 Practical: Create a new directory and copy only V04's checks.py and a synthetic events.json into it. Add a README with the Python version, command, expected result and absence of network/model dependencies. Initialise Git and inspect exactly what is staged. Do not add a real API key, recording or environment file.
 Independent assessment: A colleague says the code worked but gives no commit, input file or command. Write a six-item reproducibility request, then explain how you would investigate two different results without rerunning a paid service.
 Pass criteria: 1. Supply source, synthetic fixture, Python version, command and expected output. 2. Inspect the staged diff and exclude secrets, recordings and environments. 3. Explain how commit, input and run log connect a result to a reproducible setup.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
 V06 — Maths bridge: algebra, units, powers and logs
-Prerequisites: V02
+Prerequisites: V01
+Recommended Python refreshers (not required): V02
 Path: All learners
 Study assignment: Complete the Edinburgh algebra and logarithm tutorial questions. Practise rearranging equations, powers, unit conversions and log rules before interpreting dB or log probabilities.
 Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
@@ -208,112 +223,16 @@ Videos:
 Readings:
   Edinburgh — mathematics tutorials: algebra and logarithms — https://homepages.inf.ed.ac.uk/sgwater/math_tutorials.html
     Assignment: Read Edinburgh — mathematics tutorials: algebra and logarithms. Focus on algebra, units, logarithms; then work through this lesson’s example to check your understanding.
+Additional practical materials:
+  Local audio lab — setup, tasks and reference results — practice/audio-lab.html
+    Assignment: Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V06. No model, microphone, network or paid service is used.
 Practical: Calculate the payload for 0.5 seconds of stereo PCM at 48 kHz and 16 bits/sample. Show every conversion. Then find the duration of 24,000 mono samples at 16 kHz. Explain the difference between doubling amplitude and doubling power in the stated matching conditions.
+
+### Build or inspect it
+
+Use the local audio lab linked below. Its mono 200 Hz file contains one second at 16,000 frames/second and two bytes per sample. Predict the payload and compare it with the report. Explain why the whole WAV file is larger.
 Independent assessment: A specification says “one minute, 16 kHz, 16-bit, mono, under 1 MB uncompressed”. Check the claim using decimal MB and show how long one million payload bytes can hold, excluding a header.
 Pass criteria: 1. Check the one-minute-under-1-MB claim with a complete PCM payload calculation. 2. Calculate the duration limit for 1000000 bytes under the stated format, showing your rearranged equation. 3. Show units and distinguish payload from headers, decimal MB and compression.
-Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
-
-V07 — Vectors, matrices and tensor shapes
-Prerequisites: V06
-Path: All learners
-Study assignment: Work MIT 18.06 Lecture 1 examples and the accompanying linear-equation material. Explain a dot product, matrix multiplication, orthogonality and axis meanings by hand.
-Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
-Videos:
-  MIT OpenCourseWare — Lecture 1: The geometry of linear equations — https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-1-the-geometry-of-linear-equations/
-    Assignment: Watch only 2:09–15:24 (13:15 total). The complete two-equation worked example: rows as intersecting lines, matrix/vector notation and columns as a linear combination. Solve the example by hand and connect it to a weighted feature vector. The opening square-system case is a teaching choice; matrices can be rectangular and systems can have no solution or multiple solutions. Later three-dimensional examples are optional course depth, not required for the dot-product/matrix-shape exercise.
-    Watch 2:09–15:24: V07: selected teaching, part 1
-    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
-      Recording and English captions: https://www.youtube.com/embed/J7DzL2_Na80
-Readings:
-  MIT 18.06 — problem sets and solutions — https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/assignments/
-    Assignment: Use only the named chapters, sections, units or exercises in this assignment: MIT 18.06 — problem sets and solutions. Do not read the entire book/course before proceeding. Record assumptions and work the relevant examples independently.
-Practical: Recalculate the example for x = [1, 0]. Then write a matrix that turns [left, right] into [left + right, left - right]. Apply it to [3, 1]. Finally explain why a (3, 4) matrix cannot multiply a (5, 1) column vector.
-Independent assessment: A model receives \((8,50,40)\) with batch/time/feature axes. It applies a 12-output linear layer independently at each time step. State the weight shape, output shape, number of weights and number of biases. Explain what would change if time and feature were accidentally swapped.
-Pass criteria: 1. Derive the weight/output shapes and parameter/bias counts for the supplied batch and linear layer. 2. Name batch, time and feature axes and explain a time/feature swap. 3. Demonstrate a matrix-vector calculation rather than only listing shapes.
-Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
-
-V08 — Derivatives, gradients and optimisation
-Prerequisites: V06, V07
-Path: All learners
-Study assignment: Study MIT Sessions 1–3 and 6–11 in Differentiation Part A as needed, completing Problem Set 1 and checking its solutions. Follow the scalar/partial-derivative examples before the optional CMU network application; revisit that clip after V18.
-Video coverage/access: Use the MIT derivative and chain-rule clips and worked examples for the core assignment. The CMU network-learning recording is optional later depth after V18.
-Videos:
-  MIT 18.01SC — Session 1: Introduction to Derivatives, clips 2–5 and Definition of Derivative recitation — https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-1-introduction-to-derivatives/
-    Assignment: Watch the 5 named parts in order (25:19 combined): Clip 2 — tangent slope (3:49–8:45; 4:56); Clip 3 — limit of secants (8:45–11:52; 3:07); Clip 4 — slope as a ratio (11:52–14:05; 2:13); Clip 5 — derivative formula (14:05–16:41; 2:36); Definition of Derivative recitation — complete worked rational-function example (12:27). The four named clips are excerpts of one 51-minute lecture, with source-video offsets explicitly given here; their captions do match tangent slope, secants and the limit definition. The separate recitation derives the rational-function derivative step by step and checks its graph. Follow this complete worked example; skip the unassigned course introduction and Interpretation of Derivative recitation. A derivative is a limit when it exists, not a quotient obtained by substituting zero. Teaching supplies a simpler polynomial example before the rational-function algebra.
-    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
-      Clip 2 — tangent slope (3:49–8:45; 4:56) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-2-geometric-interpretation-of-differentiation-1/
-      Clip 3 — limit of secants (8:45–11:52; 3:07) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-3-limit-of-secants/
-      Clip 4 — slope as a ratio (11:52–14:05; 2:13) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-4-slope-as-ratio-1/
-      Clip 5 — derivative formula (14:05–16:41; 2:36) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-5-main-formula/
-      Definition of Derivative recitation — complete worked rational-function example (12:27) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-1-introduction-to-derivatives/#definition-of-derivative
-      Publisher transcript / video script: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-1-introduction-to-derivatives/
-  MIT 18.01SC — Session 11: Chain Rule, lecture excerpts and worked examples — https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-11-chain-rule/
-    Assignment: Watch the 3 named parts in order (18:11 combined): Clip 1 — composition and chain rule (22:15–29:48; 7:33); Clip 1 Example — sin(10t) (29:48–32:46; 2:58); Chain Rule recitation — three nested functions (7:40). The excerpts correctly derive the product of local derivatives and show a complete sin(10t) example; the recitation adds a three-function composition. Watch the lecture explanation, the two-function example, then the recitation. The sine/cosine derivatives and radian convention are prerequisites supplied in the primer; the first V08 exercise uses only polynomials. Differential-symbol cancellation is an intuition, not a general proof allowing division by zero. The recitation asks for two stationary points, not all of them or a proof they are extrema.
-    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
-      Clip 1 — composition and chain rule (22:15–29:48; 7:33) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-1-chain-rule/
-      Clip 1 Example — sin(10t) (29:48–32:46; 2:58) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-1-example-sin-10t/
-      Chain Rule recitation — three nested functions (7:40) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-11-chain-rule/#chain-rule
-      Publisher transcript / video script: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-11-chain-rule/
-  Optional: Carnegie Mellon University Deep Learning — 11785 Spring 22 Lecture 4: Learning the Network - Backprop — https://www.youtube.com/watch?v=lYYkEx1Qx8s
-    Assignment: Watch only 34:00–37:40, then 39:00–41:15, then 47:00–48:00 (6:55 total). Use the local-update explanation as an optional advanced V08 refresher rather than the full 98-minute recording labelled Backprop. It is an optimisation treatment, not a complete backpropagation derivation. A negative-gradient direction is locally descending at a differentiable nonstationary point; an arbitrary finite step need not reduce loss. Small gradients or little loss change are stopping heuristics, not proof of a minimum or convergence. Examples show overshoot, and the excluded convex-always-success claim is not assigned.
-    Watch 34:00–37:40: Derivative sign, direction and the gradient-descent update
-    Watch 39:00–41:15: Multivariable gradient direction and stopping heuristics
-    Watch 47:00–48:00: Apply the update to the network parameter vector
-    Access: CMU course index describes Lecture 4 as empirical risk minimisation/gradient descent; the publisher video title says Learning the Network — Backprop.
-    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
-      Recording and English captions: https://www.youtube.com/watch?v=lYYkEx1Qx8s
-Readings:
-  MIT 18.01SC — Differentiation Part A: Sessions 1–3, 6–11 and Problem Set 1 with solutions — https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/
-    Assignment: Read MIT 18.01SC — Differentiation Part A: Sessions 1–3, 6–11 and Problem Set 1 with solutions. Focus on calculus, chain rule, gradient descent; then work through this lesson’s example to check your understanding.
-  Optional: CMU — 11-785 Spring 2022 lecture/video source index — https://deeplearning.cs.cmu.edu/S22/
-    Assignment: Optional index for the optional CMU lecture excerpts in this topic. Use it to locate the named recordings and slides; the index itself does not teach the lesson’s concepts.
-Practical: Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate \(L(w)=(2w-6)^2\) using the chain rule.
-Independent assessment: For \(L(a,b)=(a-1)^2+2(b+2)^2\), start at (3,−1) with rate 0.1. Compute the gradient, one update and the old/new loss. State why one successful update is not a universal convergence argument.
-Pass criteria: 1. Compute the gradient, simultaneous parameter update and old/new loss for the two-parameter challenge. 2. Use simultaneous old-parameter gradients with the stated learning rate. 3. Explain the local nature of a gradient and limits of a single successful update.
-Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
-
-V09 — Probability, statistics and uncertainty
-Prerequisites: V06
-Path: All learners
-Study assignment: Study the Harvard probability material on conditional probability, random variables, expectation and variance. Use the introductory MIT and StatQuest videos first if those terms are new.
-Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
-Videos:
-  MIT OpenCourseWare — Lecture 18: Probability Introduction — https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/resources/lecture-18-probability-introduction/
-    Assignment: Watch only 28:56–47:14, then 49:02–59:31 (28:47 total). Sample space, outcomes, nonuniform probabilities and events, with the complete weighted-tree Monty Hall calculation. Before viewing: one prize is hidden in three boxes; the host knows its location, always reveals an unchosen empty box and always offers a switch. The excerpt states the probability assumptions and shows why counting six winning outcomes out of twelve is not enough: outcomes have different weights. Use these probability ideas to interpret the lesson’s worked example.
-    Watch 28:56–47:14: V09: selected teaching, part 1
-    Watch 49:02–59:31: V09: selected teaching, part 2
-    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
-      Recording and English captions: https://www.youtube.com/embed/SmFwFdESMHI
-  StatQuest with Josh Starmer — Calculating the Mean, Variance and Standard Deviation, Clearly Explained!!! — https://www.youtube.com/watch?v=SzZ6GpcfoQY
-    Assignment: Watch only 1:03–10:11 (9:08 total). Complete worked population/sample mean, variance and standard-deviation calculations. Read the distribution/population primer first, especially in V09 where the other population-parameters video is not assigned. Squared deviations are nonnegative, not always positive. The n−1 sample-variance estimator is unbiased under suitable independent identically distributed sampling with finite variance; its square root is not generally an unbiased standard-deviation estimator. Normality is not needed merely to calculate descriptive mean and variance.
-    Watch 1:03–10:11: V09: selected teaching, part 1
-    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
-      Recording and English captions: https://www.youtube.com/watch?v=SzZ6GpcfoQY
-Readings:
-  Harvard Stat 110 — probability book and lectures — https://stat110.hsites.harvard.edu/
-    Assignment: Read Harvard Stat 110 — probability book and lectures. Focus on conditional probability, mean, variance; then work through this lesson’s example to check your understanding.
-Practical: For a fictional deployment containing 50 noisy and 50 quiet clips, assume the conditional rates above remain unchanged. Calculate the expected number with errors and the overall expected rate. Then calculate the mean and median of the five supplied latencies. State two assumptions behind the error prediction.
-Independent assessment: One report counts 1,000 clips from two speakers; another counts 200 clips from 200 speakers. Explain why clip count alone cannot decide which better supports a claim about new speakers. Propose the missing sampling information and a sensible grouping for uncertainty analysis.
-Pass criteria: 1. Use the correct conditional denominators and calculate the changed-mixture expected error rate. 2. Distinguish mean, median, spread and speaker-level independence. 3. Explain why 1000 clips from two speakers do not establish broad speaker coverage.
-Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
-
-V10 — Experimental design and data leakage
-Prerequisites: V04, V09
-Path: All learners
-Study assignment: Read the assigned leakage and dataset guidance. Write split units, preprocessing boundaries, model-selection rules and an uncertainty plan before looking at any hypothetical result.
-Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
-Videos:
-  StatQuest with Josh Starmer — Hypothesis Testing and The Null Hypothesis, Clearly Explained!!! — https://www.youtube.com/watch?v=0oc49DyA3hU
-    Assignment: Watch only 8:05–9:59 (1:54 total). Reject versus fail to reject, and the no-difference null used in this example. This is a vocabulary component, not a complete testing protocol or clinical trial design. A null can specify values other than zero; failing to reject is not proof of equality. Prespecify hypotheses and the test procedure rather than repeatedly collecting data until a desired result appears. The p-value definition, effect size and uncertainty are taught in the lesson and required readings.
-    Watch 8:05–9:59: V10: selected teaching, part 1
-    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
-      Recording and English captions: https://www.youtube.com/watch?v=0oc49DyA3hU
-Readings:
-  scikit-learn — common pitfalls and data leakage — https://scikit-learn.org/stable/common_pitfalls.html
-    Assignment: Read scikit-learn — common pitfalls and data leakage. Focus on splits, confounding, baselines; then work through this lesson’s example to check your understanding.
-Practical: Create a six-row fictional manifest with three speakers and two sessions per speaker. Assign each whole speaker to train, validation or test. Mark one intentional duplicate and keep it in its source group. Write the target claim, split unit and two limits. Do this on paper or in a local text file only.
-Independent assessment: A team reports improvement after selecting the best of 30 thresholds on its test set. Draft a corrected study plan, including what happens to that old test set, and explain why the published number cannot simply be relabelled independent evidence.
-Pass criteria: 1. Identify the test-set threshold search as development on that set. 2. Propose untouched future comparison data with speaker/session and duplicate boundaries. 3. State preprocessing, selection and uncertainty rules before inspecting new results.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
 V11 — Sound waves, frequency, amplitude and phase
@@ -334,13 +253,21 @@ Readings:
   Optional: Edinburgh speech.zone — Periodic Signal — https://speech.zone/courses/speech-processing/module-2-acoustic-phonetics/videos/periodic-signal/
     Assignment: Optional text alternative to the assigned 6:05 Periodic Signal video. Read its transcript if you prefer text or need a reference; it covers the same material, so a second pass is optional.
     Access: The publisher supplies transcripts alongside the named clips. Access may be intermittent; an HTTP block is not evidence the clip was removed. Older synthesis/tool examples are conceptual.
+Additional practical materials:
+  Local audio lab — setup, tasks and reference results — practice/audio-lab.html
+    Assignment: Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V11. No model, microphone, network or paid service is used.
 Practical: Calculate periods for 100 Hz, 250 Hz and 1 kHz. Count how many cycles each completes in 40 ms. Draw two cycles of a 250 Hz signal, labelling the time axis in milliseconds. Explain what changes if amplitude halves while frequency stays fixed.
+
+### Build or inspect it
+
+Run the local audio lab and open its report. Compare tone-200, tone-400 and tone-200-quiet. Count cycles over the plotted 20 ms and compare amplitude. Listen at a comfortable low volume if useful; the plots and numeric results support a non-listening route.
 Independent assessment: A periodic signal has components at 150, 300 and 450 Hz. A plot shows the largest component at 300 Hz. Explain why concluding “the fundamental must be 300 Hz” is unjustified, and list two measurement-chain details needed before comparing amplitudes with another recording.
 Pass criteria: 1. Explain why a 300-Hz peak need not be the fundamental of a 150/300/450-Hz signal. 2. Calculate a period and cycle count with explicit seconds/milliseconds. 3. Name calibration/gain and recording conditions needed for amplitude comparisons.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
 V12 — Sampling, quantisation, channels and codecs
-Prerequisites: V04, V11
+Prerequisites: V11
+Recommended Python refreshers (not required): V04
 Path: All learners
 Study assignment: Study sampling, quantisation and representation in the assigned digital-signal material. Calculate counts/payloads before discussing decoding or resampling.
 Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
@@ -352,7 +279,14 @@ Videos:
 Readings:
   Hugging Face Audio Course — audio data: sampling rate, amplitude and channels — https://huggingface.co/learn/audio-course/chapter1/audio_data
     Assignment: Read Hugging Face Audio Course — audio data: sampling rate, amplitude and channels. Focus on sample rate, PCM, aliasing; then work through this lesson’s example to check your understanding.
+Additional practical materials:
+  Local audio lab — setup, tasks and reference results — practice/audio-lab.html
+    Assignment: Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V12. No model, microphone, network or paid service is used.
 Practical: For 48 kHz mono PCM, calculate the samples in 10, 20 and 30 ms. Calculate the payload bytes for each at 16 bits/sample. Then explain how the answer changes for stereo. Finally describe the steps required to turn a compressed stereo recording into mono 16 kHz PCM without merely relabelling it.
+
+### Build or inspect it
+
+Inspect the local lab report for tone-200 and stereo. Record sample rate, audio-frame count, channel count, PCM payload and duration. Explain why stereo doubles the scalar sample count without doubling duration.
 Independent assessment: A one-second, 48 kHz file is labelled 16 kHz without changing its 48,000 samples. Predict playback duration. Contrast this with proper 48-to-16 kHz resampling, stating output count, duration and the reason for low-pass filtering.
 Pass criteria: 1. Predict playback duration after relabelling 48000 samples as 16 kHz without resampling. 2. Contrast proper resampling by giving output sample count, duration and the anti-alias filtering reason. 3. Distinguish codec decoding, channel mixing, resampling and PCM representation.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -413,6 +347,29 @@ Independent assessment: A colleague doubles all frequencies in a recording and c
 Pass criteria: 1. Separate F0/harmonic spacing from the filter envelope and formants. 2. Explain that doubling playback rate doubles resonances and halves duration. 3. State what evidence would support a pitch-only transformation claim.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
+V07 — Vectors, matrices and tensor shapes
+Prerequisites: V06
+Path: All learners
+Study assignment: Work MIT 18.06 Lecture 1 examples and the accompanying linear-equation material. Explain a dot product, matrix multiplication, orthogonality and axis meanings by hand.
+Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
+Videos:
+  MIT OpenCourseWare — Lecture 1: The geometry of linear equations — https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-1-the-geometry-of-linear-equations/
+    Assignment: Watch only 2:09–15:24 (13:15 total). The complete two-equation worked example: rows as intersecting lines, matrix/vector notation and columns as a linear combination. Solve the example by hand and connect it to a weighted feature vector. The opening square-system case is a teaching choice; matrices can be rectangular and systems can have no solution or multiple solutions. Later three-dimensional examples are optional course depth, not required for the dot-product/matrix-shape exercise.
+    Watch 2:09–15:24: V07: selected teaching, part 1
+    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
+      Recording and English captions: https://www.youtube.com/embed/J7DzL2_Na80
+Readings:
+  MIT 18.06 — problem sets and solutions — https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/assignments/
+    Assignment: Use only the named chapters, sections, units or exercises in this assignment: MIT 18.06 — problem sets and solutions. Do not read the entire book/course before proceeding. Record assumptions and work the relevant examples independently.
+Practical: Recalculate the example for x = [1, 0]. Then write a matrix that turns [left, right] into [left + right, left - right]. Apply it to [3, 1]. Finally explain why a (3, 4) matrix cannot multiply a (5, 1) column vector.
+
+### Build or inspect it
+
+Implement dot(a,b) with a loop and reject unequal lengths. Check [1,2] with [3,4], and [1,1] with [1,-1]. Do the same arithmetic by hand, then explain what each coordinate represents in your own two-feature example.
+Independent assessment: A model receives \((8,50,40)\) with batch/time/feature axes. It applies a 12-output linear layer independently at each time step. State the weight shape, output shape, number of weights and number of biases. Explain what would change if time and feature were accidentally swapped.
+Pass criteria: 1. Derive the weight/output shapes and parameter/bias counts for the supplied batch and linear layer. 2. Name batch, time and feature axes and explain a time/feature swap. 3. Demonstrate a matrix-vector calculation rather than only listing shapes.
+Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
+
 V15 — Fourier transforms, windows and spectrograms
 Prerequisites: V07, V12, V14
 Path: All learners
@@ -434,9 +391,16 @@ Videos:
 Readings:
   Hugging Face Audio Course — pre-processing audio data — https://huggingface.co/learn/audio-course/chapter1/preprocessing
     Assignment: Read Hugging Face Audio Course — pre-processing audio data. Focus on DFT, STFT, windows; then work through this lesson’s example to check your understanding.
+Additional practical materials:
+  Local audio lab — setup, tasks and reference results — practice/audio-lab.html
+    Assignment: Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V15. No model, microphone, network or paid service is used.
 Practical: Calculate duration and bin spacing for N = 256 and N = 512 at 16 kHz. Calculate the time between frame starts for a 128-sample hop. Explain which setting you would inspect for a rapid consonant transition and what frequency-detail trade-off you would report.
 
 Before the plot critique, reproduce the four-point transform for \([1,0,-1,0]\) and then \([0,1,0,-1]\) using the supplied sine/cosine factors. Report real and imaginary parts and explain why equal magnitudes do not mean identical signals.
+
+### Build or inspect it
+
+In the local lab, predict the peak frequency bin for tone-200 and tone-400 with N=400 and fs=16,000. Compare your prediction with the report. Open audio_lab.py and identify where the DFT sums real and imaginary parts.
 Independent assessment: Using the forward convention and sine/cosine factors in Learn, compute the four-point DFT of the new input \([1,1,-1,-1]\). Show real and imaginary parts and the nonzero magnitudes. Then a report compares two spectrograms without sample rate, window length or dB reference and claims noise removal: write a corrected reporting checklist and explain why the images alone do not establish improved speech quality.
 Pass criteria: 1. Calculate window duration, hop and bin spacing without confusing them. 2. Compute the supplied four-point Fourier coefficients and explain magnitude/phase. 3. Name missing plot settings and why a spectrogram alone cannot establish quality.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -462,11 +426,118 @@ Videos:
 Readings:
   librosa — mel-spectrogram parameters (development documentation; check installed version) — https://librosa.org/doc/main/api/generated/librosa.feature.melspectrogram.html
     Assignment: Read librosa — mel-spectrogram parameters (development documentation; check installed version). Focus on convolution, filter banks, features; then work through this lesson’s example to check your understanding.
+Additional practical materials:
+  Local audio lab — setup, tasks and reference results — practice/audio-lab.html
+    Assignment: Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V16. No model, microphone, network or paid service is used.
 Practical: Apply the same causal filter to [0, 2, 2, 0] using zero initial history. Write four outputs and the full-convolution tail. Then list six parameters you would record when exporting log-mel features for another researcher.
 
 Repeat with [0,2,2,2] and show the nonzero tail. Then compute the two-band energies, logs and two DCT coefficients in the toy feature frame from Step by step, naming its normalisation.
+
+### Build or inspect it
+
+Use the local lab to compare the original and two-sample-averaged 200 Hz tone. Read its moving_average function. Predict the first output under zero initial history, and explain why output length remains unchanged in this causal version.
 Independent assessment: Two systems both export 80 features per frame, but one uses 16 kHz audio with 10 ms hops and the other 48 kHz with 20 ms hops. Explain why their arrays cannot simply be exchanged, and draft a compatibility check before any model is loaded.
 Pass criteria: 1. Calculate causal filter outputs including the explicitly requested tail. 2. Describe framing, spectrum, mel bands, log floor and MFCC transform in order. 3. Check sample rate, timing and feature conventions before exchanging arrays.
+Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
+
+V08 — Derivatives, gradients and optimisation
+Prerequisites: V06, V07
+Path: All learners
+Study assignment: Study MIT Sessions 1–3 and 6–11 in Differentiation Part A as needed, completing Problem Set 1 and checking its solutions. Follow the scalar/partial-derivative examples before the optional CMU network application; revisit that clip after V18.
+Video coverage/access: Use the MIT derivative and chain-rule clips and worked examples for the core assignment. The CMU network-learning recording is optional later depth after V18.
+Videos:
+  MIT 18.01SC — Session 1: Introduction to Derivatives, clips 2–5 and Definition of Derivative recitation — https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-1-introduction-to-derivatives/
+    Assignment: Watch the 5 named parts in order (25:19 combined): Clip 2 — tangent slope (3:49–8:45; 4:56); Clip 3 — limit of secants (8:45–11:52; 3:07); Clip 4 — slope as a ratio (11:52–14:05; 2:13); Clip 5 — derivative formula (14:05–16:41; 2:36); Definition of Derivative recitation — complete worked rational-function example (12:27). The four named clips are excerpts of one 51-minute lecture, with source-video offsets explicitly given here; their captions do match tangent slope, secants and the limit definition. The separate recitation derives the rational-function derivative step by step and checks its graph. Follow this complete worked example; skip the unassigned course introduction and Interpretation of Derivative recitation. A derivative is a limit when it exists, not a quotient obtained by substituting zero. Teaching supplies a simpler polynomial example before the rational-function algebra.
+    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
+      Clip 2 — tangent slope (3:49–8:45; 4:56) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-2-geometric-interpretation-of-differentiation-1/
+      Clip 3 — limit of secants (8:45–11:52; 3:07) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-3-limit-of-secants/
+      Clip 4 — slope as a ratio (11:52–14:05; 2:13) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-4-slope-as-ratio-1/
+      Clip 5 — derivative formula (14:05–16:41; 2:36) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-5-main-formula/
+      Definition of Derivative recitation — complete worked rational-function example (12:27) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-1-introduction-to-derivatives/#definition-of-derivative
+      Publisher transcript / video script: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-1-introduction-to-derivatives/
+  MIT 18.01SC — Session 11: Chain Rule, lecture excerpts and worked examples — https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-11-chain-rule/
+    Assignment: Watch the 3 named parts in order (18:11 combined): Clip 1 — composition and chain rule (22:15–29:48; 7:33); Clip 1 Example — sin(10t) (29:48–32:46; 2:58); Chain Rule recitation — three nested functions (7:40). The excerpts correctly derive the product of local derivatives and show a complete sin(10t) example; the recitation adds a three-function composition. Watch the lecture explanation, the two-function example, then the recitation. The sine/cosine derivatives and radian convention are prerequisites supplied in the primer; the first V08 exercise uses only polynomials. Differential-symbol cancellation is an intuition, not a general proof allowing division by zero. The recitation asks for two stationary points, not all of them or a proof they are extrema.
+    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
+      Clip 1 — composition and chain rule (22:15–29:48; 7:33) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-1-chain-rule/
+      Clip 1 Example — sin(10t) (29:48–32:46; 2:58) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-1-example-sin-10t/
+      Chain Rule recitation — three nested functions (7:40) — transcript and video: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-11-chain-rule/#chain-rule
+      Publisher transcript / video script: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-11-chain-rule/
+  Optional: Carnegie Mellon University Deep Learning — 11785 Spring 22 Lecture 4: Learning the Network - Backprop — https://www.youtube.com/watch?v=lYYkEx1Qx8s
+    Assignment: Watch only 34:00–37:40, then 39:00–41:15, then 47:00–48:00 (6:55 total). Use the local-update explanation as an optional advanced V08 refresher rather than the full 98-minute recording labelled Backprop. It is an optimisation treatment, not a complete backpropagation derivation. A negative-gradient direction is locally descending at a differentiable nonstationary point; an arbitrary finite step need not reduce loss. Small gradients or little loss change are stopping heuristics, not proof of a minimum or convergence. Examples show overshoot, and the excluded convex-always-success claim is not assigned.
+    Watch 34:00–37:40: Derivative sign, direction and the gradient-descent update
+    Watch 39:00–41:15: Multivariable gradient direction and stopping heuristics
+    Watch 47:00–48:00: Apply the update to the network parameter vector
+    Access: CMU course index describes Lecture 4 as empirical risk minimisation/gradient descent; the publisher video title says Learning the Network — Backprop.
+    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
+      Recording and English captions: https://www.youtube.com/watch?v=lYYkEx1Qx8s
+Readings:
+  MIT 18.01SC — Differentiation Part A: Sessions 1–3, 6–11 and Problem Set 1 with solutions — https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/
+    Assignment: Read MIT 18.01SC — Differentiation Part A: Sessions 1–3, 6–11 and Problem Set 1 with solutions. Focus on calculus, chain rule, gradient descent; then work through this lesson’s example to check your understanding.
+  Optional: CMU — 11-785 Spring 2022 lecture/video source index — https://deeplearning.cs.cmu.edu/S22/
+    Assignment: Optional index for the optional CMU lecture excerpts in this topic. Use it to locate the named recordings and slides; the index itself does not teach the lesson’s concepts.
+Practical: Starting from w = 5 with rate 0.1, calculate two updates and their losses. Repeat the first update with rate 1.2. Explain what the comparison shows about step size. Then differentiate \(L(w)=(2w-6)^2\) using the chain rule.
+
+### Build or inspect it
+
+Write a loop that starts w at zero and performs five updates for \(L(w)=(w-3)^2\) with learning rate 0.1. Print step, w and loss after each update. Explain why using the new w to report the old loss would make the log confusing.
+Independent assessment: For \(L(a,b)=(a-1)^2+2(b+2)^2\), start at (3,−1) with rate 0.1. Compute the gradient, one update and the old/new loss. State why one successful update is not a universal convergence argument.
+Pass criteria: 1. Compute the gradient, simultaneous parameter update and old/new loss for the two-parameter challenge. 2. Use simultaneous old-parameter gradients with the stated learning rate. 3. Explain the local nature of a gradient and limits of a single successful update.
+Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
+
+V09 — Probability, statistics and uncertainty
+Prerequisites: V06
+Path: All learners
+Study assignment: Study the Harvard probability material on conditional probability, random variables, expectation and variance. Use the introductory MIT and StatQuest videos first if those terms are new.
+Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
+Videos:
+  MIT OpenCourseWare — Lecture 18: Probability Introduction — https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/resources/lecture-18-probability-introduction/
+    Assignment: Watch only 28:56–47:14, then 49:02–59:31 (28:47 total). Sample space, outcomes, nonuniform probabilities and events, with the complete weighted-tree Monty Hall calculation. Before viewing: one prize is hidden in three boxes; the host knows its location, always reveals an unchosen empty box and always offers a switch. The excerpt states the probability assumptions and shows why counting six winning outcomes out of twelve is not enough: outcomes have different weights. Use these probability ideas to interpret the lesson’s worked example.
+    Watch 28:56–47:14: V09: selected teaching, part 1
+    Watch 49:02–59:31: V09: selected teaching, part 2
+    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
+      Recording and English captions: https://www.youtube.com/embed/SmFwFdESMHI
+  StatQuest with Josh Starmer — Calculating the Mean, Variance and Standard Deviation, Clearly Explained!!! — https://www.youtube.com/watch?v=SzZ6GpcfoQY
+    Assignment: Watch only 1:03–10:11 (9:08 total). Complete worked population/sample mean, variance and standard-deviation calculations. Read the distribution/population primer first, especially in V09 where the other population-parameters video is not assigned. Squared deviations are nonnegative, not always positive. The n−1 sample-variance estimator is unbiased under suitable independent identically distributed sampling with finite variance; its square root is not generally an unbiased standard-deviation estimator. Normality is not needed merely to calculate descriptive mean and variance.
+    Watch 1:03–10:11: V09: selected teaching, part 1
+    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
+      Recording and English captions: https://www.youtube.com/watch?v=SzZ6GpcfoQY
+Readings:
+  Harvard Stat 110 — probability book and lectures — https://stat110.hsites.harvard.edu/
+    Assignment: Read Harvard Stat 110 — probability book and lectures. Focus on conditional probability, mean, variance; then work through this lesson’s example to check your understanding.
+Practical: For a fictional deployment containing 50 noisy and 50 quiet clips, assume the conditional rates above remain unchanged. Calculate the expected number with errors and the overall expected rate. Then calculate the mean and median of the five supplied latencies. State two assumptions behind the error prediction.
+
+### Build or inspect it
+
+Write a small function for the mean and compare it with the middle value after sorting [100,100,100,100,600]. Change 600 to 6000 and explain which summary moves more.
+Independent assessment: One report counts 1,000 clips from two speakers; another counts 200 clips from 200 speakers. Explain why clip count alone cannot decide which better supports a claim about new speakers. Propose the missing sampling information and a sensible grouping for uncertainty analysis.
+Pass criteria: 1. Use the correct conditional denominators and calculate the changed-mixture expected error rate. 2. Distinguish mean, median, spread and speaker-level independence. 3. Explain why 1000 clips from two speakers do not establish broad speaker coverage.
+Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
+
+V10 — Experimental design and data leakage
+Prerequisites: V09
+Recommended Python refreshers (not required): V04
+Path: All learners
+Study assignment: Read the assigned leakage and dataset guidance. Write split units, preprocessing boundaries, model-selection rules and an uncertainty plan before looking at any hypothetical result.
+Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
+Videos:
+  StatQuest with Josh Starmer — Hypothesis Testing and The Null Hypothesis, Clearly Explained!!! — https://www.youtube.com/watch?v=0oc49DyA3hU
+    Assignment: Watch only 8:05–9:59 (1:54 total). Reject versus fail to reject, and the no-difference null used in this example. This is a vocabulary component, not a complete testing protocol or clinical trial design. A null can specify values other than zero; failing to reject is not proof of equality. Prespecify hypotheses and the test procedure rather than repeatedly collecting data until a desired result appears. The p-value definition, effect size and uncertainty are taught in the lesson and required readings.
+    Watch 8:05–9:59: V10: selected teaching, part 1
+    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
+      Recording and English captions: https://www.youtube.com/watch?v=0oc49DyA3hU
+Readings:
+  scikit-learn — common pitfalls and data leakage — https://scikit-learn.org/stable/common_pitfalls.html
+    Assignment: Read scikit-learn — common pitfalls and data leakage. Focus on splits, confounding, baselines; then work through this lesson’s example to check your understanding.
+Additional practical materials:
+  Portfolio project guide — data — practice/portfolio.html#data
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
+Practical: Create a six-row fictional manifest with three speakers and two sessions per speaker. Assign each whole speaker to train, validation or test. Mark one intentional duplicate and keep it in its source group. Write the target claim, split unit and two limits. Do this on paper or in a local text file only.
+
+### Build or inspect it
+
+Create a JSON manifest for the supplied rows and a Python check that reports any speaker appearing in more than one partition. Deliberately move A2 into test and confirm that the check reports speaker A.
+Independent assessment: A team reports improvement after selecting the best of 30 thresholds on its test set. Draft a corrected study plan, including what happens to that old test set, and explain why the published number cannot simply be relabelled independent evidence.
+Pass criteria: 1. Identify the test-set threshold search as development on that set. 2. Propose untouched future comparison data with speaker/session and duplicate boundaries. 3. State preprocessing, selection and uncertainty rules before inspecting new results.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
 V17 — Machine learning: regression and classification
@@ -494,6 +565,10 @@ Readings:
   D2L 4.1 — Softmax Regression: probabilities, cross-entropy and exercises — https://d2l.ai/chapter_linear-classification/softmax-regression.html
     Assignment: Read D2L 4.1 — Softmax Regression: probabilities, cross-entropy and exercises. Focus on loss, generalisation, regularisation; then work through this lesson’s example to check your understanding.
 Practical: For the same training pairs, calculate predictions and mean squared error for y_hat = x + 1. Compare all three candidate rules. Write one validation question about transfer and one about annotation quality. Identify which quantities were chosen before seeing the new pair.
+
+### Build or inspect it
+
+Implement the three candidate prediction rules and MSE using lists and loops. Assert the three training losses from the worked calculation. Keep the new pair out of any rule selection, then calculate its error once the rule is chosen.
 Independent assessment: A classifier is 98% accurate where 98% of examples are silence. Explain the trivial baseline, the missing error information and why accuracy alone cannot justify using it to decide when a user has stopped speaking.
 Pass criteria: 1. Compute regression MSE and compare against the constant baseline. 2. Show why always predicting silence reaches 98% in the supplied class mix. 3. Request error types, timing and population evidence before an endpointing claim.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -541,6 +616,10 @@ Additional practical materials:
   Framework prerequisite for optional ML projects: PyTorch Learn the Basics, tensors through optimisation — https://docs.pytorch.org/tutorials/beginner/basics/intro.html
     Assignment: Optional additional provider practice. Framework prerequisite for optional ML projects: PyTorch Learn the Basics, tensors through optimisation. Follow the source’s preparation, account and compute notes; the studio’s exercise remains the core task.
 Practical: Repeat the forward pass with w=-1, keeping the other supplied values fixed. Calculate prediction, loss and the gradients for w, b and v away from ReLU's zero point. Explain why this single example can leave the hidden unit inactive.
+
+### Build or inspect it
+
+Turn the scalar forward pass into a Python function returning the loss. Compare the analytic w gradient with (L(w+h)−L(w−h))/(2h), using h=0.00001 and the positive worked case. Do not cross the ReLU corner.
 Independent assessment: For the original positive case, perform one simultaneous gradient step with rate 0.01. State the new w,b,v and recompute the loss. Explain what this demonstrates and what it does not demonstrate.
 Pass criteria: 1. Compute the forward pass and gradients from the original parameters. 2. Give all three new parameters after the simultaneous update and recompute the loss independently. 3. Explain inactive ReLU and why one training example says nothing about transfer.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -584,12 +663,17 @@ Readings:
   Optional: CMU — 11-785 Spring 2022 lecture/video source index — https://deeplearning.cs.cmu.edu/S22/
     Assignment: Optional index for the optional CMU lecture excerpts in this topic. Use it to locate the named recordings and slides; the index itself does not teach the lesson’s concepts.
 Practical: With equal scores and scalar values [1,4,7], calculate unmasked attention. Then calculate attention at the middle position under a causal mask. Explain the result if a fourth padded position is mistakenly included with value 100 and equal score.
+
+### Build or inspect it
+
+Implement stable softmax for the two scores [0, ln(2)]: subtract the largest score before exponentiating, then divide by the sum. Apply it to values [3,9]. Test the single-allowed-key mask separately.
 Independent assessment: Draft an input contract for batched speech attention containing clips of unequal lengths. Specify axis meanings, length information, padding and causal/lookahead policy. Identify one testable invariant for each mask. For a separate numeric check, take \(d_k=1\), query \(q=1\), keys \(k_1=0,k_2=\ln2\) and scalar values 3 and 9. Compute scaled scores, softmax weights and the output, then mask the second key.
 Pass criteria: 1. Compute a weighted attention output and distinguish padding from causal masks. 2. Specify batch/time/feature axes, lengths and permitted lookahead. 3. Give padding-change and future-change invariants for valid earlier outputs.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
 V20 — Speech datasets, annotation, consent and licensing
-Prerequisites: V05, V10, V13
+Prerequisites: V10, V13
+Recommended Python refreshers (not required): V05
 Path: All learners
 Study assignment: Watch the 4:55 datasheet example, then apply the original paper to a fictional speech manifest, rights record, annotation uncertainties and speaker/session split.
 Video coverage/access: Core viewing: 4:55 on datasheet documentation, with a readable transcript. The example is a web archive; audio annotation, consent/licensing and leakage-free splits remain written lesson tasks.
@@ -615,7 +699,14 @@ Readings:
     Assignment: Read Datasheets for Datasets. Focus on manifests, annotation, rights; then work through this lesson’s example to check your understanding.
   Common Voice — dataset and licensing information — https://commonvoice.mozilla.org/en/datasets
     Assignment: Read Common Voice — dataset and licensing information. Focus on manifests, annotation, rights; then work through this lesson’s example to check your understanding.
+Additional practical materials:
+  Portfolio project guide — data — practice/portfolio.html#data
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
 Practical: Create four fictional rows representing two speakers and two sessions each. Include a language tag, sample rate, transcript-policy version and rights reference. Propose a split for unseen-speaker study and flag one row with uncertain transcription. Write two uses that would require a separate rights review.
+
+### Build or inspect it
+
+Save your four rows as JSON and write checks for missing rights_reference, invalid sample rate and a speaker split across partitions. Add one deliberately bad row of each kind, then remove it after the checks report the issue.
 Independent assessment: A public recording has a permissive code repository beside it, but no stated audio licence or speaker permission. Write a decision record explaining whether to include it, the missing evidence and an alternative way to continue learning.
 Pass criteria: 1. Keep each speaker's sessions in one partition for an unseen-speaker split, and flag uncertain transcription. 2. Record audio rights, provenance and annotation uncertainty separately from code licences. 3. Decline an unsupported audio-use assumption and name a permissioned alternative.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -649,6 +740,10 @@ Readings:
 Practical: Change Path B's transition to 1.0 and recalculate its score. Then change its first likelihood to 0.6 as well. Determine when the preferred path switches. Draw a two-state, three-time-step trellis and label what information a dynamic-programming table would retain.
 
 Fill in both time-two state scores and backpointers for the supplied numerical model in Step by step. Show both incoming candidates for each state before choosing; do not keep only one global state at time one.
+
+### Build or inspect it
+
+Implement the two-state, two-time Viterbi table with lists and loops. Store both winning scores and predecessor indices. Confirm the supplied Learn example before attempting the independent numbers in Assess.
 Independent assessment: Use the same transition table as Learn, but new start probabilities A:0.3, B:0.7. Observation-one emissions are A:0.5, B:0.4; observation-two emissions are A:0.6, B:0.3. Compute both time-one scores, both incoming candidates per time-two state, winning scores and backpointers, then recover the best path. Separately, transcript X has paths 0.12 and 0.11 while Y has one path 0.20. Compare best single path and supplied transcript sums.
 Pass criteria: 1. Compute a two-state Viterbi step with competing incoming paths and backpointers. 2. Distinguish the best individual path from the transcript with the largest supplied summed score. 3. State the model and score assumptions needed before interpreting a real decoder.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -682,6 +777,10 @@ Readings:
   CMU — 11-785 Spring 2022 lecture/video source index — https://deeplearning.cs.cmu.edu/S22/
     Assignment: Use this course index to locate the required CTC lecture excerpts and their slides. It is a navigation reference, not a separate explanation of CTC; follow the assigned video ranges and the lesson’s written collapse examples.
 Practical: Collapse these paths by hand: a,a,_,a; _,c,c,_,a,t,t; l,l,e,e,t,t,_,t,e,r. Show both intermediate operations. Then construct one path that collapses to “see” and another that collapses to “se”.
+
+### Build or inspect it
+
+Write a CTC collapse function for supplied label lists. Keep the previous raw label while merging repeats, then remove blanks. Add tests for an empty path, consecutive blanks, a,a and a,blank,a.
 Independent assessment: Transcript A has valid alignment probabilities 0.15 and 0.14; B has one at 0.25. Explain why a best-path decoder could prefer B while a summed-transcript calculation prefers A. Add one reason a better CTC score alone would not prove a better voice assistant.
 Pass criteria: 1. Merge adjacent repeats before removing blanks and recover repeated letters. 2. Calculate and explain the different best-path and summed-transcript decisions in the supplied challenge. 3. Separate CTC scoring from assistant timing, permissions and task correctness.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -715,9 +814,15 @@ Readings:
   Optional: CMU — 11-785 Spring 2022 lecture/video source index — https://deeplearning.cs.cmu.edu/S22/
     Assignment: Optional source index for the older attention/sequence-model refresher. This Spring 2022 course predates Whisper and is not assigned as Whisper-specific teaching.
 Additional practical materials:
+  Portfolio project guide — asr — practice/portfolio.html#asr
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
   Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements) — https://huggingface.co/learn/audio-course/chapter5/hands_on
     Assignment: Optional additional provider practice. Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements). Follow the source’s preparation, account and compute notes; the studio’s exercise remains the core task.
-Practical: Create a fictional review table with the reference, candidate transcript, uncertainty and next action for three cases: a proper name, an interrupted sentence and silence. Explain which ambiguities require clarification before a reservation tool may execute. Do not generate or upload audio.
+Practical: Create a fictional review table with the reference, candidate transcript, uncertainty and next action for three cases: a proper name, an interrupted sentence and silence. Explain which ambiguities require clarification before a reservation tool may execute. Keep this introductory table fictional; use the separate ASR milestone for actual audio work.
+
+### Continue into the portfolio
+
+Open the portfolio project guide below and complete its ASR milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.
 Independent assessment: A report names only “Whisper” and gives one accuracy percentage. Write the minimum additional specification needed to interpret or reproduce its claim, including the data boundary and what the percentage actually counts.
 Pass criteria: 1. Specify checkpoint, preprocessing, task/language, chunking and decoding choices. 2. Define the claimed accuracy unit, reference policy, independent data and counts. 3. Explain why fluent text from silence or an ambiguous name cannot authorise a write.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.
@@ -746,9 +851,15 @@ Readings:
   Edinburgh ASR 2026 — Lecture 16 Self-supervised learning slides and Lecture 17 multilingual slides (recordings restricted) — https://opencourse.inf.ed.ac.uk/asr/lectures
     Assignment: Read Edinburgh ASR 2026 — Lecture 16 Self-supervised learning slides and Lecture 17 multilingual slides (recordings restricted). Focus on wav2vec 2.0, pretraining, adaptation; then work through this lesson’s example to check your understanding.
 Additional practical materials:
+  Portfolio project guide — specialist — practice/portfolio.html#specialist
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
   Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements) — https://huggingface.co/learn/audio-course/chapter5/hands_on
     Assignment: Optional additional provider practice. Optional deeper project — Hugging Face Unit 5 ASR fine-tuning assignment (complete Unit 5 preparation; compute/account requirements). Follow the source’s preparation, account and compute notes; the studio’s exercise remains the core task.
-Practical: Write a pretraining/adaptation/test table for a fictional bilingual library kiosk. Specify language, speaker group, device, labels and rights for each stage. Identify two leakage risks and two distribution shifts. Keep all rows fictional and make no provider calls.
+Practical: Write a pretraining/adaptation/test table for a fictional bilingual library kiosk. Specify language, speaker group, device, labels and rights for each stage. Identify two leakage risks and two distribution shifts. Keep the design rows fictional; later specialist work needs actual permissioned data and a documented compute setup.
+
+### Continue into the portfolio
+
+Open the portfolio project guide below and complete its specialist depth milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.
 Independent assessment: A team fine-tunes on 20 clips from one new speaker and reports a better result on another clip from that same session. Explain the narrow claim this might support, the broader claim it cannot support, and a corrected future study design.
 Pass criteria: 1. Separate unlabelled pretraining, labelled adaptation and independent testing. 2. Limit the one-speaker/session result to its actual setting. 3. Propose held-out target groups, rights, baselines and distribution-shift checks.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.
@@ -778,7 +889,18 @@ Readings:
     Assignment: Read Hugging Face Audio Course — evaluation metrics for ASR. Focus on edit distance, WER, subgroups; then work through this lesson’s example to check your understanding.
   Optional: CMU — 11-785 Spring 2022 lecture/video source index — https://deeplearning.cs.cmu.edu/S22/
     Assignment: Optional index for the optional CMU lecture excerpts in this topic. Use it to locate the named recordings and slides; the index itself does not teach the lesson’s concepts.
+Additional practical materials:
+  Portfolio project guide — asr — practice/portfolio.html#asr
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
 Practical: Use reference “open the library” and hypothesis “please open library now”. Show an alignment, counts and WER. Then compare two fictional groups: A has 4 errors/80 words from eight speakers; B has 4/20 from two. State what is observed and what remains uncertain.
+
+### Build or inspect it
+
+Implement a minimum-edit-distance table for supplied text only. Initialise an empty-reference row with insertion counts and an empty-hypothesis column with deletion counts. At each cell choose match/substitute, delete or insert. Store backpointers to recover an alignment.
+
+### Continue into the portfolio
+
+Open the portfolio project guide below and complete its ASR milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.
 Independent assessment: Draft a one-page results table for a fictional recogniser comparison without inventing measured scores. Include metric conventions, independent units, critical-error categories, subgroup coverage and one decision rule for escalation in a booking task.
 Pass criteria: 1. Show minimum edit counts and corpus WER with a defined normalisation policy. 2. Report group rates with word and speaker counts rather than equal-error shortcuts. 3. Produce a reporting template with no invented scores and a clarification rule.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -820,6 +942,9 @@ Videos:
 Readings:
   SpeechBrain — Speech Enhancement From Scratch (read only; do not execute training cells) — https://speechbrain.readthedocs.io/en/stable/tutorials/tasks/speech-enhancement-from-scratch.html
     Assignment: Read SpeechBrain — Speech Enhancement From Scratch (read only; do not execute training cells). Focus on enhancement, separation, beamforming; then work through this lesson’s example to check your understanding.
+Additional practical materials:
+  Local audio lab — setup, tasks and reference results — practice/audio-lab.html
+    Assignment: Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V27. No model, microphone, network or paid service is used.
 Practical: Calculate the squared target error sum for estimates A and B. Add estimate C=[0.8,0,-0.8] and compare it with B. Draw an echo path from agent playback through loudspeaker, room and microphone; label reference, delay and user speech. Independently average [2,0,−2] with an already aligned [2,0,−2], then with a misaligned [0,2,0]. Describe the damage from the incorrect delay.
 Independent assessment: A demo suppresses all microphone input while the assistant speaks and calls this “perfect echo cancellation”. Explain what it actually does, the lost capability and a comparison plan that would distinguish echo suppression from preserving user speech.
 Pass criteria: 1. Compute and compare the three supplied target-error sums, showing each residual. 2. Distinguish playback reference, acoustic echo path and independent user speech. 3. Explain why microphone gating loses double-talk and design a comparison plan only.
@@ -848,6 +973,10 @@ Readings:
     Assignment: Select only “Pronunciation” on this module page. Study phoneme sequences, pronunciation dictionaries and letter-to-sound prediction; compare the name-pronunciation repair example in this lesson.
     Access: The publisher supplies transcripts alongside the named clips. Access may be intermittent; an HTTP block is not evidence the clip was removed. Older synthesis/tool examples are conceptual.
 Practical: Write spoken candidates for “St. Mary St.” under a person/saint-plus-street address context, “03/04” under two locale conventions, and “1.5 kg” as a quantity. Mark every ambiguity instead of choosing silently. Add a clarification question for the date.
+
+### Build or inspect it
+
+Implement a small renderer for typed fields rather than arbitrary prose: role=identifier preserves each digit in 0012; role=quantity reads 12 as a quantity. Reject an ambiguous date until its month/day convention is provided.
 Independent assessment: Design a front-end contract for announcing a fictional reservation containing a name, date, time and reference code. State how you avoid guessing locale, preserve the code and recover from an uncertain pronunciation.
 Pass criteria: 1. Preserve name, explicit locale/date/time zone and reference-code meaning. 2. Handle abbreviation/date ambiguity without silently choosing an interpretation. 3. Offer pronunciation repair and distinguish saying details from authorising a booking.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -874,9 +1003,19 @@ Readings:
   Kim et al. — Conditional Variational Autoencoder with Adversarial Learning for End-to-End TTS (VITS) — https://arxiv.org/abs/2106.06103
     Assignment: Read the VITS architecture and monotonic alignment/duration sections, including its training-versus-inference diagrams. Compare latent variables, duration prediction and waveform generation with Tacotron 2; do not attribute Tacotron-specific components to VITS.
 Additional practical materials:
+  Portfolio project guide — tts — practice/portfolio.html#tts
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
   Optional deeper project — Hugging Face Unit 6 SpeechT5 fine-tuning assignment (complete Unit 6 preparation; compute/account requirements) — https://huggingface.co/learn/audio-course/chapter6/hands_on
     Assignment: Optional additional provider practice. Optional deeper project — Hugging Face Unit 6 SpeechT5 fine-tuning assignment (complete Unit 6 preparation; compute/account requirements). Follow the source’s preparation, account and compute notes; the studio’s exercise remains the core task.
 Practical: Expand durations [1,3,2,2] for four abstract tokens and calculate duration at 12.5 ms/frame. Introduce a repeated-token error and an omitted-token error in separate alignments. Explain which product details each could corrupt in a reservation confirmation.
+
+### Build or inspect it
+
+Write expand(tokens,durations), rejecting unequal lengths or negative/non-integer durations. Check the supplied four-token case and a zero-duration token. Return both the expanded list and its duration using the stated frame hop.
+
+### Continue into the portfolio
+
+Open the portfolio project guide below and complete its TTS milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.
 Independent assessment: Compare two proposed designs: text→mel→vocoder and a duration-conditioned integrated generator. Build a table of required inputs, intermediate timing representations, likely failure questions and evidence needed. Leave unknown architecture-specific properties explicitly unknown.
 Pass criteria: 1. Expand the supplied token durations and calculate total duration using the stated frame hop. 2. Identify skipped/repeated content and the text-to-acoustic timing interface. 3. Compare mel/vocoder and integrated designs without inventing unreported properties.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Complete the PyTorch primer in V18 and the provider’s full Unit 6 before the optional project; review voice/data permissions and compute/submission requirements.
@@ -907,6 +1046,10 @@ Readings:
   Liu et al. — SemantiCodec architecture case study — https://arxiv.org/abs/2405.00233
     Assignment: Read the abstract and architecture figure/description for AudioMAE, semantic/acoustic encoders and the diffusion decoder. Use the paper to resolve noisy caption terminology. Read the experiments as that study’s evidence; downstream language-model gains are not established by richer codec features alone.
 Practical: Recalculate the nominal index rate for eight codebooks at the same frame rate and vocabulary size. Compare it with mono 24 kHz, 16-bit PCM. State the ratio and three reasons it does not establish that this codec is suitable for a particular voice product.
+
+### Build or inspect it
+
+Implement the scalar residual-codebook example from Learn. Choose the nearest entry, subtract it, then repeat with the next codebook. Return the indices, reconstruction and residual.
 Independent assessment: A diagram says “audio tokens at 25 Hz” but omits codebook count and vocabulary. Explain what can and cannot be calculated, and request the additional details needed for bandwidth and latency planning.
 Pass criteria: 1. Compute nominal index bitrate and its ratio versus 24-kHz 16-bit mono PCM, with assumptions. 2. Distinguish codebooks, vocabulary, frame rate, waveform rate and overhead. 3. Explain why frame spacing alone is neither bitrate nor audible response delay.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -936,13 +1079,21 @@ Readings:
   Edinburgh speech.zone — Subjective Evaluation — https://speech.zone/courses/speech-synthesis/module-5-evaluation/videos/subjective-evaluation/
     Assignment: Read only the transcript passages matching the assigned video: 1:24–2:54, 7:31–10:45, 15:59–22:40 and 23:06–25:09. Use this as a text alternative or reference for those excerpts; the rest of the 28:03 transcript is optional. Use the lesson for study design, consent and sample-size reasoning.
     Access: The publisher supplies transcripts alongside the named clips. Access may be intermittent; an HTTP block is not evidence the clip was removed. Older synthesis/tool examples are conceptual.
-Practical: Design a fictional paired comparison of two TTS systems reading library information. Specify eight sentence types, including names and numbers; two separate judgement questions; an order-balancing rule; and a permission record. Do not generate audio or recruit anyone.
+Additional practical materials:
+  Portfolio project guide — tts — practice/portfolio.html#tts
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
+Practical: Design a fictional paired comparison of two TTS systems reading library information. Specify eight sentence types, including names and numbers; two separate judgement questions; an order-balancing rule; and a permission record. Keep this first deliverable a study plan. Any later study with people needs appropriate consent and review.
+
+### Continue into the portfolio
+
+Open the portfolio project guide below and complete its TTS milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.
 Independent assessment: A report advertises “human-level quality” from three friends rating one sentence. Write a proportionate interpretation and a corrected evidence plan. Include at least one dimension that a naturalness scale does not settle.
 Pass criteria: 1. Separate naturalness, intelligibility, text fidelity and voice-use permission. 2. Design balanced materials/order and meaningful listener questions. 3. Bound the three-friends/one-sentence claim and state missing population evidence.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
 V32 — Meaning, dialogue state and conversation repair
-Prerequisites: V03, V13, V25
+Prerequisites: V13, V25
+Recommended Python refreshers (not required): V03
 Path: All learners
 Study assignment: Read the state/confirmation explanation, then watch the architecture, flows and repair assignments. Trace slot corrections and invalidate old confirmations before considering a write.
 Video coverage/access: Core viewing totals 19:09 across architecture, flows and basic repair. The repair excerpt stops at 4:55 before implementation. The lesson exercises cover proposal-version and authorisation invariants; no Rasa setup is required.
@@ -971,6 +1122,10 @@ Readings:
   Jurafsky & Martin, August 2026 draft — Chapter 26: Conversation and its Structure — https://web.stanford.edu/~jurafsky/slp3/26.pdf
     Assignment: Read the complete named chapter/paper: Jurafsky & Martin, August 2026 draft — Chapter 26: Conversation and its Structure. Follow its definitions and worked examples, then state which assumptions apply to the exercise.
 Practical: Trace three fictional conversations through the states: complete details then approve; complete details then change time; cancel before approval. For each event, list state, proposal version and whether a write is permitted. Add one recognition ambiguity and an appropriate repair question.
+
+### Build or inspect it
+
+Implement a local transition function for the three supplied conversations. Assert final state and write count after each sequence, including a stale proposal approval. Use fake write records, with no database connection.
 Independent assessment: A late “yes” event for proposal_7 arrives after the user changed the time and the app created proposal_8. Specify the correct transition and a regression fixture, including the expected number of writes.
 Pass criteria: 1. Invalidate approval when proposal details/version change. 2. Make create_7, edit_8, approve_7 produce zero writes. 3. Keep confirmed, pending, committed and cancelled states distinct.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -1000,12 +1155,17 @@ Readings:
   LiveKit Agents — architecture and tool documentation — https://docs.livekit.io/agents/
     Assignment: Read LiveKit Agents — architecture and tool documentation. Focus on retrieval, tool contracts, authorisation; then work through this lesson’s example to check your understanding.
 Practical: Define read-only tools for finding a museum exhibit and checking opening hours. Give each an input schema, allowed scope, error response and source-provenance fields. Then write one malicious retrieved sentence and explain why it cannot expand the tool permissions.
+
+### Build or inspect it
+
+Implement the two tool validators as ordinary Python functions over dictionaries. Test an allowed public ID, an unsupported ID, unknown fields and the malicious retrieved sentence. Return a defined error rather than execute arbitrary text.
 Independent assessment: A reservation tool times out after the database may have committed. Design a retry protocol and the words the agent may safely say before the outcome is known. Include a unique operation identifier and an ownership check.
 Pass criteria: 1. Separate language modelling, retrieved evidence and permissioned tool execution. 2. Use account-bound proposal and stable idempotency key after an uncertain timeout. 3. Report pending status truthfully and reconcile before issuing another write.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
 V34 — Streaming, asynchronous events and cancellation
-Prerequisites: V04, V05, V32
+Prerequisites: V32
+Recommended Python refreshers (not required): V04, V05
 Path: All learners
 Study assignment: Watch the 3:56 standalone coroutine/task example, read the Python 3.13 task/cancellation sections and trace the supplied stale, duplicate and bounded-backlog cases. Use the TaskGroup talk only for optional depth.
 Video coverage/access: Core viewing: 3:25–7:21 (3:56) of the standalone Python asyncio example. No Django setup is required. The optional 26:46 EuroPython TaskGroup talk has a readable archived transcript; current Python docs and lesson event/queue reasoning remain required.
@@ -1024,6 +1184,10 @@ Readings:
   Python 3.13 — Coroutines and Tasks: coroutines, creating tasks, cancellation and concurrency sections — https://docs.python.org/3.13/library/asyncio-task.html
     Assignment: Read Python 3.13 — Coroutines and Tasks: coroutines, creating tasks, cancellation and concurrency sections. Focus on event ordering, queues, session state; then work through this lesson’s example to check your understanding.
 Practical: Trace start_R1, start_R2_after_interrupt, finish_R1, finish_R2. For each event, record active generation and whether output is allowed. Add a duplicate finish_R2 and state how you prevent duplicate playback. Use only a paper table or local synthetic event list.
+
+### Build or inspect it
+
+Implement the supplied event sequence as a local list. Track current_generation and a set of published event IDs. Assert that only the first current finish_R2 appears in output.
 Independent assessment: A producer adds 50 frames/second while a consumer handles 40. Starting with an empty queue, calculate backlog after 10 seconds and its queued duration if each frame represents 20 ms. Propose a bounded policy and identify one category of event that must not be dropped silently.
 Pass criteria: 1. Reject stale generation output and duplicate completion without losing current content. 2. Calculate backlog frame count and queued audio duration from the supplied producer/consumer rates. 3. Specify a bounded queue policy and protect consequential control events.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -1051,6 +1215,10 @@ Readings:
   Google web.dev — WebRTC explanatory article (historical examples) — https://web.dev/articles/webrtc-basics
     Assignment: Read Google web.dev — WebRTC explanatory article (historical examples). Focus on packets, jitter, RTP; then work through this lesson’s example to check your understanding.
 Practical: Draw a browser-to-agent media path and a telephone-to-agent path. Label signalling, media transport, codec boundary, authentication and any relay or gateway. For each unknown property, write a question rather than assuming it. Explain how a gateway could change sample rate or format.
+
+### Build or inspect it
+
+Use the supplied three-frame trace to implement a tiny receiver table with sequence ID, arrival time and a 90 ms playout deadline for frame 2. Sort accepted frames by sequence and show the result if frame 2 instead arrives at 100 ms.
 Independent assessment: A team sends raw bytes over WebSocket but omits sample rate, sample type and sequence numbers. Specify a minimal frame envelope and describe recovery from a reconnect without replaying stale audio as a new user turn.
 Pass criteria: 1. Name signalling/media, codec, authentication and relay boundaries. 2. Specify session/generation, sequence, timestamp and exact audio format in a frame envelope. 3. Define reconnect handling that cannot replay old audio as a new turn.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -1070,7 +1238,11 @@ Readings:
   LiveKit Agents — turn detection and interruptions — https://docs.livekit.io/agents/logic/turns/
     Assignment: Read LiveKit Agents — turn detection and interruptions. Focus on VAD, endpointing, interruptions; then work through this lesson’s example to check your understanding.
 Practical: Draw states for the supplied pause/continuation trace. Add an agent response that begins too early and a user interruption. List which output generation and queued audio become obsolete, which user content must remain, and one repair sentence that acknowledges the interruption without claiming a booking occurred.
-Independent assessment: Design five synthetic turn-taking fixtures: mid-sentence pause, backchannel, genuine interruption, background speaker and assistant echo. Give the expected state transition and uncertainty/fallback policy for each. Do not place a call or run a detector.
+
+### Build or inspect it
+
+Implement a silence-only state timer on the supplied synthetic trace. Show the 200 ms cutoff and compare it with a 400 ms threshold. Add an explicit done event that does not require a timer guess.
+Independent assessment: Design five synthetic turn-taking fixtures: mid-sentence pause, backchannel, genuine interruption, background speaker and assistant echo. Give the expected state transition and uncertainty/fallback policy for each. Use synthetic events to isolate the state rules before connecting a detector.
 Pass criteria: 1. Trace continuation, interruption, playback stop and stale-output invalidation. 2. Distinguish backchannels, background speech and echo from approved user turns. 3. Give five fixture expectations plus uncertainty/fallback policies, without detector claims.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
@@ -1089,6 +1261,10 @@ Readings:
   OpenTelemetry — traces concepts — https://opentelemetry.io/docs/concepts/signals/traces/
     Assignment: Read OpenTelemetry — traces concepts. Focus on latency, percentiles, tracing; then work through this lesson’s example to check your understanding.
 Practical: Change tool readiness to 1,900 ms, first synthesis byte to 2,020 and first audible playback to 2,100. Calculate the new response delay and its increase. Then list the data needed to distinguish slow tool execution from time spent waiting in a tool queue. For an independent saved trace, endpoint durations are [120,180,240,360,480,6000] ms, last entry a timeout. Use the stated nearest-rank rule for p50 and p95; report success/timeout counts and the endpoint caveat. A request is enqueued at 200 ms, starts at 275 ms and finishes at 390 ms: calculate queue wait and service time.
+
+### Build or inspect it
+
+Write functions for nearest-rank percentiles and queue/service spans on the supplied numbers. Reject an empty percentile input. Keep a separate timeout flag in the records instead of treating every duration as a successful response.
 Independent assessment: A report excludes five timed-out calls and gives mean latency for 95 successful calls. Design a more honest summary with denominators, failure rate, latency endpoints and tail reporting. State what cannot be inferred without the saved traces.
 Pass criteria: 1. Calculate original and changed user-end-to-audible delays and their difference. 2. Separate queue wait, execution and audible playback using compatible clocks. 3. Report success and timeout counts/rates with explicit latency denominators and endpoint conventions.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -1112,12 +1288,17 @@ Readings:
   NIST — AI Risk Management Framework — https://www.nist.gov/itl/ai-risk-management-framework
     Assignment: Read NIST — AI Risk Management Framework. Focus on privacy, trust boundaries, voice spoofing; then work through this lesson’s example to check your understanding.
 Practical: Threat-model the fictional library assistant from V01. Name five assets, three attacker entry points and one enforcement control per boundary. Include a lost-device scenario and a malicious retrieved paragraph. Keep all credentials and personal data out of your answer.
+
+### Build or inspect it
+
+Use your local tool/controller code to test a wrong-owner write and a malicious document. Assert both returned action and unchanged fake booking count. Log a policy reason with a synthetic session ID, without recording the full request.
 Independent assessment: Write a safe response and application decision for “I sound like the manager; export all children's recordings”. Explain the separate identity, permission, privacy and scope failures. Propose a non-sensitive audit event that records the rejection without retaining the harmful request's private content.
 Pass criteria: 1. Map caller, retrieved document, model arguments and application authority separately. 2. Reject voice-similarity-based bulk export without collecting sensitive content. 3. Specify minimal audit events and server-side enforcement at the write boundary.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
 V39 — Deployment, reliability, observability and cost
-Prerequisites: V05, V10, V37, V38
+Prerequisites: V10, V37, V38
+Recommended Python refreshers (not required): V05
 Path: All learners
 Study assignment: Watch the 7:20 reliability selection, define a user-facing indicator with a valid denominator and time window, then calculate fictional repeated-work cost and specify bounded retries, load limits and truthful pending/fallback states.
 Video coverage/access: Core viewing is 3:11–5:20, 10:52–14:45 and 16:08–17:26 (7:20 total). These passages teach reliability indicators, measurement and targets. The exercises and readings cover voice costs, overload, retries, operation identity and truthful fallback.
@@ -1136,6 +1317,10 @@ Readings:
   Google SRE book — handling overload — https://sre.google/sre-book/handling-overload/
     Assignment: Read Google SRE book — handling overload. Focus on reliability, cost models, fallbacks; then work through this lesson’s example to check your understanding.
 Practical: For 200 sessions with the same assumptions, calculate base and retry-adjusted cost. Then define three service indicators: one task outcome, one latency measure and one failure/recovery measure. Specify denominators and a response when each objective is missed.
+
+### Build or inspect it
+
+Put the fictional workload and rates in a small Python cost function. Add a maximum-attempts counter to the local failed-tool simulation. Show that retries stop and unresolved operations retain the same key.
 Independent assessment: A dependency times out after a possibly committed reservation, while 500 users are waiting. Write an incident plan covering overload, truthful messaging, duplicate prevention, recovery and a minimal post-incident evidence record.
 Pass criteria: 1. Calculate base and repeated-workload-adjusted costs using only the supplied fictional rates. 2. Bound overload/retries and preserve operation identity during uncertain outcomes. 3. Define task, latency and recovery indicators with denominators and truthful fallback.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -1172,6 +1357,10 @@ Readings:
   Hugging Face Audio Course — evaluation metrics for ASR: error-analysis foundation — https://huggingface.co/learn/audio-course/chapter5/evaluation
     Assignment: Read Hugging Face Audio Course — evaluation metrics for ASR: error-analysis foundation. Focus on accessibility, language switching, equity; then work through this lesson’s example to check your understanding.
 Practical: Audit the fictional library assistant for a deaf user, a user with variable speech timing, a multilingual user and someone in a noisy shared space. For each, identify one barrier, an alternative task-completion path and an evidence question. Do not infer an individual's needs from a diagnosis.
+
+### Build or inspect it
+
+On your local prototype, use only the keyboard to start a request, edit its details, confirm, cancel and inspect the result. Record each missing control or focus problem. Repeat the draft-preservation check while switching from voice mode to text.
 Independent assessment: A product adds captions but leaves cancellation available only by speaking within two seconds. Explain why the task remains inaccessible and redesign the cancellation contract, including focus, status and stale-confirmation handling.
 Pass criteria: 1. Preserve clarify, edit, confirm, cancel and receipt controls across voice/text/keyboard. 2. Keep a pending draft when switching modality and avoid forced disability disclosure. 3. State supported languages/locales and investigate mismatches without blaming speakers.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -1196,10 +1385,16 @@ Readings:
   Kyutai — Moshi research and architecture — https://github.com/kyutai-labs/moshi
     Assignment: Read Kyutai — Moshi research and architecture. Focus on audio tokens, duplex, Moshi; then work through this lesson’s example to check your understanding.
 Additional practical materials:
+  Portfolio project guide — specialist — practice/portfolio.html#specialist
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
   Optional deeper project — Hugging Face Unit 7 cascaded speech-to-speech translation assignment (complete provider unit; this differs from the Moshi full-duplex architecture) — https://huggingface.co/learn/audio-course/chapter7/hands_on
     Assignment: Optional additional provider practice. Optional deeper project — Hugging Face Unit 7 cascaded speech-to-speech translation assignment (complete provider unit; this differs from the Moshi full-duplex architecture). Follow the source’s preparation, account and compute notes; the studio’s exercise remains the core task.
 Practical: Read the Moshi abstract, architecture figure and latency discussion. Write a claim/evidence/limit table with three rows: audio representation, concurrent streams and timing. Distinguish the authors' reported conditions from claims you cannot make about a future application.
-Independent assessment: Propose a research question comparing a pipeline with a direct speech model for interruption repair. Define the task, controlled variables, outcome dimensions, rights/consent needs and a reason the comparison could be unfair. Produce a plan only.
+
+### Continue into the portfolio
+
+Open the portfolio project guide below and complete its specialist depth milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.
+Independent assessment: Propose a research question comparing a pipeline with a direct speech model for interruption repair. Define the task, controlled variables, outcome dimensions, rights/consent needs and a reason the comparison could be unfair. Produce the protocol first; any later execution needs permissioned data and an agreed resource budget.
 Pass criteria: 1. Distinguish an ASR→text→TTS pipeline, speech-token generation and simultaneous user/agent audio streams. 2. Separate the authors' reported timing setup and endpoints from claims about a future application. 3. Identify architecture/latency claims the supplied paper does and does not establish.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
@@ -1229,8 +1424,9 @@ Independent assessment: Design an ablation for a fictional endpointing system th
 Pass criteria: 1. Separate each paper's claim, method, comparison, data boundary and evidence. 2. Specify one ablation and a falsifiable interpretation with an uncertainty plan. 3. Distinguish saved findings from a proposed future study; invent no measured outcomes.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V43 — Capstone: a deterministic voice-agent simulator
-Prerequisites: V04, V32, V34, V36, V37, V38, V39, V40
+V43 — Capstone I: build the conversation controller
+Prerequisites: V32, V34, V36, V37, V38, V39, V40
+Recommended Python refreshers (not required): V04
 Path: All learners
 Study assignment: Watch the 3:18 state-machine introduction and 4:32 testing passage. Translate their diagrams and specification/boundary tests into the deterministic event simulator; no Java application, external service or mathematical proof course is required.
 Video coverage/access: Core viewing totals 7:50: MIT states/transitions at 1:13–4:31 and specification/boundary testing at 8:35–13:07. Stop before the remaining maths/testing lectures. The capstone supplies the seven voice-event fixtures and commit/output assertions.
@@ -1253,16 +1449,22 @@ Readings:
   LiveKit Agents — architectural comparison — https://docs.livekit.io/agents/
     Assignment: Read LiveKit Agents — architectural comparison. Focus on integration, state transitions, fault handling; then work through this lesson’s example to check your understanding.
 Additional practical materials:
+  Portfolio project guide — integration — practice/portfolio.html#integration
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
   Download the original offline capstone contract and seven exact fixtures — https://ifeanyidike.com/voice-ai-studio/practice/capstone-contract.txt
     Assignment: Use only this named practical material for the scoped lesson task: Download the original offline capstone contract and seven exact fixtures. Read its setup and authorisation boundary before doing anything.
 Practical: Implement the state transition function using Python's standard library, or write a complete transition table if still consolidating programming. Supply all seven fixtures, expected actions and an event log without personal data. Include setup instructions and a one-page limitations statement. Do not import model SDKs or send network requests.
 
 Use the downloadable contract for exact initial state, event fields, seven complete fixture sequences and expected final counts. Trace both emitted actions and final state; add malformed-input and wrong-session cases.
+
+### Continue into the portfolio
+
+Open the portfolio project guide below and complete its integrated voice application milestone when the named prerequisites are ready. Record actual artefacts, setup and remaining failures. A previously saved lesson pass does not mark this new project complete.
 Independent assessment: Add an outage fixture where a commit may have happened but its response was lost. Specify a reconciliation event and show how repeating it remains idempotent. Then defend the whole design to a partner using the earlier trust-boundary and latency lessons.
 Pass criteria: 1. Supply all seven synthetic event fixtures with final state and commit/output counts. 2. Reject stale approvals, generations, duplicate operations and wrong owners. 3. Reconcile a lost commit response idempotently and state every absent real dependency.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V44 — Graduate study and an original research proposal
+V44 — Specialist study and an original research proposal
 Prerequisites: V27, V42, V43
 Path: All learners
 Study assignment: Watch the 3:22 proposal-structure guide. Write the voice research question, literature/evidence gap, method, resources, limits and supervision needs; check your actual programme’s requirements separately.
@@ -1277,7 +1479,18 @@ Readings:
     Assignment: Read Edinburgh — Speech and Language Processing MSc. Focus on specialisation, literature review, proposal; then work through this lesson’s example to check your understanding.
   CMU — Language Technologies Institute academic programmes — https://lti.cs.cmu.edu/academics/
     Assignment: Read CMU — Language Technologies Institute academic programmes. Focus on specialisation, literature review, proposal; then work through this lesson’s example to check your understanding.
-Practical: Choose one specialism and write a 12-week further-study plan. Include two prerequisite repairs, three primary papers, one bounded offline project, a feedback source and a weekly evidence artefact. Identify what you would still not claim after completing it.
+Additional practical materials:
+  Portfolio project guide — specialist — practice/portfolio.html#specialist
+    Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
+Practical: Choose one specialism and write a 12-week further-study plan after completing the foundation and portfolio prerequisites. This is a planning window, not a promise that every project fits in 12 weeks.
+
+1. Identify two specific mathematical or programming gaps and select full problem sets to repair them.
+2. Choose three directly relevant primary papers and record their questions, representations, objectives and evidence limits.
+3. Define an actual implementation milestone: recognition, generation, signal processing or an integrated interaction system. Include a small component you implement yourself.
+4. Specify permissioned data, a baseline, independent comparison boundaries, outcome measures and resources before new model work.
+5. Name a feedback source and a weekly artefact, including code, actual outputs, failure analysis and revisions.
+
+Use the portfolio guide to make the milestones concrete. State what remains untested and what you would still not claim after the plan.
 Independent assessment: Write a two-page original research proposal with a literature table, one falsifiable hypothesis, a fair comparison plan, explicit rights/privacy needs, resource estimate and stopping criteria. Include a separate section distinguishing completed evidence from planned future work.
 Pass criteria: 1. Submit a bounded proposal with three-paper literature table and a falsifiable hypothesis. 2. Include fair comparisons, rights/privacy, resources and stopping criteria. 3. Separate completed evidence, further prerequisite study and supervised/future work.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.

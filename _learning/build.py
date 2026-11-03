@@ -58,6 +58,7 @@ def build(check=False):
         lessons = {}
         for m in modules:
             assert all(p in seen for p in m['prerequisites']), m['id']
+            assert all(p in seen for p in m.get('recommended_prerequisites', [])), m['id']
             seen.add(m['id'])
             assert len(m['outcomes']) == 3 and all(isinstance(x, str) and x.strip() for x in m['outcomes']), m['id']
             assert m['study_focus'].strip(), m['id']
@@ -66,7 +67,7 @@ def build(check=False):
             assert all(a.get(f) for f in fields), m['id']
             guide = {f: a[f] for f in ['bridge', 'teaching', 'example', 'explanation', 'exercise', 'solution', 'challenge', 'challenge_solution']}
             guide['example_format'] = a.get('example_format', 'text')
-            assert guide['example_format'] in ('math', 'text'), m['id']
+            assert guide['example_format'] in ('math', 'text', 'python'), m['id']
             # Stable per-topic ordering avoids a course-wide answer-position cycle.
             choices = sorted([a['correct'], a['wrong1'], a['wrong2']],
                              key=lambda choice: hashlib.sha256((m['id'] + '\0' + choice).encode()).digest())
@@ -79,15 +80,15 @@ def build(check=False):
                 for m in modules:
                     if track in m['tracks']:
                         assert all(track in lookup[p]['tracks'] for p in m['prerequisites']), (track,m['id'])
-        curriculum = {'reviewed':'31 October 2026', 'modules':modules}
+        curriculum = {'reviewed':data.get('clarity_reviewed', '31 October 2026'), 'modules':modules}
         for name, expected in [('curriculum.json', curriculum), ('lessons.json', lessons)]:
             if check:
                 assert json.loads((dest/name).read_text()) == expected, name + ' is stale; run python3 _learning/build.py'
             else:
                 (dest/name).write_text(json.dumps(expected, ensure_ascii=False, indent=2)+'\n')
-        lines=[data['name'], '='*len(data['name']), '', 'Source assignments reviewed 30–31 October 2026; native clarity review 31 October 2026. Original lessons and fictional exercises; external providers own their materials.', '']
+        lines=[data['name'], '='*len(data['name']), '', 'Source assignments reviewed 30–31 October 2026; native clarity review '+data.get('clarity_reviewed', '31 October 2026')+'. Original lessons and fictional exercises; external providers own their materials.', '']
         for m in modules:
-            lines += [m['id']+' — '+m['title'], 'Prerequisites: '+(', '.join(m['prerequisites']) or 'None'), 'Path: '+m.get('audienceLabel','All learners'), 'Study assignment: '+m['study_focus'], 'Video coverage/access: '+m['videoNote'], 'Videos:']
+            lines += [m['id']+' — '+m['title'], 'Prerequisites: '+(', '.join(m['prerequisites']) or 'None'), *(['Optional refresher: Yes'] if m.get('optional') else []), *(['Recommended Python refreshers (not required): '+', '.join(m['recommended_prerequisites'])] if m.get('recommended_prerequisites') else []), 'Path: '+m.get('audienceLabel','All learners'), 'Study assignment: '+m['study_focus'], 'Video coverage/access: '+m['videoNote'], 'Videos:']
             lines += resource_lines(m['videos'])
             if not m['videos']: lines += ['  No video assigned; follow the coverage note above.']
             lines += ['Readings:']+resource_lines(m['readings'])
