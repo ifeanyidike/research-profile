@@ -3,7 +3,8 @@ export function createViewRefresh(root, render, blocked = () => false, schedule 
   let dirty = false,
     scheduled = false;
   function flush() {
-    if (!dirty || blocked() || root.contains(root.ownerDocument.activeElement)) return;
+    const focused = root.ownerDocument.activeElement;
+    if (!dirty || blocked() || (focused !== root && root.contains(focused))) return;
     dirty = false;
     render();
   }

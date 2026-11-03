@@ -80,6 +80,17 @@
         ]
       },
       {
+        "title": "Run Python and return to your work",
+        "text": "Use Run Python below an editable example. The first run loads the bundled interpreter; Stop interrupts loading or execution. Runs start in a fresh workspace and have a five-second execution limit. Use print to display results. For input(), open the optional input box and enter one response per line.\n\nCode changes save automatically for the active learner. Guest code stays on this browser. Signed-in code uses its own account storage and syncs when connected. My notebook lists saved Python editors and provides Python backup/restore. If a field changed elsewhere, review the saved version or keep your draft explicitly. Earlier local code is available when a newer synced version replaces it.\n\nThe code is saved; execution output, generated files and interpreter variables are temporary. Other snippets run the saved lesson example as setup, and the files lesson supplies its JSON fixture. These introductory standard-library exercises fit the browser; use your project environment for large audio jobs, additional packages or model work.",
+        "links": [
+          {
+            "label": "Pyodide — Python in a web worker",
+            "url": "https://pyodide.org/en/stable/usage/webworker.html",
+            "assignment": "Background execution keeps the lesson interface responsive."
+          }
+        ]
+      },
+      {
         "title": "Use the sources and take the time the topic needs",
         "text": "In Watch & read, follow the topic-specific sections and viewing times. Connect each source to the worked example rather than treating viewing as the whole task. Check every pass criterion before recording your judgement. A short clip or one correct quiz answer is not a complete topic. Advanced readings and projects may need several sessions or weeks.",
         "links": []

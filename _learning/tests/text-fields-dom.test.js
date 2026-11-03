@@ -154,3 +154,28 @@ test("lesson progress updates preserve existing disclosure and focused prerequis
   assert.equal(nodes.get("[data-detail-caption]").textContent, "1 prerequisite to review");
   assert.equal(nodes.get("[data-detail-due]").textContent, "Recall sequence complete. Revisit whenever useful.");
 });
+
+test("a focused saved code snapshot stays visible when another version arrives, even when its text equals the old base", () => {
+  const x = fixture();
+  x.fields.bind(x.root, {
+    scope: "a:ifeanyi",
+    topic: "V02",
+    protectFocused: true,
+    read: () => x.saved(),
+    write: () => {
+      throw Error("Remote refresh must not write");
+    },
+  });
+  x.el.focus();
+  x.remote("Remote code");
+  x.fields.refresh();
+  assert.equal(x.el.value, "A");
+  assert.equal(x.fields.hasDrafts, true);
+  x.el.ownerDocument.activeElement = null;
+  x.fields.refresh();
+  assert.equal(x.el.value, "A");
+  assert.equal(x.fields.hasDrafts, true);
+  x.root.children[1].children[2].emit("click");
+  assert.equal(x.el.value, "Remote code");
+  assert.equal(x.fields.hasDrafts, false);
+});

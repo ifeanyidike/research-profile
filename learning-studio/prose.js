@@ -1,4 +1,4 @@
-import { renderCode } from "./code-editor.js?v=20261103-2";
+import { renderCode } from "./code-editor.js?v=20261103-3";
 // Authored prose and fenced reference code only. Every character is escaped;
 // this is not a general Markdown or HTML renderer and never runs examples.
 const escape = (text) => String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -9,11 +9,13 @@ export function renderProse(text) {
     .map((part) => {
       if (/^```[^\n]*\n[\s\S]*\n```[ \t]*$/.test(part)) {
         const code = part.replace(/^```[^\n]*\n/, "").replace(/\n```[ \t]*$/, "");
-        const language = part
+        const header = part
           .match(/^```([^\n]*)/)[1]
           .trim()
-          .toLowerCase();
-        return renderCode(code, language);
+          .split(/\s+/);
+        const language = header[0].toLowerCase();
+        const id = header.find((value) => /^id=[a-z][a-z0-9-]{0,47}$/.test(value))?.slice(3);
+        return renderCode(code, language, id || "");
       }
       return part
         .split(/\n\s*\n/)
