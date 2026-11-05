@@ -84,16 +84,16 @@ def build():
     story.append(Spacer(1, 3))
 
     p("PROFILE", "section")
-    p("Senior software engineer with <b>8+ years</b> in backend and real-time systems. Builds and debugs <b>production voice AI</b> using Python, Go, React and TypeScript. Works remotely with US and Canadian teams.")
+    p("Senior software engineer with <b>8+ years</b> in backend and real-time systems. Builds and debugs <b>production voice AI</b> using Python, streaming audio, PostgreSQL and Redis. Owns systems from design through deployment and production troubleshooting.")
 
     p("PROFESSIONAL EXPERIENCE", "section")
     job("DataStrut AI", "Founding AI Engineer / Senior Software Engineer", "Aug 2025 - Present", "New York, US; Remote")
-    bullet("Reduced memory use by <b>over 70% across two production FastAPI services</b> through profiling with memray and Gunicorn preloading.")
     bullet("Migrated production voice AI from Vapi to self-hosted Python/Pipecat, integrating telephony, streaming speech, LLMs and PostgreSQL reporting.")
-    bullet("Cut steady-state speech-recognition sessions from <b>3 to 1 per call</b> in three-agent workflows.")
     bullet("<b>Diagnosed interruptions and dead air</b> by tracing stale model decisions and timer races through timestamped voice pipeline events.")
-    bullet("<b>Excluded speech cancelled before playback release</b> from recordings; used Twilio dual-channel audio to align both speakers on one timeline.")
     bullet("Built Fly.io call admission with <b>atomic, versioned Redis reservations</b> and active-work checks. Separated scheduling and reporting with dedicated RQ workers, capacity-aware retries and duplicate-call protection.")
+    bullet("Reduced memory use by <b>over 70% across two production FastAPI services</b> through profiling with memray and Gunicorn preloading.")
+    bullet("Cut steady-state speech-recognition sessions from <b>3 to 1 per call</b> in three-agent workflows.")
+    bullet("<b>Excluded speech cancelled before playback release</b> from recordings; used Twilio dual-channel audio to align both speakers on one timeline.")
     bullet("Ran voice load tests reaching <b>40 occupied phone lines</b>; <b>48 populated reports (96 jobsites)</b> were ready within <b>121.2 seconds</b> of AI-session end. Identified audio-loss and call-setup failures.")
     bullet("Built <b>React report editing</b> with version checks, history, account isolation and drafts preserved after failed refreshes.")
 
