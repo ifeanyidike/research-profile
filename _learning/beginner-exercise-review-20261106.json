@@ -1,0 +1,2863 @@
+{
+  "base_commit": "bd7118d7966e438c246d86cd374e06f441a8270b",
+  "date": "2026-11-06",
+  "lessons": {
+    "voice": {
+      "V01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked six-box map, approval location and read-only kiosk transfer; introduced sample/commit labels. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "example_intro"],
+        "prerequisites": [],
+        "reviewed_content_sha256": "e0875a18740047ec5a68dc21289246cc5a14d8823be5b3d22115f4d5c378d1cf"
+      },
+      "V02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked original/extra durations and remaining-time function; added editor operation and Python notation before first code.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V01"],
+        "reviewed_content_sha256": "349f54ed7926f24faf969510636f5fa15e067ba9640f476b2da9167c011ec040"
+      },
+      "V03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked running totals and all buckets; removed premature vague bucket-function instruction and supplied concrete empty/silence/negative inputs.",
+        "changed_fields": ["exercise", "teaching"],
+        "prerequisites": ["V02"],
+        "reviewed_content_sha256": "c38560c9a780bf80f0c8df3baee4779f5b931d68aa0f668b99bb962bc8352cee"
+      },
+      "V04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked JSON fixtures, exception stages and independent shape validator; explained silent assertions and try/except/else.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V03"],
+        "reviewed_content_sha256": "441ce4c99f039c486db9c7894be39e5aae000590b0ac6213d05f451e227ec1a6"
+      },
+      "V05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked staged-file fixture and local commands; added installation/identity/ignore and exact venv commands.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V04"],
+        "reviewed_content_sha256": "b90e4c2a7dd19da1a6ceb3243cff78bb11940d276a5094e9e32f880e645fb2dd"
+      },
+      "V11": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified periods/cycle counts/cancellation; lab setup is linked and supports a non-listening route.",
+        "changed_fields": [],
+        "prerequisites": ["V01"],
+        "reviewed_content_sha256": "d8442d66a8405ef8af278815c458a7395f3d01e98c933dd21f5819bf9a14f2d9"
+      },
+      "V12": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified mono/stereo counts and relabel/resample distinction; explained Nyquist before its first use.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V11"],
+        "reviewed_content_sha256": "036b11248db68bfeb780e2a177b8b33d45943181a4f74a90e54ec92e9fdd37b9"
+      },
+      "V13": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked articulation table against taught place/manner/voicing; defined alveolar before exercise. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "feedback", "teaching"],
+        "prerequisites": ["V11"],
+        "reviewed_content_sha256": "698ea29e957336e9d45df81b8763c5d51f9192884f042b3e72fba1159b03d5f9"
+      },
+      "V14": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked grids, resonance assumptions and faster-playback result; explained harmonic formula notation.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V11", "V13"],
+        "reviewed_content_sha256": "4235dabad68c8865c6ce0ebdfd55afed3b8513bdb90251842fa530f0e04a97af"
+      },
+      "V06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified units, byte counts, dB ratios and minute constraint; calculator route and MB meaning explicit.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V12"],
+        "reviewed_content_sha256": "e8e54808a2f3d012a58ef6b3e84b2792cd825746d622d36b9e1dced0599a2dcd"
+      },
+      "V07": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified matrix products/shapes; supplied a readable dot-loop reference and readiness route.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V06"],
+        "reviewed_content_sha256": "5cfff74a683594529b6c203e41b4b71fa776bb5c736abcfdcbd1e5ef51ca5a2f"
+      },
+      "V15": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified all four-point transforms, magnitudes and window/bin calculations; defined square root, phase and display notation.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V07", "V12", "V14"],
+        "reviewed_content_sha256": "f8822fc2f23383a61bcb7f479deed3e2fda5b3bee7e79444e23fea9bdde1e05e"
+      },
+      "V16": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified all four filter outputs/tails and two-band/DCT values; clarified subscripts and natural-log calculator.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V15"],
+        "reviewed_content_sha256": "3cd2b8cdb76e34b5e6bbcc0b1242c9b30377fb945c38f0952280462778543024"
+      },
+      "V08": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified gradients/updates/finite difference; supplied loop scaffold without changing editor identities.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V06", "V07"],
+        "reviewed_content_sha256": "f17a6bd5fe1a6a37f40a3af8be966c1755986e8225a1f1122091a8a908a4e71b"
+      },
+      "V09": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Found ambiguous five-latency reference conflicting with teaching data; exercise now supplies exact intended list.",
+        "changed_fields": ["exercise", "teaching"],
+        "prerequisites": ["V06"],
+        "reviewed_content_sha256": "8e5dbf8e90939f1ec7f6a80215cde40e2034e9afc5e3192cfc30335ad9f24a98"
+      },
+      "V10": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked speaker/duplicate partition logic; supplied actual JSON manifest and ordinary-loop overlap check. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "feedback", "teaching"],
+        "prerequisites": ["V09"],
+        "reviewed_content_sha256": "631532ec8f86c8170de0440f15112ebba9b0b787c2a6b6246d60a7863132c221"
+      },
+      "V17": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified predictions/MSE/baseline and silence counterexample; explained formula indices and approximate assertions.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V07", "V08", "V09", "V10"],
+        "reviewed_content_sha256": "d83d00a388b686cba8a4ef8bb29d718101f0fb3163335f00c00bc9f9d8ce42fc"
+      },
+      "V18": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified positive/negative ReLU, all derivatives and simultaneous step; disambiguated finite-difference h from hidden h.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V17"],
+        "reviewed_content_sha256": "03e3a72f4c121d6a4496960dc2640d822f3f044797ed2687aaee58aef1e2aed7"
+      },
+      "V19": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified equal-score/masked/softmax arithmetic; added stable-softmax implementation steps and all-masked policy.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V18", "V16"],
+        "reviewed_content_sha256": "d2941b68fbe0c1245da898b9a670a7c2553d31c993f9c7af74eda2d6014aa72d"
+      },
+      "V20": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked manifest fixture/split/rights tasks; supplied exact deliberately bad-row mutations and defined language tag. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "feedback", "teaching"],
+        "prerequisites": ["V10", "V13"],
+        "reviewed_content_sha256": "7ad1bb687569ff506ba72744ec5da2264f1a7594fd4f7c1f2651230024751fd3"
+      },
+      "V21": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified all path/trellis/backpointer and changed-emission calculations; added implementation ordering and underflow definition.",
+        "changed_fields": ["feedback", "teaching"],
+        "prerequisites": ["V09", "V16", "V17", "V20"],
+        "reviewed_content_sha256": "e5282ca6a5591a80ac04078c1931a5eb910431ccdfbf6f9eae7f6a453af05782"
+      },
+      "V22": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified every collapse path and summed-alignment contrast; supplied step-by-step collapse algorithm.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V19", "V21"],
+        "reviewed_content_sha256": "7b0e1031f4de3987f1055a7a12f7a95d321d23d9910a32583843b9295fe79836"
+      },
+      "V23": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked fictional reviews, ambiguity-to-action and portfolio prerequisite boundary. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["V19", "V20", "V22"],
+        "reviewed_content_sha256": "ae6e74ff48265ccd597214665ef3ecd49d41cfc8fd0f8cea1480e7728b4c70cd"
+      },
+      "V24": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked fictional stage table and target shifts; defined distribution shift and preserved no-training execution boundary. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V19", "V20", "V22"],
+        "reviewed_content_sha256": "82d64f7953c6d696c3e7f6801a8fc638d74691d60713e0ad0d993b55d1ad522d"
+      },
+      "V25": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified minimal edit count, alternative tie alignment and aggregate denominators; expanded table mechanics and gap indicator.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V09", "V10", "V23", "V24"],
+        "reviewed_content_sha256": "0ccd74548c61903a73e4dbfbe5d3e94a701f6baf26804a2c6839e7455a02059b"
+      },
+      "V26": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified overlapping speaker-time, label mapping and vector thresholds; defined pairwise links vs grouping.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V18", "V20", "V25"],
+        "reviewed_content_sha256": "8a80562abe5a3ab47cef4a20a99c5cdf5cbfa1057cd2f1b823d50a84ec403e77"
+      },
+      "V27": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified squared errors, aligned/misaligned averages and gating critique; defined averaging/double-talk and array meaning.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V14", "V16", "V18", "V25"],
+        "reviewed_content_sha256": "ed8e43959bd206afd358174e4a1b2e4b020ad96293c9b6c3f0c2c2e3feec74d4"
+      },
+      "V28": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked spoken candidates and identifier/quantity roles; scoped renderer to supplied values and no date guessing. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V13", "V14", "V20"],
+        "reviewed_content_sha256": "b7adc40eea9b41350a556a3607845e4bce12f63d5774b8b4c25a177bd2763f6f"
+      },
+      "V29": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked eight-frame expansion/durations and content-vs-length repetitions; supplied implementation boundary checks.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V19", "V28"],
+        "reviewed_content_sha256": "f670eb74f6965612556b9ac1b7650225545a46378528f1de19d67b4b9ccf0ea4"
+      },
+      "V30": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified bitrates/ratio/residual indices; added nearest-entry loop method and explicit tie rule.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V16", "V18", "V29"],
+        "reviewed_content_sha256": "c131f04077f86603fec14cf205eaa0f2b98c3b08f679d1196301ac6c9ad4dd98"
+      },
+      "V31": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified MOS/date fidelity distinction; clarified two questions and balanced order for the study-plan exercise.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V10", "V20", "V29", "V30"],
+        "reviewed_content_sha256": "16b8cc1866d30f5d30e8fa9813140e8edadf80e16ed221110ce90e1832cf33aa"
+      },
+      "V32": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked three conversations/stale approval; supplied complete synthetic event sequences for implementation. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V13", "V25"],
+        "reviewed_content_sha256": "9e73cba80b7a11c574b150787dd8973b7170cab288fb442f25df7d033f9b66cd"
+      },
+      "V33": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked narrow tool schemas and retry semantics; supplied concrete known IDs/date validation before coding. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V19", "V32"],
+        "reviewed_content_sha256": "f27d959103a51d8566ab30466a3a2e859a6e00e0cda8b6df0985ea794c03262e"
+      },
+      "V34": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked generation and duplicate-output sequence and queue arithmetic; supplied concrete event records.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V32"],
+        "reviewed_content_sha256": "20b90de13bb0448b1a293db75c05e52310f0ec7f329ea08cd9485d4914a3fcff"
+      },
+      "V35": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked arrival/deadline cases; clarified playout scope and transport acronyms. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V12", "V34"],
+        "reviewed_content_sha256": "c4589e901e269fa4834de2de6478e341dad71a443d7d63caea281e9adc584fa7"
+      },
+      "V36": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked 200/400 ms cutoffs and interruption transitions; supplied timer event ordering and explicit-done rule. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V25", "V32", "V34", "V35"],
+        "reviewed_content_sha256": "01191531ae7a8459bff8e5aa5ec0c56670dea317a251c068904a584fb533a098"
+      },
+      "V37": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified all timestamp/percentile/queue values; explained ceiling-to-zero-based-index implementation.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V09", "V34", "V35", "V36"],
+        "reviewed_content_sha256": "dfe810dbde7810dc9762891e0d008b45e1f5630b86d951bca95839b25f9773fb"
+      },
+      "V38": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked wrong-owner and malicious-source checks; named V32/V33/V43 code prerequisites and supplied safe fake state. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V20", "V31", "V33", "V36"],
+        "reviewed_content_sha256": "68f5126fb25f06673b95f7df47040fbef70f027ffe42836723199ec8b28cb7df"
+      },
+      "V39": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified both cost workloads and bounded retries; supplied missing local failed-tool simulation fixture.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["V10", "V37", "V38"],
+        "reviewed_content_sha256": "83ea2aebec617665066d87b5bcc8ebdca14c9422954d16fe7e50695bfbb89893"
+      },
+      "V40": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked equivalent task controls and prototype-dependent keyboard task; supplied actual keyboard steps. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V13", "V24", "V25", "V31", "V36", "V38"],
+        "reviewed_content_sha256": "3cf94c186fe09a0f1f98b260e02ad6e92b5ab441e5a341e0941cb15f02ed49ad"
+      },
+      "V41": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked primary-paper reading assignment and evidence-table scope; no unsupported model comparison outcome. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["V19", "V30", "V33", "V36", "V37"],
+        "reviewed_content_sha256": "8f1b18d4efd90b2b8a94caa0ae4c469cdb0ef440a8862d2685d5e54c8b077f26"
+      },
+      "V42": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked brief structure, prerequisites and ablation protocol; defined ablation/confound before independent task. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V10", "V25", "V31", "V39", "V41"],
+        "reviewed_content_sha256": "4afdd0aa300d72ef93605f98a4e837ca7bb5f1629616cf8764fce00865367616"
+      },
+      "V43": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all seven complete downloaded fixtures, fresh state and scaffold; clarified tuple/JSON notation boundary. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V32", "V34", "V36", "V37", "V38", "V39", "V40"],
+        "reviewed_content_sha256": "c70691df17ec92da202145d38f0a49d802d7bc2c759bc7303b3ac2c13a8264b4"
+      },
+      "V44": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked prerequisite repair, 12-week planning sample and falsifiable-proposal requirements; independent research remains deliberate. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["V27", "V42", "V43"],
+        "reviewed_content_sha256": "ff086d577f23e5bef9e1f2638955312e61f23883f78982e8c6d969e9aa02c44e"
+      }
+    },
+    "cyber": {
+      "O01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Explained folder diagram and URL parts; replaced unexplained evidence jargon in extra example.",
+        "changed_fields": ["example_intro", "extra_example", "teaching"],
+        "prerequisites": [],
+        "reviewed_content_sha256": "5b067b32e3b0d888bdf9178e3fa219b7b61c7bdd594573505672ec8450681eac"
+      },
+      "O02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "The classification requires parent-path and network-scan meanings before the shell lesson; explain without asking learners to perform either. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "example_intro", "teaching"],
+        "prerequisites": ["O01"],
+        "reviewed_content_sha256": "06de2289b831082cd21da3deb9c8b0698f8973794d811ed7327585e4e212d39a"
+      },
+      "O03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Replaced ambiguous MFA cells and made the safe restore exercise concrete.",
+        "changed_fields": ["example", "example_intro", "exercise"],
+        "prerequisites": ["O02"],
+        "reviewed_content_sha256": "2d67f8f09db60a3f48f21ae575dcf49023be2ed1ca7744f1b5a60766acb0a26e"
+      },
+      "M01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Binary/hex answers and byte-length challenge are correct; explain code points, notation and the unit conversion used by the optional example.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["O01"],
+        "reviewed_content_sha256": "75359ee6e7cea387578f4e6034faee49c2901c1bc065de6e63f0ee54a772abba"
+      },
+      "P01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Arithmetic and calls are correct; supplied first-editor instructions and explained None before it appears in the walkthrough.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["O01", "M01"],
+        "reviewed_content_sha256": "2453fd8f383f85e9c04983c71b42f5541713ec0077c78e11b99c830db2ca79d7"
+      },
+      "P02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "The original function was never called. Added a visible call and explained list notation, comparison boundaries and tracing. Also filled quick-check vocabulary before the question and checked cross-tab references.",
+        "changed_fields": ["example", "example_intro", "exercise", "teaching"],
+        "prerequisites": ["P01"],
+        "reviewed_content_sha256": "eb8eb21ffed15dda7d068036478f58609f304e313b564afccf62329f4d7ff9b1"
+      },
+      "P03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Walked through all three records and five-record extension. Added definitions for enumerate, append, continue, conversion and frequency dictionaries.",
+        "changed_fields": ["example_intro", "exercise", "teaching"],
+        "prerequisites": ["P02"],
+        "reviewed_content_sha256": "59757e43d37265ebfa6c6a1e906b28f97bfb28c0af66a471800da7339f4bc16f"
+      },
+      "P04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Added file preparation, CSV/JSON punctuation, time offsets and the file API before conversion task.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["P03"],
+        "reviewed_content_sha256": "e2f6f65d7c3505801cbd44d81287ae83b4705a4dfd025d95b4cc7bb3873dd148"
+      },
+      "P05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Explained regex operators, test class scaffolding and short-circuit port validation before tasks.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["P04"],
+        "reviewed_content_sha256": "22bf9051baaffe718b43391233493503b210e2e5191259d6fc0ac40b8ffa185e"
+      },
+      "L01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Added shell access and complete command vocabulary; retained safe disposable-folder scope.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["O02", "P01"],
+        "reviewed_content_sha256": "8516d384017c03b41622924f66c4c9d58b132ce2c3d033c3329bb66594d6f730"
+      },
+      "L02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Explained script operators and numeric modes; made extra pipeline task concrete.",
+        "changed_fields": ["example_intro", "extra_example", "teaching"],
+        "prerequisites": ["L01", "P04"],
+        "reviewed_content_sha256": "6a35b0152aec52bdbbe243d9aaa6e91237e971185bae3fbd392d14ed73bd131f"
+      },
+      "P06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Supplied platform-specific venv commands and class syntax before using them.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["P05", "L02"],
+        "reviewed_content_sha256": "dff9db8aca6a7c6e70cc125aa5fb53f9e66527dc6efa5dc28f7dc612009ded3d"
+      },
+      "L03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Added installation/identity and command glossary; supplied branch-conflict steps as local-only exercise.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["L02", "P06"],
+        "reviewed_content_sha256": "d8f8fbe4064af53da647ae84ebacb64d6092b0aa588f2d69fa4075bf3327a9ed"
+      },
+      "M02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Removed reference to nonexistent balance proof; explained F/T and added explicit guard exercise instruction.",
+        "changed_fields": ["example_intro", "explanation"],
+        "prerequisites": ["M01", "P02"],
+        "reviewed_content_sha256": "0c5c2e59b58f2dec84237a6c729f1205ad60da5834948a87a2c4919c9c4fd45e"
+      },
+      "M03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked inverse/count results; defined enumeration, negative remainder and subset notation.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["M02"],
+        "reviewed_content_sha256": "7e1e2d5aed0ce16e3c34744793245b3811edda391572a85bdc3e36f2898ff700"
+      },
+      "M04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified all confusion matrices and birthday scale against supplied inputs; added notation/bit-to-count bridge.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["M03", "P03"],
+        "reviewed_content_sha256": "a2aa8cdc3573f5c3b8650894fc1d3f94920e5cfcd733b68bfca5107ed2218647"
+      },
+      "M05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked means/variance/matrices; defined sigma/n/standard error and squared-deviation steps.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["M04", "P05"],
+        "reviewed_content_sha256": "80a7fc4da64f50328e3c2452c73080c3645e7e6b7dd40e50826073043a73dd29"
+      },
+      "C01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Added compiler access, C punctuation/type/output glossary and hexadecimal input interpretation.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["P06", "L03", "M01"],
+        "reviewed_content_sha256": "6f1bc1c0d937d8ec7b18fe367bbc99da5c82428f391b2d0820112e1faf9d7609"
+      },
+      "C02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked cat/cats/empty outputs and exit statuses; explained string/pointer/library syntax before copy example.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["C01"],
+        "reviewed_content_sha256": "6e6ee3f6d5f2ea75f2acecc016d11946e254131a24f257ea5771290ea3c6a026"
+      },
+      "C03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked interval traces and recursive sum; added callable example and loop notation.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["C02", "M02", "M03"],
+        "reviewed_content_sha256": "2db3ec481ea7ce0ea6a2ac0e9e62d28570eee1b5726ba5a555ce5be1243f5f8a"
+      },
+      "C04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified pointer lifetime and safe output; supplied compile filename and allocator syntax; removed unspecified debugger requirement in optional task.",
+        "changed_fields": ["example_intro", "extra_example", "teaching"],
+        "prerequisites": ["C02", "C03", "P05"],
+        "reviewed_content_sha256": "d297d5a491e2511af11cc8a3e824e0cf76d2907fecdcd52c9ed90881eb3a689f"
+      },
+      "C05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Found task referring to absent architecture traces; supplied both traces and made optional debugging task concrete.",
+        "changed_fields": ["example_intro", "extra_example", "teaching"],
+        "prerequisites": ["C04", "L02", "M01"],
+        "reviewed_content_sha256": "3ed6da5ea90a26c1a7aba26b85b0d3f12add28ee0c88c4d4485827a232908c74"
+      },
+      "C06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified safe file commands and memory model; defined descriptor/page and replaced unspecified tracing tool requirement.",
+        "changed_fields": ["example_intro", "extra_example", "teaching"],
+        "prerequisites": ["C05", "L02"],
+        "reviewed_content_sha256": "df023ca25c7bb9bb78f8094aca3ded6a9eb0bc984fe2b59e21cd06285a581dea"
+      },
+      "C07": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked every concurrency schedule and lock ordering; clarified notation and made optional withdrawal model explicit.",
+        "changed_fields": ["example_intro", "exercise", "teaching"],
+        "prerequisites": ["C06", "M02"],
+        "reviewed_content_sha256": "260ecd82f79e9bf83cf160e8279c255dc4f84867025105cbf6eebcd1b5fdad78"
+      },
+      "N01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified RTT/rate units and packet/header distinction; supplied a paper alternative to unspecified capture tooling. Also filled quick-check vocabulary before the question and checked cross-tab references. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "example_intro", "extra_example", "teaching"],
+        "prerequisites": ["C06", "M01"],
+        "reviewed_content_sha256": "8bca120bda0ccbfa85a4841c28cdb9e963854543c3d205b2b09447f1523b3c29"
+      },
+      "N02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked prefix ranges/route choices; made NAT optional diagram fully specified.",
+        "changed_fields": ["example_intro", "extra_example"],
+        "prerequisites": ["N01", "M02", "M03"],
+        "reviewed_content_sha256": "94af30776048a003a352e1374743d86445343e46483329674ab5bed17ed6b883"
+      },
+      "N03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked local/remote next-hop decisions and DHCP exchange; specified optional saved-data task. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "example_intro", "exercise", "extra_example"],
+        "prerequisites": ["N02"],
+        "reviewed_content_sha256": "e4e8fdfd5309d1fcae1c562579c7e458c83dce55548ea0c88a11b9afeddf2c60"
+      },
+      "N04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified two-file setup, bounded receives and restart instructions; clarified bytes/sockets and scoped optional length-prefix task.",
+        "changed_fields": ["example_intro", "extra_example", "teaching"],
+        "prerequisites": ["N03", "P04"],
+        "reviewed_content_sha256": "035221e7bf2cd3caa2e76803150f023c57bfa045291cac14f9a456ff10edbe60"
+      },
+      "N05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked CNAME/MX/TTL results; explained zone fields and supplied optional resolver diagram input.",
+        "changed_fields": ["example_intro", "exercise", "extra_example"],
+        "prerequisites": ["N04"],
+        "reviewed_content_sha256": "08d4084989a7892cdb17ae89d52c6407d335bfdf55e1f47128c0ddc0838f32da"
+      },
+      "N06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked HTTP/header and cache decisions; made optional request comparison self-contained.",
+        "changed_fields": ["example_intro", "extra_example"],
+        "prerequisites": ["N05"],
+        "reviewed_content_sha256": "c0b729a9f16dd6678e5c889af89c6eedc0d8def8182c97e6111d84fe6dffae67"
+      },
+      "B01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Added browser file-opening/devtools instructions and JavaScript syntax before Reset extension.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["N06", "P03"],
+        "reviewed_content_sha256": "41b9b5c6122cd76360fb5ac28b2b0eb724ec07d9619e6f041e2e73bef507d77d"
+      },
+      "B02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked SQLite parameters/rows and lost updates; replaced underspecified transaction project with supplied paper fixture.",
+        "changed_fields": ["example_intro", "extra_example", "teaching"],
+        "prerequisites": ["P04", "C07"],
+        "reviewed_content_sha256": "d030059e12dc4f0063374de22ee494ba56551fdd8b86b12e8dae7e3077391f0a"
+      },
+      "B03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked response matrix, ownership source and deletion policy; replaced unprovided API build with a complete contract extension. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "example_intro", "extra_example"],
+        "prerequisites": ["B01", "B02", "P06", "N06"],
+        "reviewed_content_sha256": "127abd050096d9cab3f63abbe61c92bea9a02e841c5a781c4d6fe130d267207d"
+      },
+      "B04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked paper/runtime distinction and snapshot limitations; narrowed optional restore exercise to supported setup. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "example_intro", "exercise", "extra_example"],
+        "prerequisites": ["C06", "N04", "L03", "B03"],
+        "reviewed_content_sha256": "c09ef0b8f1f39971ca64bb2ba8faad4593c3201088c3ae1ace81409f0336a341"
+      },
+      "S01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked threat/control/verification chain and explicit ordinal risk assumptions. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "example_intro"],
+        "prerequisites": ["O03", "B04", "M02"],
+        "reviewed_content_sha256": "aef79e6c862332afe309be672034fba84c1037cd17995d8d693fbf810ce7ea0f"
+      },
+      "S02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Found third-party dependency installation missing; added venv install and byte-operation explanation.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["M04", "S01", "P05", "P06"],
+        "reviewed_content_sha256": "5c8b942f2842da63a0515b84a5da74e38dbce682bcd1f3b7d28db3a3124c1341"
+      },
+      "S03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Found argon2 dependency missing; distinguished two scripts and KDF API roles.",
+        "changed_fields": ["example_intro", "teaching"],
+        "prerequisites": ["S02"],
+        "reviewed_content_sha256": "636391c89e4bb6d0595c374e2355f89ea6b65bc7fc27b7b7a4be99a0e7eb16be"
+      },
+      "S04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked primitive roles/name checks; replaced unspecified signing-library exercise with paper verification records. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "example_intro", "extra_example"],
+        "prerequisites": ["S03", "M03"],
+        "reviewed_content_sha256": "32c4022e9ee94bb3ad0f2243f6a688e3f8c55b4237f4fa251aef6bbc4b76f75d"
+      },
+      "S05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked TLS validation layers and privacy limitations; supplied optional proxy assumptions. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "example_intro", "extra_example"],
+        "prerequisites": ["S04", "N06"],
+        "reviewed_content_sha256": "0a02a5ed06e1143de09b1d4f584768a52cc933db4473767004ae3a24fd085dbd"
+      },
+      "S06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified seven policy answers and suspension distinction; specified optional policy instead of asking learners to invent unstated rules. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "example_intro", "extra_example"],
+        "prerequisites": ["S05", "B03", "C06"],
+        "reviewed_content_sha256": "ab559ab5f79f01d786d32c664c5a1ad8183d22fa866a503654b0045555605099"
+      },
+      "W01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked paper fixture, actual public-request route and redaction; kept observation/prediction distinction. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["S06"],
+        "reviewed_content_sha256": "21ab51cc647038d0b096588c0be765b0e83fa8a61787878f11281c160e6b5d44"
+      },
+      "W02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified four owner/id cases and literal expression binding; added exact sort-test input and SQL ORDER BY explanation.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["W01", "B02"],
+        "reviewed_content_sha256": "891d6b4efb69c02ef58eb1989a805b219779e53abcfd0a0df42350b9ae0a5f94"
+      },
+      "W03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified local B01 marker path and persistence model; explained source/sink and browser inspection expression. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["W01", "B01"],
+        "reviewed_content_sha256": "a5666210150343c11bfe86ce360fc13b04bc365e200b7d9722c8b02c16ef9831"
+      },
+      "W04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked token/account/GET cases; explained middleware and CORS link before independent comparison. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["W03", "S06"],
+        "reviewed_content_sha256": "f51dc2de1457ea5d42ad5db9d4f862edbae403c172a24d796a364e7bd00f21e5"
+      },
+      "W05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified both six-row CORS matrices and credential-mode distinction.",
+        "changed_fields": [],
+        "prerequisites": ["W04", "B01"],
+        "reviewed_content_sha256": "b55dfdbc9c93d3995b1224a01d205475dbb013aa23abc49fa051b8c340b39126"
+      },
+      "W06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked four mappings, prefix-boundary counterexample and deleted-file path; defined opaque/symlink terms. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["W01", "L02", "C06"],
+        "reviewed_content_sha256": "6ac6775dc33b4831365a7b2002fe4cfe31450d0c8e1abd4c46a543814e342b69"
+      },
+      "W07": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified pathlib fixture; defined operators and subprocess flags without running fictional tool.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["W06", "L02", "P06"],
+        "reviewed_content_sha256": "2a8cf341a56b974ad29bb9315f23a614c1323679a96f85cc5e32325eb7570117"
+      },
+      "W08": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified byte-limit/decoding/ownership cases and explicit empty-file policy; defined lifecycle states. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["W07", "B04"],
+        "reviewed_content_sha256": "354571a6eba113995251507e4774e886423e54032e941e69cf1326253d22fe5f"
+      },
+      "W09": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all parser inputs and failure stages; defined Python validation helpers and DTD before checklist.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["W08", "B03"],
+        "reviewed_content_sha256": "c698d986cffecc57f0a3c69698426db08aaca77bbe4dd8f8fb8bfaaef57559bd"
+      },
+      "W10": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all URL classifications; defined egress and fail-closed terminology. Also filled quick-check vocabulary before the question and checked cross-tab references. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["W09", "N02", "N05"],
+        "reviewed_content_sha256": "5a4063654d66b754827f6c4542ba1813fbfd4f9ec90ab18fe284947b45abc73f"
+      },
+      "W11": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked method/ownership/type/field matrix; clarified PATCH and read policy. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["W10", "B03", "S06"],
+        "reviewed_content_sha256": "6bf80a84c4f949f85b9821ee5ce51b3a030b36ee21c2fa60f818fc93c342e301"
+      },
+      "W12": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked reset-token state sequencing and replay/concurrent-use assumptions. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["W11", "S06"],
+        "reviewed_content_sha256": "2e504b0cf42a561739b544a00b7d733aa13f7e12e9b79796f82a937d7dcca610"
+      },
+      "W13": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked role/state/owner decisions, concurrent approval and explicitly chosen bulk policy. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["W12", "S06"],
+        "reviewed_content_sha256": "e85cf4a9944db088a65ea56a0b1461d7cdeacf8118463bf4e616453d52f4869c"
+      },
+      "W14": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked signature/issuer/audience/time/algorithm cases; decoded abbreviations and arbitrary time units. Also filled quick-check vocabulary before the question and checked cross-tab references. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["W13", "S04"],
+        "reviewed_content_sha256": "e7b55390e13a759d361ff82d79a799cf4a7d79edab486c618a33825a1481c92c"
+      },
+      "W15": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked code-flow steps and failure points against teaching; labels are not secure token generation. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["W14", "S05", "W04"],
+        "reviewed_content_sha256": "4b98e5eec2f0ec1a7e8e669853164cfcc4661dc5bf231f1ef20bf9f080052284"
+      },
+      "W16": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked unsafe/serial schedules, crash handling and scoped retry keys. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["W15", "C07", "B02"],
+        "reviewed_content_sha256": "52cedfde3137c514278fc41251d27bb9faedb6ad732edb73b4b7265febbc7f1b"
+      },
+      "W17": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified inclusive byte ranges and matching variant; no real HTTP payload implied.",
+        "changed_fields": [],
+        "prerequisites": ["W16", "N06"],
+        "reviewed_content_sha256": "d25a97bec6538a05a669cf9732f873b4edea908981fe06790b3c34f60b424908"
+      },
+      "W18": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all three evidence-supported findings; optional task now names supplied packet rather than nonexistent app. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "extra_example"],
+        "prerequisites": ["W17", "W02", "W03", "W04", "W05"],
+        "reviewed_content_sha256": "738b6c217e0d0e425341f03ce4fb24369fb351b6b65a94a1e2fc574a8f8f18e1"
+      },
+      "F01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked capacity/terminator arithmetic and bounds-vs-lifetime distinction; model explicitly abstract.",
+        "changed_fields": [],
+        "prerequisites": ["W18", "C05"],
+        "reviewed_content_sha256": "beb07bbc348115196cd68869d6abf2d80daface488ef73f9480a3c104a564a01"
+      },
+      "F02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked five-control table and limits; added NX abbreviation before the example. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["F01", "S02"],
+        "reviewed_content_sha256": "a1cb22237aee3893114e99cb9c3aac32a7fae7397cd5de4d7e1e8a297a691157"
+      },
+      "F03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked allowed/denied renderer authority and broker interface; defined handles/broker. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["F02", "S06", "B04"],
+        "reviewed_content_sha256": "af89aface4e6a989e2226dcad946af82d2da89247bb541e22cbb0aa9b4c6a93e"
+      },
+      "F04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked listener binding, baseline and reversible rollout; terms available in prior networking lessons. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["F03", "N03"],
+        "reviewed_content_sha256": "83002499324a1c52739b37b2c0fbc635649dd99de0533559fe0c6ea860dfdf66"
+      },
+      "F05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked dependency graph, advisory assumptions and token-revocation response; defined transitive/tool artifact terms. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["F04", "L03", "P06"],
+        "reviewed_content_sha256": "c906ee5f5f8ce42795ffe964baabf84e4a7dbbcd366e435ecf823fa223ec0b7e"
+      },
+      "D01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Found PowerShell syntax introduced without a syntax bridge; added shell/scaffold and supplied simple optional data task.",
+        "changed_fields": ["example_intro", "extra_example", "teaching"],
+        "prerequisites": ["F05"],
+        "reviewed_content_sha256": "3d35afc4ec8ec4d8363331543fc869c3a456b667377c61800c52c3266ec920db"
+      },
+      "D02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked Reader/Editor matrix and ticket-vs-token distinction; defined challenge/response and ticket roles. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["D01", "S06", "N05"],
+        "reviewed_content_sha256": "9fe0e3355cf540992c74629ec231096208285cf85157145d4b7c85f04a13b861"
+      },
+      "D03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked sole-grant policy and shared responsibility; resolved read-only worker/output ambiguity. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["challenge_solution", "example_format"],
+        "prerequisites": ["D02", "B04", "S05"],
+        "reviewed_content_sha256": "49598771d54b04ad87d7b815855667c42e181265050959fd74b1715abc754d83"
+      },
+      "D04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked four distinct exposure consequences; optional fixture now supplied rather than referencing an absent manifest. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "extra_example", "teaching"],
+        "prerequisites": ["D03", "F03"],
+        "reviewed_content_sha256": "91990e8f60c67a4e4fc97e00808664a1c084de54636c1b665ccfba1d84805c4e"
+      },
+      "D05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all ten UTC conversions and counts; explained hash/read helpers and replaced terse comprehension solution with ordinary loops. Also filled quick-check vocabulary before the question and checked cross-tab references.",
+        "changed_fields": ["solution", "teaching"],
+        "prerequisites": ["D04", "P05", "M05"],
+        "reviewed_content_sha256": "917010965e7f04dba93aa65146d1abb83faf1925a6270a2193eca9a356906625"
+      },
+      "D06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked E1/E2 source/observation/mapping limits and terminology; preserved definition lookup rather than executing a command. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["D05"],
+        "reviewed_content_sha256": "2726e9e9208d8815f5686b14e71c2ba180eac8efdd9f8bb508b4521317206455"
+      },
+      "D07": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified both confusion matrices and missing-field denominator; supplied concrete optional time-window fixture.",
+        "changed_fields": ["extra_example"],
+        "prerequisites": ["D06", "D02", "D01", "D05", "M05"],
+        "reviewed_content_sha256": "cd7ef45c65591ea9e2129dd46710500750be172821720eed39d3bfbee14e73f8"
+      },
+      "D08": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked plan/update against supplied facts; proposed actions remain proposals. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["D07", "O03"],
+        "reviewed_content_sha256": "b6128165c8d53ca8ffe9019da3574ddbe79da846968b3d621c464987ef231c4a"
+      },
+      "D09": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked three-file copy/hash path and UTC timeline; supplied hashing vocabulary before task.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["D08", "C06"],
+        "reviewed_content_sha256": "069295e942ce8a4e7313deffd7d9c1eee54a85512dfb4562d354e3c34ce6166a"
+      },
+      "D10": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all three PID rows and attribution limits; defined PID/parent/lineage. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["D09", "C05", "F02"],
+        "reviewed_content_sha256": "14e001656007f13b9d6bf7dd82c181831b9dfba65e7e5a747061e0f4b85fdfeb"
+      },
+      "G01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified both cost scenarios and risk-register example; all numeric inputs supplied. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["D10", "M05"],
+        "reviewed_content_sha256": "1cc33704a229e14687d9c28b24d1f499d98b71bb863f918f2249fd89c80ddf8d"
+      },
+      "G02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked field-purpose inventory and regulator-selection exercise; no universal retention or legal claim added. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["G01", "B01"],
+        "reviewed_content_sha256": "f74081ffa2466baaf315668c4a1a57641ca3ad510e94fd102ec876128fa15ca8"
+      },
+      "A01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked retry/crash schedules, atomicity and late-retry limits. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["G02", "C07", "S05", "W16"],
+        "reviewed_content_sha256": "be7f1afd80eea24cdc355c0a28ef70329dab1fb49d6a64ef60d8ef972c9e032e"
+      },
+      "A02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified one-bit game and reused-key cancellation; explained conditional probability and oracle/epsilon notation.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["A01", "M04", "C03", "S04"],
+        "reviewed_content_sha256": "396e93328bc82180659ed60d5e4b35f91287690d7af6d5334e40fe060fc1be40"
+      },
+      "A03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all seven parser outcomes; supplied guarded repair reference and ASCII-vs-Unicode policy.",
+        "changed_fields": ["solution", "teaching"],
+        "prerequisites": ["A02", "F02", "M05"],
+        "reviewed_content_sha256": "a9077c005f6b3f2acf946e111b703dee5c18fe4d3c73ee6895c007d758e5c4ff"
+      },
+      "A04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified group means and confounders; supplied numeric toy cache costs for optional simulation. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "extra_example", "teaching"],
+        "prerequisites": ["A03", "C05", "C06", "S03", "M05"],
+        "reviewed_content_sha256": "01616640763de7767afcee73d2e99012d60fb5081d7efee515c7b9284c468e86"
+      },
+      "A05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Found TLA+ symbols unexplained; added full notation bridge and separated model/configuration instructions.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["A04", "M02", "C07", "A01"],
+        "reviewed_content_sha256": "f6319207c8d3b5caf6dcfd257a3ea442ad41ed330b975f629909e4e219821227"
+      },
+      "A06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked permission-purpose matrix, denied optional feature and deep-link identity check; remains paper design. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["A05", "F05", "G02"],
+        "reviewed_content_sha256": "a3276577ab93092d1fd27f90987358c8e09676cd93acb1d38cfa42c628a2a1a3"
+      },
+      "A07": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked stale/unauthorised/network cases and domain-assumption boundaries; no physical action required. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["A06", "N03", "G01"],
+        "reviewed_content_sha256": "290011c2fa2197c153cfdd9ab5c4bbfe38f51548d7c587a9ae0cd170d28c6bbd"
+      },
+      "R01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified precision/recall and threshold leakage; independent open-paper task deliberately requires research, not unavailable fixture. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["A07", "M05"],
+        "reviewed_content_sha256": "083f0891669a86cac47073f76961425847169f2875e30db630d9dcbd3982c446"
+      },
+      "R02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked deterministic script/manifest and no-provider boundary; specified data for optional comparison. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "extra_example"],
+        "prerequisites": ["R01", "L03", "M05"],
+        "reviewed_content_sha256": "93571200d10e261e927e5a5441345378d3ea9b7265912e397ca9836be9b3d507"
+      },
+      "R03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked fixed six-row capstone, rubric and independent defence; defined response/recovery artifact. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["R02"],
+        "reviewed_content_sha256": "eaa12cb738a8fdd7a5bbec7c4fc15a59e39388cf39adaee35bccc58acf1fb106"
+      },
+      "I01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked pipeline/authority changes; filled missing training/inference/embedding terminology before independent task. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["P05", "M04", "B03", "S01"],
+        "reviewed_content_sha256": "be313f4020d0d9616149c3d2f783878b8177d7a8123b149899169c4f81b6a982"
+      },
+      "I02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked authorised task, untrusted instruction and mock denial; no model outcome claimed. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["I01", "W03", "S01"],
+        "reviewed_content_sha256": "777a5a8ed9d1fdd91edd9b96ca80ae6edc6261fe369b21ab139abd8d5f54ce60"
+      },
+      "I03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked both rankings and archive invalidation; defined cache/chunk/citation terms. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["I02", "W11", "P04"],
+        "reviewed_content_sha256": "16e60442ab765c21ad1c6a656b309f8c55ed0a51e08f114b7e42b2953f3e51f2"
+      },
+      "I04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all mock tool and approval/time cases; defined principal/executor/budget/deputy terminology. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["I02", "S06", "W16", "A01"],
+        "reviewed_content_sha256": "c82258f5e65256f19967f6153fc5cb8f902b5f17b3c971d9a88568be7f936c6a"
+      },
+      "I05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked manifest changes and component rollback; defined tokenizer/adapter/corpus before tasks. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["I01", "F05", "G02"],
+        "reviewed_content_sha256": "46a3c1cd10cb97ebfcabae3d9f9a928a6eb412605c945e5d0c8d37af857a09f3"
+      },
+      "I06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked field minimisation and derived-data inventory; retention claim stays service-specific. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["I03", "G02", "S03"],
+        "reviewed_content_sha256": "d859792923a9a003957bba10b18877dae52a9fa8fa65c3c7e4991df98d64495a"
+      },
+      "I07": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all static policy cases, illustrative limits and positive requirement; no provider execution. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["I02", "I04", "M05"],
+        "reviewed_content_sha256": "f55e4a891239dc8954a2dc1e4d6c11b36d042de340e3970c1baac35e0d1dcf3d"
+      },
+      "I08": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked memo against actual supplied mock log and denied action; untested questions remain explicit. Displayed the fictional scenario as wrapping reading text.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["I01", "I02", "I03", "I04", "I05", "I06", "I07", "D08", "R02"],
+        "reviewed_content_sha256": "e475b5c7b2113e8b3c2c4642061271c118644b256056eb315e1d304eace3b902"
+      }
+    },
+    "child": {
+      "C01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked first case, parent/student goals and credential critique; expanded OT/SLP and replaced unexplained artefact wording. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "example_intro", "exercise", "teaching"],
+        "prerequisites": [],
+        "reviewed_content_sha256": "3de5203de9e88c75d6ee2e8295fcdb63028027bcbea103fba19a0486c8ce768b"
+      },
+      "C02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked observable-vs-tentative three columns and changed-skills referral response; no diagnostic inference. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["C01"],
+        "reviewed_content_sha256": "4b7c140858b4f1dd5a614d31820d294ea1f120b7f0f486dd64a3697558bac4f1"
+      },
+      "C03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked art task demands/unknowns/choice and stop signal; supplied row format. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C02"],
+        "reviewed_content_sha256": "14ec4b229db0198aab624f1a245ed52d6e6ee4465ad9627e59dbf186ae7e6cfa"
+      },
+      "C04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked oral-vs-written contrast, accessible pupil view and five meeting questions. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["C03"],
+        "reviewed_content_sha256": "c557de532b525552e8e96b8d04e66213898e0545b88a624814d92014ba73e81a"
+      },
+      "C05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked teenager-chosen goal, support/safety unknowns and autonomy rewrite; defined transition and supported decision-making. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C04"],
+        "reviewed_content_sha256": "f8208fa1d60151e5cef2e0fda75c08abc912ba0520efa075ab1bbdaa64160ed0"
+      },
+      "C06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked neutral observation rewrite and exact five questions; no hearing test implied. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["C02", "C03", "C04", "C05"],
+        "reviewed_content_sha256": "856d69d0471c90c8018ad1a424c54ce53b01e8545afc5d66793044e892ff0566"
+      },
+      "C07": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked invented notebook, assent/consent and safety-disclosure boundaries; supplied proposed entry for redaction exercise. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "exercise"],
+        "prerequisites": ["C01", "C05"],
+        "reviewed_content_sha256": "5d20dac37ea85d56cfb23643237a5b494ad99b00c98f6a028f5e46b41f7c9b47"
+      },
+      "C08": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked access table and multimodal explanation; AAC and receptive/expressive already defined before example. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["C03", "C06"],
+        "reviewed_content_sha256": "88556b02ee458efe1547cfd02550c5b32d67c081accfd7ac7dd15c223db16616"
+      },
+      "C09": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked six-step dressing analysis; explained fine motor and sensory-diet label without prescribing one. The existing prerequisite reminder already defines occupation before the quick check. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C04", "C06"],
+        "reviewed_content_sha256": "49e8ce42e7393a24fe6c59ee2ab3253a0bade11224c38540e1e4ffdeb81de311"
+      },
+      "C10": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked ABC sequence, competing explanations and distress-plan critique; terms/safeguards taught before task. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["C05", "C07", "C08", "C09"],
+        "reviewed_content_sha256": "e03aa4fc290310a1ba3f589a00b29047a1d5e5d391956b4cafbd3ffb8501f613"
+      },
+      "C11": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked three goals and multilingual challenge; supplied side-by-side row format for appraisal. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C07", "C08", "C09", "C10"],
+        "reviewed_content_sha256": "a93041191d8964e8a641e07b593d92736179ba51721174778bfa9ea3723da3bc"
+      },
+      "C12": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked concern-summary inputs/unknowns, urgency boundary and unsupported cure critique; no diet/food trial. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["C06", "C07"],
+        "reviewed_content_sha256": "d94e83e1032a98b2d74802cabe145f83bdf56db640d58b7ab7cfa3f8410d92d2"
+      },
+      "G01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all three adult role-play replies and five-minute plan; supplied exact contributions and self-script route. Also defined the quick-check term in Learn. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "exercise", "teaching"],
+        "prerequisites": ["C08", "C07"],
+        "reviewed_content_sha256": "4f7e82e838870606177a24403c41203e2be90e1c4b9b8c415b1022766bb9caae"
+      },
+      "G02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked respectful response rewrites and universal-exercise critique; defined SLP and motor-speech category. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C08", "C07"],
+        "reviewed_content_sha256": "0fa7f2031f2ccf8d864a27726a179fae7c72b65232a0fd11e15b19a71ecab0f6"
+      },
+      "G03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked availability/modelling/refusal checklist and no physical authorship guidance. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["C08", "C07", "C11"],
+        "reviewed_content_sha256": "71da13864da14ae10957b617885e7d9218d85c1832cd7fef5317c2eba8ef4c5a"
+      },
+      "G04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked language-history case and translated-test norm issue; explained norms before independent task. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C08", "C11"],
+        "reviewed_content_sha256": "74d7c86c4c99eef880e45475fe0f63b1e8f9573ac47011237e25d3fe01bfa534"
+      },
+      "G05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked six-step routine, zip pain and chosen support; no assumed home intervention. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["C09", "C07", "C12"],
+        "reviewed_content_sha256": "5be9d7a3a3aa2a94b4cce8534143609f7ae3a09c8e30d97713d29f1ede3a448b"
+      },
+      "G06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked ordinary options vs specialist actions and safety escalation; defined contraindication and conflict of interest. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C09", "C10", "C12"],
+        "reviewed_content_sha256": "959df19b7374038ad682782023d4d804df2cf022c05156fdc0ca0272b199447f"
+      },
+      "G07": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked harmful plan critique and broader outcomes; defined co-regulation/feasibility before review sheet. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C10", "C07", "C12"],
+        "reviewed_content_sha256": "198f23af46170c5874eba89149ce8722531979b0cd9261a39539d3aacff39874"
+      },
+      "G08": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked complete meeting agenda/roles/review; clarified accommodation vs programme. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C04", "C08", "C11"],
+        "reviewed_content_sha256": "3e844dffaee36ef3314ecaee32bc1d9ec7ce4756b29566c9c138c1777fcc4592"
+      },
+      "G09": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked teenager-selected planning page and support-after-16 critique; no age-based rights claim. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["C05", "C07", "C10", "C11"],
+        "reviewed_content_sha256": "e0c2b326713b5e76c6f4a4be89a9834750aa174936c9914bcf5419c7ab26ce78"
+      },
+      "G10": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked adult fictional conversation and separate imminent-safety response; preserved urgent local help boundaries. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["C10", "C12", "C07"],
+        "reviewed_content_sha256": "eeae37781282a1fd4950457879926379f349b66c247f58ff6fbe6dd7fb8797af"
+      },
+      "G11": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked team roles and conflict-resolution request; explained coordinator/review owner. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C06", "C07", "G03", "G05", "G07"],
+        "reviewed_content_sha256": "9ba47ad44842cd53b46505400a82f9ca622fae99e882abac83175c8935d7af75"
+      },
+      "G12": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all eight sections, source scope, complete case sheet and partner/self-review routes. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["G01", "G02", "G03", "G04", "G05", "G06", "G07", "G08", "G09", "G10", "G11"],
+        "reviewed_content_sha256": "07d8ab2a79597dac465fc1922a779e9c5b41737875d9f1b42e90e07a7d3fac23"
+      },
+      "P01": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked systems/concept maps and maturation alternative; added body-system terminology before map task. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["C06", "C08", "C09", "C12"],
+        "reviewed_content_sha256": "9f1b0204bc92938426fd2f120cc9582c6f951e3acc5f68d1e4e902fa074f98b3"
+      },
+      "P02": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified both group means/change comparison; defined notation, bias and qualitative-vs-quantitative questions.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["C01", "C07"],
+        "reviewed_content_sha256": "264dd41c342d473961361e73d954134ea28cf55684863c5fb4cd9576a508c535"
+      },
+      "P03": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified all screening cells/denominators and dynamic-assessment comparison; defined PPV and mediation.",
+        "changed_fields": ["teaching"],
+        "prerequisites": ["P01", "P02", "C11"],
+        "reviewed_content_sha256": "cc28d6b4960f775ed4515a8335fe5192bd0cf6a7e5088803e54b619104bdad0a"
+      },
+      "P04": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked school-age/age-two tables against full supplied cases; no unsupported skill/diagnosis filled in. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["P03", "C08"],
+        "reviewed_content_sha256": "0412171bc651569ed86b2026b2ffd78b2c47337efd5ab03104a6780d382f23a4"
+      },
+      "P05": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked trained/transfer outcome and support conditions; defined baseline, generalisation and retention before appraisal. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["P04", "P02", "C11"],
+        "reviewed_content_sha256": "a10b8fdbf818164dd73515f1601a6aee03e62dc1eb91b026649f44ce5731f16a"
+      },
+      "P06": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked five-domain comparison and swallowing boundaries; explained apraxia label before critiquing the video. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["P04", "P01", "C12"],
+        "reviewed_content_sha256": "8e15804c34577bb1d7dbaf4f54fe6ea0b5fdba889ae2a7248a1ee0e8ecdef7b3"
+      },
+      "P07": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked complete abstract AAC feature fixtures, privacy/authorship/access unknowns and no forced product choice. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["P03", "C08", "C11"],
+        "reviewed_content_sha256": "0bc6ef0a7e47ea035692e0f39fe90d5a8deba4bb062d1d456802b1dfb5092bdb"
+      },
+      "P08": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked supplied baking profile and all demand dimensions; occupation already defined as activity. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["P03", "C09"],
+        "reviewed_content_sha256": "56df4067c712838552cabf0c5375b22674db74d54c7e271c4f541e6b701904f3"
+      },
+      "P09": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked performance/retention/transfer/participation distinction with explicit no-observed-later-result caveat. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["P08", "P01", "C11"],
+        "reviewed_content_sha256": "ef4c9f018a3597a37b1b96db0cc2ae43ec534d7692cb85aac58be06d4fadc110"
+      },
+      "P10": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked scope-transfer error and accommodation-vs-protocol comparison; defined effect/adverse events. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["P08", "P02", "C10", "C12"],
+        "reviewed_content_sha256": "be517119f01ad3d8fffbeda3db2a56d1eaee2c802a4a613c114c8a58e2ae0658"
+      },
+      "P11": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked all six ABC rows and no function claim; operational description/start-stop missingness explicit. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["P03", "C10", "C07", "C12"],
+        "reviewed_content_sha256": "0e3c6f274a3c53dc24cd9c54f31029238e9af650fd599168ddbb778538e6c746"
+      },
+      "P12": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Verified six plotting coordinates/trend and opportunity/balancing-measure distinctions.",
+        "changed_fields": [],
+        "prerequisites": ["P11", "P02", "C11"],
+        "reviewed_content_sha256": "f621c83fce85f006cf3b5424c62500bc17e2fb3869c3b7fcbceefadaa1350346"
+      },
+      "P13": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked referral map, new concern vs existing diagnosis and immediate-safety distinction. Also defined the quick-check term in Learn. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format", "teaching"],
+        "prerequisites": ["P03", "C10", "C12", "C07"],
+        "reviewed_content_sha256": "be5cd2c188c111f0cc81158cd77f15b34596414ce2b62e19d5f0076f5361d26a"
+      },
+      "P14": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked invented note rewrite without invented observations and restricted-test competence boundary. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["P03", "C07", "C11"],
+        "reviewed_content_sha256": "d8b558a96442dd1103e4be62eb5bbf6175bfdc9f8c1fd70fdc3a61d3bd5cbca8"
+      },
+      "P15": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked supplied offline/cloud feature comparison, data flow and backup/go-no-go plan; no real upload. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["P02", "P07", "P14"],
+        "reviewed_content_sha256": "1e384fc490d00cc5440371440d9336138642c82246f18ceb1cd9f2409aca71fb"
+      },
+      "P16": {
+        "checked": [
+          "worked_example",
+          "example_explanation",
+          "practice_task",
+          "practice_solution",
+          "independent_task",
+          "independent_solution",
+          "extra_example",
+          "quick_check"
+        ],
+        "notes": "Checked four-page portfolio, eight-source scope and proposal/feedback limits; complete case sheet supplied. Displayed the scenario as wrapping reading text rather than reference code.",
+        "changed_fields": ["example_format"],
+        "prerequisites": ["P05", "P06", "P07", "P09", "P10", "P12", "P13", "P14", "P15"],
+        "reviewed_content_sha256": "a85e8fe27a7a5eea8fcdfcdecd18c1f82d56260516abe6c159de21fb9edcf6b6"
+      }
+    }
+  },
+  "method": "Manual beginner walkthrough against required prior lessons and the supplied inputs. Functional tests do not establish learner comprehension or clinical competence. No provider calls.",
+  "supporting_materials": [
+    "voice-ai-studio/practice/audio-lab.html",
+    "voice-ai-studio/practice/audio_lab.py",
+    "voice-ai-studio/practice/portfolio.html",
+    "voice-ai-studio/practice/capstone-contract.txt",
+    "child-development-studio/practice/fictional-portfolio.txt",
+    "voice-ai-studio/python-workspaces.json"
+  ],
+  "verification": {
+    "offline_tests": 153,
+    "local_reference_checks": "Changed inspected Cyber snippets and all nine Voice worked code cells, in fresh temporary folders with supplied fixtures. No third-party crypto/library install, network, model or clinical action.",
+    "editor_identity_count": 53,
+    "limits": [
+      "Manual authoring audit, not an observed study with first-time learners.",
+      "External provider environments and every external exercise were not executed.",
+      "Professional preparation is not clinical competence or accreditation."
+    ]
+  }
+}

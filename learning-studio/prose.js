@@ -1,4 +1,4 @@
-import { renderCode } from "./code-editor.js?v=20261106-2";
+import { renderCode } from "./code-editor.js?v=20261106-3";
 // Authored prose and fenced reference code only. Every character is escaped;
 // this is not a general Markdown or HTML renderer and never runs examples.
 const escape = (text) => String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -16,7 +16,9 @@ export function renderProse(text, { headingLevel = 3 } = {}) {
           .split(/\s+/);
         const language = header[0].toLowerCase();
         const id = header.find((value) => /^id=[a-z][a-z0-9-]{0,47}$/.test(value))?.slice(3);
-        return renderCode(code, language, id || "");
+        // Only a named workspace has execution/persistence wiring. Unnamed
+        // references (including Cyber examples) must not show inert Run controls.
+        return renderCode(code, language === "python" && !id ? "text" : language, id || "");
       }
       return part
         .split(/\n\s*\n/)

@@ -34,7 +34,7 @@ Salts separate stored computations. They do not add password entropy or turn has
 S04
 Public-key cryptography separates a public key that may be shared from a private key that must remain protected. Different operations use those keys for different purposes.
 Distinguish signatures, key agreement and encryption. Verify the binding between a public key and the intended identity, not just the signature calculation.
-Generate a lab signing key with an established library. Sign a short statement and verify it. Change one byte and observe failure. Then compare the successful mathematical verification with a separate identity question: why should a recipient believe this public key belongs to you? Document the trusted channel used to share the fingerprint.
+Paper signature fixture: the trusted contact directory assigns key K to Alice. A verifier reports that K verifies the statement approve note1 and rejects the changed statement approve note2 under the same signature. State what that supports about the signed bytes. Then remove the trusted directory entry: explain why verification alone no longer establishes the name Alice. K is a label, not a usable cryptographic key.
 A signature establishes a relationship to a key under assumptions. Its human identity meaning depends on trustworthy key distribution.
 What does successful signature verification directly establish?
 The message matches a signature produced with the corresponding private key, under the scheme's assumptions
@@ -45,7 +45,7 @@ Verification binds data to a key. Confidentiality and the real-world identity or
 S05
 TLS helps a client and server establish a protected communication channel. HTTPS uses that channel for HTTP, but the application still needs its own input and permission checks.
 Verify the intended endpoint, establish a protected channel and identify where it terminates. Continue enforcing application security inside that channel.
-Draw browser, TLS-terminating proxy, and application server. Mark which segments are encrypted and where plaintext exists. Inspect a legitimate site's certificate using browser tools and identify the subject names, issuer, and validity period. Explain why bypassing a certificate warning removes an important part of the intended authentication argument.
+Draw browser → proxy → application server. Assume TLS protects browser-to-proxy and plain HTTP connects proxy-to-server. Mark plaintext inside both endpoints and on the second connection. Then replace the second segment with TLS and identify which transit exposure changes. This diagram needs no real website or certificate-warning bypass.
 HTTPS does not establish that an application's business logic, dependencies, or content are safe.
 A proxy terminates TLS and forwards plain HTTP internally. Where is the original TLS protection boundary?
 Between the client and that proxy
@@ -56,7 +56,7 @@ TLS protects its actual connection endpoints. A downstream connection is a separ
 S06
 Signing in answers who the user is. Authorisation answers what that user may do. A person can be correctly signed in and still have no right to open another person's record.
 Use a trusted identity, then check that identity's permission for this action on this object. Enforce the rule at the server or database access point.
-Define read, edit, and delete permissions for owners, invited readers, and administrators in a notes service. Turn the matrix into positive and negative tests. Include a signed-in user requesting another user's note and an expired session requesting an owned note. Explain which failure is authentication-related and which is authorisation-related.
+For this separate fictional policy, owners may read/edit/delete their own notes; invited readers may only read the notes they are invited to; administrators may disable accounts but may not read note bodies. Evaluate A owning note1, B invited to read note1, C admin, and D with an expired session. Write one allow and one deny case for each relevant role, and explain why D needs sign-in before any ordinary note action.
 Being signed in is not a universal access permission. A valid identity must still be evaluated against each protected operation.
 A signed-in learner can edit another learner's private notes. Which control is missing?
 Object-level authorisation
@@ -254,7 +254,7 @@ Different framing interpretations let bytes acquire unintended meaning across sh
 W18
 An application-security assessment brings earlier checks together around a defined service. A useful finding explains the broken rule, its actual effect and how to verify a fix.
 Assess a defined scope, test specific rules, report observed effects and verify both the fix and legitimate use. Keep untested possibilities separate from findings.
-Assess the supplied application using an owner, a second user, and a logged-out session. Cover input handling, ownership, authentication lifecycle, cross-origin behaviour, file boundaries, and concurrent state changes. Rank findings by supported impact and likelihood. Repair at least one issue, add a regression check, and ask the other learner to reproduce the finding from the report alone.
+Using only the supplied fictional packet, make a regression table with rows for owner read, foreign read, permitted body update, protected owner-field update, plain-text preview and export preview. Record the expected allow/deny/literal-text outcome for each. Ask the other learner to check the report against the packet; neither learner needs a running application to reproduce this paper finding.
 A long tool output is not an assessment report. Explain which observed behaviour violates which rule and what evidence supports that conclusion.
 What best demonstrates a finding is reproducible?
 Another learner can follow the scoped report and observe the same violated property

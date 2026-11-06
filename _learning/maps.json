@@ -657,6 +657,12 @@
             "url": "https://missing.csail.mit.edu/2020/version-control/",
             "progressKey": "reading:1",
             "assignment": "Read The Missing Semester — version control. Focus on shell, environments, version control; then work through this lesson’s example to check your understanding."
+          },
+          {
+            "label": "Git — official installation by operating system",
+            "url": "https://git-scm.com/book/en/v2/Getting-Started-Installing-Git",
+            "assignment": "Setup reference only: install Git for your own permitted system if absent, then check git --version. Use the lesson’s local practice identity, explicit staging and disposable repository. No remote publication is required.",
+            "progressKey": "reading:900"
           }
         ],
         "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",

@@ -245,7 +245,7 @@
           "assignment": "Read how backups differ from the only working copy, separate/offline copies and practice restoring data. Test only the disposable text file from O01; keep recovery codes and real personal data out of the studio notebook."
         }
       ],
-      "practice": "Using invented services, make three inventory rows. Copy a harmless note to a separate recovery location, remove only a disposable working copy, then restore it. Record original contents, restored contents and what failure your copy would not survive.",
+      "practice": "1. Create three inventory rows for invented services. Use the example columns, without real account identifiers or secrets.\n2. Create a disposable text file called restore-practice.txt containing “Fictional restore test”. Keep a separate copy in a recovery folder.\n3. Remove only the disposable working file, using your file manager. Copy the recovery file back to a new restored folder.\n4. Reopen the restored file. Record its actual text, the two folder locations and whether it matches the original.\n5. Explain one failure this arrangement would not survive. For example, two folders on the same disk both depend on that disk.",
       "assessment": "A fictional laptop and its disk are lost. Email recovery codes existed only on that laptop; a cloud folder synchronised deletions. Identify two independent recovery weaknesses and propose a test for each.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -552,7 +552,7 @@
           "assignment": "Read the corresponding sections for while/for loops and validating input; Nested loops. Unassigned demonstrations and the rest of the course are optional."
         }
       ],
-      "practice": "Trace positive_total for these six supplied sequences: []; [0]; [2,-1,3]; [-2,-3]; [4,4]; [1,-1,1]. Record one row per iteration and the final output. Run the program only after all six predictions.",
+      "practice": "Copy positive_total from Learn into your Python file. On paper, trace these six input lists: []; [0]; [2, -1, 3]; [-2, -3]; [4, 4]; [1, -1, 1].\n\nFor each list, write its current value and running total after each iteration, then its final returned total. The empty list has no iteration rows.\n\nAfter predicting all six results, call the function once for each list using print(positive_total(...)), replacing ... with the chosen list. Compare your predictions with the displayed values.",
       "assessment": "Write nonnegative_count(items), counting values >=0. Trace it for []; [-1,0,2]; [0,0]; [-3]; [5,-5,5]; [1,2,3]. Then change >= to > and identify which tests distinguish the versions.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -670,7 +670,7 @@
           "assignment": "Read the corresponding sections for Exceptions, try/except and valid input. Unassigned demonstrations and the rest of the course are optional."
         }
       ],
-      "practice": "Use the exact three supplied records, then add {\"name\":\"d\",\"count\":\"0\"} and {\"name\":\"e\",\"count\":\"-1\"}. Before running, mark which counts should be accepted when the rule is “a non-negative integer”. Keep the original list unchanged. First record a reason for missing count or invalid integer text. After successful conversion, use if count < 0 to reject a negative value. For each rejection save a pair (index, reason); for each acceptance append the count. Report the accepted list, sum and rejection pairs.",
+      "practice": "Start a new five-record list so the original example remains available:\n\n```text\nrecords = [{\"name\": \"a\", \"count\": \"2\"},\n           {\"name\": \"b\", \"count\": \"bad\"},\n           {\"name\": \"c\"},\n           {\"name\": \"d\", \"count\": \"0\"},\n           {\"name\": \"e\", \"count\": \"-1\"}]\n```\n\n1. Predict which records satisfy “count can be converted from text to a non-negative integer”. Number their positions from zero.\n2. Keep separate accepted and rejected lists. If count is missing, reject that position with reason “missing count”.\n3. Otherwise try int(record[\"count\"]). If conversion raises ValueError, record “invalid integer text”.\n4. After successful conversion, reject values below zero with reason “negative count”. Append only valid counts to accepted.\n5. Print the accepted counts, their sum and the rejection pairs. Compare with your prediction before opening the answer.",
       "assessment": "For records [{\"count\":\"3\"},{\"count\":\"3\"},{\"count\":\"x\"}], return both the total and a frequency dictionary of accepted counts. Explain why repeated keys in a dictionary cannot represent two independent records by themselves.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -1048,6 +1048,12 @@
           "progressKey": "reading:1",
           "assignment": "Optional navigation: use the Hello Hackers, Pondering Paths and Comprehending Commands modules. Read their challenge instructions for command arguments, paths and file inspection. The landing page lists modules; it is not a whole-course reading requirement. Work only within the platform’s authorised environment.",
           "optional": true
+        },
+        {
+          "label": "Microsoft — install a Linux shell with WSL",
+          "url": "https://learn.microsoft.com/en-us/windows/wsl/install",
+          "assignment": "Windows setup only: check supported Windows versions, installation requirements and the first Ubuntu launch. Use the Linux terminal for L01 commands. macOS/Linux learners do not need WSL. Follow the guide on your own permitted device; installation may require administrator access and a restart.",
+          "progressKey": "reading:900"
         }
       ],
       "practice": "In your fresh learning folder, run the example one command per line. Predict which command creates a directory, which writes a file and which makes an independent copy. Then run cd copies, pwd, and cat ../\"first note.txt\". Finally run cd .. and pwd again. Write the two different directory paths and both displayed file contents. If cd fails, use pwd and ls to check where you are; do not add administrator privileges to fix a path mistake.",
@@ -1323,6 +1329,12 @@
           "url": "https://docs.python.org/3/tutorial/venv.html",
           "progressKey": "reading:2",
           "assignment": "Read §12.2 Creating Virtual Environments and §12.3 Managing Packages with pip. Explain which interpreter/environment a command uses, and compare an installed-version listing with a requirements file. The studio’s required object/exception exercise needs only Python’s standard library; installing packages is an optional extension."
+        },
+        {
+          "label": "Python — create and directly select a venv interpreter",
+          "url": "https://docs.python.org/3/library/venv.html",
+          "assignment": "Read Creating virtual environments and the interpreter locations/activation explanation. Use the environment’s Python directly as shown in Learn; no activation script or third-party package is needed for Notebook.",
+          "progressKey": "reading:900"
         }
       ],
       "practice": "Create a venv, record python --version and run the shown program. Add a second entry to b and prove a stays unchanged. Record your activation and run commands. Do not commit the .venv directory. On paper, compare loading an unknown pickle file with parsing JSON and checking that entries is a list of strings. Which operation can execute instructions during loading, and which extra checks does JSON still need?",
@@ -1406,6 +1418,12 @@
           "url": "https://missing.csail.mit.edu/2020/version-control/",
           "progressKey": "reading:0",
           "assignment": "Read Git’s data model, Snapshots, Modeling history, References and the Staging area, then the Basics and Branching and merging command lists. Relate each command to the history graph in your disposable repository. Recovery and history-rewriting commands are reference material; do not try them on a shared branch."
+        },
+        {
+          "label": "Git — official installation by operating system",
+          "url": "https://git-scm.com/book/en/v2/Getting-Started-Installing-Git",
+          "assignment": "Use only the installation section for your operating system and check git --version. Then use the lesson’s local-only identity and new-repository steps; no remote account or push is needed.",
+          "progressKey": "reading:900"
         }
       ],
       "practice": "Perform the shown local history. Stage the second version, inspect the staged diff and commit it. Use git log --oneline and git show to find the two versions. Record each commit's purpose in a separate nonsecret lab log.",
@@ -2195,6 +2213,12 @@
           "url": "https://cs50.harvard.edu/x/notes/1/",
           "progressKey": "reading:0",
           "assignment": "Read the corresponding sections for Source code and compilation; A first C program and headers; Types; Arithmetic and integer overflow; Truncation, casts and floating-point precision. Unassigned demonstrations and the rest of the course are optional."
+        },
+        {
+          "label": "CS50 — browser editor and C environment setup",
+          "url": "https://cs50.readthedocs.io/cs50.dev/",
+          "progressKey": "reading:900",
+          "assignment": "Read the overview for the browser editor/terminal and follow the CS50 account/setup route if you choose that environment. It is an external hosted service with its own account permissions and backup behaviour. Use invented source only; a local configured compiler remains an alternative. The C lesson uses cc commands, not the course-specific make shorthand."
         }
       ],
       "practice": "Compile the supplied program and record compiler version, command, warnings and output. Draw how the number 0x0102 would occupy two bytes under little-endian and big-endian conventions. Do not claim sizeof(int) is universal.",
@@ -2822,7 +2846,7 @@
           "assignment": "Open the linked Synchronization Worksheet and do Problem 3(A): trace all six permitted load/store orders and their final counter values. Attempt this before checking the answer PDF. Problems 1–2 and the semaphore additions in 3(B–C), 4 and 5 are optional extensions after the synchronization videos; they are not extra pass requirements."
         }
       ],
-      "practice": "Draw an interleaving that correctly ends at 2 without a lock and the failing schedule above. Then draw both possible serial lock-protected orders. Explain why seeing 2 in a test does not establish race freedom.",
+      "practice": "Draw an interleaving that correctly ends at 2 without a lock and the failing schedule in Learn. Then draw both possible serial lock-protected orders. Explain why seeing 2 in a test does not establish race freedom.",
       "assessment": "Task A acquires lock X then Y; task B acquires Y then X. Draw the point at which each holds one lock while waiting for the other, so neither can continue. Change both to acquire X before Y and explain which circular-wait pattern this prevents. Does that ordering alone guarantee correct account balances, fair scheduling or recovery after a crash? Explain one problem with holding a lock during slow input/output.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -3310,7 +3334,7 @@
           "optional": true
         }
       ],
-      "practice": "For the host above, compare destinations 192.0.2.20 and 203.0.113.8. State whose link address is needed for each under the simple directly-connected/default-route model. Label the four DHCP messages and the configuration they aim to supply.",
+      "practice": "For the host 192.0.2.10/24 with gateway 192.0.2.1 from Learn, compare destinations 192.0.2.20 and 203.0.113.8. State whose link address is needed for each under the simple directly-connected/default-route model. Label the four DHCP messages and the configuration they aim to supply.",
       "assessment": "A cafe advertises an SSID matching your home network name. Explain why the name alone establishes no trust, and distinguish wireless link encryption, DNS resolution and HTTPS authentication.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -3743,7 +3767,7 @@
           "optional": true
         }
       ],
-      "practice": "Using the records above, trace lookup of www.example through its alias to an IPv4 address. Calculate remaining TTL at t=250. Explain why successful lookup does not establish that an email claiming to be from support is legitimate.",
+      "practice": "Using the fictional DNS records in Learn, trace lookup of www.example through its alias to an IPv4 address. Calculate remaining TTL at t=250. Explain why successful lookup does not establish that an email claiming to be from support is legitimate.",
       "assessment": "Classify the purpose of AAAA, MX and CNAME. A message passes domain authentication but asks you to reveal a password. Explain what the authentication result does and does not establish, without sending or opening any message attachment.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -4248,7 +4272,7 @@
           "optional": true
         }
       ],
-      "practice": "Produce the full lab plan above for your selected platform. If a supported VM is available, perform the harmless marker restore. Otherwise complete the paper plan and explicitly label the runtime restore check unperformed; do not mark it as verified.",
+      "practice": "Produce the full lab plan introduced in Learn for your selected platform. If a supported VM is available, perform the harmless marker restore. Otherwise complete the paper plan and explicitly label the runtime restore check unperformed; do not mark it as verified.",
       "assessment": "Compare two proposed labs: A mounts your entire home directory writable into a container; B uses a clean VM with no shared folders and invented data. Explain the extra exposure in A and propose a minimal change.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "Browser-hosted labs remain an alternative for exercises that support them. Windows and x86 specialist labs may need a separate compatible VM; later modules state that requirement explicitly.",
@@ -4485,6 +4509,12 @@
           "url": "https://cryptography.io/en/stable/hazmat/primitives/aead/",
           "progressKey": "reading:4",
           "assignment": "Read only the AESGCM class, generate_key, encrypt and decrypt entries. Identify the secret key, the unique-per-key nonce, the encrypted message and the authenticated but visible associated data. Explain when InvalidTag is raised. Use the high-level API in the lesson; the other algorithms and newer buffer-writing APIs are optional. Never reuse a nonce with the same AES-GCM key."
+        },
+        {
+          "label": "Cryptography — official package installation",
+          "url": "https://cryptography.io/en/latest/installation/",
+          "assignment": "Read the basic cryptography installation and supported-platform guidance. Install only in P06’s environment, run the supplied invented-message example, and consult the installation troubleshooting if a wheel is unavailable. Do not invent a production encryption service from this one-message demo.",
+          "progressKey": "reading:900"
         }
       ],
       "practice": "Run this exact harmless example in the venv. Add negative decryption tests using aad=b\"notes-format-v2\" and a fresh wrong key. Record round-trip success and each rejection without writing the key or ciphertext into public notes.",
@@ -4646,6 +4676,12 @@
           "url": "https://argon2-cffi.readthedocs.io/en/stable/howto.html",
           "progressKey": "reading:4",
           "assignment": "Read the complete short How to Hash a Password guide. Trace PasswordHasher.hash, verify and check_needs_rehash, including the exception for a wrong password. Explain why a successful login is an opportunity to upgrade an old hash. Use fictional passwords only. Read the memory-cost warning before trying the example; its reported timing is not a guarantee for your machine."
+        },
+        {
+          "label": "argon2-cffi — official password-library installation",
+          "url": "https://argon2-cffi.readthedocs.io/en/stable/installation.html",
+          "assignment": "Read Using a Vendored Argon2 and Wheels for installing argon2-cffi with your selected environment interpreter. Then run only the supplied invented-password script; hmac/hashlib in the separate task need no extra package.",
+          "progressKey": "reading:900"
         }
       ],
       "practice": "Run the password example. Using the invented bytes key=b\"practice-key-only\" and message=b\"note:1\", compute a MAC, alter the message to b\"note:2\" and verify rejection with compare_digest. Hash b\"a\" and b\"b\" with hashlib.sha256 and explain what a differing digest establishes. Explain why a PasswordHasher verification string should not be copied into an AES key, and why compare_digest is preferable to an early-exit byte loop.",

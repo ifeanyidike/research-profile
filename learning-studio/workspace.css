@@ -243,3 +243,7 @@ main.is-lesson {
     gap: 10px;
   }
 }
+.case-example p {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}

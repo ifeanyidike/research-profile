@@ -15,6 +15,12 @@ Authoring
 _learning/voice.txt and child.txt contain original teaching. Each starts with
 ID:: and uses named fields ending in ::. Blank lines remain paragraph breaks.
 _learning/maps.json contains the researched sequence and exact assignments.
+Use EXAMPLE_INTRO:: for setup or reading instructions shown before a worked
+example. EXAMPLE_FORMAT:: prose displays fictional cases as wrapping reading
+text with their authored line breaks. Keep math for equations, python for named
+executable examples and text for fixed-width tables, commands or pseudocode.
+Fenced Python references need a stable id=... to receive an executable saved
+workspace; unnamed fences are read-only. Preserve all existing editor IDs.
 When changing a published release, update the HTML entry/stylesheet versions,
 entry imports and config.version coherently. Changed shared modules also need
 new import versions in their consumers. Do not serve a new renderer with an

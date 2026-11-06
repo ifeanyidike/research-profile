@@ -19,6 +19,10 @@ An observation says what happened: “They pointed to the pieces and asked to wa
 ### Use the course as practice for reasoning
 
 Read a fictional case, identify known facts and questions, then suggest a safe discussion or support option within the stated role. Keep the child's preferences and right to stop visible in that plan.
+
+### Read the professional names
+
+OT means occupational therapy, or an occupational therapist: the profession concerned with participation in everyday activities. SLP means speech-language pathologist; speech and language therapist is another professional title used in some places. Titles, qualifications and registration rules vary by location. A professional’s scope is the work they are trained and authorised to do. Safeguarding means protecting children from harm through the appropriate responsible services and procedures. The professional path here prepares you for further study; it does not qualify you to practise.
 EXAMPLE:: Fictional family priority:
 “Our nine-year-old wants to join the board game with cousins.”
 Questions to explore:
@@ -30,7 +34,7 @@ What does the child say would help?
 Possible contributors differ; the statement does not establish a diagnosis.
 EXPLANATION:: One meaningful activity can involve communication, movement, sensory comfort and relationships. The team starts with the child's experience and gathers relevant information. Assigning a diagnosis from this short description would skip the required assessment and alternative explanations.
 PITFALL:: “Behavioral therapy”, occupational therapy and speech-language therapy are not interchangeable labels. A useful team respects each discipline's scope and the child's autonomy rather than promising one method for every need.
-EXERCISE:: Make a learning-goal table for two fictional adults: a parent preparing for an appointment and a student exploring an OT career. Give each three appropriate goals, one boundary and an evidence artefact they could produce without involving a child. Select your own learning path in the interface.
+EXERCISE:: Make a learning-goal table for two fictional adults: a parent preparing for an appointment and a student exploring an OT career. Give each three appropriate goals, one boundary and a piece of written work they could produce without involving a child. Select your own learning path in the interface.
 SOLUTION:: The parent might prepare factual observations, questions and family priorities; the student might compare professional scope, programme prerequisites and evidence frameworks. Both can produce a fictional case note. Neither should diagnose from the scenario or represent hub completion as a professional qualification.
 CHALLENGE:: A website promises “become a qualified speech, occupational and behavioral therapist in one weekend”. Write a careful appraisal covering training, assessment, supervised practice, regulation and the difference between education and a credential.
 CHALLENGE_SOLUTION:: Request the actual awarding body, accredited programme status, eligibility, placements, assessed competencies and applicable regulator. A weekend participation certificate may document attendance but cannot be assumed to meet professional requirements. Explain what remains unverified without making unsupported allegations about the provider.
@@ -39,6 +43,8 @@ CORRECT:: Understanding, respectful everyday support, observation and collaborat
 WRONG1:: Independent diagnosis and prescription of specialist treatment after a quiz.
 WRONG2:: Automatic registration in every therapy profession.
 FEEDBACK:: Education can improve informed participation. Professional authority requires the relevant training, competence and local requirements.
+EXAMPLE_INTRO:: Read this as an invented family discussion. List what you know first, then questions you would ask. You are not assessing a child. The same everyday activity can raise questions for several professions; it does not mean every service is needed.
+EXAMPLE_FORMAT:: prose
 
 ID:: C02
 BRIDGE:: This lesson uses a fictional 20-month-old during play. A milestone checklist helps organise observations; it cannot diagnose a child.
@@ -78,6 +84,7 @@ CORRECT:: Help notice patterns and start an informed professional conversation, 
 WRONG1:: Assign a permanent diagnosis from one missed item.
 WRONG2:: Prove that no concern exists whenever one item is present.
 FEEDBACK:: Developmental information supports observation and referral. Individual interpretation needs appropriate professional context.
+EXAMPLE_FORMAT:: prose
 
 ID:: C03
 BRIDGE:: Use the fictional art-table example. You are analysing an invented situation, not prescribing a play programme.
@@ -98,6 +105,10 @@ A quieter place, clearer single step or easier-to-hold material may be an option
 ### Avoid judging one style of play
 
 Solitary or repetitive play alone does not establish a disorder. Record what the child actually does and enjoys. Pain, persistent movement concerns or wider developmental questions need appropriate professional advice, not a diagnosis drawn from one craft session.
+
+### Make one row before writing the whole table
+
+An activity demand is something the task asks a person to do. For example: demand—hold the glue bottle; known fact—the bottle is described as hard to grip; unknown—whether grip, pain or unfamiliarity matters; discussion option—ask about easier-to-hold ordinary materials. Keep that option as a question, not a confirmed treatment. A stopping signal is an understood way to say stop, such as the person’s established word, gesture or communication symbol.
 EXAMPLE:: Fictional preschool art table:
 Activity: make a picture with paper pieces.
 Barrier candidates: noisy room, unclear steps, hard-to-grip glue bottle.
@@ -117,6 +128,7 @@ CORRECT:: What does the child want to do, and which activity or environmental de
 WRONG1:: How can every child be made to play in exactly the same way?
 WRONG2:: Which diagnosis can be assigned from one art activity?
 FEEDBACK:: Meaningful activity and context guide respectful support. One play observation cannot establish a diagnosis or a universal standard.
+EXAMPLE_FORMAT:: prose
 
 ID:: C04
 BRIDGE:: Think about a fictional pupil asked to listen, remember instructions and write an answer. Those are separate jobs.
@@ -156,6 +168,7 @@ CORRECT:: That the task was not completed under those observed conditions; the c
 WRONG1:: A diagnosis of a motor or language disorder.
 WRONG2:: Proof that the child is deliberately unwilling to learn.
 FEEDBACK:: Observable performance and inferred cause are different. Context and appropriate assessment are needed before explaining the pattern.
+EXAMPLE_FORMAT:: prose
 
 ID:: C05
 BRIDGE:: The example follows a fictional sixteen-year-old who wants fewer public reminders. It is a planning discussion, not advice to travel independently.
@@ -178,6 +191,10 @@ A private phone checklist may feel different from an adult calling out reminders
 ### Discuss safety without taking over
 
 Identify local safety questions and who is qualified to assess them. Agree what information will be shared and with whom. Keep a route for changing the plan, asking for help or stopping. A general lesson cannot decide readiness for a particular real-world activity.
+
+### Read the planning terms
+
+Transition planning here means preparing for changes in daily roles, activities, services or responsibilities as a young person grows. Supported decision-making means helping someone understand and express choices rather than assuming help removes their say. Capacity is a decision-specific legal/clinical question under applicable rules, not something this case establishes. For your page, write the young person’s goal in their words, then place unknown safety/legal questions in a separate column.
 EXAMPLE:: Fictional teenager, age sixteen:
 Goal: travel to a familiar club with less adult prompting.
 Preference: a private checklist on their phone, not public reminders.
@@ -197,6 +214,7 @@ CORRECT:: Having meaningful choice and control, including choosing and directing
 WRONG1:: Losing all assistance regardless of need or preference.
 WRONG2:: Being excluded from decisions until every skill is mastered.
 FEEDBACK:: Autonomy and support can coexist. Plans should include the young person's accessible participation and relevant safety context.
+EXAMPLE_FORMAT:: prose
 
 ID:: C06
 BRIDGE:: Use the fictional classroom note. You are practising how to communicate a concern, not assessing a real child.
@@ -240,6 +258,7 @@ CORRECT:: “During a noisy activity, the child completed the demonstrated step 
 WRONG1:: “This proves a specific developmental disorder.”
 WRONG2:: “This proves there is no hearing concern.”
 FEEDBACK:: Describe the event and preserve uncertainty. A pattern's cause needs appropriate assessment and context.
+EXAMPLE_FORMAT:: prose
 
 ID:: C07
 BRIDGE:: All course role-plays use invented cases with consenting adults. They do not require observing, recording or testing a child.
@@ -276,7 +295,7 @@ If a real safety disclosure arises, stop the exercise and use
 the appropriate safeguarding/emergency route, not a lesson quiz.
 EXPLANATION:: The role-play obtains adult participation without collecting child data. Educational convenience does not justify turning a personal story into a public or synced case record. Safety concerns need real-world support beyond this platform.
 PITFALL:: “I removed the name” is not a complete privacy plan. Combinations of school, age, rare condition, dates and voice can still identify someone.
-EXERCISE:: Review a fictional proposed notebook entry containing a child's full name, school, video link and appointment letter. Replace it with a wholly invented learning case. Explain which information should never enter this studio and where authorised professionals should keep necessary records.
+EXERCISE:: Review this entirely fictional proposed entry: “Child full name: [real name]; school: [real school]; recording: [private video link]; attachment: [appointment letter].” Do not fill the brackets or upload anything. Replace the entire proposed entry with an invented learning case, such as “Fictional case A, age 10, group-activity question; no real child information.” Explain which proposed information must stay out of this studio and where authorised professionals should keep necessary real records.
 SOLUTION:: Use an invented case with only details needed for the learning question. Exclude the real identifiers, recording and letter entirely rather than pseudonymising them casually. Necessary clinical information belongs in approved systems under applicable consent, access and retention policies. The studio stores adult learning progress, not clinical records.
 CHALLENGE:: An adult says “The parent agreed, so continue even though the child is repeatedly signalling stop.” Write the questions a responsible professional must consider and a respectful default for a non-urgent educational activity.
 CHALLENGE_SOLUTION:: Ask whether the explanation was accessible, how refusal is communicated, whether there is distress/pain, what choices exist and which lawful clinical responsibilities apply. For this non-urgent educational context, pause/stop and reassess participation rather than overriding refusal. A general lesson cannot settle an emergency or jurisdiction-specific consent decision. Identify legal consent separately from the child’s assent: check informed, voluntary agreement from the lawful decision maker and accessible affirmative participation from the child. A parent’s agreement does not erase a child’s non-urgent refusal.
@@ -285,6 +304,7 @@ CORRECT:: Adult learning reflections and fictional cases without identifiable ch
 WRONG1:: Recordings of real children whenever their names are omitted.
 WRONG2:: Private assessment reports copied in full for convenience.
 FEEDBACK:: This is an educational workspace, not an authorised clinical record system. Use fictional material and appropriate real-world safeguarding routes.
+EXAMPLE_FORMAT:: prose
 
 ID:: C08
 BRIDGE:: C02 introduced early communication. Here we separate what someone understands, what they want to express and how they can express it.
@@ -328,6 +348,7 @@ CORRECT:: Meaning can be shared through multiple modes, with partners and contex
 WRONG1:: Only clearly spoken words count as communication.
 WRONG2:: Fluent speech proves that every language task is easy.
 FEEDBACK:: Speech, language and communication overlap but differ. Accessible modes and partner support matter throughout childhood and adolescence.
+EXAMPLE_FORMAT:: prose
 
 ID:: C09
 BRIDGE:: Use the fictional dressing routine. Here occupation means a meaningful activity, not only paid employment.
@@ -352,6 +373,10 @@ A caregiver can discuss ordinary choices such as comfortable clothing, more time
 Keep the goal meaningful: dressing comfortably for school with chosen support, rather than performing a fastener simply to satisfy an adult.
 
 For the limits on restraint and seclusion, read the safeguarding boundary in C10. Ordinary activity support must not become a course-based trial of a restrictive practice.
+
+### Translate the labels in the independent task
+
+Fine motor refers to small, controlled movements, often involving hands and fingers. The phrase sensory diet is sometimes used for an individually planned set of sensory activities; it is not a food diet and the label alone gives no evidence of need or benefit. In this task you are questioning an unsupported label and prescription. Describe the actual button/comfort problem instead of selecting a sensory programme.
 EXAMPLE:: Fictional morning routine, age eight:
 Chooses clothes independently.
 Becomes upset when fastening a tight button under time pressure.
@@ -371,6 +396,7 @@ CORRECT:: Meaningful everyday activities such as play, self-care, learning and p
 WRONG1:: Only the paid job a child will have as an adult.
 WRONG2:: A requirement to complete every activity without any support.
 FEEDBACK:: Occupational participation concerns meaningful life activities and the fit between person, activity and environment.
+EXAMPLE_FORMAT:: prose
 
 ID:: C10
 BRIDGE:: Use the fictional noisy classroom transition. You are learning to describe and question the situation, not to assign a behavioural diagnosis.
@@ -421,6 +447,7 @@ CORRECT:: A recorded sequence of context, action and consequence, with function 
 WRONG1:: Proof of a behavioral function from one event.
 WRONG2:: Proof that health and pain can be ignored.
 FEEDBACK:: A structured note improves description. It does not replace comprehensive assessment or justify withholding support.
+EXAMPLE_FORMAT:: prose
 
 ID:: C11
 BRIDGE:: Earlier lessons separated a child's abilities from task and environment demands. Here we apply that distinction to respectful support.
@@ -443,6 +470,10 @@ Eye contact, interaction style and language use vary. A difference from one adul
 ### Make the goal meaningful
 
 Ask whether a proposed change improves access, comfort, communication or a chosen activity. “Looks more typical” is not enough by itself. Include the child's view and check whether support creates an unnecessary burden.
+
+### Organise the three-goal review
+
+Use one row per proposed goal. Write what an adult may hope it achieves, what benefit is actually supported by the supplied facts, what could cause harm or remove choice, and what you would ask the child. “Missing perspective” means the case does not tell you the child’s view; do not invent it. A meaningful participation question might ask what helps the person follow the lesson comfortably rather than require a particular appearance.
 EXAMPLE:: Fictional proposed goal:
 “Stop all hand movements during lessons.”
 Questions: Are the movements harmful or blocking a chosen activity?
@@ -461,6 +492,7 @@ CORRECT:: Communicate a need for help or a break using the person's chosen acces
 WRONG1:: Suppress every harmless difference so adults feel more comfortable.
 WRONG2:: Finish painful tasks without expressing distress.
 FEEDBACK:: Goals should identify a benefit to the person, respect communication and consider comfort, safety and choice.
+EXAMPLE_FORMAT:: prose
 
 ID:: C12
 BRIDGE:: The example describes an invented change in lunch participation and energy. It is a concern-summary exercise, not a diet or feeding-treatment plan.
@@ -501,6 +533,7 @@ CORRECT:: Seek appropriate individual professional advice and describe the facts
 WRONG1:: Assume the cause is sensory and start a restrictive diet independently.
 WRONG2:: Delay all advice until every studio lesson is passed.
 FEEDBACK:: Education supports informed questions. Health and swallowing concerns require suitable assessment, with urgent local help for immediate danger.
+EXAMPLE_FORMAT:: prose
 
 ID:: G01
 BRIDGE:: Use an adult role-play of the supplied fictional case. You do not need to test a child to practise noticing and responding.
@@ -523,6 +556,10 @@ You can look at pictures, make comments and accept the child's choice of page. T
 Notice signs that the child wants to continue, change or stop. A general support idea should be adapted to the child's available communication and interests. Specific concerns about hearing, language or development need appropriate professional discussion.
 
 For the role-play, record what the adult noticed, how they replied and whether they left a real opportunity for another turn.
+
+### Name the response pattern
+
+An expansion builds on a message while keeping its meaning—for example, responding to dog wet with The dog is wet. The added puddle comment continues the shared topic. These names describe the fictional adult response; neither requires the child to repeat it or proves a treatment effect.
 EXAMPLE:: Adult role-play with an invented book scene:
 Partner as child: points to a dog and says “dog wet”.
 Adult: “Yes, the dog is wet. It jumped in the puddle.”
@@ -533,7 +570,7 @@ Adult: “Boots for the puddle!”
 No required repetition, withheld object or score for the child.
 EXPLANATION:: The exchange follows the partner's contribution and adds meaning. The pause offers a genuine turn. This is a fictional demonstration of responsive communication, not a prescribed language treatment or evidence of a child's progress.
 PITFALL:: Turning every interaction into “What's this? Say it again” can replace conversation with performance demands. The aim is meaningful connection and access, not extracting a maximum word count.
-EXERCISE:: With another consenting adult, role-play three invented contributions: a gesture toward a toy, a two-word comment and a refusal. Write a responsive reply for each, including a pause and an accessible way to continue or stop. Then rewrite one quiz-heavy exchange as a conversation.
+EXERCISE:: With another consenting adult, role-play three invented contributions: pointing toward a toy car, saying “dog wet”, and saying or signalling stop. If no partner is available, write both sides as a fictional script and label it unperformed role-play. Write a responsive reply for each, including a pause and an accessible way to continue or stop. Then rewrite one quiz-heavy exchange as a conversation.
 SOLUTION:: Gesture role-play: partner reaches toward a toy; reply “You’re reaching for the car—would you like that one?” and pause with the object and established communication mode available, allowing correction. Comment role-play: partner says “dog wet”; reply “The dog is wet—it jumped in the puddle” and pause without requiring repetition. Refusal role-play: partner says/signals stop; reply “We can stop” and respect it; offer another choice only if wanted. Replace “What colour? Say red again” with a comment about the shared car and time for a response. Record your own adult partner behaviours, not a developmental score or treatment effect.
 CHALLENGE:: Design a fictional five-minute shared-book opportunity with three possible communication modes, two ways to follow the child's interest and a stopping option. Explain when a caregiver should seek individual advice instead of increasing practice demands.
 CHALLENGE_SOLUTION:: Offer speech, gesture/sign or the established AAC mode as applicable, let the child choose pages or comment and stop when participation is not wanted. The plan is an adult learning artefact. Persistent concerns, loss of skills or hearing questions need appropriate professional discussion; more repetition is not a substitute for assessment.
@@ -542,6 +579,7 @@ CORRECT:: It builds on the child's message without requiring a repeated performa
 WRONG1:: It withholds every object until the child repeats the adult perfectly.
 WRONG2:: It ignores gestures and AAC because only speech counts.
 FEEDBACK:: Responsive communication values the message, partner turn and accessible participation rather than a forced response.
+EXAMPLE_FORMAT:: prose
 
 ID:: G02
 BRIDGE:: C08 separated speech and communication. Use fictional examples of a hard-to-understand word and a child who stammers.
@@ -564,6 +602,10 @@ Allow time and avoid finishing words unless the person wants that help. Ask abou
 Discuss persistent concerns, distress or reduced participation with an appropriate speech and language professional. Clinical assessment needs language and dialect context, hearing considerations and the person's own priorities.
 
 This exercise asks you to rewrite an adult response so it is respectful. It does not ask you to assign a diagnosis or deliver speech or fluency therapy.
+
+### Read the professional shorthand
+
+SLP means speech-language pathologist, also called a speech and language therapist in some locations. Motor speech concerns planning or carrying out the movements used for speech. Fluency concerns speech flow. The video claim in the independent task wrongly treats these different questions as if one exercise must address all of them. You are appraising that claim, not selecting a replacement treatment.
 EXAMPLE:: Fictional adolescent statement:
 “People finish my sentences. I want them to wait.”
 Respectful response: “Thank you for telling me. I'll give you time.
@@ -583,6 +625,7 @@ CORRECT:: Give time and ask how they want their communication preference support
 WRONG1:: Finish every sentence to make the conversation faster.
 WRONG2:: Demand fluent speech before listening to the message.
 FEEDBACK:: The person's message and preferences matter. Caregiver support should not become unrequested correction or a generic treatment.
+EXAMPLE_FORMAT:: prose
 
 ID:: G03
 BRIDGE:: C08 introduced communication methods. Start with the message a fictional child wants to express, not the choice of device.
@@ -625,6 +668,7 @@ CORRECT:: A broad range, including questions, comments, refusal and social conne
 WRONG1:: Only requesting preferred objects after adult permission.
 WRONG2:: Only messages selected by a helper without the person's control.
 FEEDBACK:: Communication access concerns agency and meaningful participation. System selection and authorship require careful individual consideration.
+EXAMPLE_FORMAT:: prose
 
 ID:: G04
 BRIDGE:: C11 introduced language and cultural context. Use a fictional family language map rather than testing a child's vocabulary.
@@ -647,6 +691,10 @@ A general lesson should not tell a family to abandon a home language. Comfortabl
 Use appropriate interpreters and translated information where needed. An interpreter supports communication; they do not replace the assessing professional's responsibilities. Do not use a child's limited command of the school's language as proof of low intelligence.
 
 In the fictional plan, record language opportunities, strengths and unanswered questions, then propose how the family and professional can share information.
+
+### Understand the test-score comparison
+
+Norms are results from the reference group used to interpret a test score. A monolingual test was designed around a one-language context. Translating its words or changing instructions can change what the task requires, so the original comparison group does not automatically justify the new score. The exercise asks what a qualified assessor still needs to know, not for you to translate or administer a test.
 EXAMPLE:: Fictional family history:
 Age ten; Yoruba with grandparents, English at school.
 Enjoys detailed football conversations in Yoruba.
@@ -666,6 +714,7 @@ CORRECT:: No. It must be understood within the person's multilingual communicati
 WRONG1:: Yes. Every multilingual child who mixes languages is confused.
 WRONG2:: It proves that no communication difficulty could ever exist.
 FEEDBACK:: Language difference and disorder require careful distinction. Neither diagnosis nor dismissal follows from one multilingual feature.
+EXAMPLE_FORMAT:: prose
 
 ID:: G05
 BRIDGE:: C09 introduced activity demands. Use the fictional dressing or morning routine in the supplied case.
@@ -708,6 +757,7 @@ CORRECT:: Choosing and directing help as well as completing parts of an activity
 WRONG1:: Performing every task without support regardless of pain.
 WRONG2:: Losing all choice until a routine is completed perfectly.
 FEEDBACK:: Participation and agency are broader than unaided task completion. Support should fit the person's goals and needs.
+EXAMPLE_FORMAT:: prose
 
 ID:: G06
 BRIDGE:: C09 introduced sensory differences. Use the supplied fictional noisy or uncomfortable setting.
@@ -738,6 +788,10 @@ Restraint or seclusion must never serve punishment, convenience or routine compl
 Where law and local policy permit them at all, they belong only in a last-resort emergency response to imminent serious harm, through an appropriate trained response. Each use needs prompt recording, the applicable reporting process and a safeguarding review, including how to prevent further use.
 
 If a plan proposes routine restraint or isolation, do not implement it. Raise the concern with the appropriate safeguarding lead or supervisor.
+
+### Translate the appraisal words
+
+A conflict of interest is a stake that could influence a recommendation, such as a seller earning money from the recommended product. It does not by itself prove the claim false; it is a reason to examine independent evidence. A contraindication is a reason a particular option may be unsuitable or unsafe for a person. Ask the qualified professional about those risks; the course does not supply a product-selection or use protocol.
 EXAMPLE:: Fictional dining hall, age twelve:
 Child says “The scraping chairs hurt my ears.”
 Leaves the crowded room before eating.
@@ -756,6 +810,7 @@ CORRECT:: Ask about individual need, evidence, risks and professional guidance r
 WRONG1:: Buy it for every child sharing a broad label.
 WRONG2:: Ignore pain because the product description mentions sensory processing.
 FEEDBACK:: A product label does not replace assessment or establish safety. Participation, preference and health context remain central.
+EXAMPLE_FORMAT:: prose
 
 ID:: G07
 BRIDGE:: C10 introduced context and observable behaviour. Use the fictional transition example in an adult role-play.
@@ -786,6 +841,10 @@ Restraint or seclusion must never serve punishment, convenience or routine compl
 Where law and local policy permit them at all, they belong only in a last-resort emergency response to imminent serious harm, through an appropriate trained response. Each use needs prompt recording, the applicable reporting process and a safeguarding review, including how to prevent further use.
 
 If a plan proposes routine restraint or isolation, do not implement it. Raise the concern with the appropriate safeguarding lead or supervisor.
+
+### Say what the review is checking
+
+Co-regulation describes support from another person in managing distress and returning to an accessible interaction. It is not a command to suppress visible feelings. Feasibility asks whether the child, family and team can realistically sustain a plan. For the review sheet, use four separate rows—for example, comfortable participation, ability to ask for help/stop, the person’s experience of recovery, and the burden on the family. State how each would be discussed rather than inventing a score.
 EXAMPLE:: Fictional transition, age six:
 Before: play ends unexpectedly; child is given a long instruction.
 Action: cries and pushes shoes away.
@@ -804,6 +863,7 @@ CORRECT:: Meaningful participation, communication access, comfort, safety and th
 WRONG1:: Only whether adults obtain immediate obedience.
 WRONG2:: Whether the child stops expressing every disagreement.
 FEEDBACK:: Support should benefit the person and preserve communication. Appearance and obedience alone are inadequate outcomes.
+EXAMPLE_FORMAT:: prose
 
 ID:: G08
 BRIDGE:: C04 introduced school-age task demands. Use a fictional classroom or playground situation.
@@ -826,6 +886,10 @@ Discuss clear instructions, accessible materials, time and communication methods
 Bullying or exclusion needs an appropriate school safeguarding response, not instructions that the child should simply fit in better. Respect privacy when discussing peer situations.
 
 For the fictional plan, name the desired activity, the observed barrier and who can help explore it. Leave diagnosis and formal education decisions to the relevant collaborative process.
+
+### Separate access from a specialist programme
+
+An accommodation is a change helping someone access a task, such as an agreed response format. A teaching or therapy programme has its own assessed goals, methods and professional responsibilities. An access change does not prove the cause of the difficulty or replace needed assessment. In the exercise, request examples of the literacy task before proposing a meaningful goal.
 EXAMPLE:: Fictional pupil, age eleven:
 Goal chosen with the child: explain one science idea in class.
 Barrier questions: vocabulary, time to organise, public speaking,
@@ -844,6 +908,7 @@ CORRECT:: The same incomplete work can reflect different access, language, liter
 WRONG1:: One worksheet always reveals a definitive diagnosis.
 WRONG2:: Every school difficulty is solved by demanding more effort.
 FEEDBACK:: Detailed task and context information supports useful collaboration. A broad judgement does not identify the cause or suitable support.
+EXAMPLE_FORMAT:: prose
 
 ID:: G09
 BRIDGE:: C05 introduced autonomy. Use the fictional school, club or daily-planning case. The exercise is a discussion plan, not a real-world unsupervised trial.
@@ -884,6 +949,7 @@ CORRECT:: The young person's meaningful goal, access needs, preferences and rele
 WRONG1:: Only whether it lets adults monitor every private interaction.
 WRONG2:: A rule that support must disappear at a universal birthday.
 FEEDBACK:: Planning support should increase agency and participation. Age and adult convenience alone do not establish suitability.
+EXAMPLE_FORMAT:: prose
 
 ID:: G10
 BRIDGE:: Use the supplied fictional concern. This is a learning case, not a way to assess your family through the studio.
@@ -927,6 +993,7 @@ CORRECT:: Direct attention to urgent real-world qualified/local help rather than
 WRONG1:: Delay action until a self-assessment quiz is complete.
 WRONG2:: Promise secrecy and handle the crisis solely in a notebook.
 FEEDBACK:: Educational support has limits. Immediate danger and significant safety concerns need appropriate real-world services.
+EXAMPLE_FORMAT:: prose
 
 ID:: G11
 BRIDGE:: You have practised observing and identifying questions. Use a fictional meeting rather than sharing real records.
@@ -949,6 +1016,10 @@ Separate facts, interpretations, questions and agreed actions. Give each action 
 Use the real service's consent, privacy and secure-sharing procedures. A family should understand relevant information sharing and decision routes. Disagreement can be recorded respectfully with the evidence still needed.
 
 In the fictional exercise, end with a plan the child and caregiver could understand in ordinary words. Keep clinical and school decisions within the responsible team's role.
+
+### Give a meeting action a clear owner
+
+An action owner is the person agreeing to do a particular follow-up, not a person who owns the child’s decision. Write “proposed—ask the teacher to clarify the arrival steps” until the team actually agrees. Add when and how the team would review it. A coordinator helps resolve overlapping recommendations; this fictional page cannot appoint a real professional or invent agreement.
 EXAMPLE:: Fictional shared priority:
 “Join the after-school club and communicate choices comfortably.”
 Child: wants a quiet arrival and access to their communication system.
@@ -968,6 +1039,7 @@ CORRECT:: The child's and family's meaningful priorities, strengths and specific
 WRONG1:: A goal to maximise appointments regardless of burden.
 WRONG2:: Assuming every discipline should give the same treatment.
 FEEDBACK:: Coordination connects distinct expertise around the person's life. More activity or uniform advice is not automatically better support.
+EXAMPLE_FORMAT:: prose
 
 ID:: G12
 BRIDGE:: Use one entirely invented case and the course's existing examples. Do not include identifiable child or family information.
@@ -1024,6 +1096,7 @@ CORRECT:: Respectful, evidence-aware observation and collaboration with explicit
 WRONG1:: Authority to diagnose and treat every child independently.
 WRONG2:: Proof that a real child's development improved after reading the hub.
 FEEDBACK:: The capstone assesses adult learning and judgement. It does not assess a child or confer clinical qualifications.
+EXAMPLE_FORMAT:: prose
 
 ID:: P01
 BRIDGE:: This professional study bridge builds on the shared child-development lessons. It prepares questions for formal study and supervision, not hands-on examination or treatment.
@@ -1050,6 +1123,10 @@ Feeding, swallowing, respiratory concerns and handling techniques need appropria
 Use the fictional case to map a reported activity difficulty to relevant systems and unknowns. Explain the connections in words, then identify the formal knowledge still needed.
 
 Plasticity means the nervous system can change with experience. Maturation describes developmental change over time. Both can contribute while a child receives support, so improvement during a programme does not by itself prove the programme caused it. A research comparison needs to consider those other changes.
+
+### Name the systems on the concept map
+
+Respiration supplies breathing airflow. Phonation is sound production at the vocal folds. Articulation shapes speech with structures such as the tongue and lips. Peripheral hearing concerns the ear and its input pathway; understanding a message adds language and context. Anatomy studies structures; physiology studies how they function. Use these as map labels with arrows explaining a relationship, not as a list of diagnoses. Your reference diagrams and assigned readings supply the deeper anatomy; any unfamiliar structure remains a further-study item.
 EXAMPLE:: Fictional claim to analyse:
 “The child is hard to understand, so the tongue must be weak.”
 Missing distinctions:
@@ -1069,6 +1146,7 @@ CORRECT:: A need for relevant contextual information and appropriate assessment,
 WRONG1:: Proof of tongue weakness and a universal exercise prescription.
 WRONG2:: Proof that hearing and language context are irrelevant.
 FEEDBACK:: Mechanistic knowledge helps formulate questions. Functional observations alone do not identify one underlying cause.
+EXAMPLE_FORMAT:: prose
 
 ID:: P02
 BRIDGE:: You can work with fractions and small tables. All numerical examples in this lesson are invented and require no participant study.
@@ -1095,6 +1173,10 @@ If support and improvement occur together, maturation, practice, selection or ot
 Professional evidence-based practice considers research, appropriate expertise and the person's and family's goals and circumstances. A paper does not remove the need to assess an individual or work within competence.
 
 For the exercise, explain what the supplied counts establish and what remains unknown before proposing a wider claim.
+
+### Read the worked calculation and appraisal terms
+
+The bar over x means mean: add the three values and divide by three. Δ means change, so after minus before gives 1 for each group. Comparing the two changes gives zero. Bias is a systematic distortion of a result, such as a selected follow-up sample differing from the people who dropped out. Quantitative evidence uses defined numerical measurements; qualitative evidence examines experiences or meanings under an appropriate method. Forty percent missing follow-up means 40 out of each 100 planned follow-ups are absent; it does not tell you their outcomes.
 EXAMPLE:: Fictional group A scores are \([2,4,6]\) before and \([3,5,7]\) after. Group B has exactly the same supplied values.
 
 \[\begin{aligned}
@@ -1141,6 +1223,12 @@ History, observation, caregiver and child perspectives, suitable measures and ot
 In the supplied table, calculate each rate with its correct reference group. Then explain what the result means in words and what further assessment would be needed.
 
 Dynamic assessment investigates how learning changes with suitable teaching or support. A test–teach–retest sequence first observes a task, provides defined support, then observes again. Interpret the process under an appropriate method; it does not automatically make a culturally unsuitable score valid.
+
+### Read the screening and learning terms
+
+Positive predictive value, or PPV, asks what fraction of flagged cases are reference-positive: use all flagged cases as the denominator. Sensitivity starts with all reference-positive cases; specificity starts with all reference-negative cases. A reference classification is the supplied comparison label, not proof that a real reference method is perfect.
+
+In dynamic assessment, mediation means the defined teaching/support between observations; modifiability concerns how performance changes with that support. The task asks you to explain what that process could inform under qualified assessment, not to conduct it or treat improvement as a diagnosis.
 EXAMPLE:: The handwriting-versus-comprehension case illustrates validity: a repeatable writing-speed result does not automatically measure story understanding.
 
 For a separate, invented 100-case screening table, assume a fixed reference classification. A true positive (TP) is flagged and reference-positive; a false negative (FN) is not flagged but reference-positive. A false positive (FP) is flagged but reference-negative; a true negative (TN) is not flagged and reference-negative. These labels compare the screen with this supplied reference; they do not independently establish a diagnosis:
@@ -1222,6 +1310,7 @@ CORRECT:: It connects to evidence and specifies what appropriate information cou
 WRONG1:: It is the longest possible list of diagnostic labels.
 WRONG2:: It becomes certain as soon as one classroom example resembles it.
 FEEDBACK:: Differential reasoning is disciplined inquiry under uncertainty. Labels without evidence do not improve assessment quality.
+EXAMPLE_FORMAT:: prose
 
 ID:: P05
 BRIDGE:: P04 introduced assessment reasoning. Work with the fictional assessed information, not an individual real child's programme.
@@ -1248,6 +1337,10 @@ Choose an outcome measure that reflects the goal, not just success on practised 
 The course task is to justify a fictional plan and its unanswered questions, not to prescribe treatment for a reader's child.
 
 A trained-item measure checks the specific material practised. A transfer measure checks whether the useful skill appears with different material or in another relevant situation. Improving only the practised list is not the same as improving communication in daily life.
+
+### Separate the outcome words
+
+Baseline means the recorded starting condition before the proposed change. Generalisation asks whether learning helps beyond the practised material or setting; transfer is a closely related question here. Retention asks whether it is still available later. A prompt is help offered during a task, so 90% with repeated modelling does not mean 90% without it. In the fictional matrix, record the support condition beside each measure; method and intensity remain professional questions.
 EXAMPLE:: Fictional assessed priority, age ten:
 Child wants to contribute to a book-club discussion.
 Supplied finding: needs support organising a short explanation.
@@ -1266,6 +1359,7 @@ CORRECT:: A justified relationship to assessed needs and a meaningful participat
 WRONG1:: The programme's popularity alone.
 WRONG2:: A guarantee that every trained-item gain transfers automatically.
 FEEDBACK:: Planning must explain purpose, evidence, access and outcomes. A named programme or narrow score is not a complete rationale.
+EXAMPLE_FORMAT:: prose
 
 ID:: P06
 BRIDGE:: P04 introduced differential reasoning. The three supplied referral summaries are fictional and do not establish diagnoses.
@@ -1288,6 +1382,10 @@ Do not copy oral-motor, swallowing, texture or handling techniques from a genera
 ### Write a useful referral question
 
 Describe the observed issue and the question for the receiving professional. Avoid proposing the same treatment to all three fictional cases merely because they involve speech or meals.
+
+### Understand the diagnostic label in the claim
+
+Childhood apraxia of speech is a motor-speech condition involving difficulty planning/programming speech movements. It is not established by one mispronounced word. The independent task asks why the clip lacks the history and assessed speech pattern needed for a qualified conclusion. Use the assigned ASHA information for the condition’s scope; do not turn its descriptions into a home diagnostic checklist.
 EXAMPLE:: Three fictional referral summaries:
 A: speech is difficult for unfamiliar listeners in several settings.
 B: teenager reports distress when others interrupt their stammered speech.
@@ -1306,6 +1404,7 @@ CORRECT:: They involve different mechanisms, assessment evidence, risks and spec
 WRONG1:: One exercise reliably treats every speech, voice and swallowing concern.
 WRONG2:: A short video establishes every needed diagnosis.
 FEEDBACK:: Surface similarity does not establish a shared cause or treatment. Scope and safety are part of professional reasoning.
+EXAMPLE_FORMAT:: prose
 
 ID:: P07
 BRIDGE:: G03 introduced AAC. This professional lesson uses a fictional access discussion and requires no device trial with a child.
@@ -1346,6 +1445,7 @@ CORRECT:: The person's assessed communication goals, access needs, contexts and 
 WRONG1:: Price alone and a diagnostic label.
 WRONG2:: A rule that AAC may support requests but never refusal.
 FEEDBACK:: AAC is a communication-access system. Individual assessment, agency, partnership and practical reliability matter beyond an app's feature list.
+EXAMPLE_FORMAT:: prose
 
 ID:: P08
 BRIDGE:: C09 introduced everyday participation. Use the fictional routine and the child's stated goal.
@@ -1386,6 +1486,7 @@ CORRECT:: It includes the person's meaningful activities, priorities, history, s
 WRONG1:: It contains only the names of muscles.
 WRONG2:: It prescribes the same equipment for everyone with a diagnosis.
 FEEDBACK:: Occupational reasoning starts with life participation and meaning, then connects appropriate assessment and support to that purpose.
+EXAMPLE_FORMAT:: prose
 
 ID:: P09
 BRIDGE:: P08 introduced activity analysis. Use the fictional movement case rather than examining or coaching a child.
@@ -1428,6 +1529,7 @@ CORRECT:: Improvement on a trained task may not carry into the person's relevant
 WRONG1:: Every repeated movement transfers automatically to every activity.
 WRONG2:: Participation never matters if a tabletop score improves.
 FEEDBACK:: Learning evidence has levels. The link to meaningful life activities must be investigated rather than assumed.
+EXAMPLE_FORMAT:: prose
 
 ID:: P10
 BRIDGE:: G06 separated everyday environmental options from specialist interventions. P02 introduced evidence appraisal.
@@ -1450,6 +1552,10 @@ Different sensory approaches have different methods and evidence. Do not treat e
 An occupation-centred goal concerns a meaningful daily activity. Measure whether the proposed plan improves access, comfort or a chosen routine, not simply whether the child tolerates an adult-selected sensation longer.
 
 An ordinary environment adaptation and a specialist sensory programme are not interchangeable. Do not trial equipment or treatment through this course. For the fictional case, justify questions and evidence needs before selecting a professional plan.
+
+### Ask what the study actually measured
+
+An effect size describes the amount of difference under a specified measure; uncertainty describes how precisely the study supports it. An adverse event is an unwanted harmful occurrence reported during the work; its cause still needs appropriate assessment. A protocol is the defined procedure, not the broad label sensory programme. You are asking for those details so evidence for one population/method/outcome is not stretched into an unrelated sales claim.
 EXAMPLE:: Fictional study summary:
 Population: a defined group, not all children.
 Intervention: named approach delivered by trained professionals.
@@ -1469,6 +1575,7 @@ CORRECT:: The actual approach, population, delivery, comparison and outcome, wit
 WRONG1:: Only whether the product uses the word sensory.
 WRONG2:: Only whether an advertisement contains a before/after video.
 FEEDBACK:: Evidence applies to defined methods and contexts. A broad label cannot carry an unlimited claim.
+EXAMPLE_FORMAT:: prose
 
 ID:: P11
 BRIDGE:: C10 introduced ABC observations. This professional lesson analyses fixed fictional rows only; it does not ask you to conduct an experiment with a child.
@@ -1527,6 +1634,7 @@ CORRECT:: No. It organises observations that require broader, appropriately qual
 WRONG1:: Yes, after any single event.
 WRONG2:: Yes, so pain and communication access can be excluded.
 FEEDBACK:: Sequence is not causation. Functional reasoning must consider wider evidence, health, rights and competence.
+EXAMPLE_FORMAT:: prose
 
 ID:: P12
 BRIDGE:: P11 introduced hypotheses and P02 introduced comparison methods. Use only the supplied fictional data and planning cases.
@@ -1601,6 +1709,10 @@ For the fictional exercise, name the concern, the appropriate professional quest
 ### Take a warning about self-harm seriously
 
 Ask clearly and calmly about suicidal thoughts; asking does not create them. Listen without judgement. For immediate danger or possible serious harm already caused, contact local emergency services and stay with the young person, or arrange a trusted adult to remain while help is contacted. Where safe, reduce access to dangerous items or places without risking a confrontation. Involve appropriate responsible adults and safeguarding professionals. Without immediate danger, seek prompt qualified support and follow up. This is general education, not an individual risk assessment.
+
+### Name the reasoning error
+
+Diagnostic overshadowing means letting an existing diagnostic label hide investigation of a new or additional concern. In this case, an existing support need does not explain the new report of feeling unsafe. Describe the actual change and arrange the appropriate qualified inquiry instead of assuming either the old label or a new diagnosis explains everything.
 EXAMPLE:: Fictional referral, age fifteen:
 Previously enjoyed a club; now avoids it and reports feeling unsafe.
 Known communication support needs.
@@ -1619,6 +1731,7 @@ CORRECT:: Letting an existing label obscure investigation of new or additional n
 WRONG1:: Considering several evidence-based explanations carefully.
 WRONG2:: Providing an accessible way for the young person to describe concerns.
 FEEDBACK:: Existing diagnoses inform context but do not eliminate other possible needs. New changes require appropriate attention.
+EXAMPLE_FORMAT:: prose
 
 ID:: P14
 BRIDGE:: P04–P13 introduced assessment and planning. Use fictional records in the studio and keep real documentation in the service's approved secure system.
@@ -1659,6 +1772,7 @@ CORRECT:: Reported information, direct observations, interpretations, actions an
 WRONG1:: All guesses as confirmed facts.
 WRONG2:: A learner's self-assessment as a regulated professional qualification.
 FEEDBACK:: Accountability requires traceable evidence and honest scope. Secure records and supervision belong to appropriate professional systems.
+EXAMPLE_FORMAT:: prose
 
 ID:: P15
 BRIDGE:: P07 introduced AAC and C07 introduced privacy. The task is a fictional technology review, not permission to upload a child's records to a service.
@@ -1700,6 +1814,7 @@ CORRECT:: Appropriate intended-use, evidence, consent, privacy, safeguarding and
 WRONG1:: Upload first because a convincing answer will settle all questions.
 WRONG2:: Assume removing a filename makes voice data anonymous.
 FEEDBACK:: Sensitive child data and consequential outputs need proportionate review. Fluency and convenience cannot replace it.
+EXAMPLE_FORMAT:: prose
 
 ID:: P16
 BRIDGE:: Use one fully fictional case or a desk-based question. No real child assessment, intervention or participant study is required or authorised by this lesson.
@@ -1750,3 +1865,4 @@ CORRECT:: Evidence of academic preparation and fictional case reasoning, with ex
 WRONG1:: A licence to practise all therapy disciplines independently.
 WRONG2:: Clinical effectiveness of a treatment never assessed or delivered.
 FEEDBACK:: Preparation, research planning, supervised clinical competence and formal qualifications are different achievements. Report each honestly.
+EXAMPLE_FORMAT:: prose

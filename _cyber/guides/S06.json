@@ -7,5 +7,7 @@
   "solution": "The seven decisions, in order, are allow, deny, allow, deny, allow, deny, deny.\n\nA may update their own note 1 but not B's note 2. B may read their own note 2 but not A's note 1. C has the stated account-disabling permission, so disabling B is allowed. That permission does not grant C a right to read B's note under this policy. A request without an established session is denied.\n\nEach answer follows the supplied policy. A real application must enforce the same decision on the server or database operation, not merely hide a button.",
   "challenge": "Add a suspended=true condition that blocks ordinary reads/updates but still allows admins to disable accounts. Evaluate suspended A read1 and C disableA. Explain where the suspension check belongs and how you would test session revocation.",
   "challenge_solution": "Suspended A is denied; C can disable A. Enforce current account state server-side rather than relying on a stale UI flag. Test a previously issued session after revocation and document the selected auth system's actual expiry/revocation semantics.",
-  "diagram": "ownership"
+  "diagram": "ownership",
+  "example_intro": "Treat this as the complete policy for a paper exercise. A reader, editor or admin is a role with only the permissions explicitly listed. note1 and note2 are object labels, not commands.",
+  "example_format": "prose"
 }

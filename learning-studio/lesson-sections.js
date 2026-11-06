@@ -1,13 +1,15 @@
-import { renderProse } from "./prose.js?v=20261106-2";
-import { renderCode } from "./code-editor.js?v=20261106-2";
+import { renderProse } from "./prose.js?v=20261106-3";
+import { renderCode } from "./code-editor.js?v=20261106-3";
 const esc = (text) => String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 export function lessonReading(lesson, { extra = "" } = {}) {
   const g = lesson.guide;
   const example =
     g.example_format === "math"
       ? `<div class="math-example" aria-label="Worked mathematical example">${renderProse(g.example)}</div>`
-      : renderCode(g.example, g.example_format);
-  return `<p class="lesson-intro">${esc(lesson.concept)}</p><div class="lesson-preparation">${renderProse(g.bridge)}</div>${readingDiagram(g.diagram)}${renderProse(g.teaching, { headingLevel: 2 })}<section class="worked-example"><h2>Follow a worked example</h2>${example}${renderProse(g.explanation)}</section><div class="lesson-recap"><strong>What to remember</strong><p>${esc(lesson.mechanism)}</p></div><div class="misconception"><strong>A common mistake to avoid</strong><p>${esc(lesson.pitfall)}</p></div>${extra}`;
+      : g.example_format === "prose"
+        ? `<div class="case-example" aria-label="Worked case or scenario">${renderProse(g.example)}</div>`
+        : renderCode(g.example, g.example_format);
+  return `<p class="lesson-intro">${esc(lesson.concept)}</p><div class="lesson-preparation">${renderProse(g.bridge)}</div>${readingDiagram(g.diagram)}${renderProse(g.teaching, { headingLevel: 2 })}<section class="worked-example"><h2>Follow a worked example</h2>${renderProse(g.example_intro || "")}${example}${renderProse(g.explanation)}</section><div class="lesson-recap"><strong>What to remember</strong><p>${esc(lesson.mechanism)}</p></div><div class="misconception"><strong>A common mistake to avoid</strong><p>${esc(lesson.pitfall)}</p></div>${extra}`;
 }
 function readingDiagram(kind) {
   if (kind === "sampling") {

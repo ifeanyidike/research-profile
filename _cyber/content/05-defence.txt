@@ -56,7 +56,7 @@ The authority must be invalidated. Editing one copy does not erase already expos
 D01
 Windows security investigation starts with understanding accounts, services, files and recorded events. PowerShell helps inspect them, but each command should answer a specific question.
 Identify host, account and time context; inspect the actual PowerShell properties and event provider; preserve evidence before taking state-changing action.
-In a disposable Windows lab, enumerate a harmless directory's ACL and inspect a known service's configured account. Generate a benign test event using the course exercise and locate it in the relevant log. Export the event with context, then explain what it directly shows and what it cannot prove about the actor's intent.
+Use the same three synthetic objects. Remove the final Select-Object temporarily and list which properties remain in the output. Restore it, then select only Id and confirm User is omitted from the displayed selection. Explain why omitting a displayed property does not mean the original record never contained it.
 An event identifier has meaning within its provider and context. A number alone is insufficient evidence.
 What is distinctive about a normal PowerShell pipeline?
 It can pass structured objects with properties
@@ -89,7 +89,7 @@ Shared responsibility changes by service, but customer-controlled identity and a
 D04
 A containerised service inherits security decisions from its image, runtime and deployment platform. Keep those decisions connected instead of treating a container as an automatic safe box.
 Review image provenance, process permissions, mounts, network exposure and workload identity together. Protect the configuration path that deploys them.
-Review a synthetic deployment manifest offline. Identify the image reference, user identity, mounted volumes, exposed ports, and secret sources. Remove an unnecessary host mount and narrow the workload's API permissions. Explain how each change reduces the consequences of application compromise, then verify the intended file and network requirements remain possible.
+Use the two configurations in Learn and Practise as the supplied offline manifest. Make five rows: image identity, process user, mounts, network, credentials/limits. Mark what the first configuration states, what the second changes, and what remains unspecified. Do not assume that a missing deployed observation was verified by reading this paper manifest.
 A container image digest identifies content; it does not establish that the content or deployment policy is trustworthy.
 Why is mounting the host's container-management socket especially sensitive?
 It may give the workload powerful control over the host's container environment
@@ -122,7 +122,7 @@ The framework helps describe behaviour. Evidence and uncertainty establish the l
 D07
 A detection rule looks for evidence of a specified harmful behaviour. Detection engineering makes that rule understandable, testable and usable by an operator.
 Connect a behaviour with available telemetry, test expected matches and non-matches, and give the operator enough context to investigate.
-Write a hypothesis about repeated failed logins followed by success on one synthetic account. Define a time window and threshold, then test ordinary typos, a benign batch job, and the intended suspicious sequence. Inspect false alerts and document why the rule is a useful signal rather than proof of compromise.
+Synthetic account A has Fail at 09:00, Fail at 09:01, OK at 09:02; B has Fail at 09:00 and OK at 09:06. Define a rule: at least two failures for the same account followed by success within five minutes of the first failure. Trace A and B, then change A’s success to 09:06 and recheck. Explain why a matching sequence could still be ordinary mistyped credentials rather than proof of compromise.
 A rule matching its own handcrafted example says little about false-positive rates in a real population.
 What is required before claiming a detection can observe a behaviour?
 The needed telemetry is collected with usable fields and coverage

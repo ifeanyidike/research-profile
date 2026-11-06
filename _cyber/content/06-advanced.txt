@@ -34,7 +34,7 @@ A smaller reproducer helps establish causality, repair the bug, and maintain a f
 A04
 Security also depends on hardware, physical access and information leaked indirectly. A correct abstract algorithm may reveal secrets through how it runs.
 Name the trusted starting components and attacker observations. Check indirect leakage and physical assumptions alongside abstract algorithm correctness.
-Use a harmless simulation of a two-level memory hierarchy. Record the differing costs of a hit and a miss, then show how a secret-dependent array choice can influence observed time. Explain what a real experiment would need to control and why the toy result alone does not demonstrate an attack on actual hardware.
+Paper cache model: reading a cached public array position costs 1 unit; an uncached read costs 5. A secret bit chooses position 0 or 1, and only position 0 starts cached. Calculate the observed cost for each bit. Then make both positions cached and recheck. State why invented costs and controlled cache state do not establish leakage on a real device.
 The absence of a direct memory read does not rule out information leakage through observable side effects.
 Why can secret-dependent memory access leak information?
 It may change shared cache state and observable timing
@@ -89,7 +89,7 @@ A research critique connects a precise claim to the method and evidence that jus
 R02
 A reproducible research artifact lets another authorised person understand how a result was obtained. It connects the question, source version, inputs, method and limitations.
 Package method and evidence together, preserve failures and scope limits, and make permission and safe reuse part of the research design.
-Using only an offline synthetic dataset, package a small detector comparison. Give your partner a fresh setup procedure and ask them to reproduce the table from raw data. Record every undocumented step they needed. Revise the artifact, explain differences between runs, and state what the synthetic population cannot establish about production performance.
+Use D07’s six fixed rows and the two alert sets already supplied in R03 (A alerts 1,2,3; B alerts 1,2,3,4,5). Package the rows, both rules and your hand-calculated matrices with a manifest. A partner or separate self-review should reproduce the numbers from those saved inputs. Keep this offline; no model, provider or scoring service is needed.
 Reproducible numbers can still answer the wrong question or reflect a biased dataset. Method and relevance need separate scrutiny.
 What should another learner receive to reproduce an analysis?
 Raw or lawfully accessible data, code, environment details, configuration, and exact steps
