@@ -1,7 +1,7 @@
 N01
 A network lets programs on different devices exchange information. To understand its security, first follow one message and identify which part of the system handles each job.
 Follow the application, transport, IP and local-link jobs separately. Distinguish elapsed delay from data rate, and describe where a traffic observation was made.
-Fetch a page from your own local test server while capturing its traffic. Identify the link, network, transport, and application information visible in the capture. Compare a tiny request with a larger response. Estimate transfer time from size and rate, then identify the additional delays that the estimate omitted.
+Use the supplied timing model: add a link header outside an IP header, outside TCP information, outside the text hello. Mark what a router may replace at the local-link layer. If a payload of 500,000 bytes arrives at 250,000 bytes/s, calculate its two-second transfer time and explain why connection setup and waiting time could make the whole request take longer.
 An encrypted payload can still reveal metadata such as endpoint addresses, timing, and sizes.
 What does bandwidth measure?
 A potential data-transfer rate
@@ -12,7 +12,7 @@ Bandwidth concerns rate. Latency concerns delay, and neither alone establishes s
 N02
 An IP address helps a network deliver packets. A subnet describes which addresses belong together, while routing decides where a packet should go next.
 Read address prefixes, select the appropriate next hop and account for translation on both directions. Network addressing does not establish user identity.
-For 192.0.2.0/24, mark the first 24 bits as the network prefix. Divide it into two /25 prefixes and identify which half contains 192.0.2.130. Draw the route from a private lab host through a NAT gateway to a service, recording the source address seen on each side.
+Divide 192.0.2.0/24 into .0–.127 and .128–.255; mark where .130 belongs. On paper, a lab gateway translates source 10.0.0.5 to 192.0.2.9 before sending to 203.0.113.8. Label the source seen on each side and explain why this translation does not prove the application user is authorised.
 An address being private does not prove the host or traffic is trustworthy. Policy still needs explicit enforcement.
 Which route normally wins when /16 and /24 entries both match a destination?
 The /24, because it has the longer matching prefix
@@ -23,7 +23,7 @@ Longest-prefix matching selects the more specific route, subject to the routing 
 N03
 A device joining a local network needs a local delivery method, an address configuration and often a way to find its router. Those setup steps introduce their own security assumptions.
 Separate local frame delivery, address configuration and wireless access. Each has different trust assumptions and none replaces end-to-end application protection.
-Inside an isolated lab, record the interface address, assigned IP prefix, default route, and DNS configuration. Draw how a host learns a destination neighbour's link address versus how it learns a remote route. Use a saved capture to distinguish a DHCP configuration exchange from an ARP request without generating traffic on someone else's network.
+Classify two fictional saved messages: (1) Discover asking for configuration; (2) Who has 192.0.2.1? Label the first DHCP and the second ARP. List what you still need to know to send a local frame: selected route, next-hop IP and that neighbour’s link address. No packet capture or access to another person’s network is needed.
 A MAC address is not a durable proof of a person's or device's identity. It can be changed or represented by software.
 Which protocol resolves an IPv4 neighbour to a link-layer address?
 ARP
@@ -34,7 +34,7 @@ ARP handles this local-link mapping. HTTP is an application protocol and TLS pro
 N04
 TCP and UDP give applications different ways to exchange data. Choose based on what the application needs to preserve, detect or recover.
 TCP preserves ordered bytes, not application message boundaries. UDP preserves datagram boundaries without delivery guarantees. Define framing, limits and retry meaning in the application.
-Build a loopback-only client and server that exchange length-prefixed harmless messages. Deliberately split a message across writes and combine two messages in another write. The receiver should reconstruct both correctly. Compare this with a UDP example and document what happens when a datagram is absent rather than assuming arrival.
+On paper, choose a one-byte length field and a maximum payload of 16 bytes. Trace incoming chunks containing length 5 plus he, then llo, followed by length 2 plus OK. Show where the first complete message ends and the second begins. A receiver must preserve bytes belonging to the next message rather than discard them. This is a design trace, not a supplied runnable multi-message server.
 TCP reliability does not authenticate the peer or encrypt the stream. Those are separate properties.
 A TCP receive call returns half your message. What should a correct framed protocol do?
 Keep reading until the defined message length is available or an error occurs
@@ -45,7 +45,7 @@ TCP exposes a byte stream. The application's framing rule determines message com
 N05
 A hostname such as example.com is a name, not an IP address. DNS helps find the records needed to reach services, and email adds further rules about sender and message handling.
 Use DNS to locate services and interpret each trust mechanism within its scope. Authenticated domain relationships do not prove that an email's request is safe.
-Trace a domain lookup using the course's examples and mark stub resolver, recursive resolver, authoritative server, and cache. Inspect a saved DNS response and identify the record type and TTL. Then draw mail delivery from sender to recipient, marking where name resolution and sender-policy checks occur.
+Draw the request for www.example using four labelled roles: your device’s stub resolver asks a recursive resolver, which obtains records from an authoritative server and keeps a temporary cache. Using the supplied CNAME and A rows, write the returned IPv4 address and the 300-second lifetime. Explain what might change after that lifetime expires.
 A correct DNS answer can point to a compromised server. Name-resolution integrity and application security are separate checks.
 What property does DNSSEC primarily add to signed DNS data?
 Origin authentication and integrity through a validation chain
@@ -56,7 +56,7 @@ DNSSEC validates signed DNS data. It neither encrypts ordinary DNS traffic nor a
 N06
 HTTP describes requests and responses between a client and a server. Cookies and caches add state and reuse, which makes it important to know which user and which response each rule concerns.
 Read method, target, headers and body separately. Track session identity, cookie scope, cache rules and intermediaries when explaining a request's outcome.
-Use a local test application to record a GET and a form POST. Mark each method, path, status, content type, and cookie. Repeat after signing out and observe which state changes. Add a diagram showing browser, proxy if present, and server, so a later security finding can identify where a decision was made.
+On paper, compare the supplied GET request with the same request after deleting its Cookie line. Under a fictional policy requiring sign-in for /notes, label the first authenticated only if its session verifies and the second unauthenticated. Draw browser → server and mark which side sends Cookie and which sends Set-Cookie. This task does not require building an app.
 A successful status code means the server reported success for that request; it does not prove the action was authorised correctly.
 Why do many applications use a session cookie?
 To associate separate HTTP requests with server-recognised state
@@ -78,7 +78,7 @@ The origin tuple excludes the path and query. Different ports or schemes can cre
 B02
 A relational database stores records in tables and uses rules to keep related data consistent. SQL describes queries and changes; transactions group changes that must succeed together.
 Use keys and constraints to express data relationships. Use parameters for input values and suitable transactions for changes that must stay consistent.
-Create synthetic users and notes tables. Give each note an owner_id referencing a user. Join notes with owners and verify the row count. In a transaction, transfer a fixed quantity between two rows; introduce a failure between the updates and check rollback. Write down which invariant the transaction protects.
+Paper transaction fixture: balances A=5 and B=2. Transfer 3 from A to B, so a successful transaction ends A=2, B=5 and total 7. If failure occurs after subtracting from A but before adding to B, a rollback must restore A=5, B=2. Write both traces and explain why a partially completed transfer must not be committed.
 An application checking uniqueness before insertion can still race. A database uniqueness constraint enforces the rule at the storage boundary.
 What does transaction atomicity promise?
 All operations in the transaction commit together or none do
@@ -89,7 +89,7 @@ Atomicity concerns the all-or-nothing unit of change. It does not by itself esta
 B03
 A web server receives a request, checks it, performs permitted work and returns a response. An API makes that exchange available through a defined interface.
 Resolve the trusted session, validate the operation, check access to the specific object, then return the real outcome of the permitted work.
-Build a small local notes API with synthetic users. On each read or update, obtain the current actor from trusted session state and check the note's owner on the server. Reject an invalid note identifier cleanly. Test the same request as the owner and as another test user, and compare results.
+Extend the supplied decision table with updates: verified A changes note1 body to hi; verified B attempts the same; no session attempts it; verified A supplies body=7. Choose documented success/denial/error responses and explain why an owner check and a text-type check are separate requirements.
 A valid session does not grant access to every object's data. Authentication and object-level authorisation are separate steps.
 Where must ownership be checked when updating a note?
 On the server handling the operation
@@ -100,7 +100,7 @@ A caller can bypass the interface. The server must enforce the relationship betw
 B04
 A lab should let you learn without exposing personal work or unrelated systems. Virtual machines, containers and snapshots provide useful boundaries, but you must understand what they share.
 List what the lab shares with its host and network. Limit those connections, keep the target explicit and use snapshots only for effects they can actually restore.
-Create a harmless local lab, record its network mode, and verify which ports are reachable from the host. Save a known-good snapshot or reproducible container configuration. Change a test file and restore the baseline. Confirm what was restored and whether shared host files remained outside the snapshot's scope.
+On the paper plan, mark which data lives inside the guest disk and which data would live in a shared host folder. Predict what restoring a guest-only snapshot would do to marker.txt inside the guest and to an unrelated host file. Only perform the harmless marker test if you have completed the selected platform’s setup; label predictions separately from observations.
 A container is not an independent kernel. Do not treat an ordinary container as sufficient isolation for unknown malware.
 Which resource do ordinary containers typically share with their host?
 The operating-system kernel

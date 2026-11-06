@@ -78,7 +78,7 @@ The decision to discard half the interval depends on its ordering. Without that 
 C04
 A pointer refers to a location in memory. Correct code must know whether that location is valid, who owns the data and how long the data remains available.
 For each pointer, check the target, bounds, lifetime and owner. Draw changes to those facts as execution proceeds.
-Draw two linked nodes with addresses, values, and next pointers. Walk from the head, saving next before freeing the current node. After the walk, set the head to null. Use a debugger or memory diagnostic on a small local implementation and compare its report with your ownership diagram rather than guessing from a crash alone.
+On paper, draw node A at illustrative address 100 and node B at illustrative address 200. A stores value 10 and next=200; B stores value 20 and next=null. Start head=100. Save A’s next address before freeing A, move to B, save its null next, then free B and set head=null. Mark each object unavailable immediately after its free. These addresses are invented; do not enter them into a program.
 Setting one pointer to null does not invalidate other aliases that still point to the released object.
 Why is dereferencing an old alias unsafe after its allocation is freed?
 The object's lifetime has ended even if the address value remains
@@ -89,7 +89,7 @@ The pointer value can outlive the object. Access through it is invalid regardles
 C05
 Assembly shows lower-level instructions the processor executes. Calling conventions explain how functions pass values and return control, which helps you understand compiled programs.
 Read instructions under a stated architecture and calling convention. Follow arguments, saved state and return control with a small trace.
-Compile a tiny function that adds two integers with debug information. Break at its entry, inspect the argument locations for your platform's calling convention, step through the addition, and inspect the return value. Disassemble the function and map each relevant instruction to the source operation. Record architecture and compiler flags with the evidence.
+Using the two assembly files from the practice, mark the instruction implementing addition or subtraction and the instruction returning control. Record the CPU/OS/compiler. If you have a course-configured debugger, use the assigned debugger walkthrough as an optional next step; do not treat a breakpoint command for a different CPU as a required result.
 Assembly syntax and calling conventions vary by architecture and platform. Do not apply an x86-64 register rule to every system.
 What does a calling convention define?
 How functions exchange arguments, results, and register responsibilities
@@ -100,7 +100,7 @@ A calling convention is an interface agreement for machine-level function calls,
 C06
 An operating system shares hardware among programs and controls their access to memory, files and devices. Processes receive an organised view of those resources, not unrestricted access to everything.
 Track process identity, kernel requests and resource mappings. Enforce permission at the operation that accesses the protected resource.
-Run a harmless program that opens a file, reads bytes, and closes it. Observe its system calls using the supplied course tooling. Draw the path from application request to kernel check to returned data. Compare two processes' address maps and explain why equal-looking virtual addresses need not refer to the same physical bytes.
+Use the same os-lab/note.txt file from the exercise. On paper, list these separate steps: cat starts, it requests an open of the path, the kernel checks access, a successful open returns a descriptor, reads obtain bytes, and the descriptor is closed. Mark which steps the successful printed text supports and which internal steps would need a dedicated system-call trace to observe directly.
 User-space checks cannot replace a required kernel or server-side enforcement boundary. A caller may bypass the intended interface.
 Why can two processes use the same virtual address without sharing that memory?
 Their address spaces can map it to different physical pages

@@ -6,5 +6,7 @@
   "exercise": "Classify these fictional outcomes: correct name/trusted chain/current validity; wrong name with trusted issuer; correct name with expired validity; valid TLS but user A requests B's private note. State which layer must reject each failure.",
   "solution": "Only the first establishes the stated server validation conditions. Name/expiry failures belong to TLS identity validation. Cross-user note access must be denied by application authorisation even over valid TLS.",
   "challenge": "Explain what remains exposed or unprotected when using HTTPS: destination IP, some traffic patterns, endpoint compromise, and an application ownership bug. Identify one thing TLS does protect in transit.",
-  "challenge_solution": "TLS does not eliminate routing metadata, length/timing inference, compromised endpoints or broken application permissions. It protects application-data confidentiality/integrity in transit under its protocol and endpoint assumptions. Avoid claiming complete anonymity."
+  "challenge_solution": "TLS does not eliminate routing metadata, length/timing inference, compromised endpoints or broken application permissions. It protects application-data confidentiality/integrity in transit under its protocol and endpoint assumptions. Avoid claiming complete anonymity.",
+  "example_intro": "This is a simplified protocol diagram, not a complete packet trace. A key share contributes to agreeing a shared secret. Traffic keys protect the subsequent application data; certificate/name checks serve a different purpose.",
+  "example_format": "prose"
 }

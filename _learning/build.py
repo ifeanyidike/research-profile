@@ -67,8 +67,10 @@ def build(check=False):
             fields = ['bridge', 'concept', 'mechanism', 'teaching', 'example', 'explanation', 'pitfall', 'exercise', 'solution', 'challenge', 'challenge_solution', 'question', 'correct', 'wrong1', 'wrong2', 'feedback']
             assert all(a.get(f) for f in fields), m['id']
             guide = {f: a[f] for f in ['bridge', 'teaching', 'example', 'explanation', 'exercise', 'solution', 'challenge', 'challenge_solution']}
+            if a.get('example_intro'):
+                guide['example_intro'] = a['example_intro']
             guide['example_format'] = a.get('example_format', 'text')
-            assert guide['example_format'] in ('math', 'text', 'python'), m['id']
+            assert guide['example_format'] in ('math', 'text', 'python', 'prose'), m['id']
             if a.get('diagram'):
                 assert a['diagram'] in ('sampling', 'ownership'), m['id']
                 guide['diagram'] = a['diagram']

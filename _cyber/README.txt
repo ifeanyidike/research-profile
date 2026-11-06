@@ -18,6 +18,10 @@ _cyber/guides/ID.json: authored prerequisite bridge, step-by-step teaching,
 complete worked example, explanation, exercise, worked solution, independent
 challenge and expected reasoning. Keep the example string's literal backslashes
 intact when editing runnable code. All 93 guides are required by the packager.
+Optional example_intro gives instructions before the example. Use example_format
+prose for fictional scenarios, retaining ordinary wrapping text; omit it for
+fixed-width tables or reference code. Cyber Python fences are read-only: learners
+run them in the documented local environment, not a Voice saved workspace.
 cyber-studio/credentials.json: dated external certification routes, requirements,
 official links and suggested study bridges. Hub progress is never exam credit.
 

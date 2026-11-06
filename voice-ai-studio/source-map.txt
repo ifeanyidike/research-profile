@@ -103,7 +103,7 @@ Practical: Make a table with event index, kind, duration and running speech tota
 
 ### Build or inspect it
 
-Write and run your bucket function. Keep the supplied event data in a separate variable. Add an empty-list case, an all-silence case and a negative-duration case. Predict the output before running each case.
+Run speech_ms with [] (empty), [{"kind":"silence","duration_ms":50}] (all silence), and [{"kind":"speech","duration_ms":-1}] (invalid). Use each as a separate call so the final error does not hide earlier outputs. Keep the original events variable unchanged. The three-bucket function is the independent task on Test yourself.
 Independent assessment: Implement a summary returning a dictionary with speech_ms, silence_ms and other_ms. Treat unknown kinds as other rather than silently discarding their time. For speech 40, silence 20 and music 30, supply the expected dictionary and total-duration invariant.
 Pass criteria: 1. Return speech_ms, silence_ms and other_ms for every supplied event with independent expected totals. 2. Preserve total time when an unknown event kind occurs; handle an empty list. 3. Reject negative durations and show that the buckets sum to the total.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
@@ -194,6 +194,8 @@ Readings:
     Assignment: Read The Missing Semester — shell lecture and exercises. Focus on shell, environments, version control; then work through this lesson’s example to check your understanding.
   The Missing Semester — version control — https://missing.csail.mit.edu/2020/version-control/
     Assignment: Read The Missing Semester — version control. Focus on shell, environments, version control; then work through this lesson’s example to check your understanding.
+  Git — official installation by operating system — https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+    Assignment: Setup reference only: install Git for your own permitted system if absent, then check git --version. Use the lesson’s local practice identity, explicit staging and disposable repository. No remote publication is required.
 Additional practical materials:
   Portfolio project guide — python — practice/portfolio.html#python
     Assignment: Follow the prerequisites, build steps and evidence checklist. These projects need their own evidence; lesson passes do not complete them.
@@ -513,7 +515,7 @@ Videos:
 Readings:
   Harvard Stat 110 — probability book and lectures — https://stat110.hsites.harvard.edu/
     Assignment: Read Harvard Stat 110 — probability book and lectures. Focus on conditional probability, mean, variance; then work through this lesson’s example to check your understanding.
-Practical: For a fictional deployment containing 50 noisy and 50 quiet clips, assume the conditional rates above remain unchanged. Calculate the expected number with errors and the overall expected rate. Then calculate the mean and median of the five supplied latencies. State two assumptions behind the error prediction.
+Practical: For a fictional deployment containing 50 noisy and 50 quiet clips, assume the conditional rates in Learn remain unchanged. Calculate the expected number with errors and the overall expected rate. Then calculate the mean and median of these five latencies in milliseconds: [100,100,100,100,600]. State two assumptions behind the error prediction.
 
 ### Build or inspect it
 

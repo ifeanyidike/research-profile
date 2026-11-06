@@ -1,7 +1,7 @@
 O01
 Before studying security, get comfortable finding, saving and checking files. You will make a small practice folder so you always know where your work is.
 Use the full path to identify a file, reopen it to check the save, and distinguish an independent copy from a shared online document.
-Create cyber-learning with notes, code, and evidence subfolders. Save a sentence as notes/first-lesson.txt. Close the editor, find the file using your file manager, and reopen it. Download a course handout into evidence. Record its original URL beside the local filename. You now have both the artifact and its provenance.
+Create a folder named cyber-learning. Inside it create notes, evidence and projects folders. Save a text file saying what you studied today, when you studied it and which source you used. Copy it to evidence, reopen the copy and compare its contents with the original.
 An icon or filename alone does not establish what a file contains. Check the full name and open unfamiliar files with an appropriate viewer.
 Which action changes the remote course handout?
 Editing it through a service where you have permission to update the original
@@ -111,7 +111,7 @@ A relative path is interpreted from the current working directory, here /tmp/lab
 L02
 A Linux system runs processes under accounts and uses permissions to control access. Pipes connect command output to another command's input.
 Track process identity, file permissions and each input/output stream. Treat environment values and command lookup as part of the program's behaviour.
-Create a harmless text file with owner-only permissions and inspect its mode. Build a pipeline that selects synthetic failed-login lines and counts them. Send an intentional error to a separate file and compare it with standard output. Write a script accepting one quoted filename; verify it works when the path contains spaces.
+After running count.sh, use grep on its disposable shell-data/events.txt file. Run grep "^fail$" shell-data/events.txt | wc -l and predict the count (1 for the original fixture). Then run cat shell-data/missing.txt > shell-data/output.txt 2> shell-data/error.txt; inspect both files with cat. Explain which holds the error. To practise quoted filename arguments, save printf 'file=%s\n' "$1" as show-name.sh and run sh show-name.sh "first note.txt". It should display the whole filename; it need not open that file.
 Changing a file to executable does not grant the permissions needed to read its inputs or traverse its parent directories.
 What does a pipe normally connect?
 One process's standard output to another's standard input

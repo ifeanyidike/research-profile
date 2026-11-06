@@ -327,7 +327,7 @@
       "study_focus": "Study CS50P Week 1 conditionals and Week 2 loops, lists and dictionaries. Trace every supplied event, including unknown kinds and empty input.",
       "optional": true,
       "audienceLabel": "Optional Python refresher",
-      "practice": "Make a table with event index, kind, duration and running speech total. Add a silence event lasting 300 milliseconds and predict both speech time and total timeline time. Then replace the first duration with -1 and explain where execution stops. Write a second function that totals all event durations.\n\n### Build or inspect it\n\nWrite and run your bucket function. Keep the supplied event data in a separate variable. Add an empty-list case, an all-silence case and a negative-duration case. Predict the output before running each case.",
+      "practice": "Make a table with event index, kind, duration and running speech total. Add a silence event lasting 300 milliseconds and predict both speech time and total timeline time. Then replace the first duration with -1 and explain where execution stops. Write a second function that totals all event durations.\n\n### Build or inspect it\n\nRun speech_ms with [] (empty), [{\"kind\":\"silence\",\"duration_ms\":50}] (all silence), and [{\"kind\":\"speech\",\"duration_ms\":-1}] (invalid). Use each as a separate call so the final error does not hide earlier outputs. Keep the original events variable unchanged. The three-bucket function is the independent task on Test yourself.",
       "assessment": "Implement a summary returning a dictionary with speech_ms, silence_ms and other_ms. Treat unknown kinds as other rather than silently discarding their time. For speech 40, silence 20 and music 30, supply the expected dictionary and total-duration invariant."
     },
     {
@@ -663,6 +663,12 @@
           "url": "https://missing.csail.mit.edu/2020/version-control/",
           "progressKey": "reading:1",
           "assignment": "Read The Missing Semester — version control. Focus on shell, environments, version control; then work through this lesson’s example to check your understanding."
+        },
+        {
+          "label": "Git — official installation by operating system",
+          "url": "https://git-scm.com/book/en/v2/Getting-Started-Installing-Git",
+          "assignment": "Setup reference only: install Git for your own permitted system if absent, then check git --version. Use the lesson’s local practice identity, explicit staging and disposable repository. No remote publication is required.",
+          "progressKey": "reading:900"
         }
       ],
       "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
@@ -1561,7 +1567,7 @@
         "Explain why 1000 clips from two speakers do not establish broad speaker coverage."
       ],
       "study_focus": "Study the Harvard probability material on conditional probability, random variables, expectation and variance. Use the introductory MIT and StatQuest videos first if those terms are new.",
-      "practice": "For a fictional deployment containing 50 noisy and 50 quiet clips, assume the conditional rates above remain unchanged. Calculate the expected number with errors and the overall expected rate. Then calculate the mean and median of the five supplied latencies. State two assumptions behind the error prediction.\n\n### Build or inspect it\n\nWrite a small function for the mean and compare it with the middle value after sorting [100,100,100,100,600]. Change 600 to 6000 and explain which summary moves more.",
+      "practice": "For a fictional deployment containing 50 noisy and 50 quiet clips, assume the conditional rates in Learn remain unchanged. Calculate the expected number with errors and the overall expected rate. Then calculate the mean and median of these five latencies in milliseconds: [100,100,100,100,600]. State two assumptions behind the error prediction.\n\n### Build or inspect it\n\nWrite a small function for the mean and compare it with the middle value after sorting [100,100,100,100,600]. Change 600 to 6000 and explain which summary moves more.",
       "assessment": "One report counts 1,000 clips from two speakers; another counts 200 clips from 200 speakers. Explain why clip count alone cannot decide which better supports a claim about new speakers. Propose the missing sampling information and a sensible grouping for uncertainty analysis.",
       "practice_links": []
     },
