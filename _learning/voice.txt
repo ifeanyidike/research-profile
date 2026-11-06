@@ -148,6 +148,12 @@ In the harder exercise, keep separate totals for speech, silence and other event
 ### Read the brackets and branches
 
 Square brackets around several records make a list. event["duration_ms"] retrieves that named dictionary value. == compares values; += adds to the current value, so total += duration means total = total + duration. In the independent task, elif tries another condition only if the earlier if was false, and else handles the remaining cases. A dictionary can hold the three named totals just as an event holds its kind and duration.
+
+### Add items and count positions
+
+The append method adds one value at the end of an existing list. For example, results = [] starts an empty list; results.append(5) makes it [5]. len(results) gives its number of items, now 1. Do not replace the list with the result of append: that method changes the list and returns None.
+
+To visit both positions and records, for index, event in enumerate(events) supplies each zero-based position with its event. The two names receive the pair together. If you only need positions, range(len(events)) supplies 0 through one less than the count. These helpers appear in the later local audio and alignment code.
 EXAMPLE:: def speech_ms(events):
     total = 0
     for event in events:
