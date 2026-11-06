@@ -98,13 +98,6 @@
       "label": "Your practice code",
       "code": "# V05 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
     },
-    "V06:practice": {
-      "lesson": "V06",
-      "editor": "practice",
-      "tab": "practice",
-      "label": "Your practice code",
-      "code": "# V06 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
-    },
     "V11:practice": {
       "lesson": "V11",
       "editor": "practice",
@@ -132,6 +125,13 @@
       "tab": "practice",
       "label": "Your practice code",
       "code": "# V14 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
+    },
+    "V06:practice": {
+      "lesson": "V06",
+      "editor": "practice",
+      "tab": "practice",
+      "label": "Your practice code",
+      "code": "# V06 practice\n# Write your solution to the exercise above.\n# Use print(...) to display a result.\n"
     },
     "V07:practice": {
       "lesson": "V07",

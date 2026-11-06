@@ -1,9 +1,9 @@
 {
-  "reviewed": "31 October 2026",
+  "reviewed": "6 November 2026",
   "modules": [
     {
       "id": "C01",
-      "title": "Choose your role, goals and learning path",
+      "title": "Choose your learning role and path",
       "prerequisites": [],
       "stage": "Development across childhood",
       "skills": ["roles", "scope", "caregiver education", "professional preparation"],
@@ -72,7 +72,7 @@
     },
     {
       "id": "C02",
-      "title": "Development in infancy and toddlerhood",
+      "title": "Understanding babies and toddlers",
       "prerequisites": ["C01"],
       "stage": "Development across childhood",
       "skills": ["developmental domains", "relationships", "variation"],
@@ -148,7 +148,7 @@
     },
     {
       "id": "C03",
-      "title": "Preschool development, play and participation",
+      "title": "Understanding preschool play and activities",
       "prerequisites": ["C02"],
       "stage": "Development across childhood",
       "skills": ["play", "communication", "self-care", "early years"],
@@ -228,7 +228,7 @@
     },
     {
       "id": "C04",
-      "title": "School-age development and learning",
+      "title": "Understanding school-age learning",
       "prerequisites": ["C03"],
       "stage": "Development across childhood",
       "skills": ["literacy", "peer relationships", "participation"],
@@ -287,7 +287,7 @@
     },
     {
       "id": "C05",
-      "title": "Adolescence, identity and growing autonomy",
+      "title": "Supporting adolescent choice and independence",
       "prerequisites": ["C04"],
       "stage": "Development across childhood",
       "skills": ["puberty", "autonomy", "executive skills"],
@@ -356,7 +356,7 @@
     },
     {
       "id": "C06",
-      "title": "Observation, hearing, concerns and referral",
+      "title": "Noticing concerns and asking for help",
       "prerequisites": ["C02", "C03", "C04", "C05"],
       "stage": "Shared foundations for respectful support",
       "skills": ["observation", "milestones", "hearing", "referral"],
@@ -434,7 +434,7 @@
     },
     {
       "id": "C07",
-      "title": "Assent, privacy, safeguarding and respectful care",
+      "title": "Permission, privacy and child safety",
       "prerequisites": ["C01", "C05"],
       "stage": "Shared foundations for respectful support",
       "skills": ["assent", "safeguarding", "privacy", "boundaries"],
@@ -530,7 +530,7 @@
     },
     {
       "id": "C08",
-      "title": "How communication and language work",
+      "title": "Understanding communication and language",
       "prerequisites": ["C03", "C06"],
       "stage": "Shared foundations for respectful support",
       "skills": ["speech", "language", "interaction", "communication modes"],
@@ -621,7 +621,7 @@
     },
     {
       "id": "C09",
-      "title": "Movement, sensory differences and everyday participation",
+      "title": "Movement, comfort and everyday activities",
       "prerequisites": ["C04", "C06"],
       "stage": "Shared foundations for respectful support",
       "skills": ["occupations", "movement", "sensory needs", "access"],
@@ -689,7 +689,7 @@
     },
     {
       "id": "C10",
-      "title": "Behavior, emotions, stress and context",
+      "title": "Understanding behaviour in context",
       "prerequisites": ["C05", "C07", "C08", "C09"],
       "stage": "Shared foundations for respectful support",
       "skills": ["distress", "context", "co-regulation", "observation"],
@@ -759,7 +759,7 @@
     },
     {
       "id": "C11",
-      "title": "Inclusion, neurodiversity, culture and disability",
+      "title": "Making activities inclusive",
       "prerequisites": ["C07", "C08", "C09", "C10"],
       "stage": "Shared foundations for respectful support",
       "skills": ["inclusion", "culture", "neurodiversity", "access"],
@@ -817,7 +817,7 @@
     },
     {
       "id": "C12",
-      "title": "Health, sleep, feeding and when to seek help",
+      "title": "Health, sleep, eating and seeking help",
       "prerequisites": ["C06", "C07"],
       "stage": "Shared foundations for respectful support",
       "skills": ["health needs", "sleep", "swallowing concerns", "referral"],
@@ -1858,7 +1858,7 @@
     },
     {
       "id": "P01",
-      "title": "Anatomy, physiology and neurodevelopment bridge",
+      "title": "Body systems and child development",
       "prerequisites": ["C06", "C08", "C09", "C12"],
       "stage": "Professional: scientific foundations",
       "skills": ["anatomy", "hearing", "motor systems", "neurodevelopment"],
@@ -1981,7 +1981,7 @@
     },
     {
       "id": "P02",
-      "title": "Research methods, statistics and evidence quality",
+      "title": "Understanding research evidence",
       "prerequisites": ["C01", "C07"],
       "stage": "Professional: scientific foundations",
       "skills": ["PICO", "study design", "effect size", "critical appraisal"],
@@ -2066,7 +2066,7 @@
     },
     {
       "id": "P03",
-      "title": "Assessment principles, measurement and cultural validity",
+      "title": "Choosing and interpreting assessments",
       "prerequisites": ["P01", "P02", "C11"],
       "stage": "Professional: scientific foundations",
       "skills": ["reliability", "validity", "functional assessment", "cultural bias"],
@@ -2134,7 +2134,7 @@
     },
     {
       "id": "P04",
-      "title": "Speech-language assessment and differential reasoning",
+      "title": "Assessing speech and language",
       "prerequisites": ["P03", "C08"],
       "stage": "Professional: speech, language and AAC",
       "skills": ["language samples", "differential reasoning", "hearing", "scope"],
@@ -2250,7 +2250,7 @@
     },
     {
       "id": "P05",
-      "title": "Language, literacy and communication intervention planning",
+      "title": "Planning language and literacy support",
       "prerequisites": ["P04", "P02", "C11"],
       "stage": "Professional: speech, language and AAC",
       "skills": ["goals", "language", "literacy", "outcome review"],
@@ -2308,7 +2308,7 @@
     },
     {
       "id": "P06",
-      "title": "Speech sound, motor speech, fluency and swallowing boundaries",
+      "title": "Speech, fluency and swallowing: know the boundaries",
       "prerequisites": ["P04", "P01", "C12"],
       "stage": "Professional: speech, language and AAC",
       "skills": ["speech disorders", "fluency", "motor speech", "swallowing referral"],
@@ -2425,7 +2425,7 @@
     },
     {
       "id": "P07",
-      "title": "AAC assessment, access and communication partnerships",
+      "title": "Assessing communication access with AAC",
       "prerequisites": ["P03", "C08", "C11"],
       "stage": "Professional: speech, language and AAC",
       "skills": ["AAC", "feature matching", "access", "partner training"],
@@ -2487,7 +2487,7 @@
     },
     {
       "id": "P08",
-      "title": "OT occupational profiles and activity analysis",
+      "title": "Understanding daily activities in occupational therapy",
       "prerequisites": ["P03", "C09"],
       "stage": "Professional: occupational participation",
       "skills": ["occupational profile", "activity analysis", "participation"],
@@ -2550,7 +2550,7 @@
     },
     {
       "id": "P09",
-      "title": "Motor skills, coordination and accessible participation",
+      "title": "Assessing movement and everyday access",
       "prerequisites": ["P08", "P01", "C11"],
       "stage": "Professional: occupational participation",
       "skills": ["motor learning", "coordination", "adaptation", "outcomes"],
@@ -2661,7 +2661,7 @@
     },
     {
       "id": "P10",
-      "title": "Sensory evidence and occupation-centred reasoning",
+      "title": "Evaluating sensory approaches",
       "prerequisites": ["P08", "P02", "C10", "C12"],
       "stage": "Professional: occupational participation",
       "skills": ["sensory assessment", "evidence limits", "participation", "review"],
@@ -2735,7 +2735,7 @@
     },
     {
       "id": "P11",
-      "title": "Behavioral principles and functional assessment",
+      "title": "Understanding functional behaviour assessment",
       "prerequisites": ["P03", "C10", "C07", "C12"],
       "stage": "Professional: behavioral support and mental health",
       "skills": ["ABC observations", "functional hypotheses", "measurement", "ethics"],
@@ -2817,7 +2817,7 @@
     },
     {
       "id": "P12",
-      "title": "Support plans, single-case designs and meaningful outcomes",
+      "title": "Planning support and measuring change",
       "prerequisites": ["P11", "P02", "C11"],
       "stage": "Professional: behavioral support and mental health",
       "skills": ["support planning", "single-case design", "generalisability", "quality of life"],
@@ -2886,7 +2886,7 @@
     },
     {
       "id": "P13",
-      "title": "Mental health, trauma awareness and referral networks",
+      "title": "Mental health, trauma awareness and referral",
       "prerequisites": ["P03", "C10", "C12", "C07"],
       "stage": "Professional: behavioral support and mental health",
       "skills": ["mental health", "trauma awareness", "scope", "referral"],
@@ -2999,7 +2999,7 @@
     },
     {
       "id": "P14",
-      "title": "Documentation, supervision and professional accountability",
+      "title": "Clear records, supervision and accountability",
       "prerequisites": ["P03", "C07", "C11"],
       "stage": "Professional: accountable practice and research",
       "skills": ["documentation", "supervision", "ethics", "licensure"],
@@ -3058,7 +3058,7 @@
     },
     {
       "id": "P15",
-      "title": "Assistive technology, AI and child-data ethics",
+      "title": "Reviewing assistive technology and AI",
       "prerequisites": ["P02", "P07", "P14"],
       "stage": "Professional: accountable practice and research",
       "skills": ["assistive technology", "AI limits", "privacy", "accessibility"],
@@ -3163,7 +3163,7 @@
     },
     {
       "id": "P16",
-      "title": "Professional capstone and graduate research proposal",
+      "title": "Professional project and research proposal",
       "prerequisites": ["P05", "P06", "P07", "P09", "P10", "P12", "P13", "P14", "P15"],
       "stage": "Professional: accountable practice and research",
       "skills": ["interprofessional reasoning", "portfolio", "research proposal", "training plan"],

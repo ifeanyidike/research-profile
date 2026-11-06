@@ -21,8 +21,8 @@ test("foundations coverage labels agree with the actual assigned scope and prime
   assert.match(modules.M02.readings[0].assignment, /Chapter 8 is unavailable/);
   assert.match(modules.S05.videoNote, /simplified map.*RFC 8446 supplies exact ordering/);
   assert.match(lessons.M01.guide.teaching, /numerator.*denominator[\s\S]*percentage means[\s\S]*ratio compares/);
-  assert.match(lessons.M01.guide.exercise, /convert 1\/4.*20% of 100.*selected:total ratio/);
-  assert.ok(lessons.M03.concept.includes("\\gcd(a,n)=1"));
+  assert.match(lessons.M01.guide.exercise, /convert 1\/4[\s\S]*20% of 100[\s\S]*selected:total ratio/i);
+  assert.ok(lessons.M03.guide.teaching.includes("\\gcd(a,n)=1"));
 });
 test("the port reference bounds decimal syntax before conversion and documents padding and oversized input", () => {
   const text = lessons.P05.guide.challenge_solution;

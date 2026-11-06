@@ -1,9 +1,9 @@
 {
-  "reviewed": "3 November 2026",
+  "reviewed": "6 November 2026",
   "modules": [
     {
       "id": "V01",
-      "title": "What a voice system actually does",
+      "title": "How a voice assistant works",
       "prerequisites": [],
       "stage": "Starting from zero",
       "skills": ["system boundaries", "tasks", "learning plan"],
@@ -94,7 +94,7 @@
     },
     {
       "id": "V02",
-      "title": "Python: values, functions and clear inputs",
+      "title": "Python: values and functions",
       "prerequisites": ["V01"],
       "stage": "Starting from zero",
       "skills": ["Python", "variables", "functions"],
@@ -195,7 +195,7 @@
     },
     {
       "id": "V03",
-      "title": "Python: decisions, loops and collections",
+      "title": "Python: choices, loops and lists",
       "prerequisites": ["V02"],
       "stage": "Starting from zero",
       "skills": ["conditionals", "loops", "lists", "dictionaries"],
@@ -332,7 +332,7 @@
     },
     {
       "id": "V04",
-      "title": "Files, modules, errors and offline tests",
+      "title": "Python: files, errors and tests",
       "prerequisites": ["V03"],
       "stage": "Starting from zero",
       "skills": ["JSON", "files", "exceptions", "unit tests"],
@@ -560,7 +560,7 @@
     },
     {
       "id": "V05",
-      "title": "Terminal, environments, Git and reproducibility",
+      "title": "Project tools: terminal, environments and Git",
       "prerequisites": ["V04"],
       "stage": "Starting from zero",
       "skills": ["shell", "environments", "version control"],
@@ -687,100 +687,9 @@
       "assessment": "A colleague says the code worked but gives no commit, input file or command. Write a six-item reproducibility request, then explain how you would investigate two different results without rerunning a paid service."
     },
     {
-      "id": "V06",
-      "title": "Maths bridge: algebra, units, powers and logs",
-      "prerequisites": ["V01"],
-      "stage": "Sound and speech",
-      "skills": ["algebra", "units", "logarithms", "decibels"],
-      "videos": [
-        {
-          "label": "StatQuest with Josh Starmer — Logs (logarithms), Clearly Explained!!!",
-          "url": "https://www.youtube.com/watch?v=VSi0Z04fWj0",
-          "progressKey": "video:0",
-          "durationSeconds": 937,
-          "watchMode": "segments",
-          "assignment": "Watch only 0:36–6:17, then 9:49–13:04, then 14:03–14:55 (9:48 total). Study logarithms as inverse exponents, fractional powers, multiplicative scales and the product/quotient rules. Watch 0:36–6:17, 9:49–13:04 and 14:03–14:55 (9:48); skip qPCR/geometric-mean tangent and broad software-log(0) claim. Remember: real logarithm requires x>0, base>0 and base!=1; log(0) is undefined, -infinity is a limiting/computational convention and Python math.log(0) raises ValueError.",
-          "timingSource": "https://www.youtube.com/watch?v=VSi0Z04fWj0",
-          "segments": [
-            {
-              "start": 36,
-              "end": 377,
-              "label": "V06: selected teaching, part 1"
-            },
-            {
-              "start": 589,
-              "end": 784,
-              "label": "V06: selected teaching, part 2"
-            },
-            {
-              "start": 843,
-              "end": 895,
-              "label": "V06: selected teaching, part 3"
-            }
-          ],
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Recording and English captions",
-                "url": "https://www.youtube.com/watch?v=VSi0Z04fWj0"
-              }
-            ]
-          }
-        },
-        {
-          "label": "Sri Chaitanya Academy NEET — What are Radians? | Radian (Unit of Plane Angle) | Infinity Learn",
-          "url": "https://youtu.be/cgPYLJ-s5II",
-          "progressKey": "video:1",
-          "durationSeconds": 340,
-          "watchMode": "full",
-          "assignment": "Watch the complete named 5:40 unit. A complete geometric derivation of a radian as arc length divided by radius and of a full turn as 2π radians. These radians prepare you for phase in later signal lessons; the exercise here focuses on units and PCM payloads. One radian is 180/π degrees, about 57.2958; automatic captions garble that decimal. The historical/etymological remarks are motivation, not prerequisites for the derivation.",
-          "timingSource": "https://youtu.be/cgPYLJ-s5II",
-          "contentReview": {
-            "method": "transcript-reviewed",
-            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
-            "sources": [
-              {
-                "label": "Recording and English captions",
-                "url": "https://youtu.be/cgPYLJ-s5II"
-              }
-            ]
-          }
-        }
-      ],
-      "readings": [
-        {
-          "label": "Edinburgh — mathematics tutorials: algebra and logarithms",
-          "url": "https://homepages.inf.ed.ac.uk/sgwater/math_tutorials.html",
-          "progressKey": "reading:0",
-          "assignment": "Read Edinburgh — mathematics tutorials: algebra and logarithms. Focus on algebra, units, logarithms; then work through this lesson’s example to check your understanding."
-        }
-      ],
-      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
-      "pass_criteria": "1. Check the one-minute-under-1-MB claim with a complete PCM payload calculation. 2. Calculate the duration limit for 1000000 bytes under the stated format, showing your rearranged equation. 3. Show units and distinguish payload from headers, decimal MB and compression.",
-      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
-      "outcomes": [
-        "Check the one-minute-under-1-MB claim with a complete PCM payload calculation.",
-        "Calculate the duration limit for 1000000 bytes under the stated format, showing your rearranged equation.",
-        "Show units and distinguish payload from headers, decimal MB and compression."
-      ],
-      "study_focus": "Complete the Edinburgh algebra and logarithm tutorial questions. Practise rearranging equations, powers, unit conversions and log rules before interpreting dB or log probabilities.",
-      "practice_links": [
-        {
-          "label": "Local audio lab — setup, tasks and reference results",
-          "url": "practice/audio-lab.html",
-          "assignment": "Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V06. No model, microphone, network or paid service is used."
-        }
-      ],
-      "recommended_prerequisites": ["V02"],
-      "practice": "Calculate the payload for 0.5 seconds of stereo PCM at 48 kHz and 16 bits/sample. Show every conversion. Then find the duration of 24,000 mono samples at 16 kHz. Explain the difference between doubling amplitude and doubling power in the stated matching conditions.\n\n### Build or inspect it\n\nUse the local audio lab linked below. Its mono 200 Hz file contains one second at 16,000 frames/second and two bytes per sample. Predict the payload and compare it with the report. Explain why the whole WAV file is larger.",
-      "assessment": "A specification says “one minute, 16 kHz, 16-bit, mono, under 1 MB uncompressed”. Check the claim using decimal MB and show how long one million payload bytes can hold, excluding a header."
-    },
-    {
       "id": "V11",
-      "title": "Sound waves, frequency, amplitude and phase",
-      "prerequisites": ["V06"],
+      "title": "How sound works",
+      "prerequisites": ["V01"],
       "stage": "Sound and speech",
       "skills": ["acoustics", "frequency", "phase"],
       "videos": [
@@ -854,7 +763,7 @@
     },
     {
       "id": "V12",
-      "title": "Sampling, quantisation, channels and codecs",
+      "title": "How a computer records sound",
       "prerequisites": ["V11"],
       "stage": "Sound and speech",
       "skills": ["sample rate", "PCM", "aliasing", "bitrate"],
@@ -904,12 +813,12 @@
         }
       ],
       "recommended_prerequisites": ["V04"],
-      "practice": "For 48 kHz mono PCM, calculate the samples in 10, 20 and 30 ms. Calculate the payload bytes for each at 16 bits/sample. Then explain how the answer changes for stereo. Finally describe the steps required to turn a compressed stereo recording into mono 16 kHz PCM without merely relabelling it.\n\n### Build or inspect it\n\nInspect the local lab report for tone-200 and stereo. Record sample rate, audio-frame count, channel count, PCM payload and duration. Explain why stereo doubles the scalar sample count without doubling duration.",
+      "practice": "### Practise the rate calculation\n\n1. Convert 10, 20 and 30 milliseconds to seconds by dividing each by 1,000.\n2. At 48,000 samples per second, multiply each duration in seconds by 48,000. These are the mono sample counts.\n3. Each 16-bit sample takes two bytes. Calculate the audio-data bytes for each duration.\n4. Repeat the byte counts for two-channel stereo. Explain why the duration has not doubled.\n\n### Follow a format conversion\n\nDescribe the separate jobs needed to turn a compressed stereo recording into mono 16 kHz PCM: decode, choose a channel-mixing rule, resample with appropriate filtering, then write the required sample representation and metadata. Explain why changing only the sampling-rate label is not enough.\n\n### Inspect the supplied files\n\nOpen the local audio-lab report for tone-200 and stereo. Record each file's sampling rate, frame count, channel count, audio-data bytes and duration. Compare the report with your calculations. Do not count the two values in one stereo frame as two moments in time.",
       "assessment": "A one-second, 48 kHz file is labelled 16 kHz without changing its 48,000 samples. Predict playback duration. Contrast this with proper 48-to-16 kHz resampling, stating output count, duration and the reason for low-pass filtering."
     },
     {
       "id": "V13",
-      "title": "Speech production, phonetics and the IPA",
+      "title": "How we make speech sounds",
       "prerequisites": ["V11"],
       "stage": "Sound and speech",
       "skills": ["articulation", "phonemes", "IPA", "coarticulation"],
@@ -1029,7 +938,7 @@
     },
     {
       "id": "V14",
-      "title": "Source–filter models, pitch and formants",
+      "title": "How a voice creates pitch and vowels",
       "prerequisites": ["V11", "V13"],
       "stage": "Sound and speech",
       "skills": ["voicing", "pitch", "resonance", "formants"],
@@ -1097,8 +1006,99 @@
       "practice_links": []
     },
     {
+      "id": "V06",
+      "title": "Maths for working with audio",
+      "prerequisites": ["V12"],
+      "stage": "Sound and speech",
+      "skills": ["algebra", "units", "logarithms", "decibels"],
+      "videos": [
+        {
+          "label": "StatQuest with Josh Starmer — Logs (logarithms), Clearly Explained!!!",
+          "url": "https://www.youtube.com/watch?v=VSi0Z04fWj0",
+          "progressKey": "video:0",
+          "durationSeconds": 937,
+          "watchMode": "segments",
+          "assignment": "Watch only 0:36–6:17, then 9:49–13:04, then 14:03–14:55 (9:48 total). Study logarithms as inverse exponents, fractional powers, multiplicative scales and the product/quotient rules. Watch 0:36–6:17, 9:49–13:04 and 14:03–14:55 (9:48); skip qPCR/geometric-mean tangent and broad software-log(0) claim. Remember: real logarithm requires x>0, base>0 and base!=1; log(0) is undefined, -infinity is a limiting/computational convention and Python math.log(0) raises ValueError.",
+          "timingSource": "https://www.youtube.com/watch?v=VSi0Z04fWj0",
+          "segments": [
+            {
+              "start": 36,
+              "end": 377,
+              "label": "V06: selected teaching, part 1"
+            },
+            {
+              "start": 589,
+              "end": 784,
+              "label": "V06: selected teaching, part 2"
+            },
+            {
+              "start": 843,
+              "end": 895,
+              "label": "V06: selected teaching, part 3"
+            }
+          ],
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://www.youtube.com/watch?v=VSi0Z04fWj0"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Sri Chaitanya Academy NEET — What are Radians? | Radian (Unit of Plane Angle) | Infinity Learn",
+          "url": "https://youtu.be/cgPYLJ-s5II",
+          "progressKey": "video:1",
+          "durationSeconds": 340,
+          "watchMode": "full",
+          "assignment": "Watch the complete named 5:40 unit. A complete geometric derivation of a radian as arc length divided by radius and of a full turn as 2π radians. These radians prepare you for phase in later signal lessons; the exercise here focuses on units and PCM payloads. One radian is 180/π degrees, about 57.2958; automatic captions garble that decimal. The historical/etymological remarks are motivation, not prerequisites for the derivation.",
+          "timingSource": "https://youtu.be/cgPYLJ-s5II",
+          "contentReview": {
+            "method": "transcript-reviewed",
+            "note": "The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.",
+            "sources": [
+              {
+                "label": "Recording and English captions",
+                "url": "https://youtu.be/cgPYLJ-s5II"
+              }
+            ]
+          }
+        }
+      ],
+      "readings": [
+        {
+          "label": "Edinburgh — mathematics tutorials: algebra and logarithms",
+          "url": "https://homepages.inf.ed.ac.uk/sgwater/math_tutorials.html",
+          "progressKey": "reading:0",
+          "assignment": "Read Edinburgh — mathematics tutorials: algebra and logarithms. Focus on algebra, units, logarithms; then work through this lesson’s example to check your understanding."
+        }
+      ],
+      "videoNote": "These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.",
+      "pass_criteria": "1. Check the one-minute-under-1-MB claim with a complete PCM payload calculation. 2. Calculate the duration limit for 1000000 bytes under the stated format, showing your rearranged equation. 3. Show units and distinguish payload from headers, decimal MB and compression.",
+      "note": "Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.",
+      "outcomes": [
+        "Check the one-minute-under-1-MB claim with a complete PCM payload calculation.",
+        "Calculate the duration limit for 1000000 bytes under the stated format, showing your rearranged equation.",
+        "Show units and distinguish payload from headers, decimal MB and compression."
+      ],
+      "study_focus": "Complete the Edinburgh algebra and logarithm tutorial questions. Practise rearranging equations, powers, unit conversions and log rules before interpreting dB or log probabilities.",
+      "practice_links": [
+        {
+          "label": "Local audio lab — setup, tasks and reference results",
+          "url": "practice/audio-lab.html",
+          "assignment": "Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V06. No model, microphone, network or paid service is used."
+        }
+      ],
+      "recommended_prerequisites": ["V02"],
+      "practice": "Calculate the payload for 0.5 seconds of stereo PCM at 48 kHz and 16 bits/sample. Show every conversion. Then find the duration of 24,000 mono samples at 16 kHz. Explain the difference between doubling amplitude and doubling power in the stated matching conditions.\n\n### Build or inspect it\n\nUse the local audio lab linked below. Its mono 200 Hz file contains one second at 16,000 frames/second and two bytes per sample. Predict the payload and compare it with the report. Explain why the whole WAV file is larger.",
+      "assessment": "A specification says “one minute, 16 kHz, 16-bit, mono, under 1 MB uncompressed”. Check the claim using decimal MB and show how long one million payload bytes can hold, excluding a header."
+    },
+    {
       "id": "V07",
-      "title": "Vectors, matrices and tensor shapes",
+      "title": "Organising numbers: vectors, matrices and tensors",
       "prerequisites": ["V06"],
       "stage": "Signal processing tools",
       "skills": ["linear algebra", "dot products", "shapes"],
@@ -1154,7 +1154,7 @@
     },
     {
       "id": "V15",
-      "title": "Fourier transforms, windows and spectrograms",
+      "title": "Seeing the frequencies in sound",
       "prerequisites": ["V07", "V12", "V14"],
       "stage": "Signal processing tools",
       "skills": ["DFT", "STFT", "windows", "time-frequency tradeoffs"],
@@ -1246,7 +1246,7 @@
     },
     {
       "id": "V16",
-      "title": "Filters, convolution, mel features and MFCCs",
+      "title": "Filtering sound and preparing audio features",
       "prerequisites": ["V15"],
       "stage": "Signal processing tools",
       "skills": ["convolution", "filter banks", "features"],
@@ -1333,12 +1333,12 @@
           "assignment": "Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V16. No model, microphone, network or paid service is used."
         }
       ],
-      "practice": "Apply the same causal filter to [0, 2, 2, 0] using zero initial history. Write four outputs and the full-convolution tail. Then list six parameters you would record when exporting log-mel features for another researcher.\n\nRepeat with [0,2,2,2] and show the nonzero tail. Then compute the two-band energies, logs and two DCT coefficients in the toy feature frame from Step by step, naming its normalisation.\n\n### Build or inspect it\n\nUse the local lab to compare the original and two-sample-averaged 200 Hz tone. Read its moving_average function. Predict the first output under zero initial history, and explain why output length remains unchanged in this causal version.",
+      "practice": "Apply the same causal filter to [0, 2, 2, 0] using zero initial history. Write four outputs and the full-convolution tail. Then list six parameters you would record when exporting log-mel features for another researcher.\n\nRepeat with [0,2,2,2] and show the nonzero tail. Then compute the two-band energies, logs and two DCT coefficients in the toy feature frame from Learn, naming its normalisation.\n\n### Build or inspect it\n\nUse the local lab to compare the original and two-sample-averaged 200 Hz tone. Read its moving_average function. Predict the first output under zero initial history, and explain why output length remains unchanged in this causal version.",
       "assessment": "Two systems both export 80 features per frame, but one uses 16 kHz audio with 10 ms hops and the other 48 kHz with 20 ms hops. Explain why their arrays cannot simply be exchanged, and draft a compatibility check before any model is loaded."
     },
     {
       "id": "V08",
-      "title": "Derivatives, gradients and optimisation",
+      "title": "How a model reduces its mistakes",
       "prerequisites": ["V06", "V07"],
       "stage": "Learning speech models",
       "skills": ["calculus", "chain rule", "gradient descent"],
@@ -1480,7 +1480,7 @@
     },
     {
       "id": "V09",
-      "title": "Probability, statistics and uncertainty",
+      "title": "Understanding rates, averages and uncertainty",
       "prerequisites": ["V06"],
       "stage": "Learning speech models",
       "skills": ["conditional probability", "mean", "variance", "sampling"],
@@ -1567,7 +1567,7 @@
     },
     {
       "id": "V10",
-      "title": "Experimental design and data leakage",
+      "title": "Designing a fair model comparison",
       "prerequisites": ["V09"],
       "stage": "Learning speech models",
       "skills": ["splits", "confounding", "baselines", "uncertainty"],
@@ -1629,7 +1629,7 @@
     },
     {
       "id": "V17",
-      "title": "Machine learning: regression and classification",
+      "title": "Learning from examples: regression and classification",
       "prerequisites": ["V07", "V08", "V09", "V10"],
       "stage": "Learning speech models",
       "skills": ["loss", "generalisation", "regularisation"],
@@ -1730,7 +1730,7 @@
     },
     {
       "id": "V18",
-      "title": "Neural networks and backpropagation",
+      "title": "How a neural network learns",
       "prerequisites": ["V17"],
       "stage": "Learning speech models",
       "skills": ["layers", "activations", "gradients", "batching"],
@@ -1921,7 +1921,7 @@
     },
     {
       "id": "V19",
-      "title": "Sequences, attention and transformers",
+      "title": "How sequence models use attention",
       "prerequisites": ["V18", "V16"],
       "stage": "Learning speech models",
       "skills": ["attention", "masking", "positions", "sequence models"],
@@ -2091,7 +2091,7 @@
     },
     {
       "id": "V20",
-      "title": "Speech datasets, annotation, consent and licensing",
+      "title": "Preparing a speech dataset responsibly",
       "prerequisites": ["V10", "V13"],
       "stage": "Learning speech models",
       "skills": ["manifests", "annotation", "rights", "speaker splits"],
@@ -2211,7 +2211,7 @@
     },
     {
       "id": "V21",
-      "title": "Classical ASR: alignment, HMMs and decoding",
+      "title": "How classical speech recognition finds words",
       "prerequisites": ["V09", "V16", "V17", "V20"],
       "stage": "Recognising and understanding audio",
       "skills": ["state sequences", "alignment", "decoding"],
@@ -2306,13 +2306,13 @@
         "State the model and score assumptions needed before interpreting a real decoder."
       ],
       "study_focus": "Start with the discrete-state example and Stanford Appendix A, then the three introductory HMM video parts. Continue to connected speech and forward probabilities. Treat Baum–Welch/legacy training tools as additional depth.",
-      "practice": "Change Path B's transition to 1.0 and recalculate its score. Then change its first likelihood to 0.6 as well. Determine when the preferred path switches. Draw a two-state, three-time-step trellis and label what information a dynamic-programming table would retain.\n\nFill in both time-two state scores and backpointers for the supplied numerical model in Step by step. Show both incoming candidates for each state before choosing; do not keep only one global state at time one.\n\n### Build or inspect it\n\nImplement the two-state, two-time Viterbi table with lists and loops. Store both winning scores and predecessor indices. Confirm the supplied Learn example before attempting the independent numbers in Assess.",
+      "practice": "### Compare the two paths\n\n1. Use the Path A and Path B values in the worked example.\n2. Change only B's transition factor to 1.0. Multiply its four factors again and compare the result with A.\n3. Keep that change and also set B's first observation likelihood to 0.6. Recalculate. Which path now has the higher score?\n\n### Trace the state table\n\nUse the two-state table in Learn. Write both incoming candidate scores for each state at time two, then keep the larger score and its predecessor. Draw the winning path backwards from the final state. Explain why keeping only one global state at time one could discard a useful route.\n\n### Implement the same small calculation\n\nUse Python lists and loops to store the two state scores and predecessor indices. Check that it gives the Learn results before trying the changed numbers in Assess. This is a local calculation; no recogniser or model service is needed.",
       "assessment": "Use the same transition table as Learn, but new start probabilities A:0.3, B:0.7. Observation-one emissions are A:0.5, B:0.4; observation-two emissions are A:0.6, B:0.3. Compute both time-one scores, both incoming candidates per time-two state, winning scores and backpointers, then recover the best path. Separately, transcript X has paths 0.12 and 0.11 while Y has one path 0.20. Compare best single path and supplied transcript sums.",
       "practice_links": []
     },
     {
       "id": "V22",
-      "title": "CTC: learning without frame labels",
+      "title": "Matching audio to text with CTC",
       "prerequisites": ["V19", "V21"],
       "stage": "Recognising and understanding audio",
       "skills": ["CTC", "blank symbols", "collapse", "alignment paths"],
@@ -2429,7 +2429,7 @@
     },
     {
       "id": "V23",
-      "title": "Encoder–decoder ASR and Whisper",
+      "title": "How encoder–decoder speech recognition works",
       "prerequisites": ["V19", "V20", "V22"],
       "stage": "Recognising and understanding audio",
       "skills": ["seq2seq", "token decoding", "hallucinations"],
@@ -2556,7 +2556,7 @@
     },
     {
       "id": "V24",
-      "title": "Self-supervised and multilingual speech learning",
+      "title": "Learning audio patterns before adding transcripts",
       "prerequisites": ["V19", "V20", "V22"],
       "stage": "Recognising and understanding audio",
       "skills": ["wav2vec 2.0", "pretraining", "adaptation"],
@@ -2656,7 +2656,7 @@
     },
     {
       "id": "V25",
-      "title": "ASR error analysis, fairness and uncertainty",
+      "title": "Finding and measuring speech-recognition mistakes",
       "prerequisites": ["V09", "V10", "V23", "V24"],
       "stage": "Recognising and understanding audio",
       "skills": ["edit distance", "WER", "subgroups", "error taxonomy"],
@@ -2763,7 +2763,7 @@
     },
     {
       "id": "V26",
-      "title": "Who spoke when? Diarisation and speaker identity",
+      "title": "Finding who spoke when",
       "prerequisites": ["V18", "V20", "V25"],
       "stage": "Recognising and understanding audio",
       "skills": ["segmentation", "embeddings", "clustering", "verification"],
@@ -2839,7 +2839,7 @@
     },
     {
       "id": "V27",
-      "title": "Noise, separation, echo and microphone arrays",
+      "title": "Reducing noise while keeping speech",
       "prerequisites": ["V14", "V16", "V18", "V25"],
       "stage": "Recognising and understanding audio",
       "skills": ["enhancement", "separation", "beamforming", "distortion"],
@@ -2893,7 +2893,7 @@
     },
     {
       "id": "V28",
-      "title": "TTS front ends: text, pronunciation and prosody",
+      "title": "Preparing text to be spoken",
       "prerequisites": ["V13", "V14", "V20"],
       "stage": "Generating speech",
       "skills": ["normalisation", "pronunciation", "prosody"],
@@ -2981,7 +2981,7 @@
     },
     {
       "id": "V29",
-      "title": "Neural TTS: acoustic models and alignment",
+      "title": "Turning text into timed speech",
       "prerequisites": ["V19", "V28"],
       "stage": "Generating speech",
       "skills": ["acoustic models", "duration", "Tacotron 2", "VITS"],
@@ -3077,7 +3077,7 @@
     },
     {
       "id": "V30",
-      "title": "Vocoders, neural codecs and audio tokens",
+      "title": "Generating and compressing audio",
       "prerequisites": ["V16", "V18", "V29"],
       "stage": "Generating speech",
       "skills": ["WaveNet", "codec tokens", "bitrate", "reconstruction"],
@@ -3173,7 +3173,7 @@
     },
     {
       "id": "V31",
-      "title": "Speech quality, listener studies and voice consent",
+      "title": "Checking speech quality and voice permission",
       "prerequisites": ["V10", "V20", "V29", "V30"],
       "stage": "Generating speech",
       "skills": ["MOS", "intelligibility", "consent", "comparison design"],
@@ -3282,7 +3282,7 @@
     },
     {
       "id": "V32",
-      "title": "Meaning, dialogue state and conversation repair",
+      "title": "Keeping a conversation on track",
       "prerequisites": ["V13", "V25"],
       "stage": "Engineering conversational voice systems",
       "skills": ["intent", "state machines", "repair", "confirmation"],
@@ -3394,7 +3394,7 @@
     },
     {
       "id": "V33",
-      "title": "LLMs, retrieval and permissioned tools for voice",
+      "title": "Using language models, sources and tools",
       "prerequisites": ["V19", "V32"],
       "stage": "Engineering conversational voice systems",
       "skills": ["retrieval", "tool contracts", "authorisation", "grounding"],
@@ -3493,7 +3493,7 @@
     },
     {
       "id": "V34",
-      "title": "Streaming, asynchronous events and cancellation",
+      "title": "Handling streams, interruptions and late results",
       "prerequisites": ["V32"],
       "stage": "Engineering conversational voice systems",
       "skills": ["event ordering", "queues", "session state", "cancellation"],
@@ -3575,7 +3575,7 @@
     },
     {
       "id": "V35",
-      "title": "WebRTC, WebSockets and telephony fundamentals",
+      "title": "Sending live audio across a network",
       "prerequisites": ["V12", "V34"],
       "stage": "Engineering conversational voice systems",
       "skills": ["packets", "jitter", "RTP", "WebRTC", "SIP"],
@@ -3659,7 +3659,7 @@
     },
     {
       "id": "V36",
-      "title": "VAD, endpointing, turn-taking and barge-in",
+      "title": "Knowing when someone has finished speaking",
       "prerequisites": ["V25", "V32", "V34", "V35"],
       "stage": "Engineering conversational voice systems",
       "skills": ["VAD", "endpointing", "interruptions", "turn state"],
@@ -3708,7 +3708,7 @@
     },
     {
       "id": "V37",
-      "title": "Latency budgets, buffers and traces",
+      "title": "Measuring where conversation time goes",
       "prerequisites": ["V09", "V34", "V35", "V36"],
       "stage": "Engineering conversational voice systems",
       "skills": ["latency", "percentiles", "tracing", "backpressure"],
@@ -3764,7 +3764,7 @@
     },
     {
       "id": "V38",
-      "title": "Voice privacy, prompt injection and abuse resistance",
+      "title": "Protecting voice data and tool actions",
       "prerequisites": ["V20", "V31", "V33", "V36"],
       "stage": "Engineering conversational voice systems",
       "skills": ["privacy", "trust boundaries", "voice spoofing", "safe tools"],
@@ -3835,7 +3835,7 @@
     },
     {
       "id": "V39",
-      "title": "Deployment, reliability, observability and cost",
+      "title": "Running a reliable voice service",
       "prerequisites": ["V10", "V37", "V38"],
       "stage": "Engineering conversational voice systems",
       "skills": ["reliability", "cost models", "fallbacks", "operations"],
@@ -3912,7 +3912,7 @@
     },
     {
       "id": "V40",
-      "title": "Accessible and multilingual voice products",
+      "title": "Making voice products accessible",
       "prerequisites": ["V13", "V24", "V25", "V31", "V36", "V38"],
       "stage": "Engineering conversational voice systems",
       "skills": ["accessibility", "language switching", "equity", "fallback channels"],
@@ -4034,7 +4034,7 @@
     },
     {
       "id": "V41",
-      "title": "Speech-to-speech and full-duplex systems",
+      "title": "Comparing voice pipelines and speech-to-speech models",
       "prerequisites": ["V19", "V30", "V33", "V36", "V37"],
       "stage": "Engineering conversational voice systems",
       "skills": ["audio tokens", "duplex", "Moshi", "incrementality"],
@@ -4119,7 +4119,7 @@
     },
     {
       "id": "V42",
-      "title": "Read research and design defensible studies",
+      "title": "Reading a research paper critically",
       "prerequisites": ["V10", "V25", "V31", "V39", "V41"],
       "stage": "Research and independent work",
       "skills": ["paper critique", "ablations", "reproducibility", "research ethics"],
@@ -4205,7 +4205,7 @@
     },
     {
       "id": "V43",
-      "title": "Capstone I: build the conversation controller",
+      "title": "Project: build the conversation controller",
       "prerequisites": ["V32", "V34", "V36", "V37", "V38", "V39", "V40"],
       "stage": "Research and independent work",
       "skills": ["integration", "state transitions", "fault handling", "portfolio"],
@@ -4314,7 +4314,7 @@
     },
     {
       "id": "V44",
-      "title": "Specialist study and an original research proposal",
+      "title": "Plan a specialisation and research question",
       "prerequisites": ["V27", "V42", "V43"],
       "stage": "Research and independent work",
       "skills": ["specialisation", "literature review", "proposal", "supervision"],

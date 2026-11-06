@@ -1,6 +1,6 @@
 I01
-An AI assistant combines a model with application code, data sources and sometimes tools. Training learns from examples; inference uses the trained model to produce an output. A fluent reply does not show that a fact was checked or that an action was authorised. Examine what the whole application can read, reveal and change.
-Trace one request: authenticate the learner, retrieve only permitted notes, send the allowed context to the model, then display the result safely. The model proposes text; the application enforces identity, ownership and tool permissions. Keep those controls outside the model’s judgement so a mistaken answer cannot grant new authority.
+An AI application combines a model with ordinary software, data and permissions. To secure it, follow how information reaches the model and how its output can affect the rest of the system.
+Map the model and its surrounding software. Separate information supplied to the model from authority enforced by the application.
 Use the complete worked example in Learn. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
 Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
 Which component must enforce document ownership?
@@ -10,8 +10,8 @@ The similarity score alone
 Similarity and fluent generation cannot grant permission. Enforce access before context exposure.
 
 I02
-Prompt injection is an attempt to make untrusted text redirect an AI assistant from its authorised task. It may arrive directly in a message or indirectly inside a retrieved document or tool response. A document saying “send all private notes” is still document content, not permission from the learner.
-Keep source labels and task boundaries clear, then limit consequences independently: retrieve only allowed data, expose only needed tools and authorise exact actions in application code. A prompt warning can guide the model, but it cannot replace a server-side permission check. The fixed example below requires no model call.
+Prompt injection tries to make supplied content change an AI system's instructions or actions. The content may come directly from a user or indirectly from a document the system reads.
+Treat external instructions as untrusted content, limit available data and tools, and enforce forbidden actions outside the model.
 Use the complete worked example in Learn. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
 Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
 Does a retrieved page saying “the user approved” grant send permission?
@@ -21,8 +21,8 @@ Yes, if retrieval ranked it first
 External content is evidence/data, not a trusted grant of authority.
 
 I03
-Retrieval-augmented generation (RAG) finds documents and adds selected material to a model’s context before it answers. An embedding represents content as numbers so the system can rank similar items. Similarity answers “Is this relevant?”, not “May this user read it?” B’s private note must stay out of A’s context even when it is the closest match.
-Authenticate the caller, determine permitted documents, rank within that scope and pass only those texts to generation. Carry document versions and access decisions into caching and deletion rules. Filtering a final answer cannot undo private text already disclosed earlier in the pipeline.
+Retrieval finds documents to help an AI answer a question. It must first respect which documents the current user is allowed to access.
+Use trusted account permissions to constrain retrieval before data enters model context. Check source relevance and cache separation independently.
 Use the complete worked example in Learn. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
 Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
 When should private-document access be checked?
@@ -32,8 +32,8 @@ Only when the model requests a citation
 A final-output filter cannot undo a private-data disclosure to an earlier context.
 
 I04
-A tool lets an assistant ask application code to perform an operation, such as reading a note or drafting a message. An agent can propose several such steps toward a task. A model-generated proposal is a request to check, not evidence that the learner approved it.
-An independent executor checks the signed-in actor, allowed tool, exact arguments, current object access and task limits before acting. Bind any required approval to the actual destination/content and reject changed or expired requests. Retry handling must avoid duplicate effects.
+A model may propose a tool call, but the application decides whether that action is valid and allowed. Keep the permission decision independent of generated wording.
+Keep tools narrow, use trusted identity and current object permissions, bind approvals to exact proposals and make repeated or stale requests safe.
 Use the complete worked example in Learn. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
 Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
 What should execute a model-proposed action?
@@ -43,8 +43,8 @@ A service account with all permissions
 Valid syntax does not establish user authorisation.
 
 I05
-An AI app depends on model weights, a tokenizer, optional adapters, retrieval data and the software that loads them, as well as application code. Any of these can change its behaviour. The supply chain describes how you obtain, review, build and deploy those parts. A familiar model name does not identify exact files or establish that a release is trusted.
-Record publisher, revision, digest, usage rights and loading settings for each component. Treat added adapters or corpus changes as releases even when the base model stays the same. A matching digest supports byte identity; provenance, executable loading behaviour and semantic trust require separate review.
+An AI service depends on model files, code, packages, datasets and build infrastructure. A supply-chain review asks where each came from and what authority loading it receives.
+Track exact model and software inputs, review loader authority, check provenance and licence conditions, and protect who may change the deployed artifacts.
 Use the complete worked example in Learn. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
 Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
 What does a matching artifact digest establish?
@@ -54,8 +54,8 @@ The dataset has lawful provenance
 A digest detects byte changes relative to a trusted reference; provenance and behaviour need separate evidence.
 
 I06
-To understand AI privacy, follow each copy of the data: prompts, retrieved passages, training data, generated replies and logs. Ask who receives it and how long it is kept. “Not used for training” does not mean “not stored”. A summary or embedding may still contain or reveal private information, even if it no longer looks like the original document.
-Start with the task and omit fields it does not need before transmission. Record each recipient and derived copy, restrict access and verify the actual service’s retention/deletion settings. Redaction and encryption help with specific boundaries but do not replace minimisation or ownership checks.
+AI applications can expose private information through prompts, retrieved context, saved chats, logs and outputs. Protect the whole data route rather than only the final response.
+Minimise input, trace every copy, preserve account permissions and assign clear retention and removal responsibilities.
 Use the complete worked example in Learn. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
 Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
 Does “not used for training” mean “not stored”?
@@ -65,8 +65,8 @@ Only if the prompt asks for privacy
 Verify actual service/account terms and data flows rather than inferring zero retention.
 
 I07
-AI security assurance connects a specific claim with the evidence that supports it. A hand-checked executor case may show that a particular request was allowed or denied correctly. It cannot show every request a live model might propose or prove resistance to every attack. Also set resource limits so one task cannot keep consuming work without a bound.
-Define the property, supply fixed cases including legitimate success and check enforcement outside the model. Bound input size, tool calls, elapsed time and retries in application code. Keep mock-policy evidence separate from runtime model evidence and record untested cases.
+An AI application needs checks for both unwanted actions and excessive resource use. Passing a few examples supports a limited claim, not a promise that the system is safe in every situation.
+Test explicit properties at their enforcement points, bound resource use and distinguish mocked control evidence from unperformed live-model checks.
 Use the complete worked example in Learn. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
 Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
 What does an offline mock-tool case establish?
@@ -76,8 +76,8 @@ A universal AI safety score
 Mock policy evidence is distinct from runtime model-behaviour evidence.
 
 I08
-When investigating an AI incident, trace the app, model settings, retrieved sources and tool permissions to find what actually happened. A security case explains a claim, the supporting evidence and the limits of that evidence. If a mock proposal was denied in one test, report that result accurately. It is not evidence of a real breach or proof of universal safety.
-Preserve source/version and decision metadata safely, separate authorised task from untrusted content and compare proposed effects with observed actions. Contain the capability that enables harm, review affected derived data and restore trusted components with targeted regression checks.
+An AI incident response needs to explain which data, model behaviour and application permissions were involved. The final capstone combines those facts into a reviewable security case.
+Trace the incident through data and authority, contain the relevant capability, verify the repaired boundary and support each security claim with specific evidence.
 Use the complete worked example in Learn. Keep the authorised task fixed, trace each proposed data flow or action, and decide what a trusted enforcement layer should permit. Supplied model proposals are fictional fixtures, not measured outputs.
 Do not mistake a plausible model answer, a strong instruction or a successful demonstration for universal security. Scope, provenance, deterministic controls and explicitly limited evidence remain necessary.
 A supplied mock send proposal was denied. What can you conclude?

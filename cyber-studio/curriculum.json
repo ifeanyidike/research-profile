@@ -4,7 +4,7 @@
   "modules": [
     {
       "id": "O01",
-      "title": "Computer files browsers and a learning workspace",
+      "title": "Files, folders and your learning workspace",
       "stage": "Orientation",
       "prerequisites": [],
       "skills": ["files and folders", "browser navigation", "plain text editing", "screenshots and evidence"],
@@ -60,7 +60,7 @@
     },
     {
       "id": "O02",
-      "title": "Security goals ethics and authorised practice",
+      "title": "What cybersecurity protects and where to practise",
       "stage": "Orientation",
       "prerequisites": ["O01"],
       "skills": ["confidentiality integrity availability", "assets threats controls", "authorised scope", "evidence notebook"],
@@ -110,7 +110,7 @@
     },
     {
       "id": "O03",
-      "title": "Accounts devices backups and personal privacy",
+      "title": "Protecting accounts, devices and backups",
       "stage": "Orientation",
       "prerequisites": ["O02"],
       "skills": ["passwords passkeys MFA", "recovery and backup", "updates and device locking", "phishing and privacy"],
@@ -255,7 +255,7 @@
     },
     {
       "id": "M01",
-      "title": "Arithmetic algebra binary and encodings",
+      "title": "Bits, bytes and how data is represented",
       "stage": "Computing foundations",
       "prerequisites": ["O01"],
       "skills": ["fractions percentages ratios", "variables and equations", "powers logarithms", "binary hexadecimal bytes text encodings"],
@@ -342,7 +342,7 @@
           "assignment": "Use the book Contents navigation to open only the named chapters/sections: OpenStax Elementary Algebra 2e — chapters 1 and 2. The landing page is the back-of-book index; it is not an extra chapter to study."
         }
       ],
-      "practice": "First convert 1/4 to a decimal and a percentage; calculate 20% of 100; then express 2 selected items out of 10 as a selected:total ratio, a fraction and a percentage. Then convert 13 and 31 to eight-bit binary and two-digit hex. Solve 4×x=36. Calculate log2(64). Explain whether converting a message to hex protects confidentiality.",
+      "practice": "1. Convert 1/4 to a decimal and a percentage. Then calculate 20% of 100.\n2. For two selected items out of ten, write the selected:total ratio, fraction and percentage. Keep the total distinct from the eight unselected items.\n3. Write 13 and 31 in eight-bit binary and two-digit hexadecimal. Show which place values add up to each number.\n4. Solve 4 × x = 36 and calculate log2(64). Explain what question each calculation answers.\n5. Explain whether writing a message in hexadecimal makes it secret, and why.",
       "assessment": "Convert binary 11110000 to decimal and hex. A field allows at most five UTF-8 bytes: do the strings AAAAA and ééA fit? Explain every step without relying on a calculator result alone.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "This is an explicit school-mathematics bridge. It can take several weeks when arithmetic or algebra is unfamiliar; no calculus is assumed.",
@@ -1418,7 +1418,7 @@
     },
     {
       "id": "M02",
-      "title": "Logic sets functions proofs graphs and state machines",
+      "title": "Writing clear rules with logic and models",
       "stage": "Mathematical foundations",
       "prerequisites": ["M01", "P02"],
       "skills": ["propositional logic quantifiers sets functions", "proof and induction", "graphs relations state transitions"],
@@ -1566,7 +1566,7 @@
     },
     {
       "id": "M03",
-      "title": "Modular arithmetic number theory and counting",
+      "title": "Remainders, number theory and counting",
       "stage": "Mathematical foundations",
       "prerequisites": ["M02"],
       "skills": ["remainders gcd modular inverse", "prime numbers exponentiation", "combinatorics and growth"],
@@ -1719,7 +1719,7 @@
     },
     {
       "id": "M04",
-      "title": "Probability independence entropy and the base rate",
+      "title": "Understanding probability and security alerts",
       "stage": "Mathematical foundations",
       "prerequisites": ["M03", "P03"],
       "skills": ["probability spaces conditional probability Bayes", "independence and expectation", "birthday bound entropy intuition"],
@@ -1905,7 +1905,7 @@
     },
     {
       "id": "M05",
-      "title": "Statistics sampling uncertainty and experimental design",
+      "title": "Making sound claims from data",
       "stage": "Mathematical foundations",
       "prerequisites": ["M04", "P05"],
       "skills": [
@@ -2832,7 +2832,7 @@
     },
     {
       "id": "N01",
-      "title": "Networks layers packets and performance",
+      "title": "How network messages travel",
       "stage": "Networking and web foundations",
       "prerequisites": ["C06", "M01"],
       "skills": [
@@ -3040,7 +3040,7 @@
     },
     {
       "id": "N02",
-      "title": "IP addressing subnetting routing NAT and IPv6",
+      "title": "IP addresses, subnets and routes",
       "stage": "Networking and web foundations",
       "prerequisites": ["N01", "M02", "M03"],
       "skills": ["IPv4 IPv6 subnet masks CIDR", "routing forwarding", "NAT and trust boundaries"],
@@ -3209,7 +3209,7 @@
     },
     {
       "id": "N03",
-      "title": "Ethernet ARP DHCP and wireless security foundations",
+      "title": "Joining a local or wireless network",
       "stage": "Networking and web foundations",
       "prerequisites": ["N02"],
       "skills": ["MAC addressing Ethernet ARP", "DHCP configuration", "wireless association WPA", "local network trust"],
@@ -3320,7 +3320,7 @@
     },
     {
       "id": "N04",
-      "title": "TCP UDP reliable delivery and socket programming",
+      "title": "TCP, UDP and message boundaries",
       "stage": "Networking and web foundations",
       "prerequisites": ["N03", "P04"],
       "skills": ["ports TCP UDP", "reliability flow congestion", "socket programming timeouts"],
@@ -3627,7 +3627,7 @@
     },
     {
       "id": "N05",
-      "title": "DNS email and name-resolution trust",
+      "title": "DNS, email and trust",
       "stage": "Networking and web foundations",
       "prerequisites": ["N04"],
       "skills": ["DNS recursion caching records", "SMTP IMAP email routing", "DNS security boundaries"],
@@ -3753,7 +3753,7 @@
     },
     {
       "id": "N06",
-      "title": "HTTP requests responses cookies caches and proxies",
+      "title": "Understanding HTTP, cookies and caches",
       "stage": "Networking and web foundations",
       "prerequisites": ["N05"],
       "skills": ["HTTP methods status headers body", "cookies statelessness", "HTTP versions reverse proxies cache keys"],
@@ -4258,7 +4258,7 @@
     },
     {
       "id": "S01",
-      "title": "Threat modelling secure design and security principles",
+      "title": "Finding threats in a system design",
       "stage": "Security foundations",
       "prerequisites": ["O03", "B04", "M02"],
       "skills": ["threat model assumptions", "trust boundaries least privilege", "secure design tradeoffs"],
@@ -4369,7 +4369,7 @@
     },
     {
       "id": "S02",
-      "title": "Symmetric encryption randomness and authenticated encryption",
+      "title": "Encryption and tamper detection",
       "stage": "Security foundations",
       "prerequisites": ["M04", "S01", "P05", "P06"],
       "skills": ["encryption confidentiality", "secure randomness nonces", "authenticated encryption integrity"],
@@ -4497,7 +4497,7 @@
     },
     {
       "id": "S03",
-      "title": "Hashes MACs password storage and key derivation",
+      "title": "Hashes, message tags and password storage",
       "stage": "Security foundations",
       "prerequisites": ["S02"],
       "skills": [
@@ -4658,7 +4658,7 @@
     },
     {
       "id": "S04",
-      "title": "Public keys key exchange signatures and certificates",
+      "title": "Public keys, signatures and certificates",
       "stage": "Security foundations",
       "prerequisites": ["S03", "M03"],
       "skills": ["public private keys", "Diffie Hellman signatures", "PKI certificate chains revocation"],
@@ -4827,7 +4827,7 @@
     },
     {
       "id": "S05",
-      "title": "TLS HTTPS and secure network protocols",
+      "title": "How TLS and HTTPS protect a connection",
       "stage": "Security foundations",
       "prerequisites": ["S04", "N06"],
       "skills": ["TLS handshake peer authentication", "certificate hostname validation", "channel limits replay and downgrade"],
@@ -4951,7 +4951,7 @@
     },
     {
       "id": "S06",
-      "title": "Authentication authorisation sessions and least privilege",
+      "title": "Sign-in, permissions and access checks",
       "stage": "Security foundations",
       "prerequisites": ["S05", "B03", "C06"],
       "skills": ["identity authentication authorization", "RBAC object ownership", "MFA sessions account recovery"],
@@ -5076,7 +5076,7 @@
           "assignment": "Revisit 20.4 only. Trace the session token from successful login to later requests, then explain why possession of that token can let another person act as the user. Write where the server checks expiry and invalidation in the lesson's session design. This chapter introduces token transport; use the lesson for logout and reauthentication rules rather than expecting this short section to specify them."
         }
       ],
-      "practice": "Evaluate A update1, A update2, B read2, B read1, C disableB, C read2 and an unauthenticated read1. Give the subject/action/object rule behind every answer.",
+      "practice": "Use the users, notes and permissions in the worked example. Make one row for each action:\n\n1. User A updates note 1.\n2. User A updates note 2.\n3. User B reads note 2.\n4. User B reads note 1.\n5. User C disables B's account.\n6. User C reads note 2.\n7. Someone without a valid session reads note 1.\n\nFor each row, write allow or deny, then name the identity, action, object and rule that produced your answer. Do not assume an administrative permission for one operation grants every other permission.",
       "assessment": "Add a suspended=true condition that blocks ordinary reads/updates but still allows admins to disable accounts. Evaluate suspended A read1 and C disableA. Explain where the suspension check belongs and how you would test session revocation.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -5086,7 +5086,7 @@
     },
     {
       "id": "W01",
-      "title": "Browser developer tools and intercepting HTTP",
+      "title": "Inspecting web requests in a lab",
       "stage": "Application security",
       "prerequisites": ["S06"],
       "skills": ["HTTP interception replay", "proxy and certificate setup", "request comparison"],
@@ -5227,7 +5227,7 @@
     },
     {
       "id": "W02",
-      "title": "SQL injection and parameterised queries",
+      "title": "Keeping user input out of SQL instructions",
       "stage": "Application security",
       "prerequisites": ["W01", "B02"],
       "skills": ["SQL injection data code separation", "parameter binding", "regression testing"],
@@ -5293,7 +5293,7 @@
     },
     {
       "id": "W03",
-      "title": "Reflected stored and DOM based cross site scripting",
+      "title": "Keeping page content from becoming script",
       "stage": "Application security",
       "prerequisites": ["W01", "B01"],
       "skills": ["XSS source sink contexts", "output encoding safe DOM APIs", "content security policy limits"],
@@ -5401,7 +5401,7 @@
     },
     {
       "id": "W04",
-      "title": "Cross site request forgery and session boundaries",
+      "title": "Preventing unwanted cross-site actions",
       "stage": "Application security",
       "prerequisites": ["W03", "S06"],
       "skills": ["CSRF ambient credentials", "anti CSRF tokens SameSite", "origin validation"],
@@ -5463,7 +5463,7 @@
     },
     {
       "id": "W05",
-      "title": "Same origin policy CORS and cross origin access",
+      "title": "Browser origins and CORS",
       "stage": "Application security",
       "prerequisites": ["W04", "B01"],
       "skills": ["SOP versus CORS", "preflight credentials origin allowlists", "cross origin trust"],
@@ -5543,7 +5543,7 @@
     },
     {
       "id": "W06",
-      "title": "Path traversal and filesystem boundaries",
+      "title": "Keeping file access inside its boundary",
       "stage": "Application security",
       "prerequisites": ["W01", "L02", "C06"],
       "skills": ["path traversal canonicalisation", "filesystem containment", "safe file identifiers"],
@@ -5599,7 +5599,7 @@
     },
     {
       "id": "W07",
-      "title": "OS command injection and process invocation",
+      "title": "Keeping input out of shell instructions",
       "stage": "Application security",
       "prerequisites": ["W06", "L02", "P06"],
       "skills": ["shell injection argument boundaries", "safe subprocess APIs", "input validation"],
@@ -5655,7 +5655,7 @@
     },
     {
       "id": "W08",
-      "title": "File upload validation storage and execution boundaries",
+      "title": "Handling uploaded files safely",
       "stage": "Application security",
       "prerequisites": ["W07", "B04"],
       "skills": ["upload content type extension validation", "storage and execution separation", "size and access limits"],
@@ -5711,7 +5711,7 @@
     },
     {
       "id": "W09",
-      "title": "XML parsers external entities and safe data handling",
+      "title": "Parsing XML and other structured data safely",
       "stage": "Application security",
       "prerequisites": ["W08", "B03"],
       "skills": ["XML document types entities", "XXE file and network access", "parser configuration"],
@@ -5767,7 +5767,7 @@
     },
     {
       "id": "W10",
-      "title": "Server side request forgery and outbound trust",
+      "title": "Controlling where a server may connect",
       "stage": "Application security",
       "prerequisites": ["W09", "N02", "N05"],
       "skills": ["SSRF URL parsing", "outbound network policy", "redirect and DNS considerations"],
@@ -5828,7 +5828,7 @@
     },
     {
       "id": "W11",
-      "title": "API documentation object access and parameter validation",
+      "title": "Checking API objects and writable fields",
       "stage": "Application security",
       "prerequisites": ["W10", "B03", "S06"],
       "skills": ["API discovery documentation", "object level authorization", "schema and method validation"],
@@ -5873,7 +5873,7 @@
           "assignment": "Read API documentation, Interacting with API endpoints, Mass assignment vulnerabilities and Preventing vulnerabilities in APIs. Build a small table of the lesson's documented method, route, expected fields and permitted caller. Explain why an unexpected isAdmin field must not become an authorised object update. The article's illustrative JSON includes trailing commas; remove those in real JSON. Automated endpoint discovery and fuzzing are optional, within the assigned lab only."
         }
       ],
-      "practice": "Build the five-case test matrix in Learn and add B reading n2, B reading n1 and A updating a101-character body. Identify whether each failure is authentication, object access or schema validation.",
+      "practice": "Build the five-case test matrix in Learn and add B reading n2, B reading n1 and A updating a 101-character body. Identify whether each failure is authentication, object access or schema validation.",
       "assessment": "Add an internal audit_only field that ordinary users cannot read. Define response fields and update fields separately, then describe how you would test that a normal GET does not expose audit_only.",
       "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
       "note": "",
@@ -5889,7 +5889,7 @@
     },
     {
       "id": "W12",
-      "title": "Authentication failures enumeration and recovery",
+      "title": "Protecting sign-in and account recovery",
       "stage": "Application security",
       "prerequisites": ["W11", "S06"],
       "skills": ["username enumeration", "rate limits and recovery", "authentication failure handling"],
@@ -5945,7 +5945,7 @@
     },
     {
       "id": "W13",
-      "title": "Access control business rules and ownership",
+      "title": "Enforcing ownership and business rules",
       "stage": "Application security",
       "prerequisites": ["W12", "S06"],
       "skills": ["vertical horizontal access control", "business invariants", "server side enforcement"],
@@ -6007,7 +6007,7 @@
     },
     {
       "id": "W14",
-      "title": "JWT formats signatures and token validation",
+      "title": "Checking JWT tokens correctly",
       "stage": "Application security",
       "prerequisites": ["W13", "S04"],
       "skills": ["JWT base64url claims signature", "issuer audience expiry algorithms", "token storage limits"],
@@ -6074,7 +6074,7 @@
     },
     {
       "id": "W15",
-      "title": "OAuth federation redirects and delegated access",
+      "title": "Understanding OAuth and delegated access",
       "stage": "Application security",
       "prerequisites": ["W14", "S05", "W04"],
       "skills": ["OAuth roles authorization code", "redirect URI state PKCE", "authentication versus delegated authorization"],
@@ -6150,7 +6150,7 @@
     },
     {
       "id": "W16",
-      "title": "Web race conditions and transactional invariants",
+      "title": "Preventing conflicting web updates",
       "stage": "Application security",
       "prerequisites": ["W15", "C07", "B02"],
       "skills": ["web concurrency TOCTOU", "database transactions", "idempotency and limit enforcement"],
@@ -6217,7 +6217,7 @@
     },
     {
       "id": "W17",
-      "title": "HTTP parsing disagreements and request smuggling",
+      "title": "When HTTP parsers disagree",
       "stage": "Application security",
       "prerequisites": ["W16", "N06"],
       "skills": ["HTTP framing Content Length Transfer Encoding", "proxy origin disagreement", "connection reuse"],
@@ -6272,7 +6272,7 @@
     },
     {
       "id": "W18",
-      "title": "Application security integration assessment",
+      "title": "Assessing a complete training application",
       "stage": "Application security",
       "prerequisites": ["W17", "W02", "W03", "W04", "W05"],
       "skills": ["end to end appsec review", "evidence based findings", "remediation and verification"],
@@ -7343,7 +7343,7 @@
     },
     {
       "id": "D05",
-      "title": "Security logs time normalisation and SIEM queries",
+      "title": "Reading and querying security logs",
       "stage": "Defensive operations",
       "prerequisites": ["D04", "P05", "M05"],
       "skills": ["log schemas event time provenance", "query filters aggregations joins", "SIEM ingestion and retention", "false positives"],
@@ -7446,7 +7446,7 @@
     },
     {
       "id": "D06",
-      "title": "Threat intelligence ATT&CK and evidence mapping",
+      "title": "Using threat intelligence carefully",
       "stage": "Defensive operations",
       "prerequisites": ["D05"],
       "skills": ["ATT&CK tactics techniques procedures", "narrative and raw evidence mapping", "intelligence uncertainty"],
@@ -7614,7 +7614,7 @@
     },
     {
       "id": "D07",
-      "title": "Detection engineering hunting and coverage",
+      "title": "Building useful detection rules",
       "stage": "Defensive operations",
       "prerequisites": ["D06", "D02", "D01", "D05", "M05"],
       "skills": ["hypothesis telemetry detection logic", "precision recall coverage", "Windows access token behaviour"],
@@ -7962,7 +7962,7 @@
     },
     {
       "id": "D08",
-      "title": "Incident response containment recovery and communication",
+      "title": "Responding to an incident",
       "stage": "Defensive operations",
       "prerequisites": ["D07", "O03"],
       "skills": ["incident triage containment evidence", "recovery validation", "communications and lessons learned"],
@@ -8024,7 +8024,7 @@
     },
     {
       "id": "D09",
-      "title": "Disk network and endpoint forensics",
+      "title": "Preserving and interpreting digital evidence",
       "stage": "Defensive operations",
       "prerequisites": ["D08", "C06"],
       "skills": ["acquisition chain of custody hashing", "file and registry artefacts", "network timeline corroboration"],
@@ -8104,7 +8104,7 @@
     },
     {
       "id": "D10",
-      "title": "Memory forensics reverse engineering and malware triage",
+      "title": "Inspecting memory and suspicious programs",
       "stage": "Defensive operations",
       "prerequisites": ["D09", "C05", "F02"],
       "skills": ["memory layers symbols processes modules", "static and dynamic analysis distinction", "malware triage evidence"],
@@ -8470,7 +8470,7 @@
     },
     {
       "id": "A01",
-      "title": "Distributed failures protocol state and secure retries",
+      "title": "Safe retries across services",
       "stage": "Advanced engineering",
       "prerequisites": ["G02", "C07", "S05", "W16"],
       "skills": ["distributed partial failure", "protocol state safety liveness", "retries idempotency and replay"],
@@ -8668,7 +8668,7 @@
     },
     {
       "id": "A02",
-      "title": "Security definitions reductions and cryptographic proofs",
+      "title": "Understanding a cryptographic security proof",
       "stage": "Advanced engineering",
       "prerequisites": ["A01", "M04", "C03", "S04"],
       "skills": ["perfect versus computational security", "adversary advantage reductions", "negligible probability and asymptotics"],
@@ -8754,7 +8754,7 @@
     },
     {
       "id": "A03",
-      "title": "Fuzzing static analysis symbolic execution and testing limits",
+      "title": "Finding defects with automated analysis",
       "stage": "Advanced engineering",
       "prerequisites": ["A02", "F02", "M05"],
       "skills": ["fuzz generation coverage", "static versus dynamic analysis", "symbolic execution constraints", "finding versus proving absence"],
@@ -8822,7 +8822,7 @@
     },
     {
       "id": "A04",
-      "title": "Hardware trust physical attacks and side channels",
+      "title": "Hardware trust and indirect information leaks",
       "stage": "Advanced engineering",
       "prerequisites": ["A03", "C05", "C06", "S03", "M05"],
       "skills": ["hardware trust roots", "timing cache and information leakage", "physical tampering and measurement"],
@@ -9065,7 +9065,7 @@
     },
     {
       "id": "A05",
-      "title": "Formal specification invariants and model checking",
+      "title": "Checking rules with formal models",
       "stage": "Advanced engineering",
       "prerequisites": ["A04", "M02", "C07", "A01"],
       "skills": ["TLA states invariants temporal properties", "model checking and counterexamples", "finite model scope"],
@@ -9181,7 +9181,7 @@
     },
     {
       "id": "A06",
-      "title": "Mobile security platform permissions and ecosystem trust",
+      "title": "Following data and permissions in mobile apps",
       "stage": "Advanced engineering",
       "prerequisites": ["A05", "F05", "G02"],
       "skills": ["mobile sandbox permissions signing", "application lifecycle and update trust", "storage and platform threat models"],
@@ -9312,7 +9312,7 @@
     },
     {
       "id": "A07",
-      "title": "Cyber physical systems safety telecoms and resilience",
+      "title": "Security when software affects the physical world",
       "stage": "Advanced engineering",
       "prerequisites": ["A06", "N03", "G01"],
       "skills": [
@@ -9466,7 +9466,7 @@
     },
     {
       "id": "R01",
-      "title": "Reading security papers and evaluating claims",
+      "title": "Reading security research critically",
       "stage": "Research preparation",
       "prerequisites": ["A07", "M05"],
       "skills": ["research question threat model contribution", "methodology evidence limitations", "related work and claim checking"],
@@ -9576,7 +9576,7 @@
     },
     {
       "id": "R02",
-      "title": "Reproducible experiments artifacts and responsible research",
+      "title": "Making research evidence reproducible",
       "stage": "Research preparation",
       "prerequisites": ["R01", "L03", "M05"],
       "skills": ["experiment design controls baselines", "artifact provenance and reproduction", "uncertainty ethics and disclosure"],
@@ -9736,7 +9736,7 @@
     },
     {
       "id": "R03",
-      "title": "Integrated capstone and defended specialisation",
+      "title": "Build and defend a security project",
       "stage": "Research preparation",
       "prerequisites": ["R02"],
       "skills": ["secure system design implementation review", "incident investigation and reporting", "specialisation evidence and oral defence"],
@@ -9883,7 +9883,7 @@
     },
     {
       "id": "I01",
-      "title": "AI and language-model systems: a security bridge",
+      "title": "How an AI application uses data and permissions",
       "stage": "AI security engineering",
       "prerequisites": ["P05", "M04", "B03", "S01"],
       "skills": ["training and inference", "tokens embeddings retrieval", "model versus application authority"],
@@ -9962,7 +9962,7 @@
     },
     {
       "id": "I02",
-      "title": "Direct and indirect prompt injection",
+      "title": "Understanding prompt injection",
       "stage": "AI security engineering",
       "prerequisites": ["I01", "W03", "S01"],
       "skills": ["untrusted context", "instruction authority", "capability limits"],
@@ -10021,7 +10021,7 @@
     },
     {
       "id": "I03",
-      "title": "RAG, embeddings and tenant-safe retrieval",
+      "title": "Keeping retrieved data inside account boundaries",
       "stage": "AI security engineering",
       "prerequisites": ["I02", "W11", "P04"],
       "skills": ["pre-context access control", "retrieval provenance", "cache isolation"],
@@ -10090,7 +10090,7 @@
     },
     {
       "id": "I04",
-      "title": "Tools, agents and independent action authorisation",
+      "title": "Checking AI tool actions independently",
       "stage": "AI security engineering",
       "prerequisites": ["I02", "S06", "W16", "A01"],
       "skills": ["guarded executor", "approval binding", "least privilege and retries"],
@@ -10149,7 +10149,7 @@
     },
     {
       "id": "I05",
-      "title": "Model, data and AI software supply chains",
+      "title": "Reviewing model and software supply chains",
       "stage": "AI security engineering",
       "prerequisites": ["I01", "F05", "G02"],
       "skills": ["artifact provenance", "model loading risks", "poisoning and rollback"],
@@ -10212,7 +10212,7 @@
     },
     {
       "id": "I06",
-      "title": "AI privacy, retention and sensitive-data boundaries",
+      "title": "Protecting private data across AI systems",
       "stage": "AI security engineering",
       "prerequisites": ["I03", "G02", "S03"],
       "skills": ["data minimisation", "provider retention", "derived data and redaction"],
@@ -10271,7 +10271,7 @@
     },
     {
       "id": "I07",
-      "title": "AI security assurance and resource limits",
+      "title": "Checking AI controls and resource limits",
       "stage": "AI security engineering",
       "prerequisites": ["I02", "I04", "M05"],
       "skills": ["static policy cases", "coverage limits", "budgets and no live probes"],
@@ -10335,7 +10335,7 @@
     },
     {
       "id": "I08",
-      "title": "AI incident response and security-case capstone",
+      "title": "Responding to an AI incident and defending a security case",
       "stage": "AI security engineering",
       "prerequisites": ["I01", "I02", "I03", "I04", "I05", "I06", "I07", "D08", "R02"],
       "skills": ["AI incident provenance", "containment and memory", "bounded security claims"],

@@ -1,7 +1,7 @@
 export default {
   slug: "voice-ai-studio",
   name: "Voice AI Studio",
-  version: "20261103-3",
+  version: "20261106-1",
   table: "voice_ai_progress",
   pythonEnabled: true,
   mark: "v",
@@ -9,8 +9,7 @@ export default {
   heroEmphasis: "Build the conversation.",
   heroCopy:
     "Learn how speech systems work and build them as you go: Python, actual audio, signal processing, speech models and complete voice applications.",
-  scopeNote:
-    "Pair the lessons with portfolio projects and specialist study. Expertise grows through implementation, theory, failure analysis and informed feedback.",
+  scopeNote: "Read one section at a time, follow the worked example, then try the exercise. You can pause and return whenever you need.",
   practiceNote:
     "Keep recordings and private transcripts outside your studio notes. Use the local lab for audio foundations; follow the project guide for permissioned speech and model work in your own environment.",
   portfolio: { label: "Build toward expertise · projects and milestones", url: "practice/portfolio.html" },
