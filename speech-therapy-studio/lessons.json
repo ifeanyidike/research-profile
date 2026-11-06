@@ -1,0 +1,974 @@
+{
+  "version": 1,
+  "reviewed": "6 November 2026",
+  "audience": "Parents of preschool children, especially around age three, who use few words or are beginning to combine words.",
+  "scope": "General parent education and low-pressure everyday communication support; not diagnosis, an individual treatment prescription or a professional qualification.",
+  "sources": {
+    "early": {
+      "title": "ASHA — Early identification of communication difficulties",
+      "url": "https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders",
+      "scope": "Read Language Disorders, Hearing Loss and Act Today. This explains when to seek help; it does not diagnose a child."
+    },
+    "hearing": {
+      "title": "NIDCD — Speech and language development",
+      "url": "https://www.nidcd.nih.gov/health/speech-and-language",
+      "scope": "Read What should I do if my child’s speech or language appears to be delayed? Note the role of a hearing assessment."
+    },
+    "glue": {
+      "title": "NHS — Glue ear",
+      "url": "https://www.nhs.uk/conditions/glue-ear/",
+      "scope": "Read symptoms and the effect of temporary hearing changes. This is background information, not a claim that a particular child has glue ear."
+    },
+    "lead": {
+      "title": "Newcastle Hospitals NHS — Following your child’s lead",
+      "url": "https://www.newcastle-hospitals.nhs.uk/resources/how-to-follow-your-childs-lead/",
+      "scope": "Read the short advice sheet about joining a child’s interests and copying their play."
+    },
+    "comments": {
+      "title": "Newcastle Hospitals NHS — Less questions, more comments",
+      "url": "https://www.newcastle-hospitals.nhs.uk/resources/less-questions-more-comments/",
+      "scope": "Read the examples of changing quiz questions into comments and accepting replies without pressure."
+    },
+    "understand": {
+      "title": "Newcastle Hospitals NHS — Help your child understand",
+      "url": "https://www.newcastle-hospitals.nhs.uk/resources/help-your-child-understand/",
+      "scope": "Read the advice about everyday language and supporting understanding. A home activity is not an assessment of understanding."
+    },
+    "everyday": {
+      "title": "The Hanen Centre — The power of parents",
+      "url": "https://www.hanen.org/information-tips/power-of-parents",
+      "scope": "Read the everyday-interaction introduction and the First Words User and Combiner sections. The free article is sufficient; buying a guidebook is optional."
+    },
+    "combine": {
+      "title": "The Hanen Centre — Combining words together",
+      "url": "https://www.hanen.org/information-tips/combining-words-together",
+      "scope": "Read why children combine meanings and how an adult can offer a slightly longer message in context. This is not a deadline for a child."
+    },
+    "grammar": {
+      "title": "The Hanen Centre — Talking to children who are learning to talk",
+      "url": "https://www.hanen.org/information-tips/how-to-talk-to-children-who-are-learning-to-talk",
+      "scope": "Read the distinction between short, grammatical language and removing grammatical words. Keep your language natural."
+    },
+    "interaction": {
+      "title": "The Hanen Centre — Supporting children with language delay",
+      "url": "https://www.hanen.org/information-tips/language-delay",
+      "scope": "Read the four interaction tips, including waiting and following interests. Parent involvement supports communication; outcomes differ."
+    },
+    "aac": {
+      "title": "ASHA / CHSA — Augmentative and alternative communication",
+      "url": "https://helpingyoucommunicate.org/article/augmentative-and-alternative-communication-aac",
+      "scope": "Read Types of AAC, Working With an SLP and Common Questions. Pictures and gestures can support speech; individual access needs matter."
+    },
+    "languages": {
+      "title": "ASHA / CHSA — Learning more than one language",
+      "url": "https://helpingyoucommunicate.org/article/learning-more-than-one-language",
+      "scope": "Read Teaching Your Child Multiple Languages and If Your Multilingual Child Has Speech Or Language Challenges. Multiple languages do not cause a language delay."
+    },
+    "milestones": {
+      "title": "ASHA — Communication from age 3 to 4",
+      "url": "https://www.asha.org/public/developmental-milestones/communication-milestones-3-to-4-years/",
+      "scope": "Read the introduction and age qualifications carefully. Items described by age four are not all requirements on a third birthday. Use concerns for discussion, not a home pass/fail score."
+    },
+    "play": {
+      "title": "Newcastle Hospitals NHS — Early language, attention and play",
+      "url": "https://www.newcastle-hospitals.nhs.uk/services/speech-and-language-therapy/childrens-speech-and-language-therapy/activities-to-support-children/early-language-development-attention-and-play/",
+      "scope": "Read Early language and communication strategies and the everyday play advice. The linked 33-minute presentation is optional, not assigned here."
+    },
+    "serve": {
+      "title": "Harvard — Five steps for responsive back-and-forth interaction",
+      "url": "https://developingchild.harvard.edu/resources/guides/how-to-5-steps-for-brain-building-serve-and-return/",
+      "scope": "Read the five-step guide. Apply it to comfortable, accessible back-and-forth interaction; it is not a treatment protocol or an eye-contact requirement."
+    },
+    "nhs-videos": {
+      "title": "Bedfordshire and Luton NHS — Named videos and written transcripts",
+      "url": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/",
+      "scope": "Open only the named transcript beside the assigned video. Other training on this collection page is not part of this parent course."
+    },
+    "changes": {
+      "title": "CDC — Concerns and loss of skills at age three",
+      "url": "https://www.cdc.gov/act-early/milestones/3-years.html",
+      "scope": "Read the advice about concerns or loss of previously used skills and talking to the child’s doctor. The milestone list is not a home diagnosis or a score for this course."
+    }
+  },
+  "videos": {
+    "serve": {
+      "title": "Harvard — 5 Steps for Brain-Building Serve and Return",
+      "url": "https://www.youtube.com/watch?v=KNrnZag17Ek",
+      "time": "Full short video: 0:00–6:06",
+      "purpose": "Notice a child’s interest, respond, leave a turn and respect endings. No eye contact or spoken answer is required.",
+      "evidence": "Recording/captions reviewed in the 31 October studio audit; official five-step guide checked again on 6 November.",
+      "transcript": "https://developingchild.harvard.edu/resources/guides/how-to-5-steps-for-brain-building-serve-and-return/"
+    },
+    "support": {
+      "title": "NHS — How to support social communication",
+      "url": "https://player.vimeo.com/video/908624122?app_id=122963",
+      "time": "Full short video: 0:00–6:28",
+      "purpose": "Choose meaningful interests, adjust the environment and make a short activity predictable. The examples span ages; do not use school-age tasks as requirements for a three-year-old.",
+      "evidence": "Exact video/timing from the earlier scoped transcript audit; publisher’s named transcript reread on 6 November.",
+      "transcript": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+    },
+    "choices": {
+      "title": "NHS — How to make a choice board",
+      "url": "https://player.vimeo.com/video/908624103?app_id=122963#t=0s",
+      "time": "Watch 0:00–6:29; stop there. Full recording is 7:27.",
+      "purpose": "An optional example of offering meaningful choices and showing how pictures are used. Size/number are examples, not a prescription. Do not move the child’s hand or insist that an accidental selection is their intended choice.",
+      "evidence": "0:00–6:29 assignment from the earlier transcript audit. Named publisher transcript checked; the later accidental-selection instruction is excluded. External players may continue beyond the assigned stop time.",
+      "transcript": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+    }
+  },
+  "lessons": [
+    {
+      "id": "S01",
+      "group": "Begin here",
+      "title": "Understand what you are helping with",
+      "goal": "Tell the difference between speaking, understanding and getting a message across.",
+      "explain": [
+        "Speech is how we make the sounds in words. Language is how we understand and express meaning. Communication is broader: a child can ask for help by handing you something, pointing, making a sound or using a word. A child who has few spoken words may still communicate in several ways.",
+        "Understanding words and using spoken words are related, but they are not the same skill. A child might show you what they want before they can name it. Your first job is to notice the message and respond. You can then add a useful word while helping.",
+        "In this first lesson, practise with an invented example: a child hands you a shoe. Notice the action, offer a short phrase and help. The next lessons show how to do this during comfortable play and daily routines. Individual assessment questions are explained on the Guidance page; you can learn these parent skills without waiting to complete a long theory course."
+      ],
+      "example": [
+        ["Situation", "An invented child hands a parent a shoe and makes a sound."],
+        ["Parent", "“Your shoe. Help with your shoe?” The parent helps."],
+        [
+          "What to notice",
+          "The child got a message across without a full sentence. The adult supplied useful words without making help depend on repeating them."
+        ]
+      ],
+      "materials": "No equipment. Read this example with your partner.",
+      "steps": [
+        "Read the example once. Name the action you can actually observe: handing over a shoe and making a sound.",
+        "Separate that observation from guesses such as “He understands every sentence” or “He cannot say any words”. The example does not establish either.",
+        "Say in your own words what speech, language and communication mean. Explain why helping the child communicate matters even before a new word appears.",
+        "Rehearse the shoe moment with your partner: one adult silently hands over a shoe; the other names it and helps without asking for repetition. Swap roles. This is practice for the adults, not a test of the child."
+      ],
+      "quiet": "A quiet child still needs a way to request help, refuse, enjoy something or ask for comfort. Accept the ways they can use now. Do not wait for speech before responding to needs.",
+      "difficult": "Return to the shoe example. Handing it over carried a message. The words named it. Helping was your reply. Practise those three parts slowly with your partner.",
+      "avoid": "Do not use a familiar response, a milestone checklist or this course to diagnose a child or rule out a hearing difficulty.",
+      "rehearsal": "One adult describes the shoe example. The other identifies one observation and one conclusion that would go beyond the information given.",
+      "check": {
+        "question": "A child hands you a shoe and makes a sound. What is a useful response?",
+        "choices": [
+          "Name the likely message and help, without requiring a word.",
+          "Wait for the exact word before helping.",
+          "Ignore the gesture because it is not speech."
+        ],
+        "answer": 0,
+        "reason": "An action or sound can communicate a need. You can offer useful words while responding to that need."
+      },
+      "sources": ["early", "hearing", "milestones", "changes"],
+      "video": null,
+      "prerequisites": [],
+      "rehearsalCheck": "The observable action is handing over the shoe and making a sound. You can name the likely message and help. You cannot conclude from this one event that the child understands every sentence or has a particular diagnosis."
+    },
+    {
+      "id": "S02",
+      "group": "Begin here",
+      "title": "Notice the communication that is already there",
+      "goal": "Recognise a message before deciding which words to offer.",
+      "explain": [
+        "Start with what happens, not how many words you wish had happened. A reach, a sound, handing you an object or moving away can be important. The meaning may be uncertain: reaching towards a shelf might mean wanting an object or wanting to show you something.",
+        "You can make a gentle guess and check it through your response. If you say “The car?” and offer the car, notice whether that seems to fit. If the child turns away, reconsider. Refusal gives information too.",
+        "For your own learning, use the invented example below. If you keep private observations for an appointment, describe a small situation and the actual response, rather than scoring every interaction. The studio records your learning checkmarks, not a child’s health record."
+      ],
+      "example": [
+        ["Child", "Points towards a car on the floor and says “uh”."],
+        ["Parent", "“The car?” The parent brings it within easy reach."],
+        ["Child", "Picks it up and pushes it."],
+        [
+          "Why this response fits",
+          "The adult checked a possible meaning and followed the child’s action. No word was required in exchange for the toy."
+        ]
+      ],
+      "materials": "A familiar activity. You can rehearse with another adult first.",
+      "steps": [
+        "Watch an ordinary moment without asking the child to perform.",
+        "Notice what drew their attention and what they did: reached, pointed, sounded, looked towards something or moved away.",
+        "Respond to the likely message using a short phrase and a helpful action.",
+        "If your guess does not fit, offer a different way to show you, such as looking together or choosing between objects.",
+        "For yourself, identify one thing you observed and one thing that remains uncertain. There is no word target to pass."
+      ],
+      "quiet": "Respond to the gesture or action you can recognise. You can say “Help?” while helping, or “All done” when the child clearly wants to finish.",
+      "difficult": "If the message is unclear and the child is upset, offer comfort and practical help first. Repeatedly asking “What?” can make the exchange harder.",
+      "avoid": "Do not treat every movement as a confirmed request or interpret silence as having nothing to communicate.",
+      "rehearsal": "Invent two explanations for a reach towards a shelf. Practise a response that lets you check your guess without demanding a word.",
+      "check": {
+        "question": "What is the clearest factual note?",
+        "choices": ["“Is lazy about talking.”", "“Definitely understands every word.”", "“Pointed at the car, then picked it up when offered.”"],
+        "answer": 2,
+        "reason": "The first describes observable actions. The others assign a motive or a broad ability that the example cannot establish."
+      },
+      "sources": ["interaction", "early"],
+      "video": null,
+      "prerequisites": ["S01"],
+      "rehearsalCheck": "The child might want the toy on the shelf, or might want to show you something. You could say “The car?” and help look, then check whether that response fits. Your guess stays open to correction."
+    },
+    {
+      "id": "S03",
+      "group": "Build the interaction",
+      "title": "Join what your child enjoys",
+      "goal": "Start a shared activity by following an interest rather than changing it.",
+      "explain": [
+        "Following your child’s lead means joining what already interests them. If they are rolling a car, you do not need to turn the moment into naming colours or counting wheels. Your first job is to make it comfortable to share the activity with you.",
+        "You might copy a safe action with your own toy, offer a related sound or simply watch nearby. Sit where you can both comfortably notice the activity. Being available matters; requiring eye contact does not.",
+        "A shared interest gives your words a clear meaning. When you say “It’s rolling” while a car moves, the words connect to something happening now. Joining is an invitation, not a way to take over the game."
+      ],
+      "example": [
+        ["Child", "Rolls a toy car down a cushion."],
+        ["Parent", "Rolls a different car alongside it and says “Down it goes!”"],
+        ["Then", "The parent pauses. The child can repeat the action, watch, make a sound, change the game or finish."]
+      ],
+      "materials": "A familiar safe toy or ordinary activity the child already likes. No new purchase is needed.",
+      "steps": [
+        "Choose a moment when you are both reasonably comfortable. Reduce distracting background sound if helpful.",
+        "Watch first. Work out what the child is enjoying rather than deciding a lesson for them.",
+        "Join with a similar action using your own item, or make one short comment about what they are doing.",
+        "Pause and see whether they make room for another turn. Stay alongside if they prefer parallel play.",
+        "Finish or change direction when they move away, refuse or lose interest. A brief pleasant exchange is enough."
+      ],
+      "quiet": "You can copy the safe action and offer a word or sound once. They can take part through movement or watching; they do not owe you an imitation.",
+      "difficult": "If joining interrupts the play, move back and observe. Try a less intrusive comment or a different time. You do not need to make every activity a shared one.",
+      "avoid": "Do not take the toy away, insist on a particular style of play or require the child to look into your eyes.",
+      "rehearsal": "One adult pretends to roll a car repeatedly. The other practises joining without asking a quiz question or changing the game.",
+      "check": {
+        "question": "The child is interested in rolling a car. What is a useful first step?",
+        "choices": [
+          "Replace the car with flashcards.",
+          "Hold the car until the child says its name.",
+          "Join that interest gently and leave space for a response."
+        ],
+        "answer": 2,
+        "reason": "Shared interest gives communication a reason. Access to the toy should not depend on speech."
+      },
+      "sources": ["lead", "serve"],
+      "video": "serve",
+      "prerequisites": ["S02"],
+      "rehearsalCheck": "Roll your own car nearby and make one relevant comment, such as “Down it goes”. Pause. If the other person wants to continue alone, let them. You do not need a colour question or a demand to look at you."
+    },
+    {
+      "id": "S04",
+      "group": "Build the interaction",
+      "title": "Leave room for a reply",
+      "goal": "Use a comfortable pause without turning it into a demand.",
+      "explain": [
+        "Adults can fill every gap with more words. A pause gives you time to notice a response and gives the child space to start something. Waiting means leaving a turn available, not withholding something until the child performs.",
+        "Try a short, relaxed pause after a comment or your own turn. Several seconds may feel longer than you expect. There is no compulsory countdown: watch the child’s comfort and respond when they communicate.",
+        "A response could be a movement, a gesture, a sound, a word or returning to the game. If no reply comes, you can carry on warmly. The pause has not failed."
+      ],
+      "example": [
+        ["Parent", "Rolls a ball gently and says “Here it comes.”"],
+        ["Pause", "The parent leaves room instead of adding several questions."],
+        ["Child", "Pushes the ball back without speaking."],
+        ["Parent", "“Back to me!” The game continues."]
+      ],
+      "materials": "A comfortable familiar game, such as rolling a safe ball.",
+      "steps": [
+        "Take one small turn in an activity the child has chosen.",
+        "Say one short comment that matches the action.",
+        "Stop talking briefly. Look at the activity and remain available without staring at the child.",
+        "Respond to whatever clear message appears. A gesture can be the child’s turn.",
+        "If there is no reply, make another ordinary comment or continue the activity. End if the child is done."
+      ],
+      "quiet": "Continue the game without requiring a sound. You might supply the phrase yourself and then leave another natural opportunity later.",
+      "difficult": "If the child becomes tense, frustrated or confused, shorten the pause and offer help. Waiting should make interaction easier, not become a test of endurance.",
+      "avoid": "Do not use silence to delay food, water, comfort, toilet access or needed help. Do not restart a countdown after every unsuccessful attempt.",
+      "rehearsal": "Practise a ball-game comment with your partner. Leave a pause, then continue naturally even when your partner gives no spoken answer.",
+      "check": {
+        "question": "What should happen if the child does not speak during a pause?",
+        "choices": [
+          "Wait indefinitely until a word appears.",
+          "Continue or help comfortably; speech is not the price of participation.",
+          "Repeat “say it” more loudly."
+        ],
+        "answer": 1,
+        "reason": "You are offering time, not setting a requirement. Responding to needs takes priority."
+      },
+      "sources": ["interaction", "serve"],
+      "video": "serve",
+      "prerequisites": ["S03"],
+      "rehearsalCheck": "Say one comment, leave a comfortable gap and then continue the game if no reply comes. The important point is leaving space without making the next turn depend on speech."
+    },
+    {
+      "id": "S05",
+      "group": "Build the interaction",
+      "title": "Use short, natural language",
+      "goal": "Make your words easier to follow while keeping their meaning.",
+      "explain": [
+        "A long sentence can contain more information than a child can easily follow in the moment. You can shorten your message and connect it to what they can see or do. This is not the same as speaking incorrectly or using a special therapy voice.",
+        "A model is simply an example the child can hear or see. You can model “Your shoe” while helping with a shoe, or “It’s wet” when water spills. Short phrases can be natural English. You do not need to remove every small grammatical word.",
+        "Match the amount you say to the child and the situation. One useful phrase followed by space can be easier than a stream of instructions. Speak comfortably; shouting is not a way to teach a word."
+      ],
+      "example": [
+        ["Too much at once", "“Can you go over there and get the other shoe so we can hurry up and leave?”"],
+        ["A simpler message", "The parent shows the shoe and says “Your shoe.” After that step: “On it goes.”"],
+        ["What changed", "One piece of information matched one action. The adult helped rather than testing the child."]
+      ],
+      "materials": "An ordinary routine with familiar objects.",
+      "steps": [
+        "Choose one message you actually need in the routine.",
+        "Reduce it to a short, clear phrase such as “Here’s your cup” or “The door’s open”. Use natural wording that fits what you mean.",
+        "Show the relevant object or action so the words have context.",
+        "Pause before adding another piece of information.",
+        "Notice whether your shorter message made the moment easier. Do not demand that the child repeat it."
+      ],
+      "quiet": "You can name the object or action and respond to the child’s gesture. Hearing a useful model can matter even when the child says nothing immediately.",
+      "difficult": "If a phrase still seems hard to follow, show the action and reduce extra information. If understanding concerns persist, bring examples to a qualified professional.",
+      "avoid": "Do not use long explanations, louder instructions or ungrammatical strings of words as the default way to simplify.",
+      "rehearsal": "Rewrite “Go and find your favourite book and bring it here so we can read before bed” as one short step followed later by another.",
+      "check": {
+        "question": "What makes a useful language model?",
+        "choices": [
+          "The longest sentence possible.",
+          "A word the child must repeat before receiving help.",
+          "A short, meaningful example connected to the current activity."
+        ],
+        "answer": 2,
+        "reason": "A model shows language in use. It is not a compulsory imitation task."
+      },
+      "sources": ["grammar", "everyday"],
+      "video": null,
+      "prerequisites": ["S03", "S04"],
+      "rehearsalCheck": "One possibility is “Get your book”, with the familiar book visible. After that step, say “Let’s read”. You separated the messages instead of giving a long chain of instructions at once."
+    },
+    {
+      "id": "S06",
+      "group": "Build the interaction",
+      "title": "Comment instead of quizzing",
+      "goal": "Turn a testing question into words the child can learn from.",
+      "explain": [
+        "“What is that? What colour is it? Say car.” These questions can make an enjoyable moment feel like a test. Sometimes the child does not know the answer, does not understand the question or simply wants to keep playing.",
+        "A comment gives the information instead: “A red car. It’s fast.” You can then pause and respond if the child adds anything. You are making words available without putting the child on the spot.",
+        "You do not need to ban questions. A real question such as offering two actual choices can be useful. The change is to ask less when you already know the answer and are mainly trying to make the child speak."
+      ],
+      "example": [
+        ["A quiz", "The parent points at a toy and repeatedly asks “What is it?”"],
+        ["A comment", "The parent says “A bus. The bus is going.”"],
+        ["Child", "Moves the bus and makes an engine sound."],
+        ["Parent", "Responds to the sound and joins the play."]
+      ],
+      "materials": "A familiar toy, picture or shared routine.",
+      "steps": [
+        "Notice a moment when you are about to ask a question with an answer you already know.",
+        "Say the answer or a related comment instead.",
+        "Keep it relevant to what the child is attending to.",
+        "Leave room for a reply without asking the same question again.",
+        "Respond to a gesture, action, sound or word, then continue together."
+      ],
+      "quiet": "Supply the useful word yourself and carry on. You have given language connected to the child’s activity; silence does not mean you must switch to drilling.",
+      "difficult": "If you find yourself asking question after question, stop and watch for a moment. One thoughtful comment is enough to restart.",
+      "avoid": "Do not replace every quiz with a harder open-ended question. A child using few words may find “Tell me everything about it” even harder.",
+      "rehearsal": "Turn “What colour?”, “What is the dog doing?” and “What is that?” into three short comments. Check that none demands a reply.",
+      "check": {
+        "question": "Which is a comment rather than a quiz?",
+        "choices": ["“Say running.”", "“What is the dog doing?”", "“The dog is running.”"],
+        "answer": 2,
+        "reason": "The comment offers the words and meaning without requiring an answer."
+      },
+      "sources": ["comments"],
+      "video": null,
+      "prerequisites": ["S05"],
+      "rehearsalCheck": "Possible comments are “A red car”, “The dog is running” and “It’s a bus”. Each gives useful information without asking the child to demonstrate an answer."
+    },
+    {
+      "id": "S07",
+      "group": "From words towards phrases",
+      "title": "Choose words that do useful jobs",
+      "goal": "Offer words for actions, help, refusal and enjoyment—not only object names.",
+      "explain": [
+        "A word is useful when it helps share a meaning. Names such as car and cup matter, but so do open, help, stop, more, gone and words about things the child likes. Communication includes refusing and commenting, not only asking for objects.",
+        "Choose a small opportunity in an activity already happening. If you are opening a door, the word open has a visible meaning. This is different from showing a printed word and asking the child to memorise it.",
+        "Repeat useful words naturally across real situations. No fixed number of repetitions guarantees a new word. You can supply the language while still responding to the child’s existing communication."
+      ],
+      "example": [
+        ["Situation", "A door is closed and the child waits nearby."],
+        ["Parent", "Says “Open the door” while opening it."],
+        ["Later", "While opening a familiar book: “Open the book.”"],
+        ["Why it helps", "The action gives open a meaning in two ordinary situations. Neither activity depends on repeating the word."]
+      ],
+      "materials": "Objects you already use. Keep access to essentials unrestricted.",
+      "steps": [
+        "Choose one useful meaning in the moment: help, an action, a refusal or something enjoyable.",
+        "Say a natural word or short phrase as the meaning occurs.",
+        "Show the action or refer to the relevant object.",
+        "Allow a response in the child’s usual way and respond to it.",
+        "Use the word again when it genuinely fits another situation. Stop before repetition becomes a performance demand."
+      ],
+      "quiet": "Pair a word with an action, gesture or picture that the child can access. They can learn about the meaning before they can say the word.",
+      "difficult": "If you cannot think of a word, describe what the child is doing rather than choosing a vocabulary list. Ask a therapist which communication purposes need more support when advice is available.",
+      "avoid": "Do not make getting a need met depend on using your chosen word. Do not focus only on colours, numbers and alphabet names.",
+      "rehearsal": "Choose a familiar toy and invent one action word, one help message and one way to refuse that could be useful during play.",
+      "check": {
+        "question": "Which group includes several communication purposes?",
+        "choices": ["Only naming colours correctly.", "“Open”, “help”, “stop” and “fun”.", "Only counting from one to ten."],
+        "answer": 1,
+        "reason": "Actions, requests, refusals and comments give language different useful jobs."
+      },
+      "sources": ["everyday", "interaction"],
+      "video": null,
+      "prerequisites": ["S05", "S06"],
+      "rehearsalCheck": "During car play you could model “It’s going” for an action, “Help me” when help is genuinely needed and “All done” when finishing. Respond to the child’s actual message; do not require these exact phrases."
+    },
+    {
+      "id": "S08",
+      "group": "From words towards phrases",
+      "title": "Add a little to your child’s message",
+      "goal": "Show a slightly longer message without asking for repetition.",
+      "explain": [
+        "Expanding means repeating the meaning of a message with a little more information. If a child says ball while watching a large ball roll, you might say “Big ball” or “The ball’s rolling”. Pick the meaning that fits; do not automatically assume every word is a request for more.",
+        "The extra part should be small enough to stay connected to the child’s message. You are offering an example, not correcting them or setting a sentence-length target. A one-word message is still worth answering.",
+        "Some children need support with understanding, producing sounds or other parts of communication as well. Hearing two-word models does not guarantee that a child will begin combining words by a particular date. Keep useful communication and enjoyable interaction central."
+      ],
+      "example": [
+        ["Child", "Says “car” while pointing at a red toy car."],
+        ["Parent", "“Red car.” Offers the car if that matches the child’s message."],
+        ["Child", "Pushes it without saying anything else."],
+        ["Parent", "“It’s going!” Keeps playing without asking for “red car” back."]
+      ],
+      "materials": "A moment when a word, gesture or picture has a meaning you can reasonably understand.",
+      "steps": [
+        "Listen to or notice the child’s message first.",
+        "Check the meaning from the situation. If uncertain, offer a gentle choice or look together.",
+        "Respond with a short model that keeps that meaning and adds one useful idea.",
+        "Provide the ordinary response or help; do not wait for the longer phrase.",
+        "Pause and continue the shared activity. If the child uses a longer message independently, respond to its meaning."
+      ],
+      "quiet": "You can put a gesture into words: if they reach to be picked up, say “Up you come” while responding. There is no need to wait for a first spoken word before modelling meaningful language.",
+      "difficult": "If your expansion feels like a lecture, shorten it. If the child protests, return to the message they were trying to convey, not your preferred phrase.",
+      "avoid": "Do not say “No, say it properly” or require the child to copy the expanded phrase.",
+      "rehearsal": "Invent an expansion for “bus”, “wet” and a clear gesture for help. Explain the meaning you added in each example.",
+      "check": {
+        "question": "The child says “ball”. After you say “big ball”, must they repeat it?",
+        "choices": [
+          "Yes, otherwise the interaction does not count.",
+          "No. Respond to their message and keep the model available without pressure.",
+          "Yes, before you give the ball back."
+        ],
+        "answer": 1,
+        "reason": "An expansion is an example of language in context, not an imitation requirement."
+      },
+      "sources": ["combine", "grammar"],
+      "video": null,
+      "prerequisites": ["S05", "S07"],
+      "rehearsalCheck": "If a bus is big, “Big bus” adds a description. If a sleeve is wet, “Wet sleeve” names what is wet. If the child needs help, “Help with the lid” can name that meaning while you help. Different wording may fit a different situation."
+    },
+    {
+      "id": "S09",
+      "group": "From words towards phrases",
+      "title": "Make understanding easier",
+      "goal": "Support one useful instruction without turning it into an obedience test.",
+      "explain": [
+        "Understanding language is sometimes called receptive language. Using language to express a message is called expressive language. They are related, but one familiar response does not tell us everything about either skill.",
+        "A child may understand “shoes on” during a familiar routine because the words, shoes and your actions all fit together. That is useful. It does not prove how they understand longer or unfamiliar sentences.",
+        "Support the meaning with a short message, the relevant object and enough time. If an action does not happen, there can be many explanations: the message was unclear, attention was elsewhere, the child did not want to do it, or something else matters. Do not use this activity to assign a diagnosis."
+      ],
+      "example": [
+        ["Parent", "Shows the coat and says “Here’s your coat.”"],
+        ["Then", "Offers help with the next ordinary step."],
+        ["Child", "Turns away."],
+        ["Parent", "Checks comfort and what the child wants rather than repeating louder or deciding the child cannot understand."]
+      ],
+      "materials": "One familiar routine; no home hearing tests or surprise commands.",
+      "steps": [
+        "Choose a useful message in a routine already taking place.",
+        "Reduce background distraction if that makes the moment easier.",
+        "Use a short phrase and show the relevant object or action.",
+        "Give time, then help or clarify if needed. Recognise the child’s choice or refusal.",
+        "If you have concerns, keep a private concrete example to discuss with a professional. Do not score correct versus incorrect trials here."
+      ],
+      "quiet": "The child can show understanding through an action or gesture. Speaking is not needed to show that one message made sense.",
+      "difficult": "Try a simpler message with context, or pause the routine if practical. Persistent difficulty understanding deserves advice even when the child responds to favourite invitations.",
+      "avoid": "Do not shout, repeatedly test hearing at home, or label refusal as proof of a language difficulty.",
+      "rehearsal": "Describe two possible reasons a child might not fetch a coat. Practise a response that helps without claiming you know which reason applies.",
+      "check": {
+        "question": "Does following one familiar instruction prove complete language understanding?",
+        "choices": [
+          "Yes, it also proves hearing is normal.",
+          "No. It is one observation in a particular context.",
+          "Yes, it rules out every language difficulty."
+        ],
+        "answer": 1,
+        "reason": "Context helps performance. Broader understanding and hearing need appropriate assessment when there are concerns."
+      },
+      "sources": ["understand", "hearing"],
+      "video": null,
+      "prerequisites": ["S05"],
+      "rehearsalCheck": "The child might not have understood the message, or might not want the coat. You could show the coat, offer a short message and check comfort or preference. Neither explanation is established until you have more information."
+    },
+    {
+      "id": "S10",
+      "group": "From words towards phrases",
+      "title": "Offer real choices without pressure",
+      "goal": "Make a choice easier to understand and accept more than spoken answers.",
+      "explain": [
+        "A useful choice offers two real possibilities that are available now. Showing a book and a car while asking “Book or car?” can make the meaning clearer than listing invisible options.",
+        "The child might point, reach, look towards one item, use a picture or say a word. Check whether your response fits. Looking towards something is not always a deliberate selection, and the child can change their mind.",
+        "Choices are invitations, not a way to delay essential needs. A child does not have to say water before being given a drink. “Neither” and “finished” are valid possibilities too."
+      ],
+      "example": [
+        ["Parent", "Shows a book and a toy car: “Book or car?”"],
+        ["Child", "Reaches towards the book."],
+        ["Parent", "“The book.” Offers it and notices whether the child accepts it."],
+        ["If neither fits", "The parent accepts moving away instead of repeating the question until an answer comes."]
+      ],
+      "materials": "Two safe, familiar options that are genuinely available.",
+      "steps": [
+        "Choose a low-pressure play or reading moment.",
+        "Show both options within the child’s comfortable view or reach; adapt for their access needs.",
+        "Name the choices once in a short phrase, then leave space.",
+        "Respond to a clear selection in the child’s usual communication style. Check uncertain selections gently.",
+        "Allow a change of mind or refusal. Continue without demanding the option’s spoken name."
+      ],
+      "quiet": "Accept reaching, pointing or another established signal. You can model the word while offering the chosen option.",
+      "difficult": "If two items are confusing, return to joining an activity the child has already chosen. A formal picture system needs individual access advice; it is not compulsory for this activity.",
+      "avoid": "Do not withhold a drink, food, comfort or a needed item to produce a word. Do not move the child’s hand to select.",
+      "rehearsal": "Offer two imaginary activities to your partner. Have them choose without speaking, then change their mind. Practise accepting both messages.",
+      "check": {
+        "question": "What counts as a valid response to a choice?",
+        "choices": [
+          "Only a perfectly pronounced word.",
+          "A clear accessible message, including a gesture or a refusal.",
+          "Only the option the adult prefers."
+        ],
+        "answer": 1,
+        "reason": "The purpose is communicating a preference, not passing a naming test."
+      },
+      "sources": ["comments", "aac"],
+      "video": "choices",
+      "prerequisites": ["S04", "S09"],
+      "rehearsalCheck": "Offer two genuinely available activities. If your partner points to the book, say “The book” and offer it. If they then refuse, acknowledge the change rather than making them keep the first choice."
+    },
+    {
+      "id": "S11",
+      "group": "Everyday activities",
+      "title": "Enjoy a book together",
+      "goal": "Use pictures and interest to make reading a conversation.",
+      "explain": [
+        "You do not need to read every printed word or finish a book. Sharing a picture the child enjoys can give both of you something to communicate about. A favourite page repeated many times is still a useful shared moment.",
+        "Comment on what the child notices. If they point at a dog, you can say “The dog’s sleeping”. Leave space, then follow their response. Quizzing every picture can interrupt the enjoyment.",
+        "Use a book that is safe and comfortable to handle. Shared reading can be very short. The aim here is language around an interest, not teaching independent reading or measuring attention."
+      ],
+      "example": [
+        ["Child", "Turns back to a page with a bus and points."],
+        ["Parent", "“A big bus.” Pauses."],
+        ["Child", "Makes an engine sound."],
+        ["Parent", "Copies the sound lightly: “The bus is going.” They stay on that page."]
+      ],
+      "materials": "A familiar picture book. A safe picture of an everyday object can also start a shared comment.",
+      "steps": [
+        "Offer a book the child enjoys and let them choose a page.",
+        "Notice what they look at, touch or point towards.",
+        "Make one short comment connected to that interest.",
+        "Pause and respond to their action, sound, gesture or word. Expand a message if it makes sense.",
+        "Repeat, turn the page or finish according to the child’s interest. Keep the book available without requiring an answer."
+      ],
+      "quiet": "Point to a picture while naming it, or respond to the child’s pointing. They can turn pages and enjoy the activity without naming pictures.",
+      "difficult": "If sitting together is uncomfortable, try a different position or a very brief look. You can return later; finishing the story is not a requirement.",
+      "avoid": "Do not hold the page hostage until the child names an item or require a fixed number of minutes sitting still.",
+      "rehearsal": "Take any ordinary picture and prepare two comments and one possible expansion. None should require a correct answer.",
+      "check": {
+        "question": "The child wants the same page again. What can you do?",
+        "choices": [
+          "Share that interest and comment again without needing to finish the book.",
+          "Test them on the next page first.",
+          "Refuse until every picture is named."
+        ],
+        "answer": 0,
+        "reason": "Repetition in an enjoyable context gives useful language another meaningful setting."
+      },
+      "sources": ["play", "everyday"],
+      "video": null,
+      "prerequisites": ["S03", "S06", "S08"],
+      "rehearsalCheck": "For a bus picture, possible comments are “A bus” and “The bus is stopping”. If the child says “bus”, a possible expansion is “Big bus”. Use the picture and the child’s interest to choose what fits."
+    },
+    {
+      "id": "S12",
+      "group": "Everyday activities",
+      "title": "Play back and forth",
+      "goal": "Make space for enjoyable turns without taking control of the play.",
+      "explain": [
+        "A turn is a contribution to an exchange. It can be pushing a car, placing a block, making a sound or saying something. Back-and-forth play does not have to follow the rules of a formal game.",
+        "First notice whether the child wants you to join. You can take a small turn beside them using your own item. A comfortable shared rhythm is more important than enforcing equal turns or making a child hand over a favourite object.",
+        "The same play can provide meaningful action words such as go, stop, fall and build. Describe what is happening rather than making the child recite the words."
+      ],
+      "example": [
+        ["Child", "Builds with large safe blocks."],
+        ["Parent", "Adds a block to their own nearby tower: “Up it goes.”"],
+        ["Child", "Knocks their own tower down and laughs."],
+        ["Parent", "“It fell!” Joins the interest rather than insisting the child rebuild on command."]
+      ],
+      "materials": "Familiar safe toys, with enough materials to avoid taking the child’s only item.",
+      "steps": [
+        "Watch the play and offer a small way to join.",
+        "Use your own toy or material where possible.",
+        "Say one relevant word or short phrase with your action.",
+        "Leave space for the child’s contribution; it may not be the turn you expected.",
+        "Continue while it is comfortable and welcome an ending or change of game."
+      ],
+      "quiet": "An action is a turn. You can respond by copying it safely or adding a relevant comment without requesting speech.",
+      "difficult": "If sharing materials causes distress, use separate items or watch. The activity is not a programme for forcing sharing or compliance.",
+      "avoid": "Do not take objects away to make the child request them back or insist on a particular pretend-play story.",
+      "rehearsal": "With your partner, act out three turns using only gestures and actions. Then add one useful word to each adult turn.",
+      "check": {
+        "question": "Can a child take a turn without using a word?",
+        "choices": [
+          "Yes. An action, gesture or sound can contribute to the exchange.",
+          "No. They must first imitate the adult.",
+          "No. Only spoken turns count."
+        ],
+        "answer": 0,
+        "reason": "Communication and participation are broader than spoken sentences."
+      },
+      "sources": ["lead", "serve"],
+      "video": "support",
+      "prerequisites": ["S03", "S04", "S07"],
+      "rehearsalCheck": "An action-only exchange might be rolling a ball, pushing it back and rolling it again. The adult can add “Here it comes” or “Back to me”. The return push counts even without words."
+    },
+    {
+      "id": "S13",
+      "group": "Everyday activities",
+      "title": "Use words during meals",
+      "goal": "Talk about an existing meal without making eating depend on talking.",
+      "explain": [
+        "Meals offer familiar objects, actions and preferences. You can name a cup, comment that food is warm, or respond to a request for help. The meal remains a meal; communication practice should not control access to food or drink.",
+        "Use only the foods, textures and feeding arrangements already appropriate for the child. This lesson teaches language around an ordinary routine, not feeding or swallowing treatment. Do not introduce unfamiliar food challenges for speech practice.",
+        "A clear refusal matters as much as a request for more. If the child shows they are finished, acknowledge it. If eating or drinking involves coughing, choking or other difficulty, seek appropriate health advice rather than trying to solve it through language practice."
+      ],
+      "example": [
+        ["Child", "Reaches towards their usual cup."],
+        ["Parent", "“Your water.” Passes the cup promptly."],
+        ["Later", "The child pushes a bowl away."],
+        ["Parent", "“All done?” Checks the message and responds without requesting “finished” first."]
+      ],
+      "materials": "An ordinary supervised meal using the child’s usual safe food and drink.",
+      "steps": [
+        "Meet hunger, thirst, comfort and any feeding needs as usual.",
+        "Choose one natural moment to name an object or action.",
+        "Use a short phrase while responding, such as “Here’s your cup”.",
+        "If a choice is appropriate, show two genuinely available familiar options and accept a gesture.",
+        "Acknowledge help requests and refusals. Stop the language focus if it makes the meal harder."
+      ],
+      "quiet": "Provide the food, drink or help the child needs. Add the word as you act; do not make it a condition.",
+      "difficult": "If the child is hungry, tired or frustrated, prioritise a comfortable meal. Another time can provide an easier communication opportunity.",
+      "avoid": "Do not ration ordinary portions to force repeated requests, require a word before a drink, or change food textures as a speech exercise.",
+      "rehearsal": "Practise responding to a silent reach for a cup and a gesture of refusal. Say what you would do before thinking about a new word.",
+      "check": {
+        "question": "What comes first when the child needs a drink?",
+        "choices": [
+          "Wait until a full sentence appears.",
+          "Require “water” before giving it.",
+          "Provide access to the drink; you can model a word while doing so."
+        ],
+        "answer": 2,
+        "reason": "A basic need should not become the reward for producing speech."
+      },
+      "sources": ["early", "everyday"],
+      "video": null,
+      "prerequisites": ["S05", "S10"],
+      "rehearsalCheck": "For a reach towards a drink, provide access and say “Your water”. For a clear refusal, acknowledge it and check whether the child is finished. A meal is not a test of saying please or naming food."
+    },
+    {
+      "id": "S14",
+      "group": "Everyday activities",
+      "title": "Talk while getting ready",
+      "goal": "Connect short messages with dressing and washing routines.",
+      "explain": [
+        "During familiar routines, words have an immediate meaning. Shoes, coat, on, off, wet and dry can connect to objects and actions happening now. You do not need a special lesson table or a bag of teaching materials.",
+        "Choose one or two moments rather than narrating every second. A short message followed by a helpful action gives the child time to connect them. Let comfort, privacy and getting the routine done take priority.",
+        "A child may not want the routine at that moment. A refusal is a message, not automatically a failure to understand. Adjust what you can and provide the ordinary help they need."
+      ],
+      "example": [
+        ["Parent", "Shows a familiar coat: “Your coat.”"],
+        ["Child", "Offers an arm."],
+        ["Parent", "Helps comfortably and says “Your arm’s in.”"],
+        ["Then", "The routine continues. The parent does not ask the child to name body parts first."]
+      ],
+      "materials": "The clothes or washing items already needed. Keep normal supervision and care.",
+      "steps": [
+        "Choose a comfortable part of the usual routine.",
+        "Show the relevant item and say one short message.",
+        "Pause briefly where practical, but do not delay help or care.",
+        "Respond to participation, a gesture, a word or a refusal.",
+        "Use another useful word only when its meaning occurs naturally, such as “Dry hands” while helping dry them."
+      ],
+      "quiet": "An offered arm, a reach or holding up a shoe can carry a message. Respond and supply the words yourself.",
+      "difficult": "If time is short or the routine is distressing, complete care without turning it into practice. You can choose a different activity later.",
+      "avoid": "Do not withhold dressing help, toilet access or care. Do not force touch, eye contact or verbal imitation to complete a step.",
+      "rehearsal": "Choose a getting-ready routine and identify two short phrases that match actual actions, plus one sign that you should reduce demands.",
+      "check": {
+        "question": "Must every routine become a language session?",
+        "choices": [
+          "Yes. Keep going even when distressed.",
+          "No. Use comfortable opportunities and prioritise care when needed.",
+          "Yes. Require each clothing word first."
+        ],
+        "answer": 1,
+        "reason": "Useful practice fits daily life; it should not make essential care harder."
+      },
+      "sources": ["everyday", "understand"],
+      "video": null,
+      "prerequisites": ["S05", "S09"],
+      "rehearsalCheck": "During washing, “Wet hands” can match looking at the hands, followed by “Let’s dry them” while helping. If the child is distressed or trying to finish, reduce the language demand and prioritise care."
+    },
+    {
+      "id": "S15",
+      "group": "Everyday activities",
+      "title": "Use songs and familiar actions",
+      "goal": "Share a predictable, enjoyable sequence without requiring missing words.",
+      "explain": [
+        "A familiar song or action sequence can make the next turn easier to anticipate. Your child might join with a movement or sound before a word. You can enjoy that response without treating the activity as a fill-in-the-blank test.",
+        "Choose something your child already likes and keep the pace comfortable. Make a short pause at a natural place only if the child enjoys it. If they do not fill it, you can continue the song yourself.",
+        "You do not need an app, a loud recording or a screen. Your own voice and a familiar safe action are enough. Avoid any movement the child dislikes or cannot comfortably join."
+      ],
+      "example": [
+        ["Parent", "Starts a familiar action song that the child enjoys."],
+        ["Pause", "Leaves a small gap before a familiar action."],
+        ["Child", "Raises their hands without speaking."],
+        ["Parent", "Continues with the action and song, accepting the movement as participation."]
+      ],
+      "materials": "A familiar song or a safe repeated action the child enjoys; no purchased resources.",
+      "steps": [
+        "Offer the familiar activity and notice whether the child wants it.",
+        "Use a comfortable voice and pace.",
+        "Leave a small natural gap if that is enjoyable, not frustrating.",
+        "Respond to an action, gesture, sound or word; continue even if there is no spoken fill-in.",
+        "Accept “again” or “finished” through any clear communication. Stop when the child is done."
+      ],
+      "quiet": "You can do the action and continue the words. Joining through movement is a meaningful contribution.",
+      "difficult": "If the pause or sound is uncomfortable, remove the pause, lower the sound or choose a different quiet activity.",
+      "avoid": "Do not hold the next enjoyable action until the child produces your chosen word, and do not keep singing over clear refusal.",
+      "rehearsal": "Rehearse a short familiar sequence with your partner. Have them signal “finished” without speaking; practise ending promptly.",
+      "check": {
+        "question": "The child joins a song by moving their hands. Does that count?",
+        "choices": [
+          "Yes. Respond to that contribution without requiring the lyric.",
+          "Only after repeated correction.",
+          "Only if the next word is spoken."
+        ],
+        "answer": 0,
+        "reason": "The aim is an enjoyable exchange, not a test of memorised lyrics."
+      },
+      "sources": ["play", "serve"],
+      "video": null,
+      "prerequisites": ["S03", "S04"],
+      "rehearsalCheck": "When your partner turns away or uses the agreed finished gesture, stop the sequence and acknowledge the ending. The response you are practising is respecting communication, not obtaining one last word."
+    },
+    {
+      "id": "S16",
+      "group": "Keep communication working",
+      "title": "When you cannot understand a word",
+      "goal": "Repair a misunderstood message without repeated correction.",
+      "explain": [
+        "A child may use words that are hard for others to understand. Speech clarity and how much language a child uses are different questions, and both can deserve support. You do not need to correct every sound to respond to the message.",
+        "First use the situation and any gestures to check the meaning. If a child points at a cup and says something close to cup, you can say “Your cup” while responding. This gives a clear spoken example without telling them their attempt was wrong.",
+        "When you do not know, say so kindly and offer another way to show you. Guessing repeatedly or pretending you understood can leave the child without the help they wanted. Specific sound practice should follow individual professional guidance."
+      ],
+      "example": [
+        ["Child", "Says an unclear word while looking towards a shelf."],
+        ["Parent", "“I’m not sure. Show me?” Offers help to look together."],
+        ["Child", "Points at the car."],
+        ["Parent", "“The car.” Responds to the message rather than requiring a corrected pronunciation."]
+      ],
+      "materials": "An ordinary interaction; no mouth exercises or speech-sound drills.",
+      "steps": [
+        "Pause and listen without rushing to correct.",
+        "Use the current activity, gestures or objects to check a likely meaning.",
+        "If uncertain, offer a choice or look together instead of repeatedly asking for the same word.",
+        "Once the meaning is clearer, say the word naturally and respond.",
+        "If unclear speech often prevents communication, discuss examples and possible supports with a qualified professional when you can."
+      ],
+      "quiet": "Keep gestures, objects or pictures available. Supporting the message does not require a perfectly spoken word.",
+      "difficult": "If the child is becoming upset, acknowledge the difficulty and help. Return to the word later only if the child wants to continue.",
+      "avoid": "Do not prescribe blowing, tongue-strengthening or other mouth exercises as a general fix for few words. Do not demand repeated “correct” attempts.",
+      "rehearsal": "Your partner uses an invented unclear word. Practise two ways to check meaning without saying “No, say it properly”.",
+      "check": {
+        "question": "What is a useful response to an understandable sound error?",
+        "choices": [
+          "Interrupt and require repeated correction.",
+          "Say the intended word naturally while answering the child’s message.",
+          "Ignore every gesture until pronunciation is perfect."
+        ],
+        "answer": 1,
+        "reason": "A natural example keeps communication working. An individual sound-treatment plan needs more information."
+      },
+      "sources": ["early"],
+      "video": null,
+      "prerequisites": ["S02", "S05"],
+      "rehearsalCheck": "You could offer two plausible objects and ask which one, or look together while saying “Show me”. Once the meaning is clear, name it naturally. You do not need to correct the invented word repeatedly."
+    },
+    {
+      "id": "S17",
+      "group": "Keep communication working",
+      "title": "Support words with gestures and pictures",
+      "goal": "Understand how other communication methods can help now.",
+      "explain": [
+        "AAC means augmentative and alternative communication. Augmentative means adding to speech; alternative means another way of communicating. Gestures, objects, pictures and speech-generating tools are examples. A child can use more than one method.",
+        "Pictures or gestures are not a reason to stop offering spoken language. They can make a message easier to understand or express. A child does not need to prove a certain age or test score before AAC can be considered.",
+        "Different tools suit different access needs. Choosing a complete communication system needs individual advice. For everyday support, start by respecting the child’s current ways of asking, refusing, showing interest and seeking help. A choice board is only one small communication tool."
+      ],
+      "example": [
+        ["Situation", "A child is interested in a book or a car."],
+        ["Parent", "Shows the real objects or familiar pictures and names the options."],
+        ["Child", "Clearly points towards the book."],
+        ["Parent", "“The book.” Offers it and checks that this fits. The child can also refuse or change their mind."]
+      ],
+      "materials": "Familiar real objects are enough. Use an existing communication aid as advised; no app purchase is required.",
+      "steps": [
+        "Notice the ways the child already communicates and respond to them.",
+        "If using a familiar object or picture to support a message, pair it with natural spoken language.",
+        "Show how you use it yourself rather than asking the child to identify symbols as a test.",
+        "Accept an accessible clear response; do not take the child’s hand and move it.",
+        "If you need a broader system for different messages or access needs, ask for individual AAC guidance rather than assuming a generic board is enough."
+      ],
+      "quiet": "A gesture or picture can carry a complete message now. Do not remove it in an attempt to force speech.",
+      "difficult": "If a picture seems confusing, return to real objects or an established method. If a selection seems accidental, clarify rather than imposing that option.",
+      "avoid": "Do not remove an existing communication aid, physically force a selection or claim that one board is a complete language system.",
+      "rehearsal": "List four purposes a communication method should support: choosing, refusing, asking for help and sharing interest. Explain why a board with only favourite objects may be incomplete.",
+      "check": {
+        "question": "Must pictures be withheld until the child tries harder to speak?",
+        "choices": [
+          "Yes, only children above a certain test score may use AAC.",
+          "Yes, pictures always stop speech.",
+          "No. Other communication methods can support language and speech."
+        ],
+        "answer": 2,
+        "reason": "AAC can support communication without a prerequisite age or score. Individual access and a range of messages matter."
+      },
+      "sources": ["aac"],
+      "video": "choices",
+      "prerequisites": ["S02", "S10"],
+      "rehearsalCheck": "A method should allow more than selecting favourite things: it should support a choice, “no/finished”, help and sharing interest. A small choice board may support one situation while leaving other messages unavailable; individual AAC advice can address wider needs."
+    },
+    {
+      "id": "S18",
+      "group": "Keep communication working",
+      "title": "Use English and your family’s languages",
+      "goal": "Use comfortable, meaningful language without blaming multilingualism.",
+      "explain": [
+        "The examples in this studio use English. You can adapt them to the languages your family naturally uses. Using more than one language does not itself cause a speech or language delay.",
+        "Choose languages in which you can interact warmly and naturally. Families do not need to adopt a rigid language rule just because a child has few words. Mixing languages can be a normal part of multilingual communication.",
+        "If an assessment is arranged, describe all languages the child hears and uses, with whom and in which settings. Ask how those languages will be considered. Difficulty in English alone should not automatically be treated as a disorder."
+      ],
+      "example": [
+        ["Situation", "One adult shares a familiar book in English; another uses a home language they are comfortable with."],
+        ["Both adults", "Follow the child’s interest, offer short meaningful language and accept gestures or words."],
+        ["What stays the same", "The interaction principles remain. The words and family routines may differ."]
+      ],
+      "materials": "A familiar routine in a language you use comfortably. English-only families can apply the same interaction principles.",
+      "steps": [
+        "Use the language that lets you share this activity naturally.",
+        "Keep the same helpful steps: follow interest, offer a short message and leave space.",
+        "Respond to meaning even if a child mixes languages or uses a gesture.",
+        "If working with another caregiver, share the activity approach rather than insisting on identical wording.",
+        "For professional discussions, include the actual language history instead of assuming English tells the whole story."
+      ],
+      "quiet": "Keep gestures and other communication available in every language setting. No immediate spoken translation is required.",
+      "difficult": "If family advice conflicts, return to qualified multilingual guidance rather than removing a home language on the assumption that it caused the delay.",
+      "avoid": "Do not blame parents’ accents or multilingual exposure, or insist on English-only interaction as a universal treatment.",
+      "rehearsal": "Explain to your partner which parts of a book-sharing activity would stay the same if you used another familiar language.",
+      "check": {
+        "question": "Does using more than one language cause a language delay?",
+        "choices": [
+          "Yes, language mixing proves a disorder.",
+          "Yes, every child with few words must use English only.",
+          "No. Multilingual exposure itself does not cause a language delay."
+        ],
+        "answer": 2,
+        "reason": "Language background affects assessment and experience; multilingualism itself is not a diagnosis."
+      },
+      "sources": ["languages"],
+      "video": null,
+      "prerequisites": ["S05"],
+      "rehearsalCheck": "The adult would still follow the child’s interest, use a short meaningful message, leave a turn and accept an accessible response. The language, words and familiar story could change to fit the family."
+    },
+    {
+      "id": "S19",
+      "group": "Keep communication working",
+      "title": "Work together and prepare useful questions",
+      "goal": "Agree on one adult strategy and describe concerns clearly.",
+      "explain": [
+        "You and another caregiver do not need to say identical sentences. It helps to agree on a simple approach: perhaps follow the child’s chosen play, make a short comment and leave room for a response. Avoid competing to get the child to perform for each adult.",
+        "When you discuss progress, include comfort, getting a message across and the situations that were easier or harder. A new word is valuable, but a single word count cannot describe the whole picture.",
+        "If you seek further advice, concrete examples and previous reports can make the conversation more useful. Ask the professional to demonstrate an appropriate home strategy and explain what to change if it is too hard. If skills are lost, contact a health professional promptly rather than waiting to finish a home programme."
+      ],
+      "example": [
+        ["Adult one", "“During the book, I made one comment and waited. There was pointing but no new word.”"],
+        ["Adult two", "“Let’s use that same approach during play, without expecting a word tonight.”"],
+        [
+          "A useful appointment question",
+          "“Could you show us one strategy for the communication need you identified, and how to adapt it if our child is quiet or upset?”"
+        ]
+      ],
+      "materials": "An adult conversation. Keep any child-specific reports or observations private and outside the studio.",
+      "steps": [
+        "Choose one strategy from a lesson you both understand.",
+        "Explain it to each other using the lesson’s invented example.",
+        "Agree on an ordinary activity and a way to respect the child’s stop signal.",
+        "Share what made interaction easier, without blaming the child or each other.",
+        "For a professional conversation, prepare questions about understanding, hearing, communication methods and what support fits next. No need to create a home diagnostic score."
+      ],
+      "quiet": "Agreement between adults can focus on recognising existing messages and responding. The child does not need to demonstrate words to prove that you have learnt the strategy.",
+      "difficult": "If you disagree, rehearse away from the child and choose the less demanding approach. Do not turn the child’s interaction into a contest between adults.",
+      "avoid": "Do not treat the studio’s completed-lesson count as a measure of a child’s development or delay seeking help after loss of skills.",
+      "rehearsal": "Take turns explaining a strategy. Ask: what will I do, what response will I accept, and when will I stop? Prepare one question you would ask about adapting it.",
+      "check": {
+        "question": "What do studio completion checkmarks mean?",
+        "choices": [
+          "Professional therapy is no longer needed.",
+          "An adult has reviewed the lesson; they do not measure the child’s speech or clinical progress.",
+          "The child has passed a language milestone."
+        ],
+        "answer": 1,
+        "reason": "Parent learning and an individual child’s needs are different things."
+      },
+      "sources": ["early", "interaction", "hearing", "changes"],
+      "video": null,
+      "prerequisites": ["S03", "S08"],
+      "rehearsalCheck": "An adult might say: “I will comment once during car play, accept a gesture or sound as a reply and stop if the child moves away.” A useful question is “Can you show us how to simplify this if it is too hard?”"
+    },
+    {
+      "id": "S20",
+      "group": "Keep communication working",
+      "title": "Make a week you can repeat",
+      "goal": "Create a manageable routine and review your own learning without deadlines for speech.",
+      "explain": [
+        "You do not have to add a new exercise every day. A familiar enjoyable activity can be repeated while you practise one adult skill. A few comfortable moments woven into daily life can be easier to sustain than a long session that everyone dreads.",
+        "Use the sample week as an organisational example, not a treatment dose or a promise of words after seven days. Adapt the length, activity and language to the child’s comfort and any individual advice you have.",
+        "At the end, ask what you learnt to do differently and whether communication was easier to support. If needs remain unmet, progress stalls or concerns increase, seek appropriate advice; do not respond by imposing more demanding drills. You can revisit these lessons while arranging support."
+      ],
+      "example": [
+        [
+          "A sample week",
+          "Monday: join play. Tuesday: use a short comment in the same play. Wednesday: leave room for a turn. Thursday: share a favourite book. Friday: offer a real choice. Weekend: repeat what was most comfortable."
+        ],
+        ["Adult reflection", "“I noticed I was asking many quiz questions. This week I practised giving a comment instead.”"],
+        ["What this does not mean", "There is no requirement that the child produces a new word or phrase by the weekend."]
+      ],
+      "materials": "One activity you already do and one adult strategy. No timer or purchased programme is necessary.",
+      "steps": [
+        "Choose an activity that has been comfortable, not the most demanding lesson.",
+        "Pick one adult action to practise, such as commenting instead of quizzing.",
+        "Agree with your partner how you will respond to gestures, refusals and silence.",
+        "Repeat when it fits; shorten, change or skip a moment that is uncomfortable.",
+        "Review your own learning and any continuing concerns. Use the Guidance page for appointment questions and source information."
+      ],
+      "quiet": "Continue to provide language and respond to accessible messages. The week has no spoken-word quota.",
+      "difficult": "Reduce the demand or return to an easier activity. If communication difficulties continue to affect daily life, home practice alone cannot tell you which additional support is needed.",
+      "avoid": "Do not increase pressure to meet a calendar target, compare siblings or treat missed days as failure.",
+      "rehearsal": "Make a one-week adult learning plan with one activity, one strategy and one way to make it easier. Explain why it has no deadline for new words.",
+      "check": {
+        "question": "What is the purpose of the sample week?",
+        "choices": [
+          "To replace an individual assessment.",
+          "To guarantee two-word phrases after seven days.",
+          "To organise manageable parent practice, not predict when a child will speak."
+        ],
+        "answer": 2,
+        "reason": "An organisational plan is not an individual treatment prescription or outcome guarantee."
+      },
+      "sources": ["everyday", "interaction"],
+      "video": null,
+      "prerequisites": ["S11", "S12", "S19"],
+      "rehearsalCheck": "A manageable plan might repeat familiar car play during the week while the adults practise commenting rather than quizzing. Use a shorter interaction or simply watch if joining is unwelcome. The review asks what the adults learnt, not whether a child met a word quota."
+    }
+  ]
+}

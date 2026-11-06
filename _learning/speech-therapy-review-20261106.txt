@@ -1,0 +1,42 @@
+Speech Therapy Studio — parent education
+=======================================
+Research/authoring date: 6 November 2026
+Scope: preschool communication support, especially few words and emerging word
+combinations. Twenty original parent lessons, not a professional qualification,
+diagnostic tool, personalised treatment plan or substitute for assessment.
+
+Canonical content: speech-therapy-studio/lessons.json. Every lesson has a defined
+purpose, prerequisite links, three explanatory paragraphs, a fictional worked
+conversation, materials, ordered activities, adaptations, limits, an adult
+rehearsal, a learning question and exact free primary-source assignments.
+Sources: ASHA/CHSA, NIDCD, NHS services, Hanen, Harvard and CDC. Do not require a paid
+guidebook or programme. Do not publish copied third-party transcripts.
+
+Short optional video assignments retain exact clocks from the prior scoped
+transcript audit: Harvard serve/return 6:06; NHS social-communication support
+6:28; NHS choice-board 0:00–6:29 of 7:27. The named NHS publisher transcripts
+were read for relevance and boundaries. The Harvard original guide was checked;
+the exact recording/caption evidence is inherited from the previous audit.
+The choice-board tail instruction about accidental selections is excluded.
+External links may continue past the stated stop; the studio says so explicitly.
+Other units on a collection page, including object-exchange physical prompting,
+are not assigned. Broad-age examples do not define requirements for age three.
+
+Content checks: separate speech/language/communication; everyday response does
+not rule out partial/fluctuating hearing loss; invite assessment in parallel;
+define unfamiliar terms; model meaningful grammatical language; accept gestures,
+AAC and refusal; never withhold essentials, force eye contact, physically guide
+selections, require imitation, prescribe mouth exercises, diagnose or guarantee
+words by a date. Feeding difficulties are not treated by these lessons.
+Private family circumstances are not included in the published material.
+
+Product: three navigation items, readable single-column lessons, optional
+reference/rehearsal details, previous/next navigation, visible quiet/difficult
+adaptations, separate local adult checkmarks and validated backup merge.
+No child name, recording, clinical note or free-text health-data form. No sign-in
+or hosted sync is claimed. Existing account/progress schemas are untouched.
+
+Validation limits: source review and offline checks do not establish clinical
+effectiveness, comprehension by a human beginner, or professional review of an
+individual child's needs. No child interaction or clinical treatment trial is
+performed by the authoring tools. No model-provider runs are permitted.
