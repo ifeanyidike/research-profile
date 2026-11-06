@@ -2399,3 +2399,9 @@ mjx-container:focus-visible {
   font-weight: 650;
   padding: 0.8rem 0;
 }
+
+@media (max-width: 760px) {
+  .lesson-diagram text {
+    font-size: 24px;
+  }
+}

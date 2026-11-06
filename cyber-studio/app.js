@@ -1,16 +1,16 @@
-import { createViewRefresh } from "../learning-studio/view-refresh.js?v=20261106-1";
-import { passCriteria, additionalExample, lessonReading } from "../learning-studio/lesson-sections.js?v=20261106-1";
-import { progressActions } from "../learning-studio/progress-actions.js?v=20261106-1";
-import { storageListener } from "../learning-studio/storage-events.js?v=20261106-1";
-import { lessonDetails, updateLessonDetails } from "../learning-studio/lesson-details.js?v=20261106-1";
-import { createTextFields, draftSummary } from "../learning-studio/text-fields.js?v=20261106-1";
-import { createAuthStorage } from "../learning-studio/auth-storage.js?v=20261106-1";
-import { introduction } from "./introduction.js?v=20261106-1";
-import { resourceCards, assignmentSummary } from "../learning-studio/resources.js?v=20261106-1";
-import { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } from "./model.js?v=20261106-1";
-import { Account } from "./account.js?v=20261106-1";
-import { math } from "../learning-studio/math.js?v=20261106-1";
-import { renderProse as paragraphs } from "../learning-studio/prose.js?v=20261106-1";
+import { createViewRefresh } from "../learning-studio/view-refresh.js?v=20261106-2";
+import { passCriteria, additionalExample, lessonReading } from "../learning-studio/lesson-sections.js?v=20261106-2";
+import { progressActions } from "../learning-studio/progress-actions.js?v=20261106-2";
+import { storageListener } from "../learning-studio/storage-events.js?v=20261106-2";
+import { lessonDetails, updateLessonDetails } from "../learning-studio/lesson-details.js?v=20261106-2";
+import { createTextFields, draftSummary } from "../learning-studio/text-fields.js?v=20261106-2";
+import { createAuthStorage } from "../learning-studio/auth-storage.js?v=20261106-2";
+import { introduction } from "./introduction.js?v=20261106-2";
+import { resourceCards, assignmentSummary } from "../learning-studio/resources.js?v=20261106-2";
+import { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } from "./model.js?v=20261106-2";
+import { Account } from "./account.js?v=20261106-2";
+import { math } from "../learning-studio/math.js?v=20261106-2";
+import { renderProse as paragraphs } from "../learning-studio/prose.js?v=20261106-2";
 import { syncConfig } from "../algo-studio/sync-config.js";
 const textFields = createTextFields();
 const $ = (s) => document.querySelector(s);
@@ -602,9 +602,9 @@ function refreshIfIdle() {
 async function init() {
   try {
     const responses = await Promise.all([
-      fetch("curriculum.json?v=20261106-1"),
-      fetch("lessons.json?v=20261106-1"),
-      fetch("credentials.json?v=20261106-1"),
+      fetch("curriculum.json?v=20261106-2"),
+      fetch("lessons.json?v=20261106-2"),
+      fetch("credentials.json?v=20261106-2"),
     ]);
     if (responses.some((r) => !r.ok)) throw Error("The curriculum files could not be loaded.");
     const [curriculum, content, certificateData] = await Promise.all(responses.map((r) => r.json()));

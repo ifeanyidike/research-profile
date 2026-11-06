@@ -1,6 +1,6 @@
 // Executes only when the learner presses Run. Each run owns a fresh worker.
 export function createPythonRunner({
-  makeWorker = () => new Worker(new URL("./python-worker.js?v=20261106-1", import.meta.url), { type: "module" }),
+  makeWorker = () => new Worker(new URL("./python-worker.js?v=20261106-2", import.meta.url), { type: "module" }),
   schedule = setTimeout,
   unschedule = clearTimeout,
   loadTimeout = 60000,

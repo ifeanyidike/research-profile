@@ -1,5 +1,5 @@
-import { renderProse } from "./prose.js?v=20261106-1";
-import { renderCode } from "./code-editor.js?v=20261106-1";
+import { renderProse } from "./prose.js?v=20261106-2";
+import { renderCode } from "./code-editor.js?v=20261106-2";
 const esc = (text) => String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 export function lessonReading(lesson, { extra = "" } = {}) {
   const g = lesson.guide;
@@ -20,7 +20,7 @@ function readingDiagram(kind) {
       }).join("");
       return `<line x1="40" y1="${y}" x2="540" y2="${y}" class="sampling-axis"/><polyline points="${line}"/>${dots}`;
     };
-    return `<figure class="lesson-diagram"><svg viewBox="0 0 590 250" role="img" aria-labelledby="sampling-picture-title sampling-picture-description"><title id="sampling-picture-title">The same signal, measured at two rates</title><desc id="sampling-picture-description">Two copies of the same wave over the same time interval. The first has nine measurement dots and the second has seventeen. A higher sampling rate stores more measurements in the same time.</desc><text x="40" y="25">Fewer samples in this interval</text>${row(70, 9)}<text x="40" y="130">More samples in the same interval</text>${row(175, 17)}<text x="40" y="235">Time →</text><text x="330" y="235">Each dot is one sample.</text></svg><figcaption>The line shows a changing signal; the dots show stored measurements. This is a small illustration, not a 16 kHz recording.</figcaption></figure>`;
+    return `<figure class="lesson-diagram"><svg viewBox="0 0 590 250" role="img" aria-labelledby="sampling-picture-title sampling-picture-description"><title id="sampling-picture-title">The same signal, measured at two rates</title><desc id="sampling-picture-description">Two copies of the same wave over the same time interval. The first has nine measurement dots and the second has seventeen. A higher sampling rate stores more measurements in the same time.</desc><text x="40" y="25">Fewer samples in this interval</text>${row(70, 9)}<text x="40" y="130">More samples in the same interval</text>${row(175, 17)}<text x="40" y="235">Time →</text><text x="270" y="235">Each dot is one sample.</text></svg><figcaption>The line shows a changing signal; the dots show stored measurements. This is a small illustration, not a 16 kHz recording.</figcaption></figure>`;
   }
   if (kind === "ownership")
     return `<figure class="lesson-diagram"><table><caption>A valid sign-in still needs a note-access check</caption><thead><tr><th scope="col">Request</th><th scope="col">Signed in?</th><th scope="col">Owns the note?</th><th scope="col">Owner-only decision</th></tr></thead><tbody><tr><th scope="row">A reads A's note</th><td>Yes</td><td>Yes</td><td>Allow</td></tr><tr><th scope="row">A reads B's note</th><td>Yes</td><td>No</td><td>Deny</td></tr></tbody></table><figcaption>Authentication answers who is signed in. Authorisation decides whether this action on this note is allowed.</figcaption></figure>`;
