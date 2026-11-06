@@ -1,9 +1,9 @@
 Voice AI Studio
 ===============
 
-Source assignments reviewed 30–31 October 2026; native clarity review 3 November 2026. Original lessons and fictional exercises; external providers own their materials.
+Source assignments reviewed 30–31 October 2026; native clarity review 6 November 2026. Original lessons and fictional exercises; external providers own their materials.
 
-V01 — What a voice system actually does
+V01 — How a voice assistant works
 Prerequisites: None
 Path: All learners
 Study assignment: Watch the two short W3C input/output demonstrations, read the HF course introduction and Stanford scope, then map capture, ASR, dialogue, permissioned actions, TTS and transport. These demonstrations illustrate components, not a complete agent.
@@ -34,7 +34,7 @@ Independent assessment: Design the same map for a museum information kiosk that 
 Pass criteria: 1. Map capture, ASR, dialogue, tool, TTS and transport with inputs and failure points. 2. Remove write authority for the museum kiosk and explain two remaining failures. 3. Separate a paper design from evidence of accent coverage or product performance.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V02 — Python: values, functions and clear inputs
+V02 — Python: values and functions
 Prerequisites: V01
 Optional refresher: Yes
 Path: Optional Python refresher
@@ -66,7 +66,7 @@ Independent assessment: Without copying the function body, write remaining_secon
 Pass criteria: 1. Calculate remaining duration for the supplied total/consumed counts and rate, showing the unit. 2. Reject a consumed count outside the total and reuse the duration function. 3. Explain return versus print and state the numeric-input limitation.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V03 — Python: decisions, loops and collections
+V03 — Python: choices, loops and lists
 Prerequisites: V02
 Optional refresher: Yes
 Path: Optional Python refresher
@@ -108,7 +108,7 @@ Independent assessment: Implement a summary returning a dictionary with speech_m
 Pass criteria: 1. Return speech_ms, silence_ms and other_ms for every supplied event with independent expected totals. 2. Preserve total time when an unknown event kind occurs; handle an empty list. 3. Reject negative durations and show that the buckets sum to the total.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V04 — Files, modules, errors and offline tests
+V04 — Python: files, errors and tests
 Prerequisites: V03
 Optional refresher: Yes
 Path: Optional Python refresher
@@ -165,7 +165,7 @@ Independent assessment: Extend validation to reject a top-level object, a non-ob
 Pass criteria: 1. Accept the valid list and reject a top-level object, scalar item and missing key. 2. Separate decoding, structure validation and duration calculation. 3. Use independent expected results and keep file access outside the calculation.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V05 — Terminal, environments, Git and reproducibility
+V05 — Project tools: terminal, environments and Git
 Prerequisites: V04
 Optional refresher: Yes
 Path: Optional Python refresher
@@ -202,41 +202,8 @@ Independent assessment: A colleague says the code worked but gives no commit, in
 Pass criteria: 1. Supply source, synthetic fixture, Python version, command and expected output. 2. Inspect the staged diff and exclude secrets, recordings and environments. 3. Explain how commit, input and run log connect a result to a reproducible setup.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V06 — Maths bridge: algebra, units, powers and logs
+V11 — How sound works
 Prerequisites: V01
-Recommended Python refreshers (not required): V02
-Path: All learners
-Study assignment: Complete the Edinburgh algebra and logarithm tutorial questions. Practise rearranging equations, powers, unit conversions and log rules before interpreting dB or log probabilities.
-Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
-Videos:
-  StatQuest with Josh Starmer — Logs (logarithms), Clearly Explained!!! — https://www.youtube.com/watch?v=VSi0Z04fWj0
-    Assignment: Watch only 0:36–6:17, then 9:49–13:04, then 14:03–14:55 (9:48 total). Study logarithms as inverse exponents, fractional powers, multiplicative scales and the product/quotient rules. Watch 0:36–6:17, 9:49–13:04 and 14:03–14:55 (9:48); skip qPCR/geometric-mean tangent and broad software-log(0) claim. Remember: real logarithm requires x>0, base>0 and base!=1; log(0) is undefined, -infinity is a limiting/computational convention and Python math.log(0) raises ValueError.
-    Watch 0:36–6:17: V06: selected teaching, part 1
-    Watch 9:49–13:04: V06: selected teaching, part 2
-    Watch 14:03–14:55: V06: selected teaching, part 3
-    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
-      Recording and English captions: https://www.youtube.com/watch?v=VSi0Z04fWj0
-  Sri Chaitanya Academy NEET — What are Radians? | Radian (Unit of Plane Angle) | Infinity Learn — https://youtu.be/cgPYLJ-s5II
-    Assignment: Watch the complete named 5:40 unit. A complete geometric derivation of a radian as arc length divided by radius and of a full turn as 2π radians. These radians prepare you for phase in later signal lessons; the exercise here focuses on units and PCM payloads. One radian is 180/π degrees, about 57.2958; automatic captions garble that decimal. The historical/etymological remarks are motivation, not prerequisites for the derivation.
-    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
-      Recording and English captions: https://youtu.be/cgPYLJ-s5II
-Readings:
-  Edinburgh — mathematics tutorials: algebra and logarithms — https://homepages.inf.ed.ac.uk/sgwater/math_tutorials.html
-    Assignment: Read Edinburgh — mathematics tutorials: algebra and logarithms. Focus on algebra, units, logarithms; then work through this lesson’s example to check your understanding.
-Additional practical materials:
-  Local audio lab — setup, tasks and reference results — practice/audio-lab.html
-    Assignment: Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V06. No model, microphone, network or paid service is used.
-Practical: Calculate the payload for 0.5 seconds of stereo PCM at 48 kHz and 16 bits/sample. Show every conversion. Then find the duration of 24,000 mono samples at 16 kHz. Explain the difference between doubling amplitude and doubling power in the stated matching conditions.
-
-### Build or inspect it
-
-Use the local audio lab linked below. Its mono 200 Hz file contains one second at 16,000 frames/second and two bytes per sample. Predict the payload and compare it with the report. Explain why the whole WAV file is larger.
-Independent assessment: A specification says “one minute, 16 kHz, 16-bit, mono, under 1 MB uncompressed”. Check the claim using decimal MB and show how long one million payload bytes can hold, excluding a header.
-Pass criteria: 1. Check the one-minute-under-1-MB claim with a complete PCM payload calculation. 2. Calculate the duration limit for 1000000 bytes under the stated format, showing your rearranged equation. 3. Show units and distinguish payload from headers, decimal MB and compression.
-Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
-
-V11 — Sound waves, frequency, amplitude and phase
-Prerequisites: V06
 Path: All learners
 Study assignment: Watch periodic signal and pitch in order. Use the radians bridge and supplied sine examples to separate frequency, amplitude, phase, harmonics and perception.
 Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
@@ -265,7 +232,7 @@ Independent assessment: A periodic signal has components at 150, 300 and 450 Hz.
 Pass criteria: 1. Explain why a 300-Hz peak need not be the fundamental of a 150/300/450-Hz signal. 2. Calculate a period and cycle count with explicit seconds/milliseconds. 3. Name calibration/gain and recording conditions needed for amplitude comparisons.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V12 — Sampling, quantisation, channels and codecs
+V12 — How a computer records sound
 Prerequisites: V11
 Recommended Python refreshers (not required): V04
 Path: All learners
@@ -282,16 +249,25 @@ Readings:
 Additional practical materials:
   Local audio lab — setup, tasks and reference results — practice/audio-lab.html
     Assignment: Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V12. No model, microphone, network or paid service is used.
-Practical: For 48 kHz mono PCM, calculate the samples in 10, 20 and 30 ms. Calculate the payload bytes for each at 16 bits/sample. Then explain how the answer changes for stereo. Finally describe the steps required to turn a compressed stereo recording into mono 16 kHz PCM without merely relabelling it.
+Practical: ### Practise the rate calculation
 
-### Build or inspect it
+1. Convert 10, 20 and 30 milliseconds to seconds by dividing each by 1,000.
+2. At 48,000 samples per second, multiply each duration in seconds by 48,000. These are the mono sample counts.
+3. Each 16-bit sample takes two bytes. Calculate the audio-data bytes for each duration.
+4. Repeat the byte counts for two-channel stereo. Explain why the duration has not doubled.
 
-Inspect the local lab report for tone-200 and stereo. Record sample rate, audio-frame count, channel count, PCM payload and duration. Explain why stereo doubles the scalar sample count without doubling duration.
+### Follow a format conversion
+
+Describe the separate jobs needed to turn a compressed stereo recording into mono 16 kHz PCM: decode, choose a channel-mixing rule, resample with appropriate filtering, then write the required sample representation and metadata. Explain why changing only the sampling-rate label is not enough.
+
+### Inspect the supplied files
+
+Open the local audio-lab report for tone-200 and stereo. Record each file's sampling rate, frame count, channel count, audio-data bytes and duration. Compare the report with your calculations. Do not count the two values in one stereo frame as two moments in time.
 Independent assessment: A one-second, 48 kHz file is labelled 16 kHz without changing its 48,000 samples. Predict playback duration. Contrast this with proper 48-to-16 kHz resampling, stating output count, duration and the reason for low-pass filtering.
 Pass criteria: 1. Predict playback duration after relabelling 48000 samples as 16 kHz without resampling. 2. Contrast proper resampling by giving output sample count, duration and the anti-alias filtering reason. 3. Distinguish codec decoding, channel mixing, resampling and PCM representation.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V13 — Speech production, phonetics and the IPA
+V13 — How we make speech sounds
 Prerequisites: V11
 Path: All learners
 Study assignment: Watch consonants, vowels and the IPA introduction, then inspect the UBC examples/chart. Describe place, manner and voicing with language/context limits.
@@ -324,7 +300,7 @@ Independent assessment: A product specification says “convert each English let
 Pass criteria: 1. Classify place, manner and conventional voicing for the assigned consonants. 2. Identify letter/sound mismatch, coarticulation and language/dialect dependence. 3. Specify a pronunciation contract and a correction path for unfamiliar names.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V14 — Source–filter models, pitch and formants
+V14 — How a voice creates pitch and vowels
 Prerequisites: V11, V13
 Path: All learners
 Study assignment: Watch harmonics, then the resonance/formants clip. Read the physical explanation in this lesson and draw both harmonic grids before interpreting a peak. The optional source–filter derivation comes after V16.
@@ -347,7 +323,40 @@ Independent assessment: A colleague doubles all frequencies in a recording and c
 Pass criteria: 1. Separate F0/harmonic spacing from the filter envelope and formants. 2. Explain that doubling playback rate doubles resonances and halves duration. 3. State what evidence would support a pitch-only transformation claim.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V07 — Vectors, matrices and tensor shapes
+V06 — Maths for working with audio
+Prerequisites: V12
+Recommended Python refreshers (not required): V02
+Path: All learners
+Study assignment: Complete the Edinburgh algebra and logarithm tutorial questions. Practise rearranging equations, powers, unit conversions and log rules before interpreting dB or log probabilities.
+Video coverage/access: These are the named video assignments for this topic. Watch in order and use the topic-specific study assignment to distinguish introductory context from the full reading and practical requirements.
+Videos:
+  StatQuest with Josh Starmer — Logs (logarithms), Clearly Explained!!! — https://www.youtube.com/watch?v=VSi0Z04fWj0
+    Assignment: Watch only 0:36–6:17, then 9:49–13:04, then 14:03–14:55 (9:48 total). Study logarithms as inverse exponents, fractional powers, multiplicative scales and the product/quotient rules. Watch 0:36–6:17, 9:49–13:04 and 14:03–14:55 (9:48); skip qPCR/geometric-mean tangent and broad software-log(0) claim. Remember: real logarithm requires x>0, base>0 and base!=1; log(0) is undefined, -infinity is a limiting/computational convention and Python math.log(0) raises ValueError.
+    Watch 0:36–6:17: V06: selected teaching, part 1
+    Watch 9:49–13:04: V06: selected teaching, part 2
+    Watch 14:03–14:55: V06: selected teaching, part 3
+    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
+      Recording and English captions: https://www.youtube.com/watch?v=VSi0Z04fWj0
+  Sri Chaitanya Academy NEET — What are Radians? | Radian (Unit of Plane Angle) | Infinity Learn — https://youtu.be/cgPYLJ-s5II
+    Assignment: Watch the complete named 5:40 unit. A complete geometric derivation of a radian as arc length divided by radius and of a full turn as 2π radians. These radians prepare you for phase in later signal lessons; the exercise here focuses on units and PCM payloads. One radian is 180/π degrees, about 57.2958; automatic captions garble that decimal. The historical/etymological remarks are motivation, not prerequisites for the derivation.
+    Content evidence (transcript-reviewed): The assigned material was checked against the linked transcript during the earlier source review. The viewing guide retains the relevant corrections and limits.
+      Recording and English captions: https://youtu.be/cgPYLJ-s5II
+Readings:
+  Edinburgh — mathematics tutorials: algebra and logarithms — https://homepages.inf.ed.ac.uk/sgwater/math_tutorials.html
+    Assignment: Read Edinburgh — mathematics tutorials: algebra and logarithms. Focus on algebra, units, logarithms; then work through this lesson’s example to check your understanding.
+Additional practical materials:
+  Local audio lab — setup, tasks and reference results — practice/audio-lab.html
+    Assignment: Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V06. No model, microphone, network or paid service is used.
+Practical: Calculate the payload for 0.5 seconds of stereo PCM at 48 kHz and 16 bits/sample. Show every conversion. Then find the duration of 24,000 mono samples at 16 kHz. Explain the difference between doubling amplitude and doubling power in the stated matching conditions.
+
+### Build or inspect it
+
+Use the local audio lab linked below. Its mono 200 Hz file contains one second at 16,000 frames/second and two bytes per sample. Predict the payload and compare it with the report. Explain why the whole WAV file is larger.
+Independent assessment: A specification says “one minute, 16 kHz, 16-bit, mono, under 1 MB uncompressed”. Check the claim using decimal MB and show how long one million payload bytes can hold, excluding a header.
+Pass criteria: 1. Check the one-minute-under-1-MB claim with a complete PCM payload calculation. 2. Calculate the duration limit for 1000000 bytes under the stated format, showing your rearranged equation. 3. Show units and distinguish payload from headers, decimal MB and compression.
+Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
+
+V07 — Organising numbers: vectors, matrices and tensors
 Prerequisites: V06
 Path: All learners
 Study assignment: Work MIT 18.06 Lecture 1 examples and the accompanying linear-equation material. Explain a dot product, matrix multiplication, orthogonality and axis meanings by hand.
@@ -370,7 +379,7 @@ Independent assessment: A model receives \((8,50,40)\) with batch/time/feature a
 Pass criteria: 1. Derive the weight/output shapes and parameter/bias counts for the supplied batch and linear layer. 2. Name batch, time and feature axes and explain a time/feature swap. 3. Demonstrate a matrix-vector calculation rather than only listing shapes.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V15 — Fourier transforms, windows and spectrograms
+V15 — Seeing the frequencies in sound
 Prerequisites: V07, V12, V14
 Path: All learners
 Study assignment: Watch short-term analysis, Fourier analysis and frequency domain in order. Reproduce the four-point transform; read the HF preprocessing section only as application context, not a Fourier proof.
@@ -405,7 +414,7 @@ Independent assessment: Using the forward convention and sine/cosine factors in 
 Pass criteria: 1. Calculate window duration, hop and bin spacing without confusing them. 2. Compute the supplied four-point Fourier coefficients and explain magnitude/phase. 3. Name missing plot settings and why a spectrogram alone cannot establish quality.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V16 — Filters, convolution, mel features and MFCCs
+V16 — Filtering sound and preparing audio features
 Prerequisites: V15
 Path: All learners
 Study assignment: Watch filtering and convolution, then study the assigned feature documentation. Follow the toy power bins through band weighting, logarithms and DCT before comparing real log-mel/MFCC interfaces.
@@ -431,7 +440,7 @@ Additional practical materials:
     Assignment: Generate and inspect real WAV files locally with Python standard-library code. Start with the task for V16. No model, microphone, network or paid service is used.
 Practical: Apply the same causal filter to [0, 2, 2, 0] using zero initial history. Write four outputs and the full-convolution tail. Then list six parameters you would record when exporting log-mel features for another researcher.
 
-Repeat with [0,2,2,2] and show the nonzero tail. Then compute the two-band energies, logs and two DCT coefficients in the toy feature frame from Step by step, naming its normalisation.
+Repeat with [0,2,2,2] and show the nonzero tail. Then compute the two-band energies, logs and two DCT coefficients in the toy feature frame from Learn, naming its normalisation.
 
 ### Build or inspect it
 
@@ -440,7 +449,7 @@ Independent assessment: Two systems both export 80 features per frame, but one u
 Pass criteria: 1. Calculate causal filter outputs including the explicitly requested tail. 2. Describe framing, spectrum, mel bands, log floor and MFCC transform in order. 3. Check sample rate, timing and feature conventions before exchanging arrays.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V08 — Derivatives, gradients and optimisation
+V08 — How a model reduces its mistakes
 Prerequisites: V06, V07
 Path: All learners
 Study assignment: Study MIT Sessions 1–3 and 6–11 in Differentiation Part A as needed, completing Problem Set 1 and checking its solutions. Follow the scalar/partial-derivative examples before the optional CMU network application; revisit that clip after V18.
@@ -484,7 +493,7 @@ Independent assessment: For \(L(a,b)=(a-1)^2+2(b+2)^2\), start at (3,−1) with 
 Pass criteria: 1. Compute the gradient, simultaneous parameter update and old/new loss for the two-parameter challenge. 2. Use simultaneous old-parameter gradients with the stated learning rate. 3. Explain the local nature of a gradient and limits of a single successful update.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V09 — Probability, statistics and uncertainty
+V09 — Understanding rates, averages and uncertainty
 Prerequisites: V06
 Path: All learners
 Study assignment: Study the Harvard probability material on conditional probability, random variables, expectation and variance. Use the introductory MIT and StatQuest videos first if those terms are new.
@@ -513,7 +522,7 @@ Independent assessment: One report counts 1,000 clips from two speakers; another
 Pass criteria: 1. Use the correct conditional denominators and calculate the changed-mixture expected error rate. 2. Distinguish mean, median, spread and speaker-level independence. 3. Explain why 1000 clips from two speakers do not establish broad speaker coverage.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V10 — Experimental design and data leakage
+V10 — Designing a fair model comparison
 Prerequisites: V09
 Recommended Python refreshers (not required): V04
 Path: All learners
@@ -540,7 +549,7 @@ Independent assessment: A team reports improvement after selecting the best of 3
 Pass criteria: 1. Identify the test-set threshold search as development on that set. 2. Propose untouched future comparison data with speaker/session and duplicate boundaries. 3. State preprocessing, selection and uncertainty rules before inspecting new results.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V17 — Machine learning: regression and classification
+V17 — Learning from examples: regression and classification
 Prerequisites: V07, V08, V09, V10
 Path: All learners
 Study assignment: Watch linear regression before the optional decision-tree examples. Read D2L 3.1 regression and 4.1 softmax regression, including losses; compare a baseline and a confusion table.
@@ -573,7 +582,7 @@ Independent assessment: A classifier is 98% accurate where 98% of examples are s
 Pass criteria: 1. Compute regression MSE and compare against the constant baseline. 2. Show why always predicting silence reaches 98% in the supplied class mix. 3. Request error types, timing and population evidence before an endpointing claim.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V18 — Neural networks and backpropagation
+V18 — How a neural network learns
 Prerequisites: V17
 Path: All learners
 Study assignment: Work the one-weight forward/backward example, then watch the three focused network/backpropagation chapters. Use D2L for formal notation and the optional CMU lectures for additional graduate depth; frameworks/model training are not required.
@@ -624,7 +633,7 @@ Independent assessment: For the original positive case, perform one simultaneous
 Pass criteria: 1. Compute the forward pass and gradients from the original parameters. 2. Give all three new parameters after the simultaneous update and recompute the loss independently. 3. Explain inactive ReLU and why one training example says nothing about transfer.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V19 — Sequences, attention and transformers
+V19 — How sequence models use attention
 Prerequisites: V18, V16
 Path: All learners
 Study assignment: Work unequal attention scores, dimensions and masks by hand. Use the selected CMU passages only for deeper explanation, then reconcile the complete Transformer block with paper §§3.1–3.5.
@@ -671,7 +680,7 @@ Independent assessment: Draft an input contract for batched speech attention con
 Pass criteria: 1. Compute a weighted attention output and distinguish padding from causal masks. 2. Specify batch/time/feature axes, lengths and permitted lookahead. 3. Give padding-change and future-change invariants for valid earlier outputs.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V20 — Speech datasets, annotation, consent and licensing
+V20 — Preparing a speech dataset responsibly
 Prerequisites: V10, V13
 Recommended Python refreshers (not required): V05
 Path: All learners
@@ -711,7 +720,7 @@ Independent assessment: A public recording has a permissive code repository besi
 Pass criteria: 1. Keep each speaker's sessions in one partition for an unseen-speaker split, and flag uncertain transcription. 2. Record audio rights, provenance and annotation uncertainty separately from code licences. 3. Decline an unsupported audio-use assumption and name a permissioned alternative.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V21 — Classical ASR: alignment, HMMs and decoding
+V21 — How classical speech recognition finds words
 Prerequisites: V09, V16, V17, V20
 Path: All learners
 Study assignment: Start with the discrete-state example and Stanford Appendix A, then the three introductory HMM video parts. Continue to connected speech and forward probabilities. Treat Baum–Welch/legacy training tools as additional depth.
@@ -737,18 +746,24 @@ Readings:
   Optional: Edinburgh — HMM training with the Baum–Welch algorithm — https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/videos/overview-3-of-3/
     Assignment: Optional training extension after the HMM/Viterbi/forward material. Read the named transcript for hard versus soft alignment; do not run the legacy HTK assignment.
     Access: The publisher supplies transcripts alongside the named clips. Access may be intermittent; an HTTP block is not evidence the clip was removed. Older synthesis/tool examples are conceptual.
-Practical: Change Path B's transition to 1.0 and recalculate its score. Then change its first likelihood to 0.6 as well. Determine when the preferred path switches. Draw a two-state, three-time-step trellis and label what information a dynamic-programming table would retain.
+Practical: ### Compare the two paths
 
-Fill in both time-two state scores and backpointers for the supplied numerical model in Step by step. Show both incoming candidates for each state before choosing; do not keep only one global state at time one.
+1. Use the Path A and Path B values in the worked example.
+2. Change only B's transition factor to 1.0. Multiply its four factors again and compare the result with A.
+3. Keep that change and also set B's first observation likelihood to 0.6. Recalculate. Which path now has the higher score?
 
-### Build or inspect it
+### Trace the state table
 
-Implement the two-state, two-time Viterbi table with lists and loops. Store both winning scores and predecessor indices. Confirm the supplied Learn example before attempting the independent numbers in Assess.
+Use the two-state table in Learn. Write both incoming candidate scores for each state at time two, then keep the larger score and its predecessor. Draw the winning path backwards from the final state. Explain why keeping only one global state at time one could discard a useful route.
+
+### Implement the same small calculation
+
+Use Python lists and loops to store the two state scores and predecessor indices. Check that it gives the Learn results before trying the changed numbers in Assess. This is a local calculation; no recogniser or model service is needed.
 Independent assessment: Use the same transition table as Learn, but new start probabilities A:0.3, B:0.7. Observation-one emissions are A:0.5, B:0.4; observation-two emissions are A:0.6, B:0.3. Compute both time-one scores, both incoming candidates per time-two state, winning scores and backpointers, then recover the best path. Separately, transcript X has paths 0.12 and 0.11 while Y has one path 0.20. Compare best single path and supplied transcript sums.
 Pass criteria: 1. Compute a two-state Viterbi step with competing incoming paths and backpointers. 2. Distinguish the best individual path from the transcript with the largest supplied summed score. 3. State the model and score assumptions needed before interpreting a real decoder.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V22 — CTC: learning without frame labels
+V22 — Matching audio to text with CTC
 Prerequisites: V19, V21
 Path: All learners
 Study assignment: Watch CMU CTC part 1 and read the CTC objective in the Graves paper; part 2 is optional further study. Verify collapse order, repeated labels and the complete two-frame probability example before decoding comparisons.
@@ -785,7 +800,7 @@ Independent assessment: Transcript A has valid alignment probabilities 0.15 and 
 Pass criteria: 1. Merge adjacent repeats before removing blanks and recover repeated letters. 2. Calculate and explain the different best-path and summed-transcript decisions in the supplied challenge. 3. Separate CTC scoring from assistant timing, permissions and task correctness.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V23 — Encoder–decoder ASR and Whisper
+V23 — How encoder–decoder speech recognition works
 Prerequisites: V19, V20, V22
 Path: All learners
 Study assignment: Watch the 6:29 paper-walkthrough excerpts, then read Whisper §2/Figure 1 and limitations. Specify checkpoint, preprocessing, task tokens, decoding and the data boundary in the fictional report.
@@ -827,7 +842,7 @@ Independent assessment: A report names only “Whisper” and gives one accuracy
 Pass criteria: 1. Specify checkpoint, preprocessing, task/language, chunking and decoding choices. 2. Define the claimed accuracy unit, reference policy, independent data and counts. 3. Explain why fluent text from silence or an ambiguous name cannot authorise a write.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.
 
-V24 — Self-supervised and multilingual speech learning
+V24 — Learning audio patterns before adding transcripts
 Prerequisites: V19, V20, V22
 Path: All learners
 Study assignment: Watch the four excerpts totalling 7:50, then draw masked-context and unmasked-target branches plus labelled CTC adaptation. Read the assigned multilingual lecture slides before making transfer or language-coverage claims.
@@ -864,7 +879,7 @@ Independent assessment: A team fine-tunes on 20 clips from one new speaker and r
 Pass criteria: 1. Separate unlabelled pretraining, labelled adaptation and independent testing. 2. Limit the one-speaker/session result to its actual setting. 3. Propose held-out target groups, rights, baselines and distribution-shift checks.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Before optional framework projects, complete the PyTorch primer in V18 and the provider’s full preparation unit; inspect dataset rights, compute and submission requirements.
 
-V25 — ASR error analysis, fairness and uncertainty
+V25 — Finding and measuring speech-recognition mistakes
 Prerequisites: V09, V10, V23, V24
 Path: All learners
 Study assignment: Watch the 2:04 WER/reference-quality excerpts. Calculate the supplied minimum edit counts and corpus WER, declare reference/normalisation rules and report subgroup denominators and uncertainty without inferring fairness from an aggregate score.
@@ -905,7 +920,7 @@ Independent assessment: Draft a one-page results table for a fictional recognise
 Pass criteria: 1. Show minimum edit counts and corpus WER with a defined normalisation policy. 2. Report group rates with word and speaker counts rather than equal-error shortcuts. 3. Produce a reporting template with no invented scores and a clarification rule.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V26 — Who spoke when? Diarisation and speaker identity
+V26 — Finding who spoke when
 Prerequisites: V18, V20, V25
 Path: All learners
 Study assignment: Watch the named Bredin talk's conceptual section and read the diarisation method/metric definitions. State collar, overlap, label mapping and speaker-time conventions before giving a score.
@@ -929,7 +944,7 @@ Independent assessment: A product uses diarisation clusters as a login mechanism
 Pass criteria: 1. Map anonymous labels before interpreting speaker assignment and overlap. 2. Distinguish diarisation, verification and account authentication. 3. Reject cluster-as-login reasoning and specify the independent identity boundary.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V27 — Noise, separation, echo and microphone arrays
+V27 — Reducing noise while keeping speech
 Prerequisites: V14, V16, V18, V25
 Path: All learners
 Study assignment: Watch the 4:13 echo-cancellation explainer, then label reference, acoustic path, microphone and independent user speech in the supplied exercise. Read enhancement/separation definitions and microphone timing assumptions before the design critique.
@@ -950,7 +965,7 @@ Independent assessment: A demo suppresses all microphone input while the assista
 Pass criteria: 1. Compute and compare the three supplied target-error sums, showing each residual. 2. Distinguish playback reference, acoustic echo path and independent user speech. 3. Explain why microphone gating loses double-talk and design a comparison plan only.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V28 — TTS front ends: text, pronunciation and prosody
+V28 — Preparing text to be spoken
 Prerequisites: V13, V14, V20
 Path: All learners
 Study assignment: Watch normalisation and prosody, then use the assigned Pronunciation reading. The broader pronunciation video is optional. Work through the locale/date/name examples and TTS references to identify ambiguity and supported markup.
@@ -981,7 +996,7 @@ Independent assessment: Design a front-end contract for announcing a fictional r
 Pass criteria: 1. Preserve name, explicit locale/date/time zone and reference-code meaning. 2. Handle abbreviation/date ambiguity without silently choosing an interpretation. 3. Offer pronunciation repair and distinguish saying details from authorising a booking.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V29 — Neural TTS: acoustic models and alignment
+V29 — Turning text into timed speech
 Prerequisites: V19, V28
 Path: All learners
 Study assignment: Read Tacotron 2 and VITS architecture/alignment sections after the synthesis clips. Draw linguistic-token, acoustic-frame and waveform time scales; optional HF Unit 6 is additional practice.
@@ -1020,7 +1035,7 @@ Independent assessment: Compare two proposed designs: text→mel→vocoder and a
 Pass criteria: 1. Expand the supplied token durations and calculate total duration using the stated frame hop. 2. Identify skipped/repeated content and the text-to-acoustic timing interface. 3. Compare mel/vocoder and integrated designs without inventing unreported properties.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them. Complete the PyTorch primer in V18 and the provider’s full Unit 6 before the optional project; review voice/data permissions and compute/submission requirements.
 
-V30 — Vocoders, neural codecs and audio tokens
+V30 — Generating and compressing audio
 Prerequisites: V16, V18, V29
 Path: All learners
 Study assignment: Watch the Codec-SUPERB neural-codec talk after the quantiser example. Read WaveNet's waveform-generation formulation and EnCodec's encoder, quantiser, decoder and objectives separately.
@@ -1054,7 +1069,7 @@ Independent assessment: A diagram says “audio tokens at 25 Hz” but omits cod
 Pass criteria: 1. Compute nominal index bitrate and its ratio versus 24-kHz 16-bit mono PCM, with assumptions. 2. Distinguish codebooks, vocabulary, frame rate, waveform rate and overhead. 3. Explain why frame spacing alone is neither bitrate nor audible response delay.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V31 — Speech quality, listener studies and voice consent
+V31 — Checking speech quality and voice permission
 Prerequisites: V10, V20, V29, V30
 Path: All learners
 Study assignment: Watch subjective/objective evaluation, then read the assigned study/rights sources. Design separate naturalness and content-fidelity questions with balanced materials; no listening study is executed here.
@@ -1091,7 +1106,7 @@ Independent assessment: A report advertises “human-level quality” from three
 Pass criteria: 1. Separate naturalness, intelligibility, text fidelity and voice-use permission. 2. Design balanced materials/order and meaningful listener questions. 3. Bound the three-friends/one-sentence claim and state missing population evidence.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V32 — Meaning, dialogue state and conversation repair
+V32 — Keeping a conversation on track
 Prerequisites: V13, V25
 Recommended Python refreshers (not required): V03
 Path: All learners
@@ -1130,7 +1145,7 @@ Independent assessment: A late “yes” event for proposal_7 arrives after the 
 Pass criteria: 1. Invalidate approval when proposal details/version change. 2. Make create_7, edit_8, approve_7 produce zero writes. 3. Keep confirmed, pending, committed and cancelled states distinct.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V33 — LLMs, retrieval and permissioned tools for voice
+V33 — Using language models, sources and tools
 Prerequisites: V19, V32
 Path: All learners
 Study assignment: Watch the 6:14 RAG passage and the two action excerpts totalling 4:19. Keep retrieved evidence, generated answers and tool authority separate in the operation/idempotency exercise.
@@ -1163,7 +1178,7 @@ Independent assessment: A reservation tool times out after the database may have
 Pass criteria: 1. Separate language modelling, retrieved evidence and permissioned tool execution. 2. Use account-bound proposal and stable idempotency key after an uncertain timeout. 3. Report pending status truthfully and reconcile before issuing another write.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V34 — Streaming, asynchronous events and cancellation
+V34 — Handling streams, interruptions and late results
 Prerequisites: V32
 Recommended Python refreshers (not required): V04, V05
 Path: All learners
@@ -1192,7 +1207,7 @@ Independent assessment: A producer adds 50 frames/second while a consumer handle
 Pass criteria: 1. Reject stale generation output and duplicate completion without losing current content. 2. Calculate backlog frame count and queued audio duration from the supplied producer/consumer rates. 3. Specify a bounded queue policy and protect consequential control events.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V35 — WebRTC, WebSockets and telephony fundamentals
+V35 — Sending live audio across a network
 Prerequisites: V12, V34
 Path: All learners
 Study assignment: Watch the three listed WebRTC passages (6:09 total). Treat Django/Channels as examples of web/signalling servers. Use the readings to distinguish media, signalling, codec, authentication and relay responsibilities, then write the frame and reconnect contract.
@@ -1223,7 +1238,7 @@ Independent assessment: A team sends raw bytes over WebSocket but omits sample r
 Pass criteria: 1. Name signalling/media, codec, authentication and relay boundaries. 2. Specify session/generation, sequence, timestamp and exact audio format in a frame envelope. 3. Define reconnect handling that cannot replay old audio as a new turn.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V36 — VAD, endpointing, turn-taking and barge-in
+V36 — Knowing when someone has finished speaking
 Prerequisites: V25, V32, V34, V35
 Path: All learners
 Study assignment: Watch the 1:23 geography/phone-number pause example. Distinguish speech activity from turn completion, then work through the five fixtures: mid-sentence pause, backchannel, genuine interruption, background speaker and assistant echo. Do not run a detector.
@@ -1246,7 +1261,7 @@ Independent assessment: Design five synthetic turn-taking fixtures: mid-sentence
 Pass criteria: 1. Trace continuation, interruption, playback stop and stale-output invalidation. 2. Distinguish backchannels, background speech and echo from approved user turns. 3. Give five fixture expectations plus uncertainty/fallback policies, without detector claims.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V37 — Latency budgets, buffers and traces
+V37 — Measuring where conversation time goes
 Prerequisites: V09, V34, V35, V36
 Path: All learners
 Study assignment: Watch 0:00–4:09 of the latency guide. Name endpoints and trace spans, distinguish agent traces from user-heard latency, then calculate supplied critical paths, percentiles and queue waits without running a service.
@@ -1269,7 +1284,7 @@ Independent assessment: A report excludes five timed-out calls and gives mean la
 Pass criteria: 1. Calculate original and changed user-end-to-audible delays and their difference. 2. Separate queue wait, execution and audible playback using compatible clocks. 3. Report success and timeout counts/rates with explicit latency denominators and endpoint conventions.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V38 — Voice privacy, prompt injection and abuse resistance
+V38 — Protecting voice data and tool actions
 Prerequisites: V20, V31, V33, V36
 Path: All learners
 Study assignment: Watch the two short security passages (1:57 total). Map untrusted caller/retrieval content separately from model suggestions and application/tool authority, then complete the protected-action and minimal-audit design.
@@ -1296,7 +1311,7 @@ Independent assessment: Write a safe response and application decision for “I 
 Pass criteria: 1. Map caller, retrieved document, model arguments and application authority separately. 2. Reject voice-similarity-based bulk export without collecting sensitive content. 3. Specify minimal audit events and server-side enforcement at the write boundary.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V39 — Deployment, reliability, observability and cost
+V39 — Running a reliable voice service
 Prerequisites: V10, V37, V38
 Recommended Python refreshers (not required): V05
 Path: All learners
@@ -1325,7 +1340,7 @@ Independent assessment: A dependency times out after a possibly committed reserv
 Pass criteria: 1. Calculate base and repeated-workload-adjusted costs using only the supplied fictional rates. 2. Bound overload/retries and preserve operation identity during uncertain outcomes. 3. Define task, latency and recovery indicators with denominators and truthful fallback.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V40 — Accessible and multilingual voice products
+V40 — Making voice products accessible
 Prerequisites: V13, V24, V25, V31, V36, V38
 Path: All learners
 Study assignment: Watch the 3:41 CENMAC interview excerpts and W3C input/output examples. Audit clarify/edit/confirm/cancel/receipt across modes, languages and preferences; a first-person product experience is not comparative accuracy evidence.
@@ -1365,7 +1380,7 @@ Independent assessment: A product adds captions but leaves cancellation availabl
 Pass criteria: 1. Preserve clarify, edit, confirm, cancel and receipt controls across voice/text/keyboard. 2. Keep a pending draft when switching modality and avoid forced disability disclosure. 3. State supported languages/locales and investigate mismatches without blaming speakers.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V41 — Speech-to-speech and full-duplex systems
+V41 — Comparing voice pipelines and speech-to-speech models
 Prerequisites: V19, V30, V33, V36, V37
 Path: All learners
 Study assignment: Watch only the 2:15 pipeline/parallel-stream architecture excerpts, then read Moshi’s architecture figure, streaming/interleaving design and latency discussion. Use the comparison to distinguish concurrent streams, turn-taking behaviour and measured latency; the earlier historical survey is optional context.
@@ -1398,7 +1413,7 @@ Independent assessment: Propose a research question comparing a pipeline with a 
 Pass criteria: 1. Distinguish an ASR→text→TTS pipeline, speech-token generation and simultaneous user/agent audio streams. 2. Separate the authors' reported timing setup and endpoints from claims about a future application. 3. Identify architecture/latency claims the supplied paper does and does not establish.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V42 — Read research and design defensible studies
+V42 — Reading a research paper critically
 Prerequisites: V10, V25, V31, V39, V41
 Path: All learners
 Study assignment: Watch the 5:04 paper-reading method and 5:12 COS planning excerpts (or reuse Cyber R02 notes). Apply the checklist to a speech paper and write a bounded plan; invent no results and run no models.
@@ -1424,7 +1439,7 @@ Independent assessment: Design an ablation for a fictional endpointing system th
 Pass criteria: 1. Separate each paper's claim, method, comparison, data boundary and evidence. 2. Specify one ablation and a falsifiable interpretation with an uncertainty plan. 3. Distinguish saved findings from a proposed future study; invent no measured outcomes.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V43 — Capstone I: build the conversation controller
+V43 — Project: build the conversation controller
 Prerequisites: V32, V34, V36, V37, V38, V39, V40
 Recommended Python refreshers (not required): V04
 Path: All learners
@@ -1464,7 +1479,7 @@ Independent assessment: Add an outage fixture where a commit may have happened b
 Pass criteria: 1. Supply all seven synthetic event fixtures with final state and commit/output counts. 2. Reject stale approvals, generations, duplicate operations and wrong owners. 3. Reconcile a lost commit response idempotently and state every absent real dependency.
 Source notes: Public source assignments are study references, not institutional credit. Speech.zone clips may reflect older architectures; use the assigned papers and current official documentation for model and API details. Linked demos or recipes may require accounts, licences or compute; this hub does not run them.
 
-V44 — Specialist study and an original research proposal
+V44 — Plan a specialisation and research question
 Prerequisites: V27, V42, V43
 Path: All learners
 Study assignment: Watch the 3:22 proposal-structure guide. Write the voice research question, literature/evidence gap, method, resources, limits and supervision needs; check your actual programme’s requirements separately.

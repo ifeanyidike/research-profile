@@ -1,18 +1,18 @@
-import { createCodeWorkspace } from "./code-workspace.js?v=20261103-3";
-import { mainTopics, refresherTopics } from "./learning-path.js?v=20261103-3";
-import { renderCode, bindCodeEditors } from "./code-editor.js?v=20261103-3";
-import { createViewRefresh } from "./view-refresh.js?v=20261103-3";
-import { passCriteria } from "./lesson-sections.js?v=20261103-3";
-import { progressActions } from "./progress-actions.js?v=20261103-3";
-import { storageListener } from "./storage-events.js?v=20261103-3";
-import { lessonDetails, updateLessonDetails } from "./lesson-details.js?v=20261103-3";
-import { createTextFields, draftSummary } from "./text-fields.js?v=20261103-3";
-import { createAuthStorage } from "./auth-storage.js?v=20261103-3";
-import { math } from "./math.js?v=20261103-3";
-import { createModel } from "./model.js?v=20261103-3";
-import { Account } from "./account.js?v=20261103-3";
-import { resourceCards, assignmentSummary } from "./resources.js?v=20261103-3";
-import { renderProse as paragraphs } from "./prose.js?v=20261103-3";
+import { createCodeWorkspace } from "./code-workspace.js?v=20261106-1";
+import { mainTopics, refresherTopics } from "./learning-path.js?v=20261106-1";
+import { bindCodeEditors } from "./code-editor.js?v=20261106-1";
+import { createViewRefresh } from "./view-refresh.js?v=20261106-1";
+import { passCriteria, lessonReading } from "./lesson-sections.js?v=20261106-1";
+import { progressActions } from "./progress-actions.js?v=20261106-1";
+import { storageListener } from "./storage-events.js?v=20261106-1";
+import { lessonDetails, updateLessonDetails } from "./lesson-details.js?v=20261106-1";
+import { createTextFields, draftSummary } from "./text-fields.js?v=20261106-1";
+import { createAuthStorage } from "./auth-storage.js?v=20261106-1";
+import { math } from "./math.js?v=20261106-1";
+import { createModel } from "./model.js?v=20261106-1";
+import { Account } from "./account.js?v=20261106-1";
+import { resourceCards, assignmentSummary } from "./resources.js?v=20261106-1";
+import { renderProse as paragraphs } from "./prose.js?v=20261106-1";
 import { syncConfig } from "../algo-studio/sync-config.js";
 export function startStudio(config) {
   document.documentElement.dataset.studio = config.slug;
@@ -200,18 +200,14 @@ export function startStudio(config) {
     const cards = (items, type) => resourceCards(items, type, checked);
     return `<h2>Go deeper with the sources</h2><p>Use the listed excerpts and reading sections. Optional materials are labelled; the checkboxes record your own study.</p><div class="callout"><strong>Your study assignment</strong>${paragraphs(m.study_focus)}</div><h3>Videos</h3><p class="source-intro">${esc(m.videoNote)}</p>${m.videos.length ? cards(m.videos, "video") : ""}<h3>Readings</h3>${cards(m.readings, "reading")}<details class="source-notes"><summary>Source, access & safety notes</summary><p>${esc(m.note)}</p><p>Source assignments researched on 30–31 October 2026. Providers control availability, sign-in, fees, captions, and embedding. If a video cannot play here, open its original source.</p></details>`;
   }
-  function workshop(l) {
-    const g = l.guide;
-    return `<h2>Step by step</h2>${paragraphs(g.teaching)}<h2>Put the steps together</h2><p>${esc(l.mechanism)}</p><div class="worked-example"><span class="eyebrow">FOLLOW THE WHOLE EXAMPLE</span><h3>Worked example and supplied data</h3>${g.example_format === "math" ? `<div class="math-example" aria-label="Worked mathematical example">${paragraphs(g.example)}</div>` : renderCode(g.example, g.example_format)}${paragraphs(g.explanation)}</div>`;
-  }
   function practiceWorkshop(l) {
-    return `<h3>Your complete workshop</h3>${paragraphs(l.guide.exercise)}<details class="solution"><summary>Reveal the worked solution after your attempt</summary>${paragraphs(l.guide.solution)}</details>`;
+    return `${paragraphs(l.guide.exercise)}<details class="solution"><summary>Check the answer after trying</summary>${paragraphs(l.guide.solution)}</details>`;
   }
   function lesson(id, tab) {
     const m = byId[id],
       l = lessons[id];
     if (!ids.has(id) || !l) return '<div class="empty"><h1>Lesson not found</h1><a href="#path">Return to the curriculum</a></div>';
-    const tabs = { learn: "Learn", resources: "Watch & read", practice: "Practise", assess: "Assess", notes: "My notes" };
+    const tabs = { learn: "Learn", resources: "Watch & read", practice: "Practise", assess: "Test yourself", notes: "My notes" };
     if (!tabs[tab]) tab = "learn";
     const r = store.record(active, id).values,
       missing = m.prerequisites.filter((p) => !store.record(active, p).values.passedAt);
@@ -225,13 +221,13 @@ export function startStudio(config) {
     const index = sequence.indexOf(m);
     let body = "";
     if (tab === "learn")
-      body = `<section class="lesson-bridge"><h2>Before you begin</h2>${paragraphs(l.guide.bridge)}</section><span class="eyebrow">A GUIDED EXPLANATION</span><h2>The idea, in plain language</h2><p>${esc(l.concept)}</p>${workshop(l)}<div class="misconception"><strong>Keep this distinction clear</strong><p>${esc(l.pitfall)}</p></div><h2>Check your understanding</h2><p>Answer from memory before checking the explanation. This question is a starting check; the independent task in Assess tests the topic more fully.</p>${quiz(l.check)}<div class="lesson-bottom"><label><input type="checkbox" id="mark-read" ${r.read ? "checked" : ""} /> I can explain this introduction in my own words</label><a class="button" href="#lesson/${id}/resources">Watch & read ↗</a></div>`;
+      body = `${lessonReading(l)}<h2>Try a quick check</h2><p>Answer in your own words first. Then choose an answer and read the explanation.</p>${quiz(l.check)}<div class="lesson-bottom"><label><input type="checkbox" id="mark-read" ${r.read ? "checked" : ""} /> I can explain this lesson in my own words</label><a class="button" href="#lesson/${id}/resources">Watch & read ↗</a></div>`;
     if (tab === "resources")
       body = resources(m) + `<div class="lesson-bottom"><a class="button" href="#lesson/${id}/practice">Put it into practice ↗</a></div>`;
     if (tab === "practice")
-      body = `<span class="eyebrow">MOVE FROM RECOGNITION TO SKILL</span><h2>Your practical exercise</h2><p>Work through the supplied example in Learn, then use the complete workshop below. Linked provider labs offer additional practice.</p>${practiceWorkshop(l)}${codeWorkspace?.practiceMarkup(id) || ""}${m.practice_links.length ? `<h3>Open the exercise material</h3><ol>${m.practice_links.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol>` : ""}<div class="callout"><strong>Before you begin</strong><p>${esc(config.practiceNote)}</p></div><label class="evidence"><strong>Your practice evidence</strong><span>Describe your method and results. Use fictional or synthetic material. Do not save personal recordings, child information, clinical records, passwords or confidential data.</span><textarea data-field="evidence" maxlength="20000" placeholder="Setup → prediction → observation → explanation…">${esc(r.evidence || "")}</textarea></label><p class="save-hint" role="status"></p><label><input type="checkbox" id="mark-practice" ${r.practice ? "checked" : ""}/> I completed the exercise and can explain the result</label><div class="lesson-bottom"><a class="button" href="#lesson/${id}/assess">Try the independent assessment ↗</a></div>`;
+      body = `<h2>Try it yourself</h2><p>Use the worked example in Learn as a guide. Try the task before opening the answer.</p>${practiceWorkshop(l)}${codeWorkspace?.practiceMarkup(id) || ""}${m.practice_links.length ? `<h3>Open the exercise material</h3><ol>${m.practice_links.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol>` : ""}<div class="callout"><strong>Before you begin</strong><p>${esc(config.practiceNote)}</p></div><label class="evidence"><strong>Your practice notes</strong><span>Describe your method and results. Use fictional or synthetic material. Do not save personal recordings, child information, clinical records, passwords or confidential data.</span><textarea data-field="evidence" maxlength="20000" placeholder="What I used → what I expected → what happened → why…">${esc(r.evidence || "")}</textarea></label><p class="save-hint" role="status"></p><label><input type="checkbox" id="mark-practice" ${r.practice ? "checked" : ""}/> I completed the exercise and can explain the result</label><div class="lesson-bottom"><a class="button" href="#lesson/${id}/assess">Try a new problem ↗</a></div>`;
     if (tab === "assess")
-      body = `<span class="eyebrow">SHOW WHAT YOU CAN DO WITHOUT A WALKTHROUGH</span><h2>Independent assessment</h2><div class="callout"><strong>Independent task</strong>${paragraphs(l.guide.challenge)}</div><details class="solution"><summary>Review the expected reasoning after your attempt</summary>${paragraphs(l.guide.challenge_solution)}</details>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}${passCriteria(m)}<h3>A quick retrieval check</h3>${quiz(l.check)}<label class="evidence"><strong>Your assessment evidence and explanation</strong><span>Record the independent result, how you checked it, and what remains uncertain. Aim for evidence another learner could review.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you build, solve, or demonstrate independently? How did you verify it?">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I reviewed every pass criterion and can defend my evidence</label><p class="fine-print">To record a pass: complete practice, assess the prerequisites, answer the retrieval check correctly in this session, review the criteria, and add at least 40 characters of assessment evidence. The hub records your judgement; it does not execute or grade external labs.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
+      body = `<h2>Try a new problem on your own</h2><div class="callout"><strong>Your task</strong>${paragraphs(l.guide.challenge)}</div><details class="solution"><summary>See an answer after trying</summary>${paragraphs(l.guide.challenge_solution)}</details>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}${passCriteria(m)}<h3>A quick question</h3>${quiz(l.check)}<label class="evidence"><strong>Your answer and how you checked it</strong><span>Explain your steps and result. Say how you checked the answer and what is still unclear.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you work out? Show your steps and explain how you checked them.">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I checked each requirement and can explain my answer</label><p class="fine-print">To record a pass, finish the practice and required earlier lessons, answer the quick question correctly, check the requirements and write your explanation (at least 40 characters). You check your own work; the hub does not grade external projects.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
     if (tab === "notes")
       body = `<h2>Make the lesson yours</h2><p>Explain the concept as if teaching another learner. Keep questions, diagrams in words, connections to earlier topics, and mistakes you corrected.</p><label class="evidence"><strong>Your lesson notebook</strong><textarea data-field="notes" maxlength="20000" placeholder="In my own words…\nA question I still have…\nA connection to another topic…">${esc(r.notes || "")}</textarea></label><p class="save-hint" role="status"></p>`;
     return `${otherTrack ? `<div class="scope-note"><strong>This topic belongs to ${esc(otherTrack.label)}.</strong><p>You are exploring outside your selected path. The links below follow this topic's own path.</p><button class="button secondary" data-switch-track="${esc(otherTrack.id)}">Switch to this learning path</button></div>` : ""}<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">${m.optional ? "Optional refresher" : `Topic ${index + 1} of ${sequence.length}`} · ${id}</span></div><div class="page-heading"><span class="pathway-label">${esc(m.audienceLabel || "All learners")} · ${esc(m.age || "Self-paced")}</span><h1>${esc(m.title)}</h1></div><p class="fine-print lesson-scope">${esc(config.scopeNote)}</p>${lessonDetails(m, r, missing, byId)}<nav class="tabs" aria-label="Lesson sections">${Object.entries(

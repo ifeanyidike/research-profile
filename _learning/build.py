@@ -69,6 +69,9 @@ def build(check=False):
             guide = {f: a[f] for f in ['bridge', 'teaching', 'example', 'explanation', 'exercise', 'solution', 'challenge', 'challenge_solution']}
             guide['example_format'] = a.get('example_format', 'text')
             assert guide['example_format'] in ('math', 'text', 'python'), m['id']
+            if a.get('diagram'):
+                assert a['diagram'] in ('sampling', 'ownership'), m['id']
+                guide['diagram'] = a['diagram']
             # Stable per-topic ordering avoids a course-wide answer-position cycle.
             choices = sorted([a['correct'], a['wrong1'], a['wrong2']],
                              key=lambda choice: hashlib.sha256((m['id'] + '\0' + choice).encode()).digest())

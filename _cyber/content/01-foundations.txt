@@ -1,6 +1,6 @@
 O01
-A computer stores information in files and groups files in folders. A program is software that opens or changes those files. A plain-text editor saves the characters you type; a word processor also saves formatting. The ending of a filename, such as .txt, is called its extension. It helps programs decide how to open the file, but renaming a paragraph from notes.txt to notes.py does not make it a Python program.
-A path describes where a file is stored. For example, notes/first.txt means first.txt inside the notes folder. A web address, also called a URL, describes a resource on another computer. Downloading it creates a local copy. Record both the original address and your copy’s location so you can find the material again and explain where it came from.
+Before studying security, get comfortable finding, saving and checking files. You will make a small practice folder so you always know where your work is.
+Use the full path to identify a file, reopen it to check the save, and distinguish an independent copy from a shared online document.
 Create cyber-learning with notes, code, and evidence subfolders. Save a sentence as notes/first-lesson.txt. Close the editor, find the file using your file manager, and reopen it. Download a course handout into evidence. Record its original URL beside the local filename. You now have both the artifact and its provenance.
 An icon or filename alone does not establish what a file contains. Check the full name and open unfamiliar files with an appropriate viewer.
 Which action changes the remote course handout?
@@ -10,8 +10,8 @@ Moving your downloaded copy into another folder
 A download is a separate copy. Local file operations do not modify the server's original.
 
 O02
-Start by asking, “What am I protecting, who owns it and what must not happen?” Confidentiality limits who can see information. Integrity limits unauthorised changes. Availability means people can use a service when they need it. These goals can pull in different directions: disconnecting a server may stop a disclosure while also stopping legitimate access.
-Permission defines where practical testing belongs. A training lab grants a limited scope; a public website being reachable does not grant permission to test it. Write down the systems, activities, accounts, and time window allowed by your own lab or an explicit authorisation. Stop when the exercise crosses that boundary. Use synthetic data, not real credentials or personal records.
+Cybersecurity protects information and systems from unwanted access, changes and disruption. Learning it also means knowing exactly where you have permission to practise.
+Connect security goals with concrete harms and controls. Practise only where the target and actions are explicitly permitted.
 Model a family photo archive. Confidentiality means only selected people can view photos. Integrity means files cannot be silently replaced. Availability means a failed laptop does not destroy the only copy. Create a table with one failure and one control for each property, then identify which failures remain possible.
 A discovered weakness does not expand your permission. Keep evidence minimal and follow the lab or owner's reporting process.
 A lab permits testing one provided virtual machine. What is in scope?
@@ -21,8 +21,8 @@ The provider's production login service
 Scope attaches to the explicitly authorised systems and activities, not to everything technically reachable.
 
 O03
-An account carries permissions for a person or service. A password is one way to prove control of it; a second factor adds a different kind of proof. Use distinct passwords so one leaked credential does not unlock several services. Account recovery can also grant access, so check it as carefully as the normal login.
-Updates reduce exposure to known defects. Device locking reduces casual access. Backups recover information after loss, but only if the copies survive the same failure and can be restored. Synchronisation alone can replicate an accidental deletion. Privacy starts by asking what information is collected, who can access it, and how long it is retained.
+Protecting your everyday accounts starts with a few understandable habits: unique passwords, an extra sign-in check, updated devices and backups you can restore.
+Use separate passwords and suitable MFA, maintain the device, and check that both account recovery and file restoration work.
 Choose a harmless document. Back it up to a separate location, modify the working copy, and restore the earlier version into a new folder. Compare contents. Next draw the recovery path for a test account: what happens if the primary device is lost? Store recovery codes securely rather than in a public notebook.
 A backup job reporting success is not proof of recovery. A restore test supplies stronger evidence.
 Which observation best supports a backup's usefulness?
@@ -32,8 +32,8 @@ A synchronisation folder exists on the same disk
 A verified restore tests the recovery outcome; a status icon tests only part of the process.
 
 M01
-Binary and hexadecimal are ways to write numbers, not encryption. In decimal, 507 means 5×100 + 0×10 + 7. Binary uses powers of two, so 1011 means 8 + 2 + 1 = 11. Hexadecimal uses sixteen symbols, 0–9 and A–F; one hex digit represents four bits. A byte has eight bits and can represent 256 distinct patterns.
-The same bits can represent an integer, text, an instruction, or a colour depending on the interpretation. An encoding defines that interpretation. Units matter too: bits and bytes differ by a factor of eight. Logarithms reverse exponentiation; log2(8)=3 tells us that three binary choices select among eight outcomes. Algebra lets us rearrange performance and risk equations without guessing.
+Computers store information as bits. Binary, hexadecimal and text encodings are different ways to represent and interpret that information.
+Bits and bytes describe storage. Binary and hex describe number representations. An encoding explains how bytes represent information; it does not make that information secret.
 Convert decimal 13 to binary 1101 and hex D. Write a byte as 00001101 and observe that its value is unchanged by leading zeros. Then compare 10 megabits per second with 10 megabytes per second using the stated decimal units. Explain every conversion, including units, in your notebook.
 Hexadecimal-looking text is not evidence that information is protected. Encoding is reversible without a secret.
 How many distinct patterns fit in four bits?
@@ -43,8 +43,8 @@ How many distinct patterns fit in four bits?
 Each independent bit doubles the possibilities: 2×2×2×2 = 16.
 
 P01
-A variable gives you a name for a value. A function groups instructions so you can reuse them with different inputs and receive a result. Defining the function saves those instructions; calling it runs them. Types matter: Python treats the text '12' differently from the number 12, even if their printed forms look similar.
-Follow data through a program in small steps. Input enters as text, conversion produces a number, a calculation produces another value, and output displays it. Keep calculation separate from interaction so the calculation can be tested with several inputs. A return value belongs to the caller; printing sends text to an output stream and is not a substitute for returning data.
+A Python program stores values and follows instructions. A function packages instructions under a name so you can use them more than once.
+Track the type and value of each input, follow the indented function body, and distinguish assigning, comparing, returning and printing.
 Define add_tax(price, rate) to return price * (1 + rate). Call it with 100 and 0.05 and record the returned float 105.0. Then call it with 0 and with a second rate. Write down the value and type of every argument. Decide explicitly how invalid input will be handled instead of letting accidental conversions define the behaviour.
 A variable name does not enforce a type or a unit. Use meaningful names and validate values at boundaries.
 A function prints 5 but has no return statement. What does its caller receive in Python?
@@ -54,8 +54,8 @@ The string '5'
 Printing and returning are different actions. A Python function without an explicit return value returns None.
 
 P02
-A condition chooses a branch; a loop repeats a block. An if/elif/else chain selects the first true branch. A for loop visits items in an iterable. A while loop continues while its condition remains true, so its body must make progress toward an exit when termination is intended. Indentation determines which instructions belong together.
-Trace a program using a table with one row per iteration. Record the current input, variable values, condition result, and output. This makes off-by-one errors visible. In Python, range(3) produces 0, 1, 2: the upper bound is excluded. An algorithm is the sequence of steps; code is one expression of those steps in a particular language.
+A condition chooses which instructions to follow. A loop repeats instructions. Tracing their steps helps you understand what a program will actually do.
+Trace the current values through each branch and loop iteration. Check the starting value, the stopping condition and values exactly at each boundary.
 Start total at zero and loop over [2, 4, 6], adding each item. Your trace should show totals 2, 6, and 12. Next count values greater than 3, keeping the count separate from the sum. Test an empty list and a list containing only 3 to make the boundary rule explicit.
 A loop that works on one example may still fail on empty input or at a boundary. Trace those cases deliberately.
 How many times does a Python for loop over range(3) execute its body?
@@ -65,8 +65,8 @@ Four
 The values are 0, 1, and 2. Excluding 3 does not exclude 0.
 
 P03
-Choose a collection for the question you need to answer. Use a list to keep a sequence, a dictionary to connect keys with values and a set to keep distinct members. Be careful when two names refer to the same collection: changing it through one name changes the object both names refer to. Another name is not automatically another copy.
-Data modelling means deciding what a record means before processing it. A login event might have an account, timestamp, and outcome. Missing fields and invalid values are different problems from an empty event list. Exceptions signal exceptional failures; catch the specific failures you can handle, and preserve useful context rather than silently treating every error as success.
+Collections organise several values. Exceptions report cases a function could not handle normally. Together they help you describe data and deal with missing or invalid information clearly.
+Choose collections by their meaning, distinguish missing information from valid empty values, and report invalid data rather than silently inventing it.
 Represent three synthetic login events as dictionaries in a list. Count failures per account with another dictionary, and collect distinct accounts in a set. Add a malformed record. Decide whether to reject it or report it separately. Check that your answer does not change merely because the events arrive in a different order.
 A broad exception handler that returns an empty result can hide corruption and make failed analysis look like a clean system.
 You need one count per account name. Which collection directly models this?
@@ -76,8 +76,8 @@ A single Boolean
 The account name is a key and the count is its associated value. This is a dictionary's natural relationship.
 
 P04
-A module groups Python definitions you can reuse. A file keeps data after your program stops. CSV stores rows and columns; JSON can store nested objects, arrays and other values. A parser turns the saved text into values your program can use. You must then check whether those values have the structure and meaning your application expects.
-Separate reading, validation, analysis, and writing. Use a context manager to close files reliably, specify the text encoding, and handle malformed data explicitly. Timestamps need a timezone or an unambiguous convention. A local clock reading such as 01:30 can be ambiguous during a clock change; an offset-aware timestamp is safer for joining evidence from different systems.
+A program often reads data from a file and writes a result. Keep the file format, the data checks and the calculation separate so you can find failures.
+Identify the file and format, parse it with an appropriate tool, validate the records, then calculate. Keep time-zone assumptions explicit.
 Read a small JSON array of synthetic events. Require account, outcome, and an offset-aware time. Reject an event missing its outcome and report the count of rejected records. Write a CSV summary of valid events. Reopen your output to confirm headers, row counts, and non-ASCII account names survived the round trip.
 A valid JSON document can still contain impossible values, unexpected types, or missing required fields.
 What should follow successful JSON parsing at an application boundary?
@@ -87,8 +87,8 @@ Removal of all error handling
 A parser verifies the format's grammar. Application validation checks whether the data makes sense for its intended use.
 
 P05
-Before running a test, decide what the correct behaviour should be. Check ordinary inputs, edge cases, invalid inputs and cases that failed before. A useful test would fail if the requirement broke. When debugging, make the failing case small, inspect the values and check one possible explanation at a time.
-Regular expressions match patterns in text. Anchoring, character classes, repetition, and escaping control what matches. A pattern search is not equivalent to validating an entire field. Complicated patterns can also behave poorly on hostile input, so prefer simple bounded formats or dedicated parsers when the data has an established grammar.
+A test checks a specific expected behaviour. Debugging finds why actual behaviour differs. Small, independent examples make both jobs easier.
+Choose independent expected results, test meaningful boundaries, reduce failures to small examples, and use text patterns within a clearly defined scope.
 Write a function that accepts only a synthetic account label of 3–12 lowercase ASCII letters. Test a valid label, two letters, thirteen letters, digits, and a trailing newline. Use full-string matching. Deliberately remove the length limit and confirm that a test fails; this checks that the tests actually protect the requirement.
 Passing tests establish behaviour only for the cases and properties tested. They are evidence, not a universal proof.
 A validator must check the entire input. Which approach fits?
@@ -98,8 +98,8 @@ Accepting any input that contains one letter
 A substring match can ignore unwanted prefixes or suffixes. Full-string matching checks the whole field.
 
 L01
-A shell lets you give the computer text commands. It starts programs and interprets paths from a current location called the working directory. An absolute path starts at the filesystem root; a relative path starts at your working directory. The shell and file manager show different interfaces to the same files.
-Learn pwd, ls, cd, mkdir, cp, mv, and the relevant help pages before combining destructive operations. Spaces and special characters have shell meanings, so quote paths that must remain a single argument. A command's output and exit status answer different questions: output carries data, while a conventional zero exit status indicates success.
+A shell runs commands from a current folder. Understanding paths and command arguments lets you work safely without memorising long command lists.
+Check your current folder, identify the program and arguments, and understand shell quoting before using a command that changes files.
 In a disposable practice folder, create a directory named case notes. Enter it using a quoted path. Save a text file, copy it, and compare the two copies. Use pwd before each operation and explain how the same relative filename would resolve from a different working directory. Keep removal exercises inside this disposable folder.
 A command copied from a tutorial may assume a different working directory. Confirm the target before changing files.
 From /tmp/lab, where does the relative path notes/a.txt resolve?
@@ -109,8 +109,8 @@ From /tmp/lab, where does the relative path notes/a.txt resolve?
 A relative path is interpreted from the current working directory, here /tmp/lab.
 
 L02
-A process is a running program. It has an identity, inherited settings and resources such as open files. Unix permissions describe access for the owner, group and others. For a directory, execute permission lets you pass through it to an entry; it does not mean running the directory as a program. Check the path as well as the final file.
-Pipes connect one program's standard output to another's standard input. Standard error remains a separate stream unless redirected. Environment variables pass configuration to child processes and can influence program behaviour. A shell script turns a sequence into a repeatable procedure; quote variable expansions, check failures, and avoid interpreting untrusted data as shell syntax.
+A Linux system runs processes under accounts and uses permissions to control access. Pipes connect command output to another command's input.
+Track process identity, file permissions and each input/output stream. Treat environment values and command lookup as part of the program's behaviour.
 Create a harmless text file with owner-only permissions and inspect its mode. Build a pipeline that selects synthetic failed-login lines and counts them. Send an intentional error to a separate file and compare it with standard output. Write a script accepting one quoted filename; verify it works when the path contains spaces.
 Changing a file to executable does not grant the permissions needed to read its inputs or traverse its parent directories.
 What does a pipe normally connect?
@@ -120,8 +120,8 @@ Only the first process's standard error
 The ordinary pipe operator transfers standard output. Standard error needs a separate redirection if it should join that stream.
 
 P06
-An object keeps related data and operations together. A class defines how to create those objects. For example, two counters can follow the same class definition while keeping separate counts. Learn which data belongs to each instance and which data is shared. Use a class when it helps organise the problem, rather than putting every function in one.
-A virtual environment separates a Python project's installed packages from other projects. It does not isolate the operating system like a virtual machine. Record the Python version, dependency constraints, setup instructions, and a minimal test. Reproducibility requires more than installing whatever versions happen to be newest today.
+Classes group related data and behaviour. Environments and dependency records describe which software a Python project needs to run.
+Use objects where they clarify related state and behaviour. Keep dependencies and run instructions explicit so another clean environment can reproduce the local program.
 Create an EventCounter class whose instances each maintain their own count. Instantiate two counters, update one, and assert that the other stays at zero. Run the test inside a fresh virtual environment. Document installation and execution so another learner can repeat the result without borrowing your existing environment.
 A virtual environment is dependency isolation, not a safe boundary for executing malicious programs.
 Two independent counters unexpectedly share a mutable list. What should you inspect first?
@@ -131,8 +131,8 @@ Whether the source file has comments
 A mutable class attribute can be shared across instances. Per-instance state should be initialised for each object.
 
 L03
-Git saves versions of tracked files in commits. Your working tree contains the files you are editing; the staging area selects what the next commit will save. A diff shows the exact changes, and the commit message explains their purpose. This history helps you answer, “When did this behaviour change, and why?”
-A repository should help another person reproduce your work. Include setup instructions, dependency information, test commands, and evidence references. Ignore generated caches and local secrets before adding files. Deleting a secret in a later commit does not erase earlier copies from history; credentials that have been exposed need replacement through the issuing system.
+Git records versions of selected project files. A good lab notebook connects each result with the version, input and command that produced it.
+Inspect and commit the right files, then connect lab observations with that commit and the exact input and command. A commit alone is not a complete experiment record.
 Create a repository for a tiny parser. Commit the working version, change one validation rule, and inspect the diff before staging that file. Make a second commit with a clear explanation. Use git log and git show to recover the reasoning and content of the first version without guessing from today's files.
 A repository backup and a progress backup solve different problems. Your browser notebook is not automatically committed with your code.
 What determines which current changes enter the next Git commit?

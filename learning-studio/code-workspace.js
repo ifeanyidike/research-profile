@@ -1,8 +1,8 @@
-import { renderCode } from "./code-editor.js?v=20261103-3";
-import { createModel } from "./model.js?v=20261103-3";
-import { Account } from "./account.js?v=20261103-3";
-import { createTextFields } from "./text-fields.js?v=20261103-3";
-import { createPythonRunner } from "./python-runner.js?v=20261103-3";
+import { renderCode } from "./code-editor.js?v=20261106-1";
+import { createModel } from "./model.js?v=20261106-1";
+import { Account } from "./account.js?v=20261106-1";
+import { createTextFields } from "./text-fields.js?v=20261106-1";
+import { createPythonRunner } from "./python-runner.js?v=20261106-1";
 const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
 export function createCodeWorkspace({ storage, definitions, parentAccount, changed = () => {}, clock = Date.now, runner = createPythonRunner() }) {

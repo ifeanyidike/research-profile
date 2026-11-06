@@ -228,3 +228,22 @@ Current readers merge legacy aggregate records and the newer field keys. New wri
 Any rollback after field-key writers are deployed MUST retain this shared model reader and Cyber wrapper, including their imports, even when rolling back the UI. An aggregate-only historical build cannot read recent guest edits and is not an acceptable rollback artifact. The prepared release is not yet deployed; validate the rollback reader before publishing. Backups and server records keep their existing format.
 
 Signed-in text editing waits for an account read after opening a lesson, returning to the tab or reconnecting. Text entered before that check stays as a labelled draft in memory. A changed saved field requires an explicit choice; an unchanged field can save after the check. Copy pending drafts before closing: exports contain stored records, not unsaved editor drafts. Guest text saves locally. Existing records still use timestamp-based field merging; this is not a collaborative text editor. Device-only logout retires the old SDK adapter and starts a fresh client; other tabs clear the removed account on the auth-key removal event.
+
+Plain-English lesson standard (6 November 2026)
+---------------------------------------------
+Start with a concrete situation and the question the learner will answer.
+Define unfamiliar terms beside their first use. Use one idea per sentence,
+short connected paragraphs and headings that say what the section explains.
+Show the small calculation before the general formula. Define every symbol,
+unit, axis and reference value. Explain what intermediate results mean.
+Provide all named data in Learn or the explicitly linked exercise sheet.
+A task must not refer to a removed heading or assume a later required lesson.
+Separate the first explanation from the worked example and final recap;
+do not repeat the same abstract introduction under several generic headings.
+Keep important clinical/safeguarding limits and permission boundaries explicit.
+Keep existing lesson IDs, progress keys and saved-code editor identities.
+Use the examples to teach; do not claim that shorter sentences or passing
+structural tests establishes comprehension, clinical validation or expertise.
+The revision ledger is plain-english-review-20261106.json. Existing video
+assignments and their audit dates are preserved; this is a teaching revision,
+not a claim that every external video was reverified on that date.
