@@ -1,5 +1,5 @@
-import { renderProse } from "./prose.js?v=20261106-4";
-import { renderCode } from "./code-editor.js?v=20261106-4";
+import { renderProse } from "./prose.js?v=20261106-5";
+import { renderCode } from "./code-editor.js?v=20261106-5";
 const esc = (text) => String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 export function lessonReading(lesson, { extra = "" } = {}) {
   const g = lesson.guide;

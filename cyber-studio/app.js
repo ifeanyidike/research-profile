@@ -1,16 +1,16 @@
-import { createViewRefresh } from "../learning-studio/view-refresh.js?v=20261106-4";
-import { passCriteria, additionalExample, lessonReading } from "../learning-studio/lesson-sections.js?v=20261106-4";
-import { progressActions } from "../learning-studio/progress-actions.js?v=20261106-4";
-import { storageListener } from "../learning-studio/storage-events.js?v=20261106-4";
-import { lessonDetails, updateLessonDetails } from "../learning-studio/lesson-details.js?v=20261106-4";
-import { createTextFields, draftSummary } from "../learning-studio/text-fields.js?v=20261106-4";
-import { createAuthStorage } from "../learning-studio/auth-storage.js?v=20261106-4";
-import { introduction } from "./introduction.js?v=20261106-4";
-import { resourceCards, assignmentSummary } from "../learning-studio/resources.js?v=20261106-4";
-import { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } from "./model.js?v=20261106-4";
-import { Account } from "./account.js?v=20261106-4";
-import { math } from "../learning-studio/math.js?v=20261106-4";
-import { renderProse as paragraphs } from "../learning-studio/prose.js?v=20261106-4";
+import { createViewRefresh } from "../learning-studio/view-refresh.js?v=20261106-5";
+import { passCriteria, additionalExample, lessonReading } from "../learning-studio/lesson-sections.js?v=20261106-5";
+import { progressActions } from "../learning-studio/progress-actions.js?v=20261106-5";
+import { storageListener } from "../learning-studio/storage-events.js?v=20261106-5";
+import { lessonDetails, updateLessonDetails } from "../learning-studio/lesson-details.js?v=20261106-5";
+import { createTextFields, draftSummary } from "../learning-studio/text-fields.js?v=20261106-5";
+import { createAuthStorage } from "../learning-studio/auth-storage.js?v=20261106-5";
+import { introduction } from "./introduction.js?v=20261106-5";
+import { resourceCards, assignmentSummary } from "../learning-studio/resources.js?v=20261106-5";
+import { learningState, parseBackup, DEFAULT_NAMES, PROFILES, PREFIX, workspaceStores } from "./model.js?v=20261106-5";
+import { Account } from "./account.js?v=20261106-5";
+import { math } from "../learning-studio/math.js?v=20261106-5";
+import { renderProse as paragraphs } from "../learning-studio/prose.js?v=20261106-5";
 import { syncConfig } from "../algo-studio/sync-config.js";
 const textFields = createTextFields();
 const $ = (s) => document.querySelector(s);
@@ -212,12 +212,12 @@ function lesson(id, tab) {
   if (tab === "resources")
     body = resources(m) + `<div class="lesson-bottom"><a class="button" href="#lesson/${id}/practice">Put it into practice ↗</a></div>`;
   if (tab === "practice")
-    body = `<h2>Try it yourself</h2><p>Use the worked example in Learn as a guide. Try the task before opening the answer.</p>${practiceWorkshop(l)}${m.practice_links.length ? `<h3>Open the exercise material</h3><ol>${m.practice_links.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol>` : ""}<div class="callout"><strong>Before you begin</strong><p>Use the linked training environment or your own isolated lab and synthetic data. Record setup, expected behaviour, what actually happened, and the explanation. A command or result you cannot explain is a prompt to revisit the lesson.</p></div><label class="evidence"><strong>Your practice notes</strong><span>Describe your method and results. Include local filenames, permitted evidence links, test cases, or a short code excerpt. Do not save passwords or private third-party data.</span><textarea data-field="evidence" maxlength="20000" placeholder="What I used → what I expected → what happened → why…">${esc(r.evidence || "")}</textarea></label><p class="save-hint" role="status"></p><label><input type="checkbox" id="mark-practice" ${r.practice ? "checked" : ""}/> I completed the exercise and can explain the result</label><div class="lesson-bottom"><a class="button" href="#lesson/${id}/assess">Try a new problem ↗</a></div>`;
+    body = `<h2>Try it yourself</h2><p>Use the worked example in Learn as a guide. Try the task before opening the answer.</p>${practiceWorkshop(l)}${m.practice_links.length ? `<h3>Open the exercise material</h3><ol>${m.practice_links.map((r) => `<li>${link(r)}<p class="fine-print">${esc(assignmentSummary(r))}</p></li>`).join("")}</ol>` : ""}<div class="callout"><strong>Before you begin</strong><p>Follow this lesson’s practice instructions and use invented information. Only test systems when you have explicit permission for those actions. Record what you used, what you expected, what happened and why. If you cannot explain a step, return to Learn before continuing.</p></div><label class="evidence"><strong>Your practice notes</strong><span>Write your steps and results. Name the practice files you used or show the fictional answers you worked out. Do not save passwords or anyone’s private information.</span><textarea data-field="evidence" maxlength="20000" placeholder="What I used → what I expected → what happened → why…">${esc(r.evidence || "")}</textarea></label><p class="save-hint" role="status"></p><label><input type="checkbox" id="mark-practice" ${r.practice ? "checked" : ""}/> I completed the exercise and can explain the result</label><div class="lesson-bottom"><a class="button" href="#lesson/${id}/assess">Try a new problem ↗</a></div>`;
   if (tab === "assess")
     body = `<h2>Try a new problem on your own</h2><div class="callout"><strong>Your task</strong>${paragraphs(l.guide.challenge)}</div><details class="solution"><summary>See an answer after trying</summary>${paragraphs(l.guide.challenge_solution)}</details>${m.assessment_link ? `<p>${link(m.assessment_link)}</p>` : ""}${passCriteria(m)}<h3>A quick question</h3>${quiz(l.check)}<label class="evidence"><strong>Your answer and how you checked it</strong><span>Explain your steps and result. Say how you checked the answer and what is still unclear.</span><textarea data-field="assessment" maxlength="20000" placeholder="What did you work out? Show your steps and explain how you checked them.">${esc(r.assessment || "")}</textarea></label><p class="save-hint" role="status"></p><label class="criteria"><input type="checkbox" id="criteria"/> I checked each requirement and can explain my answer</label><p class="fine-print">To record a pass, finish the practice and required earlier lessons, answer the quick question correctly, check the requirements and write your explanation (at least 40 characters). You check your own work; the hub does not grade external projects.</p><button class="button" id="pass">${r.passedAt ? "Reassess this topic" : "Record a self-assessed pass"}</button><p id="pass-feedback" class="feedback" role="status">${r.passedAt ? `Self-assessed on ${date(r.passedAt)}. You can reassess when needed.` : ""}</p>`;
   if (tab === "notes")
     body = `<h2>Make the lesson yours</h2><p>Explain the concept as if teaching another learner. Keep questions, diagrams in words, connections to earlier topics, and mistakes you corrected.</p><label class="evidence"><strong>Your lesson notebook</strong><textarea data-field="notes" maxlength="20000" placeholder="In my own words…\nA question I still have…\nA connection to another topic…">${esc(r.notes || "")}</textarea></label><p class="save-hint" role="status"></p>`;
-  return `<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">Topic ${index + 1} of ${modules.length} · ${id}</span></div><div class="page-heading"><h1>${esc(m.title)}</h1></div><p class="fine-print lesson-scope">Practise only on authorised training targets, synthetic evidence and your own isolated systems. Never test a real system without explicit permission.</p>${lessonDetails(m, r, missing, byId)}<nav class="tabs" aria-label="Lesson sections">${Object.entries(
+  return `<div class="lesson-top"><a href="#path/${stages.indexOf(m.stage)}">← ${esc(m.stage)}</a><span class="pill">Topic ${index + 1} of ${modules.length} · ${id}</span></div><div class="page-heading"><h1>${esc(m.title)}</h1></div><p class="fine-print lesson-scope">Use the supplied fictional examples and practice files. Only test a system when you have explicit permission for the actions you plan to take.</p>${lessonDetails(m, r, missing, byId)}<nav class="tabs" aria-label="Lesson sections">${Object.entries(
     tabs
   )
     .map(
@@ -602,9 +602,9 @@ function refreshIfIdle() {
 async function init() {
   try {
     const responses = await Promise.all([
-      fetch("curriculum.json?v=20261106-4"),
-      fetch("lessons.json?v=20261106-4"),
-      fetch("credentials.json?v=20261106-4"),
+      fetch("curriculum.json?v=20261106-5"),
+      fetch("lessons.json?v=20261106-5"),
+      fetch("credentials.json?v=20261106-5"),
     ]);
     if (responses.some((r) => !r.ok)) throw Error("The curriculum files could not be loaded.");
     const [curriculum, content, certificateData] = await Promise.all(responses.map((r) => r.json()));

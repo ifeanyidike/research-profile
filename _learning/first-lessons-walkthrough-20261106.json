@@ -1,0 +1,146 @@
+{
+  "date": "2026-11-06",
+  "release": "20261106-5",
+  "base_commit": "aa497777bed4c5037f96173e2f95ea7209a521de",
+  "scope": "First three main lessons per studio. Voice V02–V05 remain optional refreshers.",
+  "method": "Agent exercise walkthrough with reference solutions available. Actual disposable file operations, actual standard-library synthetic audio generation/header inspection, written calculations and fictional paper cases. Not a human learner outcome trial.",
+  "limits": [
+    "File copy/edit/restore operations were completed with Python file APIs. Additionally, TextEdit plain-text save, close/reopen, Save As independent copy and edit/save were verified in a separate GUI trial; the full Finder copy/paste sequence was not completed.",
+    "Audio comparisons used the supported plot/measurement route; no audio was played.",
+    "No external video/readings completion is claimed.",
+    "No accounts, learner progress, code drafts or real child data were changed.",
+    "No models, provider probes, security targets or clinical interventions were run."
+  ],
+  "fixes": [
+    "Explicit file-editor/copy/location steps and task-specific Cyber pass criteria.",
+    "Scope headings, relative paths and recovery vocabulary explained.",
+    "Voice component rows, bidirectional transport, approval return and duplicate-request handling explained.",
+    "Milliseconds/kilohertz introduced before V11 calculations; drawing and measured amplitude checks supplied.",
+    "V12 byte counts and mixing example fully traced; source reading made optional.",
+    "First-time terminal steps and troubleshooting supplied; later spectrum details collapsed.",
+    "Child training terms explained, two learning-role plans completed, factual two-row observation supplied.",
+    "Child C03 distinguishes candidate barriers from reported observations.",
+    "O01 worked-example setup no longer edits a line before the practice task, keeping its four-line/three-line check consistent.",
+    "Cyber assessment requirements render as three separate numbered items rather than one long item.",
+    "Cyber practice-page instructions use plain words for invented information, permitted testing and evidence notes."
+  ],
+  "actual_audio_observations": {
+    "tone-200": {
+      "rate": 16000,
+      "frames": 16000,
+      "channels": 1,
+      "bytes_per_value": 2,
+      "individual_values": 16000,
+      "audio_data_bytes": 32000,
+      "total_file_bytes": 32044,
+      "seconds": 1.0,
+      "positive_lobes_in_20ms": 4,
+      "peak_absolute_integer": 8192,
+      "peak_normalised": 0.250007629627369
+    },
+    "tone-400": {
+      "rate": 16000,
+      "frames": 16000,
+      "channels": 1,
+      "bytes_per_value": 2,
+      "individual_values": 16000,
+      "audio_data_bytes": 32000,
+      "total_file_bytes": 32044,
+      "seconds": 1.0,
+      "positive_lobes_in_20ms": 8,
+      "peak_absolute_integer": 8192,
+      "peak_normalised": 0.250007629627369
+    },
+    "tone-200-quiet": {
+      "rate": 16000,
+      "frames": 16000,
+      "channels": 1,
+      "bytes_per_value": 2,
+      "individual_values": 16000,
+      "audio_data_bytes": 32000,
+      "total_file_bytes": 32044,
+      "seconds": 1.0,
+      "positive_lobes_in_20ms": 4,
+      "peak_absolute_integer": 4096,
+      "peak_normalised": 0.1250038148136845
+    },
+    "stereo": {
+      "rate": 16000,
+      "frames": 16000,
+      "channels": 2,
+      "bytes_per_value": 2,
+      "individual_values": 32000,
+      "audio_data_bytes": 64000,
+      "total_file_bytes": 64044,
+      "seconds": 1.0,
+      "positive_lobes_in_20ms": 4,
+      "peak_absolute_integer": 8192,
+      "peak_normalised": 0.250007629627369
+    }
+  },
+  "lessons": [
+    {
+      "studio": "cyber-studio",
+      "lesson": "O01",
+      "completed": ["worked-example trace", "practice submission", "independent-task submission"],
+      "guide_sha256": "8c91a85266b32fc8aeafdcff9798f7e17e1dc4cca774f113bc7e712ebdc67789"
+    },
+    {
+      "studio": "cyber-studio",
+      "lesson": "O02",
+      "completed": ["worked-example trace", "practice submission", "independent-task submission"],
+      "guide_sha256": "3107fb86c553c0352ee6f767d02387ca2b374f371611fa0778b411f210ede3c5"
+    },
+    {
+      "studio": "cyber-studio",
+      "lesson": "O03",
+      "completed": ["worked-example trace", "practice submission", "independent-task submission"],
+      "guide_sha256": "851206a3c681c598cd13899cc58605d82e8805c8318399bdd8423b7d422ececd"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "lesson": "V01",
+      "completed": ["worked-example trace", "practice submission", "independent-task submission"],
+      "guide_sha256": "eedd494eb39da1cdcd1357991c6caef3ff173ebc861150c26670fc743a91faac"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "lesson": "V11",
+      "completed": ["worked-example trace", "practice submission", "independent-task submission"],
+      "guide_sha256": "ffd05a390d318ab37198a66f2ef27495df250325ed04ec3a7f338f986870c25d"
+    },
+    {
+      "studio": "voice-ai-studio",
+      "lesson": "V12",
+      "completed": ["worked-example trace", "practice submission", "independent-task submission"],
+      "guide_sha256": "56727a1a2731eb546985f32402a1665c777aa580528dcf1c4fef593d2e5ba45c"
+    },
+    {
+      "studio": "child-development-studio",
+      "lesson": "C01",
+      "completed": ["worked-example trace", "practice submission", "independent-task submission"],
+      "guide_sha256": "ddb6ffcdbffcb30f5c5184640e134ef0cadc610c078fbf4cff2c571477ff5005"
+    },
+    {
+      "studio": "child-development-studio",
+      "lesson": "C02",
+      "completed": ["worked-example trace", "practice submission", "independent-task submission"],
+      "guide_sha256": "ed3954ba4b96891d66fa2eb87657e73f3cae8880d641b510d95a6250a83b959e"
+    },
+    {
+      "studio": "child-development-studio",
+      "lesson": "C03",
+      "completed": ["worked-example trace", "practice submission", "independent-task submission"],
+      "guide_sha256": "805bd48bad7f6139c8570c013616e24bb6012693b0072ebf09d6f5ce337fec7a"
+    }
+  ],
+  "browser_checks": {
+    "learn_views": 9,
+    "practice_answer_views": 9,
+    "math_errors": 0,
+    "horizontal_overflow_at_desktop_width": false,
+    "child_path_switch": "Caregiver 24 topics and professional 28 topics, both with C01–C03; restored local caregiver selection.",
+    "lab_download": "Downloaded through the local page; bytes equal reviewed source.",
+    "progress": "No practice/pass/read checkboxes or account sync were used."
+  }
+}

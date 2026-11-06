@@ -20,7 +20,11 @@ Readings:
     Assignment: Read the introduction’s audience, aims and programme structure. WHO CST here targets families of children aged 2–9 with developmental delays/disabilities; it does not supply a 0–18 therapy curriculum or professional qualification.
   HCPC — approved professional programmes — https://www.hcpc-uk.org/education/approved-programmes/
     Assignment: Use the programme directory to look up the actual profession, programme and delivery route you might pursue. Record the listed approval status and confirm requirements with the provider; this directory does not teach caregiver techniques or confer registration.
-Practical: Make a learning-goal table for two fictional adults: a parent preparing for an appointment and a student exploring an OT career. Give each three appropriate goals, one boundary and a piece of written work they could produce without involving a child. Select your own learning path in the interface.
+Practical: Make two short learning plans: one for a fictional parent preparing for an appointment, and one for a student exploring an OT career. Under each role use these headings: three things I want to learn; one thing this learning does not authorise me to do; one piece of written work I can make without involving a child.
+
+Start the parent's plan with “I want to describe what happened without guessing its cause.” Start the student's plan with “I want to understand which everyday activities an OT helps people take part in.” Add two more appropriate goals to each.
+
+In the studio, open Curriculum and use the Your learning path selector to choose the caregiver or professional preparation route for your own aims. The shared foundations come first in both routes. Choosing a route is a study preference, not a professional credential.
 Independent assessment: A website promises “become a qualified speech, occupational and behavioral therapist in one weekend”. Write a careful appraisal covering training, assessment, supervised practice, regulation and the difference between education and a credential.
 Pass criteria: 1. Give distinct caregiver and professional learning goals with scope boundaries. 2. Challenge the weekend qualification claim using accreditation, supervised assessment and regulator questions. 3. Explain why an attendance certificate does not establish professional authority.
 Source notes: Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.
@@ -69,7 +73,14 @@ Readings:
     Assignment: Read the preschool development and interaction sections. Use the stated 3–5 age range; do not infer an individual delay from one listed behaviour.
   RCOT — occupational therapy and play practice guideline — https://www.rcot.co.uk/explore-resources/children-young-people-families/play-practice-guideline
     Assignment: Read the guideline overview and recommendations on children’s participation in play. Record population and evidence limits. This is play guidance, not a complete motor-learning or coordination-disorder course.
-Practical: Analyse the art-table case using four headings: activity demand, observable information, unknowns and a low-risk access option to discuss. Include the child's choice and a stopping signal. Do not try an intervention with a child for this exercise.
+Practical: Write four short sections about the fictional art table:
+
+1. Activity demand: what does making the picture ask the child to do?
+2. Observable information: what does the case actually report? Keep the named possible barriers separate from observed actions.
+3. Unknowns: what would you need to ask or learn before explaining a difficulty?
+4. Low-risk access option to discuss: what ordinary choice or change might make joining easier, without assuming it is needed?
+
+Include a choice to join, watch or decline, and an established way for the child to signal stop. Pointing at paper alone does not tell us whether the child wants the whole activity. Do not try an intervention with a child for this exercise.
 Independent assessment: A preschool report says “does not play properly” without examples. Rewrite it as a respectful request for information, then propose a participation-focused question for a caregiver-professional meeting.
 Pass criteria: 1. Analyse art-table instructions, materials, environment and child preference separately. 2. Include an accessible stopping signal and questions before proposing access options. 3. Rewrite the judgement about play as a participation question without imposing one play style.
 Source notes: Educational study, not diagnosis or an individual treatment plan. Use fictional cases only. NHS materials describe local services; check your own local routes. WHO CST is primarily for ages 2–9, not an adolescent treatment programme. Professional pages require discipline-specific training and supervision. Videos may provide introductory context rather than the full professional lesson.

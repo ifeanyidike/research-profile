@@ -123,7 +123,7 @@ def make_lab(destination):
         cards.append(f'''<section><h2>{name}</h2>
 <p>{info['rate']} audio frames/s · {info['frames']} frames · {info['channels']} channel(s) · signed 16-bit PCM · {info['seconds']:.2f} s</p>
 <p>PCM payload: {info['payload']} bytes. File: {info['file_bytes']} bytes. Peak absolute left-channel sample: {info['peak']:.4f} full scale.</p>
-<p>Largest DFT magnitude in first {WINDOW} left-channel samples: {peak}. Rectangular window; bin spacing {RATE / WINDOW:g} Hz. No amplitude normalisation is applied to DFT coefficients.</p>
+<details><summary>Spectrum details · for V15 and later</summary><p>Largest DFT magnitude in first {WINDOW} left-channel samples: {peak}. Rectangular window; bin spacing {RATE / WINDOW:g} Hz. No amplitude normalisation is applied to DFT coefficients.</p></details>
 <audio controls preload="none" src="{name}.wav">Open the WAV link to inspect the audio.</audio>
 <p><a href="{name}.wav">Open {name}.wav</a></p>
 {plot(info['samples'], name + ': first 20 milliseconds')}</section>''')

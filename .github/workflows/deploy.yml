@@ -11,6 +11,7 @@ on:
       - "_cyber/**"
       - "voice-ai-studio/**"
       - "child-development-studio/**"
+      - "speech-therapy-studio/**"
       - "learning-studio/**"
       - "_learning/**"
       - "_sass/**"
@@ -65,7 +66,7 @@ jobs:
       - name: Check Cyber Studio
         run: node --test _cyber/tests/*.test.js
 
-      - name: Check Voice AI and Child Development Studios
+      - name: Check learning studios
         run: |
           python3 _learning/build.py --check
           node --test _learning/tests/*.test.js
