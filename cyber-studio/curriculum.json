@@ -50,9 +50,9 @@
           "assignment": "Read Search everything with the unified search/address bar and Bookmark a page. Transfer these two concepts to your existing browser; no installation, account, add-on or browser sync is required."
         }
       ],
-      "practice": "Create the shown folder tree. Add a fourth line to the original: Next: learn account safety. Keep the backup unchanged. Record the full location shown by your file manager, the extension and the difference between the two files. No terminal is required.",
+      "practice": "1. If you followed the worked example, use those saved files. Otherwise create the shown folders and the three-line week1.txt, then copy it to copies/week1-backup.txt.\n2. Open only week1.txt. Add a fourth line: Next: learn account safety. Save and close it.\n3. Reopen the original and backup from the file manager. Do not rely on text left in an unsaved editor window.\n4. Write the full location of each file, its extension, and the text that appears only in the original. No terminal is required.",
       "assessment": "Without the walkthrough, create a separate practice2 folder with an original note and a recovery copy. Close every editor, find both files and demonstrate which is the newer copy. Explain the scheme, host and path of https://example.org/course/start.",
-      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
+      "pass_criteria": "1. Save and reopen the original and an independent recovery copy from their recorded locations.\n2. Show that the fourth line appears only in the original and identify the .txt extension.\n3. Repeat with a new note and identify scheme, host and path in the supplied URL.",
       "note": "Start with your existing computer and browser. The file-management clip demonstrates Windows; MDN shows both Windows and macOS. Create the plain-text workspace described in this lesson. Scratch, programming and AI are not prerequisites for this orientation.",
       "practice_links": [],
       "study_focus": "Watch the short files/folders demonstration, read the selected file-manager and browser sections, then create, locate, edit and back up your own plain-text learning file.",
@@ -101,8 +101,8 @@
         }
       ],
       "practice": "For this exact scope, classify five actions: read training/readme.txt; edit training/answer.txt; open ../payroll.csv; scan example.org; stop after finding a real phone number. For each give permitted, prohibited or stop, plus one sentence tying the decision to scope.",
-      "assessment": "Write a scope for an invented local note-taking app. Include six boundaries and a stop condition. Explain which security goal is harmed by (a) revealing a private note, (b) changing its owner, (c) making notes unavailable.",
-      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
+      "assessment": "Write a scope for an invented local note-taking app using these six headings: owner who grants permission; exact target; allowed actions; excluded actions and systems; time window; reporting route. Add a stop condition. Use fictional details and do not test an actual app.\n\nExplain which security goal is harmed by (a) revealing a private note, (b) changing its owner without permission, (c) making notes unavailable. More than one goal can be affected; name the most direct one first.",
+      "pass_criteria": "1. Classify all five supplied actions and tie each decision to the permission boundary.\n2. Write a fictional scope with all six named headings and a stop condition.\n3. Explain confidentiality, integrity and availability using the note examples without testing an external system.",
       "note": "Practical security work in this map is confined to designated training environments or systems you own and explicitly choose for practice. Do not use personal or employer secrets as lab data.",
       "practice_links": [],
       "study_focus": "Distinguish confidentiality, integrity and availability in the example; write a concrete permission boundary. Read the pwn.college welcome rules before entering any training environment.",
@@ -247,7 +247,7 @@
       ],
       "practice": "1. Create three inventory rows for invented services. Use the example columns, without real account identifiers or secrets.\n2. Create a disposable text file called restore-practice.txt containing “Fictional restore test”. Keep a separate copy in a recovery folder.\n3. Remove only the disposable working file, using your file manager. Copy the recovery file back to a new restored folder.\n4. Reopen the restored file. Record its actual text, the two folder locations and whether it matches the original.\n5. Explain one failure this arrangement would not survive. For example, two folders on the same disk both depend on that disk.",
       "assessment": "A fictional laptop and its disk are lost. Email recovery codes existed only on that laptop; a cloud folder synchronised deletions. Identify two independent recovery weaknesses and propose a test for each.",
-      "pass_criteria": "Complete the task with reproducible evidence; justify the result against the supplied expected reasoning; state assumptions and limits. Preserve legitimate behaviour as well as rejecting invalid cases.",
+      "pass_criteria": "1. Make three fictional inventory rows with no real identifiers or authentication secrets.\n2. Restore the disposable file into a new folder and compare its actual contents.\n3. Explain same-disk loss, the lost-device recovery weakness and deletion-propagating sync, with an appropriate test plan.",
       "note": "",
       "practice_links": [],
       "study_focus": "Watch the short account, malware and privacy excerpts, then read the backup/restore guide. Record a private checklist for your own devices without putting passwords, recovery codes or personal records into your learning evidence.",

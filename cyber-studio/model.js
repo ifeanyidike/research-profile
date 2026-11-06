@@ -1,5 +1,5 @@
 // Preserve Cyber’s existing storage and backup contract through the shared model.
-import { createModel } from "../learning-studio/model.js?v=20261106-4";
+import { createModel } from "../learning-studio/model.js?v=20261106-5";
 export const {
   PREFIX,
   PROFILES,

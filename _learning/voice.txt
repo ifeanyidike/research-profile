@@ -19,6 +19,14 @@ When the details are ready, a calendar tool can create the meeting. A tool is a 
 The assistant might reply, “The meeting is booked for Friday at ten.” Text-to-speech, or TTS, turns those written words into audio. The application sends the audio to the speaker. Sending sound between devices is another job, called transport.
 
 If the reply is wrong, ask where the mistake first appeared. Was the name wrong in the transcript? Were the right words interpreted incorrectly? Did the calendar reject the request? Breaking the system into jobs gives you somewhere concrete to look.
+
+### Draw the conversation in both directions
+
+Capture means receiving the sound so it can be recorded. Dialogue means managing the conversation. An input is what a component receives; its output is what it passes on. For example, ASR receives recorded audio and passes on written words. A failure is something that can go wrong, such as recognising the wrong book title.
+
+Transport carries incoming sound from the caller and outgoing sound back to them. It is involved on both sides of the diagram; it is not an extra decision-maker after TTS. When the assistant asks for approval, the user's answer returns through capture, ASR and dialogue before any reservation is made.
+
+The reservation tool also needs to avoid creating the same booking twice if a message is delivered again after a connection problem. One approach is to give the intended action a unique request label. If that label arrives again, return its existing result instead of reserving again. This is what duplicate prevention means here. We will implement reliable tool handling later; for now, show where it belongs.
 EXAMPLE:: Fictional task: reschedule a rehearsal.
 User audio → ASR: “Move rehearsal to Friday.”
 Dialogue: Friday is ambiguous; ask for date and time.
@@ -28,10 +36,29 @@ TTS: “Please confirm Friday at two.”
 Only after confirmation: apply one uniquely identified change.
 EXPLANATION:: ASR does not grant calendar permission. The dialogue cannot safely guess which Friday. The tool layer must distinguish proposing an action from committing it. A response can sound fluent while the system is still missing essential information.
 PITFALL:: A fluent reply can still describe an action that never happened. Check the calendar result before telling the user that a meeting was created.
-EXERCISE:: On paper, map a fictional library telephone assistant. It may read opening hours and propose a book reservation. Draw six boxes: capture, ASR, dialogue, reservation tool, TTS and transport. Give each box one input, one output and one possible failure. Mark the point where a user must approve a reservation. Use fictional details for this first design.
-SOLUTION:: Capture supplies samples and may lose microphone access. ASR supplies candidate words and may confuse titles. Dialogue asks a clarifying question. The tool checks membership and availability before committing. TTS supplies speech but may mispronounce a title. Transport may disconnect. Confirmation belongs immediately before the authorised reservation write, with duplicate prevention at the tool boundary.
+EXERCISE:: 1. Use a fictional library telephone assistant that reads opening hours and can reserve a book after approval. Make a table with six rows: capture, ASR, dialogue, reservation tool, TTS and transport. Add three columns: input, output and possible failure.
+2. Start the ASR row with “recorded audio → candidate written words → wrong book title”. Fill the other five rows in the same way.
+3. Draw arrows for one request: “Reserve The Moon Map.” Include a question about the edition, a read-only availability check, a request for approval, the user's reply, the actual reservation and the spoken result. Show incoming and outgoing transport.
+4. Mark the approval and permission checks immediately before the actual reservation. Show what should happen if the tool rejects the request or receives the same request again. Use fictional details only; this is a paper design, not a coding task.
+SOLUTION:: Capture: microphone signal → recorded sound measurements → muted microphone.
+
+ASR: recorded audio → candidate written words → wrong title.
+
+Dialogue: words and previous replies → question or completed proposal → guesses an edition instead of asking.
+
+Reservation tool: approved title, member and request label → reservation reference or rejection → unavailable book or unauthorised member.
+
+TTS: reply text → spoken audio → mispronounced title.
+
+Transport: sound to send over the call → sound delivered to the other end → disconnected call. Draw it for incoming and outgoing audio.
+
+A complete trace is: receive request → recognise words → ask which edition → check availability → read back the proposed reservation and ask for approval → receive the user's answer → verify approval, member permission and intended title → reserve once → announce the actual returned result. Approval is not the same as the tool having succeeded. Announce a rejection if the tool rejects the request. A repeated request label should return the earlier result without creating another reservation.
+
+Opening hours need only an information lookup. They do not need a reservation write. This diagram identifies requirements; it does not prove that a running application meets them.
 CHALLENGE:: Design the same map for a museum information kiosk that must never change bookings. Identify two components you can simplify, two failures that remain, and the evidence needed before claiming it works for visitors with different accents.
-CHALLENGE_SOLUTION:: Remove booking writes and their confirmation workflow; retain a read-only information source. Recognition errors, stale opening hours and inaccessible audio still matter. A justified claim needs representative, consented task evidence and accessible alternatives, rather than one successful demonstration. A paper design alone cannot establish product performance.
+CHALLENGE_SOLUTION:: First replace the reservation tool with a read-only lookup for public museum information. Expose no operation that changes a booking. Second remove the reservation-approval conversation and member-account checks that existed only for reservations. These are two separate simplifications.
+
+Recognition can still confuse an exhibit name, and the information source can still contain old opening hours. Test tasks with consenting visitors representative of the intended accents, document what counts as success and the observed failures, and provide an accessible text alternative. One successful demonstration or a paper diagram cannot establish accent coverage or product performance.
 QUESTION:: Which component should enforce permission to change a booking?
 CORRECT:: The application and tool boundary, using the signed-in user's authority and validated action.
 WRONG1:: The ASR component, because it heard a clear request.
@@ -757,6 +784,8 @@ The horizontal direction shows time. The height shows the signal's value. In a r
 
 One complete repeat of a regular waveform is a cycle. Frequency tells you how many cycles happen in one second. Its unit is hertz, written Hz. A 200 Hz tone repeats 200 times per second.
 
+One second contains 1,000 milliseconds, written ms. Divide milliseconds by 1,000 to get seconds; multiply seconds by 1,000 to get milliseconds. A kilohertz, written kHz, is 1,000 Hz. So 1 kHz means 1,000 cycles per second.
+
 The time for one cycle is its period. If 200 cycles fit in a second, one cycle takes one second divided by 200: 0.005 seconds, or 5 milliseconds.
 
 \[\text{period} = \frac{1}{\text{frequency}}\]
@@ -773,7 +802,13 @@ Phase describes where a repeating wave is within its cycle compared with a chose
 
 A 200 Hz tone describes the sound's repetition. A recording rate of 16,000 samples per second describes how often we measure it. Those are two different counts. The next lesson turns that distinction into a recording you can inspect.
 
-A pure tone has one frequency component. A more complex repeating sound can contain its fundamental repetition frequency and harmonics at whole-number multiples. For a 150 Hz fundamental, those positions are 150, 300, 450 Hz and so on. The strongest component need not be the fundamental. Perceived loudness also depends on frequency, playback and the listener; an uncalibrated waveform height is not an absolute room sound-pressure measurement.
+A pure tone has one frequency component. A more complex repeating sound can contain its fundamental repetition frequency and harmonics at whole-number multiples. For a 150 Hz fundamental, those positions are 150, 300, 450 Hz and so on. The strongest component need not be the fundamental. Recording gain means how much the equipment or software boosts the signal. Calibration means checking a measurement against a known reference. The microphone distance and any processing of the recording can also change the measured amplitude. Record those conditions before comparing two files. Perceived loudness also depends on frequency, playback and the listener; an uncalibrated waveform height is not an absolute room sound-pressure measurement.
+
+### Draw a small example yourself
+
+A 250 Hz tone has a 4 ms period. To draw two sine-shaped cycles, put time labels 0 through 8 ms along the horizontal axis. Use an arbitrary height of +1 and −1; this drawing does not measure room loudness.
+
+Mark these points: at 0 ms, 0; at 1 ms, +1; at 2 ms, 0; at 3 ms, −1; at 4 ms, 0. Join them with a smooth curve, then repeat the pattern from 4 to 8 ms. You now have two complete cycles. Halving each height gives +0.5 and −0.5 at the peaks while all the time labels stay the same. Other repeating waveforms can have different shapes; this is a sine-wave example.
 EXAMPLE:: Take a repeating 200 Hz tone. That means 200 complete cycles per second.
 
 \[\text{time for one cycle}=\frac{1\ \mathrm{s}}{200}=0.005\ \mathrm{s}=5\ \mathrm{ms}.\]
@@ -783,18 +818,26 @@ Twenty milliseconds is 0.020 seconds, so:
 \[\text{cycles in 20 ms}=200\times0.020=4.\]
 
 For an ideal cancellation example, take signal values [1, 0, −1, 0]. Add the exactly opposite, aligned values [−1, 0, 1, 0]. Each pair sums to zero. This special arithmetic does not describe arbitrary real-room noise.
-EXPLANATION:: Cancellation in this ideal arithmetic example requires exact alignment and equal opposite signals. Real rooms contain reflections, different paths and changing delays. The example explains phase sensitivity; it does not establish that any noise can be removed by simply reversing recorded samples.
+EXPLANATION:: Cancellation in this ideal arithmetic example requires exact alignment and equal opposite signals. In a real room, sound bounces off surfaces. These reflections travel different paths and arrive with changing delays. The example explains phase sensitivity; it does not establish that any noise can be removed by simply reversing recorded samples.
 PITFALL:: Frequency is not sample rate. A 200 Hz tone can be represented by many samples per cycle; a 16 kHz sampling rate says how often measurements are stored, not that the sound's pitch is 16 kHz.
 EXERCISE:: Calculate periods for 100 Hz, 250 Hz and 1 kHz. Count how many cycles each completes in 40 ms. Draw two cycles of a 250 Hz signal, labelling the time axis in milliseconds. Explain what changes if amplitude halves while frequency stays fixed.
 
 ### Build or inspect it
 
 Run the local audio lab and open its report. Compare tone-200, tone-400 and tone-200-quiet. Count cycles over the plotted 20 ms and compare amplitude. Listen at a comfortable low volume if useful; the plots and numeric results support a non-listening route.
-SOLUTION:: Periods are 10 ms, 4 ms and 1 ms. Cycle counts in 40 ms are 4, 10 and 40. Two 250 Hz cycles span 8 ms. Halving amplitude changes vertical scale but not the repetition period; the stored signal level changes without changing this mathematical frequency.
+SOLUTION:: First convert 40 ms to seconds: \(40/1{,}000=0.040\) seconds.
 
-### Practical check
+- 100 Hz: \(1/100=0.010\) s = 10 ms per cycle. In 40 ms: \(100\times0.040=4\) cycles.
+- 250 Hz: \(1/250=0.004\) s = 4 ms per cycle. In 40 ms: \(250\times0.040=10\) cycles.
+- 1 kHz = 1,000 Hz: \(1/1{,}000=0.001\) s = 1 ms per cycle. In 40 ms: \(1{,}000\times0.040=40\) cycles.
 
-The 20 ms plots contain four cycles at 200 Hz and eight at 400 Hz. The quiet 200 Hz signal has half the amplitude but the same cycle count. The constructed files illustrate tones, not speech recognition.
+The two-cycle drawing spans 0–8 ms, with one complete repetition from 0–4 ms and another from 4–8 ms. Halving amplitude halves every vertical value, not the period or cycle count.
+
+### Check the actual files
+
+In the audio-lab report, find tone-200, tone-400 and tone-200-quiet. Their first 20 ms show four, eight and four cycles respectively. Compare the height of their waves using the same vertical axis. The line “Peak absolute left-channel sample” reports approximately 0.2500, 0.2500 and 0.1250. Here “peak absolute” means the greatest distance from zero; 0.1250 is half of 0.2500. Both 200 Hz files repeat equally often. Small rounding differences come from storing the values as integers.
+
+You can use the plots and numbers without listening. These are constructed tones, not evidence of speech-recognition quality. Ignore the report's spectrum/DFT lines until the later spectrum lesson.
 CHALLENGE:: A periodic signal has components at 150, 300 and 450 Hz. A plot shows the largest component at 300 Hz. Explain why concluding “the fundamental must be 300 Hz” is unjustified, and list two measurement-chain details needed before comparing amplitudes with another recording.
 CHALLENGE_SOLUTION:: The components are consistent with a 150 Hz fundamental and harmonics. Largest amplitude and lowest repeating frequency are different concepts. Compare microphone calibration/gain and recording distance or preprocessing, among other conditions. A spectral plot alone does not establish perceived pitch or calibrated loudness.
 QUESTION:: What is the period of a 250 Hz repeating signal?
@@ -853,6 +896,14 @@ When an audio tool expects 16 kHz mono, check both the rate and the channel coun
 ### Name the half-rate boundary
 
 Nyquist frequency means half the sampling rate: at 16 kHz it is 8 kHz. A retained band must stay below the relevant boundary, with room for a real filter’s transition. A compressed file must first be decoded to sample values; stereo-to-mono mixing then combines channel values under a stated rule rather than simply deleting a channel without explanation.
+
+### Trace one conversion without writing code
+
+Decoding first turns compressed audio into sample values. To make mono from stereo, one possible rule is to average the left and right values at each time position. If left is 0.2 and right is 0.6, the mono value is (0.2 + 0.6) / 2 = 0.4. Do this for matching positions, not by placing the whole right channel after the left.
+
+Averaging is only an example policy. If left is +0.5 and right is −0.5, the average is zero, so opposite signals can cancel. The appropriate choice depends on the recording; document it rather than assuming every stereo file can be treated identically.
+
+Next filter before lowering the rate, calculate the new sample list, and write the intended PCM values with matching rate and channel information. Metadata means information describing the audio, such as its sampling rate and channel count. The header stores such information. Audio-data bytes, also called the payload, are the bytes for the values themselves. This lesson asks you to explain the sequence, not implement a resampler from scratch.
 EXAMPLE:: A mono recording has 32,000 samples. Its sampling rate is 16,000 samples per second.
 
 How long is it? Divide the number of samples by the number used in one second:
@@ -884,11 +935,24 @@ Describe the separate jobs needed to turn a compressed stereo recording into mon
 ### Inspect the supplied files
 
 Open the local audio-lab report for tone-200 and stereo. Record each file's sampling rate, frame count, channel count, audio-data bytes and duration. Compare the report with your calculations. Do not count the two values in one stereo frame as two moments in time.
-SOLUTION:: The counts are 480, 960 and 1,440 samples per channel; mono payloads are 960, 1,920 and 2,880 bytes. Stereo doubles them. Decode the codec, use a documented channel-mixing policy, apply suitable filtered resampling, then encode the requested PCM representation and metadata. Confirm duration and format.
+SOLUTION:: Convert the times first: 10 ms = 0.010 s, 20 ms = 0.020 s, 30 ms = 0.030 s.
 
-### Practical check
+- 10 ms: \(48{,}000\times0.010=480\) samples per channel. Mono: \(480\times2=960\) bytes. Stereo: \(480\times2\times2=1{,}920\) bytes.
+- 20 ms: 960 samples per channel; 1,920 mono bytes; 3,840 stereo bytes.
+- 30 ms: 1,440 samples per channel; 2,880 mono bytes; 5,760 stereo bytes.
 
-Both fixtures have 16,000 audio frames and last one second. Mono has 16,000 scalar samples; stereo has 32,000. A stereo frame contains both channel samples at the same time position.
+Stereo stores two simultaneous values for each time position, not two consecutive moments, so the duration stays the same.
+
+For the format task: decode compressed audio to samples; choose and document a mixing rule, such as averaging simultaneous left/right values; filter and resample to 16 kHz; write the required PCM representation and correct rate/channel metadata. Renaming a file or changing its rate label does not perform those operations. Check duration and format afterwards.
+
+### Check the actual files
+
+The report gives these results:
+
+- tone-200: 16,000 frames/s, 16,000 frames, one channel, 32,000 audio-data bytes, 32,044 total file bytes, 1.00 s.
+- stereo: 16,000 frames/s, 16,000 frames, two channels, 64,000 audio-data bytes, 64,044 total file bytes, 1.00 s.
+
+Both use 16-bit values: two bytes per channel value. The stereo file contains 32,000 individual channel values but only 16,000 time positions. These particular files have a 44-byte header; do not assume every WAV header has that size. Reading the Python source is optional for this task.
 CHALLENGE:: A one-second, 48 kHz file is labelled 16 kHz without changing its 48,000 samples. Predict playback duration. Contrast this with proper 48-to-16 kHz resampling, stating output count, duration and the reason for low-pass filtering.
 CHALLENGE_SOLUTION:: Relabelled playback lasts three seconds. Proper resampling produces approximately 16,000 samples for one second, subject to a documented boundary convention. Low-pass filtering removes content that cannot be represented below the new Nyquist frequency, preventing it from aliasing into the retained band.
 QUESTION:: Does changing a file's sample-rate metadata perform resampling?

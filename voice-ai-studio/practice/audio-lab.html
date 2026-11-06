@@ -9,7 +9,7 @@ permalink: /voice-ai-studio/practice/audio-lab.html
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Local audio lab · Voice AI Studio</title>
-    <link rel="stylesheet" href="projects.css?v=20261106-4" />
+    <link rel="stylesheet" href="projects.css?v=20261106-5" />
   </head>
   <body>
     <main>
@@ -23,15 +23,47 @@ permalink: /voice-ai-studio/practice/audio-lab.html
       <section id="setup">
         <h2>Set up once</h2>
         <p>
-          If Python or terminal work is unfamiliar, review the optional V02–V05 refreshers first. Otherwise, start here. Create a practice folder,
-          then <a href="audio_lab.py" download>download audio_lab.py</a> into it. If your browser displays the code, use Save As and keep the .py
-          extension. Open the terminal in that folder.
+          You do not need to write Python for V11 or V12. You will run a supplied program and read its report. If you already use a terminal, put
+          <a href="audio_lab.py" download>audio_lab.py</a> in a new practice folder, open a terminal there and run the command below. If this is new,
+          open the first-time steps first. V02–V05 remain optional refreshers for learning to write and manage code.
         </p>
+        <details>
+          <summary>First time running a Python file?</summary>
+          <ol>
+            <li>
+              Create a folder named voice-practice in Documents. Download the linked audio_lab.py into it. If the browser shows code, save that page
+              as audio_lab.py. Check that the name ends in .py, not .py.txt or .html. The program needs no other downloaded input files.
+            </li>
+            <li>
+              Open Terminal on macOS/Linux, or PowerShell on Windows. A terminal is an app where you type commands. A command runs when you press
+              Enter. You do not type the command into the Python file or the browser address bar.
+            </li>
+            <li>
+              Type <code>python3 --version</code> and press Enter. On Windows try <code>py -3 --version</code>. A working installation prints
+              something beginning Python 3. If neither command is recognised, install Python 3 from
+              <a href="https://www.python.org/downloads/">Python's official downloads</a>, then reopen the terminal and check again.
+            </li>
+            <li>
+              Find voice-practice's full location in your file manager. Use <code>cd</code>, meaning change directory, followed by that location
+              inside straight double quotes. For example, <code>cd "/Users/your-name/Documents/voice-practice"</code> on macOS, or
+              <code>cd "C:\Users\your-name\Documents\voice-practice"</code> on Windows. Replace the example with your actual location. Quotes keep a
+              path containing spaces together.
+            </li>
+            <li>
+              Run <code>ls</code> on macOS/Linux or <code>dir</code> on Windows. These list the current folder's contents. Check that audio_lab.py
+              appears. If it does not, check the download location and filename before running the next command.
+            </li>
+          </ol>
+        </details>
         <pre><code>python3 audio_lab.py</code></pre>
         <p>
           On Windows, use <code>py -3 audio_lab.py</code> if that is how your Python installation runs. The program creates a new
           <code>voice-lab-output</code> folder. Open its <code>report.html</code> in a browser. It includes audio controls, 20 ms waveform plots and
           file measurements. No server is needed.
+        </p>
+        <p>
+          Success begins with “Created 8 WAV files”. In your file manager, open voice-practice, then voice-lab-output, then report.html. If you see
+          “can't open file”, check that the terminal lists audio_lab.py in the current folder. Do not install extra packages to solve this error.
         </p>
         <p>If the output folder already exists, your work is preserved. Choose a new name:</p>
         <pre><code>python3 audio_lab.py --output voice-lab-second-attempt</code></pre>
@@ -39,19 +71,17 @@ permalink: /voice-ai-studio/practice/audio-lab.html
           Start playback at a comfortable low volume. You can complete the comparisons using plots and measurements if you cannot or prefer not to
           listen.
         </p>
-        <h3>What the program does</h3>
-        <p>
-          It calculates sine waves, quantises them to signed 16-bit PCM and writes WAV headers. The DFT inspects only the first 400 samples of the
-          left channel. The program reads its own fixtures, creates no speech and makes no network requests.
-        </p>
+        <details>
+          <summary>What the program does · reference for later lessons</summary>
+          <p>
+            It calculates sine waves, quantises them to signed 16-bit PCM and writes WAV headers. The DFT inspects only the first 400 samples of the
+            left channel. The program reads its own fixtures, creates no speech and makes no network requests. You will meet these format and spectrum
+            terms in V12 and V15; you do not need them to compare wave height and repetition in V11.
+          </p>
+        </details>
       </section>
       <section id="tasks">
         <h2>Return to this lab as you learn</h2>
-        <h3>V06 · Predict duration and size</h3>
-        <p>
-          For tone-200, predict duration and PCM payload from 16,000 frames, one channel and two bytes per sample. Repeat for stereo. Compare the
-          payload with the file size. Write the unit at every step.
-        </p>
         <h3>V11 · Separate frequency and amplitude</h3>
         <p>
           Before inspecting the report, predict how tone-200, tone-400 and tone-200-quiet differ. Count the cycles in each 20 ms plot. Compare the
@@ -59,8 +89,14 @@ permalink: /voice-ai-studio/practice/audio-lab.html
         </p>
         <h3>V12 · Inspect the format</h3>
         <p>
-          Write down rate, frame count, channel count, sample width and duration for mono and stereo. Open the metadata function in the source. Find
-          the calls that read the WAV header. Explain the difference between one audio frame and one scalar channel sample.
+          Write down rate, frame count, channel count, sample width and duration for mono and stereo from the report. “Signed 16-bit PCM” means two
+          bytes per channel value here. Explain the difference between one audio frame and one individual channel value. Optional Python extension:
+          open the metadata function in the source and find the calls that read the WAV header. Reading the source is not required for the V12 task.
+        </p>
+        <h3>V06 · Predict duration and size</h3>
+        <p>
+          When you reach V06 later in the path, predict tone-200's duration and audio-data bytes from 16,000 frames, one channel and two bytes per
+          sample. Repeat for stereo. Compare the audio data with the total file size. Write the unit at every step.
         </p>
         <h3>V15 · Connect a spectrum to a known signal</h3>
         <p>
