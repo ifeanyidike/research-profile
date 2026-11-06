@@ -67,7 +67,7 @@ Three character bytes plus the terminating zero byte require four bytes.
 C03
 An algorithm is a step-by-step method for a task. Data structures organise the information it works on. Choosing them well can make a program easier to understand and less expensive to run.
 State the algorithm's assumptions, trace a small input and describe how time and memory grow. A faster method is only useful when its preconditions hold.
-Search a sorted list of sixteen values by repeatedly selecting a midpoint and discarding the impossible half. Write the remaining interval after each comparison. Then trace recursive factorial for 3 down to its base case and back up. Explain why the binary search needs sorted input, while the factorial recursion needs a decreasing nonnegative argument.
+Use the sorted list [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16] and target 13 with the find function in Learn. Record each [lo,hi) interval and midpoint; the returned zero-based position should be 12. Then trace factorial(3) using the base case and multiplication rule taught in Learn, including the return from factorial(0). Explain why the search needs sorted input and why the recursion needs a non-negative whole starting argument.
 A theoretically faster algorithm may be slower on tiny inputs. Measure relevant workloads after establishing correctness.
 Which prerequisite makes ordinary binary search correct?
 The search interval is ordered according to the comparison rule

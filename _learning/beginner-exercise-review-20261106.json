@@ -46,10 +46,10 @@
           "extra_example",
           "quick_check"
         ],
-        "notes": "Checked running totals and all buckets; removed premature vague bucket-function instruction and supplied concrete empty/silence/negative inputs.",
+        "notes": "Checked running totals and all buckets; removed premature vague bucket-function instruction and supplied concrete empty/silence/negative inputs. Defined append/len/enumerate before the later code uses them.",
         "changed_fields": ["exercise", "teaching"],
         "prerequisites": ["V02"],
-        "reviewed_content_sha256": "c38560c9a780bf80f0c8df3baee4779f5b931d68aa0f668b99bb962bc8352cee"
+        "reviewed_content_sha256": "655ef88aec71cb8307b663ff59e95361ef23e3b1d08537b94a8ec84d4d52528f"
       },
       "V04": {
         "checked": [
@@ -976,10 +976,10 @@
           "extra_example",
           "quick_check"
         ],
-        "notes": "Checked means/variance/matrices; defined sigma/n/standard error and squared-deviation steps.",
+        "notes": "Checked means/variance/matrices; defined sigma/n/standard error and squared-deviation steps. Defined p-value/null model with an exact one-sided coin example and stated normal-interval assumptions.",
         "changed_fields": ["example_intro", "teaching"],
         "prerequisites": ["M04", "P05"],
-        "reviewed_content_sha256": "80a7fc4da64f50328e3c2452c73080c3645e7e6b7dd40e50826073043a73dd29"
+        "reviewed_content_sha256": "20668053d63d2f6165e4fe956ff620d62461d6545e824bd6524de22171c84c0e"
       },
       "C01": {
         "checked": [
@@ -1021,13 +1021,12 @@
           "practice_solution",
           "independent_task",
           "independent_solution",
-          "extra_example",
-          "quick_check"
+          "extra_example"
         ],
-        "notes": "Checked interval traces and recursive sum; added callable example and loop notation.",
-        "changed_fields": ["example_intro", "teaching"],
+        "notes": "Checked interval traces and recursive sum; added callable example and loop notation. Defined factorial and supplied the optional search list/target.",
+        "changed_fields": ["example_intro", "extra_example", "teaching"],
         "prerequisites": ["C02", "M02", "M03"],
-        "reviewed_content_sha256": "2db3ec481ea7ce0ea6a2ac0e9e62d28570eee1b5726ba5a555ce5be1243f5f8a"
+        "reviewed_content_sha256": "55f7c2915b40ee9facd4c8e0147444f4df222012cffe64ca5072afb6d6770e08"
       },
       "C04": {
         "checked": [

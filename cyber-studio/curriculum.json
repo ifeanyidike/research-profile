@@ -2115,6 +2115,12 @@
           "url": "https://docs.python.org/3/library/statistics.html",
           "progressKey": "reading:2",
           "assignment": "Read the mean, median, variance and stdev entries, including their input assumptions and empty/undersized-data errors. Use them to check descriptive summaries of the supplied numbers. This reference does not establish a sound sampling design, confidence interval or hypothesis test; those require the separate statistics reading and lesson reasoning."
+        },
+        {
+          "label": "ASA — six principles for interpreting p-values",
+          "url": "https://www.amstat.org/asa/files/pdfs/P-ValueStatement.pdf",
+          "progressKey": "reading:900",
+          "assignment": "Read the six principles on page 2. Explain why a p-value is not the probability a hypothesis is true and does not measure effect size. The coin calculation in Learn supplies an exact one-sided example; no statistical experiment or live workload is required."
         }
       ],
       "practice": "Calculate mean and sample variance for [1,3,5]. For TP=12,FP=3,FN=8,TN=77 calculate precision and recall. Write two reasons events collected repeatedly from one host might violate independent representative sampling.",
