@@ -37,7 +37,7 @@ test("advanced prose separates words and counts while preserving code and domain
       const prose = value.replace(/```[\s\S]*?```|`[^`\n]+`|\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]|https?:\/\/[^\s]+/g, "");
       for (const match of prose.matchAll(/\b[A-Za-z]{2,}\d+\b/g)) assert.ok(allowed.has(match[0]), `${module.id}/${field}: ${match[0]}`);
     }
-  assert.match(lessons.A02.guide.teaching, /give 0/);
+  assert.match(lessons.A02.guide.teaching, /always guess 0/);
   assert.match(lessons.D05.guide.challenge_solution, /remains 6/);
   assert.match(lessons.A06.guide.teaching, /native code auditing/);
   assert.match(lessons.F02.guide.teaching, /unsafe native libraries/);

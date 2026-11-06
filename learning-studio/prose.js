@@ -1,4 +1,4 @@
-import { renderCode } from "./code-editor.js?v=20261106-1";
+import { renderCode } from "./code-editor.js?v=20261106-2";
 // Authored prose and fenced reference code only. Every character is escaped;
 // this is not a general Markdown or HTML renderer and never runs examples.
 const escape = (text) => String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
