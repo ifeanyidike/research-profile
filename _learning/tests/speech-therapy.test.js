@@ -101,3 +101,24 @@ test("the app is a parent-learning workspace with no recording, child-notes form
   const exportFields = JSON.parse(exportBackup(emptyState()));
   assert.deepEqual(Object.keys(exportFields.state.learners.ifeanyi).sort(), ["done", "last"]);
 });
+
+test("every activity is complete and all lesson, activity and source links resolve", () => {
+  const ids = new Set(data.activities.map((a) => a.id));
+  assert.equal(ids.size, 12);
+  for (const a of data.activities) {
+    assert.ok(a.lessons.length && a.lessons.every((id) => IDS.includes(id)), a.id);
+    assert.ok(a.sources.length && a.sources.every((id) => data.sources[id]?.url.startsWith("https://")), a.id);
+    assert.ok(a.words.length && a.steps.length >= 4 && a.example.length >= 4, a.id);
+    assert.deepEqual(
+      a.responses.map(([label]) => label),
+      ["A point or gesture", "An unclear word or sound", "No reply", "No or turning away", "Frustration"]
+    );
+    for (const [, text] of a.responses) assert.ok(text.length > 30, a.id);
+    for (const key of ["goal", "materials", "setup", "easier", "ending", "vary"]) assert.ok(a[key]?.length > 20, `${a.id}/${key}`);
+    assert.ok(
+      data.lessons.some((l) => l.activities.includes(a.id)),
+      `${a.id} is discoverable from a lesson`
+    );
+  }
+  for (const l of data.lessons) assert.ok(l.activities.length && l.activities.every((id) => ids.has(id)), l.id);
+});
