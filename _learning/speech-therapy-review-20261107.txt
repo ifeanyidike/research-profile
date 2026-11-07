@@ -1,0 +1,97 @@
+Speech Therapy Studio practical release — 7 November 2026
+
+Scope
+General parent education and low-pressure everyday communication support for
+preschool children using few words. No diagnosis, treatment prescription,
+qualification or guaranteed outcome. No child data is collected by the new
+activities or paper observation sheet. Existing browser-local adult learning
+schema and S01–S20 identifiers are preserved.
+
+Coverage addressed
+- S07: choosing useful word meanings, natural repetition across situations,
+  and responding to gestures without withholding help.
+- S08: expansions, grammatical adult models, person/action, action/object,
+  possession, description and location. Gesture-plus-word examples and limits
+  of conclusions drawn from a memorised phrase.
+- S09: worked in/out example, context support, short messages and refusal.
+- S12/S15: optional simple pretend play and voluntary action/sound copying;
+  neither a diagnostic task nor a speech-sound drill.
+- S19: distinguish adult model, immediate copying, independent use and a
+  different situation, with actual support conditions; no word quota.
+- S20 and choosing guide: repeat, simplify, vary one thing, end and seek
+  individual advice when needed. No algorithm selecting treatment.
+- 12 original activity cards linked from every lesson. Each contains setup,
+  example adult language, an invented exchange, ordered steps, responses to
+  gestures/unclear words/silence/refusal/frustration, easier option, ending,
+  a possible later variation and scoped source links.
+- Private printable observation sheet with fictional filled examples and
+  space for handwritten notes. No app form or child record, no daily trials.
+- Existing three-item navigation retained. Activities and choosing guide
+  highlight Lessons. Activity routes do not change adult lesson history.
+- Home recommendation now correctly says Continue after a later lesson was
+  opened, even when the adult has not checked off any lesson.
+
+Sources checked
+ASHA Semantic Relationships:
+https://www.asha.org/practice-portal/clinical-topics/late-language-emergence/semantic-relationships/
+Used to check the variety of meaning relationships. Child examples are not
+adult scripts; our models retain natural grammar. No required learning order.
+
+The Hanen Centre, How to Help Your Child Learn New Words:
+https://www.hanen.org/information-tips/how-to-help-your-child-learn-new-words
+Practical interests/gestures/natural repetition sections checked. Age tables
+and repetition counts are not imported as a home score or prescribed dose.
+
+Speech and Language UK, Add words to what your child says:
+https://speechandlanguage.org.uk/help-for-families/resource-library-for-families/everyday-tips-for-supporting-your-child/supporting-communication-skills-in-the-early-years/add-words-to-what-your-child-says/
+Read repeat/add, no correction demands and no required repetition. Source
+acknowledges different developmental routes. Written source assigned to S08.
+
+Newcastle Hospitals NHS: following the child's lead, comments and supporting
+understanding; scoped source URLs are in lessons.json. Original activity
+examples apply general strategies rather than reproduce publisher scripts.
+
+Additional video screening
+- Head Start Expansions: full available publisher transcript read. Not added:
+  extended classroom question exchange does not fit this beginner parent path.
+  https://headstart.gov/video/expansions
+- Speech and Language UK Add words video (Vimeo 878264874): official hosting
+  page found. Public configuration request returned 403, so exact captions
+  and runtime could not be verified. No new video assignment or time guessed.
+- BBC Responding to toddlers/Speech Lab: not assigned; different task format.
+  https://www.bbc.co.uk/tiny-happy-people/articles/zcwdkty
+- NHS named video/transcript collection checked for additional candidates.
+  No new time-aligned assignment established in this release.
+
+The three existing scoped assignments remain: Harvard serve/return 0–6:06,
+NHS support-social-communication 0–6:28, NHS choice board 0–6:29 (stop before
+later accidental-selection advice). Evidence limitations remain visible on
+the video cards. Finding more suitable, transcript-and-time-verified short
+modelling/reading demonstrations is still open; description-only candidates
+are not promoted to verified status.
+
+Validation
+Offline storage/data and route-rendering checks cover complete references,
+all lessons/cards, missing routes, current navigation, parent-independent
+progress, backup compatibility and no activity mutation of lesson history.
+These are software checks, not evidence of clinical outcomes or an external
+clinician's review. Build/browser/deployment evidence is recorded separately
+in the release evidence directory.
+
+Browser follow-up
+Access became available again. All 20 lesson routes and 12 activity routes
+were opened in the production preview. All 32 pages checked at a 390px phone
+width without horizontal overflow; the activity list retains three global
+navigation items. Reviewed-checkbox persistence and separate Fav/Ifeanyi
+records were exercised through a reload. Incorrect and correct quiz answers
+produced the expected feedback. Printed-sheet navigation, return navigation
+and absence of child-data form fields were checked. Print was invoked, but
+the system print preview is outside the permitted app surface: pagination
+and physical printer output are not claimed as verified. Escape returned
+to the document. Final browser error/warning log was empty.
+
+Fixed during walkthrough: back-link/eyebrow text ran together on activity
+pages; back links now occupy their own line. Replaced a metaphor about
+keeping a toy with a direct instruction, clarified the first activity's
+reply to a point, and made the extra phrase example about requesting blocks.
+Final asset version is 20261107-2. Browser evidence is saved separately.

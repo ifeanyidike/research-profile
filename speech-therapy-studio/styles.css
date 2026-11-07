@@ -280,6 +280,8 @@ main:focus {
   color: var(--muted);
 }
 .back {
+  display: block;
+  width: fit-content;
   font-size: 0.85rem;
 }
 .goal {
