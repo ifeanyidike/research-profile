@@ -95,3 +95,18 @@ pages; back links now occupy their own line. Replaced a metaphor about
 keeping a toy with a direct instruction, clarified the first activity's
 reply to a point, and made the extra phrase example about requesting blocks.
 Final asset version is 20261107-2. Browser evidence is saved separately.
+
+Later correction — Opus 5.5 xhigh review, 7 November 2026
+The earlier quiz walkthrough checked S08, not every quiz answer. Independent
+review found that S02 selected the right answer but its explanation wrongly
+called the first option factual. The explanation now names the observed
+pointing example, and all three S02 submissions have regression/browser
+checks. Further corrections clarify activity/source fit and AAC examples,
+refresh backups from healthy storage, preserve corrupt records during
+explicit recovery, and retain learner choice per tab. Print sections open
+through beforeprint, with source/event checks; final paginated/physical
+output remains unverified because native print UI stalled. The current
+choice-board assignment is 0:00–6:16: current captions put the excluded
+accidental-selection instruction at 6:29. Historical release-2 references
+above describe the older assignment. The correction release uses asset
+version 20261107-3. No clinical validation or guaranteed outcome is claimed.

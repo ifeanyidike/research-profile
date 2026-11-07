@@ -7,10 +7,21 @@ import vm from "node:vm";
 import { createLearningStore, exportBackup, IDS, parseBackup } from "../../speech-therapy-studio/model.js";
 const fixture = JSON.parse(fs.readFileSync(new URL("../../speech-therapy-studio/lessons.json", import.meta.url)));
 const source = fs.readFileSync(new URL("../../speech-therapy-studio/app.js", import.meta.url), "utf8");
-function app() {
+function app({ loaded = true } = {}) {
   const values = new Map();
   const storage = { getItem: (key) => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) };
-  const node = () => ({ innerHTML: "", textContent: "", value: "", dataset: {}, classList: { toggle() {} }, addEventListener() {}, focus() {} });
+  const node = () => ({
+    innerHTML: "",
+    textContent: "",
+    value: "",
+    dataset: {},
+    classList: { toggle() {} },
+    events: {},
+    addEventListener(name, handler) {
+      this.events[name] = handler;
+    },
+    focus() {},
+  });
   const main = node(),
     learner = node(),
     status = node(),
@@ -37,13 +48,18 @@ function app() {
     IDS,
     parseBackup,
     fixture,
+    initialData: loaded ? fixture : undefined,
     document,
     location,
     window: { localStorage: storage, addEventListener() {}, scrollTo() {} },
   };
-  vm.runInNewContext(source.replace(/^import .*\n/, "").replace(/start\(\);\s*$/, "data = fixture; globalThis.studio = {render, store};"), context);
+  vm.runInNewContext(
+    source.replace(/^import .*\n/, "").replace(/start\(\);\s*$/, "data = initialData; globalThis.studio = {render, store};"),
+    context
+  );
   return {
     context,
+    learner,
     main,
     nav,
     document,
@@ -92,4 +108,15 @@ test("an opened later lesson is labelled continue even before the first checkmar
   const html = a.route("#home");
   assert.ok(html.includes("Continue your learning"));
   assert.ok(!html.includes("Your first lesson"));
+});
+
+test("learner changes before data is available preserve the loader or retry panel", () => {
+  for (const panel of ["Opening your lessons…", "Your lessons could not open. Try opening again."]) {
+    const a = app({ loaded: false });
+    a.main.innerHTML = panel;
+    assert.doesNotThrow(() => a.learner.events.change({ target: { value: "fav" } }));
+    assert.equal(a.context.studio.store.state.active, "fav");
+    assert.equal(a.learner.value, "fav");
+    assert.equal(a.main.innerHTML, panel);
+  }
 });
