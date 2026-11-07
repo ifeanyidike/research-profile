@@ -7,7 +7,7 @@
     "early": {
       "title": "ASHA — Early identification of communication difficulties",
       "url": "https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders",
-      "scope": "Read Language Disorders, Hearing Loss and Act Today. This explains when to seek help; it does not diagnose a child."
+      "scope": "Read Language Disorders, Speech Sound Disorders, Hearing Loss and Act Today. This covers when to seek help and giving natural speech examples without correcting every sound; it does not diagnose a child."
     },
     "hearing": {
       "title": "NIDCD — Speech and language development",
@@ -27,7 +27,7 @@
     "comments": {
       "title": "Newcastle Hospitals NHS — Less questions, more comments",
       "url": "https://www.newcastle-hospitals.nhs.uk/resources/less-questions-more-comments/",
-      "scope": "Read the examples of changing quiz questions into comments and accepting replies without pressure."
+      "scope": "Read the examples of changing quiz questions into comments, offering real choices and accepting replies without pressure."
     },
     "understand": {
       "title": "Newcastle Hospitals NHS — Help your child understand",
@@ -103,6 +103,11 @@
       "title": "Speech and Language UK — Add words to what your child says",
       "url": "https://speechandlanguage.org.uk/help-for-families/resource-library-for-families/everyday-tips-for-supporting-your-child/supporting-communication-skills-in-the-early-years/add-words-to-what-your-child-says/",
       "scope": "Read Repeat and add, Don’t correct mistakes and Don’t make your child repeat after you. Children learn in different ways; the developmental sequence is not a rule for every child."
+    },
+    "songs": {
+      "title": "Speech and Language UK — Songs and nursery rhymes",
+      "url": "https://speechandlanguage.org.uk/help-for-families/resource-library-for-families/songs-and-nursery-rhymes-how-to/",
+      "scope": "Read how children can join through actions, sounds or words, and how to choose songs around their interests. Any pause is optional; continue without requiring a missing word."
     }
   },
   "videos": {
@@ -118,17 +123,21 @@
       "title": "NHS — How to support social communication",
       "url": "https://player.vimeo.com/video/908624122?app_id=122963",
       "time": "Full short video: 0:00–6:28",
-      "purpose": "Choose meaningful interests, adjust the environment and make a short activity predictable. The examples span ages; do not use school-age tasks as requirements for a three-year-old.",
+      "purpose": "Use this clip for choosing meaningful interests and making play comfortable and predictable. Use the lesson’s worked exchange for the back-and-forth game itself. Examples in the clip span ages; school-age tasks are not requirements for a three-year-old.",
       "evidence": "Exact video/timing from the earlier scoped transcript audit; publisher’s named transcript reread on 6 November.",
-      "transcript": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+      "transcript": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/",
+      "transcriptName": "How to support social communication",
+      "transcriptScope": "Open only the transcript named above. Other videos on the collection page are not assigned, including the object-exchange procedure. Do not guide the child’s hand or make a needed item depend on a particular response."
     },
     "choices": {
       "title": "NHS — How to make a choice board",
       "url": "https://player.vimeo.com/video/908624103?app_id=122963#t=0s",
-      "time": "Watch 0:00–6:29; stop there. Full recording is 7:27.",
+      "time": "Watch 0:00–6:16; stop there. Full recording is 7:27.",
       "purpose": "An optional example of offering meaningful choices and showing how pictures are used. Size/number are examples, not a prescription. Do not move the child’s hand or insist that an accidental selection is their intended choice.",
-      "evidence": "0:00–6:29 assignment from the earlier transcript audit. Named publisher transcript checked; the later accidental-selection instruction is excluded. External players may continue beyond the assigned stop time.",
-      "transcript": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/"
+      "evidence": "Current player runtime and timed transcript checked on 7 November. The accidental-selection instruction starts at 6:29; this assignment stops earlier, at 6:16. External players may continue beyond the assigned stop time.",
+      "transcript": "https://bedslutonchildrenshealth.nhs.uk/services/bedfordshire-and-luton-childrens-speech-and-language-therapy-service/speech-and-language-training-and-workshops/speech-and-language-videos/",
+      "transcriptName": "How to make a choice board",
+      "transcriptScope": "Open only the transcript named above. Other videos on the collection page are not assigned, including the object-exchange procedure. Do not guide the child’s hand or make a needed item depend on a particular response. Stop reading before the later advice about accidental selections; that part of the transcript is not assigned."
     }
   },
   "lessons": [
@@ -212,7 +221,7 @@
         "question": "What is the clearest factual note?",
         "choices": ["“Is lazy about talking.”", "“Definitely understands every word.”", "“Pointed at the car, then picked it up when offered.”"],
         "answer": 2,
-        "reason": "The first describes observable actions. The others assign a motive or a broad ability that the example cannot establish."
+        "reason": "“Pointed at the car, then picked it up when offered” describes actions someone could observe. “Lazy” guesses a motive, and “understands every word” claims much more than this example shows."
       },
       "sources": ["interaction", "early"],
       "video": null,
@@ -240,7 +249,7 @@
         "Choose a moment when you are both reasonably comfortable. Reduce distracting background sound if helpful.",
         "Watch first. Work out what the child is enjoying rather than deciding a lesson for them.",
         "Join with a similar action using your own item, or make one short comment about what they are doing.",
-        "Pause and see whether they make room for another turn. Stay alongside if they prefer parallel play.",
+        "Pause and see whether they want another turn. If they prefer playing beside you without exchanging turns, let them do that.",
         "Finish or change direction when they move away, refuse or lose interest. A brief pleasant exchange is enough."
       ],
       "quiet": "You can copy the safe action and offer a word or sound once. They can take part through movement or watching; they do not owe you an imitation.",
@@ -289,7 +298,7 @@
       ],
       "quiet": "Continue the game without requiring a sound. You might supply the phrase yourself and then leave another natural opportunity later.",
       "difficult": "If the child becomes tense, frustrated or confused, shorten the pause and offer help. Waiting should make interaction easier, not become a test of endurance.",
-      "avoid": "Do not use silence to delay food, water, comfort, toilet access or needed help. Do not restart a countdown after every unsuccessful attempt.",
+      "avoid": "Do not use silence to delay food, water, comfort, toilet access or needed help. Do not keep waiting again and again for a word.",
       "rehearsal": "Practise a ball-game comment with your partner. Leave a pause, then continue naturally even when your partner gives no spoken answer.",
       "check": {
         "question": "What should happen if the child does not speak during a pause?",
@@ -413,7 +422,7 @@
         "Say a natural word or short phrase as the meaning occurs.",
         "Show the action or refer to the relevant object.",
         "Allow a response in the child’s usual way and respond to it.",
-        "Use the word again when it genuinely fits another situation. Stop before repetition becomes a performance demand."
+        "Use the word again when it genuinely fits another situation. Stop before repeating it becomes pressure to say a word."
       ],
       "quiet": "Pair a word with an action, gesture or picture that the child can access. They can learn about the meaning before they can say the word.",
       "difficult": "If you cannot think of a word, describe what the child is doing rather than choosing a vocabulary list. Ask a therapist which communication purposes need more support when advice is available.",
@@ -428,7 +437,7 @@
       "sources": ["everyday", "interaction", "word-learning"],
       "video": null,
       "prerequisites": ["S05", "S06"],
-      "rehearsalCheck": "During car play you could model “It’s going” for an action, “Help me” when help is genuinely needed and “All done” when finishing. Respond to the child’s actual message; do not require these exact phrases.",
+      "rehearsalCheck": "During car play, you could say “It’s going” for an action. If the child brings a car with a stuck wheel, say “I’ll help” while helping. If they push it away, say “No more” and stop offering it. These show an action, a help message and a refusal. Respond to the meaning without requiring the same words back.",
       "extra": [
         {
           "title": "Choose a word by its job",
@@ -545,7 +554,7 @@
       ],
       "quiet": "The child can show understanding through an action or gesture. Speaking is not needed to show that one message made sense.",
       "difficult": "Try a simpler message with context, or pause the routine if practical. Persistent difficulty understanding deserves advice even when the child responds to favourite invitations.",
-      "avoid": "Do not shout, repeatedly test hearing at home, or label refusal as proof of a language difficulty.",
+      "avoid": "Do not shout, test hearing at home, or label refusal as proof of a language difficulty.",
       "rehearsal": "Describe two possible reasons a child might not fetch a coat. Practise a response that helps without claiming you know which reason applies.",
       "check": {
         "question": "Does following one familiar instruction prove complete language understanding?",
@@ -582,7 +591,8 @@
       "explain": [
         "A useful choice offers two real possibilities that are available now. Showing a book and a car while asking “Book or car?” can make the meaning clearer than listing invisible options.",
         "The child might point, reach, look towards one item, use a picture or say a word. Check whether your response fits. Looking towards something is not always a deliberate selection, and the child can change their mind.",
-        "Choices are invitations, not a way to delay essential needs. A child does not have to say water before being given a drink. “Neither” and “finished” are valid possibilities too."
+        "Choices are invitations, not a way to delay essential needs. A child does not have to say water before being given a drink. “Neither” and “finished” are valid possibilities too.",
+        "An accessible choice is one your child can notice and respond to. You may hear this called meeting their access needs. For example, hold the items where they can comfortably see or reach them, leave space between them, or let them use a familiar gesture instead of pointing. A picture is not helpful just because it is visible; its meaning must be familiar or shown in context."
       ],
       "example": [
         ["Parent", "Shows a book and a toy car: “Book or car?”"],
@@ -593,7 +603,7 @@
       "materials": "Two safe, familiar options that are genuinely available.",
       "steps": [
         "Choose a low-pressure play or reading moment.",
-        "Show both options within the child’s comfortable view or reach; adapt for their access needs.",
+        "Show both options where your child can comfortably notice them. For example, lower them, leave more space between them, or accept a familiar gesture if reaching is difficult.",
         "Name the choices once in a short phrase, then leave space.",
         "Respond to a clear selection in the child’s usual communication style. Check uncertain selections gently.",
         "Allow a change of mind or refusal. Continue without demanding the option’s spoken name."
@@ -606,7 +616,7 @@
         "question": "What counts as a valid response to a choice?",
         "choices": [
           "Only a perfectly pronounced word.",
-          "A clear accessible message, including a gesture or a refusal.",
+          "A clear message your child can manage, including a gesture or a refusal.",
           "Only the option the adult prefers."
         ],
         "answer": 1,
@@ -644,7 +654,7 @@
       ],
       "quiet": "Point to a picture while naming it, or respond to the child’s pointing. They can turn pages and enjoy the activity without naming pictures.",
       "difficult": "If sitting together is uncomfortable, try a different position or a very brief look. You can return later; finishing the story is not a requirement.",
-      "avoid": "Do not hold the page hostage until the child names an item or require a fixed number of minutes sitting still.",
+      "avoid": "Do not delay turning the page until the child names an item, or require a fixed number of minutes sitting still.",
       "rehearsal": "Take any ordinary picture and prepare two comments and one possible expansion. None should require a correct answer.",
       "check": {
         "question": "The child wants the same page again. What can you do?",
@@ -754,7 +764,7 @@
         "answer": 2,
         "reason": "A basic need should not become the reward for producing speech."
       },
-      "sources": ["early", "everyday"],
+      "sources": ["everyday"],
       "video": null,
       "prerequisites": ["S05", "S10"],
       "rehearsalCheck": "For a reach towards a drink, provide access and say “Your water”. For a clear refusal, acknowledge it and check whether the child is finished. A meal is not a test of saying please or naming food.",
@@ -787,7 +797,7 @@
       "quiet": "An offered arm, a reach or holding up a shoe can carry a message. Respond and supply the words yourself.",
       "difficult": "If time is short or the routine is distressing, complete care without turning it into practice. You can choose a different activity later.",
       "avoid": "Do not withhold dressing help, toilet access or care. Do not force touch, eye contact or verbal imitation to complete a step.",
-      "rehearsal": "Choose a getting-ready routine and identify two short phrases that match actual actions, plus one sign that you should reduce demands.",
+      "rehearsal": "Choose a getting-ready routine and identify two short phrases that match actual actions, plus one sign that you should ask less of the child.",
       "check": {
         "question": "Must every routine become a language session?",
         "choices": [
@@ -801,7 +811,7 @@
       "sources": ["everyday", "understand"],
       "video": null,
       "prerequisites": ["S05", "S09"],
-      "rehearsalCheck": "During washing, “Wet hands” can match looking at the hands, followed by “Let’s dry them” while helping. If the child is distressed or trying to finish, reduce the language demand and prioritise care.",
+      "rehearsalCheck": "During washing, “Wet hands” can match looking at the hands, followed by “Let’s dry them” while helping. If the child is distressed or trying to finish, stop asking them to talk and focus on helping with care.",
       "activities": ["A06", "A08", "A11"]
     },
     {
@@ -815,10 +825,10 @@
         "You do not need an app, a loud recording or a screen. Your own voice and a familiar safe action are enough. Avoid any movement the child dislikes or cannot comfortably join."
       ],
       "example": [
-        ["Parent", "Starts a familiar action song that the child enjoys."],
-        ["Pause", "Leaves a small gap before a familiar action."],
-        ["Child", "Raises their hands without speaking."],
-        ["Parent", "Continues with the action and song, accepting the movement as participation."]
+        ["Parent", "Softly sings “Row, row, row your boat…” while moving their own hands gently. Use a song the child already enjoys."],
+        ["Pause", "Leaves a brief comfortable gap without asking a question."],
+        ["Child", "Watches or moves their own hands without speaking."],
+        ["Parent", "Sings “gently down the stream” and continues. If the child does not join, the parent still continues or ends comfortably."]
       ],
       "materials": "A familiar song or a safe repeated action the child enjoys; no purchased resources.",
       "steps": [
@@ -842,7 +852,7 @@
         "answer": 0,
         "reason": "The aim is an enjoyable exchange, not a test of memorised lyrics."
       },
-      "sources": ["play", "serve"],
+      "sources": ["play", "serve", "songs"],
       "video": null,
       "prerequisites": ["S03", "S04"],
       "rehearsalCheck": "When your partner turns away or uses the agreed finished gesture, stop the sequence and acknowledge the ending. The response you are practising is respecting communication, not obtaining one last word.",
@@ -887,7 +897,7 @@
       "avoid": "Do not prescribe blowing, tongue-strengthening or other mouth exercises as a general fix for few words. Do not demand repeated “correct” attempts.",
       "rehearsal": "Your partner uses an invented unclear word. Practise two ways to check meaning without saying “No, say it properly”.",
       "check": {
-        "question": "What is a useful response to an understandable sound error?",
+        "question": "You understand the word your child is trying to say, although it sounds unclear. What can you do?",
         "choices": [
           "Interrupt and require repeated correction.",
           "Say the intended word naturally while answering the child’s message.",
@@ -896,11 +906,11 @@
         "answer": 1,
         "reason": "A natural example keeps communication working. An individual sound-treatment plan needs more information."
       },
-      "sources": ["early"],
+      "sources": ["early", "repeat-add"],
       "video": null,
       "prerequisites": ["S02", "S05"],
       "rehearsalCheck": "You could offer two plausible objects and ask which one, or look together while saying “Show me”. Once the meaning is clear, name it naturally. You do not need to correct the invented word repeatedly.",
-      "activities": ["A09"]
+      "activities": ["A04", "A12"]
     },
     {
       "id": "S17",
@@ -910,7 +920,7 @@
       "explain": [
         "AAC means augmentative and alternative communication. Augmentative means adding to speech; alternative means another way of communicating. Gestures, objects, pictures and speech-generating tools are examples. A child can use more than one method.",
         "Pictures or gestures are not a reason to stop offering spoken language. They can make a message easier to understand or express. A child does not need to prove a certain age or test score before AAC can be considered.",
-        "Different tools suit different access needs. Choosing a complete communication system needs individual advice. For everyday support, start by respecting the child’s current ways of asking, refusing, showing interest and seeking help. A choice board is only one small communication tool."
+        "Different tools suit different ways of seeing, hearing, moving and responding. Choosing a complete communication system needs individual advice. A choice board is a small display of objects or pictures showing available options. It can help with one choice, but it does not provide every message a child might need."
       ],
       "example": [
         ["Situation", "A child is interested in a book or a car."],
@@ -922,9 +932,9 @@
       "steps": [
         "Notice the ways the child already communicates and respond to them.",
         "If using a familiar object or picture to support a message, pair it with natural spoken language.",
-        "Show how you use it yourself rather than asking the child to identify symbols as a test.",
-        "Accept an accessible clear response; do not take the child’s hand and move it.",
-        "If you need a broader system for different messages or access needs, ask for individual AAC guidance rather than assuming a generic board is enough."
+        "Show how you use a gesture or point to a familiar picture while speaking. A symbol is a picture or mark that stands for a meaning; do not ask the child to identify it as a test.",
+        "Accept a clear message the child can manage; do not take their hand and move it.",
+        "If you need a wider range of messages or a different way to use the pictures or device, ask for individual AAC guidance rather than assuming a small choice board is enough."
       ],
       "quiet": "A gesture or picture can carry a complete message now. Do not remove it in an attempt to force speech.",
       "difficult": "If a picture seems confusing, return to real objects or an established method. If a selection seems accidental, clarify rather than imposing that option.",
@@ -938,13 +948,30 @@
           "No. Other communication methods can support language and speech."
         ],
         "answer": 2,
-        "reason": "AAC can support communication without a prerequisite age or score. Individual access and a range of messages matter."
+        "reason": "AAC can support communication without a prerequisite age or score. The child needs a way to use it comfortably and a range of useful messages."
       },
       "sources": ["aac"],
       "video": "choices",
       "prerequisites": ["S02", "S10"],
       "rehearsalCheck": "A method should allow more than selecting favourite things: it should support a choice, “no/finished”, help and sharing interest. A small choice board may support one situation while leaving other messages unavailable; individual AAC advice can address wider needs.",
-      "activities": ["A07"]
+      "activities": ["A07"],
+      "extra": [
+        {
+          "title": "Show a gesture yourself",
+          "items": [
+            "When you finish your own turn with a toy, say “Finished” and use a natural gesture, such as moving your own hands away. Do not move the child’s hands or require them to copy you.",
+            "If your child points, reaches or uses a different familiar gesture, answer that message. The aim is being understood, not using one particular gesture."
+          ]
+        },
+        {
+          "title": "Show what a picture means",
+          "items": [
+            "Use a clear photo of a familiar object, such as the coat you are about to put on. Show the photo beside the actual coat and say “Coat on” while helping with the usual routine. A photo is not automatically understood; the real object and action help show its meaning.",
+            "For an ordinary choice, place clear pictures of two familiar available activities beside their actual items. Point to a picture yourself while naming its item. Let the child choose using any clear method, or refuse. Do not ask them to identify the right picture as a test.",
+            "A symbol is a picture or mark used to stand for a meaning. A board showing only favourite toys cannot easily express pain, “no”, help or a new interest. Keep any communication system the child already uses available. Individual AAC guidance can help with wider messages and ways to use a system."
+          ]
+        }
+      ]
     },
     {
       "id": "S18",
@@ -986,7 +1013,7 @@
       "sources": ["languages"],
       "video": null,
       "prerequisites": ["S05"],
-      "rehearsalCheck": "The adult would still follow the child’s interest, use a short meaningful message, leave a turn and accept an accessible response. The language, words and familiar story could change to fit the family.",
+      "rehearsalCheck": "The adult would still follow the child’s interest, use a short meaningful message, leave a turn and accept a response the child can manage. The language, words and familiar story could change to fit the family.",
       "activities": ["A04"]
     },
     {
@@ -1073,7 +1100,7 @@
         "Repeat when it fits; shorten, change or skip a moment that is uncomfortable.",
         "Review your own learning and any continuing concerns. Use the Guidance page for appointment questions and source information."
       ],
-      "quiet": "Continue to provide language and respond to accessible messages. The week has no spoken-word quota.",
+      "quiet": "Continue to provide language and respond to messages the child can manage. The week has no spoken-word quota.",
       "difficult": "Reduce the demand or return to an easier activity. If communication difficulties continue to affect daily life, home practice alone cannot tell you which additional support is needed.",
       "avoid": "Do not increase pressure to meet a calendar target, compare siblings or treat missed days as failure.",
       "rehearsal": "Make a one-week adult learning plan with one activity, one strategy and one way to make it easier. Explain why it has no deadline for new words.",
@@ -1119,7 +1146,7 @@
         ["Child", "Pushes a car."],
         ["You", "Roll your own car nearby: “Go!”"],
         ["Child", "Points at your car."],
-        ["You", "“This car?” Offers it if that matches the point, then follows what the child does next."]
+        ["You", "“This car?” Offer it if that matches the point, then follow what the child does next."]
       ],
       "steps": [
         "Watch where your child moves the car. Move yours in a similar safe way.",
@@ -1159,7 +1186,7 @@
       "steps": [
         "Watch whether your child wants to stack, line up or knock down. Follow that safe interest.",
         "Say “Up” as a block goes up, or “It fell!” as it falls. Choose the meaning that actually happens.",
-        "Leave a quiet turn. If your child brings another block, respond to it.",
+        "Stop talking briefly and leave time for a turn. If your child brings another block, respond to it.",
         "If they say one word, add a small relevant idea once and keep playing."
       ],
       "responses": [
@@ -1184,13 +1211,13 @@
       "lessons": ["S07", "S09"],
       "materials": "An open box without a locking or heavy lid and two large safe toys. Avoid plastic bags and small parts.",
       "setup": "Put the box and toys within reach. This is exploration, not a way to keep desired toys out of reach until your child speaks.",
-      "words": ["“In.”", "“It’s out.”", "“Open the box.”"],
+      "words": ["“In.”", "“It’s out.”", "“It’s open.”"],
       "example": [
         ["You", "Put your toy in: “It’s in.”"],
         ["Child", "Takes it out."],
         ["You", "“It’s out!”"],
         ["Child", "Drops another toy beside the box."],
-        ["You", "Keep playing; you do not correct them for missing an instruction."]
+        ["You", "Keep playing; you do not correct where the toy lands."]
       ],
       "steps": [
         "Let your child explore the open box.",
@@ -1200,10 +1227,13 @@
       ],
       "responses": [
         ["A point or gesture", "If they point at a toy, bring it closer or offer it. You can say its name while responding."],
-        ["An unclear word or sound", "If they say something like “in” as a toy enters, answer “It’s in!” without a repetition demand."],
+        ["An unclear word or sound", "If they say something like “in” as a toy enters, answer “It’s in!” without a request to say it again."],
         ["No reply", "Show one action slowly with your toy. No instruction or answer is needed."],
         ["No or turning away", "Stop moving the toys. They may prefer using the box differently; follow safe play."],
-        ["Frustration", "Help with the practical problem and remove the box if it is causing upset."]
+        [
+          "Frustration",
+          "Help with the practical problem first and offer comfort. Move the box aside only if it is unsafe or the child wants it away."
+        ]
       ],
       "easier": "Use one toy and show only “in” during an ordinary tidy-up.",
       "ending": "“All done.” Leave or put away the items as your normal routine requires.",
@@ -1214,10 +1244,10 @@
       "id": "A04",
       "title": "Share one book picture",
       "goal": "Follow a chosen picture and add a useful comment.",
-      "lessons": ["S06", "S08", "S11"],
+      "lessons": ["S06", "S08", "S11", "S16"],
       "materials": "A familiar sturdy picture book. A single picture can be enough.",
       "setup": "Sit comfortably where you can share the book without demanding lap sitting or looking at you.",
-      "words": ["“The dog’s sleeping.”", "“Big bus.”", "“Turn the page.”"],
+      "words": ["“The dog’s sleeping.”", "“Big bus.”", "“A new page.”"],
       "example": [
         ["Child", "Opens a page and points at a dog."],
         ["You", "“The dog’s sleeping.”"],
@@ -1228,6 +1258,7 @@
         "Offer the book and accept a different choice or refusal.",
         "Notice what your child points at or returns to. Comment on that picture.",
         "Pause. Answer a gesture, sound or word; a page turn can also show what they want next.",
+        "If a word is unclear and you are not sure what it means, say “Show me?” and look together, or offer two plausible items or pictures. Once it is clearer, name it naturally and respond. Do not keep asking for the same word.",
         "Read the printed story if they enjoy it, but you can stay with pictures or stop before the end."
       ],
       "responses": [
@@ -1250,7 +1281,7 @@
       "title": "A pretend meal for a toy",
       "goal": "Add a short action phrase during optional pretend play.",
       "lessons": ["S03", "S08", "S12"],
-      "materials": "A familiar toy and an empty unbreakable cup or age-appropriate toy plate. No real food or liquid is needed.",
+      "materials": "Two familiar safe toys and an empty unbreakable cup or age-appropriate toy plate. No real food or liquid is needed.",
       "setup": "Offer one simple pretend action if your child already enjoys this kind of play. It is also fine if they want to explore the objects another way.",
       "words": ["“Bear’s drinking.”", "“More tea.”", "“All done.”"],
       "example": [
@@ -1271,7 +1302,10 @@
         ["An unclear word or sound", "If they name the bear approximately, respond “Bear’s drinking” when that matches the action."],
         ["No reply", "You can play quietly beside them or stop. They do not have to copy pretend actions."],
         ["No or turning away", "Stop the pretend action and follow their safe use of the objects or finish."],
-        ["Frustration", "Remove a troublesome prop and offer comfort or a different activity."]
+        [
+          "Frustration",
+          "Help with the problem first and offer comfort. Move a prop aside only if your child wants it away or it is unsafe. Stop your own talking practice if it adds to the upset."
+        ]
       ],
       "easier": "Use one toy and one action, or choose real everyday play instead.",
       "ending": "“All done.” The pretend meal can finish at any point.",
@@ -1305,13 +1339,13 @@
         ["No reply", "Continue the needed routine with gentle support. A verbal reply is unnecessary."],
         [
           "No or turning away",
-          "Check comfort, temperature and fit. Pause or offer a suitable alternative where possible; do not use speech demands to force cooperation."
+          "Check comfort, temperature and fit. Pause or offer a suitable alternative where possible; do not use requests to speak to force cooperation."
         ],
         ["Frustration", "Attend to the practical need and comfort first. Save parent practice for another moment."]
       ],
       "easier": "Use just one short phrase during dressing, or simply help quietly.",
       "ending": "“Ready.” Move on with the day without a final question.",
-      "vary": "Use the same helpful phrase with shoes on another day.",
+      "vary": "On another day, say “Shoes on” as you help with shoes. This uses the same idea of describing an action while giving needed help.",
       "sources": ["understand", "interaction"]
     },
     {
@@ -1332,7 +1366,7 @@
         "Let the meal proceed normally. Notice one message instead of introducing a lesson.",
         "Respond to a point, sound, word or usual communication aid. Offer a short phrase that fits.",
         "If offering a choice, use suitable options that are actually available. Do not remove a meal to create requests.",
-        "Accept refusal and follow your usual supportive mealtime routine. No speech is needed for access."
+        "Accept refusal and follow your usual supportive mealtime routine. No speech is needed to get food or drink."
       ],
       "responses": [
         ["A point or gesture", "Help with the indicated item. If uncertain, show the possible items and clarify without a quiz."],
@@ -1374,7 +1408,7 @@
         ["A point or gesture", "If they reach for a towel, give it or help dry rather than ask them to name it."],
         ["An unclear word or sound", "If they use a sound for water, answer with “Water” once as you meet the need."],
         ["No reply", "Continue the routine. Watching the action is enough; no spoken reply is needed."],
-        ["No or turning away", "Check discomfort and adjust safely. Do not add language demands during necessary care."],
+        ["No or turning away", "Check discomfort and adjust safely. Do not add requests to talk during necessary care."],
         ["Frustration", "Attend to comfort and complete necessary care with support. Drop the practice idea for now."]
       ],
       "easier": "Say just “Dry hands” at the towel, or complete the routine quietly.",
@@ -1386,7 +1420,7 @@
       "id": "A09",
       "title": "Copy a playful action or sound",
       "goal": "Make an optional back-and-forth game by following your child.",
-      "lessons": ["S03", "S04", "S15", "S16"],
+      "lessons": ["S03", "S04", "S15"],
       "materials": "A familiar safe toy, or your hands for tapping a surface gently. No whistles, blowing drills or mouth tools.",
       "setup": "Choose an action or sound your child already enjoys. Keep sounds at a comfortable volume and stop if unwelcome.",
       "words": ["“Beep!”", "“Tap, tap.”", "“The car’s going.”"],
@@ -1422,7 +1456,7 @@
       "title": "A toy goes to sleep",
       "goal": "Offer one simple pretend action with clear language.",
       "lessons": ["S03", "S08", "S12"],
-      "materials": "A familiar stuffed toy and a small cloth used only for the toy, kept away from faces. No covering a child or enclosed spaces.",
+      "materials": "A familiar stuffed toy. No cloth, covering or enclosed space is needed.",
       "setup": "Try this only if pretend play is interesting. Other safe play is equally welcome; this is not a developmental test.",
       "words": ["“Bear’s sleeping.”", "“Wake up!”", "“Night, bear.”"],
       "example": [
@@ -1430,7 +1464,7 @@
         ["Child", "Says “bear” and stands the toy up."],
         ["You", "“Bear’s awake!”"],
         ["Child", "Walks the bear away."],
-        ["You", "Follow that change rather than insist on the bedtime story."]
+        ["You", "Follow that change rather than insist on continuing the sleeping game."]
       ],
       "steps": [
         "Offer one sleeping action with your own toy.",
@@ -1443,9 +1477,12 @@
         ["An unclear word or sound", "If they say a version of bear, answer with its name or a brief action phrase without correcting the sound."],
         ["No reply", "Keep the action brief or let them explore. No pretend or spoken response is required."],
         ["No or turning away", "Follow a different safe interest or put the toy aside."],
-        ["Frustration", "Remove the cloth or toy if needed and offer comfort. Do not insist on finishing the pretend sequence."]
+        [
+          "Frustration",
+          "Help with the problem first and offer comfort. Move the toy aside only if your child wants it away or it is unsafe. You do not need to finish the sleeping game."
+        ]
       ],
-      "easier": "Use only the toy and one action; skip the cloth and any story.",
+      "easier": "Use the toy for one brief action, or follow another kind of safe play if pretending is not interesting.",
       "ending": "“Finished.” Put your toy down when the child is done.",
       "vary": "If enjoyed later, let another toy sleep using the same simple language.",
       "sources": ["play", "repeat-add"]
@@ -1487,7 +1524,7 @@
       "id": "A12",
       "title": "Look together through a window",
       "goal": "Share an interest with a comment instead of a naming quiz.",
-      "lessons": ["S02", "S06", "S08"],
+      "lessons": ["S02", "S06", "S08", "S16"],
       "materials": "A safe indoor view through a closed or secured window. Follow usual window safety; no climbing or roadside observation task.",
       "setup": "Join only when your child notices something. You do not need to find a set number of things.",
       "words": ["“A bus!”", "“The dog’s running.”", "“It’s gone.”"],
@@ -1501,6 +1538,7 @@
         "Notice what catches your child’s interest from a safe position.",
         "Say one comment about it rather than “What is that?”",
         "Respond to their point, sound or word. Add one idea only if it fits.",
+        "If a word is unclear and you are not sure what it means, say “Show me?” and look together. If you have two reasonable guesses, name two things you can both see and let your child point or respond in their usual way. Once the meaning is clearer, name it naturally and respond. Do not keep asking for the same word.",
         "Stay with the view or move on when they do. No naming test is needed."
       ],
       "responses": [

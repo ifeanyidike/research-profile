@@ -549,7 +549,8 @@ progress {
     display: block !important;
   }
   summary {
-    display: none;
+    display: block;
+    font-weight: 600;
   }
   h1 {
     font-size: 24pt;
@@ -559,6 +560,12 @@ progress {
   }
   a {
     color: inherit;
+    overflow-wrap: anywhere;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    font-weight: 400;
   }
   .today,
   .example,

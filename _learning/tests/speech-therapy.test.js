@@ -122,3 +122,93 @@ test("every activity is complete and all lesson, activity and source links resol
   }
   for (const l of data.lessons) assert.ok(l.activities.length && l.activities.every((id) => ids.has(id)), l.id);
 });
+
+test("an idle tab exports fresh checkmarks without changing its selected learner", () => {
+  const storage = memory();
+  const a = createLearningStore(storage),
+    b = createLearningStore(storage);
+  a.select("fav");
+  b.mark("S01", true);
+  const backup = parseBackup(exportBackup(a.state));
+  assert.deepEqual(backup.learners.ifeanyi.done, ["S01"]);
+  assert.equal(a.state.active, "fav");
+});
+test("confirmed recovery keeps unreadable raw records and saves combined learning across reload", () => {
+  const storage = memory();
+  storage.setItem(KEY, "bad json");
+  storage.setItem(`${KEY}:unreadable`, "older unreadable record");
+  const store = createLearningStore(storage);
+  store.select("fav");
+  store.mark("S02", true);
+  const backup = emptyState();
+  backup.learners.ifeanyi.done = ["S01"];
+  assert.equal(store.recover(backup), true);
+  assert.equal(storage.getItem(`${KEY}:unreadable`), "older unreadable record");
+  assert.equal(storage.getItem(`${KEY}:unreadable:1`), "bad json");
+  const refreshed = createLearningStore(storage);
+  assert.equal(refreshed.error, "");
+  assert.equal(refreshed.state.active, "fav");
+  assert.deepEqual(refreshed.state.learners.fav.done, ["S02"]);
+  assert.deepEqual(refreshed.state.learners.ifeanyi.done, ["S01"]);
+});
+test("failed recovery reports unsaved learning, keeps the raw record and can be retried", () => {
+  const base = memory();
+  base.setItem(KEY, "bad json");
+  let deny = true;
+  const storage = {
+    getItem: base.getItem,
+    setItem(key, value) {
+      if (key === KEY && deny) throw Error("quota");
+      base.setItem(key, value);
+    },
+  };
+  const store = createLearningStore(storage),
+    backup = emptyState();
+  backup.learners.ifeanyi.done = ["S03"];
+  assert.equal(store.recover(backup), false);
+  assert.match(store.error, /could not save/);
+  assert.equal(storage.getItem(KEY), "bad json");
+  assert.equal(storage.getItem(`${KEY}:unreadable`), "bad json");
+  assert.deepEqual(parseBackup(exportBackup(store.state)).learners.ifeanyi.done, ["S03"]);
+  deny = false;
+  assert.equal(store.recover(backup), true);
+  assert.equal(storage.getItem(`${KEY}:unreadable:1`), null);
+  assert.deepEqual(createLearningStore(storage).state.learners.ifeanyi.done, ["S03"]);
+});
+test("each tab retains its learner through interleaved writes and reload", () => {
+  const storage = memory(),
+    tabA = memory(),
+    tabB = memory();
+  const a = createLearningStore(storage, tabA),
+    b = createLearningStore(storage, tabB);
+  b.select("fav");
+  a.mark("S01", true);
+  const reloadedB = createLearningStore(storage, tabB);
+  assert.equal(reloadedB.state.active, "fav");
+  reloadedB.mark("S02", true);
+  const reloadedA = createLearningStore(storage, tabA);
+  assert.equal(reloadedA.state.active, "ifeanyi");
+  assert.deepEqual(reloadedA.state.learners.ifeanyi.done, ["S01"]);
+  assert.deepEqual(reloadedA.state.learners.fav.done, ["S02"]);
+});
+test("blocked tab storage warns about selection without blocking saved learning", () => {
+  const storage = memory();
+  const tab = {
+    getItem() {
+      throw Error("blocked");
+    },
+    setItem() {
+      throw Error("blocked");
+    },
+  };
+  const store = createLearningStore(storage, tab);
+  store.select("fav");
+  assert.equal(store.mark("S04", true), true);
+  assert.equal(store.error, "");
+  assert.match(store.profileWarning, /Check the name/);
+  assert.deepEqual(createLearningStore(storage).state.learners.fav.done, ["S04"]);
+});
+test("unreadable and foreign backups produce plain user messages", () => {
+  assert.throws(() => parseBackup("{"), /could not be read as a learning backup/);
+  assert.throws(() => parseBackup("null"), /not a Speech Therapy Studio learning backup/);
+});
