@@ -1,0 +1,161 @@
+---
+layout: voice-ai
+title: voice AI
+permalink: /voice-ai/
+description: Independent voice AI engineering by Ifeanyi Dike. Build voice agents, connect your systems, and fix problems in live calls.
+nav: true
+nav_order: 3.5
+---
+
+<div class="voice-services">
+  <section class="vs-hero" aria-labelledby="vs-title">
+    <div>
+      <p class="vs-eyebrow">Voice AI engineering · Ifeanyi Dike</p>
+      <h1 id="vs-title">Make your voice agent work beyond the demo.</h1>
+      <p class="vs-lead">I help teams build voice agents, connect them to their systems, and fix the problems that show up in real calls.</p>
+      <div class="vs-actions">
+        <a class="vs-button" href="#contact">Tell me what you’re building <span aria-hidden="true">↗</span></a>
+        <a class="vs-text-link" href="#work">See my engineering work <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="vs-location">Based in Port Harcourt, Nigeria. Working remotely.</p>
+    </div>
+    <figure class="vs-pipeline">
+      <figcaption><span class="vs-panel-label">Inside a voice agent</span><span class="vs-panel-note">A typical call flow</span></figcaption>
+      <ol>
+        <li>
+          <span class="vs-step">01</span>
+          <div><strong>Listen</strong><span>Phone audio → speech to text</span></div>
+        </li>
+        <li>
+          <span class="vs-step">02</span>
+          <div><strong>Respond</strong><span>Model + your tools and data</span></div>
+        </li>
+        <li>
+          <span class="vs-step">03</span>
+          <div><strong>Speak</strong><span>Text to speech → caller</span></div>
+        </li>
+      </ol>
+      <p>Timing, interruptions and failures matter at every step.</p>
+    </figure>
+  </section>
+
+  <div class="vs-stack" aria-label="Tools I work with">
+    <span>Python</span><span>Pipecat</span><span>Twilio</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span>
+  </div>
+
+  <section class="vs-section" aria-labelledby="vs-help">
+    <p class="vs-eyebrow">How I can help</p>
+    <h2 id="vs-help">From the first call to the hard-to-find bug.</h2>
+    <div class="vs-services">
+      <article>
+        <span class="vs-number" aria-hidden="true">01 /</span>
+        <h3>Build and connect</h3>
+        <p>Build a voice agent or add to an existing one. Connect phone calls, speech services, models and your backend workflows.</p>
+      </article>
+      <article>
+        <span class="vs-number" aria-hidden="true">02 /</span>
+        <h3>Find what’s breaking</h3>
+        <p>Trace dead air, missed speech, broken handoffs and recording errors. Find the cause and check the fix.</p>
+      </article>
+      <article>
+        <span class="vs-number" aria-hidden="true">03 /</span>
+        <h3>Prepare for real use</h3>
+        <p>Improve call cleanup, queues, retries and resource use. Add the logs your team needs to understand a failed call.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="work" class="vs-section" aria-labelledby="vs-work">
+    <div class="vs-section-heading">
+      <div>
+        <p class="vs-eyebrow">Selected engineering work</p>
+        <h2 id="vs-work">The work behind the offer.</h2>
+      </div>
+      <p>Examples from my engineering roles, explained in public write-ups.</p>
+    </div>
+    <div class="vs-work-list">
+      <article class="vs-case">
+        <div class="vs-case-result"><strong>Voice infrastructure</strong><span>From managed platform to Pipecat</span></div>
+        <div>
+          <h3>Taking control of the call pipeline</h3>
+          <p>
+            I migrated a production voice system to Pipecat, connecting Twilio, speech services and a FastAPI backend. The work included call logs,
+            turn-taking and safe cleanup when calls failed.
+          </p>
+          <a href="{% link _posts/2026-07-05-pipecat-migration-voice-ai.md %}">Read the migration notes <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="vs-case">
+        <div class="vs-case-result"><strong>Call debugging</strong><span>Recordings that hid the real problem</span></div>
+        <div>
+          <h3>When the recording tells a different story</h3>
+          <p>
+            A recording could contain words that never reached the caller. I traced the capture and timing problems, then moved to provider recordings
+            with separate channels and a shared clock.
+          </p>
+          <a href="{% link _posts/2026-09-02-the-sentence-nobody-heard-voice-ai-recording.md %}"
+            >Read the investigation <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </article>
+      <article class="vs-case">
+        <div class="vs-case-result"><strong class="vs-metric">70%+</strong><span>Lower memory use across two production Python services</span></div>
+        <div>
+          <h3>Fixing the cause of memory-limit restarts</h3>
+          <p>
+            I used Memray to find repeated model-tokenizer allocations, changed how workers shared memory, and removed an unnecessary import from a
+            background worker.
+          </p>
+          <a href="{% link _posts/2026-06-16-python-memory-profiling-heroku.md %}">Read the profiling notes <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="vs-section vs-process" aria-labelledby="vs-process">
+    <div>
+      <p class="vs-eyebrow">Working together</p>
+      <h2 id="vs-process">Start with a clear, small scope.</h2>
+      <p>You can bring me in for one problem or a defined part of a build. Agencies are welcome too.</p>
+    </div>
+    <ol>
+      <li>
+        <h3>Tell me the problem</h3>
+        <p>Share your current setup, what goes wrong and what you need to change.</p>
+      </li>
+      <li>
+        <h3>Agree on the work</h3>
+        <p>We set the scope, fee, delivery date and how we’ll check the result.</p>
+      </li>
+      <li>
+        <h3>Get a useful handover</h3>
+        <p>You get the agreed work, clear notes and the steps your team needs next.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="vs-about vs-section" aria-labelledby="vs-about">
+    <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" width="112" height="112" loading="lazy" alt="Ifeanyi Dike" />
+    <div>
+      <p class="vs-eyebrow">The engineer you’ll work with</p>
+      <h2 id="vs-about">Hi, I’m Ifeanyi.</h2>
+      <p>
+        I’m a software engineer and applied mathematician with over eight years in software. At DataStrut, I work on production voice AI and the
+        backend systems around it. I also write about the problems I solve and research how speech agents are evaluated.
+      </p>
+      <div class="vs-about-links">
+        <a href="{{ '/professional_cv/' | relative_url }}">My experience <span aria-hidden="true">↗</span></a
+        ><a href="https://github.com/ifeanyidike">GitHub <span aria-hidden="true">↗</span></a
+        ><a href="{{ '/blog/' | relative_url }}">Engineering blog <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="vs-contact" aria-labelledby="vs-contact">
+    <p class="vs-eyebrow">Have a voice AI problem?</p>
+    <h2 id="vs-contact">Let’s look at what you need.</h2>
+    <p>Send a short note about your stack, the problem and the outcome you want. Please leave out credentials and private customer records.</p>
+    <a class="vs-button" href="mailto:ifeanyi@ifeanyidike.com?subject=Voice%20AI%20project">Email me <span aria-hidden="true">↗</span></a>
+    <a class="vs-email" href="mailto:ifeanyi@ifeanyidike.com">ifeanyi@ifeanyidike.com</a>
+  </section>
+</div>

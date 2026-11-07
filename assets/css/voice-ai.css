@@ -1,0 +1,417 @@
+.voice-services {
+  --vs-accent: #5c3886;
+  --vs-soft: #f3f0f7;
+  --vs-muted: #615b68;
+  color: var(--global-text-color);
+  padding: 1rem 0 4rem;
+  line-height: 1.65;
+}
+html[data-theme="dark"] .voice-services {
+  --vs-accent: #c9b4ed;
+  --vs-soft: #29262f;
+  --vs-muted: #b8b2c1;
+}
+.voice-services *,
+.voice-services *::before,
+.voice-services *::after {
+  box-sizing: border-box;
+}
+.voice-services h1,
+.voice-services h2,
+.voice-services h3 {
+  color: var(--global-text-color);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  font-weight: 600;
+}
+.voice-services h1 {
+  font-size: clamp(2.7rem, 5.3vw, 4.1rem);
+  margin: 1rem 0 1.4rem;
+}
+.voice-services h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.55rem);
+  margin: 0 0 1.5rem;
+}
+.voice-services h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.8rem;
+}
+.voice-services p {
+  margin: 0 0 1rem;
+}
+.voice-services a {
+  color: var(--vs-accent);
+}
+.voice-services a:focus-visible {
+  outline: 3px solid var(--vs-accent);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+.voice-services section[id] {
+  scroll-margin-top: 6rem;
+}
+.voice-services .vs-eyebrow {
+  color: var(--vs-accent);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.vs-hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2.5rem 0 3rem;
+}
+.vs-lead {
+  font-size: 1.15rem;
+  color: var(--vs-muted);
+  max-width: 36rem;
+}
+.vs-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.3rem;
+  margin: 1.9rem 0 1rem;
+}
+.voice-services .vs-button {
+  background: var(--vs-accent);
+  color: var(--global-bg-color);
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.85rem 1.15rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 150ms ease;
+  text-decoration: none;
+}
+.vs-button:hover {
+  transform: translateY(-2px);
+}
+.vs-text-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.voice-services .vs-location {
+  font-size: 0.8rem;
+  color: var(--vs-muted);
+  margin-top: 1.4rem;
+}
+.vs-pipeline {
+  margin: 0;
+  background: #1e1929;
+  color: #f3edf9;
+  padding: 1.6rem;
+  border-radius: 10px;
+  box-shadow: 0 18px 45px -25px #24103680;
+}
+.vs-pipeline figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid #ffffff25;
+}
+.vs-panel-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.vs-panel-note {
+  color: #beb2d1;
+  font-size: 0.75rem;
+}
+.vs-pipeline ol {
+  margin: 1.6rem 0;
+  padding: 0;
+  list-style: none;
+}
+.vs-pipeline li {
+  display: flex;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.vs-pipeline li:last-child {
+  margin-bottom: 0;
+}
+.vs-pipeline li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  top: 2rem;
+  width: 1px;
+  height: 1.4rem;
+  background: #8e77ac;
+}
+.vs-step {
+  font-family: monospace;
+  font-size: 0.7rem;
+  background: #3c2f50;
+  border: 1px solid #6c5588;
+  border-radius: 50%;
+  width: 1.9rem;
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.vs-pipeline li strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.vs-pipeline li div > span {
+  display: block;
+  font-size: 0.72rem;
+  color: #c8bfd3;
+  margin-top: 0.2rem;
+}
+.vs-pipeline p {
+  font-size: 0.76rem;
+  color: #c8bfd3;
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid #ffffff25;
+}
+.vs-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.1rem;
+  padding: 1.1rem 0;
+  border-block: 1px solid var(--global-divider-color);
+  color: var(--vs-muted);
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+.vs-section {
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.vs-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+  margin-top: 2.5rem;
+}
+.vs-services p,
+.vs-process p,
+.vs-about p {
+  color: var(--vs-muted);
+}
+.vs-number {
+  display: block;
+  font-family: monospace;
+  color: var(--vs-accent);
+  font-size: 0.78rem;
+  margin-bottom: 1.1rem;
+}
+.vs-section-heading {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.vs-section-heading > p {
+  font-size: 0.88rem;
+  color: var(--vs-muted);
+  max-width: 15rem;
+  margin-bottom: 1.6rem;
+}
+.vs-case {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  padding: 2.1rem 0;
+  border-top: 1px solid var(--global-divider-color);
+}
+.vs-case:last-child {
+  padding-bottom: 0;
+}
+.vs-case-result strong {
+  display: block;
+  color: var(--vs-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.vs-case-result span {
+  display: block;
+  color: var(--vs-muted);
+  font-size: 0.88rem;
+  max-width: 14rem;
+}
+.vs-case-result .vs-metric {
+  font-size: 2.9rem;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.8rem;
+}
+.vs-case p {
+  color: var(--vs-muted);
+}
+.vs-case a,
+.vs-about-links a {
+  font-size: 0.87rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.vs-process {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.vs-process ol {
+  list-style: none;
+  counter-reset: process;
+  padding: 0;
+  margin: 0;
+}
+.vs-process li {
+  counter-increment: process;
+  padding-left: 2.7rem;
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+.vs-process li:last-child {
+  margin-bottom: 0;
+}
+.vs-process li::before {
+  content: "0" counter(process);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--vs-accent);
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+.vs-process h3 {
+  font-size: 1.1rem;
+}
+.vs-process li p {
+  font-size: 0.93rem;
+  margin: 0;
+}
+.vs-about {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 2rem;
+  align-items: start;
+  border: 0;
+}
+.vs-about img {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.vs-about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-top: 1.5rem;
+}
+.vs-contact {
+  background: var(--vs-soft);
+  padding: 3rem;
+  border-radius: 8px;
+}
+.vs-contact p:not(.vs-eyebrow) {
+  color: var(--vs-muted);
+  max-width: 35rem;
+  margin-bottom: 1.7rem;
+}
+.vs-email {
+  font-size: 0.87rem;
+  display: inline-block;
+  margin: 0.7rem 0 0.7rem 1.3rem;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 767px) {
+  .voice-services {
+    padding-top: 0;
+  }
+  .vs-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem 0 2rem;
+  }
+  .voice-services h1 {
+    max-width: 34rem;
+  }
+  .vs-pipeline {
+    max-width: 30rem;
+    width: 100%;
+  }
+  .vs-services {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    margin-top: 2rem;
+  }
+  .vs-services article {
+    border-left: 2px solid var(--global-divider-color);
+    padding-left: 1.2rem;
+  }
+  .vs-number {
+    margin-bottom: 0.7rem;
+  }
+  .vs-section {
+    padding: 3rem 0;
+  }
+  .vs-section-heading {
+    display: block;
+  }
+  .vs-section-heading > p {
+    max-width: 26rem;
+  }
+  .vs-case {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .vs-case-result span {
+    max-width: none;
+  }
+  .vs-process {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .vs-about {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .vs-about img {
+    width: 88px;
+    height: 88px;
+  }
+  .vs-contact {
+    padding: 1.7rem;
+  }
+  .vs-email {
+    display: block;
+    margin: 1.2rem 0 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .voice-services .vs-button {
+    transition: none;
+  }
+}
+/* The base theme assigns colors to spans and strong elements directly. */
+.voice-services .vs-button span,
+.voice-services .vs-stack span {
+  color: inherit;
+}
+.vs-pipeline .vs-panel-label,
+.vs-pipeline .vs-step,
+.vs-pipeline li strong {
+  color: #f3edf9;
+}
